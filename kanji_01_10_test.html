@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanji Test #1–10</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff; --bg2: #f5f5f4; --bg3: #e8e8e7;
+  --text: #1a1a1a; --text2: #6b6b6b; --text3: #9a9a9a;
+  --border: rgba(0,0,0,0.1); --border2: rgba(0,0,0,0.18);
+  --purple50: #EEEDFE; --purple200: #AFA9EC; --purple600: #534AB7; --purple800: #3C3489; --purple900: #26215C;
+  --teal50: #E1F5EE; --teal400: #1D9E75; --teal600: #0F6E56; --teal800: #085041;
+  --amber50: #FAEEDA; --amber600: #BA7517; --amber800: #633806; --amber900: #412402;
+  --red50: #FCEBEB; --red600: #A32D2D; --red800: #501313;
+  --radius-md: 8px; --radius-lg: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a18; --bg2: #242422; --bg3: #2e2e2c;
+    --text: #f0f0ee; --text2: #b0b0ae; --text3: #707070;
+    --border: rgba(255,255,255,0.1); --border2: rgba(255,255,255,0.18);
+    --purple50: #26215C; --purple200: #3C3489; --purple600: #AFA9EC; --purple800: #CECBF6; --purple900: #EEEDFE;
+    --teal50: #04342C; --teal400: #1D9E75; --teal600: #9FE1CB; --teal800: #9FE1CB;
+    --amber50: #412402; --amber800: #FAC775; --amber900: #FAC775;
+    --red50: #501313; --red600: #F09595; --red800: #FCEBEB;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: var(--bg3); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 2rem 1rem; }
+.app { width: 100%; max-width: 660px; }
+.twrap { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.thead { background: var(--amber50); border-bottom: 0.5px solid var(--amber600); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+.ttitle { font-size: 15px; font-weight: 500; color: var(--amber900); }
+.tscore { font-size: 13px; color: var(--amber800); }
+.pstrip { height: 4px; background: var(--bg2); }
+.pstrip-fill { height: 100%; background: var(--amber600); transition: width 0.4s; }
+.tbody { padding: 1.5rem; }
+.tqlabel { display: inline-block; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+.tlc { background: var(--purple50); color: var(--purple800); }
+.tlm { background: var(--teal50); color: var(--teal800); }
+.tlr { background: var(--amber50); color: var(--amber800); }
+.tq { font-size: 15px; color: var(--text); line-height: 1.6; }
+.tchar { font-family: 'Noto Serif JP', serif; font-size: 72px; font-weight: 700; color: var(--purple900); text-align: center; margin: 0.75rem 0 1rem; display: block; }
+.topts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1.25rem; }
+.topt { background: var(--bg2); border: 0.5px solid var(--border2); border-radius: var(--radius-md); padding: 13px 16px; font-size: 14px; cursor: pointer; color: var(--text); text-align: left; font-family: inherit; transition: background 0.15s; line-height: 1.4; }
+.topt:hover:not(:disabled) { background: var(--purple50); border-color: var(--purple200); }
+.topt.correct { background: var(--teal50); border-color: var(--teal400); color: var(--teal800); font-weight: 500; }
+.topt.wrong { background: var(--red50); border-color: var(--red600); color: var(--red800); }
+.tfb { margin-top: 1rem; padding: 10px 14px; border-radius: var(--radius-md); font-size: 13px; line-height: 1.5; display: none; }
+.tfb.show { display: block; }
+.tfb.ok { background: var(--teal50); color: var(--teal800); border-left: 2px solid var(--teal400); }
+.tfb.bad { background: var(--red50); color: var(--red800); border-left: 2px solid var(--red600); }
+.tnext { margin-top: 1.25rem; width: 100%; padding: 12px; background: var(--purple600); color: #fff; border: none; border-radius: var(--radius-md); font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; display: none; }
+.tnext:hover { background: var(--purple800); }
+.tnext.show { display: block; }
+.rwrap { text-align: center; padding: 2rem 1.5rem; }
+.remoji { font-size: 52px; margin-bottom: 1rem; }
+.rscore { font-size: 38px; font-weight: 500; color: var(--purple800); margin-bottom: 0.4rem; }
+.rlabel { font-size: 15px; color: var(--text2); margin-bottom: 1.5rem; }
+.rbdown { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 1.5rem; }
+.rbc { background: var(--bg2); border-radius: var(--radius-md); padding: 12px 8px; }
+.rbv { font-size: 22px; font-weight: 500; }
+.rbl { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+.rg { color: var(--teal600); } .rr { color: var(--red600); } .rgr { color: var(--text3); }
+.tsum { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 1.25rem 0; text-align: left; }
+.tsc { background: var(--bg2); border-radius: var(--radius-md); padding: 10px 12px; }
+.tsl { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.tsv { font-size: 15px; font-weight: 500; color: var(--text); }
+.rbtn { padding: 11px 28px; background: var(--purple600); color: #fff; border: none; border-radius: var(--radius-md); font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.rbtn:hover { background: var(--purple800); }
+.slabel { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--text3); }
+.krep { text-align: left; margin-top: 1.5rem; border-top: 0.5px solid var(--border); padding-top: 1.25rem; }
+.krow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
+.kchar { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; min-width: 34px; color: var(--text); }
+.kinfo { flex: 1; }
+.kmean { color: var(--text); font-size: 13px; }
+.kqt { font-size: 11px; color: var(--text2); margin-top: 1px; }
+.rs { font-size: 12px; font-weight: 500; padding: 2px 9px; border-radius: 20px; }
+.rs-ok { background: var(--teal50); color: var(--teal800); }
+.rs-bad { background: var(--red50); color: var(--red800); }
+</style>
+</head>
+<body>
+<div class="app">
+  <div id="tv"></div>
+  <div id="rv" style="display:none"></div>
+</div>
+<script>
+const K = [
+  { ch:"一", mn:"Bir", on:["ICHI","ITSU"], kun:["hito-"],
+    cp:[{k:"一月",r:"ICHIGATSU",m:"Ocak"},{k:"均一",r:"KIN'ITSU",m:"Tekdüzelik"},{k:"一人",r:"hitori",m:"Bir kişi"}] },
+  { ch:"右", mn:"Sağ", on:["U","YŪ"], kun:["migi"],
+    cp:[{k:"右派",r:"UHA",m:"Sağ kanat"},{k:"左右",r:"SAYŪ",m:"Sol-sağ / kontrol"},{k:"右手",r:"migite",m:"Sağ el"}] },
+  { ch:"雨", mn:"Yağmur", on:["U"], kun:["ame","ama-"],
+    cp:[{k:"雨季",r:"UKI",m:"Yağmurlu mevsim"},{k:"大雨",r:"ōame",m:"Şiddetli yağmur"},{k:"雨雲",r:"amagumo",m:"Yağmur bulutu"}] },
+  { ch:"円", mn:"Yuvarlak / Yen", on:["EN"], kun:["marui"],
+    cp:[{k:"円形",r:"ENKEI",m:"Daire şekli"},{k:"円高",r:"ENdaka",m:"Güçlü yen"},{k:"百円",r:"HYAKUEN",m:"Yüz yen"}] },
+  { ch:"王", mn:"Kral / Hükümdar", on:["Ō"], kun:[],
+    cp:[{k:"王子",r:"ŌJI",m:"Prens"},{k:"女王",r:"JOŌ",m:"Kraliçe"},{k:"王様",r:"Ōsama",m:"Kral (saygılı)"}] },
+  { ch:"音", mn:"Ses / Ton", on:["ON","IN"], kun:["oto","ne"],
+    cp:[{k:"音楽",r:"ONGAKU",m:"Müzik"},{k:"子音",r:"SHIIN",m:"Ünsüz harf"},{k:"発音",r:"HATSUON",m:"Telaffuz"}] },
+  { ch:"下", mn:"Alt / Aşağı", on:["KA","GE"], kun:["shita","shimo","moto","sageru","oriru"],
+    cp:[{k:"下品",r:"GEHIN",m:"Kaba, bayağı"},{k:"低下",r:"TEIKA",m:"Düşüş, azalma"},{k:"川下",r:"kawashimo",m:"Nehrin aşağısı"}] },
+  { ch:"火", mn:"Ateş / Alev", on:["KA"], kun:["hi"],
+    cp:[{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"火山",r:"KAZAN",m:"Yanardağ"},{k:"火花",r:"hibana",m:"Kıvılcım"}] },
+  { ch:"花", mn:"Çiçek", on:["KA"], kun:["hana"],
+    cp:[{k:"花弁",r:"KABEN",m:"Taç yaprak"},{k:"花見",r:"hanami",m:"Kiraz çiçeği izleme"},{k:"花火",r:"hanabi",m:"Havai fişek"}] },
+  { ch:"貝", mn:"Kabuk / Deniz kabuğu", on:[], kun:["kai"],
+    cp:[{k:"帆立貝",r:"hotategai",m:"Deniz tarağı"},{k:"貝殻",r:"kaigara",m:"Deniz kabuğu"},{k:"貝類",r:"kaiRUI",m:"Kabuklu deniz ürünleri"}] }
+];
+
+function build() {
+  const r = a => a[Math.floor(Math.random()*a.length)];
+  const sh = a => [...a].sort(()=>Math.random()-0.5);
+  const oM = (ex,n) => sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC = (ex,n) => sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM = (ex,n) => sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
+  const oR = (ex,n) => {
+    const out=[];
+    for(const k of sh(K.filter(x=>x.ch!==ex.ch))){
+      const rds=[...k.on,...k.kun];
+      if(rds.length) out.push(r(rds));
+      if(out.length>=n) break;
+    }
+    return out;
+  };
+  const qs=[];
+  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
+  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
+  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
+  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
+  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  return sh(qs);
+}
+
+let tqs=[], ti=0, sc=0, ans={};
+
+function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
+
+function renderQ(){
+  const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
+  document.getElementById('tv').innerHTML=`
+    <div class="twrap">
+      <div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div>
+      <div class="thead"><div class="ttitle">📝 Test — Kanji #1–10</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div>
+      <div class="tbody">
+        <span class="tqlabel ${q.lc}">${q.lb}</span>
+        <div class="tq">${q.q}</div>
+        ${q.sc?`<span class="tchar">${q.ch}</span>`:''}
+        <div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div>
+        <div class="tfb" id="fb"></div>
+        <button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button>
+      </div>
+    </div>`;}
+
+function doAns(i){
+  const q=tqs[ti];
+  document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
+  const chosen=q.opts[i],ok=chosen===q.ans;
+  if(ok)sc++;
+  ans[ti]={ok,ch:q.ch,lb:q.lb};
+  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
+  const fb=document.getElementById('fb');
+  fb.className='tfb show '+(ok?'ok':'bad');
+  fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;
+  document.getElementById('nq').classList.add('show');
+}
+
+function nextQ(){ti++;ti>=tqs.length?showR():renderQ();}
+
+function showR(){
+  const tot=tqs.length,pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
+  const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
+  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
+  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
+  document.getElementById('tv').style.display='none';
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML=`
+    <div class="twrap">
+      <div class="thead"><div class="ttitle">Test Sonucu — Kanji #1–10</div></div>
+      <div class="rwrap">
+        <div class="remoji">${emoji}</div>
+        <div class="rscore">${sc} / ${tot}</div>
+        <div class="rlabel">${lbl} · %${pct}</div>
+        <div class="rbdown">
+          <div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div>
+          <div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div>
+          <div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div>
+        </div>
+        <div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div>
+        <div class="tsum">${tsum}</div>
+        <button class="rbtn" onclick="startT()">Tekrar</button>
+        <div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div>
+      </div>
+    </div>`;}
+
+startT();
+</script>
+</body>
+</html>
