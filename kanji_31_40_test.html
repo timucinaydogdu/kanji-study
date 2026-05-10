@@ -3,14 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanji Test #31–40</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<title>Kanji #31–40 | Notlar & Test</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
 @media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:2rem 1rem;}
-.app{width:100%;max-width:660px;}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
+.app{width:100%;max-width:660px;margin:0 auto;}
+a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
+a.back:hover{color:var(--text);}
+.notes-wrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:1.5rem;}
+.notes-header{background:var(--p50);border-bottom:0.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.notes-header-title{font-size:15px;font-weight:500;color:var(--p900);}
+.notes-toggle{font-size:13px;color:var(--p800);}
+.kanji-row{display:grid;grid-template-columns:72px 1fr;border-bottom:0.5px solid var(--border);}
+.kanji-row:last-child{border-bottom:none;}
+.kanji-left{background:var(--p50);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem 0.5rem;border-right:0.5px solid var(--p200);}
+.kanji-char{font-family:'Noto Serif JP',serif;font-size:40px;font-weight:700;color:var(--p900);line-height:1;}
+.kanji-num{font-size:10px;color:var(--p800);margin-top:4px;font-weight:500;}
+.kanji-right{padding:0.875rem 1rem;}
+.kanji-meaning{font-size:15px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.reading-row{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;}
+.rbadge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;font-size:11px;border:0.5px solid;}
+.rl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.on-b{background:var(--p50);color:var(--p800);border-color:var(--p200);}
+.kun-b{background:var(--t50);color:var(--t600);border-color:var(--t400);}
+.kanji-origin{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:6px;}
+.kanji-mnemonic{font-size:12px;font-weight:500;color:var(--p800);background:var(--p50);border-radius:6px;padding:5px 8px;margin-bottom:7px;}
+.compounds{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
+.ccard{background:var(--bg2);border-radius:6px;padding:6px 8px;}
+.ckanji{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:var(--text);}
+.creading{font-size:10px;color:var(--t600);font-weight:500;margin:1px 0;}
+.cmeaning{font-size:11px;color:var(--text2);}
 .twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
 .thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
 .ttitle{font-size:15px;font-weight:500;color:var(--a900);}
@@ -54,10 +79,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;displ
 .slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
 .krep{text-align:left;margin-top:1.5rem;border-top:0.5px solid var(--border);padding-top:1.25rem;}
 .krow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:0.5px solid var(--border);font-size:13px;}
-.kchar{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;min-width:34px;color:var(--text);}
-.kinfo{flex:1;}
-.kmean{color:var(--text);font-size:13px;}
-.kqt{font-size:11px;color:var(--text2);margin-top:1px;}
+.kchar2{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;min-width:34px;color:var(--text);}
+.kinfo{flex:1;}.kmean{color:var(--text);font-size:13px;}.kqt{font-size:11px;color:var(--text2);margin-top:1px;}
 .rs{font-size:12px;font-weight:500;padding:2px 9px;border-radius:20px;}
 .rs-ok{background:var(--t50);color:var(--t800);}
 .rs-bad{background:var(--r50);color:var(--r800);}
@@ -65,23 +88,25 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;displ
 </head>
 <body>
 <div class="app">
+  <a class="back" href="index.html">← Ana Sayfa</a>
+  <div class="notes-wrap">
+    <div class="notes-header" onclick="toggleNotes()">
+      <div class="notes-header-title">📖 Kanji Notları — Set 04 (#31–40)</div>
+      <div class="notes-toggle" id="ntoggle">Gizle ▲</div>
+    </div>
+    <div class="notes-body" id="nbody"></div>
+  </div>
   <div id="tv"></div>
   <div id="rv" style="display:none"></div>
 </div>
 <script>
-const K=[
-  {ch:"耳",mn:"Kulak",on:["JI"],kun:["mimi"],cp:[{k:"耳科",r:"JIKA",m:"Kulak hastalıkları"},{k:"耳鳴り",r:"miminari",m:"Kulak çınlaması"},{k:"耳飾り",r:"mimikazari",m:"Küpe"}]},
-  {ch:"七",mn:"Yedi",on:["SHICHI"],kun:["nana-"],cp:[{k:"七月",r:"SHICHIGATSU",m:"Temmuz"},{k:"七日",r:"nanoka",m:"Yedinci gün"},{k:"七重",r:"nanae",m:"Yedi kat"}]},
-  {ch:"車",mn:"Araç / Taşıt",on:["SHA"],kun:["kuruma"],cp:[{k:"電車",r:"DENSHA",m:"Tren"},{k:"洗車場",r:"SENSHAJŌ",m:"Araç yıkama yeri"},{k:"手車",r:"teguruma",m:"El arabası"}]},
-  {ch:"手",mn:"El",on:["SHU"],kun:["te"],cp:[{k:"手段",r:"SHUDAN",m:"Yöntem, araç"},{k:"手袋",r:"tebukuro",m:"Eldiven"},{k:"上手",r:"JŌZU",m:"Becerikli, usta"}]},
-  {ch:"十",mn:"On",on:["JŪ"],kun:["tō"],cp:[{k:"十月",r:"JŪGATSU",m:"Ekim"},{k:"十日",r:"tōka",m:"Onuncu gün"},{k:"十字",r:"JŪJI",m:"Haç şekli"}]},
-  {ch:"出",mn:"Çıkmak / Dışarı koymak",on:["SHUTSU"],kun:["deru","dasu"],cp:[{k:"出発",r:"SHUPPATSU",m:"Kalkış, hareket"},{k:"思い出",r:"omoide",m:"Anı, hatıra"},{k:"引き出し",r:"hikidashi",m:"Çekmece"}]},
-  {ch:"女",mn:"Kadın",on:["JO","NYO","NYŌ"],kun:["onna","me"],cp:[{k:"女性",r:"JOSEI",m:"Kadın"},{k:"女房",r:"NYŌBŌ",m:"Eş, hanım"},{k:"女の子",r:"onna-no-ko",m:"Kız çocuğu"}]},
-  {ch:"小",mn:"Küçük",on:["SHŌ"],kun:["chiisai","ko-","o-"],cp:[{k:"小説",r:"SHŌSETSU",m:"Roman"},{k:"子犬",r:"koinu",m:"Küçük köpek"},{k:"小川",r:"ogawa",m:"Dere, çay"}]},
-  {ch:"上",mn:"Yukarı / Üst",on:["JŌ"],kun:["ue","uwa-","kami","ageru","noboru"],cp:[{k:"以上",r:"IJŌ",m:"Daha fazla, üzerinde"},{k:"川上",r:"kawakami",m:"Nehrin yukarısı"},{k:"値上げ",r:"neage",m:"Fiyat artışı"}]},
-  {ch:"森",mn:"Orman",on:["SHIN"],kun:["mori"],cp:[{k:"森林",r:"SHINRIN",m:"Orman"},{k:"森閑",r:"SHINKAN",m:"Derin sessizlik"},{k:"青森",r:"Aomori",m:"Aomori şehri"}]}
-];
-
+const K=[{"n": 31, "ch": "耳", "mn": "Kulak", "on": ["JI"], "kun": ["mimi"], "or": "OBI formlarına dayanan bir kulak piktogramıdır.", "mm": "👂 SİVRİ KULAK", "cp": [{"k": "耳科", "r": "JIKA", "m": "Kulak hastalıkları"}, {"k": "耳鳴り", "r": "miminari", "m": "Kulak çınlaması"}, {"k": "耳飾り", "r": "mimikazari", "m": "Küpe"}]}, {"n": 32, "ch": "七", "mn": "Yedi", "on": ["SHICHI"], "kun": ["nana-"], "or": "Modern 十 (on)'a benzeyen OBI formlarından gelir. Erken Çincede 'kesmek' ve 'yedi' benzer seslerdi, grafik ödünç alındı.", "mm": "✏️ KÖTÜ YAZILMIŞ ON — SADECE YEDİ EDER", "cp": [{"k": "七月", "r": "SHICHIGATSU", "m": "Temmuz"}, {"k": "七日", "r": "nanoka", "m": "Yedinci gün"}, {"k": "七重", "r": "nanae", "m": "Yedi kat"}]}, {"n": 33, "ch": "車", "mn": "Araç / Taşıt", "on": ["SHA"], "kun": ["kuruma"], "or": "İki tekerlekli bir savaş arabasının piktogramına dayanır.", "mm": "🚗 İKİ TEKERLEKLİ SAVAŞ ARABASI", "cp": [{"k": "電車", "r": "DENSHA", "m": "Tren"}, {"k": "洗車場", "r": "SENSHAJŌ", "m": "Araç yıkama yeri"}, {"k": "手車", "r": "teguruma", "m": "El arabası"}]}, {"n": 34, "ch": "手", "mn": "El", "on": ["SHU"], "kun": ["te"], "or": "Bronz form beş parmaklı bir eli gösterir. Bileşik karakterlerde genellikle 扌 biçimini alır.", "mm": "🖐️ BEŞ PARMAKLI EL — ORTASI BÜKÜK", "cp": [{"k": "手段", "r": "SHUDAN", "m": "Yöntem, araç"}, {"k": "手袋", "r": "tebukuro", "m": "Eldiven"}, {"k": "上手", "r": "JŌZU", "m": "Becerikli, usta"}]}, {"n": 35, "ch": "十", "mn": "On", "on": ["JŪ"], "kun": ["tō"], "or": "Katō erken bronz formlarını bir iğne olarak görür ve 'on' için fonetik ödünç alındığını öne sürer. Shirakawa ise ahşap sayım çubuğu olarak yorumlar.", "mm": "✝️ DÜZGÜN BİR HAÇ ON'DAN ON ALIR", "cp": [{"k": "十月", "r": "JŪGATSU", "m": "Ekim"}, {"k": "十日", "r": "tōka", "m": "Onuncu gün"}, {"k": "十字", "r": "JŪJI", "m": "Haç şekli"}]}, {"n": 36, "ch": "出", "mn": "Çıkmak / Dışarı koymak", "on": ["SHUTSU"], "kun": ["deru", "dasu"], "or": "Qiu, grafiği bir çukur konuttan çıkan ayak olarak görür — antik insanların çukurlarda yaşadığına dikkat çeker.", "mm": "⛰️ BİR DAĞIN ÜZERİNE BAŞKA DAĞ ÇIKAR", "cp": [{"k": "出発", "r": "SHUPPATSU", "m": "Kalkış, hareket"}, {"k": "思い出", "r": "omoide", "m": "Anı, hatıra"}, {"k": "引き出し", "r": "hikidashi", "m": "Çekmece"}]}, {"n": 37, "ch": "女", "mn": "Kadın", "on": ["JO", "NYO", "NYŌ"], "kun": ["onna", "me"], "or": "OBI formları diz çökmüş bir kadını gösterir; zamanla stilize edilmiştir.", "mm": "🙏 DİZ ÇÖKMÜŞ KADIN", "cp": [{"k": "女性", "r": "JOSEI", "m": "Kadın"}, {"k": "女房", "r": "NYŌBŌ", "m": "Eş, hanım"}, {"k": "女の子", "r": "onna-no-ko", "m": "Kız çocuğu"}]}, {"n": 38, "ch": "小", "mn": "Küçük", "on": ["SHŌ"], "kun": ["chiisai", "ko-", "o-"], "or": "OBI formları birkaç küçük nesneyi gösterir (genellikle üç tane). Bir çizginin ikiye bölünmesi olarak da hatırlanabilir.", "mm": "🤏 BİR ÇIZGI İKİ KÜÇÜK ÇIZGIYE BÖLÜNÜR", "cp": [{"k": "小説", "r": "SHŌSETSU", "m": "Roman"}, {"k": "子犬", "r": "koinu", "m": "Küçük köpek"}, {"k": "小川", "r": "ogawa", "m": "Dere, çay"}]}, {"n": 39, "ch": "上", "mn": "Yukarı / Üst", "on": ["JŌ"], "kun": ["ue", "uwa-", "kami", "ageru", "noboru"], "or": "OBI formlarında iki yatay çizgi görülür; üstteki daha kısa. Dikey çizgi sonradan eklendi.", "mm": "⬆️ SAPA SAHİP BAR TABAN ÇİZGİSİNİN ÜZERİNE ÇIKAR", "cp": [{"k": "以上", "r": "IJŌ", "m": "Daha fazla, üzerinde"}, {"k": "川上", "r": "kawakami", "m": "Nehrin yukarısı"}, {"k": "値上げ", "r": "neage", "m": "Fiyat artışı"}]}, {"n": 40, "ch": "森", "mn": "Orman", "on": ["SHIN"], "kun": ["mori"], "or": "OBI formu üç ağacın piktogramına dayanır — çokluk anlamında. Japonca'da Şinto çağrışımları taşıyabilir.", "mm": "🌲 ORMANDA ÜÇER ÜÇER BÜYÜYEN AĞAÇLAR", "cp": [{"k": "森林", "r": "SHINRIN", "m": "Orman"}, {"k": "森閑", "r": "SHINKAN", "m": "Derin sessizlik"}, {"k": "青森", "r": "Aomori", "m": "Aomori şehri"}]}];
+function buildNotes(){
+  const body=document.getElementById('nbody');
+  body.innerHTML=K.map(k=>`<div class="kanji-row"><div class="kanji-left"><div class="kanji-char">${k.ch}</div><div class="kanji-num">#${k.n}</div></div><div class="kanji-right"><div class="kanji-meaning">${k.mn}</div><div class="reading-row">${k.on.map(r=>`<span class="rbadge on-b"><span class="rl">ON</span>${r}</span>`).join('')}${k.kun.map(r=>`<span class="rbadge kun-b"><span class="rl">KUN</span>${r}</span>`).join('')}</div><div class="kanji-origin">${k.or}</div><div class="kanji-mnemonic">${k.mm}</div><div class="compounds">${k.cp.map(c=>`<div class="ccard"><div class="ckanji">${c.k}</div><div class="creading">${c.r}</div><div class="cmeaning">${c.m}</div></div>`).join('')}</div></div></div>`).join('');
+}
+let notesOpen=true;
+function toggleNotes(){notesOpen=!notesOpen;document.getElementById('nbody').style.display=notesOpen?'block':'none';document.getElementById('ntoggle').textContent=notesOpen?'Gizle ▲':'Göster ▼';}
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
@@ -97,35 +122,27 @@ function build(){
   sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
   return sh(qs);
 }
-
 let tqs=[],ti=0,sc=0,ans={};
 function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
 function renderQ(){
   const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
   document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #31–40</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
 function doAns(i){
-  const q=tqs[ti];
-  document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
-  const chosen=q.opts[i],ok=chosen===q.ans;
-  if(ok)sc++;
-  ans[ti]={ok,ch:q.ch,lb:q.lb};
+  const q=tqs[ti];document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
+  const chosen=q.opts[i],ok=chosen===q.ans;if(ok)sc++;ans[ti]={ok,ch:q.ch,lb:q.lb};
   document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
-  const fb=document.getElementById('fb');
-  fb.className='tfb show '+(ok?'ok':'bad');
-  fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;
-  document.getElementById('nq').classList.add('show');
-}
+  const fb=document.getElementById('fb');fb.className='tfb show '+(ok?'ok':'bad');fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;document.getElementById('nq').classList.add('show');}
 function nextQ(){ti++;ti>=tqs.length?showR():renderQ();}
 function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
   const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
-  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
-  document.getElementById('tv').style.display='none';
-  document.getElementById('rv').style.display='block';
+  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>(({q,a:ans[i]})))).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
+  document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #31–40</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
+buildNotes();
 startT();
 </script>
 </body>
