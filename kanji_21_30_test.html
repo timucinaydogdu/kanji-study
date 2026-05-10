@@ -100,48 +100,119 @@ a.back:hover{color:var(--text);}
   <div id="rv" style="display:none"></div>
 </div>
 <script>
-const K=[{"n": 21, "ch": "五", "mn": "Beş", "on": ["GO"], "kun": ["itsu-"], "or": "Etimoloji tartışmalıdır. Shirakawa bunu çapraz tahta parçalarından oluşan bir kapak olarak yorumlar. İplik sararken beş parmağın yerini alan bir makara olarak da yorumlanır.", "mm": "🖐️ ŞEKİLSİZ BİR MAKARA MI, BEŞ PARMAK MI?", "cp": [{"k": "五月", "r": "GOGATSU", "m": "Mayıs"}, {"k": "五人", "r": "GONIN", "m": "Beş kişi"}, {"k": "五日", "r": "itsuka", "m": "Beşinci gün"}]}, {"n": 22, "ch": "口", "mn": "Ağız / Açıklık", "on": ["KŌ", "KU"], "kun": ["kuchi"], "or": "Katō'ya göre ağzın piktogramından gelir. Shirakawa ise erken formların ritüel bir kabı temsil ettiğini öne sürer.", "mm": "⬜ KARE AÇIK AĞIZ", "cp": [{"k": "人口", "r": "JINKŌ", "m": "Nüfus"}, {"k": "口実", "r": "KŌJITSU", "m": "Bahane"}, {"k": "出口", "r": "deguchi", "m": "Çıkış"}]}, {"n": 23, "ch": "校", "mn": "Okul / Kontrol", "on": ["KŌ"], "kun": [], "or": "Anlamsal-fonetik kategoride bir karakter. Sağ taraf 'çapraz, karışık' anlamına gelir. Sonradan 'ahşap' belirleyicisi eklenerek 'tahta bukağı' anlamı kazandı.", "mm": "🏫 OKULDA ALTI AHŞAP ÇELİŞKİYİ KONTROL ET", "cp": [{"k": "校正", "r": "KŌSEI", "m": "Prova / Düzeltme"}, {"k": "高校", "r": "KŌKŌ", "m": "Lise"}, {"k": "校長", "r": "KŌCHŌ", "m": "Okul müdürü"}]}, {"n": 24, "ch": "左", "mn": "Sol", "on": ["SA"], "kun": ["hidari"], "or": "OBI formu, soldan sağa doğru uzanan bir elin piktogramına dayanır. 工 (alet) eklenerek 'sol el + alet' semantik bileşik oluşturur.", "mm": "📐 SOL EL MARANGOZUN GÖNYESİNİ TUTAR", "cp": [{"k": "左派", "r": "SAHA", "m": "Sol kanat"}, {"k": "左側", "r": "hidarigawa", "m": "Sol taraf"}, {"k": "左手", "r": "hidarite", "m": "Sol el"}]}, {"n": 25, "ch": "三", "mn": "Üç", "on": ["SAN"], "kun": ["mi-"], "or": "Üç kısa yatay çizgi — OBI'den beri görülen basit bir hafıza aracı. Mısır hiyerogliflerinde de benzer tasvirler görülür.", "mm": "✌️ ÜÇ PARMAK", "cp": [{"k": "三月", "r": "SANGATSU", "m": "Mart"}, {"k": "三日", "r": "mikka", "m": "Üçüncü gün"}, {"k": "三角", "r": "SANKAKU", "m": "Üçgen"}]}, {"n": 26, "ch": "山", "mn": "Dağ / Tepe", "on": ["SAN"], "kun": ["yama"], "or": "OBI formlarından gelen, dişli dağları tasvir eden bir piktogram.", "mm": "⛰️ ÜÇ ZİRVELİ DAĞ", "cp": [{"k": "氷山", "r": "HYŌZAN", "m": "Buzdağı"}, {"k": "たくさん", "r": "TAKUSAN", "m": "Çok miktarda"}, {"k": "山道", "r": "yamamichi", "m": "Dağ yolu"}]}, {"n": 27, "ch": "子", "mn": "Çocuk", "on": ["SHI", "SU"], "kun": ["ko"], "or": "Bir bebeğin piktogramından gelir. Geleneksel Çin altmışlık döngüsünün onikili 'Yer Dalları'nın ilkini göstermek için de kullanılmıştır.", "mm": "👶 ANNENİN SIRTINDA KOLLARI AÇIK ÇOCUK", "cp": [{"k": "電子", "r": "DENSHI", "m": "Elektron"}, {"k": "子供", "r": "kodomo", "m": "Çocuk(lar)"}, {"k": "様子", "r": "yōsu", "m": "Durum, hal"}]}, {"n": 28, "ch": "四", "mn": "Dört", "on": ["SHI"], "kun": ["yo-", "yon"], "or": "OBI ve bronz örnekte dört yatay çizgiyle temsil edilir. 'Dört' anlamı neredeyse kesinlikle ödünç kullanımdır.", "mm": "✊ DÖRT PARMAK YUMRUKTA", "cp": [{"k": "四月", "r": "SHIGATSU", "m": "Nisan"}, {"k": "四日", "r": "yokka", "m": "Dördüncü gün"}, {"k": "四回", "r": "yonKAI", "m": "Dört kez"}]}, {"n": 29, "ch": "糸", "mn": "İplik", "on": ["SHI"], "kun": ["ito"], "or": "OBI formları tek ipliği (muhtemelen ipek) gösterir. 絵 (resim) gibi karakterlerde yaygın bir belirleyicidir.", "mm": "🧶 BÜKÜMLÜ İPLİK YUMAGI", "cp": [{"k": "製糸", "r": "SEISHI", "m": "İpek üretimi"}, {"k": "毛糸", "r": "keito", "m": "Yün ipliği"}, {"k": "糸巻き", "r": "itomaki", "m": "İplik makarası"}]}, {"n": 30, "ch": "字", "mn": "Harf / Sembol", "on": ["JI"], "kun": [], "or": "En erken formlar 'çatı' (bina/ev) ve 子 (çocuk) unsurlarından oluşur; özgün anlamı 'yetiştirmek'tir. MS 100 civarında 'yazılı işaret' anlamını kazandı.", "mm": "🏠 EVDE HARF ÖĞRENEN ÇOCUK", "cp": [{"k": "字引", "r": "jibiki", "m": "Sözlük"}, {"k": "赤字", "r": "akaJI", "m": "Zarar / Açık"}, {"k": "数字", "r": "SŪJI", "m": "Rakam, sayı"}]}];
-function buildNotes(){
-  const body=document.getElementById('nbody');
-  body.innerHTML=K.map(k=>`<div class="kanji-row"><div class="kanji-left"><div class="kanji-char">${k.ch}</div><div class="kanji-num">#${k.n}</div></div><div class="kanji-right"><div class="kanji-meaning">${k.mn}</div><div class="reading-row">${k.on.map(r=>`<span class="rbadge on-b"><span class="rl">ON</span>${r}</span>`).join('')}${k.kun.map(r=>`<span class="rbadge kun-b"><span class="rl">KUN</span>${r}</span>`).join('')}</div><div class="kanji-origin">${k.or}</div><div class="kanji-mnemonic">${k.mm}</div><div class="compounds">${k.cp.map(c=>`<div class="ccard"><div class="ckanji">${c.k}</div><div class="creading">${c.r}</div><div class="cmeaning">${c.m}</div></div>`).join('')}</div></div></div>`).join('');
+const K = [{"n": 21, "ch": "五", "mn": "Beş", "on": ["GO"], "kun": ["itsu-"], "or": "Etimoloji tartışmalıdır. Shirakawa çapraz tahta parçalarından oluşan bir kapak olarak yorumlar. İplik sararken beş parmağın yerini alan makara olarak da yorumlanır.", "mm": "🖐️ ŞEKİLSİZ MAKARA MI, BEŞ PARMAK MI?", "cp": [{"k": "五月", "r": "GOGATSU", "m": "Mayıs"}, {"k": "五人", "r": "GONIN", "m": "Beş kişi"}, {"k": "五日", "r": "itsuka", "m": "Beşinci gün"}]}, {"n": 22, "ch": "口", "mn": "Ağız / Açıklık", "on": ["KŌ", "KU"], "kun": ["kuchi"], "or": "Katō ağzın piktogramından geldiğini söyler. Shirakawa ise erken formların ritüel bir kabı temsil ettiğini öne sürer.", "mm": "⬜ KARE AÇIK AĞIZ", "cp": [{"k": "人口", "r": "JINKŌ", "m": "Nüfus"}, {"k": "口実", "r": "KŌJITSU", "m": "Bahane"}, {"k": "出口", "r": "deguchi", "m": "Çıkış"}]}, {"n": 23, "ch": "校", "mn": "Okul / Kontrol", "on": ["KŌ"], "kun": [], "or": "Anlamsal-fonetik kategoride bir karakter. Sağ taraf çapraz, karışık anlamına gelir. Sonradan ahşap belirleyicisi eklenerek tahta bukağı anlamı kazandı.", "mm": "🏫 OKULDA ALTI AHŞAP ÇELİŞKİYİ KONTROL ET", "cp": [{"k": "校正", "r": "KŌSEI", "m": "Prova / Düzeltme"}, {"k": "高校", "r": "KŌKŌ", "m": "Lise"}, {"k": "校長", "r": "KŌCHŌ", "m": "Okul müdürü"}]}, {"n": 24, "ch": "左", "mn": "Sol", "on": ["SA"], "kun": ["hidari"], "or": "OBI formu soldan sağa uzanan bir elin piktogramına dayanır. 工 (alet) eklenerek sol el + alet semantik bileşik oluşturur.", "mm": "📐 SOL EL MARANGOZUN GÖNYESİNİ TUTAR", "cp": [{"k": "左派", "r": "SAHA", "m": "Sol kanat"}, {"k": "左側", "r": "hidarigawa", "m": "Sol taraf"}, {"k": "左手", "r": "hidarite", "m": "Sol el"}]}, {"n": 25, "ch": "三", "mn": "Üç", "on": ["SAN"], "kun": ["mi-"], "or": "Üç kısa yatay çizgi — OBI'den beri görülen basit bir hafıza aracı. Mısır hiyerogliflerinde de benzer tasvirler görülür.", "mm": "✌️ ÜÇ PARMAK", "cp": [{"k": "三月", "r": "SANGATSU", "m": "Mart"}, {"k": "三日", "r": "mikka", "m": "Üçüncü gün"}, {"k": "三角", "r": "SANKAKU", "m": "Üçgen"}]}, {"n": 26, "ch": "山", "mn": "Dağ / Tepe", "on": ["SAN"], "kun": ["yama"], "or": "OBI formlarından gelen, dişli dağları tasvir eden bir piktogram.", "mm": "⛰️ ÜÇ ZİRVELİ DAĞ", "cp": [{"k": "氷山", "r": "HYŌZAN", "m": "Buzdağı"}, {"k": "たくさん", "r": "TAKUSAN", "m": "Çok miktarda"}, {"k": "山道", "r": "yamamichi", "m": "Dağ yolu"}]}, {"n": 27, "ch": "子", "mn": "Çocuk", "on": ["SHI", "SU"], "kun": ["ko"], "or": "Bir bebeğin piktogramından gelir. Geleneksel Çin altmışlık döngüsünün onikili Yer Dalları'nın ilkini göstermek için de kullanılmıştır.", "mm": "👶 ANNENİN SIRTINDA KOLLARI AÇIK ÇOCUK", "cp": [{"k": "電子", "r": "DENSHI", "m": "Elektron"}, {"k": "子供", "r": "kodomo", "m": "Çocuk(lar)"}, {"k": "様子", "r": "yōsu", "m": "Durum, hal"}]}, {"n": 28, "ch": "四", "mn": "Dört", "on": ["SHI"], "kun": ["yo-", "yon"], "or": "OBI ve bronz örnekte dört yatay çizgiyle temsil edilir. Dört anlamı neredeyse kesinlikle ödünç kullanımdır.", "mm": "✊ DÖRT PARMAK YUMRUKTA", "cp": [{"k": "四月", "r": "SHIGATSU", "m": "Nisan"}, {"k": "四日", "r": "yokka", "m": "Dördüncü gün"}, {"k": "四回", "r": "yonKAI", "m": "Dört kez"}]}, {"n": 29, "ch": "糸", "mn": "İplik", "on": ["SHI"], "kun": ["ito"], "or": "OBI formları tek ipliği (muhtemelen ipek) gösterir. Bileşik karakterlerde yaygın bir belirleyicidir.", "mm": "🧶 BÜKÜMLÜ İPLİK YUMAGI", "cp": [{"k": "製糸", "r": "SEISHI", "m": "İpek üretimi"}, {"k": "毛糸", "r": "keito", "m": "Yün ipliği"}, {"k": "糸巻き", "r": "itomaki", "m": "İplik makarası"}]}, {"n": 30, "ch": "字", "mn": "Harf / Sembol", "on": ["JI"], "kun": [], "or": "En erken formlar çatı (bina/ev) ve 子 (çocuk) unsurlarından oluşur. MS 100 civarında yazılı işaret anlamını kazandı.", "mm": "🏠 EVDE HARF ÖĞRENEN ÇOCUK", "cp": [{"k": "字引", "r": "jibiki", "m": "Sözlük"}, {"k": "赤字", "r": "akaJI", "m": "Zarar / Açık"}, {"k": "数字", "r": "SŪJI", "m": "Rakam, sayı"}]}];
+
+function buildNotes() {
+  const body = document.getElementById('nbody');
+  body.innerHTML = K.map(k => {
+    const onB = k.on.map(r => '<span class="rbadge on-b"><span class="rl">ON</span>' + r + '</span>').join('');
+    const kunB = k.kun.map(r => '<span class="rbadge kun-b"><span class="rl">KUN</span>' + r + '</span>').join('');
+    const comps = k.cp.map(c => '<div class="ccard"><div class="ckanji">' + c.k + '</div><div class="creading">' + c.r + '</div><div class="cmeaning">' + c.m + '</div></div>').join('');
+    return '<div class="kanji-row"><div class="kanji-left"><div class="kanji-char">' + k.ch + '</div><div class="kanji-num">#' + k.n + '</div></div><div class="kanji-right"><div class="kanji-meaning">' + k.mn + '</div><div class="reading-row">' + onB + kunB + '</div><div class="kanji-origin">' + k.or + '</div><div class="kanji-mnemonic">' + k.mm + '</div><div class="compounds">' + comps + '</div></div></div>';
+  }).join('');
 }
-let notesOpen=true;
-function toggleNotes(){notesOpen=!notesOpen;document.getElementById('nbody').style.display=notesOpen?'block':'none';document.getElementById('ntoggle').textContent=notesOpen?'Gizle ▲':'Göster ▼';}
-function build(){
-  const r=a=>a[Math.floor(Math.random()*a.length)];
-  const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+let notesOpen = true;
+function toggleNotes() {
+  notesOpen = !notesOpen;
+  document.getElementById('nbody').style.display = notesOpen ? 'block' : 'none';
+  document.getElementById('ntoggle').textContent = notesOpen ? 'Gizle ▲' : 'Göster ▼';
+}
+
+function rand(a) { return a[Math.floor(Math.random() * a.length)]; }
+function sh(a) { return [...a].sort(() => Math.random() - 0.5); }
+function oM(ex, n) { return sh(K.filter(k => k.ch !== ex.ch)).slice(0, n).map(k => k.mn); }
+function oC(ex, n) { return sh(K.filter(k => k.ch !== ex.ch)).slice(0, n).map(k => k.ch); }
+function oCM(ex, n) { return sh(K.filter(k => k.ch !== ex.ch)).slice(0, n).map(k => rand(k.cp).m); }
+function oR(ex, n) {
+  const out = [];
+  for (const k of sh(K.filter(x => x.ch !== ex.ch))) {
+    const rds = [...k.on, ...k.kun];
+    if (rds.length) out.push(rand(rds));
+    if (out.length >= n) break;
+  }
+  return out;
+}
+
+function build() {
+  const qs = [];
+  sh(K).slice(0, 8).forEach(k => { const c = rand(k.cp); qs.push({ tp:'cm', lb:'Birleşik → Anlam', lc:'tlc', ch:k.ch, q:'"' + c.k + '" (' + c.r + ') kelimesinin anlamı nedir?', ans:c.m, opts:sh([c.m, ...oCM(k,3)]), sc:false }); });
+  sh(K).slice(0, 3).forEach(k => { const c = rand(k.cp); qs.push({ tp:'ck', lb:'Birleşik → Kanji', lc:'tlc', ch:k.ch, q:'"' + c.m + '" anlamındaki "' + c.k + '" hangi kanjiden türemiştir?', ans:k.ch, opts:sh([k.ch, ...oC(k,3)]), sc:false }); });
+  sh(K).slice(0, 4).forEach(k => qs.push({ tp:'ka', lb:'Kanji → Anlam', lc:'tlm', ch:k.ch, q:'Bu kanji ne anlama gelir?', ans:k.mn, opts:sh([k.mn, ...oM(k,3)]), sc:true }));
+  sh(K).slice(0, 3).forEach(k => qs.push({ tp:'ak', lb:'Anlam → Kanji', lc:'tlm', ch:k.ch, q:'"' + k.mn + '" anlamına gelen kanji hangisidir?', ans:k.ch, opts:sh([k.ch, ...oC(k,3)]), sc:false }));
+  sh(K).slice(0, 2).forEach(k => { const rds = [...k.on, ...k.kun]; const ans = rand(rds); qs.push({ tp:'rd', lb:'Okunuş (ON/KUN)', lc:'tlr', ch:k.ch, q:'Bu kanjinin okunuşlarından biri nedir?', ans:ans, opts:sh([ans, ...oR(k,3)]), sc:true }); });
   return sh(qs);
 }
-let tqs=[],ti=0,sc=0,ans={};
-function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
-function renderQ(){
-  const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
-  document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #21–30</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
-function doAns(i){
-  const q=tqs[ti];document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
-  const chosen=q.opts[i],ok=chosen===q.ans;if(ok)sc++;ans[ti]={ok,ch:q.ch,lb:q.lb};
-  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
-  const fb=document.getElementById('fb');fb.className='tfb show '+(ok?'ok':'bad');fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;document.getElementById('nq').classList.add('show');}
-function nextQ(){ti++;ti>=tqs.length?showR():renderQ();}
-function showR(){
-  const tot=tqs.length,pct=Math.round(sc/tot*100);
-  const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
-  const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>(({q,a:ans[i]})))).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
-  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
-  document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
-  document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #21–30</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
+
+let tqs = [], ti = 0, sc = 0, ans = {};
+
+function startT() {
+  tqs = build(); ti = 0; sc = 0; ans = {};
+  document.getElementById('rv').style.display = 'none';
+  document.getElementById('tv').style.display = 'block';
+  renderQ();
+}
+
+function renderQ() {
+  const q = tqs[ti], tot = tqs.length, pct = Math.round(ti / tot * 100);
+  let html = '<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:' + pct + '%"></div></div>';
+  html += '<div class="thead"><div class="ttitle">📝 Test — Kanji #21–30</div><div class="tscore">Soru ' + (ti+1) + ' / ' + tot + ' · ' + sc + ' ✓</div></div>';
+  html += '<div class="tbody"><span class="tqlabel ' + q.lc + '">' + q.lb + '</span><div class="tq">' + q.q + '</div>';
+  if (q.sc) html += '<span class="tchar">' + q.ch + '</span>';
+  html += '<div class="topts" id="opts">' + q.opts.map((o,i) => '<button class="topt" onclick="doAns(' + i + ')">' + o + '</button>').join('') + '</div>';
+  html += '<div class="tfb" id="fb"></div>';
+  html += '<button class="tnext" id="nq" onclick="nextQ()">' + (ti === tot-1 ? 'Sonuçları Gör →' : 'Sonraki →') + '</button>';
+  html += '</div></div>';
+  document.getElementById('tv').innerHTML = html;
+}
+
+function doAns(i) {
+  const q = tqs[ti];
+  document.querySelectorAll('.topt').forEach(b => b.disabled = true);
+  const chosen = q.opts[i], ok = chosen === q.ans;
+  if (ok) sc++;
+  ans[ti] = { ok, ch: q.ch, lb: q.lb };
+  document.querySelectorAll('.topt').forEach((b, j) => {
+    if (q.opts[j] === q.ans) b.classList.add('correct');
+    else if (j === i && !ok) b.classList.add('wrong');
+  });
+  const fb = document.getElementById('fb');
+  fb.className = 'tfb show ' + (ok ? 'ok' : 'bad');
+  fb.textContent = ok ? '✓ Doğru!' : '✗ Yanlış — Doğru cevap: ' + q.ans;
+  document.getElementById('nq').classList.add('show');
+}
+
+function nextQ() { ti++; ti >= tqs.length ? showR() : renderQ(); }
+
+function showR() {
+  const tot = tqs.length, pct = Math.round(sc / tot * 100);
+  const emoji = pct >= 90 ? '🏆' : pct >= 70 ? '👍' : pct >= 50 ? '📚' : '💪';
+  const lbl = pct >= 90 ? 'Mükemmel!' : pct >= 70 ? 'İyi iş!' : pct >= 50 ? 'Biraz daha çalış' : 'Tekrar et!';
+  const tlbls = { cm:'Birleşik → Anlam', ck:'Birleşik → Kanji', ka:'Kanji → Anlam', ak:'Anlam → Kanji', rd:'Okunuş' };
+  const types = ['cm','ck','ka','ak','rd'];
+  let tsum = '';
+  types.forEach(t => {
+    const tl = tqs.map((q,i) => ({ q, a: ans[i] })).filter(x => x.q.tp === t);
+    if (!tl.length) return;
+    const okc = tl.filter(x => x.a && x.a.ok).length;
+    tsum += '<div class="tsc"><div class="tsl">' + tlbls[t] + '</div><div class="tsv">' + okc + ' / ' + tl.length + '</div></div>';
+  });
+  let rep = '';
+  tqs.forEach((_, i) => {
+    const a = ans[i], q = tqs[i], k = K.find(x => x.ch === q.ch);
+    rep += '<div class="krow"><div class="kchar2">' + q.ch + '</div><div class="kinfo"><div class="kmean">' + (k ? k.mn : '') + '</div><div class="kqt">' + q.lb + '</div></div><span class="rs ' + (a ? a.ok ? 'rs-ok' : 'rs-bad' : '') + '">' + (a ? a.ok ? '✓ Doğru' : '✗ Yanlış' : '—') + '</span></div>';
+  });
+  document.getElementById('tv').style.display = 'none';
+  document.getElementById('rv').style.display = 'block';
+  let rhtml = '<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #21–30</div></div><div class="rwrap">';
+  rhtml += '<div class="remoji">' + emoji + '</div><div class="rscore">' + sc + ' / ' + tot + '</div><div class="rlabel">' + lbl + ' · %' + pct + '</div>';
+  rhtml += '<div class="rbdown"><div class="rbc"><div class="rbv rg">' + sc + '</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">' + (tot-sc) + '</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">' + tot + '</div><div class="rbl">Toplam</div></div></div>';
+  rhtml += '<div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">' + tsum + '</div>';
+  rhtml += '<button class="rbtn" onclick="startT()">Tekrar</button>';
+  rhtml += '<div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>' + rep + '</div></div></div>';
+  document.getElementById('rv').innerHTML = rhtml;
+}
+
 buildNotes();
 startT();
 </script>
