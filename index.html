@@ -4,47 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Japonca Kanji Çalışma Seti</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;
-  --text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;
-  --border:rgba(0,0,0,0.1);
-  --p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;
-  --t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;
-  --a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;
-  --rl:12px;--rm:8px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;
-    --text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;
-    --border:rgba(255,255,255,0.1);
-    --p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;
-    --t50:#04342C;--t600:#9FE1CB;
-    --a50:#412402;--a800:#FAC775;--a900:#FAC775;
-  }
-}
+:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--rm:8px;--rl:12px;}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;}}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
-.wrap{max-width:660px;margin:0 auto;}
+.wrap{max-width:680px;margin:0 auto;}
 .hero{text-align:center;margin-bottom:2rem;}
 .hero-char{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:var(--p900);line-height:1;margin-bottom:0.75rem;display:block;}
-.hero-title{font-size:22px;font-weight:500;color:var(--text);margin-bottom:0.5rem;}
+.hero-title{font-size:22px;font-weight:600;color:var(--text);margin-bottom:0.5rem;}
 .hero-sub{font-size:14px;color:var(--text2);}
-.section-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;}
-.sets{display:flex;flex-direction:column;gap:10px;}
-.set-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:box-shadow 0.15s;}
+
+/* BÜYÜK SINAV KARTI */
+.exam-card{background:linear-gradient(135deg,var(--p900),var(--p600));border-radius:var(--rl);padding:1.5rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.25rem;text-decoration:none;transition:opacity 0.15s;box-shadow:0 4px 20px rgba(83,74,183,0.3);}
+.exam-card:hover{opacity:0.92;}
+.exam-icon{font-size:40px;min-width:50px;text-align:center;}
+.exam-info{flex:1;}
+.exam-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:3px;}
+.exam-sub{font-size:13px;color:rgba(255,255,255,0.7);}
+.exam-arrow{font-size:20px;color:rgba(255,255,255,0.6);}
+
+/* BÖLÜM BAŞLIĞI */
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;margin-top:0.5rem;}
+.section-badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;}
+.badge-n5{background:#EEEDFE;color:#3C3489;}
+.badge-n4{background:#E1F5EE;color:#0F6E56;}
+.badge-n3{background:#FAEEDA;color:#633806;}
+.section-line{flex:1;height:0.5px;background:var(--border);}
+.section-note{font-size:12px;color:var(--text3);}
+
+/* SET KARTLARI */
+.sets{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem;}
+.set-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:box-shadow 0.15s;}
 .set-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);}
-.set-num{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--p900);min-width:48px;text-align:center;}
+.set-num{font-size:12px;font-weight:600;color:var(--text3);min-width:28px;}
 .set-info{flex:1;}
-.set-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px;}
-.set-chars{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--text2);letter-spacing:4px;}
-.set-badge{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.set-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;}
+.set-chars{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text2);letter-spacing:3px;}
+.set-badge{font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;white-space:nowrap;}
 .badge-ready{background:var(--t50);color:var(--t600);}
 .badge-soon{background:var(--bg2);color:var(--text3);}
-.set-arrow{font-size:18px;color:var(--text3);}
-.footer{text-align:center;margin-top:2rem;font-size:12px;color:var(--text3);}
+.set-arrow{font-size:16px;color:var(--text3);}
+
+.footer{text-align:center;margin-top:1rem;font-size:12px;color:var(--text3);}
 </style>
 </head>
 <body>
@@ -52,87 +55,136 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
   <div class="hero">
     <span class="hero-char">漢字</span>
     <div class="hero-title">Japonca Kanji Çalışma Seti</div>
-    <div class="hero-sub">The Complete Guide to Japanese Kanji · Türkçe</div>
+    <div class="hero-sub">The Complete Guide to Japanese Kanji — Türkçe</div>
   </div>
 
-  <div class="section-label" style="margin-bottom:12px">Testler</div>
-  <div class="sets">
+  <!-- BÜYÜK SINAV -->
+  <a class="exam-card" href="sinav_1_80.html">
+    <div class="exam-icon">🏆</div>
+    <div class="exam-info">
+      <div class="exam-title">Büyük Sınav — First Grade Kanji</div>
+      <div class="exam-sub">Kanji #1–80 · 100 soru · 5 soru tipi · Rastgele sıralama</div>
+    </div>
+    <div class="exam-arrow">→</div>
+  </a>
 
+  <!-- FIRST GRADE / N5 ağırlıklı -->
+  <div class="section-header">
+    <span class="section-badge badge-n5">First Grade · N5</span>
+    <div class="section-line"></div>
+    <span class="section-note">Kanji #1–80 · 8 Set</span>
+  </div>
+
+  <div class="sets">
     <a class="set-card" href="kanji_01_10_test.html">
-      <div class="set-num">#1</div>
+      <div class="set-num">#01</div>
       <div class="set-info">
-        <div class="set-title">Set 01 — Kanji #1–10</div>
+        <div class="set-title">Kanji #1–10</div>
         <div class="set-chars">一右雨円王音下火花貝</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
     <a class="set-card" href="kanji_11_20_test.html">
-      <div class="set-num">#2</div>
+      <div class="set-num">#02</div>
       <div class="set-info">
-        <div class="set-title">Set 02 — Kanji #11–20</div>
+        <div class="set-title">Kanji #11–20</div>
         <div class="set-chars">学気九休玉金空月犬見</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
     <a class="set-card" href="kanji_21_30_test.html">
-      <div class="set-num">#3</div>
+      <div class="set-num">#03</div>
       <div class="set-info">
-        <div class="set-title">Set 03 — Kanji #21–30</div>
+        <div class="set-title">Kanji #21–30</div>
         <div class="set-chars">五口校左三山子四糸字</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
     <a class="set-card" href="kanji_31_40_test.html">
-      <div class="set-num">#4</div>
+      <div class="set-num">#04</div>
       <div class="set-info">
-        <div class="set-title">Set 04 — Kanji #31–40</div>
+        <div class="set-title">Kanji #31–40</div>
         <div class="set-chars">耳七車手十出女小上森</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
     <a class="set-card" href="kanji_41_50_test.html">
-      <div class="set-num">#5</div>
+      <div class="set-num">#05</div>
       <div class="set-info">
-        <div class="set-title">Set 05 — Kanji #41–50</div>
+        <div class="set-title">Kanji #41–50</div>
         <div class="set-chars">人水正生青夕石赤千川</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
-  <a class="set-card" href="kanji_51_60_test.html">
-      <div class="set-num">#6</div>
+    <a class="set-card" href="kanji_51_60_test.html">
+      <div class="set-num">#06</div>
       <div class="set-info">
-        <div class="set-title">Set 06 — Kanji #51–60</div>
+        <div class="set-title">Kanji #51–60</div>
         <div class="set-chars">先早草足村大男竹中虫</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
-  <a class="set-card" href="kanji_61_70_test.html">
-      <div class="set-num">#7</div>
+    <a class="set-card" href="kanji_61_70_test.html">
+      <div class="set-num">#07</div>
       <div class="set-info">
-        <div class="set-title">Set 07 — Kanji #61–70</div>
+        <div class="set-title">Kanji #61–70</div>
         <div class="set-chars">町天田土二日入年白八</div>
       </div>
       <span class="set-badge badge-ready">✓ Hazır</span>
       <div class="set-arrow">→</div>
     </a>
-
+    <a class="set-card" href="kanji_71_80_test.html">
+      <div class="set-num">#08</div>
+      <div class="set-info">
+        <div class="set-title">Kanji #71–80</div>
+        <div class="set-chars">百文木本名目立力林六</div>
+      </div>
+      <span class="set-badge badge-ready">✓ Hazır</span>
+      <div class="set-arrow">→</div>
+    </a>
   </div>
 
-  <div class="footer">
-    Kaynak: The Complete Guide to Japanese Kanji — Seely &amp; Procter
+  <!-- SECOND GRADE / N4 ağırlıklı -->
+  <div class="section-header">
+    <span class="section-badge badge-n4">Second Grade · N4</span>
+    <div class="section-line"></div>
+    <span class="section-note">Kanji #81–240 · Yakında</span>
   </div>
+  <div class="sets">
+    <div class="set-card" style="opacity:0.5;cursor:default;">
+      <div class="set-num">#09</div>
+      <div class="set-info">
+        <div class="set-title">Kanji #81–90</div>
+        <div class="set-chars">· · · · · · · · · ·</div>
+      </div>
+      <span class="set-badge badge-soon">Yakında</span>
+    </div>
+  </div>
+
+  <!-- THIRD GRADE / N3 ağırlıklı -->
+  <div class="section-header">
+    <span class="section-badge badge-n3">Third Grade · N3</span>
+    <div class="section-line"></div>
+    <span class="section-note">Kanji #241–440 · Yakında</span>
+  </div>
+  <div class="sets">
+    <div class="set-card" style="opacity:0.5;cursor:default;">
+      <div class="set-num">#25</div>
+      <div class="set-info">
+        <div class="set-title">Kanji #241–250</div>
+        <div class="set-chars">· · · · · · · · · ·</div>
+      </div>
+      <span class="set-badge badge-soon">Yakında</span>
+    </div>
+  </div>
+
+  <div class="footer">Kaynak: The Complete Guide to Japanese Kanji — Seely &amp; Procter</div>
 </div>
 </body>
 </html>

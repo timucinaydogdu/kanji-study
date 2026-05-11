@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Büyük Sınav — Kanji #1–80 (First Grade)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
+.app{width:100%;max-width:680px;margin:0 auto;}
+a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
+a.back:hover{color:var(--text);}
+.hero{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);padding:1.5rem;margin-bottom:1.5rem;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.hero-chars{font-family:'Noto Serif JP',serif;font-size:28px;color:var(--p900);letter-spacing:6px;margin-bottom:8px;}
+.hero-title{font-size:18px;font-weight:600;color:var(--text);margin-bottom:4px;}
+.hero-sub{font-size:13px;color:var(--text2);margin-bottom:1rem;}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.hstat{background:var(--bg2);border-radius:var(--rm);padding:10px 8px;text-align:center;}
+.hstat-val{font-size:20px;font-weight:600;color:var(--p800);}
+.hstat-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.start-btn{margin-top:1.25rem;width:100%;padding:14px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;}
+.start-btn:hover{background:var(--p800);}
+/* TEST */
+.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.ttitle{font-size:14px;font-weight:500;color:var(--a900);}
+.tscore{font-size:13px;color:var(--a800);}
+.pstrip{height:5px;background:var(--bg2);}
+.pstrip-fill{height:100%;background:linear-gradient(90deg,var(--p600),var(--t400));transition:width 0.4s;}
+.tbody{padding:1.5rem;}
+.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
+.tlc{background:var(--p50);color:var(--p800);}
+.tlm{background:var(--t50);color:var(--t800);}
+.tlr{background:var(--a50);color:var(--a800);}
+.tq{font-size:15px;color:var(--text);line-height:1.6;}
+.tchar{font-family:'Noto Serif JP',serif;font-size:72px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 1rem;display:block;}
+.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
+.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
+.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200);}
+.topt.correct{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
+.topt.wrong{background:var(--r50);border-color:var(--r600);color:var(--r800);}
+.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
+.tfb.show{display:block;}
+.tfb.ok{background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
+.tfb.bad{background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
+.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
+.tnext:hover{background:var(--p800);}
+.tnext.show{display:block;}
+/* RESULT */
+.rwrap{padding:2rem 1.5rem;}
+.r-top{text-align:center;margin-bottom:1.5rem;}
+.remoji{font-size:52px;margin-bottom:0.75rem;}
+.rscore{font-size:42px;font-weight:600;color:var(--p800);margin-bottom:0.25rem;}
+.rlabel{font-size:16px;color:var(--text2);margin-bottom:1.5rem;}
+.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
+.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center;}
+.rbv{font-size:24px;font-weight:600;}
+.rbl{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
+.tsum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.5rem;}
+.tsc{background:var(--bg2);border-radius:var(--rm);padding:10px 12px;}
+.tsl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.tsv{font-size:15px;font-weight:500;color:var(--text);}
+.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
+.btn-row{display:flex;gap:8px;margin-bottom:1.5rem;}
+.rbtn{flex:1;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
+.rbtn:hover{background:var(--p800);}
+.rbtn.sec{background:var(--bg2);color:var(--text);border:0.5px solid var(--border2);}
+.wrong-list{margin-top:1.25rem;border-top:0.5px solid var(--border);padding-top:1.25rem;}
+.wrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--border);}
+.wchar{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;min-width:40px;color:var(--text);}
+.winfo{flex:1;}
+.wmean{font-size:13px;color:var(--text);font-weight:500;}
+.wqtype{font-size:11px;color:var(--text2);margin-top:1px;}
+.wanswers{font-size:12px;margin-top:3px;}
+.wgiven{color:var(--r600);}
+.wcorrect{color:var(--t600);}
+</style>
+</head>
+<body>
+<div class="app">
+  <a class="back" href="index.html">← Ana Sayfa</a>
+  <div class="hero" id="heroWrap">
+    <div class="hero-chars">一人水火山王目木六百</div>
+    <div class="hero-title">Büyük Sınav — First Grade Kanji</div>
+    <div class="hero-sub">Kanji #1–80 · Tüm setler · 100 soru</div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-val">80</div><div class="hstat-lbl">Kanji</div></div>
+      <div class="hstat"><div class="hstat-val">100</div><div class="hstat-lbl">Soru</div></div>
+      <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">Soru Tipi</div></div>
+    </div>
+    <button class="start-btn" onclick="startExam()">Sınava Başla →</button>
+  </div>
+  <div id="tv" style="display:none"></div>
+  <div id="rv" style="display:none"></div>
+</div>
+<script>
+const K=[
+  {n:1,ch:"一",mn:"Bir",on:["ICHI","ITSU"],kun:["hito-"],cp:[{k:"一月",r:"ICHIGATSU",m:"Ocak"},{k:"均一",r:"KIN'ITSU",m:"Tekdüzelik"},{k:"一人",r:"hitori",m:"Bir kişi"}]},
+  {n:2,ch:"右",mn:"Sağ",on:["U","YŪ"],kun:["migi"],cp:[{k:"右派",r:"UHA",m:"Sağ kanat"},{k:"左右",r:"SAYŪ",m:"Sol-sağ"},{k:"右手",r:"migite",m:"Sağ el"}]},
+  {n:3,ch:"雨",mn:"Yağmur",on:["U"],kun:["ame","ama-"],cp:[{k:"雨季",r:"UKI",m:"Yağmurlu mevsim"},{k:"大雨",r:"ōame",m:"Şiddetli yağmur"},{k:"雨雲",r:"amagumo",m:"Yağmur bulutu"}]},
+  {n:4,ch:"円",mn:"Yuvarlak / Yen",on:["EN"],kun:["marui"],cp:[{k:"円形",r:"ENKEI",m:"Daire şekli"},{k:"円高",r:"ENdaka",m:"Güçlü yen"},{k:"百円",r:"HYAKUEN",m:"Yüz yen"}]},
+  {n:5,ch:"王",mn:"Kral / Hükümdar",on:["Ō"],kun:[],cp:[{k:"王子",r:"ŌJI",m:"Prens"},{k:"女王",r:"JOŌ",m:"Kraliçe"},{k:"王様",r:"Ōsama",m:"Kral (saygılı)"}]},
+  {n:6,ch:"音",mn:"Ses / Ton",on:["ON","IN"],kun:["oto","ne"],cp:[{k:"音楽",r:"ONGAKU",m:"Müzik"},{k:"子音",r:"SHIIN",m:"Ünsüz harf"},{k:"発音",r:"HATSUON",m:"Telaffuz"}]},
+  {n:7,ch:"下",mn:"Alt / Aşağı",on:["KA","GE"],kun:["shita","shimo"],cp:[{k:"下品",r:"GEHIN",m:"Kaba"},{k:"低下",r:"TEIKA",m:"Düşüş"},{k:"川下",r:"kawashimo",m:"Nehrin aşağısı"}]},
+  {n:8,ch:"火",mn:"Ateş / Alev",on:["KA"],kun:["hi"],cp:[{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"火山",r:"KAZAN",m:"Yanardağ"},{k:"火花",r:"hibana",m:"Kıvılcım"}]},
+  {n:9,ch:"花",mn:"Çiçek",on:["KA"],kun:["hana"],cp:[{k:"花弁",r:"KABEN",m:"Taç yaprak"},{k:"花見",r:"hanami",m:"Kiraz çiçeği izleme"},{k:"花火",r:"hanabi",m:"Havai fişek"}]},
+  {n:10,ch:"貝",mn:"Kabuk / Deniz kabuğu",on:[],kun:["kai"],cp:[{k:"帆立貝",r:"hotategai",m:"Deniz tarağı"},{k:"貝殻",r:"kaigara",m:"Deniz kabuğu"},{k:"貝類",r:"kaiRUI",m:"Kabuklu deniz ürünleri"}]},
+  {n:11,ch:"学",mn:"Öğrenme",on:["GAKU"],kun:["manabu"],cp:[{k:"学校",r:"GAKKŌ",m:"Okul"},{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学者",r:"GAKUSHA",m:"Bilim insanı"}]},
+  {n:12,ch:"気",mn:"Ruh / Enerji / Hava",on:["KI","KE"],kun:[],cp:[{k:"気分",r:"KIBUN",m:"Ruh hali"},{k:"天気",r:"TENKI",m:"Hava durumu"},{k:"電気",r:"DENKI",m:"Elektrik"}]},
+  {n:13,ch:"九",mn:"Dokuz",on:["KYŪ","KU"],kun:["kokono-"],cp:[{k:"十九",r:"JŪKYŪ",m:"On dokuz"},{k:"九日",r:"kokonoka",m:"Dokuzuncu gün"},{k:"九月",r:"KUGATSU",m:"Eylül"}]},
+  {n:14,ch:"休",mn:"Dinlenme",on:["KYŪ"],kun:["yasumu"],cp:[{k:"休日",r:"KYŪJITSU",m:"Tatil günü"},{k:"休戦",r:"KYŪSEN",m:"Ateşkes"},{k:"夏休み",r:"natsuyasumi",m:"Yaz tatili"}]},
+  {n:15,ch:"玉",mn:"Mücevher / Top",on:["GYOKU"],kun:["tama"],cp:[{k:"玉杯",r:"GYOKUHAI",m:"Yeşim kupa"},{k:"玉突き",r:"tamatsuki",m:"Bilardo"},{k:"目玉",r:"medama",m:"Göz küresi"}]},
+  {n:16,ch:"金",mn:"Altın / Metal / Para",on:["KIN","KON"],kun:["kane"],cp:[{k:"金曜日",r:"KIN'YŌbi",m:"Cuma"},{k:"金色",r:"KONJIKI",m:"Altın rengi"},{k:"金持ち",r:"kanemochi",m:"Zengin kişi"}]},
+  {n:17,ch:"空",mn:"Gökyüzü / Boş",on:["KŪ"],kun:["sora","kara"],cp:[{k:"空気",r:"KŪKI",m:"Hava"},{k:"空色",r:"sorairo",m:"Gök mavisi"},{k:"空箱",r:"karabako",m:"Boş kutu"}]},
+  {n:18,ch:"月",mn:"Ay / Ay (takvim)",on:["GETSU","GATSU"],kun:["tsuki"],cp:[{k:"今月",r:"KONGETSU",m:"Bu ay"},{k:"月曜日",r:"GETSUYŌbi",m:"Pazartesi"},{k:"月見",r:"tsukimi",m:"Ay seyretme"}]},
+  {n:19,ch:"犬",mn:"Köpek",on:["KEN"],kun:["inu"],cp:[{k:"猟犬",r:"RYŌKEN",m:"Av köpeği"},{k:"犬小屋",r:"inugoya",m:"Köpek kulübesi"},{k:"子犬",r:"koinu",m:"Yavru köpek"}]},
+  {n:20,ch:"見",mn:"Görmek / Bakmak",on:["KEN"],kun:["miru"],cp:[{k:"発見",r:"HAKKEN",m:"Keşif"},{k:"見物",r:"KENBUTSU",m:"Gezinti"},{k:"見物",r:"mimono",m:"Seyirlik şey"}]},
+  {n:21,ch:"五",mn:"Beş",on:["GO"],kun:["itsu-"],cp:[{k:"五月",r:"GOGATSU",m:"Mayıs"},{k:"五人",r:"GONIN",m:"Beş kişi"},{k:"五日",r:"itsuka",m:"Beşinci gün"}]},
+  {n:22,ch:"口",mn:"Ağız / Açıklık",on:["KŌ","KU"],kun:["kuchi"],cp:[{k:"人口",r:"JINKŌ",m:"Nüfus"},{k:"口実",r:"KŌJITSU",m:"Bahane"},{k:"出口",r:"deguchi",m:"Çıkış"}]},
+  {n:23,ch:"校",mn:"Okul / Kontrol",on:["KŌ"],kun:[],cp:[{k:"校正",r:"KŌSEI",m:"Prova"},{k:"高校",r:"KŌKŌ",m:"Lise"},{k:"校長",r:"KŌCHŌ",m:"Okul müdürü"}]},
+  {n:24,ch:"左",mn:"Sol",on:["SA"],kun:["hidari"],cp:[{k:"左派",r:"SAHA",m:"Sol kanat"},{k:"左側",r:"hidarigawa",m:"Sol taraf"},{k:"左手",r:"hidarite",m:"Sol el"}]},
+  {n:25,ch:"三",mn:"Üç",on:["SAN"],kun:["mi-"],cp:[{k:"三月",r:"SANGATSU",m:"Mart"},{k:"三日",r:"mikka",m:"Üçüncü gün"},{k:"三角",r:"SANKAKU",m:"Üçgen"}]},
+  {n:26,ch:"山",mn:"Dağ / Tepe",on:["SAN"],kun:["yama"],cp:[{k:"氷山",r:"HYŌZAN",m:"Buzdağı"},{k:"たくさん",r:"TAKUSAN",m:"Çok miktarda"},{k:"山道",r:"yamamichi",m:"Dağ yolu"}]},
+  {n:27,ch:"子",mn:"Çocuk",on:["SHI","SU"],kun:["ko"],cp:[{k:"電子",r:"DENSHI",m:"Elektron"},{k:"子供",r:"kodomo",m:"Çocuk(lar)"},{k:"様子",r:"yōsu",m:"Durum"}]},
+  {n:28,ch:"四",mn:"Dört",on:["SHI"],kun:["yo-","yon"],cp:[{k:"四月",r:"SHIGATSU",m:"Nisan"},{k:"四日",r:"yokka",m:"Dördüncü gün"},{k:"四回",r:"yonKAI",m:"Dört kez"}]},
+  {n:29,ch:"糸",mn:"İplik",on:["SHI"],kun:["ito"],cp:[{k:"製糸",r:"SEISHI",m:"İpek üretimi"},{k:"毛糸",r:"keito",m:"Yün ipliği"},{k:"糸巻き",r:"itomaki",m:"İplik makarası"}]},
+  {n:30,ch:"字",mn:"Harf / Sembol",on:["JI"],kun:[],cp:[{k:"字引",r:"jibiki",m:"Sözlük"},{k:"赤字",r:"akaJI",m:"Zarar"},{k:"数字",r:"SŪJI",m:"Rakam"}]},
+  {n:31,ch:"耳",mn:"Kulak",on:["JI"],kun:["mimi"],cp:[{k:"耳科",r:"JIKA",m:"Kulak hastalıkları"},{k:"耳鳴り",r:"miminari",m:"Kulak çınlaması"},{k:"耳飾り",r:"mimikazari",m:"Küpe"}]},
+  {n:32,ch:"七",mn:"Yedi",on:["SHICHI"],kun:["nana-"],cp:[{k:"七月",r:"SHICHIGATSU",m:"Temmuz"},{k:"七日",r:"nanoka",m:"Yedinci gün"},{k:"七重",r:"nanae",m:"Yedi kat"}]},
+  {n:33,ch:"車",mn:"Araç / Taşıt",on:["SHA"],kun:["kuruma"],cp:[{k:"電車",r:"DENSHA",m:"Tren"},{k:"洗車場",r:"SENSHAJŌ",m:"Araç yıkama"},{k:"手車",r:"teguruma",m:"El arabası"}]},
+  {n:34,ch:"手",mn:"El",on:["SHU"],kun:["te"],cp:[{k:"手段",r:"SHUDAN",m:"Yöntem"},{k:"手袋",r:"tebukuro",m:"Eldiven"},{k:"上手",r:"JŌZU",m:"Becerikli"}]},
+  {n:35,ch:"十",mn:"On",on:["JŪ"],kun:["tō"],cp:[{k:"十月",r:"JŪGATSU",m:"Ekim"},{k:"十日",r:"tōka",m:"Onuncu gün"},{k:"十字",r:"JŪJI",m:"Haç şekli"}]},
+  {n:36,ch:"出",mn:"Çıkmak",on:["SHUTSU"],kun:["deru","dasu"],cp:[{k:"出発",r:"SHUPPATSU",m:"Kalkış"},{k:"思い出",r:"omoide",m:"Anı"},{k:"引き出し",r:"hikidashi",m:"Çekmece"}]},
+  {n:37,ch:"女",mn:"Kadın",on:["JO","NYO"],kun:["onna","me"],cp:[{k:"女性",r:"JOSEI",m:"Kadın"},{k:"女房",r:"NYŌBŌ",m:"Eş"},{k:"女の子",r:"onna-no-ko",m:"Kız çocuğu"}]},
+  {n:38,ch:"小",mn:"Küçük",on:["SHŌ"],kun:["chiisai","ko-"],cp:[{k:"小説",r:"SHŌSETSU",m:"Roman"},{k:"子犬",r:"koinu",m:"Küçük köpek"},{k:"小川",r:"ogawa",m:"Dere"}]},
+  {n:39,ch:"上",mn:"Yukarı / Üst",on:["JŌ"],kun:["ue","kami"],cp:[{k:"以上",r:"IJŌ",m:"Daha fazla"},{k:"川上",r:"kawakami",m:"Nehrin yukarısı"},{k:"値上げ",r:"neage",m:"Fiyat artışı"}]},
+  {n:40,ch:"森",mn:"Orman",on:["SHIN"],kun:["mori"],cp:[{k:"森林",r:"SHINRIN",m:"Orman"},{k:"森閑",r:"SHINKAN",m:"Derin sessizlik"},{k:"青森",r:"Aomori",m:"Aomori şehri"}]},
+  {n:41,ch:"人",mn:"İnsan / Kişi",on:["JIN","NIN"],kun:["hito"],cp:[{k:"日本人",r:"NIHONJIN",m:"Japon (kişi)"},{k:"人間",r:"NINGEN",m:"İnsan varlığı"},{k:"人出",r:"hitode",m:"Kalabalık"}]},
+  {n:42,ch:"水",mn:"Su",on:["SUI"],kun:["mizu"],cp:[{k:"水曜日",r:"SUIYŌbi",m:"Çarşamba"},{k:"水素",r:"SUISO",m:"Hidrojen"},{k:"大水",r:"ōmizu",m:"Sel"}]},
+  {n:43,ch:"正",mn:"Doğru / Düzgün",on:["SEI","SHŌ"],kun:["tadashii"],cp:[{k:"正解",r:"SEIKAI",m:"Doğru cevap"},{k:"正月",r:"SHŌGATSU",m:"Yeni Yıl"},{k:"まさに",r:"masa ni",m:"Tam olarak"}]},
+  {n:44,ch:"生",mn:"Yaşam / Doğum",on:["SEI","SHŌ"],kun:["ikiru","nama"],cp:[{k:"学生",r:"GAKUSEI",m:"Öğrenci"},{k:"一生",r:"ISSHŌ",m:"Bütün bir yaşam"},{k:"生き物",r:"ikimono",m:"Canlı varlık"}]},
+  {n:45,ch:"青",mn:"Mavi-Yeşil / Genç",on:["SEI","SHŌ"],kun:["aoi"],cp:[{k:"青年",r:"SEINEN",m:"Genç"},{k:"青空",r:"aozora",m:"Mavi gökyüzü"},{k:"青物",r:"aomono",m:"Yeşil sebzeler"}]},
+  {n:46,ch:"夕",mn:"Akşam",on:["SEKI"],kun:["yū"],cp:[{k:"今夕",r:"KONSEKI",m:"Bu akşam"},{k:"夕食",r:"yūSHOKU",m:"Akşam yemeği"},{k:"夕日",r:"yūhi",m:"Batan güneş"}]},
+  {n:47,ch:"石",mn:"Taş / Kaya",on:["SEKI","SHAKU"],kun:["ishi"],cp:[{k:"化石",r:"KASEKI",m:"Fosil"},{k:"小石",r:"koishi",m:"Çakıl"},{k:"石油",r:"SEKIYU",m:"Petrol"}]},
+  {n:48,ch:"赤",mn:"Kırmızı",on:["SEKI","SHAKU"],kun:["akai"],cp:[{k:"赤道",r:"SEKIDŌ",m:"Ekvator"},{k:"赤面",r:"SEKIMEN",m:"Yüzü kızarmak"},{k:"赤ちゃん",r:"akanbō",m:"Bebek"}]},
+  {n:49,ch:"千",mn:"Bin",on:["SEN"],kun:["chi"],cp:[{k:"千円",r:"SEN'EN",m:"Bin yen"},{k:"五千",r:"GOSEN",m:"Beş bin"},{k:"千鳥",r:"chidori",m:"Yağmur kuşu"}]},
+  {n:50,ch:"川",mn:"Nehir",on:["SEN"],kun:["kawa"],cp:[{k:"川口",r:"kawaguchi",m:"Nehir ağzı"},{k:"川柳",r:"SENRYŪ",m:"Kısa şiir"},{k:"江戸川",r:"edogawa",m:"Edo Nehri"}]},
+  {n:51,ch:"先",mn:"Önce / Uç",on:["SEN"],kun:["saki"],cp:[{k:"先生",r:"SENSEI",m:"Öğretmen"},{k:"先月",r:"SENGETSU",m:"Geçen ay"},{k:"指先",r:"yubisaki",m:"Parmak ucu"}]},
+  {n:52,ch:"早",mn:"Erken / Hızlı",on:["SŌ"],kun:["hayai"],cp:[{k:"早急",r:"SŌKYŪ",m:"Acilen"},{k:"早口",r:"hayakuchi",m:"Hızlı konuşma"},{k:"早死に",r:"hayajini",m:"Erken ölüm"}]},
+  {n:53,ch:"草",mn:"Çimen / Bitki",on:["SŌ"],kun:["kusa"],cp:[{k:"雑草",r:"ZASSŌ",m:"Yabani ot"},{k:"草書",r:"SŌSHO",m:"Kursif yazı"},{k:"草地",r:"kusaCHI",m:"Çayırlık"}]},
+  {n:54,ch:"足",mn:"Bacak / Ayak",on:["SOKU"],kun:["ashi","tariru"],cp:[{k:"不足",r:"FUSOKU",m:"Yetersizlik"},{k:"足首",r:"ashikubi",m:"Ayak bileği"},{k:"足音",r:"ashioto",m:"Ayak sesi"}]},
+  {n:55,ch:"村",mn:"Köy",on:["SON"],kun:["mura"],cp:[{k:"村長",r:"SONCHŌ",m:"Köy muhtarı"},{k:"農村",r:"NŌSON",m:"Tarım köyü"},{k:"村人",r:"murabito",m:"Köylü"}]},
+  {n:56,ch:"大",mn:"Büyük",on:["DAI","TAI"],kun:["ōkii"],cp:[{k:"大会",r:"TAIKAI",m:"Büyük toplantı"},{k:"大学",r:"DAIGAKU",m:"Üniversite"},{k:"大声",r:"ōgoe",m:"Yüksek ses"}]},
+  {n:57,ch:"男",mn:"Erkek / Adam",on:["DAN","NAN"],kun:["otoko"],cp:[{k:"男子",r:"DANSHI",m:"Erkek çocuk"},{k:"長男",r:"CHŌNAN",m:"En büyük oğul"},{k:"男気",r:"otokogi",m:"Mertlik"}]},
+  {n:58,ch:"竹",mn:"Bambu",on:["CHIKU"],kun:["take"],cp:[{k:"爆竹",r:"BAKUCHIKU",m:"Havai fişek"},{k:"竹馬",r:"takeuma",m:"Bambu bacaklar"},{k:"竹藪",r:"takeyabu",m:"Bambu korusu"}]},
+  {n:59,ch:"中",mn:"Orta / İçeri / Çin",on:["CHŪ"],kun:["naka"],cp:[{k:"中立",r:"CHŪRITSU",m:"Tarafsızlık"},{k:"中国",r:"CHŪGOKU",m:"Çin"},{k:"真ん中",r:"mannaka",m:"Tam orta"}]},
+  {n:60,ch:"虫",mn:"Böcek / Solucan",on:["CHŪ"],kun:["mushi"],cp:[{k:"寄生虫",r:"KISEICHŪ",m:"Parazit"},{k:"害虫",r:"GAICHŪ",m:"Zararlı böcek"},{k:"虫歯",r:"mushiba",m:"Çürük diş"}]},
+  {n:61,ch:"町",mn:"Kasaba / Blok",on:["CHŌ"],kun:["machi"],cp:[{k:"町民",r:"CHŌMIN",m:"Kasaba halkı"},{k:"町役場",r:"machiYAKUba",m:"Kasaba belediyesi"},{k:"下町",r:"shitamachi",m:"Şehrin eski semti"}]},
+  {n:62,ch:"天",mn:"Gök / Cennet",on:["TEN"],kun:["ama-","ame"],cp:[{k:"天使",r:"TENSHI",m:"Melek"},{k:"天皇",r:"TENNŌ",m:"İmparator"},{k:"天下り",r:"amakudari",m:"Gökten iniş"}]},
+  {n:63,ch:"田",mn:"Pirinç tarlası",on:["DEN"],kun:["ta"],cp:[{k:"田園",r:"DEN'EN",m:"Kırsal alan"},{k:"田植え",r:"taue",m:"Pirinç ekimi"},{k:"田舎",r:"inaka",m:"Taşra"}]},
+  {n:64,ch:"土",mn:"Toprak / Yer",on:["DO","TO"],kun:["tsuchi"],cp:[{k:"土曜日",r:"DOYŌbi",m:"Cumartesi"},{k:"土地",r:"TOCHI",m:"Arazi"},{k:"土臭い",r:"tsuchikusai",m:"Taşralı"}]},
+  {n:65,ch:"二",mn:"İki",on:["NI"],kun:["futa-"],cp:[{k:"二月",r:"NIGATSU",m:"Şubat"},{k:"二十",r:"NIJŪ",m:"Yirmi"},{k:"二人",r:"futari",m:"İki kişi"}]},
+  {n:66,ch:"日",mn:"Güneş / Gün",on:["NICHI","JITSU"],kun:["hi","-ka"],cp:[{k:"日曜日",r:"NICHIYŌbi",m:"Pazar"},{k:"本日",r:"HONJITSU",m:"Bugün"},{k:"二日",r:"futsuka",m:"İkinci gün"}]},
+  {n:67,ch:"入",mn:"Girmek",on:["NYŪ"],kun:["hairu","ireru"],cp:[{k:"輸入",r:"YUNYŪ",m:"İthalat"},{k:"入口",r:"iriguchi",m:"Giriş"},{k:"入れ物",r:"iremono",m:"Kap"}]},
+  {n:68,ch:"年",mn:"Yıl",on:["NEN"],kun:["toshi"],cp:[{k:"来年",r:"RAINEN",m:"Gelecek yıl"},{k:"五年生",r:"GONENSEI",m:"Beşinci sınıf"},{k:"年寄り",r:"toshiyori",m:"Yaşlı kişi"}]},
+  {n:69,ch:"白",mn:"Beyaz",on:["HAKU"],kun:["shiroi","shira-"],cp:[{k:"白書",r:"HAKUSHO",m:"Beyaz kitap"},{k:"面白い",r:"omoshiroi",m:"İlginç"},{k:"白髪",r:"shiraga",m:"Beyaz saç"}]},
+  {n:70,ch:"八",mn:"Sekiz",on:["HACHI"],kun:["ya-"],cp:[{k:"八月",r:"HACHIGATSU",m:"Ağustos"},{k:"八百屋",r:"yaoya",m:"Manav"},{k:"八日",r:"yōka",m:"Sekizinci gün"}]},
+  {n:71,ch:"百",mn:"Yüz",on:["HYAKU"],kun:[],cp:[{k:"百倍",r:"HYAKUBAI",m:"Yüz kat"},{k:"百姓",r:"HYAKUSHŌ",m:"Çiftçi"},{k:"百貨店",r:"HYAKKATEN",m:"Büyük mağaza"}]},
+  {n:72,ch:"文",mn:"Yazı / Metin",on:["BUN","MON"],kun:["fumi"],cp:[{k:"文学",r:"BUNGAKU",m:"Edebiyat"},{k:"文字",r:"MOJI",m:"Karakter"},{k:"恋文",r:"koibumi",m:"Aşk mektubu"}]},
+  {n:73,ch:"木",mn:"Ağaç / Tahta",on:["BOKU","MOKU"],kun:["ki","ko"],cp:[{k:"木曜日",r:"MOKUYŌbi",m:"Perşembe"},{k:"木目",r:"kime",m:"Tahta damarı"},{k:"木立",r:"kodachi",m:"Ağaçlık"}]},
+  {n:74,ch:"本",mn:"Kök / Kitap / Asıl",on:["HON"],kun:["moto"],cp:[{k:"日本",r:"NIHON",m:"Japonya"},{k:"本屋",r:"HONya",m:"Kitapçı"},{k:"本社",r:"HONSHA",m:"Genel merkez"}]},
+  {n:75,ch:"名",mn:"İsim / Şöhret",on:["MEI","MYŌ"],kun:["na"],cp:[{k:"有名",r:"YŪMEI",m:"Ünlü"},{k:"名字",r:"MYŌJI",m:"Soyadı"},{k:"名前",r:"namae",m:"İsim"}]},
+  {n:76,ch:"目",mn:"Göz / Bakmak",on:["MOKU"],kun:["me","ma"],cp:[{k:"一目",r:"hitome",m:"Bir bakış"},{k:"一つ目",r:"hitotsu me",m:"Birinci"},{k:"注目",r:"CHŪMOKU",m:"Dikkat"}]},
+  {n:77,ch:"立",mn:"Ayakta durmak",on:["RITSU"],kun:["tatsu"],cp:[{k:"自立",r:"JIRITSU",m:"Bağımsızlık"},{k:"立場",r:"tachiba",m:"Bakış açısı"},{k:"目立つ",r:"medatsu",m:"Göze çarpmak"}]},
+  {n:78,ch:"力",mn:"Güç / Çaba",on:["RYOKU","RIKI"],kun:["chikara"],cp:[{k:"能力",r:"NŌRYOKU",m:"Yetenek"},{k:"人力車",r:"JINRIKISHA",m:"Riksa"},{k:"力持ち",r:"chikaramochi",m:"Güçlü kişi"}]},
+  {n:79,ch:"林",mn:"Orman (seyrek)",on:["RIN"],kun:["hayashi"],cp:[{k:"林学",r:"RINGAKU",m:"Ormancılık"},{k:"小林",r:"Kobayashi",m:"Kobayashi (soyad)"},{k:"密林",r:"MITSURI N",m:"Yoğun orman"}]},
+  {n:80,ch:"六",mn:"Altı",on:["ROKU"],kun:["mu-"],cp:[{k:"六月",r:"ROKUGATSU",m:"Haziran"},{k:"六日",r:"muika",m:"Altıncı gün"},{k:"六角",r:"ROKKAKU",m:"Altıgen"}]}
+];
+
+// ── SINAV MOTORU ─────────────────────────────────────────────────────────────
+// 100 soru, 5 tip, her kanji en fazla 2 kez kullanılır
+// Soru tipleri: cm(birleşik→anlam), ck(birleşik→kanji), ka(kanji→anlam), ak(anlam→kanji), rd(okunuş)
+// Dağılım: cm:40, ck:15, ka:20, ak:15, rd:10
+
+function rand(a){ return a[Math.floor(Math.random()*a.length)]; }
+function sh(a){ return [...a].sort(()=>Math.random()-0.5); }
+function oM(ex,n){ return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn); }
+function oC(ex,n){ return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch); }
+function oCM(ex,n){ return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>rand(k.cp).m); }
+function oR(ex,n){
+  const out=[];
+  for(const k of sh(K.filter(x=>x.ch!==ex.ch))){
+    const rds=[...k.on,...k.kun];
+    if(rds.length) out.push(rand(rds));
+    if(out.length>=n) break;
+  }
+  return out;
+}
+
+function buildExam(){
+  const pool=sh([...K]);
+  // Her kanji kullanım sayısını takip et
+  const uses={};
+  K.forEach(k=>uses[k.ch]=0);
+  const qs=[];
+
+  function pickK(exclude){
+    // Henüz hiç kullanılmamış olanları önce al
+    const unused=pool.filter(k=>uses[k.ch]===0 && (!exclude || k.ch!==exclude.ch));
+    const oncUsed=pool.filter(k=>uses[k.ch]===1 && (!exclude || k.ch!==exclude.ch));
+    const src=unused.length>0?unused:oncUsed;
+    return src.length>0?rand(src):rand(pool.filter(k=>(!exclude||k.ch!==exclude.ch)));
+  }
+
+  // cm: birleşik → anlam (40 soru)
+  for(let i=0;i<40;i++){
+    const k=pickK();
+    uses[k.ch]++;
+    const c=rand(k.cp);
+    qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,n:k.n,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',
+      ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});
+  }
+  // ck: birleşik → kanji (15 soru)
+  for(let i=0;i<15;i++){
+    const k=pickK();
+    uses[k.ch]++;
+    const c=rand(k.cp);
+    qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,n:k.n,
+      q:'"'+c.m+'" anlamındaki "'+c.k+'" hangi kanjiden türemiştir?',
+      ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});
+  }
+  // ka: kanji → anlam (20 soru)
+  for(let i=0;i<20;i++){
+    const k=pickK();
+    uses[k.ch]++;
+    qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,n:k.n,
+      q:'Bu kanji ne anlama gelir?',
+      ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true});
+  }
+  // ak: anlam → kanji (15 soru)
+  for(let i=0;i<15;i++){
+    const k=pickK();
+    uses[k.ch]++;
+    qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,n:k.n,
+      q:'"'+k.mn+'" anlamına gelen kanji hangisidir?',
+      ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});
+  }
+  // rd: okunuş (10 soru)
+  for(let i=0;i<10;i++){
+    const k=pickK();
+    uses[k.ch]++;
+    const rds=[...k.on,...k.kun];
+    if(!rds.length){ i--; continue; }
+    const ans=rand(rds);
+    qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,n:k.n,
+      q:'Bu kanjinin okunuşlarından biri nedir?',
+      ans,opts:sh([ans,...oR(k,3)]),sc:true});
+  }
+  return sh(qs);
+}
+
+let tqs=[],ti=0,sc=0,ans={};
+
+function startExam(){
+  tqs=buildExam(); ti=0; sc=0; ans={};
+  document.getElementById('heroWrap').style.display='none';
+  document.getElementById('rv').style.display='none';
+  document.getElementById('tv').style.display='block';
+  renderQ();
+}
+
+function renderQ(){
+  const q=tqs[ti], tot=tqs.length, pct=Math.round(ti/tot*100);
+  let html='<div class="twrap">';
+  html+='<div class="pstrip"><div class="pstrip-fill" style="width:'+pct+'%"></div></div>';
+  html+='<div class="thead"><div class="ttitle">🏆 Büyük Sınav — Kanji #1–80</div><div class="tscore">'+
+    (ti+1)+' / '+tot+' &nbsp;·&nbsp; '+sc+' ✓ &nbsp;·&nbsp; '+(ti-sc)+' ✗</div></div>';
+  html+='<div class="tbody">';
+  html+='<span class="tqlabel '+q.lc+'">'+q.lb+'</span>';
+  html+='<div class="tq">'+q.q+'</div>';
+  if(q.sc) html+='<span class="tchar">'+q.ch+'</span>';
+  html+='<div class="topts" id="opts">'+q.opts.map((o,i)=>'<button class="topt" onclick="doAns('+i+')">'+o+'</button>').join('')+'</div>';
+  html+='<div class="tfb" id="fb"></div>';
+  html+='<button class="tnext" id="nq" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
+  html+='</div></div>';
+  document.getElementById('tv').innerHTML=html;
+}
+
+function doAns(i){
+  const q=tqs[ti];
+  document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
+  const chosen=q.opts[i], ok=chosen===q.ans;
+  if(ok) sc++;
+  ans[ti]={ok,ch:q.ch,n:q.n,lb:q.lb,given:chosen,correct:q.ans};
+  document.querySelectorAll('.topt').forEach((b,j)=>{
+    if(q.opts[j]===q.ans) b.classList.add('correct');
+    else if(j===i&&!ok) b.classList.add('wrong');
+  });
+  const fb=document.getElementById('fb');
+  fb.className='tfb show '+(ok?'ok':'bad');
+  fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;
+  document.getElementById('nq').classList.add('show');
+}
+
+function nextQ(){ ti++; ti>=tqs.length?showResult():renderQ(); }
+
+function showResult(){
+  const tot=tqs.length, pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=75?'🥈':pct>=60?'👍':pct>=45?'📚':'💪';
+  const lbl=pct>=90?'Olağanüstü!':pct>=75?'Çok iyi!':pct>=60?'İyi iş!':pct>=45?'Biraz daha çalış':'Tekrar et!';
+
+  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
+  let tsum='';
+  ['cm','ck','ka','ak','rd'].forEach(t=>{
+    const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);
+    if(!tl.length) return;
+    const okc=tl.filter(x=>x.a&&x.a.ok).length;
+    const p=Math.round(okc/tl.length*100);
+    tsum+='<div class="tsc"><div class="tsl">'+tlbls[t]+'</div><div class="tsv">'+okc+'/'+tl.length+' <span style="font-size:11px;color:var(--text3)">(%'+p+')</span></div></div>';
+  });
+
+  // Yanlış cevaplar
+  const wrongItems=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.a&&!x.a.ok);
+  let wrongHtml='';
+  if(wrongItems.length){
+    wrongHtml='<div class="wrong-list"><div class="slabel" style="margin-bottom:12px">Yanlış Cevaplar ('+wrongItems.length+')</div>';
+    wrongItems.forEach(({q,a})=>{
+      const k=K.find(x=>x.ch===q.ch);
+      wrongHtml+='<div class="wrow"><div class="wchar">'+q.ch+'</div><div class="winfo"><div class="wmean">'+(k?k.mn:'')+'</div><div class="wqtype">'+q.lb+'</div><div class="wanswers"><span class="wgiven">Verilen: '+a.given+'</span> → <span class="wcorrect">Doğru: '+a.correct+'</span></div></div></div>';
+    });
+    wrongHtml+='</div>';
+  } else {
+    wrongHtml='<div style="text-align:center;padding:1rem;color:var(--t600);font-weight:500;">🎉 Hiç yanlış yok!</div>';
+  }
+
+  document.getElementById('tv').style.display='none';
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML=`
+    <div class="twrap">
+      <div class="thead"><div class="ttitle">Sınav Sonucu — Kanji #1–80</div></div>
+      <div class="rwrap">
+        <div class="r-top">
+          <div class="remoji">${emoji}</div>
+          <div class="rscore">${sc} / ${tot}</div>
+          <div class="rlabel">${lbl} &nbsp;·&nbsp; %${pct}</div>
+          <div class="rbdown">
+            <div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div>
+            <div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div>
+            <div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div>
+          </div>
+        </div>
+        <div class="slabel" style="margin-bottom:8px">Tip Bazında Sonuç</div>
+        <div class="tsum">${tsum}</div>
+        <div class="btn-row">
+          <button class="rbtn" onclick="startExam()">Tekrar</button>
+          <button class="rbtn sec" onclick="backHome()">Ana Sayfa</button>
+        </div>
+        ${wrongHtml}
+      </div>
+    </div>`;
+}
+
+function backHome(){
+  window.location.href='index.html';
+}
+</script>
+</body>
+</html>
