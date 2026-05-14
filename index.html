@@ -15,13 +15,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
 .hero-char{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:var(--p900);line-height:1;margin-bottom:0.75rem;display:block;}
 .hero-title{font-size:22px;font-weight:600;color:var(--text);margin-bottom:0.5rem;}
 .hero-sub{font-size:14px;color:var(--text2);}
-.exam-card{background:linear-gradient(135deg,var(--p900),var(--p600));border-radius:var(--rl);padding:1.5rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.25rem;text-decoration:none;transition:opacity 0.15s;box-shadow:0 4px 20px rgba(83,74,183,0.3);}
+.exam-card{border-radius:var(--rl);padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;transition:opacity 0.15s;}
 .exam-card:hover{opacity:0.92;}
-.exam-icon{font-size:40px;min-width:50px;text-align:center;}
+.exam-card-g1{background:linear-gradient(135deg,var(--p900),var(--p600));box-shadow:0 4px 16px rgba(83,74,183,0.3);}
+.exam-card-g2{background:linear-gradient(135deg,#085041,#1D9E75);box-shadow:0 4px 16px rgba(13,111,86,0.3);}
+.exam-card-g3{background:linear-gradient(135deg,#412402,#BA7517);box-shadow:0 4px 16px rgba(186,117,23,0.3);}
+.exam-icon{font-size:32px;min-width:44px;text-align:center;}
 .exam-info{flex:1;}
-.exam-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:3px;}
-.exam-sub{font-size:13px;color:rgba(255,255,255,0.7);}
-.exam-arrow{font-size:20px;color:rgba(255,255,255,0.6);}
+.exam-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;}
+.exam-sub{font-size:12px;color:rgba(255,255,255,0.7);}
+.exam-arrow{font-size:18px;color:rgba(255,255,255,0.6);}
 .section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;margin-top:1.75rem;}
 .section-badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;}
 .badge-g1{background:#EEEDFE;color:#3C3489;}
@@ -51,24 +54,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
     <div class="hero-sub">The Complete Guide to Japanese Kanji — Türkçe</div>
   </div>
 
-  <a class="exam-card" href="sinav_1_80.html">
-    <div class="exam-icon">🏆</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — First Grade Kanji</div>
-      <div class="exam-sub">Kanji #1–80 · 100 soru · 5 soru tipi · Rastgele sıralama</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
-
-  <a class="exam-card" href="sinav_81_240.html" style="background:linear-gradient(135deg,#085041,#1D9E75);box-shadow:0 4px 20px rgba(13,111,86,0.3);">
-    <div class="exam-icon">🥈</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — Second Grade Kanji</div>
-      <div class="exam-sub">Kanji #81–240 · 160 kanji · 100 soru · Rastgele sıralama</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
-
   <!-- FIRST GRADE (#1–80) -->
   <div class="section-header">
     <span class="section-badge badge-g1">First Grade · N5</span>
@@ -85,6 +70,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
     <a class="set-card" href="kanji_61_70_test.html"><div class="set-num">#07</div><div class="set-info"><div class="set-title">Kanji #61–70</div><div class="set-chars">町天田土二日入年白八</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
     <a class="set-card" href="kanji_71_80_test.html"><div class="set-num">#08</div><div class="set-info"><div class="set-title">Kanji #71–80</div><div class="set-chars">百文木本名目立力林六</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card exam-card-g1" href="sinav_1_80.html">
+    <div class="exam-icon">🏆</div>
+    <div class="exam-info">
+      <div class="exam-title">Büyük Sınav — First Grade</div>
+      <div class="exam-sub">Kanji #1–80 · 100 soru · 5 tip · Rastgele</div>
+    </div>
+    <div class="exam-arrow">→</div>
+  </a>
 
   <!-- SECOND GRADE (#81–240) -->
   <div class="section-header">
@@ -110,6 +103,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
     <a class="set-card" href="kanji_221_230_test.html"><div class="set-num">#23</div><div class="set-info"><div class="set-title">Kanji #221–230</div><div class="set-chars">歩母方北毎妹万明鳴毛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
     <a class="set-card" href="kanji_231_240_test.html"><div class="set-num">#24</div><div class="set-info"><div class="set-title">Kanji #231–240</div><div class="set-chars">門夜野友用曜来里理話</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card exam-card-g2" href="sinav_81_240.html">
+    <div class="exam-icon">🥈</div>
+    <div class="exam-info">
+      <div class="exam-title">Büyük Sınav — Second Grade</div>
+      <div class="exam-sub">Kanji #81–240 · 160 kanji · 100 soru · Rastgele</div>
+    </div>
+    <div class="exam-arrow">→</div>
+  </a>
 
   <!-- THIRD GRADE (#241–440) -->
   <div class="section-header">
@@ -138,8 +139,15 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
     <a class="set-card" href="kanji_411_420_test.html"><div class="set-num">#42</div><div class="set-info"><div class="set-title">Kanji #411–420</div><div class="set-chars">平返勉放味命面問役薬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
     <a class="set-card" href="kanji_421_430_test.html"><div class="set-num">#43</div><div class="set-info"><div class="set-title">Kanji #421–430</div><div class="set-chars">由油有遊予羊洋葉陽様</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
     <a class="set-card" href="kanji_431_440_test.html"><div class="set-num">#44</div><div class="set-info"><div class="set-title">Kanji #431–440</div><div class="set-chars">落流旅両緑礼列練路和</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <div class="set-card" style="opacity:0.5;cursor:default;"><div class="set-num">#45</div><div class="set-info"><div class="set-title">Kanji #441–450</div><div class="set-chars">· · · · · · · · · ·</div></div><span class="set-badge badge-soon">Yakında</span></div>
   </div>
+  <a class="exam-card exam-card-g3" href="sinav_241_440.html">
+    <div class="exam-icon">🥉</div>
+    <div class="exam-info">
+      <div class="exam-title">Büyük Sınav — Third Grade</div>
+      <div class="exam-sub">Kanji #241–440 · 200 kanji · 100 soru · Rastgele</div>
+    </div>
+    <div class="exam-arrow">→</div>
+  </a>
 
   <div class="footer">Kaynak: The Complete Guide to Japanese Kanji — Seely &amp; Procter</div>
 </div>
