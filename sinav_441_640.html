@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Büyük Sınav — Fourth Grade Kanji #441–640</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#E8F4F8;--p600:#1B5E8A;--p800:#0D3A5C;--p900:#082840;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#082840;--p600:#7DC4E8;--p800:#ADE0F7;--p900:#E8F4F8;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
+.app{width:100%;max-width:680px;margin:0 auto;}
+a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
+a.back:hover{color:var(--text);}
+.hero{background:linear-gradient(135deg,#082840,#1B5E8A);border-radius:var(--rl);padding:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1.25rem;box-shadow:0 4px 20px rgba(27,94,138,0.35);}
+.hero-icon{font-size:40px;min-width:50px;text-align:center;}
+.hero-info{flex:1;}
+.hero-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:3px;}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.75);}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1rem;}
+.hstat{background:rgba(255,255,255,0.15);border-radius:var(--rm);padding:10px 8px;text-align:center;}
+.hstat-val{font-size:22px;font-weight:600;color:#fff;}
+.hstat-lbl{font-size:10px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.start-btn{margin-top:1.25rem;width:100%;padding:14px;background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:var(--rm);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s;}
+.start-btn:hover{background:rgba(255,255,255,0.3);}
+.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.thead{background:var(--p50);border-bottom:0.5px solid var(--p600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.ttitle{font-size:14px;font-weight:500;color:var(--p800);}
+.tscore{font-size:13px;color:var(--p600);}
+.pstrip{height:5px;background:var(--bg2);}
+.pstrip-fill{height:100%;background:linear-gradient(90deg,var(--p600),var(--t400));transition:width 0.4s;}
+.tbody{padding:1.5rem;}
+.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
+.tlc{background:var(--p50);color:var(--p800);}
+.tlm{background:var(--t50);color:var(--t800);}
+.tlr{background:var(--a50);color:var(--a800);}
+.tq{font-size:15px;color:var(--text);line-height:1.6;}
+.tchar{font-family:'Noto Serif JP',serif;font-size:72px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 1rem;display:block;}
+.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
+.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
+.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p600);}
+.topt.correct{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
+.topt.wrong{background:var(--r50);border-color:var(--r600);color:var(--r800);}
+.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
+.tfb.show{display:block;}
+.tfb.ok{background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
+.tfb.bad{background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
+.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
+.tnext:hover{background:var(--p800);}
+.tnext.show{display:block;}
+.rwrap{padding:2rem 1.5rem;}
+.r-top{text-align:center;margin-bottom:1.5rem;}
+.remoji{font-size:52px;margin-bottom:0.75rem;}
+.rscore{font-size:42px;font-weight:600;color:var(--p800);margin-bottom:0.25rem;}
+.rlabel{font-size:16px;color:var(--text2);margin-bottom:1.5rem;}
+.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
+.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center;}
+.rbv{font-size:24px;font-weight:600;}
+.rbl{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
+.tsum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.5rem;}
+.tsc{background:var(--bg2);border-radius:var(--rm);padding:10px 12px;}
+.tsl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.tsv{font-size:15px;font-weight:500;color:var(--text);}
+.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
+.btn-row{display:flex;gap:8px;margin-bottom:1.5rem;}
+.rbtn{flex:1;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
+.rbtn:hover{background:var(--p800);}
+.rbtn.sec{background:var(--bg2);color:var(--text);border:0.5px solid var(--border2);}
+.wrong-list{margin-top:1.25rem;border-top:0.5px solid var(--border);padding-top:1.25rem;}
+.wrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--border);}
+.wchar{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;min-width:40px;color:var(--text);}
+.winfo{flex:1;}
+.wmean{font-size:13px;color:var(--text);font-weight:500;}
+.wqtype{font-size:11px;color:var(--text2);margin-top:1px;}
+.wanswers{font-size:12px;margin-top:3px;}
+.wgiven{color:var(--r600);}
+.wcorrect{color:var(--t600);}
+</style>
+</head>
+<body>
+<div class="app">
+  <a class="back" href="index.html">← Ana Sayfa</a>
+  <div class="hero" id="heroWrap">
+    <div class="hero-icon">🎖️</div>
+    <div class="hero-info">
+      <div class="hero-title">Büyük Sınav — Fourth Grade Kanji</div>
+      <div class="hero-sub">Kanji #441–640 · 200 kanji · 100 soru · Rastgele</div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-val">200</div><div class="hstat-lbl">Kanji</div></div>
+        <div class="hstat"><div class="hstat-val">100</div><div class="hstat-lbl">Soru</div></div>
+        <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">Tip</div></div>
+      </div>
+      <button class="start-btn" onclick="startExam()">Sınava Başla →</button>
+    </div>
+  </div>
+  <div id="tv" style="display:none"></div>
+  <div id="rv" style="display:none"></div>
+</div>
+<script>
+const K=[
+  {n:441,ch:"愛",mn:"Sevgi / Aşk",on:["AI"],kun:[],cp:[{k:"愛情",r:"AIJŌ",m:"Sevgi"},{k:"母性愛",r:"BOSEIAI",m:"Anne sevgisi"},{k:"愛国者",r:"AIKOKUSHA",m:"Vatansever"}]},
+  {n:442,ch:"案",mn:"Plan / Masa / Endişe",on:["AN"],kun:[],cp:[{k:"提案",r:"TEIAN",m:"Öneri"},{k:"案外",r:"ANGAI",m:"Beklenmedik"},{k:"案内",r:"ANNAI",m:"Rehberlik"}]},
+  {n:443,ch:"以",mn:"Başlangıç / Kullanmak / Çünkü",on:["I"],kun:["motte"],cp:[{k:"以下",r:"IKA",m:"Aşağısı, den az"},{k:"以内",r:"INAI",m:"İçinde"},{k:"以外",r:"IGAI",m:"Dışında"}]},
+  {n:444,ch:"衣",mn:"Giysi / Kıyafet",on:["I"],kun:["koromo"],cp:[{k:"衣服",r:"IFUKU",m:"Giyim"},{k:"衣類",r:"IRUI",m:"Giysiler"},{k:"衣替え",r:"koromogae",m:"Mevsimlik değişim"}]},
+  {n:445,ch:"位",mn:"Rütbe / Derece",on:["I"],kun:["kurai"],cp:[{k:"地位",r:"CHII",m:"Konum"},{k:"学位",r:"GAKUI",m:"Akademik derece"},{k:"一位",r:"ICHI",m:"Birinci sıra"}]},
+  {n:446,ch:"囲",mn:"Çevrelemek / Kuşatmak",on:["I"],kun:["kakomu"],cp:[{k:"周囲",r:"SHŪI",m:"Çevre"},{k:"範囲",r:"HAN'I",m:"Kapsam"},{k:"囲い込む",r:"kakoikomu",m:"Çevrelemek"}]},
+  {n:447,ch:"胃",mn:"Mide",on:["I"],kun:[],cp:[{k:"胃液",r:"IEKI",m:"Mide sıvısı"},{k:"胃袋",r:"Ibukuro",m:"Mide"},{k:"胃弱",r:"IJAKU",m:"Hazımsızlık"}]},
+  {n:448,ch:"印",mn:"Mühür / İşaret",on:["IN"],kun:["shirushi"],cp:[{k:"印刷",r:"INSATSU",m:"Baskı"},{k:"印版",r:"INBAN",m:"Mühür"},{k:"目印",r:"mejirushi",m:"İşaret"}]},
+  {n:449,ch:"英",mn:"Üstün / İngiltere",on:["EI"],kun:[],cp:[{k:"英才",r:"EISAI",m:"Yetenek"},{k:"英国",r:"EIKOKU",m:"İngiltere"},{k:"英語",r:"EIGO",m:"İngilizce"}]},
+  {n:450,ch:"栄",mn:"Parlamak / Ün",on:["EI"],kun:["sakaeru"],cp:[{k:"光栄",r:"KŌEI",m:"Onur"},{k:"栄養",r:"EIYŌ",m:"Beslenme"},{k:"繁栄",r:"HAN'EI",m:"Refah"}]},
+  {n:451,ch:"塩",mn:"Tuz",on:["EN"],kun:["shio"],cp:[{k:"食塩",r:"SHOKUEN",m:"Sofra tuzu"},{k:"塩水",r:"shiomizu",m:"Tuzlu su"},{k:"製塩所",r:"SEIENSH O",m:"Tuz fabrikası"}]},
+  {n:452,ch:"億",mn:"Yüz milyon",on:["OKU"],kun:[],cp:[{k:"二億",r:"NIOKU",m:"İki yüz milyon"},{k:"十億",r:"JŪOKU",m:"Milyar"},{k:"億兆",r:"OKUCHŌ",m:"Kitleler"}]},
+  {n:453,ch:"加",mn:"Eklemek / Katılmak",on:["KA"],kun:["kuwaeru"],cp:[{k:"増加",r:"ZŌKA",m:"Artış"},{k:"参加",r:"SANKA",m:"Katılım"},{k:"加算",r:"kuwaeZAN",m:"Toplama"}]},
+  {n:454,ch:"果",mn:"Meyve / Sonuç",on:["KA"],kun:["hatasu"],cp:[{k:"成果",r:"SEIKA",m:"Sonuç"},{k:"果物",r:"kudamono",m:"Meyve"},{k:"果たして",r:"hatashite",m:"Sonunda"}]},
+  {n:455,ch:"貨",mn:"Mal / Para",on:["KA"],kun:[],cp:[{k:"貨物船",r:"KAMOTSUSEN",m:"Kargo gemisi"},{k:"硬貨",r:"KŌKA",m:"Madeni para"},{k:"雑貨",r:"ZAKKA",m:"Çeşitli mallar"}]},
+  {n:456,ch:"課",mn:"Bölüm / Ders / Vergi",on:["KA"],kun:[],cp:[{k:"課税",r:"KAZEI",m:"Vergilendirme"},{k:"課長",r:"KACHŌ",m:"Bölüm başkanı"},{k:"第二課",r:"DANIKA",m:"İkinci ders"}]},
+  {n:457,ch:"芽",mn:"Tomurcuk / Filiz",on:["GA"],kun:["me"],cp:[{k:"発芽",r:"HATSU GA",m:"Çimlenme"},{k:"新芽",r:"SHINme",m:"Tomurcuk"},{k:"芽生える",r:"mebaeru",m:"Filizlenmek"}]},
+  {n:458,ch:"改",mn:"Reform / Değiştirmek",on:["KAI"],kun:["aratameru"],cp:[{k:"改革",r:"KAIKAKU",m:"Reform"},{k:"改正",r:"KAISEI",m:"Değişiklik"},{k:"改めて",r:"aratamete",m:"Bir kez daha"}]},
+  {n:459,ch:"械",mn:"Makine / Araç",on:["KAI"],kun:[],cp:[{k:"機械",r:"KIKAI",m:"Makine"},{k:"機械化",r:"KIKAIKA",m:"Mekanizasyon"},{k:"器械",r:"KIKAI",m:"Alet"}]},
+  {n:460,ch:"害",mn:"Zarar / Hasar",on:["GAI"],kun:[],cp:[{k:"損害",r:"SONGAI",m:"Hasar"},{k:"殺害",r:"SATSUGAI",m:"Cinayet"},{k:"妨害",r:"BŌGAI",m:"Engelleme"}]},
+  {n:461,ch:"街",mn:"Yol / Kasaba",on:["GAI","KAI"],kun:["machi"],cp:[{k:"市街",r:"SHIGAI",m:"Kasaba"},{k:"街道",r:"KAIDŌ",m:"Anayol"},{k:"街頭",r:"GAITŌ",m:"Sokak"}]},
+  {n:462,ch:"各",mn:"Her / Her biri",on:["KAKU"],kun:["ono-ono"],cp:[{k:"各駅",r:"KAKUEKI",m:"Her istasyon"},{k:"各国",r:"KAKKOKU",m:"Her ülke"},{k:"各自",r:"KAKUJI",m:"Her biri"}]},
+  {n:463,ch:"覚",mn:"Hatırlamak / Uyanmak",on:["KAKU"],kun:["oboeru","sameru"],cp:[{k:"自覚",r:"JIKAKU",m:"Öz farkındalık"},{k:"目覚め",r:"mezame",m:"Uyanış"},{k:"覚え書き",r:"oboegaki",m:"Not"}]},
+  {n:464,ch:"完",mn:"Tam / Tamamlamak",on:["KAN"],kun:[],cp:[{k:"完成",r:"KANSEI",m:"Tamamlanma"},{k:"未完",r:"MIKAN",m:"Tamamlanmamış"},{k:"完全",r:"KANZEN",m:"Mükemmel"}]},
+  {n:465,ch:"官",mn:"Hükümet / Yetkili",on:["KAN"],kun:[],cp:[{k:"警官",r:"KEIKAN",m:"Polis memuru"},{k:"官僚",r:"KANRYŌ",m:"Bürokrasi"},{k:"官庁",r:"KANCHŌ",m:"Hükümet ofisi"}]},
+  {n:466,ch:"管",mn:"Boru / Kontrol",on:["KAN"],kun:["kuda"],cp:[{k:"管理",r:"KANRI",m:"Yönetim"},{k:"気管",r:"KIKAN",m:"Nefes borusu"},{k:"くだくだしい",r:"kudakudashii",m:"Uzun soluklu"}]},
+  {n:467,ch:"関",mn:"Bariyer / Bağlantı",on:["KAN"],kun:["seki"],cp:[{k:"関東",r:"KANTŌ",m:"Kanto bölgesi"},{k:"関心",r:"KANSHIN",m:"İlgi"},{k:"関の山",r:"sekinoyama",m:"Azami çaba"}]},
+  {n:468,ch:"観",mn:"Gözlemlemek",on:["KAN"],kun:[],cp:[{k:"観光",r:"KANKŌ",m:"Turizm"},{k:"観察",r:"KANSATSU",m:"Gözlem"},{k:"観客",r:"KANKYAKU",m:"Seyirci"}]},
+  {n:469,ch:"願",mn:"Dilek / İstek",on:["GAN"],kun:["negau"],cp:[{k:"志願者",r:"SHIGANSHA",m:"Başvurucu"},{k:"願望的",r:"GANBŌTEKI",m:"Hevesli"},{k:"願い事",r:"negaigoto",m:"Dua, dilek"}]},
+  {n:470,ch:"希",mn:"Arzu / Nadir",on:["KI","KE"],kun:[],cp:[{k:"希望",r:"KIBŌ",m:"Umut"},{k:"希求",r:"KIKYŪ",m:"Arzu"},{k:"希薄",r:"KIHAKU",m:"İnce, seyrek"}]},
+  {n:471,ch:"季",mn:"Mevsim",on:["KI"],kun:[],cp:[{k:"季節",r:"KISETSU",m:"Mevsim"},{k:"四季",r:"SHIKI",m:"Dört mevsim"},{k:"季刊",r:"KIKAN",m:"Üç aylık yayın"}]},
+  {n:472,ch:"紀",mn:"Kronik / Başlangıç",on:["KI"],kun:[],cp:[{k:"紀元",r:"KIGEN",m:"Epoch"},{k:"紀行",r:"KIKŌ",m:"Seyahat yazısı"},{k:"五世紀",r:"GOSEIKI",m:"Beşinci yüzyıl"}]},
+  {n:473,ch:"喜",mn:"Sevinmek / Mutlu",on:["KI"],kun:["yorokobu"],cp:[{k:"喜劇",r:"KIGEKI",m:"Komedi"},{k:"歓喜",r:"KANKI",m:"Neşe"},{k:"大喜び",r:"ōyorokobi",m:"Büyük sevinç"}]},
+  {n:474,ch:"旗",mn:"Bayrak",on:["KI"],kun:["hata"],cp:[{k:"国旗",r:"KOKKI",m:"Ulusal bayrak"},{k:"旗持ち",r:"hatamochi",m:"Bayrak taşıyıcı"},{k:"旗魚",r:"kajiki",m:"Kılıçbalığı"}]},
+  {n:475,ch:"器",mn:"Kap / Alet / Yetenek",on:["KI"],kun:["utsuwa"],cp:[{k:"器具",r:"KIGU",m:"Alet"},{k:"食器",r:"SHOKKI",m:"Sofra takımı"},{k:"器用",r:"KIYŌ",m:"Beceri"}]},
+  {n:476,ch:"機",mn:"Makine / Fırsat",on:["KI"],kun:["hata"],cp:[{k:"機能",r:"KINŌ",m:"İşlev"},{k:"機会",r:"KIKAI",m:"Fırsat"},{k:"機織り",r:"hataori",m:"Dokuma"}]},
+  {n:477,ch:"議",mn:"Tartışma / Görüşme",on:["GI"],kun:[],cp:[{k:"議論",r:"GIRON",m:"Tartışma"},{k:"会議",r:"KAIGI",m:"Konferans"},{k:"議会",r:"GIKAI",m:"Meclis"}]},
+  {n:478,ch:"求",mn:"İstemek / Aramak",on:["KYŪ"],kun:["motomeru"],cp:[{k:"要求",r:"YŌKYŪ",m:"Talep"},{k:"追求",r:"TSUIKYŪ",m:"Arayış"},{k:"求職",r:"KYŪSHOKU",m:"İş arama"}]},
+  {n:479,ch:"泣",mn:"Ağlamak",on:["KYŪ"],kun:["naku"],cp:[{k:"泣訴",r:"KYŪSO",m:"Yalvarmak"},{k:"泣き虫",r:"nakimushi",m:"Ağlayan çocuk"},{k:"泣き出す",r:"nakidasu",m:"Ağlamaya başlamak"}]},
+  {n:480,ch:"救",mn:"Kurtarmak",on:["KYŪ"],kun:["sukuu"],cp:[{k:"救命浮輪",r:"KYŪMEI",m:"Can simidi"},{k:"救援",r:"KYŪEN",m:"Kurtarma"},{k:"救い出す",r:"sukuidasu",m:"Kurtarmak"}]},
+  {n:481,ch:"給",mn:"Sağlamak / Temin",on:["KYŪ"],kun:["tamau"],cp:[{k:"供給",r:"KYŌKYŪ",m:"Arz"},{k:"月給",r:"GEKKYŪ",m:"Aylık ücret"},{k:"きたまえ",r:"kitamae",m:"Buyurun!"}]},
+  {n:482,ch:"挙",mn:"Kaldırmak / Teklif",on:["KYO"],kun:["ageru"],cp:[{k:"挙手",r:"KYOSHU",m:"El kaldırma"},{k:"選挙",r:"SENKYO",m:"Seçim"},{k:"一挙に",r:"IKKYO ni",m:"Bir hamlede"}]},
+  {n:483,ch:"漁",mn:"Balık avlamak",on:["GYO","RYŌ"],kun:[],cp:[{k:"漁船",r:"GYOSEN",m:"Balıkçı teknesi"},{k:"漁師",r:"RYŌSHI",m:"Balıkçı"},{k:"漁業",r:"GYOGYŌ",m:"Balıkçılık"}]},
+  {n:484,ch:"共",mn:"Birlikte / Beraber",on:["KYŌ"],kun:["tomo"],cp:[{k:"共通",r:"KYŌTSŪ",m:"Ortaklık"},{k:"共食い",r:"tomogui",m:"Yamyamlık"},{k:"共同",r:"KYŌDŌ",m:"Ortak"}]},
+  {n:485,ch:"協",mn:"İşbirliği yapmak",on:["KYŌ"],kun:[],cp:[{k:"協定",r:"KYŌTEI",m:"Anlaşma"},{k:"協力",r:"KYŌRYOKU",m:"İşbirliği"},{k:"協会",r:"KYŌKAI",m:"Dernek"}]},
+  {n:486,ch:"鏡",mn:"Ayna",on:["KYŌ"],kun:["kagami"],cp:[{k:"望遠鏡",r:"BŌENKYŌ",m:"Teleskop"},{k:"鏡台",r:"KYŌDAI",m:"Tuvalet masası"},{k:"手鏡",r:"tekagami",m:"El aynası"}]},
+  {n:487,ch:"競",mn:"Yarışmak",on:["KYŌ","KEI"],kun:["kisou"],cp:[{k:"競争",r:"KYŌSŌ",m:"Yarışma"},{k:"競馬",r:"KEIBA",m:"At yarışı"},{k:"競り売り",r:"seriuri",m:"Açık arttırma"}]},
+  {n:488,ch:"極",mn:"Son derece / Kutup",on:["KYOKU","GOKU"],kun:["kiwameru"],cp:[{k:"北極",r:"HOKKYOKU",m:"Kuzey Kutbu"},{k:"至極",r:"SHIGOKU",m:"Son derece"},{k:"消極",r:"SHŌKYOKU",m:"Katot"}]},
+  {n:489,ch:"訓",mn:"Öğreti / Kun okuyuş",on:["KUN"],kun:[],cp:[{k:"訓読み",r:"KUNyomi",m:"Kun okuyuşu"},{k:"訓練",r:"KUNREN",m:"Eğitim"},{k:"教訓的",r:"KYŌKUNTEKI",m:"Öğretici"}]},
+  {n:490,ch:"軍",mn:"Ordu / Askeri",on:["GUN"],kun:[],cp:[{k:"空軍",r:"KŪGUN",m:"Hava kuvvetleri"},{k:"軍人",r:"GUNJIN",m:"Asker"},{k:"米軍",r:"BEIGUN",m:"Amerikan ordusu"}]},
+  {n:491,ch:"郡",mn:"Kaza / İlçe",on:["GUN"],kun:["kōri"],cp:[{k:"郡部",r:"GUNBU",m:"Kırsal bölge"},{k:"郡山",r:"Kōriyama",m:"Kōriyama"},{k:"Wake郡",r:"WAKEGOUN",m:"Wake Kazası"}]},
+  {n:492,ch:"径",mn:"Patika / Doğrudan",on:["KEI"],kun:[],cp:[{k:"直径",r:"CHOKKEI",m:"Çap"},{k:"径路",r:"KEIRO",m:"Güzergah"},{k:"小径",r:"SHŌKEI",m:"Kısa yol"}]},
+  {n:493,ch:"型",mn:"Tür / Model / Kalıp",on:["KEI"],kun:["kata"],cp:[{k:"原型",r:"GENKEI",m:"Prototip"},{k:"大型",r:"ōgata",m:"Büyük boy"},{k:"典型的",r:"TENKEITEKI",m:"Tipik"}]},
+  {n:494,ch:"景",mn:"Manzara / Sahne",on:["KEI","KE"],kun:[],cp:[{k:"光景",r:"KŌKEI",m:"Manzara"},{k:"景気",r:"KEIKI",m:"İş koşulları"},{k:"景色",r:"KESHIKI",m:"Manzara"}]},
+  {n:495,ch:"芸",mn:"Sanat / Beceri",on:["GEI"],kun:[],cp:[{k:"芸術",r:"GEIJUTSU",m:"Sanat"},{k:"手芸",r:"SHUGEI",m:"El sanatı"},{k:"芸者",r:"GEISHA",m:"Geisha"}]},
+  {n:496,ch:"欠",mn:"Eksiklik / Boşluk",on:["KETSU"],kun:["kaku","kakeru"],cp:[{k:"欠席者",r:"KESSEKISHA",m:"Devamsız"},{k:"欠点",r:"KETTEN",m:"Kusur"},{k:"欠け目",r:"kakeme",m:"Kırık"}]},
+  {n:497,ch:"結",mn:"Bağlamak / Sonuç",on:["KETSU"],kun:["musubu"],cp:[{k:"結婚",r:"KEKKON",m:"Evlilik"},{k:"結果",r:"KEKKA",m:"Sonuç"},{k:"結び目",r:"musubime",m:"Düğüm"}]},
+  {n:498,ch:"建",mn:"İnşa etmek",on:["KEN","KON"],kun:["tatsu"],cp:[{k:"建設",r:"KENSETSU",m:"İnşaat"},{k:"建立",r:"KONRYŪ",m:"Kuruluş"},{k:"建物",r:"tatemono",m:"Bina"}]},
+  {n:499,ch:"健",mn:"Sağlıklı",on:["KEN"],kun:["sukoyaka"],cp:[{k:"健康",r:"KENKŌ",m:"Sağlık"},{k:"健全",r:"KENZEN",m:"Sağlamlık"},{k:"壮健",r:"SŌKEN",m:"Sağlıklı, güçlü"}]},
+  {n:500,ch:"験",mn:"Sınav / Denemek",on:["KEN"],kun:[],cp:[{k:"試験",r:"SHIKEN",m:"Sınav"},{k:"実験",r:"JIKKEN",m:"Deney"},{k:"経験",r:"KEIKEN",m:"Deneyim"}]},
+  {n:501,ch:"固",mn:"Sert / Katı / Sağlam",on:["KO"],kun:["katai"],cp:[{k:"固体",r:"KOTAI",m:"Katı hâl"},{k:"強固",r:"KYŌKO",m:"Sağlamlık"},{k:"固まり",r:"katamari",m:"Küme"}]},
+  {n:502,ch:"功",mn:"Liyakat / Hizmet",on:["KŌ","KU"],kun:[],cp:[{k:"成功",r:"SEIKŌ",m:"Başarı"},{k:"功罪",r:"KŌZAI",m:"Artı ve eksiler"},{k:"功労",r:"KŌRŌ",m:"Köklü hizmet"}]},
+  {n:503,ch:"好",mn:"Sevmek / İyi / Güzel",on:["KŌ"],kun:["suku"],cp:[{k:"好意",r:"KŌUI",m:"İyi niyet"},{k:"好きな",r:"suki na",m:"Sevilen"},{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"}]},
+  {n:504,ch:"候",mn:"Hava / İşaret",on:["KŌ"],kun:["sōrō"],cp:[{k:"気候",r:"KIKŌ",m:"İklim"},{k:"候補",r:"KŌHO",m:"Adaylık"},{k:"候文",r:"sōrōBUN",m:"Tarihi yazı stili"}]},
+  {n:505,ch:"航",mn:"Deniz yolculuğu",on:["KŌ"],kun:[],cp:[{k:"航空",r:"KŌKŪ",m:"Havacılık"},{k:"航海",r:"KŌKAI",m:"Deniz yolculuğu"},{k:"航路",r:"KŌRO",m:"Rota"}]},
+  {n:506,ch:"康",mn:"Barış / Sağlık",on:["KŌ"],kun:[],cp:[{k:"小康",r:"SHŌKŌ",m:"Geçici rahatlama"},{k:"不健康",r:"FUKENKŌ",m:"Sağlıksız"},{k:"健康体",r:"KENKŌTAI",m:"Sağlıklı beden"}]},
+  {n:507,ch:"告",mn:"İlan etmek",on:["KOKU"],kun:["tsugeru"],cp:[{k:"広告",r:"KŌKOKU",m:"Reklam"},{k:"告白",r:"KOKUHAKU",m:"İtiraf"},{k:"予告",r:"YOKOKU",m:"Önceden haber"}]},
+  {n:508,ch:"差",mn:"Fark / İşaret etmek",on:["SA"],kun:["sasu"],cp:[{k:"時差",r:"JISA",m:"Zaman farkı"},{k:"差別",r:"SABETSU",m:"Ayrımcılık"},{k:"差し込む",r:"sashikomu",m:"Takmak"}]},
+  {n:509,ch:"菜",mn:"Sebze / Kolza",on:["SAI"],kun:["na"],cp:[{k:"野菜",r:"YASAI",m:"Sebze"},{k:"菜の花",r:"nanohana",m:"Kolza çiçeği"},{k:"菜食",r:"SAISHOKU",m:"Vejetaryen"}]},
+  {n:510,ch:"最",mn:"En / -in en",on:["SAI"],kun:["mottomo"],cp:[{k:"最大",r:"SAIDAI",m:"En büyük"},{k:"最後",r:"SAIGO",m:"En son"},{k:"最新",r:"SAISHIN",m:"En yeni"}]},
+  {n:511,ch:"材",mn:"Kereste / Kaynak",on:["ZAI"],kun:[],cp:[{k:"材木",r:"ZAIMOKU",m:"Kereste"},{k:"材料",r:"ZAIRYŌ",m:"Malzeme"},{k:"人材",r:"JINZAI",m:"Yetenekli kişi"}]},
+  {n:512,ch:"昨",mn:"Dün / Geçmiş",on:["SAKU"],kun:[],cp:[{k:"昨日",r:"SAKUJITSU",m:"Dün"},{k:"昨夜",r:"SAKUYA",m:"Dün gece"},{k:"昨年",r:"SAKUNEN",m:"Geçen yıl"}]},
+  {n:513,ch:"札",mn:"Etiket / Banknot",on:["SATSU"],kun:["fuda"],cp:[{k:"札入れ",r:"SATSUire",m:"Cüzdan"},{k:"名札",r:"nafuda",m:"İsim etiketi"},{k:"千円札",r:"SEN'ENSATSU",m:"1000 yen banknotu"}]},
+  {n:514,ch:"刷",mn:"Basmak / Ovmak",on:["SATSU"],kun:["suru"],cp:[{k:"印刷",r:"INSATSU",m:"Baskı"},{k:"刷新",r:"SASSHIN",m:"Yenileme"},{k:"校正刷り",r:"KŌSEIzuri",m:"Baskı provası"}]},
+  {n:515,ch:"殺",mn:"Öldürmek",on:["SATSU"],kun:["korosu"],cp:[{k:"殺人",r:"SATSUJIN",m:"Cinayet"},{k:"自殺",r:"JISATSU",m:"İntihar"},{k:"殺し屋",r:"koroshiya",m:"Kiralık katil"}]},
+  {n:516,ch:"察",mn:"Yargılamak / Anlamak",on:["SATSU"],kun:[],cp:[{k:"警察",r:"KEISATSU",m:"Polis"},{k:"察知",r:"SATCHI",m:"Çıkarım"},{k:"観察",r:"KANSATSU",m:"Gözlem"}]},
+  {n:517,ch:"参",mn:"Gitmek / Katılmak",on:["SAN"],kun:["mairu"],cp:[{k:"参加",r:"SANKA",m:"Katılım"},{k:"参考",r:"SANKŌ",m:"Referans"},{k:"参議",r:"SANGI",m:"Danışman"}]},
+  {n:518,ch:"産",mn:"Doğum / Üretmek",on:["SAN"],kun:["umu"],cp:[{k:"生産",r:"SEISAN",m:"Üretim"},{k:"産物",r:"SANBUTSU",m:"Ürün"},{k:"出産",r:"SHUSSAN",m:"Doğum"}]},
+  {n:519,ch:"散",mn:"Dağıtmak",on:["SAN"],kun:["chiru"],cp:[{k:"散歩",r:"SANPO",m:"Yürüyüş"},{k:"散文",r:"SANBUN",m:"Düzyazı"},{k:"散らし",r:"chirashi",m:"Broşür"}]},
+  {n:520,ch:"残",mn:"Kalmak / Zalim",on:["ZAN"],kun:["nokoru"],cp:[{k:"残金",r:"ZANKIN",m:"Bakiye"},{k:"残念",r:"ZANNEN",m:"Üzüntü"},{k:"残忍",r:"ZANNIN",m:"Vahşilik"}]},
+  {n:521,ch:"士",mn:"Savaşçı / Bilgin",on:["SHI"],kun:["samurai"],cp:[{k:"武士",r:"BUSHI",m:"Samuray"},{k:"士官",r:"SHIKAN",m:"Askeri subay"},{k:"修士",r:"SHŪSHI",m:"Yüksek lisans"}]},
+  {n:522,ch:"氏",mn:"Klan / Aile / Bay",on:["SHI"],kun:["uji"],cp:[{k:"氏名",r:"SHIMEI",m:"Tam ad"},{k:"氏族",r:"SHIZOKU",m:"Klan"},{k:"伊藤氏",r:"ITŌ-SHI",m:"Bay/Bayan Itō"}]},
+  {n:523,ch:"史",mn:"Tarih / Katip",on:["SHI"],kun:[],cp:[{k:"歴史",r:"REKISHI",m:"Tarih"},{k:"女史",r:"JOSHI",m:"Bayan (saygılı)"},{k:"史上",r:"SHIJŌ",m:"Tarihte"}]},
+  {n:524,ch:"司",mn:"Yönetmek / Resmi",on:["SHI"],kun:["tsukasadoru"],cp:[{k:"司法",r:"SHIHŌ",m:"Yargı"},{k:"司令部",r:"SIREIBU",m:"Karargâh"},{k:"司会者",r:"SHIKAISYA",m:"Sunucu"}]},
+  {n:525,ch:"試",mn:"Deneme / Sınav",on:["SHI"],kun:["kokoromiru"],cp:[{k:"試合",r:"SHIai",m:"Maç"},{k:"試験管",r:"SHIKENKAN",m:"Deney tüpü"},{k:"試み",r:"kokoromi",m:"Deneme"}]},
+  {n:526,ch:"児",mn:"Çocuk",on:["JI","NI"],kun:["ko"],cp:[{k:"孤児",r:"KOJI",m:"Yetim"},{k:"小児",r:"SHŌNI",m:"Bebek"},{k:"児童期",r:"JIDŌKI",m:"Çocukluk dönemi"}]},
+  {n:527,ch:"治",mn:"Yönetmek / Tedavi",on:["JI","CHI"],kun:["osameru"],cp:[{k:"政治",r:"SEIJI",m:"Siyaset"},{k:"治安",r:"CHIAN",m:"Kamu düzeni"},{k:"治療",r:"CHIRYŌ",m:"Tedavi"}]},
+  {n:528,ch:"辞",mn:"Kelime / İstifa",on:["JI"],kun:["yameru"],cp:[{k:"辞書",r:"JISHO",m:"Sözlük"},{k:"辞職",r:"JISHOKU",m:"İstifa"},{k:"修辞学",r:"SHŪJIGAKU",m:"Retorik"}]},
+  {n:529,ch:"失",mn:"Kaybetmek",on:["SHITSU"],kun:["ushinau"],cp:[{k:"失敗",r:"SHIPPAI",m:"Başarısızlık"},{k:"失敬",r:"SHIKKEI",m:"Kabalık"},{k:"失業",r:"SHITSUGYŌ",m:"İşsizlik"}]},
+  {n:530,ch:"借",mn:"Ödünç almak",on:["SHAKU"],kun:["kariru"],cp:[{k:"借金",r:"SHAKKIN",m:"Borç"},{k:"借家",r:"SHAKUya",m:"Kiralık ev"},{k:"借り主",r:"karinushi",m:"Kiracı"}]},
+  {n:531,ch:"種",mn:"Tohum / Tür",on:["SHU"],kun:["tane"],cp:[{k:"一種",r:"ISSHU",m:"Bir tür"},{k:"人種",r:"JINSHU",m:"İnsan ırkı"},{k:"種なし",r:"tanenashi",m:"Tohumsuz"}]},
+  {n:532,ch:"周",mn:"Çevre / Etrafında",on:["SHŪ"],kun:["mawari"],cp:[{k:"周辺",r:"SHŪHEN",m:"Çevre"},{k:"周到",r:"SHŪTŌ",m:"Dikkatli"},{k:"一周",r:"ISSHŪ",m:"Bir tur"}]},
+  {n:533,ch:"祝",mn:"Kutlamak",on:["SHUKU","SHŪ"],kun:["iwau"],cp:[{k:"祝賀",r:"SHUKUGA",m:"Kutlama"},{k:"祝辞",r:"SHUKUJI",m:"Tebrik mesajı"},{k:"祝い事",r:"iwaigoto",m:"Mutlu olay"}]},
+  {n:534,ch:"順",mn:"Sıra / Uyum",on:["JUN"],kun:[],cp:[{k:"順序",r:"JUNJO",m:"Sıra"},{k:"柔順",r:"JŪJUN",m:"Uyum"},{k:"順調に",r:"JUNCHŌ ni",m:"Sorunsuzca"}]},
+  {n:535,ch:"初",mn:"Başlangıç / İlk",on:["SHO"],kun:["hatsu-","hajime"],cp:[{k:"最初",r:"SAISHO",m:"İlk"},{k:"初めて",r:"hajimete",m:"İlk kez"},{k:"初恋",r:"hatsukoi",m:"İlk aşk"}]},
+  {n:536,ch:"松",mn:"Çam ağacı",on:["SHŌ"],kun:["matsu"],cp:[{k:"松葉",r:"matsuba",m:"Çam iğnesi"},{k:"松原",r:"matsubara",m:"Çam korusu"},{k:"松根油",r:"SHŌKON'YU",m:"Terebentin"}]},
+  {n:537,ch:"笑",mn:"Gülmek / Gülümsemek",on:["SHŌ"],kun:["warau"],cp:[{k:"苦笑",r:"KUSHŌ",m:"Zoraki gülümseme"},{k:"笑い声",r:"waraigoe",m:"Gülme sesi"},{k:"笑顔",r:"egao",m:"Güler yüz"}]},
+  {n:538,ch:"唱",mn:"Okumak / Vaaz vermek",on:["SHŌ"],kun:["tonaeru"],cp:[{k:"提唱",r:"TEISHŌ",m:"Savunuculuk"},{k:"合唱",r:"GASSHŌ",m:"Koro"},{k:"唱え値",r:"tonaene",m:"İstenen fiyat"}]},
+  {n:539,ch:"焼",mn:"Yakmak / Pişirmek",on:["SHŌ"],kun:["yaku"],cp:[{k:"燃焼",r:"NENSHŌ",m:"Yanma"},{k:"焼け跡",r:"yakeato",m:"Yanmış kalıntılar"},{k:"焼きたて",r:"yakitate",m:"Taze pişirilmiş"}]},
+  {n:540,ch:"象",mn:"Fil / İmge",on:["SHŌ","ZŌ"],kun:[],cp:[{k:"象徴",r:"SHŌCHŌ",m:"Sembol"},{k:"印象",r:"INSHŌ",m:"İzlenim"},{k:"象牙",r:"ZŌGE",m:"Fildişi"}]},
+  {n:541,ch:"照",mn:"Aydınlatmak",on:["SHŌ"],kun:["teru"],cp:[{k:"参照",r:"SANSHŌ",m:"Referans"},{k:"対照",r:"TAISHŌ",m:"Kontrast"},{k:"照り返し",r:"terikaeshi",m:"Yansıtıcı"}]},
+  {n:542,ch:"賞",mn:"Ödül / Övmek",on:["SHŌ"],kun:[],cp:[{k:"賞品",r:"SHŌHIN",m:"Ödül"},{k:"賞賛",r:"SHŌSAN",m:"Övgü"},{k:"一等賞",r:"ITTŌSHŌ",m:"Birinci ödül"}]},
+  {n:543,ch:"臣",mn:"Hizmetkâr / Bakan",on:["SHIN","JIN"],kun:[],cp:[{k:"臣下",r:"SHINKA",m:"Vassal"},{k:"臣民",r:"SHINMIN",m:"Uyruklar"},{k:"大臣",r:"DAIJIN",m:"Bakan"}]},
+  {n:544,ch:"信",mn:"Güven / İnanmak",on:["SHIN"],kun:[],cp:[{k:"信用",r:"SHIN'YŌ",m:"Güven"},{k:"迷信",r:"MEISHIN",m:"Batıl inanç"},{k:"確信",r:"KAKUSHIN",m:"Kesin inanç"}]},
+  {n:545,ch:"成",mn:"Olmak / Oluşmak",on:["SEI","JŌ"],kun:["naru"],cp:[{k:"成分",r:"SEIBUN",m:"Bileşen"},{k:"成人",r:"SEIJIN",m:"Yetişkin"},{k:"成り立つ",r:"naritatsu",m:"Oluşmak"}]},
+  {n:546,ch:"省",mn:"Bakanlık / İncelemek",on:["SEI","SHŌ"],kun:["habuku"],cp:[{k:"反省",r:"HANSEI",m:"Öz eleştiri"},{k:"省略",r:"SHŌRYAKU",m:"Atlama"},{k:"厚生省",r:"KŌSEISHŌ",m:"Sağlık Bakanlığı"}]},
+  {n:547,ch:"清",mn:"Saf / Temiz",on:["SEI","SHŌ"],kun:["kiyoi"],cp:[{k:"清潔",r:"SEIKETSU",m:"Temizlik"},{k:"清浄",r:"SEIJŌ",m:"Saflık"},{k:"清水",r:"shimizu",m:"Kaynak suyu"}]},
+  {n:548,ch:"静",mn:"Sessiz / Sakin",on:["SEI","JŌ"],kun:["shizuka"],cp:[{k:"静止",r:"SEISHI",m:"Durma"},{k:"静けさ",r:"shizukesa",m:"Sessizlik"},{k:"静脈",r:"JŌMYAKU",m:"Toplardamar"}]},
+  {n:549,ch:"席",mn:"Oturma yeri",on:["SEKI"],kun:[],cp:[{k:"出席",r:"SHUSSEKI",m:"Katılım"},{k:"欠席",r:"KESSEKI",m:"Devamsızlık"},{k:"空席",r:"KŪSEKI",m:"Boş koltuk"}]},
+  {n:550,ch:"積",mn:"Biriktirmek / Yığmak",on:["SEKI"],kun:["tsumu"],cp:[{k:"面積",r:"MENSEKI",m:"Alan"},{k:"積雪",r:"SEKISETSU",m:"Kar derinliği"},{k:"積もり",r:"tsumori",m:"Niyet"}]},
+  {n:551,ch:"折",mn:"Bükmek / Kırmak",on:["SETSU"],kun:["ori","oru"],cp:[{k:"骨折",r:"KOSSETSU",m:"Kemik kırığı"},{k:"折り目",r:"orime",m:"Kıvrım çizgisi"},{k:"折り紙",r:"origami",m:"Origami"}]},
+  {n:552,ch:"節",mn:"Bölüm / Eklem",on:["SETSU","SECHI"],kun:["fushi"],cp:[{k:"調節",r:"CHŌSETSU",m:"Ayarlama"},{k:"関節",r:"KANSETSU",m:"Eklem"},{k:"節約",r:"SETSUYAKU",m:"Tasarruf"}]},
+  {n:553,ch:"説",mn:"Açıklamak",on:["SETSU"],kun:["toku"],cp:[{k:"説明",r:"SETSUMEI",m:"Açıklama"},{k:"小説",r:"SHŌSETSU",m:"Roman"},{k:"学説",r:"GAKUSETSU",m:"Akademik teori"}]},
+  {n:554,ch:"浅",mn:"Sığ / Açık renk",on:["SEN"],kun:["asai"],cp:[{k:"浅薄",r:"SENPAKU",m:"Sığlık"},{k:"浅瀬",r:"asase",m:"Sığlık"},{k:"浅黄",r:"asagi",m:"Açık sarı"}]},
+  {n:555,ch:"戦",mn:"Savaşmak",on:["SEN"],kun:["tatakau"],cp:[{k:"大戦",r:"TAISEN",m:"Büyük savaş"},{k:"戦場",r:"SENJŌ",m:"Savaş alanı"},{k:"作戦",r:"SAKUSEN",m:"Strateji"}]},
+  {n:556,ch:"選",mn:"Seçmek",on:["SEN"],kun:["erabu"],cp:[{k:"当選",r:"TŌSEN",m:"Seçilmek"},{k:"選手",r:"SENSHU",m:"Oyuncu"},{k:"選び出す",r:"erabidasu",m:"Seçip çıkarmak"}]},
+  {n:557,ch:"然",mn:"Doğal / Ama",on:["ZEN","NEN"],kun:["shikashi"],cp:[{k:"当然",r:"TŌZEN",m:"Doğal olarak"},{k:"天然",r:"TENNEN",m:"Doğal"},{k:"然るべき",r:"shikarubeki",m:"Uygun"}]},
+  {n:558,ch:"争",mn:"Çatışma / Yarışmak",on:["SŌ"],kun:["arasou"],cp:[{k:"戦争",r:"SENSŌ",m:"Savaş"},{k:"競争者",r:"KYŌSŌSHA",m:"Rakip"},{k:"言い争い",r:"iiarasoi",m:"Tartışma"}]},
+  {n:559,ch:"倉",mn:"Ambar",on:["SŌ"],kun:["kura"],cp:[{k:"船倉",r:"SENSŌ",m:"Gemi ambarı"},{k:"倉庫",r:"SŌKO",m:"Ambar"},{k:"倉に",r:"kurani",m:"Ambar malı"}]},
+  {n:560,ch:"巣",mn:"Yuva",on:["SŌ"],kun:["su"],cp:[{k:"帰巣",r:"KISŌ",m:"Eve dönüş güdüsü"},{k:"巣箱",r:"subako",m:"Yuva kutusu"},{k:"巣立つ",r:"sudatsu",m:"Yuvayı terk etmek"}]},
+  {n:561,ch:"束",mn:"Demet / Yönetmek",on:["SOKU"],kun:["taba"],cp:[{k:"結束",r:"KESSOKU",m:"Birleşme"},{k:"花束",r:"hanataba",m:"Buket"},{k:"束の間",r:"tsukanoma",m:"Kısa süre"}]},
+  {n:562,ch:"側",mn:"Yan / Kenar",on:["SOKU"],kun:["-gawa"],cp:[{k:"側面",r:"SOKUMEN",m:"Yan"},{k:"右側",r:"migigawa",m:"Sağ taraf"},{k:"側付え",r:"sobazukae",m:"Uşak"}]},
+  {n:563,ch:"続",mn:"Devam etmek",on:["ZOKU"],kun:["tsuzuku"],cp:[{k:"続々",r:"ZOKUZOKU",m:"Arka arkaya"},{k:"連続",r:"RENZOKU",m:"Süreklilik"},{k:"手続き",r:"tetsuzuki",m:"İşlem"}]},
+  {n:564,ch:"卒",mn:"Asker / Son / Ani",on:["SOTSU"],kun:[],cp:[{k:"卒業",r:"SOTSUGYŌ",m:"Mezuniyet"},{k:"兵卒",r:"HEISOTSU",m:"Asker"},{k:"卒去",r:"SOKKYO",m:"Ölüm"}]},
+  {n:565,ch:"孫",mn:"Torunlar",on:["SON"],kun:["mago"],cp:[{k:"子孫",r:"SHISON",m:"Torunlar"},{k:"孫引き",r:"magobiki",m:"İkinci el alıntı"},{k:"孫娘",r:"magomusume",m:"Torun kız"}]},
+  {n:566,ch:"帯",mn:"Kemer / Bölge",on:["TAI"],kun:["obi"],cp:[{k:"地帯",r:"CHITAI",m:"Bölge"},{k:"帯地",r:"obiJI",m:"Kemer kumaşı"},{k:"熱帯",r:"NETTAI",m:"Tropikal bölge"}]},
+  {n:567,ch:"隊",mn:"Birlik / Kolordu",on:["TAI"],kun:[],cp:[{k:"兵隊",r:"HEITAI",m:"Asker"},{k:"軍隊",r:"GUNTAI",m:"Ordu"},{k:"部隊",r:"BUTAI",m:"Birlik"}]},
+  {n:568,ch:"達",mn:"Ulaşmak / Çoğul eki",on:["TATSU"],kun:["-tachi"],cp:[{k:"発達",r:"HATTATSU",m:"Gelişme"},{k:"達人",r:"TATSUJIN",m:"Uzman"},{k:"人達",r:"hitotachi",m:"İnsanlar"}]},
+  {n:569,ch:"単",mn:"Basit / Tek",on:["TAN"],kun:[],cp:[{k:"単位",r:"TAN'I",m:"Birim"},{k:"単純",r:"TANJUN",m:"Basit"},{k:"単独",r:"TANDOKU",m:"Yalnız"}]},
+  {n:570,ch:"置",mn:"Koymak / Yerleştirmek",on:["CHI"],kun:["oku"],cp:[{k:"放置",r:"HŌCHI",m:"Bırakmak"},{k:"置き物",r:"okimono",m:"Süs eşyası"},{k:"置き場",r:"okiba",m:"Depo"}]},
+  {n:571,ch:"仲",mn:"İlişki / Arabuluculuk",on:["CHŪ"],kun:["naka"],cp:[{k:"仲裁",r:"CHŪSAI",m:"Arabuluculuk"},{k:"仲人",r:"nakōdo",m:"Evlilik aracısı"},{k:"仲よく",r:"nakayoku",m:"Dostane"}]},
+  {n:572,ch:"貯",mn:"Depolamak / Biriktirmek",on:["CHO"],kun:["takuwaeru"],cp:[{k:"貯金",r:"CHOKIN",m:"Tasarruf"},{k:"貯蔵",r:"CHOZŌ",m:"Depolama"},{k:"貯水槽",r:"CHOSUISŌ",m:"Su deposu"}]},
+  {n:573,ch:"兆",mn:"İşaret / Uğur / Trilyon",on:["CHŌ"],kun:["kizashi"],cp:[{k:"兆候",r:"CHŌKŌ",m:"İşaret"},{k:"前兆",r:"ZENCHŌ",m:"Uğursuz işaret"},{k:"億兆",r:"OKUCHŌ",m:"Kitleler"}]},
+  {n:574,ch:"腸",mn:"Bağırsak",on:["CHŌ"],kun:["harawata"],cp:[{k:"腸線",r:"CHŌSEN",m:"Bağırsak teli"},{k:"腸炎",r:"CHŌEN",m:"Bağırsak iltihabı"},{k:"大腸",r:"DAICHŌ",m:"Kalın bağırsak"}]},
+  {n:575,ch:"低",mn:"Alçak / Düşük",on:["TEI"],kun:["hikui"],cp:[{k:"最低",r:"SAITEI",m:"En düşük"},{k:"低利",r:"TEIRI",m:"Düşük faiz"},{k:"低落",r:"TEIRAKU",m:"Düşüş"}]},
+  {n:576,ch:"底",mn:"Dip / Alt",on:["TEI"],kun:["soko"],cp:[{k:"海底",r:"KAITEI",m:"Deniz tabanı"},{k:"奥底",r:"OKUsoko",m:"En derin yer"},{k:"底流",r:"TEIRYŪ",m:"Altta akan akıntı"}]},
+  {n:577,ch:"停",mn:"Durmak",on:["TEI"],kun:[],cp:[{k:"停止",r:"TEISHI",m:"Durma"},{k:"停車場",r:"TEISHAJO",m:"Durak"},{k:"停電",r:"TEIDEN",m:"Elektrik kesintisi"}]},
+  {n:578,ch:"的",mn:"Hedef / ...gibi",on:["TEKI"],kun:["mato"],cp:[{k:"目的",r:"MOKUTEKI",m:"Hedef"},{k:"理想的",r:"RISŌTEKI",m:"İdeal"},{k:"的外れ",r:"matohazure",m:"Hedefe uymayan"}]},
+  {n:579,ch:"典",mn:"Kod / Kural / Örnek",on:["TEN"],kun:["nori"],cp:[{k:"字典",r:"JITEN",m:"Sözlük"},{k:"典拠",r:"TENKYO",m:"Otorite"},{k:"典型",r:"TENKEI",m:"Model"}]},
+  {n:580,ch:"伝",mn:"İletmek / Aktarmak",on:["DEN"],kun:["tsutaeru"],cp:[{k:"伝説",r:"DENSETSU",m:"Efsane"},{k:"伝記",r:"DENKI",m:"Biyografi"},{k:"伝え聞く",r:"tsutaekiku",m:"Söylentiden duymak"}]},
+  {n:581,ch:"徒",mn:"Takipçi / Boş yere",on:["TO"],kun:["itazura"],cp:[{k:"生徒",r:"SEITO",m:"Öğrenci"},{k:"徒歩者",r:"TOHOSYA",m:"Yaya"},{k:"徒花",r:"adabana",m:"Boşa giden çaba"}]},
+  {n:582,ch:"努",mn:"Çabalamak",on:["DO"],kun:["tsutomeru"],cp:[{k:"努力",r:"DORYOKU",m:"Çaba"},{k:"努力家",r:"DORYOKUKA",m:"Çalışkan"},{k:"努めて",r:"tsutomete",m:"Elinden geldiğince"}]},
+  {n:583,ch:"灯",mn:"Işık / Lamba",on:["TŌ"],kun:["hi"],cp:[{k:"灯台",r:"TŌDAI",m:"Deniz feneri"},{k:"電灯",r:"DENTŌ",m:"Elektrik lambası"},{k:"灯心",r:"TŌSHIN",m:"Fitil"}]},
+  {n:584,ch:"堂",mn:"Salon / Tapınak",on:["DŌ"],kun:[],cp:[{k:"講堂",r:"KŌDŌ",m:"Amfi"},{k:"食堂",r:"SHOKUDŌ",m:"Yemekhane"},{k:"堂々たる",r:"DŌDŌtaru",m:"Heybetli"}]},
+  {n:585,ch:"働",mn:"Çalışmak",on:["DŌ"],kun:["hataraku"],cp:[{k:"労働",r:"RŌDŌ",m:"Emek"},{k:"働き手",r:"hatarakite",m:"Çalışkan"},{k:"働き口",r:"hatarakiguchi",m:"İş imkânı"}]},
+  {n:586,ch:"特",mn:"Özel",on:["TOKU"],kun:[],cp:[{k:"特徴",r:"TOKUCHŌ",m:"Özellik"},{k:"特長",r:"TOKUCHŌ",m:"Güçlü yön"},{k:"独特",r:"DOKUTOKU",m:"Özgünlük"}]},
+  {n:587,ch:"得",mn:"Kazanmak / Potansiyel",on:["TOKU"],kun:["eru"],cp:[{k:"得点",r:"TOKUTEN",m:"Puan"},{k:"所得",r:"SHOTOKU",m:"Gelir"},{k:"あり得る",r:"ariuru",m:"Mümkün"}]},
+  {n:588,ch:"毒",mn:"Zehir",on:["DOKU"],kun:[],cp:[{k:"有毒",r:"YŪDOKU",m:"Zehirli"},{k:"気の毒",r:"KInoDOKU",m:"Üzücü"},{k:"毒蛇",r:"DOKUhebi",m:"Zehirli yılan"}]},
+  {n:589,ch:"熱",mn:"Isı / Sıcak",on:["NETSU"],kun:["atsui"],cp:[{k:"熱心",r:"NESSHIN",m:"Şevk"},{k:"熱帯",r:"NETTAI",m:"Tropikal"},{k:"耐熱",r:"TAINETSU",m:"Isıya dayanıklı"}]},
+  {n:590,ch:"念",mn:"Düşünce / Endişe",on:["NEN"],kun:[],cp:[{k:"念力",r:"NENRIKI",m:"İrade gücü"},{k:"念入りな",r:"NENiri na",m:"Dikkatli"},{k:"念仏",r:"NENBUTSU",m:"Budist dua"}]},
+  {n:591,ch:"敗",mn:"Yenilmek",on:["HAI"],kun:["yaburu"],cp:[{k:"敗戦",r:"HAISEN",m:"Savaşı kaybetmek"},{k:"敗走",r:"HAISŌ",m:"Bozguna uğramak"},{k:"敗北",r:"HAIBOKU",m:"Yenilgi"}]},
+  {n:592,ch:"梅",mn:"Erik ağacı",on:["BAI"],kun:["ume"],cp:[{k:"梅花",r:"BAIKA",m:"Erik çiçeği"},{k:"梅酒",r:"umeSHU",m:"Erik şarabı"},{k:"梅雨",r:"BAIU",m:"Yağmur mevsimi"}]},
+  {n:593,ch:"博",mn:"Geniş / Kapsamlı",on:["HAKU","BAKU"],kun:[],cp:[{k:"博士",r:"HAKASE",m:"Doktor"},{k:"博徒",r:"BAKUTO",m:"Kumarbaz"},{k:"博物館",r:"HAKUBUTSUKAN",m:"Müze"}]},
+  {n:594,ch:"飯",mn:"Pişmiş pirinç",on:["HAN"],kun:["meshi"],cp:[{k:"ご飯",r:"GOHAN",m:"Pirinç, yemek"},{k:"昼飯",r:"hirumeshi",m:"Öğle yemeği"},{k:"飯田",r:"Iida",m:"Iida (soyad)"}]},
+  {n:595,ch:"飛",mn:"Uçmak",on:["HI"],kun:["tobu"],cp:[{k:"飛行機",r:"HIKŌKI",m:"Uçak"},{k:"飛語",r:"HIGO",m:"Söylenti"},{k:"飛び出す",r:"tobidasu",m:"Fırlayıp çıkmak"}]},
+  {n:596,ch:"費",mn:"Harcamak / Maliyet",on:["HI"],kun:["tsuiyasu"],cp:[{k:"費用",r:"HIYŌ",m:"Maliyet"},{k:"消費者",r:"SHŌHISHA",m:"Tüketici"},{k:"生活費",r:"SEIKATSUSHI",m:"Geçim giderleri"}]},
+  {n:597,ch:"必",mn:"Zorunlu olarak",on:["HITSU"],kun:["kanarazu"],cp:[{k:"必要",r:"HITSUYŌ",m:"Gereklilik"},{k:"必死",r:"HISSHI",m:"Çaresizlik"},{k:"必然",r:"HITSUZEN",m:"Kaçınılmazlık"}]},
+  {n:598,ch:"票",mn:"Oy / Etiket",on:["HYŌ"],kun:[],cp:[{k:"票決",r:"HYŌKETSU",m:"Oy çokluğu"},{k:"投票",r:"TŌHYŌ",m:"Oy kullanmak"},{k:"伝票",r:"DENPYŌ",m:"Fiş"}]},
+  {n:599,ch:"標",mn:"İşaret / Levha",on:["HYŌ"],kun:["shirushi"],cp:[{k:"標準",r:"HYŌJUN",m:"Standart"},{k:"里程標",r:"RITEIHYŌ",m:"Kilometre taşı"},{k:"標識",r:"HYŌSHIKI",m:"Trafik işareti"}]},
+  {n:600,ch:"不",mn:"Değil / -siz / -suz",on:["FU","BU"],kun:[],cp:[{k:"不明",r:"FUMEI",m:"Belirsiz"},{k:"不平",r:"FUHEI",m:"Şikâyet"},{k:"不気味",r:"BUKIMI",m:"Ürkütücü"}]},
+  {n:601,ch:"夫",mn:"Koca / Erkek",on:["FU","FŪ"],kun:["otto"],cp:[{k:"人夫",r:"NINPU",m:"İşçi"},{k:"加藤夫人",r:"KATŌ FUJIN",m:"Bayan Katō"},{k:"夫婦",r:"FŪFU",m:"Evli çift"}]},
+  {n:602,ch:"付",mn:"Eklemek / Uygulamak",on:["FU"],kun:["tsuku"],cp:[{k:"付着",r:"FUCHAKU",m:"Yapışma"},{k:"付き合う",r:"tsukiau",m:"Birlikte olmak"},{k:"名付ける",r:"nazukeru",m:"Ad vermek"}]},
+  {n:603,ch:"府",mn:"Hükümet merkezi",on:["FU"],kun:[],cp:[{k:"政府",r:"SEIFU",m:"Hükümet"},{k:"府県",r:"FUKEN",m:"Prefektörler"},{k:"京都府",r:"KYŌTO-FU",m:"Kyoto Prefektörü"}]},
+  {n:604,ch:"副",mn:"Yardımcı / Vekil-",on:["FUKU"],kun:[],cp:[{k:"副業",r:"FUKUGYŌ",m:"İkinci iş"},{k:"副詞",r:"FUKUSHI",m:"Zarf"},{k:"副領事",r:"FUKURYŌJI",m:"Başkonsolos yardımcısı"}]},
+  {n:605,ch:"粉",mn:"Toz / Un",on:["FUN"],kun:["kona"],cp:[{k:"花粉",r:"KAFUN",m:"Polen"},{k:"粉々",r:"konagona",m:"Paramparça"},{k:"麦粉",r:"mugiko",m:"Buğday unu"}]},
+  {n:606,ch:"兵",mn:"Asker / Silah",on:["HEI","HYŌ"],kun:[],cp:[{k:"兵士",r:"HEISHI",m:"Asker"},{k:"歩兵",r:"HOHEI",m:"Piyade"},{k:"兵器",r:"HEIKI",m:"Silah"}]},
+  {n:607,ch:"別",mn:"Ayrılmak / Farklı",on:["BETSU"],kun:["wakareru"],cp:[{k:"別名",r:"BETSUMEI",m:"Diğer ad"},{k:"特別",r:"TOKUBETSU",m:"Özel"},{k:"別れ",r:"wakare",m:"Ayrılık"}]},
+  {n:608,ch:"辺",mn:"Çevre / Sınır",on:["HEN"],kun:["atari"],cp:[{k:"辺境",r:"HENKYŌ",m:"Sınır bölgesi"},{k:"近辺",r:"KINPEN",m:"Çevre"},{k:"川辺",r:"kawabe",m:"Nehir kıyısı"}]},
+  {n:609,ch:"変",mn:"Değişmek / Tuhaf",on:["HEN"],kun:["kaeru"],cp:[{k:"変成",r:"HENSEI",m:"Dönüşüm"},{k:"大変",r:"TAIHEN",m:"Çok"},{k:"変わり者",r:"kawarimono",m:"Tuhaf kişi"}]},
+  {n:610,ch:"便",mn:"Rahatlık / Posta",on:["BEN","BIN"],kun:["tayori"],cp:[{k:"便利",r:"BENRI",m:"Uygun"},{k:"便所",r:"BENJO",m:"Tuvalet"},{k:"郵便",r:"YŪBIN",m:"Posta"}]},
+  {n:611,ch:"包",mn:"Sarmak / Örtmek",on:["HŌ"],kun:["tsutsumu"],cp:[{k:"小包",r:"kozutsumi",m:"Paket"},{k:"包囲",r:"HŌI",m:"Çevrelemek"},{k:"包帯",r:"HŌTAI",m:"Sargı"}]},
+  {n:612,ch:"法",mn:"Yasa / Kural",on:["HŌ","HATSU"],kun:[],cp:[{k:"法学",r:"HŌGAKU",m:"Hukuk"},{k:"文法",r:"BUNPŌ",m:"Dilbilgisi"},{k:"不法",r:"FUHŌ",m:"Yasa dışı"}]},
+  {n:613,ch:"望",mn:"Dilemek / Ummak",on:["BŌ","MŌ"],kun:["nozomu"],cp:[{k:"失望",r:"SHITSUBŌ",m:"Hayal kırıklığı"},{k:"願望",r:"GANMŌ",m:"Dilek"},{k:"望みて",r:"nozomite",m:"Talip"}]},
+  {n:614,ch:"牧",mn:"Otlak / Mera",on:["BOKU"],kun:["maki"],cp:[{k:"牧場",r:"BOKUJŌ",m:"Çiftlik"},{k:"放牧",r:"HŌBOKU",m:"Otlatmak"},{k:"牧鳥",r:"makibatori",m:"Mera kırlangıcı"}]},
+  {n:615,ch:"末",mn:"Son / Uç",on:["MATSU","BATSU"],kun:["sue"],cp:[{k:"週末",r:"SHŪMATSU",m:"Hafta sonu"},{k:"末っ子",r:"suekko",m:"En küçük çocuk"},{k:"始末",r:"SHIMATSU",m:"Çözme"}]},
+  {n:616,ch:"満",mn:"Dolu / Doldurmak",on:["MAN"],kun:["michiru"],cp:[{k:"満月",r:"MANGETSU",m:"Dolunay"},{k:"満足",r:"MANZOKU",m:"Tatmin"},{k:"不満",r:"FUMAN",m:"Memnuniyetsizlik"}]},
+  {n:617,ch:"未",mn:"Olgunlaşmamış / Henüz değil",on:["MI"],kun:["mada"],cp:[{k:"未来",r:"MIRAI",m:"Gelecek"},{k:"未知",r:"MICHI",m:"Bilinmeyen"},{k:"まだまだ",r:"madamada",m:"Hâlâ değil"}]},
+  {n:618,ch:"脈",mn:"Damar / Nabız",on:["MYAKU"],kun:[],cp:[{k:"脈管",r:"MYAKKAN",m:"Kan damarı"},{k:"鉱脈",r:"KŌMYAKU",m:"Maden damarı"},{k:"山脈",r:"SANMYAKU",m:"Dağ silsilesi"}]},
+  {n:619,ch:"民",mn:"Halk / Kitle",on:["MIN"],kun:["tami"],cp:[{k:"国民",r:"KOKUMIN",m:"Millet"},{k:"民間",r:"MINKAN",m:"Özel sektör"},{k:"民主的",r:"MINSHUTEKI",m:"Demokratik"}]},
+  {n:620,ch:"無",mn:"Değil / Yok",on:["MU","BU"],kun:["nai"],cp:[{k:"無料",r:"MURYŌ",m:"Ücretsiz"},{k:"無事",r:"BUJI",m:"Güvende"},{k:"なくなる",r:"nakunaru",m:"Yok olmak"}]},
+  {n:621,ch:"約",mn:"Söz / Yaklaşık",on:["YAKU"],kun:[],cp:[{k:"約束",r:"YAKUSOKU",m:"Söz"},{k:"節約",r:"SETSUYAKU",m:"Tasarruf"},{k:"約10人",r:"YAKUJŪNIN",m:"Yaklaşık 10 kişi"}]},
+  {n:622,ch:"勇",mn:"Cesur / Yiğit",on:["YŪ"],kun:["isamu"],cp:[{k:"勇者",r:"YŪSHA",m:"Kahraman"},{k:"勇気",r:"YŪKI",m:"Cesaret"},{k:"勇み足",r:"isamiashi",m:"Aceleci adım"}]},
+  {n:623,ch:"要",mn:"Gereksinim / Hayati",on:["YŌ"],kun:["iru"],cp:[{k:"不必要",r:"FUHITSUYŌ",m:"Gereksiz"},{k:"要点",r:"YŌTEN",m:"Özet"},{k:"重要",r:"JŪYŌ",m:"Önem"}]},
+  {n:624,ch:"養",mn:"Desteklemek / Yetiştirmek",on:["YŌ"],kun:["yashinau"],cp:[{k:"養成",r:"YŌSEI",m:"Eğitim"},{k:"栄養士",r:"EIYŌSHI",m:"Diyetisyen"},{k:"教養",r:"KYŌYŌ",m:"Kültür"}]},
+  {n:625,ch:"浴",mn:"Banyo yapmak",on:["YOKU"],kun:["abiru"],cp:[{k:"浴室",r:"YOKUSHITSU",m:"Banyo odası"},{k:"日光浴",r:"NIKKŌYOKU",m:"Güneş banyosu"},{k:"水浴び",r:"mizuabi",m:"Yıkanmak"}]},
+  {n:626,ch:"利",mn:"Kâr / Kazanç",on:["RI"],kun:["kiku"],cp:[{k:"利益",r:"RIEKI",m:"Kâr"},{k:"利用",r:"RIYŌ",m:"Kullanım"},{k:"効き目",r:"kikime",m:"Etki"}]},
+  {n:627,ch:"陸",mn:"Kara / Toprak",on:["RIKU"],kun:[],cp:[{k:"陸軍",r:"RIKUGUN",m:"Kara ordusu"},{k:"上陸",r:"JŌRIKU",m:"Karaya çıkmak"},{k:"大陸",r:"TAIRIKU",m:"Kıta"}]},
+  {n:628,ch:"良",mn:"İyi",on:["RYŌ"],kun:["yoi"],cp:[{k:"良心",r:"RYŌSHIN",m:"Vicdan"},{k:"改良",r:"KAIRYŌ",m:"İyileşme"},{k:"良さ",r:"yosa",m:"Değer"}]},
+  {n:629,ch:"料",mn:"Malzeme / Ücret",on:["RYŌ"],kun:[],cp:[{k:"原料",r:"GENRYŌ",m:"Ham madde"},{k:"料金",r:"RYŌKIN",m:"Ücret"},{k:"料理",r:"RYŌRI",m:"Yemek pişirme"}]},
+  {n:630,ch:"量",mn:"Ölçmek / Miktar",on:["RYŌ"],kun:["hakaru"],cp:[{k:"重量",r:"JŪRYŌ",m:"Ağırlık"},{k:"文量",r:"BUNRYŌ",m:"Miktar"},{k:"量的",r:"RYŌTEKI",m:"Niceliksel"}]},
+  {n:631,ch:"輪",mn:"Tekerlek / Çember",on:["RIN"],kun:["wa"],cp:[{k:"車輪",r:"SHARIN",m:"Araç tekerleği"},{k:"三輪車",r:"SANRINSHA",m:"Üç tekerlekli"},{k:"輪投げ",r:"wanage",m:"Halka atma"}]},
+  {n:632,ch:"類",mn:"Benzemek / Tür",on:["RUI"],kun:[],cp:[{k:"種類",r:"SHURUI",m:"Tür"},{k:"分類",r:"BUNRUI",m:"Sınıflandırma"},{k:"類似",r:"RUIJI",m:"Benzerlik"}]},
+  {n:633,ch:"令",mn:"Emir / Kural",on:["REI","RYŌ"],kun:[],cp:[{k:"令状",r:"REIJŌ",m:"Emir kâğıdı"},{k:"命令法",r:"MEIRĒHŌ",m:"Emir kipi"},{k:"司令官",r:"SHIREIKAN",m:"Komutan"}]},
+  {n:634,ch:"冷",mn:"Dondurmak / Soğuk",on:["REI"],kun:["tsumetai","hieru"],cp:[{k:"冷蔵",r:"REIZŌ",m:"Soğutma"},{k:"冷静",r:"REISEI",m:"Soğukkanlı"},{k:"冷え性",r:"hieSHŌ",m:"Üşümeye yatkınlık"}]},
+  {n:635,ch:"例",mn:"Örnek / Emsal",on:["REI"],kun:["tatoeru"],cp:[{k:"例外",r:"REIGAI",m:"İstisna"},{k:"前例",r:"ZENREI",m:"Emsal"},{k:"例えば",r:"tatoeba",m:"Örneğin"}]},
+  {n:636,ch:"歴",mn:"Tarih / Yol",on:["REKI"],kun:[],cp:[{k:"歴史家",r:"REKISHIKA",m:"Tarihçi"},{k:"経歴",r:"KEIREKI",m:"Özgeçmiş"},{k:"履歴書",r:"RIREKISHO",m:"CV"}]},
+  {n:637,ch:"連",mn:"Refakat etmek / Sıra",on:["REN"],kun:["tsureru"],cp:[{k:"連絡船",r:"RENRAKUSEN",m:"Feribotu"},{k:"連中",r:"RENJŪ",m:"Grup"},{k:"連れ合い",r:"tsureai",m:"Eş"}]},
+  {n:638,ch:"老",mn:"Yaşlı / Yaşlanmak",on:["RŌ"],kun:["oiru"],cp:[{k:"老人",r:"RŌJIN",m:"Yaşlı kişi"},{k:"老練",r:"RŌREN",m:"Deneyimli"},{k:"老齢",r:"RŌREI",m:"Yaşlılık"}]},
+  {n:639,ch:"労",mn:"Emek / Zahmet",on:["RŌ"],kun:[],cp:[{k:"労働者",r:"RŌDŌSHA",m:"İşçi"},{k:"苦労",r:"KURŌ",m:"Sıkıntı"},{k:"過労",r:"KARŌ",m:"Aşırı çalışma"}]},
+  {n:640,ch:"録",mn:"Kayıt / Yazmak",on:["ROKU"],kun:[],cp:[{k:"記録",r:"KIROKU",m:"Kayıt"},{k:"実録",r:"JITSUROKU",m:"Gerçek kayıt"},{k:"録音",r:"ROKUON",m:"Ses kaydı"}]}
+];
+
+function rand(a){return a[Math.floor(Math.random()*a.length)];}
+function sh(a){return[...a].sort(()=>Math.random()-0.5);}
+function oM(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);}
+function oC(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);}
+function oCM(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>rand(k.cp).m);}
+function oR(ex,n){const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...(k.kun||[])];if(rds.length)out.push(rand(rds));if(out.length>=n)break;}return out;}
+
+function buildExam(){
+  const uses={};K.forEach(k=>uses[k.ch]=0);
+  const qs=[];
+  function pick(ex){
+    const unused=sh(K.filter(k=>uses[k.ch]===0&&(!ex||k.ch!==ex.ch)));
+    const once=sh(K.filter(k=>uses[k.ch]===1&&(!ex||k.ch!==ex.ch)));
+    return(unused.length>0?unused:once.length>0?once:K.filter(k=>!ex||k.ch!==ex.ch))[0];
+  }
+  for(let i=0;i<40;i++){const k=pick();uses[k.ch]++;const c=rand(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,n:k.n,q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});}
+  for(let i=0;i<15;i++){const k=pick();uses[k.ch]++;const c=rand(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,n:k.n,q:'"'+c.m+'" anlamındaki "'+c.k+'" hangi kanjiden türemiştir?',ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});}
+  for(let i=0;i<20;i++){const k=pick();uses[k.ch]++;qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,n:k.n,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true});}
+  for(let i=0;i<15;i++){const k=pick();uses[k.ch]++;qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,n:k.n,q:'"'+k.mn+'" anlamına gelen kanji hangisidir?',ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});}
+  for(let i=0;i<10;i++){const k=pick();uses[k.ch]++;const rds=[...k.on,...(k.kun||[])];if(!rds.length){i--;continue;}const ans=rand(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,n:k.n,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});}
+  return sh(qs);
+}
+
+let tqs=[],ti=0,sc=0,ans={};
+
+function startExam(){
+  tqs=buildExam();ti=0;sc=0;ans={};
+  document.getElementById('heroWrap').style.display='none';
+  document.getElementById('rv').style.display='none';
+  document.getElementById('tv').style.display='block';
+  renderQ();
+}
+
+function renderQ(){
+  const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
+  let html='<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:'+pct+'%"></div></div>';
+  html+='<div class="thead"><div class="ttitle">🎖️ Fourth Grade Sınav — #441–640</div><div class="tscore">'+(ti+1)+' / '+tot+' &nbsp;·&nbsp; '+sc+' ✓ &nbsp;·&nbsp; '+(ti-sc)+' ✗</div></div>';
+  html+='<div class="tbody"><span class="tqlabel '+q.lc+'">'+q.lb+'</span><div class="tq">'+q.q+'</div>';
+  if(q.sc)html+='<span class="tchar">'+q.ch+'</span>';
+  html+='<div class="topts" id="opts">'+q.opts.map((o,i)=>'<button class="topt" onclick="doAns('+i+')">'+o+'</button>').join('')+'</div>';
+  html+='<div class="tfb" id="fb"></div>';
+  html+='<button class="tnext" id="nq" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
+  html+='</div></div>';
+  document.getElementById('tv').innerHTML=html;
+}
+
+function doAns(i){
+  const q=tqs[ti];
+  document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
+  const chosen=q.opts[i],ok=chosen===q.ans;
+  if(ok)sc++;
+  ans[ti]={ok,ch:q.ch,n:q.n,lb:q.lb,given:chosen,correct:q.ans};
+  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
+  const fb=document.getElementById('fb');
+  fb.className='tfb show '+(ok?'ok':'bad');
+  fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;
+  document.getElementById('nq').classList.add('show');
+}
+
+function nextQ(){ti++;ti>=tqs.length?showResult():renderQ();}
+
+function showResult(){
+  const tot=tqs.length,pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=75?'🎖️':pct>=60?'👍':pct>=45?'📚':'💪';
+  const lbl=pct>=90?'Olağanüstü!':pct>=75?'Çok iyi!':pct>=60?'İyi iş!':pct>=45?'Biraz daha çalış':'Tekrar et!';
+  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
+  let tsum='';
+  ['cm','ck','ka','ak','rd'].forEach(t=>{
+    const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);
+    if(!tl.length)return;
+    const okc=tl.filter(x=>x.a&&x.a.ok).length;
+    const p=Math.round(okc/tl.length*100);
+    tsum+='<div class="tsc"><div class="tsl">'+tlbls[t]+'</div><div class="tsv">'+okc+'/'+tl.length+' <span style="font-size:11px;color:var(--text3)">(%'+p+')</span></div></div>';
+  });
+  const wrongItems=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.a&&!x.a.ok);
+  let wrongHtml='';
+  if(wrongItems.length){
+    wrongHtml='<div class="wrong-list"><div class="slabel" style="margin-bottom:12px">Yanlış Cevaplar ('+wrongItems.length+')</div>';
+    wrongItems.forEach(({q,a})=>{
+      const k=K.find(x=>x.ch===q.ch);
+      wrongHtml+='<div class="wrow"><div class="wchar">'+q.ch+'</div><div class="winfo"><div class="wmean">'+(k?k.mn:'')+'</div><div class="wqtype">'+q.lb+'</div><div class="wanswers"><span class="wgiven">Verilen: '+a.given+'</span> → <span class="wcorrect">Doğru: '+a.correct+'</span></div></div></div>';
+    });
+    wrongHtml+='</div>';
+  } else {
+    wrongHtml='<div style="text-align:center;padding:1rem;color:var(--t600);font-weight:500;">🎉 Hiç yanlış yok!</div>';
+  }
+  document.getElementById('tv').style.display='none';
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML=`
+    <div class="twrap">
+      <div class="thead"><div class="ttitle">Sınav Sonucu — Fourth Grade #441–640</div></div>
+      <div class="rwrap">
+        <div class="r-top">
+          <div class="remoji">${emoji}</div>
+          <div class="rscore">${sc} / ${tot}</div>
+          <div class="rlabel">${lbl} &nbsp;·&nbsp; %${pct}</div>
+          <div class="rbdown">
+            <div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div>
+            <div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div>
+            <div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div>
+          </div>
+        </div>
+        <div class="slabel" style="margin-bottom:8px">Tip Bazında Sonuç</div>
+        <div class="tsum">${tsum}</div>
+        <div class="btn-row">
+          <button class="rbtn" onclick="startExam()">Tekrar</button>
+          <button class="rbtn sec" onclick="window.location.href='index.html'">Ana Sayfa</button>
+        </div>
+        ${wrongHtml}
+      </div>
+    </div>`;
+}
+</script>
+</body>
+</html>
