@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanji #1911–1920 | Notlar & Test</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
+.app{width:100%;max-width:660px;margin:0 auto;}
+a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
+a.back:hover{color:var(--text);}
+
+/* NOTLAR */
+.notes-wrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:1.5rem;}
+.notes-header{background:var(--p50);border-bottom:0.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.notes-header-title{font-size:15px;font-weight:500;color:var(--p900);}
+.notes-toggle{font-size:13px;color:var(--p800);}
+.notes-body{padding:0;}
+.kanji-row{display:grid;grid-template-columns:72px 1fr;border-bottom:0.5px solid var(--border);}
+.kanji-row:last-child{border-bottom:none;}
+.kanji-left{background:var(--p50);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem 0.5rem;border-right:0.5px solid var(--p200);}
+.kanji-char{font-family:'Noto Serif JP',serif;font-size:40px;font-weight:700;color:var(--p900);line-height:1;}
+.kanji-num{font-size:10px;color:var(--p800);margin-top:4px;font-weight:500;}
+.kanji-right{padding:0.875rem 1rem;}
+.kanji-meaning{font-size:15px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.reading-row{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;}
+.rbadge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;font-size:11px;border:0.5px solid;}
+.rl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.on-b{background:var(--p50);color:var(--p800);border-color:var(--p200);}
+.kun-b{background:var(--t50);color:var(--t600);border-color:var(--t400);}
+.kanji-origin{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:6px;}
+.kanji-mnemonic{font-size:12px;font-weight:500;color:var(--p800);background:var(--p50);border-radius:6px;padding:5px 8px;margin-bottom:7px;}
+.compounds{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
+.ccard{background:var(--bg2);border-radius:6px;padding:6px 8px;}
+.ckanji{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:var(--text);}
+.creading{font-size:10px;color:var(--t600);font-weight:500;margin:1px 0;}
+.cmeaning{font-size:11px;color:var(--text2);}
+
+/* TEST */
+.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
+.ttitle{font-size:15px;font-weight:500;color:var(--a900);}
+.tscore{font-size:13px;color:var(--a800);}
+.pstrip{height:4px;background:var(--bg2);}
+.pstrip-fill{height:100%;background:var(--a600);transition:width 0.4s;}
+.tbody{padding:1.5rem;}
+.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
+.tlc{background:var(--p50);color:var(--p800);}
+.tlm{background:var(--t50);color:var(--t800);}
+.tlr{background:var(--a50);color:var(--a800);}
+.tq{font-size:15px;color:var(--text);line-height:1.6;}
+.tchar{font-family:'Noto Serif JP',serif;font-size:72px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 1rem;display:block;}
+.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
+.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
+.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200);}
+.topt.correct{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
+.topt.wrong{background:var(--r50);border-color:var(--r600);color:var(--r800);}
+.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
+.tfb.show{display:block;}
+.tfb.ok{background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
+.tfb.bad{background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
+.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
+.tnext:hover{background:var(--p800);}
+.tnext.show{display:block;}
+.rwrap{text-align:center;padding:2rem 1.5rem;}
+.remoji{font-size:52px;margin-bottom:1rem;}
+.rscore{font-size:38px;font-weight:500;color:var(--p800);margin-bottom:0.4rem;}
+.rlabel{font-size:15px;color:var(--text2);margin-bottom:1.5rem;}
+.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
+.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;}
+.rbv{font-size:22px;font-weight:500;}
+.rbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
+.tsum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:1.25rem 0;text-align:left;}
+.tsc{background:var(--bg2);border-radius:var(--rm);padding:10px 12px;}
+.tsl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.tsv{font-size:15px;font-weight:500;color:var(--text);}
+.rbtn{padding:11px 28px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
+.rbtn:hover{background:var(--p800);}
+.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);}
+.krep{text-align:left;margin-top:1.5rem;border-top:0.5px solid var(--border);padding-top:1.25rem;}
+.krow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:0.5px solid var(--border);font-size:13px;}
+.kchar2{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;min-width:34px;color:var(--text);}
+.kinfo{flex:1;}.kmean{color:var(--text);font-size:13px;}.kqt{font-size:11px;color:var(--text2);margin-top:1px;}
+.rs{font-size:12px;font-weight:500;padding:2px 9px;border-radius:20px;}
+.rs-ok{background:var(--t50);color:var(--t800);}
+.rs-bad{background:var(--r50);color:var(--r800);}
+</style>
+</head>
+<body>
+<div class="app">
+  <a class="back" href="index.html">← Ana Sayfa</a>
+
+  <!-- NOTLAR -->
+  <div class="notes-wrap">
+    <div class="notes-header" onclick="toggleNotes()">
+      <div class="notes-header-title">📖 Kanji Notları — Set 192 (#1911–1920)</div>
+      <div class="notes-toggle" id="ntoggle">Gizle ▲</div>
+    </div>
+    <div class="notes-body" id="nbody">
+      <!-- Kanji satırları JS ile üretilecek -->
+    </div>
+  </div>
+
+  <!-- TEST -->
+  <div id="tv"></div>
+  <div id="rv" style="display:none"></div>
+</div>
+
+<script>
+const K=[
+  {n:1911,ch:"普",mn:"Genel / Yaygın",on:["FU"],kun:[],or:"'Güneş/gün' ve fonetik unsur ('geniş; her yerde' çağrışımlı) içerir; 'güneş gibi her yere yayılan'. 'Evrensel, genel' anlamında kullanılır.",mm:"☀️ GÜNEŞ GİBİ HER YERE YAYILAN",cp:[{k:"普通",r:"FUTSŪ",m:"Sıradan, normal"},{k:"普及",r:"FUKYŪ",m:"Yaygınlaşma"},{k:"普遍",r:"FUHEN",m:"Evrensel"}]},
+  {n:1912,ch:"腐",mn:"Çürümek / Bozulmak",on:["FU"],kun:["kusaru"],or:"'Et/kas' ve fonetik unsur ('depo; bozulma' çağrışımlı) içerir; 'etin depoda çürüyüp bozulması'.",mm:"🍖 ETİN DEPODA ÇÜRÜYÜP BOZULMASI",cp:[{k:"腐る",r:"kusaru",m:"Çürümek, bozulmak"},{k:"腐敗",r:"FUHAI",m:"Çürüme, yolsuzluk"},{k:"豆腐",r:"TŌFU",m:"Tofu"}]},
+  {n:1913,ch:"敷",mn:"Sermek / Düzenlemek",on:["FU"],kun:["shiku"],or:"'Vur/dövme' ve fonetik unsur ('genişlemek; sermek' çağrışımlı) içerir; 'yüzeye yaygı sermek'. 'Döşemek, yerleştirmek' anlamında kullanılır.",mm:"🏠 YÜZEYE YAYGÜ SERMEK VE DÖŞEMEK",cp:[{k:"敷く",r:"shiku",m:"Sermek, döşemek"},{k:"敷地",r:"SHIKICHI",m:"Arsa, alan"},{k:"下敷き",r:"shitajiki",m:"Alt pad, altlık"}]},
+  {n:1914,ch:"膚",mn:"Deri / Cilt",on:["FU"],kun:["hada"],or:"'Et/kas' ve fonetik unsur ('genişlemek; kaplayan' çağrışımlı) içerir; 'vücudu kaplayan deri, cilt'. 'Yüzey' anlamı da buradan gelir.",mm:"🤚 VÜCUDu KAPLAYAN DERİ VE CİLT",cp:[{k:"皮膚",r:"HIFU",m:"Deri, cilt"},{k:"膚触り",r:"hadazawari",m:"Dokunuş hissi"},{k:"膚",r:"hada",m:"Deri, ten"}]},
+  {n:1915,ch:"賦",mn:"Dağıtmak / Vergi / Şiir",on:["FU"],kun:[],or:"'Kabuk para birimi' ve fonetik unsur ('bölmek; dağıtmak' çağrışımlı) içerir; 'vergiyi dağıtmak'. 'Taksit, şiirsel biçim' anlamı da buradan gelir.",mm:"💰 VERGİYİ DAĞITMAK VE TAKSİT",cp:[{k:"賦課",r:"FUKA",m:"Vergi yükleme"},{k:"月賦",r:"GEPPU",m:"Aylık taksit"},{k:"天賦",r:"TENPU",m:"Doğuştan gelen yetenek"}]},
+  {n:1916,ch:"譜",mn:"Nota / Aile soykütüğü",on:["FU"],kun:[],or:"'Kelimeler/konuşma' ve fonetik unsur ('geniş; sıralama' çağrışımlı) içerir; 'geniş sıralı yazı'. 'Müzik notası, soykütük' anlamında kullanılır.",mm:"🎵 GENİŞ SIRALI YAZI — NOTA",cp:[{k:"楽譜",r:"GAKUFU",m:"Müzik notası"},{k:"系譜",r:"KEIFU",m:"Soy ağacı, soykütük"},{k:"年譜",r:"NENPU",m:"Kronoloji, yıllık"}]},
+  {n:1917,ch:"侮",mn:"Aşağılamak / Küçümsemek",on:["BU"],kun:["azamukeru"],or:"'Kişi' ve fonetik unsur ('her; değersiz saymak' çağrışımlı) içerir; 'birini değersiz sayıp aşağılamak'.",mm:"😤 BİRİNİ DEĞERSİZ SAYIP AŞAĞILAMAK",cp:[{k:"侮る",r:"azamukeru",m:"Aşağılamak, küçümsemek"},{k:"侮辱",r:"BUJOKU",m:"Hakaret, aşağılama"},{k:"侮蔑",r:"BUMETSU",m:"Küçümseme, hor görme"}]},
+  {n:1918,ch:"舞",mn:"Dans etmek / Uçmak",on:["BU"],kun:["mau","mai"],or:"'Yürümek' ve fonetik unsur ('döndürmek; dans' çağrışımlı) içerir; 'dönerek dans etmek'. 'Kar yağması' anlamı da buradan gelir.",mm:"💃 DÖNEREK DANS ETMEK",cp:[{k:"舞う",r:"mau",m:"Dans etmek, uçmak"},{k:"舞台",r:"BUTAI",m:"Sahne"},{k:"歌舞伎",r:"KABUKI",m:"Kabuki tiyatrosu"}]},
+  {n:1919,ch:"封",mn:"Mühürlemek / Kapatmak",on:["FŪ","HŌ"],kun:["fūjiru"],or:"'Toprak/zemin' ve fonetik unsur ('küçük ağaç; sınır' çağrışımlı) içerir; 'sınırı kapatıp mühürlemek'. 'Feodal alan, zarf' anlamı da buradan gelir.",mm:"📦 SINIRI KAPATIP MÜHÜRLEMEk",cp:[{k:"封筒",r:"FŪTŌ",m:"Zarf"},{k:"封鎖",r:"FŪSA",m:"Abluka, bloke etme"},{k:"封建",r:"HŌKEN",m:"Feodalizm"}]},
+  {n:1920,ch:"伏",mn:"Yatmak / Gizlenmek",on:["FUKU"],kun:["fuseru","fusu"],or:"'Kişi' ve fonetik unsur ('köpek; eğilmek' çağrışımlı) içerir; 'köpek gibi yere yatıp gizlenmek'. 'Boyun eğmek' anlamı da buradan gelir.",mm:"🐕 KÖPEK GİBİ YERE YATIP GİZLENMEK",cp:[{k:"伏せる",r:"fuseru",m:"Yatırmak, gizlemek"},{k:"起伏",r:"KIFUKU",m:"Yükseliş ve düşüş"},{k:"潜伏",r:"SENPUKU",m:"Gizlenme, kuluçka"}]}
+];
+
+// Notlar bölümünü oluştur
+function buildNotes(){
+  const body=document.getElementById('nbody');
+  body.innerHTML=K.map(k=>`
+    <div class="kanji-row">
+      <div class="kanji-left">
+        <div class="kanji-char">${k.ch}</div>
+        <div class="kanji-num">#${k.n}</div>
+      </div>
+      <div class="kanji-right">
+        <div class="kanji-meaning">${k.mn}</div>
+        <div class="reading-row">
+          ${k.on.map(r=>`<span class="rbadge on-b"><span class="rl">ON</span>${r}</span>`).join('')}
+          ${k.kun.map(r=>`<span class="rbadge kun-b"><span class="rl">KUN</span>${r}</span>`).join('')}
+        </div>
+        <div class="kanji-origin">${k.or}</div>
+        <div class="kanji-mnemonic">${k.mm}</div>
+        <div class="compounds">
+          ${k.cp.map(c=>`<div class="ccard"><div class="ckanji">${c.k}</div><div class="creading">${c.r}</div><div class="cmeaning">${c.m}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+let notesOpen=true;
+function toggleNotes(){
+  notesOpen=!notesOpen;
+  document.getElementById('nbody').style.display=notesOpen?'block':'none';
+  document.getElementById('ntoggle').textContent=notesOpen?'Gizle ▲':'Göster ▼';
+}
+
+// TEST
+function build(){
+  const r=a=>a[Math.floor(Math.random()*a.length)];
+  const sh=a=>[...a].sort(()=>Math.random()-0.5);
+  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
+  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
+  const qs=[];
+  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
+  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
+  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
+  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
+  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  return sh(qs);
+}
+
+let tqs=[],ti=0,sc=0,ans={};
+function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
+function renderQ(){
+  const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
+  document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #1911–1920</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
+function doAns(i){
+  const q=tqs[ti];document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
+  const chosen=q.opts[i],ok=chosen===q.ans;if(ok)sc++;ans[ti]={ok,ch:q.ch,lb:q.lb};
+  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
+  const fb=document.getElementById('fb');fb.className='tfb show '+(ok?'ok':'bad');fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;document.getElementById('nq').classList.add('show');}
+function nextQ(){ti++;ti>=tqs.length?showR():renderQ();}
+function showR(){
+  const tot=tqs.length,pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
+  const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
+  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
+  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
+  document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #1911–1920</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
+
+buildNotes();
+startT();
+</script>
+</body>
+</html>
