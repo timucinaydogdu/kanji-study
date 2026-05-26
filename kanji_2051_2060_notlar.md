@@ -2,173 +2,173 @@
 
 ---
 
-## 2051 — 溶
-**Anlam:** Eritmek / Çözünmek  
+## 2051 — 揚
+**Anlam:** Kaldırmak / Kızartmak  
+**Seviye:** JLPT N3 | 12 çizgi  
+**ON:** YŌ (ヨウ)  
+**KUN:** ageru (あげる)  
+
+**Köken:** 'El' ve 'yukarı kaldırma' içerir; kızartmak.  
+**Hafıza tekniği:** ✋ KALDIRMAK VE KIZARTMAK
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 揚げる | ageru | Kaldırmak; kızartmak |
+| 揚げ物 | agemono | Kızartılmış yiyecek |
+| 高揚 | KŌYŌ | Yükseliş |
+
+---
+
+## 2052 — 揺
+**Anlam:** Sallamak / Titremek  
+**Seviye:** JLPT N3 | 12 çizgi  
+**ON:** YŌ (ヨウ)  
+**KUN:** yureru (ゆれる)  
+
+**Köken:** 'El' ve 'titreyen' içerir; sallamak.  
+**Hafıza tekniği:** 🌊 SALLAMAK VE TİTREMEK
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 揺れる | yureru | Sallanmak |
+| 動揺 | DŌYŌ | Sarsıntı, şok |
+| 揺らぐ | yuragu | Sallanmak |
+
+---
+
+## 2053 — 溶
+**Anlam:** Çözmek / Eritmek  
 **Seviye:** JLPT N3 | 13 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** tokeru (とける)  
 
-**Köken:** 'Su' ve 'eriyik' içerir; suda çözünmek.  
-**Hafıza tekniği:** 💧 SUDA ERİYİP ÇÖZÜNMEK
+**Köken:** 'Su' ve 'erimek' içerir; çözünmek.  
+**Hafıza tekniği:** 💧 ERİMEK VE ÇÖZÜNMEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 溶ける | tokeru | Erimek |
-| 溶液 | YŌEKI | Çözelti |
-| 溶岩 | YŌGAN | Lav |
+| 溶液 | YŌEKI | Solüsyon |
+| 溶接 | YŌSETSU | Kaynak |
 
 ---
 
-## 2052 — 腰
-**Anlam:** Bel / Kalça  
+## 2054 — 腰
+**Anlam:** Bel / Beden  
 **Seviye:** JLPT N3 | 13 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** koshi (こし)  
 
-**Köken:** 'Et' ve 'merkez bölge' içerir; bel.  
-**Hafıza tekniği:** 💪 BEL VE KALÇA
+**Köken:** 'Et' ve 'orta nokta' içerir; bel.  
+**Hafıza tekniği:** 💪 BEL VE BEDEN
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 腰 | koshi | Bel, kalça |
+| 腰 | koshi | Bel |
 | 腰痛 | YŌTSŪ | Bel ağrısı |
-| 腰掛け | koshikake | Geçici iş |
+| 腰を据える | koshi wo sueru | Yerleşmek |
 
 ---
 
-## 2053 — 瘍
+## 2055 — 瘍
 **Anlam:** Ülser / Yara  
-**Seviye:** JLPT N2 | 14 çizgi  
+**Seviye:** JLPT N2 | 17 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** —  
 
-**Köken:** 'Hastalık' ve 'doku çöküntüsü' içerir; ülser.  
+**Köken:** 'Hastalık' ve 'çürüyen yara' içerir; tümör.  
 **Hafıza tekniği:** 🏥 ÜLSER VE YARA
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 潰瘍 | KAIYŌ | Ülser |
 | 腫瘍 | SHUYŌ | Tümör |
-| 胃潰瘍 | IKAIYŌ | Mide ülseri |
+| 潰瘍 | KAIYŌ | Ülser |
+| 脳腫瘍 | NŌ SHUYŌ | Beyin tümörü |
 
 ---
 
-## 2054 — 踊
+## 2056 — 踊
 **Anlam:** Dans etmek  
 **Seviye:** JLPT N3 | 14 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** odoru (おどる)  
 
-**Köken:** 'Ayak' ve 'zıplama' içerir; dans etmek.  
-**Hafıza tekniği:** 💃 DANS ETMEK VE ZIPLAMAK
+**Köken:** 'Ayak' ve 'sıçrama' içerir; dans.  
+**Hafıza tekniği:** 💃 DANS ETMEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 踊る | odoru | Dans etmek |
+| 踊り | odori | Dans |
 | 盆踊り | BON ODORI | O-bon dansı |
-| 踊り子 | odoriko | Dansçı |
 
 ---
 
-## 2055 — 窯
-**Anlam:** Fırın / Kiln  
-**Seviye:** JLPT N2 | 15 çizgi  
+## 2057 — 窯
+**Anlam:** Fırın / Ocak  
+**Seviye:** JLPT N2 | 16 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** kama (かま)  
 
-**Köken:** 'Mağara' ve 'seramik fırını' içerir; kiln.  
-**Hafıza tekniği:** 🏺 SERAMİK FIRINI — KİLN
+**Köken:** 'Delik' ve 'seramik fırını' içerir; çömlek fırını.  
+**Hafıza tekniği:** 🔥 SERAMİK FIRINI
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 窯 | kama | Çömlek fırını |
-| 窯元 | kamamoto | Çömlek atölyesi |
-| 陶窯 | TŌYŌ | Seramik fırını |
+| 窯 | kama | Fırın, ocak |
+| 窯元 | KAMAMOTO | Çömlek ustası |
+| 登り窯 | noborigama | Tepedeki fırın |
 
 ---
 
-## 2056 — 擁
-**Anlam:** Kucaklamak / Korumak  
+## 2058 — 擁
+**Anlam:** Kucaklamak  
 **Seviye:** JLPT N2 | 16 çizgi  
 **ON:** YŌ (ヨウ)  
-**KUN:** —  
+**KUN:** idaku (いだく)  
 
-**Köken:** 'El' ve 'korumak' içerir; kucaklayıp korumak.  
-**Hafıza tekniği:** 🤗 KUCAKLAYIP KORUMAK
+**Köken:** 'El' ve 'kucaklama' içerir; desteklemek.  
+**Hafıza tekniği:** 🤗 KUCAKLAMAK VE DESTEKLEMEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 擁護 | YŌGO | Koruma |
-| 擁立 | YŌRITSU | Destekleyerek seçmek |
+| 擁立 | YŌRITSU | Aday gösterme |
 | 抱擁 | HŌYŌ | Kucaklama |
 
 ---
 
-## 2057 — 謡
-**Anlam:** Şarkı / Noh şarkısı  
+## 2059 — 謡
+**Anlam:** Noh şarkısı  
 **Seviye:** JLPT N2 | 16 çizgi  
 **ON:** YŌ (ヨウ)  
-**KUN:** utai (うたい)  
+**KUN:** utau (うたう)  
 
-**Köken:** 'Konuşma' ve 'şarkı' içerir; Noh şarkısı.  
-**Hafıza tekniği:** 🎵 NOH ŞARKISI
+**Köken:** 'Konuşma' ve 'döngüsel ezgi' içerir; şarkı.  
+**Hafıza tekniği:** 🎶 NOH ŞARKISI VE EZGİ
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 謡曲 | YŌKYOKU | Noh şarkısı |
-| 謡い | utai | Noh şarkısı |
-| 民謡 | MIN'YŌ | Halk şarkısı |
+| 謡う | utau | Şarkı söylemek |
+| 童謡 | DŌYŌ | Çocuk şarkısı |
 
 ---
 
-## 2058 — 抑
-**Anlam:** Bastırmak / Kontrol  
+## 2060 — 抑
+**Anlam:** Bastırmak  
 **Seviye:** JLPT N3 | 7 çizgi  
 **ON:** YOKU (ヨク)  
 **KUN:** osaeru (おさえる)  
 
-**Köken:** 'El' ve 'bastırmak' içerir; kontrol etmek.  
-**Hafıza tekniği:** ✋ BASTIRMAK VE KONTROL
+**Köken:** 'El' ve 'bastırma' içerir; kısıtlamak.  
+**Hafıza tekniği:** ✋ BASTIRMAK VE KISITLAMAK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 抑える | osaeru | Bastırmak |
-| 抑制 | YOKUSEI | Kısıtlama |
-| 抑揚 | YOKUYŌ | İniş çıkış, ton |
-
----
-
-## 2059 — 沃
-**Anlam:** Verimli / Sulak  
-**Seviye:** JLPT N2 | 7 çizgi  
-**ON:** YOKU (ヨク)  
-**KUN:** sosogu (そそぐ)  
-
-**Köken:** 'Su' ve 'sulama' içerir; verimli toprak.  
-**Hafıza tekniği:** 💧 VERİMLİ TOPRAK VE SULAK
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 沃野 | YOKUYA | Verimli ova |
-| 肥沃 | HIYOKU | Verimli |
-| 沃土 | YOKUDO | Verimli toprak |
-
----
-
-## 2060 — 翼
-**Anlam:** Kanat / Yardım  
-**Seviye:** JLPT N3 | 17 çizgi  
-**ON:** YOKU (ヨク)  
-**KUN:** tsubasa (つばさ)  
-
-**Köken:** 'Tüy' ve 'büyük kanat' içerir; kuş kanadı.  
-**Hafıza tekniği:** 🦅 KANAT VE YARDIM
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 翼 | tsubasa | Kanat |
-| 主翼 | SHUYOKU | Ana kanat |
-| 右翼 | UYOKU | Sağ kanat |
+| 抑制 | YOKUSEI | Bastırma |
+| 抑える | osaeru | Kontrol etmek |
+| 抑圧 | YOKUATSU | Baskı |
 
 ---
 

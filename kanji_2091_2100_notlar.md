@@ -2,173 +2,173 @@
 
 ---
 
-## 2091 — 寮
-**Anlam:** Yurt / Koğuş  
-**Seviye:** JLPT N3 | 15 çizgi  
+## 2091 — 陵
+**Anlam:** İmparatorluk mezarı  
+**Seviye:** JLPT N2 | 11 çizgi  
 **ON:** RYŌ (リョウ)  
-**KUN:** —  
+**KUN:** misasagi (みささぎ)  
 
-**Köken:** 'Bina' ve 'topluluk' içerir; öğrenci yurdu.  
-**Hafıza tekniği:** 🏠 YURT VE KOĞUŞ
+**Köken:** 'Tepe' ve 'büyük tümsek' içerir; imparatorluk mezarı.  
+**Hafıza tekniği:** ⛰️ İMPARATORLUK MEZARI
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 寮 | ryō | Yurt, koğuş |
-| 学生寮 | GAKUSEI RYŌ | Öğrenci yurdu |
-| 独身寮 | DOKUSHIN RYŌ | Bekar yurdu |
+| 陵 | misasagi | İmparatorluk mezarı |
+| 丘陵 | KYŪRYŌ | Tepe |
+| 陵墓 | RYŌBO | Kraliyet mezarı |
 
 ---
 
-## 2092 — 療
-**Anlam:** Tedavi  
+## 2092 — 僚
+**Anlam:** Meslektaş  
+**Seviye:** JLPT N2 | 14 çizgi  
+**ON:** RYŌ (リョウ)  
+**KUN:** —  
+
+**Köken:** 'Kişi' ve 'birlikte çalışma' içerir; meslektaş.  
+**Hafıza tekniği:** 👥 MESLEKTAŞ VE İŞ ARKADAŞI
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 同僚 | DŌRYŌ | Meslektaş |
+| 官僚 | KANRYŌ | Bürokrat |
+| 閣僚 | KAKURYŌ | Bakan |
+
+---
+
+## 2093 — 寮
+**Anlam:** Yurt / Lojman  
+**Seviye:** JLPT N2 | 15 çizgi  
+**ON:** RYŌ (リョウ)  
+**KUN:** —  
+
+**Köken:** 'Bina' ve 'birlikte yaşama' içerir; öğrenci yurdu.  
+**Hafıza tekniği:** 🏠 YURT VE LOJMAN
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 寮 | ryō | Yurt |
+| 学生寮 | GAKUSEIRYŌ | Öğrenci yurdu |
+| 社員寮 | SHAIN'RYŌ | Şirket lojmanı |
+
+---
+
+## 2094 — 療
+**Anlam:** Tedavi etmek  
 **Seviye:** JLPT N3 | 17 çizgi  
 **ON:** RYŌ (リョウ)  
 **KUN:** —  
 
-**Köken:** 'Hastalık' ve 'tedavi' içerir; iyileştirme.  
-**Hafıza tekniği:** 🏥 TEDAVİ VE İYİLEŞME
+**Köken:** 'Hastalık' ve 'iyileştirme' içerir; tedavi.  
+**Hafıza tekniği:** 🏥 TEDAVİ ETMEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 治療 | CHIRYŌ | Tedavi |
-| 療養 | RYŌYŌ | Nekahat |
-| 医療 | IRYŌ | Tıp |
+| 医療 | IRYŌ | Tıbbi bakım |
+| 療養 | RYŌYŌ | İyileşme |
 
 ---
 
-## 2093 — 瞭
-**Anlam:** Net / Açık  
+## 2095 — 瞭
+**Anlam:** Açık / Net  
 **Seviye:** JLPT N2 | 17 çizgi  
 **ON:** RYŌ (リョウ)  
 **KUN:** —  
 
-**Köken:** 'Göz' ve 'net görme' içerir; anlaşılır.  
-**Hafıza tekniği:** 👁️ NET VE AÇIK
+**Köken:** 'Göz' ve 'net görme' içerir; açık.  
+**Hafıza tekniği:** 👁️ AÇIK VE NET
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 明瞭 | MEIRYŌ | Net, açık |
-| 瞭然 | RYŌZEN | Açıkça |
-| 一目瞭然 | ICHIMOKU RYŌZEN | Tek bakışta anlaşılan |
+| 明瞭 | MEIRYŌ | Açık, net |
+| 瞭然 | RYŌZEN | Açıkça görülür |
+| 一目瞭然 | ICHIMOKU RYŌZEN | Bir bakışta anlaşılır |
 
 ---
 
-## 2094 — 糧
-**Anlam:** Yiyecek / Erzak  
+## 2096 — 糧
+**Anlam:** Erzak / Yiyecek  
 **Seviye:** JLPT N2 | 18 çizgi  
-**ON:** RYŌ (リョウ), RŌ (ロウ)  
+**ON:** RYŌ (リョウ), ROŪ (ロウ)  
 **KUN:** kate (かて)  
 
-**Köken:** 'Pirinç' ve 'erzak' içerir; gıda.  
-**Hafıza tekniği:** 🌾 ERZAK VE GIDA
+**Köken:** 'Tahıl' ve 'depolanmış erzak' içerir; geçim.  
+**Hafıza tekniği:** 🌾 ERZAK VE GEÇİM KAYNAĞI
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 食糧 | SHOKURYŌ | Gıda, erzak |
-| 糧食 | RYŌSHOKU | Yiyecek |
-| 心の糧 | kokoro no kate | Manevi gıda |
+| 糧 | kate | Erzak |
+| 食糧 | SHOKURYŌ | Yiyecek |
+| 兵糧 | HYŌRYŌ | Askeri erzak |
 
 ---
 
-## 2095 — 厘
-**Anlam:** Rin (para) / Küçük  
+## 2097 — 厘
+**Anlam:** Rin (para birimi)  
 **Seviye:** JLPT N2 | 9 çizgi  
 **ON:** RIN (リン)  
 **KUN:** —  
 
-**Köken:** 'Küçük' piktografı; eski para birimi.  
-**Hafıza tekniği:** 💴 ESKİ PARA BİRİMİ — RİN
+**Köken:** 'Kıyı' ve 'çok küçük birim' içerir; 0.001 yen.  
+**Hafıza tekniği:** 💰 EN KÜÇÜK PARA BİRİMİ
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
+| 厘 | rin | Rin |
 | 一厘 | ICHIRIN | Bir rin |
-| 厘毛 | RINMO | Çok az miktar |
-| 一厘一毛 | ICHIRIN ICHIMŌ | Çok küçük |
+| 厘毛 | RINMŌ | Çok küçük miktar |
 
 ---
 
-## 2096 — 倫
-**Anlam:** Ahlak / Etik  
-**Seviye:** JLPT N3 | 10 çizgi  
+## 2098 — 倫
+**Anlam:** Etik / Ahlak  
+**Seviye:** JLPT N2 | 10 çizgi  
 **ON:** RIN (リン)  
 **KUN:** —  
 
-**Köken:** 'Kişi' ve 'ahlaki ilişki' içerir; etik.  
-**Hafıza tekniği:** 👥 AHLAK VE ETİK
+**Köken:** 'Kişi' ve 'düzenli ilişki' içerir; ahlak.  
+**Hafıza tekniği:** ⚖️ ETİK VE AHLAK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 倫理 | RINRI | Etik, ahlak |
-| 人倫 | JINRIN | İnsan ahlakı |
-| 倫敦 | RONDON | Londra (eski) |
+| 倫理 | RINRI | Etik |
+| 人倫 | JINRIN | İnsan ilişkileri |
+| 不倫 | FURIN | Zina |
 
 ---
 
-## 2097 — 隣
-**Anlam:** Komşu / Yakın  
+## 2099 — 隣
+**Anlam:** Komşu / Yan  
 **Seviye:** JLPT N3 | 16 çizgi  
 **ON:** RIN (リン)  
 **KUN:** tonari (となり)  
 
-**Köken:** 'Tepe' ve 'yakın komşu' içerir; yan taraf.  
-**Hafıza tekniği:** 🏠 KOMŞU VE YAKIN
+**Köken:** 'Tepe' ve 'yan yana komşu' içerir; komşu.  
+**Hafıza tekniği:** 🏠 KOMŞU VE YAN
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 隣 | tonari | Komşu, yan |
+| 隣 | tonari | Komşu |
+| 隣人 | RINJIN | Komşu |
 | 近隣 | KINRIN | Yakın çevre |
-| 隣国 | RINGOKU | Komşu ülke |
 
 ---
 
-## 2098 — 瑠
+## 2100 — 瑠
 **Anlam:** Lapis lazuli  
 **Seviye:** JLPT N2 | 14 çizgi  
 **ON:** RU (ル), RYŪ (リュウ)  
 **KUN:** —  
 
-**Köken:** 'Yeşim' ve 'mavi taş' içerir; lapis lazuli.  
-**Hafıza tekniği:** 💙 LAPİS LAZULİ
+**Köken:** 'Jade' ve 'mavi değerli taş' içerir; lapis lazuli.  
+**Hafıza tekniği:** 💎 LAPIS LAZULI
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 瑠璃 | RURI | Lacivert |
-| 瑠璃色 | RURIIRO | Lacivert renk |
-| 瑠璃蝶 | RURICHŌ | Mavi kelebek |
-
----
-
-## 2099 — 塁
-**Anlam:** Kale / Beyzbol kaidesi  
-**Seviye:** JLPT N2 | 12 çizgi  
-**ON:** RUI (ルイ)  
-**KUN:** —  
-
-**Köken:** 'Toprak' ve 'kale duvarı' içerir; üs.  
-**Hafıza tekniği:** 🏰 KALE VE BEYZBOL KAİDESİ
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 塁 | rui | Kale; kaide |
-| 本塁 | HONRUI | Ana kale; ev kaidesi |
-| 一塁 | ICHIRUI | Birinci kaide |
-
----
-
-## 2100 — 涙
-**Anlam:** Gözyaşı  
-**Seviye:** JLPT N3 | 11 çizgi  
-**ON:** RUI (ルイ)  
-**KUN:** namida (なみだ)  
-
-**Köken:** 'Su' ve 'gözden akan' içerir; gözyaşı.  
-**Hafıza tekniği:** 😢 GÖZYAŞI
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 涙 | namida | Gözyaşı |
-| 涙ぐむ | namidagumu | Gözleri dolmak |
-| 感涙 | KANRUI | Duygu gözyaşı |
+| 瑠璃 | RURI | Lapis lazuli |
+| 瑠璃色 | RURIIRO | Kobalt mavi |
+| 青瑠璃 | AORURI | Mavi lapis lazuli |
 
 ---
 

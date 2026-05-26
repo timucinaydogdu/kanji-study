@@ -2,173 +2,173 @@
 
 ---
 
-## 2061 — 拉
-**Anlam:** Çekmek / Kaçırmak  
+## 2061 — 沃
+**Anlam:** Verimli  
+**Seviye:** JLPT N2 | 7 çizgi  
+**ON:** YOKU (ヨク)  
+**KUN:** sosogu (そそぐ)  
+
+**Köken:** 'Su' ve 'bereketli' içerir; verimli toprak.  
+**Hafıza tekniği:** 💧 VERİMLİ VE BEREKETLİ
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 沃野 | YOKUYA | Verimli ova |
+| 沃土 | YOKUDO | Verimli toprak |
+| 肥沃 | HIYOKU | Verimli |
+
+---
+
+## 2062 — 翼
+**Anlam:** Kanat  
+**Seviye:** JLPT N3 | 17 çizgi  
+**ON:** YOKU (ヨク)  
+**KUN:** tsubasa (つばさ)  
+
+**Köken:** 'Tüy' ve 'uzanan kanat' içerir; kanat.  
+**Hafıza tekniği:** 🦅 KANAT
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 翼 | tsubasa | Kanat |
+| 右翼 | UYOKU | Sağ kanat |
+| 左翼 | SAYOKU | Sol kanat |
+
+---
+
+## 2063 — 拉
+**Anlam:** Zorla sürüklemek  
 **Seviye:** JLPT N2 | 8 çizgi  
 **ON:** RA (ラ)  
 **KUN:** hiku (ひく)  
 
-**Köken:** 'El' ve 'zorla çekme' içerir; adam kaçırmak.  
-**Hafıza tekniği:** ✋ ZORLA ÇEKMEK VE KAÇIRMAK
+**Köken:** 'El' ve 'zorla çekme' içerir; adam kaçırma.  
+**Hafıza tekniği:** ✋ ZORLA SÜRÜKLEMEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 拉致 | RACHI | Adam kaçırma |
-| 拉する | rassuru | Çekmek |
 | 拉麺 | RĀMEN | Ramen |
+| 拉する | rasuru | Zorla götürmek |
 
 ---
 
-## 2062 — 裸
+## 2064 — 裸
 **Anlam:** Çıplak  
 **Seviye:** JLPT N3 | 13 çizgi  
 **ON:** RA (ラ)  
 **KUN:** hadaka (はだか)  
 
 **Köken:** 'Giysi' ve 'soyulmuş' içerir; çıplak.  
-**Hafıza tekniği:** 👘 ÇIPLAK VE YALIN
+**Hafıza tekniği:** 👘 ÇIPLAK VE AÇIK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 裸 | hadaka | Çıplak |
-| 裸体 | RATAI | Çıplak vücut |
-| 赤裸々 | SEKIRARA | Açık sözlü |
+| 裸足 | hadashi | Çıplak ayak |
+| 赤裸々 | AKARADARA | Tamamen açık |
 
 ---
 
-## 2063 — 羅
-**Anlam:** İnce kumaş / Ağ  
+## 2065 — 羅
+**Anlam:** İnce ipek / Ağ  
 **Seviye:** JLPT N2 | 19 çizgi  
 **ON:** RA (ラ)  
 **KUN:** —  
 
-**Köken:** 'Ağ' ve 'ince iplik' içerir; liste yapmak.  
-**Hafıza tekniği:** 🕸️ İNCE KUMAŞ VE AĞ
+**Köken:** 'Ağ' ve 'kuş yakalama' içerir; liste.  
+**Hafıza tekniği:** 🕸️ AĞ VE İNCE İPEK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 羅列 | RARETSU | Listeleme |
-| 網羅 | MŌRA | Kapsamlı kapsama |
-| 修羅場 | SHURABA | Kaos sahnesi |
+| 羅列 | RARETSU | Sıralama |
+| 網羅 | MŌRA | Tam kapsama |
+| 羅針盤 | RASHINBAN | Pusula |
 
 ---
 
-## 2064 — 雷
+## 2066 — 雷
 **Anlam:** Şimşek  
 **Seviye:** JLPT N3 | 13 çizgi  
 **ON:** RAI (ライ)  
 **KUN:** kaminari (かみなり)  
 
-**Köken:** 'Yağmur' ve 'gök gürültüsü' içerir; şimşek.  
+**Köken:** 'Yağmur' ve 'gürleme' içerir; gök gürültüsü.  
 **Hafıza tekniği:** ⚡ ŞİMŞEK VE GÖK GÜRÜLTÜSÜ
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 雷 | kaminari | Şimşek |
-| 雷雨 | RAIU | Gök gürültülü yağmur |
 | 落雷 | RAKURAI | Yıldırım düşmesi |
+| 雷雨 | RAIU | Fırtınalı yağmur |
 
 ---
 
-## 2065 — 頼
-**Anlam:** Güvenmek / İstemek  
+## 2067 — 頼
+**Anlam:** Güvenmek / Rica  
 **Seviye:** JLPT N3 | 16 çizgi  
 **ON:** RAI (ライ)  
 **KUN:** tanomu (たのむ)  
 
 **Köken:** 'Baş' ve 'güvenilir' içerir; rica etmek.  
-**Hafıza tekniği:** 🙏 RİCA ETMEK VE GÜVENMEK
+**Hafıza tekniği:** 🤝 GÜVENMEK VE RİCA
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 頼む | tanomu | Rica etmek |
 | 信頼 | SHINRAI | Güven |
-| 依頼 | IRAI | Rica, istek |
+| 頼り | tayori | Dayanak |
 
 ---
 
-## 2066 — 絡
-**Anlam:** Bağlamak / Dolaşmak  
+## 2068 — 絡
+**Anlam:** Dolanmak / Bağlantı  
 **Seviye:** JLPT N3 | 12 çizgi  
 **ON:** RAKU (ラク)  
 **KUN:** karamu (からむ)  
 
-**Köken:** 'İplik' ve 'dolaşmak' içerir; bağlantı.  
-**Hafıza tekniği:** 🧵 DOLAŞMAK VE BAĞLANTÜ
+**Köken:** 'İplik' ve 'dolanma' içerir; bağlantı.  
+**Hafıza tekniği:** 🧵 DOLANMAK VE BAĞLANTI
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
+| 絡む | karamu | Dolanmak |
 | 連絡 | RENRAKU | İletişim |
-| 絡む | karamu | Dolaşmak |
-| 脈絡 | MYAKURAKU | Bağlam |
+| 絡み合う | karamiau | Birbirine dolanmak |
 
 ---
 
-## 2067 — 酪
-**Anlam:** Peynir / Süt ürünü  
+## 2069 — 酪
+**Anlam:** Süt ürünü / Peynir  
 **Seviye:** JLPT N2 | 13 çizgi  
 **ON:** RAKU (ラク)  
 **KUN:** —  
 
-**Köken:** 'Fermente' ve 'süt ürünü' içerir; hayvancılık.  
-**Hafıza tekniği:** 🧀 PEYNİR VE SÜT ÜRÜNÜ
+**Köken:** 'Şarap' ve 'fermente süt' içerir; peynir.  
+**Hafıza tekniği:** 🧀 FERMENTE SÜT ÜRÜNÜ
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 酪農 | RAKUNŌ | Süt hayvancılığı |
-| 酪酸 | RAKUSAN | Bütirik asit |
+| 酪農 | RAKUNŌ | Süt çiftçiliği |
 | 乳酪 | NYŪRAKU | Süt ürünleri |
+| 酪酸 | RAKUSAN | Bütirik asit |
 
 ---
 
-## 2068 — 辣
-**Anlam:** Keskin / Acı  
+## 2070 — 辣
+**Anlam:** Acı / Sert  
 **Seviye:** JLPT N2 | 14 çizgi  
 **ON:** RATSU (ラツ)  
-**KUN:** —  
+**KUN:** karai (からい)  
 
-**Köken:** 'Keskin' ve 'acı lezzet' içerir; sert.  
-**Hafıza tekniği:** 🌶️ KESKİN VE ACI
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 辛辣 | SHINRATSU | Sert, acı eleştiri |
-| 辣腕 | RAWAN | Güçlü yetenek |
-| 毒辣 | DOKURATSU | Acımasız |
-
----
-
-## 2069 — 濫
-**Anlam:** Taşmak / Aşırı  
-**Seviye:** JLPT N2 | 18 çizgi  
-**ON:** RAN (ラン)  
-**KUN:** afureru (あふれる)  
-
-**Köken:** 'Su' ve 'kontrolsüz taşma' içerir; aşırı.  
-**Hafıza tekniği:** 🌊 TAŞMAK VE AŞIRI
+**Köken:** 'Acı' ve 'yakıcı' içerir; sert eleştiri.  
+**Hafıza tekniği:** 🌶️ YAKICI VE SERT
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 氾濫 | HANRAN | Su baskını |
-| 濫用 | RAN'YŌ | Kötüye kullanma |
-| 濫造 | RANZŌ | Aşırı üretim |
-
----
-
-## 2070 — 藍
-**Anlam:** İndigo / Çivit mavisi  
-**Seviye:** JLPT N2 | 18 çizgi  
-**ON:** RAN (ラン)  
-**KUN:** ai (あい)  
-
-**Köken:** 'Bitki' ve 'mavi boya' içerir; indigo.  
-**Hafıza tekniği:** 🌿 İNDİGO VE ÇİVİT MAVİSİ
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 藍 | ai | İndigo |
-| 藍色 | aiiro | İndigo rengi |
-| 藍染め | aisomme | İndigo boyama |
+| 辛辣 | SHINRATSU | Sert eleştiri |
+| 毒辣 | DOKURATSU | Kötü niyetli |
+| 辣腕 | RATSUWAN | Usta el |
 
 ---
 

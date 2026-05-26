@@ -2,31 +2,65 @@
 
 ---
 
-## 2041 — 雄
+## 2041 — 猶
+**Anlam:** Henüz / Tereddüt  
+**Seviye:** JLPT N2 | 12 çizgi  
+**ON:** YŪ (ユウ)  
+**KUN:** nao (なお)  
+
+**Köken:** 'Köpek' ve 'duraksama' içerir; tereddüt etmek.  
+**Hafıza tekniği:** 🐕 TEREDDÜT VE HENÜZ
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 猶予 | YŪYO | Erteleme |
+| 猶 | nao | Henüz |
+| 猶更 | naosara | Daha da |
+
+---
+
+## 2042 — 裕
+**Anlam:** Varlıklı / Bol  
+**Seviye:** JLPT N3 | 12 çizgi  
+**ON:** YŪ (ユウ)  
+**KUN:** —  
+
+**Köken:** 'Giysi' ve 'bol' içerir; zengin, rahat.  
+**Hafıza tekniği:** 👘 VARLIKLI VE BOL
+
+| Birleşik | Okunuş | Anlam |
+|----------|--------|-------|
+| 余裕 | YOYU | Bolluk |
+| 裕福 | YŪFUKU | Varlıklı |
+| 富裕 | FUYŪ | Zenginlik |
+
+---
+
+## 2043 — 雄
 **Anlam:** Erkek / Kahraman  
 **Seviye:** JLPT N3 | 12 çizgi  
 **ON:** YŪ (ユウ)  
 **KUN:** osu (おす), o (お)  
 
-**Köken:** 'Hayvan' ve 'güçlü erkek' içerir; kahraman.  
-**Hafıza tekniği:** 💪 KAHRAMAN VE GÜÇLÜ ERKEK
+**Köken:** 'Kuş' ve 'güçlü erkek' içerir; kahraman.  
+**Hafıza tekniği:** 🦅 GÜÇLÜ ERKEK — KAHRAMAN
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 雄大 | YŪDAI | Büyük, görkemli |
+| 雄大 | YŪDAI | Görkemli |
 | 英雄 | EIYŪ | Kahraman |
 | 雄叫び | otakebi | Savaş çığlığı |
 
 ---
 
-## 2042 — 誘
-**Anlam:** Davet etmek  
+## 2044 — 誘
+**Anlam:** Baştan çıkarmak  
 **Seviye:** JLPT N3 | 14 çizgi  
 **ON:** YŪ (ユウ)  
 **KUN:** sasou (さそう)  
 
 **Köken:** 'Konuşma' ve 'çekmek' içerir; davet etmek.  
-**Hafıza tekniği:** 🗣️ DAVET VE AYARTMA
+**Hafıza tekniği:** 🗣️ DAVET VE BAŞTAN ÇIKARMA
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
@@ -36,139 +70,105 @@
 
 ---
 
-## 2043 — 憂
+## 2045 — 憂
 **Anlam:** Üzüntü / Endişe  
 **Seviye:** JLPT N3 | 15 çizgi  
 **ON:** YŪ (ユウ)  
-**KUN:** urei (うれい)  
+**KUN:** ureu (うれう)  
 
-**Köken:** 'Kalp' ve 'ağır üzüntü' içerir; melankoli.  
-**Hafıza tekniği:** 😔 AĞIR ÜZÜNTÜ VE ENDİŞE
+**Köken:** 'Kalp' ve 'endişe' içerir; üzüntü.  
+**Hafıza tekniği:** 😔 ENDİŞE VE ÜZÜNTÜ
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 憂い | urei | Üzüntü, endişe |
-| 憂鬱 | YŪUTSU | Melankoli, depresyon |
-| 憂慮 | YŪRYO | Kaygı, endişe |
+| 憂う | ureu | Endişelenmek |
+| 憂鬱 | YŪUTSU | Melankoli |
+| 憂慮 | YŪRYO | Kaygı |
 
 ---
 
-## 2044 — 融
-**Anlam:** Erimek / Birleşmek  
+## 2046 — 融
+**Anlam:** Erimek / Kaynaşmak  
 **Seviye:** JLPT N2 | 16 çizgi  
 **ON:** YŪ (ユウ)  
-**KUN:** tokeru (とける)  
+**KUN:** tooru (とおる), tokeru (とける)  
 
-**Köken:** 'Böcek' ve 'erimek' içerir; ısıyla eriyip birleşmek.  
-**Hafıza tekniği:** 🔥 ERİYİP BİRLEŞMEK
+**Köken:** 'Böcek' ve 'ısınarak erimek' içerir; finans.  
+**Hafıza tekniği:** 🔥 ERİMEK VE KAYNAŞMAK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 融合 | YŪGŌ | Birleşme |
-| 融資 | YŪSHI | Finansman |
 | 金融 | KIN'YŪ | Finans |
+| 融資 | YŪSHI | Kredi |
 
 ---
 
-## 2045 — 与
-**Anlam:** Vermek  
+## 2047 — 与
+**Anlam:** Vermek / Katılmak  
 **Seviye:** JLPT N3 | 3 çizgi  
 **ON:** YO (ヨ)  
 **KUN:** ataeru (あたえる)  
 
-**Köken:** 'Vermek' piktografı; bir şeyi uzatıp vermek.  
-**Hafıza tekniği:** 🤝 VERMEK VE KATILMAK
+**Köken:** 'İki el arasında geçiş' piktografı; vermek.  
+**Hafıza tekniği:** 🤲 VERMEK VE KATILMAK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 与える | ataeru | Vermek |
+| 関与 | KAN'YO | Katılma |
 | 与党 | YOTŌ | İktidardaki parti |
-| 参与 | SANYO | Katılım |
 
 ---
 
-## 2046 — 誉
-**Anlam:** Şeref / Övgü  
+## 2048 — 誉
+**Anlam:** Şan / Onur  
 **Seviye:** JLPT N3 | 13 çizgi  
 **ON:** YO (ヨ)  
 **KUN:** homare (ほまれ)  
 
-**Köken:** 'Konuşma' ve 'övgü' içerir; şeref.  
-**Hafıza tekniği:** 🏆 ŞEREF VE ÖVGÜ
+**Köken:** 'Konuşma' ve 'yüceltmek' içerir; şeref.  
+**Hafıza tekniği:** 🏆 ŞAN VE ONUR
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
 | 名誉 | MEIYO | Şeref |
-| 誉れ | homare | Şeref, gurur |
-| 栄誉 | EIYO | Onur |
+| 誉れ | homare | Şan, onur |
+| 栄誉 | EIYO | Şeref |
 
 ---
 
-## 2047 — 妖
-**Anlam:** Gizemli / Büyülü  
+## 2049 — 妖
+**Anlam:** Büyüleyici / Demon  
 **Seviye:** JLPT N2 | 7 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** ayashii (あやしい)  
 
-**Köken:** 'Kadın' ve 'büyülü' içerir; gizemli.  
-**Hafıza tekniği:** 👘 GİZEMLİ VE BÜYÜLÜ
+**Köken:** 'Kadın' ve 'tehlikeli güzellik' içerir; demon.  
+**Hafıza tekniği:** 👻 TEHLİKELİ GÜZELLIK
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 妖怪 | YŌKAI | Japon süpernatürel |
-| 妖艶 | YŌEN | Büyülü ve çekici |
-| 妖精 | YŌSEI | Peri, ruh |
+| 妖怪 | YŌKAI | Japon demonik varlık |
+| 妖精 | YŌSEI | Peri |
+| 妖艶 | YŌEN | Büyüleyici güzellik |
 
 ---
 
-## 2048 — 庸
-**Anlam:** Sıradan / Ücret  
+## 2050 — 庸
+**Anlam:** Sıradan / Orta  
 **Seviye:** JLPT N2 | 11 çizgi  
 **ON:** YŌ (ヨウ)  
 **KUN:** —  
 
-**Köken:** 'Güçlü' ve 'sıradan, orta düzey' içerir; vasat.  
-**Hafıza tekniği:** ➖ SIRADAN VE ORTA DÜZEY
+**Köken:** 'Evde çalışma' ve 'sıradan' içerir; mediyokr.  
+**Hafıza tekniği:** ➖ SIRADAN VE ORTA
 
 | Birleşik | Okunuş | Anlam |
 |----------|--------|-------|
-| 凡庸 | BON'YŌ | Sıradan |
 | 中庸 | CHŪYŌ | Orta yol |
-| 庸才 | YŌSAI | Sıradan yetenek |
-
----
-
-## 2049 — 揚
-**Anlam:** Kaldırmak / Kızartmak  
-**Seviye:** JLPT N3 | 12 çizgi  
-**ON:** YŌ (ヨウ)  
-**KUN:** ageru (あげる)  
-
-**Köken:** 'El' ve 'kaldırmak' içerir; yağda kızartmak.  
-**Hafıza tekniği:** ✋ KALDIRMAK VE KIZARTMAK
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 揚げる | ageru | Kaldırmak; kızartmak |
-| 揚げ物 | agemono | Kızartılmış yiyecek |
-| 高揚 | KŌYŌ | Coşmak |
-
----
-
-## 2050 — 揺
-**Anlam:** Sallamak / Sarsmak  
-**Seviye:** JLPT N3 | 12 çizgi  
-**ON:** YŌ (ヨウ)  
-**KUN:** yureru (ゆれる)  
-
-**Köken:** 'El' ve 'sallanma' içerir; sarsmak.  
-**Hafıza tekniği:** 🪶 SALLAMAK VE SARSMAK
-
-| Birleşik | Okunuş | Anlam |
-|----------|--------|-------|
-| 揺れる | yureru | Sallanmak |
-| 揺さぶる | yusaburu | Sarsmak |
-| 動揺 | DŌYŌ | Sarsıntı, şaşkınlık |
+| 庸人 | YŌJIN | Sıradan insan |
+| 凡庸 | BON'YŌ | Sıradan |
 
 ---
 
