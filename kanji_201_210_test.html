@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:201,ch:"東",mn:"Doğu",on:["TŌ"],kun:["higashi","azuma"],or:"OBI formları iki ucu bağlı dipsiz çantayı gösterir; çantanın ortasından dikey bir sopa geçer. 'Doğu' için fonetik ödünç kullanım. Modern form 'ağacın arkasından doğan güneş' olarak hatırlanabilir.",mm:"🌅 AĞACIN ARKASINDA GÜNEŞ DOĞUYOR — DOĞU",cp:[{k:"東洋",r:"TŌYŌ",m:"Doğu (dünya), Orient"},{k:"東側",r:"higashigawa",m:"Doğu tarafı"},{k:"東屋",r:"azumaya",m:"Çardak, köşk"}]},
-  {n:202,ch:"答",mn:"Cevap",on:["TŌ"],kun:["kotaeru"],or:"Geç dönem karakter (Shuowen sonrası). 'Karşılaşmak, birleşmek' bağımsız olarak 'cevap vermek' ve 'bir araya gelmek' için kullanılırdı. Daha sonra 'bambu' unsuru eklenerek 'cevap vermek' anlamı netleştirildi.",mm:"🎋 BAMBU UYGUN BİR CEVAPtir",cp:[{k:"回答",r:"KAITŌ",m:"Çözüm, yanıt"},{k:"答案",r:"TŌAN",m:"Sınav kağıdı"},{k:"口答え",r:"kuchigotae",m:"Karşılık, itiraz"}]},
-  {n:203,ch:"頭",mn:"Baş / Tepe",on:["TŌ","ZU"],kun:["atama","kashira"],or:"Bronz formda 'baş' ve 'ayakta duran kap' fonetik unsuru (dik durma ve dolayısıyla 'baş' çağrışımı) içerir. 155 (baş) gibi 'başlangıç; ilk sırada' genişletilmiş anlamları vardır.",mm:"🫘 FASULYE KAFA!",cp:[{k:"頭骨",r:"TŌKOTSU",m:"Kafatası"},{k:"頭痛",r:"ZUTSŪ",m:"Baş ağrısı"},{k:"頭金",r:"atamaKIN",m:"Peşinat"}]},
-  {n:204,ch:"同",mn:"Aynı",on:["DŌ"],kun:["onaji"],or:"Erken formlar tartışmalıdır. Mizukami 'ağız'ı 'kelimeler' olarak değerlendirir, fonetik 'toplamak' çağrışımlıdır. Tōdō 'nüfuz etmek' kelime ailesine dahil eder; yuvarlak delik herhangi açıdan ölçüldüğünde aynı görünür.",mm:"🏑 BENZERİ ÇEMBERLER AYNI TEK AÇIKLIĞA SAHIP",cp:[{k:"同様",r:"DŌYŌ",m:"Benzer, aynı şekilde"},{k:"同時",r:"DŌJI",m:"Eş zamanlı"},{k:"同意",r:"DŌUI",m:"Anlaşma, onay"}]},
-  {n:205,ch:"道",mn:"Yol / Tarz",on:["DŌ","TŌ"],kun:["michi"],or:"Çeşitli bronz formlar 'kavşaklar, yollar, gitmek' ve 'el' unsurlarını içerir; mühür aşamasında 'baş' fonetik unsura dönüştü. Tōdō 'dar çizgide uzanmak' kelime ailesine dahil eder.",mm:"👑 BAŞ YOLU YÖNETIR",cp:[{k:"鉄道",r:"TETSUDŌ",m:"Demiryolu"},{k:"神道",r:"SHINTŌ",m:"Şintoizm"},{k:"道端",r:"michibata",m:"Yol kenarı"}]},
-  {n:206,ch:"読",mn:"Okumak",on:["DOKU","TOKU"],kun:["yomu"],or:"Geç dönem karakter (Shuowen). 'Kelimeler' belirleyicisi ve fonetik unsur 'yüksek sesle okumak' çağrışımı taşır. Geleneksel form sağ unsur bakımından biraz farklıdır.",mm:"📚 OKUMAK İÇİN KELİMELERİ SAT",cp:[{k:"読者",r:"DOKUSHI A",m:"Okuyucu"},{k:"読本",r:"TOKUHON",m:"Okuma kitabı"},{k:"読み方",r:"yomikata",m:"Okuma biçimi"}]},
-  {n:207,ch:"内",mn:"İç / İçeri",on:["NAI","DAI"],kun:["uchi"],or:"OBI. Bileşenler 'çatı ya da konut' ve 'giriş'tir. 'İçeri girmek', 'içerisi' genişletilmiş anlamlardır.",mm:"🙆 ÇERÇEVEYE TAMAMEN SIĞAMAYAN KİŞİ",cp:[{k:"内部",r:"NAIBU",m:"İç kısım"},{k:"家内",r:"KANAI",m:"Eş (resmi)"},{k:"内気",r:"uchiKI",m:"Çekingenlik"}]},
-  {n:208,ch:"南",mn:"Güney",on:["NAN"],kun:["minami"],or:"OBI'den itibaren bulunur, etimoloji tartışmalıdır. Hipotezler arasında 'süslü çadır' piktogramı ve 'sıcak' çağrışımlı fonetik unsur yer alır. 'Güney' fonetik ödünç kullanımdır.",mm:"⛺ GÜNEYE BAKAN GİRİŞİ KAPALI HAÇLI ÇADIR",cp:[{k:"東南",r:"TŌNAN",m:"Güneydoğu"},{k:"南極",r:"NANKYOKU",m:"Güney Kutbu"},{k:"南側",r:"minamigawa",m:"Güney tarafı"}]},
-  {n:209,ch:"肉",mn:"Et / Beden",on:["NIKU"],kun:[],or:"OBI formu bir et parçasının piktogramına dayanır. Bronz formlardan itibaren iç kısımda etlerin lifini veya siniri temsil eden birden fazla çizgi görülür. Modern yazıda bileşik karakterlerde ay (月) ile karışır.",mm:"🥩 DAMARSIZ FİLETO ET",cp:[{k:"馬肉",r:"BANIKU",m:"At eti"},{k:"肉屋",r:"NIKUya",m:"Kasap"},{k:"肉眼",r:"NIKUGAN",m:"Çıplak göz"}]},
-  {n:210,ch:"馬",mn:"At",on:["BA"],kun:["uma","ma"],or:"OBI formları atın piktogramından geldiğini açıkça gösterir.",mm:"🐴 AKAN YELESİ, DÖRT BACAĞI VE KUYRUĞUYLA AT",cp:[{k:"馬術",r:"BAJUTSU",m:"Binicililik sanatı"},{k:"馬乗り",r:"umanori",m:"At binme"},{k:"馬子",r:"mago",m:"Yük atı sürücüsü"}]}
+  {n:201,ch:"東",mn:"Doğu",on:["TŌ"],kun:["higashi","azuma"],or:"OBI formları iki ucu bağlı dipsiz çantayı gösterir; çantanın ortasından dikey bir sopa geçer. 'Doğu' için fonetik ödünç kullanım. Modern form 'ağacın arkasından doğan güneş' olarak hatırlanabilir.",mm:"🌅 AĞACIN ARKASINDA GÜNEŞ DOĞUYOR — DOĞU",cp:[{k:"東洋",r:"TŌYŌ",m:"Doğu (dünya), Orient"},{k:"東側",r:"higashigawa",m:"Doğu tarafı"},{k:"東屋",r:"azumaya",m:"Çardak, köşk"}],ex:[{s:"太陽は___から昇る。",tr:"Güneş doğudan yükselir.",b:"東",br:"higashi"}]},
+  {n:202,ch:"答",mn:"Cevap",on:["TŌ"],kun:["kotaeru"],or:"Geç dönem karakter (Shuowen sonrası). 'Karşılaşmak, birleşmek' bağımsız olarak 'cevap vermek' ve 'bir araya gelmek' için kullanılırdı. Daha sonra 'bambu' unsuru eklenerek 'cevap vermek' anlamı netleştirildi.",mm:"🎋 BAMBU UYGUN BİR CEVAPtir",cp:[{k:"回答",r:"KAITŌ",m:"Çözüm, yanıt"},{k:"答案",r:"TŌAN",m:"Sınav kağıdı"},{k:"口答え",r:"kuchigotae",m:"Karşılık, itiraz"}],ex:[{s:"質問に___えた。",tr:"Soruyu cevapladım.",b:"答",br:"kota"}]},
+  {n:203,ch:"頭",mn:"Baş / Tepe",on:["TŌ","ZU"],kun:["atama","kashira"],or:"Bronz formda 'baş' ve 'ayakta duran kap' fonetik unsuru (dik durma ve dolayısıyla 'baş' çağrışımı) içerir. 155 (baş) gibi 'başlangıç; ilk sırada' genişletilmiş anlamları vardır.",mm:"🫘 FASULYE KAFA!",cp:[{k:"頭骨",r:"TŌKOTSU",m:"Kafatası"},{k:"頭痛",r:"ZUTSŪ",m:"Baş ağrısı"},{k:"頭金",r:"atamaKIN",m:"Peşinat"}],ex:[{s:"___が痛い。",tr:"Başım ağrıyor.",b:"頭",br:"atama"}]},
+  {n:204,ch:"同",mn:"Aynı",on:["DŌ"],kun:["onaji"],or:"Erken formlar tartışmalıdır. Mizukami 'ağız'ı 'kelimeler' olarak değerlendirir, fonetik 'toplamak' çağrışımlıdır. Tōdō 'nüfuz etmek' kelime ailesine dahil eder; yuvarlak delik herhangi açıdan ölçüldüğünde aynı görünür.",mm:"🏑 BENZERİ ÇEMBERLER AYNI TEK AÇIKLIĞA SAHIP",cp:[{k:"同様",r:"DŌYŌ",m:"Benzer, aynı şekilde"},{k:"同時",r:"DŌJI",m:"Eş zamanlı"},{k:"同意",r:"DŌUI",m:"Anlaşma, onay"}],ex:[{s:"___じ意見を持っている。",tr:"Aynı fikirdeyim.",b:"同",br:"ona"}]},
+  {n:205,ch:"道",mn:"Yol / Tarz",on:["DŌ","TŌ"],kun:["michi"],or:"Çeşitli bronz formlar 'kavşaklar, yollar, gitmek' ve 'el' unsurlarını içerir; mühür aşamasında 'baş' fonetik unsura dönüştü. Tōdō 'dar çizgide uzanmak' kelime ailesine dahil eder.",mm:"👑 BAŞ YOLU YÖNETIR",cp:[{k:"鉄道",r:"TETSUDŌ",m:"Demiryolu"},{k:"神道",r:"SHINTŌ",m:"Şintoizm"},{k:"道端",r:"michibata",m:"Yol kenarı"}],ex:[{s:"この___を真っすぐ行く。",tr:"Bu yolda düz gidiyorum.",b:"道",br:"michi"}]},
+  {n:206,ch:"読",mn:"Okumak",on:["DOKU","TOKU"],kun:["yomu"],or:"Geç dönem karakter (Shuowen). 'Kelimeler' belirleyicisi ve fonetik unsur 'yüksek sesle okumak' çağrışımı taşır. Geleneksel form sağ unsur bakımından biraz farklıdır.",mm:"📚 OKUMAK İÇİN KELİMELERİ SAT",cp:[{k:"読者",r:"DOKUSHI A",m:"Okuyucu"},{k:"読本",r:"TOKUHON",m:"Okuma kitabı"},{k:"読み方",r:"yomikata",m:"Okuma biçimi"}],ex:[{s:"毎日本を___む。",tr:"Her gün kitap okurum.",b:"読",br:"yo"}]},
+  {n:207,ch:"内",mn:"İç / İçeri",on:["NAI","DAI"],kun:["uchi"],or:"OBI. Bileşenler 'çatı ya da konut' ve 'giriş'tir. 'İçeri girmek', 'içerisi' genişletilmiş anlamlardır.",mm:"🙆 ÇERÇEVEYE TAMAMEN SIĞAMAYAN KİŞİ",cp:[{k:"内部",r:"NAIBU",m:"İç kısım"},{k:"家内",r:"KANAI",m:"Eş (resmi)"},{k:"内気",r:"uchiKI",m:"Çekingenlik"}],ex:[{s:"建物の___に入った。",tr:"Binanın içine girdim.",b:"内",br:"naka"}]},
+  {n:208,ch:"南",mn:"Güney",on:["NAN"],kun:["minami"],or:"OBI'den itibaren bulunur, etimoloji tartışmalıdır. Hipotezler arasında 'süslü çadır' piktogramı ve 'sıcak' çağrışımlı fonetik unsur yer alır. 'Güney' fonetik ödünç kullanımdır.",mm:"⛺ GÜNEYE BAKAN GİRİŞİ KAPALI HAÇLI ÇADIR",cp:[{k:"東南",r:"TŌNAN",m:"Güneydoğu"},{k:"南極",r:"NANKYOKU",m:"Güney Kutbu"},{k:"南側",r:"minamigawa",m:"Güney tarafı"}],ex:[{s:"___の方向に進んだ。",tr:"Güney yönünde ilerledi.",b:"南",br:"minami"}]},
+  {n:209,ch:"肉",mn:"Et / Beden",on:["NIKU"],kun:[],or:"OBI formu bir et parçasının piktogramına dayanır. Bronz formlardan itibaren iç kısımda etlerin lifini veya siniri temsil eden birden fazla çizgi görülür. Modern yazıda bileşik karakterlerde ay (月) ile karışır.",mm:"🥩 DAMARSIZ FİLETO ET",cp:[{k:"馬肉",r:"BANIKU",m:"At eti"},{k:"肉屋",r:"NIKUya",m:"Kasap"},{k:"肉眼",r:"NIKUGAN",m:"Çıplak göz"}],ex:[{s:"___を焼いて食べた。",tr:"Et pişirip yedim.",b:"肉",br:"NIKU"}]},
+  {n:210,ch:"馬",mn:"At",on:["BA"],kun:["uma","ma"],or:"OBI formları atın piktogramından geldiğini açıkça gösterir.",mm:"🐴 AKAN YELESİ, DÖRT BACAĞI VE KUYRUĞUYLA AT",cp:[{k:"馬術",r:"BAJUTSU",m:"Binicililik sanatı"},{k:"馬乗り",r:"umanori",m:"At binme"},{k:"馬子",r:"mago",m:"Yük atı sürücüsü"}],ex:[{s:"___に乗って野原を走った。",tr:"Ata binerek ovada koştum.",b:"馬",br:"uma"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

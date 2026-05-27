@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:161,ch:"場",mn:"Yer / Alan",on:["JŌ"],kun:["ba"],or:"Göreceli geç dönem (Shuowen). 'Toprak, zemin' ve 'güneş yükseliyor' anlamındaki fonetik unsurdan oluşur. Katō düzlenmiş yer, Shirakawa ritüel alan olarak yorumlar. Anlam 'yer'e genelleşti.",mm:"☀️ GÜNEŞİN IŞINLARI YERİ AYDINLATIR",cp:[{k:"会場",r:"KAIJŌ",m:"Toplantı yeri"},{k:"入場",r:"NYŪJŌ",m:"Giriş, kabul"},{k:"広場",r:"hiroba",m:"Meydan, açık alan"}]},
-  {n:162,ch:"色",mn:"Renk / Seks",on:["SHOKU","SHIKI"],kun:["iro"],or:"Görece geç dönem karakter. Shuowen formu üst üste eğilen iki kişiyi cinsel birleşimi simgeleyecek biçimde gösterir. Alt unsur da fonetik rol oynar. Genişletilmiş anlamlar 'cinsel arzu', 'güzel kadın', 'güzel ten/renk'tir.",mm:"🎨 CİNSEL EYLEMDEKİ EĞİLMİŞ BEDENLERİN RENKLİ HİKAYESİ",cp:[{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"},{k:"色素",r:"SHIKISO",m:"Pigment"},{k:"銀色",r:"GIN'iro",m:"Gümüş rengi"}]},
-  {n:163,ch:"食",mn:"Yiyecek / Yemek",on:["SHOKU"],kun:["taberu","kuu"],or:"Piktogram: OBI formları kapı veya phonetik 'ısırmak' anlamıyla yiyeceğin biriktirildiği bir kabi gösterir. Bileşik karakterlerde belirleyici olarak da kullanılabilir.",mm:"🍱 KAPAKLI KAPTA BİRİKMİŞ YİYECEK",cp:[{k:"食事",r:"SHOKUJI",m:"Yemek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"},{k:"食い物",r:"kuimono",m:"Yiyecek, kurban"}]},
-  {n:164,ch:"心",mn:"Kalp / Zihin",on:["SHIN"],kun:["kokoro"],or:"Piktogram: Bronz formlar bir kalbi tasvir eder; OBI formları da aynı şekildedir. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"❤️ KALBİN DÖRT PARÇASI VAR",cp:[{k:"中心",r:"CHŪSHIN",m:"Merkez, çekirdek"},{k:"心臓",r:"SHINZŌ",m:"Kalp (organ)"},{k:"真心",r:"magokoro",m:"Samimiyet"}]},
-  {n:165,ch:"新",mn:"Yeni",on:["SHIN"],kun:["atarashii","arata","nii-"],or:"OBI formları balta ve iğne veya balta ve ağaç kombinasyonlarını içerir. En yaygın yorum 'ağaç kesme' anlamındadır. 'Yeni' anlamı taze kesilmiş ahşabın yeniliğiyle ilişkilendirilir.",mm:"🪓 AĞACIN YANINDA DURAN BALTA YENİ ODUN KESMEYE HAZIR",cp:[{k:"新年",r:"SHINNEN",m:"Yeni Yıl"},{k:"新品",r:"SHINPIN",m:"Yeni ürün"},{k:"新潟",r:"Niigata",m:"Niigata (yer adı)"}]},
-  {n:166,ch:"親",mn:"Ebeveyn / Yakın",on:["SHIN"],kun:["oya","shitashii"],or:"Bronz aşamadan itibaren 見 (görmek) ve iğne+ağaç unsurlarının birleşimi olarak yorumlanır. Shirakawa dini amaçlı seçilmiş ağacı görür. Mizukami yakın olanları görmek anlamını temel alır.",mm:"🌲 BİR EBEVEYN AĞAÇLARDAN BİLE İĞNELERE KARŞI GÖZ KULAK OLMALI",cp:[{k:"両親",r:"RYŌSHIN",m:"Ebeveynler"},{k:"親類",r:"SHINRUI",m:"Akrabalar"},{k:"親方",r:"oyakata",m:"Patron, usta"}]},
-  {n:167,ch:"図",mn:"Plan / Diyagram",on:["ZU","TO"],kun:["hakaru"],or:"Erken form ve geleneksel form. Mizukami ve Katō sınırlar içindeki araziyi tasvir eden bir çizim olarak yorumlar. Shirakawa tarım arazisindeki tahıl ambarları olarak görür.",mm:"📄 KAĞIT ÜZERİNDE X NOKTASINI GÖSTERİR",cp:[{k:"地図",r:"CHIZU",m:"Harita"},{k:"図画",r:"ZUGA",m:"Çizim"},{k:"図書館",r:"TOSHOKAN",m:"Kütüphane"}]},
-  {n:168,ch:"数",mn:"Sayı / Saymak",on:["SŪ"],kun:["kazu","kazoeru"],or:"Mühür ve geleneksel form. 'Vurmak, çarpmak' ve 'büyücü kadın' (fonetik, 'yüksek sesle saymak' çağrışımlı) unsurlarını içerir. Shirakawa topuzu çözülen saçlı kadını yorumlar.",mm:"🌾 KADIN PİRİNÇ TANELERİNİ ELLE SAYAR",cp:[{k:"数学",r:"SŪGAKU",m:"Matematik"},{k:"数日",r:"SŪJITSU",m:"Birkaç gün"},{k:"数々",r:"kazukazu",m:"Çok sayıda"}]},
-  {n:169,ch:"西",mn:"Batı",on:["SEI","SAI"],kun:["nishi"],or:"OBI ve diğer erken formlar sepet, şarap presi veya yuva olarak yorumlanır. Başından beri 'batı' için fonetik ödünç kullanım olduğu görülür. Modern form şarap kavanozuna benzetilerek hatırlanabilir.",mm:"🍶 ŞARAP KAVANOZU İÇİN VAKIT GELDI — GÜNEŞ BATIDA",cp:[{k:"西洋",r:"SEIYŌ",m:"Batı (dünya)"},{k:"関西",r:"KANSAI",m:"Kansai bölgesi"},{k:"西日",r:"nishibi",m:"Öğleden sonraki güneş"}]},
-  {n:170,ch:"声",mn:"Ses / Ses tonu",on:["SEI","SHŌ"],kun:["koe"],or:"Geleneksel form. OBI'de asılı taş ve tokmaktan oluşan eski Çin müzik aleti 'qing' ile kulak unsurları birleşir. Shirakawa 'ağız'ı ritüel kap olarak yorumlar. 'Ses, ün' anlamları gelişti.",mm:"🥷 SAMURAY SESİNİ KAPININ ARKASINA YAKTIRIR",cp:[{k:"声援",r:"SEIEN",m:"Sesli destek"},{k:"大音声",r:"DAIONJŌ",m:"Yüksek ses"},{k:"泣き声",r:"nakigoe",m:"Ağlama sesi"}]}
+  {n:161,ch:"場",mn:"Yer / Alan",on:["JŌ"],kun:["ba"],or:"Göreceli geç dönem (Shuowen). 'Toprak, zemin' ve 'güneş yükseliyor' anlamındaki fonetik unsurdan oluşur. Katō düzlenmiş yer, Shirakawa ritüel alan olarak yorumlar. Anlam 'yer'e genelleşti.",mm:"☀️ GÜNEŞİN IŞINLARI YERİ AYDINLATIR",cp:[{k:"会場",r:"KAIJŌ",m:"Toplantı yeri"},{k:"入場",r:"NYŪJŌ",m:"Giriş, kabul"},{k:"広場",r:"hiroba",m:"Meydan, açık alan"}],ex:[{s:"駐車___に車を止めた。",tr:"Otoparka araba park ettim.",b:"場",br:"BA"}]},
+  {n:162,ch:"色",mn:"Renk / Seks",on:["SHOKU","SHIKI"],kun:["iro"],or:"Görece geç dönem karakter. Shuowen formu üst üste eğilen iki kişiyi cinsel birleşimi simgeleyecek biçimde gösterir. Alt unsur da fonetik rol oynar. Genişletilmiş anlamlar 'cinsel arzu', 'güzel kadın', 'güzel ten/renk'tir.",mm:"🎨 CİNSEL EYLEMDEKİ EĞİLMİŞ BEDENLERİN RENKLİ HİKAYESİ",cp:[{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"},{k:"色素",r:"SHIKISO",m:"Pigment"},{k:"銀色",r:"GIN'iro",m:"Gümüş rengi"}],ex:[{s:"好きな___は何ですか？",tr:"Favori renginiz nedir?",b:"色",br:"iro"}]},
+  {n:163,ch:"食",mn:"Yiyecek / Yemek",on:["SHOKU"],kun:["taberu","kuu"],or:"Piktogram: OBI formları kapı veya phonetik 'ısırmak' anlamıyla yiyeceğin biriktirildiği bir kabi gösterir. Bileşik karakterlerde belirleyici olarak da kullanılabilir.",mm:"🍱 KAPAKLI KAPTA BİRİKMİŞ YİYECEK",cp:[{k:"食事",r:"SHOKUJI",m:"Yemek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"},{k:"食い物",r:"kuimono",m:"Yiyecek, kurban"}],ex:[{s:"朝___を食べた。",tr:"Kahvaltı yaptım.",b:"食",br:"SHOKU"}]},
+  {n:164,ch:"心",mn:"Kalp / Zihin",on:["SHIN"],kun:["kokoro"],or:"Piktogram: Bronz formlar bir kalbi tasvir eder; OBI formları da aynı şekildedir. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"❤️ KALBİN DÖRT PARÇASI VAR",cp:[{k:"中心",r:"CHŪSHIN",m:"Merkez, çekirdek"},{k:"心臓",r:"SHINZŌ",m:"Kalp (organ)"},{k:"真心",r:"magokoro",m:"Samimiyet"}],ex:[{s:"___が落ち着いた。",tr:"Kalbim sakinleşti.",b:"心",br:"kokoro"}]},
+  {n:165,ch:"新",mn:"Yeni",on:["SHIN"],kun:["atarashii","arata","nii-"],or:"OBI formları balta ve iğne veya balta ve ağaç kombinasyonlarını içerir. En yaygın yorum 'ağaç kesme' anlamındadır. 'Yeni' anlamı taze kesilmiş ahşabın yeniliğiyle ilişkilendirilir.",mm:"🪓 AĞACIN YANINDA DURAN BALTA YENİ ODUN KESMEYE HAZIR",cp:[{k:"新年",r:"SHINNEN",m:"Yeni Yıl"},{k:"新品",r:"SHINPIN",m:"Yeni ürün"},{k:"新潟",r:"Niigata",m:"Niigata (yer adı)"}],ex:[{s:"___しい本を買った。",tr:"Yeni bir kitap satın aldım.",b:"新",br:"atara"}]},
+  {n:166,ch:"親",mn:"Ebeveyn / Yakın",on:["SHIN"],kun:["oya","shitashii"],or:"Bronz aşamadan itibaren 見 (görmek) ve iğne+ağaç unsurlarının birleşimi olarak yorumlanır. Shirakawa dini amaçlı seçilmiş ağacı görür. Mizukami yakın olanları görmek anlamını temel alır.",mm:"🌲 BİR EBEVEYN AĞAÇLARDAN BİLE İĞNELERE KARŞI GÖZ KULAK OLMALI",cp:[{k:"両親",r:"RYŌSHIN",m:"Ebeveynler"},{k:"親類",r:"SHINRUI",m:"Akrabalar"},{k:"親方",r:"oyakata",m:"Patron, usta"}],ex:[{s:"___切にしてもらった。",tr:"Bana nazik davranıldı.",b:"親",br:"shita"}]},
+  {n:167,ch:"図",mn:"Plan / Diyagram",on:["ZU","TO"],kun:["hakaru"],or:"Erken form ve geleneksel form. Mizukami ve Katō sınırlar içindeki araziyi tasvir eden bir çizim olarak yorumlar. Shirakawa tarım arazisindeki tahıl ambarları olarak görür.",mm:"📄 KAĞIT ÜZERİNDE X NOKTASINI GÖSTERİR",cp:[{k:"地図",r:"CHIZU",m:"Harita"},{k:"図画",r:"ZUGA",m:"Çizim"},{k:"図書館",r:"TOSHOKAN",m:"Kütüphane"}],ex:[{s:"地___を見て道を探した。",tr:"Haritaya bakarak yol aradım.",b:"図",br:"ZU"}]},
+  {n:168,ch:"数",mn:"Sayı / Saymak",on:["SŪ"],kun:["kazu","kazoeru"],or:"Mühür ve geleneksel form. 'Vurmak, çarpmak' ve 'büyücü kadın' (fonetik, 'yüksek sesle saymak' çağrışımlı) unsurlarını içerir. Shirakawa topuzu çözülen saçlı kadını yorumlar.",mm:"🌾 KADIN PİRİNÇ TANELERİNİ ELLE SAYAR",cp:[{k:"数学",r:"SŪGAKU",m:"Matematik"},{k:"数日",r:"SŪJITSU",m:"Birkaç gün"},{k:"数々",r:"kazukazu",m:"Çok sayıda"}],ex:[{s:"___学のテストがある。",tr:"Matematik sınavı var.",b:"数",br:"SŪ"}]},
+  {n:169,ch:"西",mn:"Batı",on:["SEI","SAI"],kun:["nishi"],or:"OBI ve diğer erken formlar sepet, şarap presi veya yuva olarak yorumlanır. Başından beri 'batı' için fonetik ödünç kullanım olduğu görülür. Modern form şarap kavanozuna benzetilerek hatırlanabilir.",mm:"🍶 ŞARAP KAVANOZU İÇİN VAKIT GELDI — GÜNEŞ BATIDA",cp:[{k:"西洋",r:"SEIYŌ",m:"Batı (dünya)"},{k:"関西",r:"KANSAI",m:"Kansai bölgesi"},{k:"西日",r:"nishibi",m:"Öğleden sonraki güneş"}],ex:[{s:"太陽は___に沈む。",tr:"Güneş batıda batar.",b:"西",br:"nishi"}]},
+  {n:170,ch:"声",mn:"Ses / Ses tonu",on:["SEI","SHŌ"],kun:["koe"],or:"Geleneksel form. OBI'de asılı taş ve tokmaktan oluşan eski Çin müzik aleti 'qing' ile kulak unsurları birleşir. Shirakawa 'ağız'ı ritüel kap olarak yorumlar. 'Ses, ün' anlamları gelişti.",mm:"🥷 SAMURAY SESİNİ KAPININ ARKASINA YAKTIRIR",cp:[{k:"声援",r:"SEIEN",m:"Sesli destek"},{k:"大音声",r:"DAIONJŌ",m:"Yüksek ses"},{k:"泣き声",r:"nakigoe",m:"Ağlama sesi"}],ex:[{s:"大きな___で呼んだ。",tr:"Yüksek sesle çağırdım.",b:"声",br:"koe"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

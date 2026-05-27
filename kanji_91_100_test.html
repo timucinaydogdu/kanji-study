@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:91,ch:"画",mn:"Resim / Çizgi",on:["GA","KAKU"],kun:[],or:"OBI formunun üst kısmı yazı fırçası tutan eli temsil eder. Katō bronz aşamada 'tarla sınır çizgileri çizmek' anlamını verir. Geleneksel form daha sonra kısaltıldı.",mm:"🖼️ ÇİZGİLERLE BÖLÜNMÜŞ TARLALAR RESİM YAPAR",cp:[{k:"映画",r:"EIGA",m:"Film"},{k:"画面",r:"GAMEN",m:"Ekran"},{k:"計画",r:"KEIKAKU",m:"Plan"}]},
-  {n:92,ch:"回",mn:"Dönmek / Tur",on:["KAI"],kun:["mawaru","mawasu"],or:"Dönel hareketi simgeleyen bir sembol. Shirakawa bronz formlara dayanarak dönen bir akıntıyı tasvir ettiğini öne sürer.",mm:"🔄 EŞ MERKEZLİ DÖNGÜ",cp:[{k:"回転",r:"KAITEN",m:"Dönme, devrim"},{k:"回数",r:"KAISŪ",m:"Frekans, sayı"},{k:"言い回し",r:"iimawashi",m:"İfade tarzı"}]},
-  {n:93,ch:"会",mn:"Buluşmak",on:["KAI","E"],kun:["au"],or:"Erken formlar kapak ve kap üzerini gösterir — muhtemelen pişirme kabı. Kapağı kaba koymak 'birleştirmek, bir araya getirmek' anlamını çağrıştırır. Geleneksel form kısaltıldı.",mm:"👃 İKİ KİŞİNİN BURUNLARI BULUŞUR",cp:[{k:"会社",r:"KAISHA",m:"Şirket"},{k:"会釈",r:"ESHAKU",m:"Hafif eğilme (selamlama)"},{k:"国会",r:"KOKKAI",m:"Parlamento"}]},
-  {n:94,ch:"海",mn:"Deniz",on:["KAI"],kun:["umi"],or:"Bronz formda 'su' ve 'her' (fonetik, 'karanlık' çağrışımlı) unsurları var. Erken Çin'de deniz ve karanlık sözcükleri benzer seslerdi.",mm:"💧 HER SU DAMLASI DENİZDE SONLANIR",cp:[{k:"海軍",r:"KAIGUN",m:"Donanma"},{k:"日本海",r:"NIHONKAI",m:"Japonya Denizi"},{k:"海辺",r:"umibe",m:"Deniz kıyısı"}]},
-  {n:95,ch:"絵",mn:"Resim / Çizim",on:["KAI","E"],kun:[],or:"Geç dönem karakter. Sağ unsur fonetik olup 'bir araya gelmek' anlamı taşır (93 buluşmak ile aynı); 'iplik' belirleyicisiyle birleşince 'işlemeli desen', sonra genel olarak 'resim' anlamını kazandı.",mm:"🧵 İPLİKLER İŞLEMELİ RESİMDE BULUŞUR",cp:[{k:"絵画",r:"KAIGA",m:"Resim, tablo"},{k:"口絵",r:"kuchiE",m:"Frontispis"},{k:"絵本",r:"EHON",m:"Resimli kitap"}]},
-  {n:96,ch:"外",mn:"Dış / Diğer",on:["GAI","GE"],kun:["soto","hoka","hazusu"],or:"Bronz ve mühür formları fal anlamındaki unsuru içerir — antik Çin'de kaplumbağa kabuğu çatlakları yorumlanarak yapılan fal. Shirakawa sol unsuru et olarak yorumlar; hayvan kurbanları fal töreninin parçasıydı.",mm:"🌙 HİLALİN DIŞINDA BİR ÇATLAK?",cp:[{k:"外人",r:"GAIJIN",m:"Yabancı"},{k:"外科",r:"GEKA",m:"Cerrahi"},{k:"外側",r:"sotogawa",m:"Dış taraf"}]},
-  {n:97,ch:"角",mn:"Boynuz / Açı / Köşe",on:["KAKU"],kun:["tsuno","kado"],or:"Öküz, koyun ya da benzeri bir hayvanın boynuzunun piktogramına dayanır. Köşe ve açı anlamları dışarı doğru çıkan boynuzdan genişletilmiş anlamlardır.",mm:"🦄 KIRIŞIK UCU OLAN KÖŞELI BOYNUZ",cp:[{k:"角度",r:"KAKUDO",m:"Açı (derece)"},{k:"角笛",r:"tsunobue",m:"Boru (boynuz flüt)"},{k:"街角",r:"machikado",m:"Sokak köşesi"}]},
-  {n:98,ch:"楽",mn:"Zevk / Müzik",on:["GAKU","RAKU"],kun:["tanoshii","tanoshimu"],or:"OBI formu meşe/at kestanesi ağacı olarak yorumlanır. Shirakawa onu çan tutan ahşap sap olarak görür; tanrıları memnun etmek için çalınan el çanı. Tōdō temel anlamın 'yüksek sesli gürültü yapmak' olduğunu, sonra müzik anlamına geldiğini öne sürer.",mm:"🥁 AHŞAP SEHPADA PUL PUL DAVUL GÜZEL MÜZİK YAPAR",cp:[{k:"気楽",r:"KIRAKU",m:"Rahat, serbest"},{k:"楽器",r:"GAKKI",m:"Müzik aleti"},{k:"楽しみ",r:"tanoshimi",m:"Zevk, eğlence"}]},
-  {n:99,ch:"活",mn:"Aktivite / Yaşam",on:["KATSU"],kun:[],or:"Geç dönem karakter (Shuowen). 'Su' ve 'dil' (fonetik, 'serbestçe hareket etmek' çağrışımlı) unsurlarını içerir. 'Yaşam' anlamı 'güçlü hareket etmek'ten genişletilmiştir.",mm:"💧 ISLAK DİL AKTİF BİR YAŞAMIN İŞARETİDİR",cp:[{k:"生活",r:"SEIKATSU",m:"Yaşam, hayat"},{k:"活気",r:"KAKKI",m:"Canlılık"},{k:"活動",r:"KATSUDŌ",m:"Faaliyet"}]},
-  {n:100,ch:"間",mn:"Aralık / Boşluk",on:["KAN","KEN"],kun:["aida","ma"],or:"Bronz ve mühür formları 'kapı' arasından geçen 'ay' ışığını gösterir. Modern formda ay yerine güneş kullanılır. Katō ay unsurunu fonetik; Qiu 'kapı içinden ay görünüyor' olarak yorumlar.",mm:"☀️ GÜNEŞ SALON KAPILARI ARASINDAKİ BOŞLUKTAN PARLAR",cp:[{k:"時間",r:"JIKAN",m:"Saat, zaman"},{k:"人間",r:"NINGEN",m:"İnsan"},{k:"間違い",r:"machigai",m:"Hata"}]}
+  {n:91,ch:"画",mn:"Resim / Çizgi",on:["GA","KAKU"],kun:[],or:"OBI formunun üst kısmı yazı fırçası tutan eli temsil eder. Katō bronz aşamada 'tarla sınır çizgileri çizmek' anlamını verir. Geleneksel form daha sonra kısaltıldı.",mm:"🖼️ ÇİZGİLERLE BÖLÜNMÜŞ TARLALAR RESİM YAPAR",cp:[{k:"映画",r:"EIGA",m:"Film"},{k:"画面",r:"GAMEN",m:"Ekran"},{k:"計画",r:"KEIKAKU",m:"Plan"}],ex:[{s:"映___を見に行こう。",tr:"Sinemaya gidelim.",b:"画",br:"GA"}]},
+  {n:92,ch:"回",mn:"Dönmek / Tur",on:["KAI"],kun:["mawaru","mawasu"],or:"Dönel hareketi simgeleyen bir sembol. Shirakawa bronz formlara dayanarak dönen bir akıntıyı tasvir ettiğini öne sürer.",mm:"🔄 EŞ MERKEZLİ DÖNGÜ",cp:[{k:"回転",r:"KAITEN",m:"Dönme, devrim"},{k:"回数",r:"KAISŪ",m:"Frekans, sayı"},{k:"言い回し",r:"iimawashi",m:"İfade tarzı"}],ex:[{s:"三___練習した。",tr:"Üç kez pratik yaptım.",b:"回",br:"KAI"}]},
+  {n:93,ch:"会",mn:"Buluşmak",on:["KAI","E"],kun:["au"],or:"Erken formlar kapak ve kap üzerini gösterir — muhtemelen pişirme kabı. Kapağı kaba koymak 'birleştirmek, bir araya getirmek' anlamını çağrıştırır. Geleneksel form kısaltıldı.",mm:"👃 İKİ KİŞİNİN BURUNLARI BULUŞUR",cp:[{k:"会社",r:"KAISHA",m:"Şirket"},{k:"会釈",r:"ESHAKU",m:"Hafif eğilme (selamlama)"},{k:"国会",r:"KOKKAI",m:"Parlamento"}],ex:[{s:"友達に___った。",tr:"Arkadaşımla karşılaştım.",b:"会",br:"a"}]},
+  {n:94,ch:"海",mn:"Deniz",on:["KAI"],kun:["umi"],or:"Bronz formda 'su' ve 'her' (fonetik, 'karanlık' çağrışımlı) unsurları var. Erken Çin'de deniz ve karanlık sözcükleri benzer seslerdi.",mm:"💧 HER SU DAMLASI DENİZDE SONLANIR",cp:[{k:"海軍",r:"KAIGUN",m:"Donanma"},{k:"日本海",r:"NIHONKAI",m:"Japonya Denizi"},{k:"海辺",r:"umibe",m:"Deniz kıyısı"}],ex:[{s:"夏は___で泳ぐ。",tr:"Yazın denizde yüzerim.",b:"海",br:"umi"}]},
+  {n:95,ch:"絵",mn:"Resim / Çizim",on:["KAI","E"],kun:[],or:"Geç dönem karakter. Sağ unsur fonetik olup 'bir araya gelmek' anlamı taşır (93 buluşmak ile aynı); 'iplik' belirleyicisiyle birleşince 'işlemeli desen', sonra genel olarak 'resim' anlamını kazandı.",mm:"🧵 İPLİKLER İŞLEMELİ RESİMDE BULUŞUR",cp:[{k:"絵画",r:"KAIGA",m:"Resim, tablo"},{k:"口絵",r:"kuchiE",m:"Frontispis"},{k:"絵本",r:"EHON",m:"Resimli kitap"}],ex:[{s:"___を描くのが好きだ。",tr:"Resim çizmeyi seviyorum.",b:"絵",br:"e"}]},
+  {n:96,ch:"外",mn:"Dış / Diğer",on:["GAI","GE"],kun:["soto","hoka","hazusu"],or:"Bronz ve mühür formları fal anlamındaki unsuru içerir — antik Çin'de kaplumbağa kabuğu çatlakları yorumlanarak yapılan fal. Shirakawa sol unsuru et olarak yorumlar; hayvan kurbanları fal töreninin parçasıydı.",mm:"🌙 HİLALİN DIŞINDA BİR ÇATLAK?",cp:[{k:"外人",r:"GAIJIN",m:"Yabancı"},{k:"外科",r:"GEKA",m:"Cerrahi"},{k:"外側",r:"sotogawa",m:"Dış taraf"}],ex:[{s:"___で遊ぶのは楽しい。",tr:"Dışarıda oynamak eğlencelidir.",b:"外",br:"soto"}]},
+  {n:97,ch:"角",mn:"Boynuz / Açı / Köşe",on:["KAKU"],kun:["tsuno","kado"],or:"Öküz, koyun ya da benzeri bir hayvanın boynuzunun piktogramına dayanır. Köşe ve açı anlamları dışarı doğru çıkan boynuzdan genişletilmiş anlamlardır.",mm:"🦄 KIRIŞIK UCU OLAN KÖŞELI BOYNUZ",cp:[{k:"角度",r:"KAKUDO",m:"Açı (derece)"},{k:"角笛",r:"tsunobue",m:"Boru (boynuz flüt)"},{k:"街角",r:"machikado",m:"Sokak köşesi"}],ex:[{s:"道の___を曲がる。",tr:"Yolun köşesini dönüyorum.",b:"角",br:"kado"}]},
+  {n:98,ch:"楽",mn:"Zevk / Müzik",on:["GAKU","RAKU"],kun:["tanoshii","tanoshimu"],or:"OBI formu meşe/at kestanesi ağacı olarak yorumlanır. Shirakawa onu çan tutan ahşap sap olarak görür; tanrıları memnun etmek için çalınan el çanı. Tōdō temel anlamın 'yüksek sesli gürültü yapmak' olduğunu, sonra müzik anlamına geldiğini öne sürer.",mm:"🥁 AHŞAP SEHPADA PUL PUL DAVUL GÜZEL MÜZİK YAPAR",cp:[{k:"気楽",r:"KIRAKU",m:"Rahat, serbest"},{k:"楽器",r:"GAKKI",m:"Müzik aleti"},{k:"楽しみ",r:"tanoshimi",m:"Zevk, eğlence"}],ex:[{s:"音___を聞いてリラックスする。",tr:"Müzik dinleyerek rahatlarım.",b:"楽",br:"RAKU"}]},
+  {n:99,ch:"活",mn:"Aktivite / Yaşam",on:["KATSU"],kun:[],or:"Geç dönem karakter (Shuowen). 'Su' ve 'dil' (fonetik, 'serbestçe hareket etmek' çağrışımlı) unsurlarını içerir. 'Yaşam' anlamı 'güçlü hareket etmek'ten genişletilmiştir.",mm:"💧 ISLAK DİL AKTİF BİR YAŞAMIN İŞARETİDİR",cp:[{k:"生活",r:"SEIKATSU",m:"Yaşam, hayat"},{k:"活気",r:"KAKKI",m:"Canlılık"},{k:"活動",r:"KATSUDŌ",m:"Faaliyet"}],ex:[{s:"毎日元気に生___する。",tr:"Her gün enerjik yaşıyorum.",b:"活",br:"KATSU"}]},
+  {n:100,ch:"間",mn:"Aralık / Boşluk",on:["KAN","KEN"],kun:["aida","ma"],or:"Bronz ve mühür formları 'kapı' arasından geçen 'ay' ışığını gösterir. Modern formda ay yerine güneş kullanılır. Katō ay unsurunu fonetik; Qiu 'kapı içinden ay görünüyor' olarak yorumlar.",mm:"☀️ GÜNEŞ SALON KAPILARI ARASINDAKİ BOŞLUKTAN PARLAR",cp:[{k:"時間",r:"JIKAN",m:"Saat, zaman"},{k:"人間",r:"NINGEN",m:"İnsan"},{k:"間違い",r:"machigai",m:"Hata"}],ex:[{s:"部屋の___に机がある。",tr:"Odanın ortasında masa var.",b:"間",br:"aida"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

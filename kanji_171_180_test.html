@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:171,ch:"星",mn:"Yıldız",on:["SEI","SHŌ"],kun:["hoshi"],or:"Bazı OBI formları güneşe benzer beş daire veya kare şekil içerir; bunlar yıldızları piktografik olarak temsil eder. 生 (yaşam) fonetik unsur olarak 'berrak' çağrışımı taşır.",mm:"⭐ YILDIZLAR GÜNEŞTEN DOĞAR",cp:[{k:"火星",r:"KASEI",m:"Mars"},{k:"明星",r:"MYŌJŌ",m:"Venüs (sabah yıldızı)"},{k:"流れ星",r:"nagareboshi",m:"Kayan yıldız"}]},
-  {n:172,ch:"晴",mn:"Açık / Parlak",on:["SEI"],kun:["hareru"],or:"Çok geç dönem karakter; Shuowen'de yer almaz. 'Güneş/parlak' belirleyicisi ve 'mavi/yeşil' fonetik unsurunu içerir; fonetik 'berrak, taze' çağrışımlıdır.",mm:"☀️ PARLAK GÜNEŞ KARŞISINDA MAVİ AÇIK HAVA DEMEKTİR",cp:[{k:"晴天",r:"SEITEN",m:"Açık gökyüzü"},{k:"晴れ晴れ",r:"harebare",m:"Berrak, neşeli"},{k:"晴れ着",r:"haregi",m:"En güzel kıyafet"}]},
-  {n:173,ch:"切",mn:"Kesmek",on:["SETSU","SAI"],kun:["kiru"],or:"Göreceli geç dönem (Shuowen). 'Kılıç, bıçak' ve 'yedi' (fonetik, 'kemik kesmek' çağrışımlı) unsurlarından oluşur. Geç Han döneminde bu iki grafik aynı sese yakındı.",mm:"⚔️ YEDİ KILIÇ DARBESİ",cp:[{k:"親切",r:"SHINSETSU",m:"Nezaket, iyilik"},{k:"一切",r:"ISSAI",m:"Her şey"},{k:"腹切り",r:"harakiri",m:"Harakiri"}]},
-  {n:174,ch:"雪",mn:"Kar",on:["SETSU"],kun:["yuki"],or:"OBI formları rüzgarlı fırtınadaki kar desenlerini ya da kar tanelerini tasvir eder. Mühür yazısında alt unsur hatalı olarak süpürge şeklinde yorumlandı. Modern form 'süpürülen yağmur' olarak hatırlanabilir.",mm:"🧹 SÜPÜRGEYLE SÜPÜRÜLEBILEN YAĞMUR ASLINDA KARDUR",cp:[{k:"降雪",r:"KŌSETSU",m:"Kar yağışı"},{k:"大雪",r:"ōyuki",m:"Yoğun kar"},{k:"除雪車",r:"JOSETSUSHI A",m:"Kar temizleme aracı"}]},
-  {n:175,ch:"船",mn:"Tekne / Gemi",on:["SEN"],kun:["fune","funa-"],or:"Bronz formlar eski grafikle 'tekne' ve sağ unsur fonetik olarak birleşir. Schuessler fonetik değerlerin yakınlığına dayanarak 'oyulmuş kereste' ve dolayısıyla 'tekne' anlamını açıklar.",mm:"⛵ SEKİZ LİMBOSU OLAN TEKNE GEMİDİR",cp:[{k:"船長",r:"SENCHŌ",m:"Kaptan"},{k:"小舟",r:"kogibune",m:"Küçük tekne"},{k:"船便",r:"funaBIN",m:"Deniz postası"}]},
-  {n:176,ch:"線",mn:"Hat / Çizgi",on:["SEN"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'İplik' belirleyicisi ve 'pınar/kaynak' fonetik unsurunu içerir; 'ince/narin iplik' çağrışımlıdır. 'Çizgi' anlamı bu ince iplikten türemiştir.",mm:"🧵 İNCE İPLİK KAYNAĞINA KADAR İZLE",cp:[{k:"脱線",r:"DASSEN",m:"Demiryolu kazası, sapma"},{k:"光線",r:"KŌSEN",m:"Işın"},{k:"直線",r:"CHOKUSEN",m:"Düz çizgi"}]},
-  {n:177,ch:"前",mn:"Önce / Ön",on:["ZEN"],kun:["mae"],or:"Erken formlar 'ayak izi' unsurunu içerir. Alt unsur genellikle ilkel sandal şeklinde yorumlanır; 'ileri gitmek', zamansal olarak 'önce' anlamını kazandırmıştır. Sonradan bıçak unsuru eklenerek 'kesmek' anlamı oluşturuldu.",mm:"🥩 ETİ KESMEDEN ÖNCE BOYNUZLARINI KES",cp:[{k:"前者",r:"ZENSHA",m:"Önceki (kişi/şey)"},{k:"空前",r:"KŪZEN",m:"Emsalsiz"},{k:"前払い",r:"maebarai",m:"Ön ödeme"}]},
-  {n:178,ch:"組",mn:"Grup / Toplamak",on:["SO"],kun:["kumi","kumu"],or:"Bronz formlar genellikle 'el' unsurunu içerir (mühür yazısında düşürüldü). 'İplik' belirleyicisi ve 'birikmiş et' fonetik unsuru ile 'bir araya getirilmiş iplikten yapılmış ip' anlamına ulaşır. 'Grup' genişletilmiş anlamdır.",mm:"🧵 GRUP İPLİK YIĞINLARINI BİR ARAYA TOPLAR",cp:[{k:"組織",r:"SOSHIKI",m:"Organizasyon"},{k:"組合",r:"kumiai",m:"Sendika, birlik"},{k:"組み立て",r:"kumitate",m:"Montaj, kurulum"}]},
-  {n:179,ch:"走",mn:"Koşmak",on:["SŌ"],kun:["hashiru"],or:"Bronz formun alt kısmı ayağı, üst unsur ise hızla hareket etme çağrışımlı fonetik unsurudur. Modern Japonca 'koşmak' anlamını korurken Çincede 'yürümek' anlamına dönüştü.",mm:"🦶 AYAK YER BOYUNCA KOŞAR",cp:[{k:"競走",r:"KYŌSŌ",m:"Yarış, koşu"},{k:"走行",r:"SŌKŌ",m:"Seyahat etmek"},{k:"走り書き",r:"hashirigaki",m:"Çabuk yazı"}]},
-  {n:180,ch:"多",mn:"Çok / Fazla",on:["TA"],kun:["ōi"],or:"OBI formu bir et parçasının diğerinin üzerinde tasviri — 'yığılmış et, bol et; bol' anlamlarını verir. Shuowen bunu 'ikiz ay' olarak yorumlar, ama bu daha geç bir şekle dayanır.",mm:"🌙 ÇOK AY, ÇOK AKŞAM",cp:[{k:"多数",r:"TASŪ",m:"Çoğunluk"},{k:"多面的",r:"TAMENTEKI",m:"Çok yönlü"},{k:"多すぎ",r:"ōsugi",m:"Çok fazla"}]}
+  {n:171,ch:"星",mn:"Yıldız",on:["SEI","SHŌ"],kun:["hoshi"],or:"Bazı OBI formları güneşe benzer beş daire veya kare şekil içerir; bunlar yıldızları piktografik olarak temsil eder. 生 (yaşam) fonetik unsur olarak 'berrak' çağrışımı taşır.",mm:"⭐ YILDIZLAR GÜNEŞTEN DOĞAR",cp:[{k:"火星",r:"KASEI",m:"Mars"},{k:"明星",r:"MYŌJŌ",m:"Venüs (sabah yıldızı)"},{k:"流れ星",r:"nagareboshi",m:"Kayan yıldız"}],ex:[{s:"夜空に___が輝く。",tr:"Gece gökyüzünde yıldızlar parlıyor.",b:"星",br:"hoshi"}]},
+  {n:172,ch:"晴",mn:"Açık / Parlak",on:["SEI"],kun:["hareru"],or:"Çok geç dönem karakter; Shuowen'de yer almaz. 'Güneş/parlak' belirleyicisi ve 'mavi/yeşil' fonetik unsurunu içerir; fonetik 'berrak, taze' çağrışımlıdır.",mm:"☀️ PARLAK GÜNEŞ KARŞISINDA MAVİ AÇIK HAVA DEMEKTİR",cp:[{k:"晴天",r:"SEITEN",m:"Açık gökyüzü"},{k:"晴れ晴れ",r:"harebare",m:"Berrak, neşeli"},{k:"晴れ着",r:"haregi",m:"En güzel kıyafet"}],ex:[{s:"今日は___れている。",tr:"Bugün hava açık.",b:"晴",br:"ha"}]},
+  {n:173,ch:"切",mn:"Kesmek",on:["SETSU","SAI"],kun:["kiru"],or:"Göreceli geç dönem (Shuowen). 'Kılıç, bıçak' ve 'yedi' (fonetik, 'kemik kesmek' çağrışımlı) unsurlarından oluşur. Geç Han döneminde bu iki grafik aynı sese yakındı.",mm:"⚔️ YEDİ KILIÇ DARBESİ",cp:[{k:"親切",r:"SHINSETSU",m:"Nezaket, iyilik"},{k:"一切",r:"ISSAI",m:"Her şey"},{k:"腹切り",r:"harakiri",m:"Harakiri"}],ex:[{s:"ナイフでパンを___った。",tr:"Bıçakla ekmeği kestim.",b:"切",br:"ki"}]},
+  {n:174,ch:"雪",mn:"Kar",on:["SETSU"],kun:["yuki"],or:"OBI formları rüzgarlı fırtınadaki kar desenlerini ya da kar tanelerini tasvir eder. Mühür yazısında alt unsur hatalı olarak süpürge şeklinde yorumlandı. Modern form 'süpürülen yağmur' olarak hatırlanabilir.",mm:"🧹 SÜPÜRGEYLE SÜPÜRÜLEBILEN YAĞMUR ASLINDA KARDUR",cp:[{k:"降雪",r:"KŌSETSU",m:"Kar yağışı"},{k:"大雪",r:"ōyuki",m:"Yoğun kar"},{k:"除雪車",r:"JOSETSUSHI A",m:"Kar temizleme aracı"}],ex:[{s:"冬に___が降った。",tr:"Kışın kar yağdı.",b:"雪",br:"yuki"}]},
+  {n:175,ch:"船",mn:"Tekne / Gemi",on:["SEN"],kun:["fune","funa-"],or:"Bronz formlar eski grafikle 'tekne' ve sağ unsur fonetik olarak birleşir. Schuessler fonetik değerlerin yakınlığına dayanarak 'oyulmuş kereste' ve dolayısıyla 'tekne' anlamını açıklar.",mm:"⛵ SEKİZ LİMBOSU OLAN TEKNE GEMİDİR",cp:[{k:"船長",r:"SENCHŌ",m:"Kaptan"},{k:"小舟",r:"kogibune",m:"Küçük tekne"},{k:"船便",r:"funaBIN",m:"Deniz postası"}],ex:[{s:"___で島に渡った。",tr:"Tekneyle adaya geçtim.",b:"船",br:"fune"}]},
+  {n:176,ch:"線",mn:"Hat / Çizgi",on:["SEN"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'İplik' belirleyicisi ve 'pınar/kaynak' fonetik unsurunu içerir; 'ince/narin iplik' çağrışımlıdır. 'Çizgi' anlamı bu ince iplikten türemiştir.",mm:"🧵 İNCE İPLİK KAYNAĞINA KADAR İZLE",cp:[{k:"脱線",r:"DASSEN",m:"Demiryolu kazası, sapma"},{k:"光線",r:"KŌSEN",m:"Işın"},{k:"直線",r:"CHOKUSEN",m:"Düz çizgi"}],ex:[{s:"電___に乗って行く。",tr:"Trenle gidiyorum.",b:"線",br:"SEN"}]},
+  {n:177,ch:"前",mn:"Önce / Ön",on:["ZEN"],kun:["mae"],or:"Erken formlar 'ayak izi' unsurunu içerir. Alt unsur genellikle ilkel sandal şeklinde yorumlanır; 'ileri gitmek', zamansal olarak 'önce' anlamını kazandırmıştır. Sonradan bıçak unsuru eklenerek 'kesmek' anlamı oluşturuldu.",mm:"🥩 ETİ KESMEDEN ÖNCE BOYNUZLARINI KES",cp:[{k:"前者",r:"ZENSHA",m:"Önceki (kişi/şey)"},{k:"空前",r:"KŪZEN",m:"Emsalsiz"},{k:"前払い",r:"maebarai",m:"Ön ödeme"}],ex:[{s:"駅の___で待っている。",tr:"İstasyonun önünde bekliyorum.",b:"前",br:"mae"}]},
+  {n:178,ch:"組",mn:"Grup / Toplamak",on:["SO"],kun:["kumi","kumu"],or:"Bronz formlar genellikle 'el' unsurunu içerir (mühür yazısında düşürüldü). 'İplik' belirleyicisi ve 'birikmiş et' fonetik unsuru ile 'bir araya getirilmiş iplikten yapılmış ip' anlamına ulaşır. 'Grup' genişletilmiş anlamdır.",mm:"🧵 GRUP İPLİK YIĞINLARINI BİR ARAYA TOPLAR",cp:[{k:"組織",r:"SOSHIKI",m:"Organizasyon"},{k:"組合",r:"kumiai",m:"Sendika, birlik"},{k:"組み立て",r:"kumitate",m:"Montaj, kurulum"}],ex:[{s:"三年一___に入った。",tr:"3-1 sınıfına girdim.",b:"組",br:"KUMI"}]},
+  {n:179,ch:"走",mn:"Koşmak",on:["SŌ"],kun:["hashiru"],or:"Bronz formun alt kısmı ayağı, üst unsur ise hızla hareket etme çağrışımlı fonetik unsurudur. Modern Japonca 'koşmak' anlamını korurken Çincede 'yürümek' anlamına dönüştü.",mm:"🦶 AYAK YER BOYUNCA KOŞAR",cp:[{k:"競走",r:"KYŌSŌ",m:"Yarış, koşu"},{k:"走行",r:"SŌKŌ",m:"Seyahat etmek"},{k:"走り書き",r:"hashirigaki",m:"Çabuk yazı"}],ex:[{s:"毎朝公園を___る。",tr:"Her sabah parkta koşarım.",b:"走",br:"hashi"}]},
+  {n:180,ch:"多",mn:"Çok / Fazla",on:["TA"],kun:["ōi"],or:"OBI formu bir et parçasının diğerinin üzerinde tasviri — 'yığılmış et, bol et; bol' anlamlarını verir. Shuowen bunu 'ikiz ay' olarak yorumlar, ama bu daha geç bir şekle dayanır.",mm:"🌙 ÇOK AY, ÇOK AKŞAM",cp:[{k:"多数",r:"TASŪ",m:"Çoğunluk"},{k:"多面的",r:"TAMENTEKI",m:"Çok yönlü"},{k:"多すぎ",r:"ōsugi",m:"Çok fazla"}],ex:[{s:"今日は宿題が___い。",tr:"Bugün çok ödevim var.",b:"多",br:"ō"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

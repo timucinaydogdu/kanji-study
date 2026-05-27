@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:131,ch:"行",mn:"Gitmek / Yapmak / Satır",on:["KŌ","GYŌ"],kun:["iku","yuku","okonau"],or:"OBI formları dörtyol kavşağının piktogramına dayandığını gösterir. 'Gitmek, yolculuk etmek', 'eylemde bulunmak', 'sıra, satır' gibi genişletilmiş anlamlara sahiptir.",mm:"🚦 SATIR HALINDE DÖRTYOL KAVŞAĞINA GİT",cp:[{k:"実行",r:"JIKKŌ",m:"Uygulama, icra"},{k:"行列",r:"GYŌRETSU",m:"Tören alayı, kuyruk"},{k:"行方",r:"yukue",m:"Nereden gittiği"}]},
-  {n:132,ch:"高",mn:"Yüksek / Uzun",on:["KŌ"],kun:["taka","takai"],or:"OBI ve bronz formlar bir tepe ya da tümsek üzerindeki yapıyı — muhtemelen bir gözetleme kulesi — gösterir. 'Başkent' (110) ile şekil açısından benzerdir.",mm:"🏮 YÜKSEK TEPEDE UZUN FENER GİBİ GÖZETLEME KULESİ",cp:[{k:"高原",r:"KŌGEN",m:"Yüksek düzlük, yayla"},{k:"最高",r:"SAIKŌ",m:"En yüksek"},{k:"高値",r:"takane",m:"Yüksek fiyat"}]},
-  {n:133,ch:"黄",mn:"Sarı",on:["KŌ","Ō"],kun:["ki"],or:"Bazı OBI ve erken formlar ağırlık dengeli alevli bir oku tasvir eder. 'Sarı' rengi alevli okun ya da mücevherli kemerin renginden genişletilmiş bir anlamdır.",mm:"🏹 OK TARLADAN OTLA SARI YANAR",cp:[{k:"黄葉",r:"KŌYŌ",m:"Sarı yapraklar"},{k:"黄金",r:"ŌGON",m:"Altın"},{k:"黄色い",r:"kiiroi",m:"Sarı"}]},
-  {n:134,ch:"合",mn:"Buluşmak / Birleşmek",on:["GŌ","KATSU"],kun:["au","awaseru"],or:"OBI ve bronz form kapakla kap piktogramı olarak yorumlanır. 'Karşılaşmak, bir araya getirmek, katılmak' genişletilmiş anlamlardır.",mm:"🫙 KAPAĞI KABININ ÜZERİNE OTURTABİLİRSİN",cp:[{k:"合理",r:"GŌRI",m:"Akılcılık, mantıklılık"},{k:"合戦",r:"KASSEN",m:"Savaş, muharebe"},{k:"話し合い",r:"hanashiai",m:"Görüşme, müzakere"}]},
-  {n:135,ch:"谷",mn:"Vadi / Boğaz",on:["KOKU"],kun:["tani"],or:"OBI ve bronz formlar tartışmalıdır. Bir görüş üst çizgileri akan su ve dağ pınarı olarak yorumlar. Shirakawa dağ yamaçları ve vadi çöküntüsünü görür.",mm:"🗻 BOYUNA GENİŞ AÇIK VADİ AĞZI",cp:[{k:"幽谷",r:"YŪKOKU",m:"Derin vadi"},{k:"谷底",r:"tanisoko",m:"Vadi tabanı"},{k:"長谷川",r:"Hasegawa",m:"Hasegawa (soyad)"}]},
-  {n:136,ch:"国",mn:"Ülke / Bölge",on:["KOKU"],kun:["kuni"],or:"OBI formu 'mızrak, silah' ve 'sınır' unsurlarını içerir — 'tanımlanmış alanı silahla savunmak' anlamında. Bronz formda sınır vurgusu yapılır. Modern form içinde 'mücevher'i barındırır.",mm:"💎 ÜLKE ÇEVRILMIŞ BİR MÜCEVHERDİR",cp:[{k:"外国",r:"GAIKOKU",m:"Yabancı ülke"},{k:"国家",r:"KOKKA",m:"Devlet, ulus"},{k:"国々",r:"kuniguni",m:"Uluslar, ülkeler"}]},
-  {n:137,ch:"黒",mn:"Siyah",on:["KOKU"],kun:["kuroi"],or:"Bronz ve mühür formlarının yorumları farklılık gösterse de (ilkel pencere ya da baca ya da ızgara) genel olarak bronz formların alevler ve yükselen duman içerdiği ve siyah anlamının is birikiminden geldiği kabul edilir.",mm:"🔥 YANMIŞ TARLA TOPRAĞINI KARAYA BOYAR",cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"黒海",r:"KOKKAI",m:"Karadeniz"},{k:"黒幕",r:"kuroMAKU",m:"Perde arkasındaki güç"}]},
-  {n:138,ch:"今",mn:"Şimdi",on:["KON","KIN"],kun:["ima"],or:"OBI formları Katō ve Ogawa'ya göre bir tür nesnenin üstünü örten çatıyı tasvir eder; Shirakawa kapak ve tıkaç üzerini yorumlar. 'Şimdi' anlamı fonetik ödünç kullanımdır.",mm:"⏰ ŞİMDİ O NESNEYİ ÖRTME VAKTIDIR",cp:[{k:"今週",r:"KONSHŪ",m:"Bu hafta"},{k:"今度",r:"KONDO",m:"Bu sefer"},{k:"今ごろ",r:"imagoro",m:"Şu sıralar"}]},
-  {n:139,ch:"才",mn:"Yetenek / Yaş",on:["SAI"],kun:[],or:"Etimoloji belirsizdir. Ma, yüzeyin üstüne çıkan bitkiyi tasvir ettiğini öne sürer. Ogawa ve Shirakawa yere saplanmış ve yatay parça ile haç şeklinde oluşturulmuş tahtayı görür. Günümüzdeki anlamları büyük olasılıkla fonetik ödünç kullanımdır.",mm:"✝️ HAÇI DESTEKLEMEK YETENEK GEREKTİRİR",cp:[{k:"天才",r:"TENSAI",m:"Deha, dahi"},{k:"五才",r:"GOSAI",m:"Beş yaşında"},{k:"才能",r:"SAINŌ",m:"Yetenek, beceri"}]},
-  {n:140,ch:"細",mn:"İnce / Ayrıntılı",on:["SAI"],kun:["hosoi","komakai"],or:"Geç dönem karakter (Shuowen). Mühür formu 'iplik' belirleyicisi ve 'kafa tası ya da bıngıldak piktogramı' fonetik unsurunu içerir; 'ince, narin' çağrışımlı. Standart yazıya geçişte fonetik unsur değişime uğradı.",mm:"🌾 İNCE YOL TARLADAN GEÇER",cp:[{k:"細工",r:"SAIKU",m:"El işi, zanaat"},{k:"細長い",r:"hosonagai",m:"İnce ve uzun"},{k:"こまごま",r:"komagoma",m:"Ayrıntılı olarak"}]}
+  {n:131,ch:"行",mn:"Gitmek / Yapmak / Satır",on:["KŌ","GYŌ"],kun:["iku","yuku","okonau"],or:"OBI formları dörtyol kavşağının piktogramına dayandığını gösterir. 'Gitmek, yolculuk etmek', 'eylemde bulunmak', 'sıra, satır' gibi genişletilmiş anlamlara sahiptir.",mm:"🚦 SATIR HALINDE DÖRTYOL KAVŞAĞINA GİT",cp:[{k:"実行",r:"JIKKŌ",m:"Uygulama, icra"},{k:"行列",r:"GYŌRETSU",m:"Tören alayı, kuyruk"},{k:"行方",r:"yukue",m:"Nereden gittiği"}],ex:[{s:"学校へ___く。",tr:"Okula gidiyorum.",b:"行",br:"i"}]},
+  {n:132,ch:"高",mn:"Yüksek / Uzun",on:["KŌ"],kun:["taka","takai"],or:"OBI ve bronz formlar bir tepe ya da tümsek üzerindeki yapıyı — muhtemelen bir gözetleme kulesi — gösterir. 'Başkent' (110) ile şekil açısından benzerdir.",mm:"🏮 YÜKSEK TEPEDE UZUN FENER GİBİ GÖZETLEME KULESİ",cp:[{k:"高原",r:"KŌGEN",m:"Yüksek düzlük, yayla"},{k:"最高",r:"SAIKŌ",m:"En yüksek"},{k:"高値",r:"takane",m:"Yüksek fiyat"}],ex:[{s:"___い山に登りたい。",tr:"Yüksek dağa tırmanmak istiyorum.",b:"高",br:"taka"}]},
+  {n:133,ch:"黄",mn:"Sarı",on:["KŌ","Ō"],kun:["ki"],or:"Bazı OBI ve erken formlar ağırlık dengeli alevli bir oku tasvir eder. 'Sarı' rengi alevli okun ya da mücevherli kemerin renginden genişletilmiş bir anlamdır.",mm:"🏹 OK TARLADAN OTLA SARI YANAR",cp:[{k:"黄葉",r:"KŌYŌ",m:"Sarı yapraklar"},{k:"黄金",r:"ŌGON",m:"Altın"},{k:"黄色い",r:"kiiroi",m:"Sarı"}],ex:[{s:"___色いひまわりが咲いた。",tr:"Sarı ayçiçekleri açtı.",b:"黄",br:"ki"}]},
+  {n:134,ch:"合",mn:"Buluşmak / Birleşmek",on:["GŌ","KATSU"],kun:["au","awaseru"],or:"OBI ve bronz form kapakla kap piktogramı olarak yorumlanır. 'Karşılaşmak, bir araya getirmek, katılmak' genişletilmiş anlamlardır.",mm:"🫙 KAPAĞI KABININ ÜZERİNE OTURTABİLİRSİN",cp:[{k:"合理",r:"GŌRI",m:"Akılcılık, mantıklılık"},{k:"合戦",r:"KASSEN",m:"Savaş, muharebe"},{k:"話し合い",r:"hanashiai",m:"Görüşme, müzakere"}],ex:[{s:"待ち___わせ場所で会う。",tr:"Buluşma yerinde karşılaşıyoruz.",b:"合",br:"a"}]},
+  {n:135,ch:"谷",mn:"Vadi / Boğaz",on:["KOKU"],kun:["tani"],or:"OBI ve bronz formlar tartışmalıdır. Bir görüş üst çizgileri akan su ve dağ pınarı olarak yorumlar. Shirakawa dağ yamaçları ve vadi çöküntüsünü görür.",mm:"🗻 BOYUNA GENİŞ AÇIK VADİ AĞZI",cp:[{k:"幽谷",r:"YŪKOKU",m:"Derin vadi"},{k:"谷底",r:"tanisoko",m:"Vadi tabanı"},{k:"長谷川",r:"Hasegawa",m:"Hasegawa (soyad)"}],ex:[{s:"深い___を歩いた。",tr:"Derin vadide yürüdüm.",b:"谷",br:"tani"}]},
+  {n:136,ch:"国",mn:"Ülke / Bölge",on:["KOKU"],kun:["kuni"],or:"OBI formu 'mızrak, silah' ve 'sınır' unsurlarını içerir — 'tanımlanmış alanı silahla savunmak' anlamında. Bronz formda sınır vurgusu yapılır. Modern form içinde 'mücevher'i barındırır.",mm:"💎 ÜLKE ÇEVRILMIŞ BİR MÜCEVHERDİR",cp:[{k:"外国",r:"GAIKOKU",m:"Yabancı ülke"},{k:"国家",r:"KOKKA",m:"Devlet, ulus"},{k:"国々",r:"kuniguni",m:"Uluslar, ülkeler"}],ex:[{s:"この___の首都はどこですか？",tr:"Bu ülkenin başkenti neresi?",b:"国",br:"kuni"}]},
+  {n:137,ch:"黒",mn:"Siyah",on:["KOKU"],kun:["kuroi"],or:"Bronz ve mühür formlarının yorumları farklılık gösterse de (ilkel pencere ya da baca ya da ızgara) genel olarak bronz formların alevler ve yükselen duman içerdiği ve siyah anlamının is birikiminden geldiği kabul edilir.",mm:"🔥 YANMIŞ TARLA TOPRAĞINI KARAYA BOYAR",cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"黒海",r:"KOKKAI",m:"Karadeniz"},{k:"黒幕",r:"kuroMAKU",m:"Perde arkasındaki güç"}],ex:[{s:"___い猫が塀の上にいた。",tr:"Siyah kedi duvarın üzerindeydi.",b:"黒",br:"kuro"}]},
+  {n:138,ch:"今",mn:"Şimdi",on:["KON","KIN"],kun:["ima"],or:"OBI formları Katō ve Ogawa'ya göre bir tür nesnenin üstünü örten çatıyı tasvir eder; Shirakawa kapak ve tıkaç üzerini yorumlar. 'Şimdi' anlamı fonetik ödünç kullanımdır.",mm:"⏰ ŞİMDİ O NESNEYİ ÖRTME VAKTIDIR",cp:[{k:"今週",r:"KONSHŪ",m:"Bu hafta"},{k:"今度",r:"KONDO",m:"Bu sefer"},{k:"今ごろ",r:"imagoro",m:"Şu sıralar"}],ex:[{s:"___日は天気がいい。",tr:"Bugün hava güzel.",b:"今",br:"kyō"}]},
+  {n:139,ch:"才",mn:"Yetenek / Yaş",on:["SAI"],kun:[],or:"Etimoloji belirsizdir. Ma, yüzeyin üstüne çıkan bitkiyi tasvir ettiğini öne sürer. Ogawa ve Shirakawa yere saplanmış ve yatay parça ile haç şeklinde oluşturulmuş tahtayı görür. Günümüzdeki anlamları büyük olasılıkla fonetik ödünç kullanımdır.",mm:"✝️ HAÇI DESTEKLEMEK YETENEK GEREKTİRİR",cp:[{k:"天才",r:"TENSAI",m:"Deha, dahi"},{k:"五才",r:"GOSAI",m:"Beş yaşında"},{k:"才能",r:"SAINŌ",m:"Yetenek, beceri"}],ex:[{s:"彼女は音楽の___能がある。",tr:"Onun müzik yeteneği var.",b:"才",br:"SAI"}]},
+  {n:140,ch:"細",mn:"İnce / Ayrıntılı",on:["SAI"],kun:["hosoi","komakai"],or:"Geç dönem karakter (Shuowen). Mühür formu 'iplik' belirleyicisi ve 'kafa tası ya da bıngıldak piktogramı' fonetik unsurunu içerir; 'ince, narin' çağrışımlı. Standart yazıya geçişte fonetik unsur değişime uğradı.",mm:"🌾 İNCE YOL TARLADAN GEÇER",cp:[{k:"細工",r:"SAIKU",m:"El işi, zanaat"},{k:"細長い",r:"hosonagai",m:"İnce ve uzun"},{k:"こまごま",r:"komagoma",m:"Ayrıntılı olarak"}],ex:[{s:"___い糸で縫った。",tr:"İnce iplikle diktim.",b:"細",br:"hoso"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

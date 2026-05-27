@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:141,ch:"作",mn:"Yapmak / Üretmek",on:["SAKU","SA"],kun:["tsukuru"],or:"Orijinal grafik sadece kesmek unsuruydu; OBI formları kereste keserek balta biçiminde yorumlanır. Sonradan el unsuru eklendi, daha sonra kaldırıldı ve 'kişi' belirleyicisi eklendi.",mm:"🪚 KİŞİ TESTEREYLE ŞEY YAPAR",cp:[{k:"製作",r:"SEISAKU",m:"Üretim, yapım"},{k:"作品",r:"SAKUHIN",m:"Bir eser"},{k:"動作",r:"DŌSA",m:"Hareket, eylem"}]},
-  {n:142,ch:"算",mn:"Saymak / Hesap",on:["SAN"],kun:[],or:"Göreceli geç dönem (Shuowen). Üst unsur 'bambu'yu temsil eder — antik zamanlarda sayım için kullanılan bambu sayım çubuklarını simgeler; 'donatım, araç' fonetik unsuru 'saymak' çağrışımlıdır.",mm:"🎋 HER İKİ ELİNİ BAMBU ABAKÜSTE SAYARKEN KULLAN",cp:[{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"予算",r:"YOSAN",m:"Bütçe"},{k:"算数",r:"SANSŪ",m:"Aritmetik"}]},
-  {n:143,ch:"止",mn:"Durmak",on:["SHI"],kun:["tomeru","tomaru"],or:"OBI formları insan ayağı olarak yorumlanır; 'durmak, kalmak' genişletilmiş anlamdır. Grafik aynı zamanda 'gitmek, hareket etmek' anlamını da taşıyabilir.",mm:"👣 AYAK İZİ ÇİZGİNİN ÜZERİNDE DURUR",cp:[{k:"中止",r:"CHŪSHI",m:"Askıya alma, durdurma"},{k:"止め役",r:"tomeYAKU",m:"Arabulucu"},{k:"止め処",r:"tomedo",m:"Son"}]},
-  {n:144,ch:"市",mn:"Şehir / Pazar",on:["SHI"],kun:["ichi"],or:"Bronz forma göre Mizukami 'düz ya da dengeli' ve 'durmak' unsurlarını birleştiren grafik olarak yorumlar — 'eşit değerde mal alışverişi için durmak', antik takas sistemini yansıtır.",mm:"🎩 PAZAR YERİNDE BEZ VE ŞAPKA SAT",cp:[{k:"吹田市",r:"SuitaSHI",m:"Suita şehri"},{k:"市場",r:"SHIJŌ",m:"Pazar"},{k:"魚市",r:"uoichi",m:"Balık pazarı"}]},
-  {n:145,ch:"矢",mn:"Ok",on:["SHI"],kun:["ya"],or:"OBI ve bronz formlar bir ok piktogramına dayanır. 'Büyük' (大) ve üst kısmında kırık ucuyla da hatırlanabilir.",mm:"🏹 KIRIK UÇLU BÜYÜK OK",cp:[{k:"一矢",r:"ISSHI",m:"Misilleme"},{k:"矢印",r:"yajirushi",m:"Ok işareti"},{k:"矢先に",r:"yasaki ni",m:"Tam o noktada"}]},
-  {n:146,ch:"姉",mn:"Abla",on:["SHI"],kun:["ane"],or:"Etimoloji tartışmalıdır. Genellikle bronz aşamadan itibaren tanınır; 'kadın' ve çeşitli fonetik unsurları içerir. Kangxi Sözlüğü her iki varyantı listeler ancak birini esas alır.",mm:"🛒 PAZARA GİDEN KADIN ABLADIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"お姉さん",r:"neesan",m:"Abla (saygılı)"},{k:"姉上",r:"aneue",m:"Abla (resmi)"}]},
-  {n:147,ch:"思",mn:"Düşünmek",on:["SHI"],kun:["omou"],or:"Göreceli geç dönem karakteri. Mizukami üst unsuru kafa tasası olarak yorumlar, 'kalp, zihin' ile birleşince 'düşünmek' anlamına gelir. Shirakawa üst kısmı 'beyin' olarak görür.",mm:"💭 KALBİM HER ZAMAN TARLADA OLACAK",cp:[{k:"思想",r:"SHISŌ",m:"İdeoloji, düşünce"},{k:"思考",r:"SHIKŌ",m:"Düşünce"},{k:"思い出",r:"omoide",m:"Hatıra, anı"}]},
-  {n:148,ch:"紙",mn:"Kağıt",on:["SHI"],kun:["kami"],or:"Geç dönem karakter (Shuowen). Kağıdın icadı Cai Lun'a atfedilir. Kağıttan önce metinler çeşitli malzemelere yazılırdı; en yakın olanı ipek olduğundan 'iplik' belirleyicisi kullanılır.",mm:"🥄 KEPÇEYI İPLİKLERE UYGULA VE KAĞIT YAP",cp:[{k:"表紙",r:"HYŌSHI",m:"Kitap kapağı"},{k:"和紙",r:"WASHI",m:"Japon kağıdı"},{k:"手紙",r:"tegami",m:"Mektup"}]},
-  {n:149,ch:"寺",mn:"Tapınak",on:["JI"],kun:["tera"],or:"Mizukami bronz formları 'el' ve 'durmak' birleşimi olarak yorumlar; 'kontrolde tutmak' çağrışımlı. Budizm'in Çin'e MS 1. yüzyılda girmesiyle birlikte Budist tapınak anlamı kazandı.",mm:"🙏 EL TAPINAĞA TOPRAK SUNAR",cp:[{k:"龍安寺",r:"RYŌANJI",m:"Ryoanji Tapınağı"},{k:"寺院",r:"JIIN",m:"Budist tapınak"},{k:"山寺",r:"yamadera",m:"Dağ tapınağı"}]},
-  {n:150,ch:"自",mn:"Kendisi / Kendi",on:["JI","SHI"],kun:["mizukara"],or:"Burun piktogramına dayanır. 'Kendisi' anlamı Çinlilerin kendilerinden bahsederken buruna işaret etme geleneğini yansıtır (Batılılar göğse işaret eder).",mm:"👃 BURUN GÖZDEN BİR VURUŞ UZAKTA, KENDİNİ TEMSİL EDER",cp:[{k:"自分",r:"JIBUN",m:"Kendisi, ben"},{k:"自然",r:"SHIZEN",m:"Doğa"},{k:"自信",r:"JISHIN",m:"Öz güven"}]}
+  {n:141,ch:"作",mn:"Yapmak / Üretmek",on:["SAKU","SA"],kun:["tsukuru"],or:"Orijinal grafik sadece kesmek unsuruydu; OBI formları kereste keserek balta biçiminde yorumlanır. Sonradan el unsuru eklendi, daha sonra kaldırıldı ve 'kişi' belirleyicisi eklendi.",mm:"🪚 KİŞİ TESTEREYLE ŞEY YAPAR",cp:[{k:"製作",r:"SEISAKU",m:"Üretim, yapım"},{k:"作品",r:"SAKUHIN",m:"Bir eser"},{k:"動作",r:"DŌSA",m:"Hareket, eylem"}],ex:[{s:"料理を___るのが好きだ。",tr:"Yemek yapmayı seviyorum.",b:"作",br:"tsuku"}]},
+  {n:142,ch:"算",mn:"Saymak / Hesap",on:["SAN"],kun:[],or:"Göreceli geç dönem (Shuowen). Üst unsur 'bambu'yu temsil eder — antik zamanlarda sayım için kullanılan bambu sayım çubuklarını simgeler; 'donatım, araç' fonetik unsuru 'saymak' çağrışımlıdır.",mm:"🎋 HER İKİ ELİNİ BAMBU ABAKÜSTE SAYARKEN KULLAN",cp:[{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"予算",r:"YOSAN",m:"Bütçe"},{k:"算数",r:"SANSŪ",m:"Aritmetik"}],ex:[{s:"計___が得意だ。",tr:"Hesap yapmakta iyiyim.",b:"算",br:"SAN"}]},
+  {n:143,ch:"止",mn:"Durmak",on:["SHI"],kun:["tomeru","tomaru"],or:"OBI formları insan ayağı olarak yorumlanır; 'durmak, kalmak' genişletilmiş anlamdır. Grafik aynı zamanda 'gitmek, hareket etmek' anlamını da taşıyabilir.",mm:"👣 AYAK İZİ ÇİZGİNİN ÜZERİNDE DURUR",cp:[{k:"中止",r:"CHŪSHI",m:"Askıya alma, durdurma"},{k:"止め役",r:"tomeYAKU",m:"Arabulucu"},{k:"止め処",r:"tomedo",m:"Son"}],ex:[{s:"赤信号で___まる。",tr:"Kırmızı ışıkta durulur.",b:"止",br:"to"}]},
+  {n:144,ch:"市",mn:"Şehir / Pazar",on:["SHI"],kun:["ichi"],or:"Bronz forma göre Mizukami 'düz ya da dengeli' ve 'durmak' unsurlarını birleştiren grafik olarak yorumlar — 'eşit değerde mal alışverişi için durmak', antik takas sistemini yansıtır.",mm:"🎩 PAZAR YERİNDE BEZ VE ŞAPKA SAT",cp:[{k:"吹田市",r:"SuitaSHI",m:"Suita şehri"},{k:"市場",r:"SHIJŌ",m:"Pazar"},{k:"魚市",r:"uoichi",m:"Balık pazarı"}],ex:[{s:"___場で野菜を買った。",tr:"Çarşıdan sebze satın aldım.",b:"市",br:"ichi"}]},
+  {n:145,ch:"矢",mn:"Ok",on:["SHI"],kun:["ya"],or:"OBI ve bronz formlar bir ok piktogramına dayanır. 'Büyük' (大) ve üst kısmında kırık ucuyla da hatırlanabilir.",mm:"🏹 KIRIK UÇLU BÜYÜK OK",cp:[{k:"一矢",r:"ISSHI",m:"Misilleme"},{k:"矢印",r:"yajirushi",m:"Ok işareti"},{k:"矢先に",r:"yasaki ni",m:"Tam o noktada"}],ex:[{s:"___で的を射た。",tr:"Okla hedefe nişan aldım.",b:"矢",br:"ya"}]},
+  {n:146,ch:"姉",mn:"Abla",on:["SHI"],kun:["ane"],or:"Etimoloji tartışmalıdır. Genellikle bronz aşamadan itibaren tanınır; 'kadın' ve çeşitli fonetik unsurları içerir. Kangxi Sözlüğü her iki varyantı listeler ancak birini esas alır.",mm:"🛒 PAZARA GİDEN KADIN ABLADIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"お姉さん",r:"neesan",m:"Abla (saygılı)"},{k:"姉上",r:"aneue",m:"Abla (resmi)"}],ex:[{s:"___は医者だ。",tr:"Ablam doktordur.",b:"姉",br:"ane"}]},
+  {n:147,ch:"思",mn:"Düşünmek",on:["SHI"],kun:["omou"],or:"Göreceli geç dönem karakteri. Mizukami üst unsuru kafa tasası olarak yorumlar, 'kalp, zihin' ile birleşince 'düşünmek' anlamına gelir. Shirakawa üst kısmı 'beyin' olarak görür.",mm:"💭 KALBİM HER ZAMAN TARLADA OLACAK",cp:[{k:"思想",r:"SHISŌ",m:"İdeoloji, düşünce"},{k:"思考",r:"SHIKŌ",m:"Düşünce"},{k:"思い出",r:"omoide",m:"Hatıra, anı"}],ex:[{s:"君のことをいつも___っている。",tr:"Hep seni düşünüyorum.",b:"思",br:"omo"}]},
+  {n:148,ch:"紙",mn:"Kağıt",on:["SHI"],kun:["kami"],or:"Geç dönem karakter (Shuowen). Kağıdın icadı Cai Lun'a atfedilir. Kağıttan önce metinler çeşitli malzemelere yazılırdı; en yakın olanı ipek olduğundan 'iplik' belirleyicisi kullanılır.",mm:"🥄 KEPÇEYI İPLİKLERE UYGULA VE KAĞIT YAP",cp:[{k:"表紙",r:"HYŌSHI",m:"Kitap kapağı"},{k:"和紙",r:"WASHI",m:"Japon kağıdı"},{k:"手紙",r:"tegami",m:"Mektup"}],ex:[{s:"手___を書いた。",tr:"Mektup yazdım.",b:"紙",br:"kami"}]},
+  {n:149,ch:"寺",mn:"Tapınak",on:["JI"],kun:["tera"],or:"Mizukami bronz formları 'el' ve 'durmak' birleşimi olarak yorumlar; 'kontrolde tutmak' çağrışımlı. Budizm'in Çin'e MS 1. yüzyılda girmesiyle birlikte Budist tapınak anlamı kazandı.",mm:"🙏 EL TAPINAĞA TOPRAK SUNAR",cp:[{k:"龍安寺",r:"RYŌANJI",m:"Ryoanji Tapınağı"},{k:"寺院",r:"JIIN",m:"Budist tapınak"},{k:"山寺",r:"yamadera",m:"Dağ tapınağı"}],ex:[{s:"古い___を参拝した。",tr:"Eski tapınağı ziyaret ettim.",b:"寺",br:"tera"}]},
+  {n:150,ch:"自",mn:"Kendisi / Kendi",on:["JI","SHI"],kun:["mizukara"],or:"Burun piktogramına dayanır. 'Kendisi' anlamı Çinlilerin kendilerinden bahsederken buruna işaret etme geleneğini yansıtır (Batılılar göğse işaret eder).",mm:"👃 BURUN GÖZDEN BİR VURUŞ UZAKTA, KENDİNİ TEMSİL EDER",cp:[{k:"自分",r:"JIBUN",m:"Kendisi, ben"},{k:"自然",r:"SHIZEN",m:"Doğa"},{k:"自信",r:"JISHIN",m:"Öz güven"}],ex:[{s:"___転車で学校に行く。",tr:"Bisikletle okula gidiyorum.",b:"自",br:"JI"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

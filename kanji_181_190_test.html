@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:181,ch:"太",mn:"Şişman / Büyük",on:["TAI","TA"],kun:["futoi","futoru"],or:"Çok geç dönem karakter (Yupian). Kangxi Sözlüğü'nde büyük (大) ile aynı anlama geldiği belirtilir. Katō ek çizginin büyükler arasında bile özellikle büyük olduğunu belirtmek için eklendiğini öne sürer.",mm:"➕ ŞİŞMAN BİRAZ BÜYÜKTEN FAZLASIDIR",cp:[{k:"太子",r:"TAISHI",m:"Prens"},{k:"太陽",r:"TAIYŌ",m:"Güneş"},{k:"太字",r:"futoJI",m:"Kalın yazı"}]},
-  {n:182,ch:"体",mn:"Beden / Vücut",on:["TAI","TEI"],kun:["karada"],or:"Bronz, mühür ve geleneksel formlar var. 'Kemik' ve 'bol' fonetik unsurunu içerir. Daha basit form sonradan 'kişi' ve 'temel' anlamlarının birleşimi olarak yorumlandı.",mm:"🦴 BEDEN BİR KİŞİNİN TEMELİDİR",cp:[{k:"体格",r:"TAIKAKU",m:"Fizik yapı, bünye"},{k:"風体",r:"FŪTEI",m:"Duruş, tutum"},{k:"体つき",r:"karadatsuki",m:"Vücut yapısı"}]},
-  {n:183,ch:"台",mn:"Stand / Platform",on:["DAI","TAI"],kun:[],or:"Mühür ve geleneksel form. Bir görüşe göre büyük davul ve 'ayak, taban' anlamındaki unsur birleşerek 'davul sehpası' verir. Diğer görüşte gözetleme kulesi olarak yorumlanır.",mm:"👃 BURUN BİR AĞIZ İÇİN BİR TÜR PLATFORMdur",cp:[{k:"土台",r:"DODAI",m:"Temel, zemin"},{k:"台風",r:"TAIFŪ",m:"Tayfun"},{k:"台所",r:"DAIdokoro",m:"Mutfak"}]},
-  {n:184,ch:"地",mn:"Yer / Arazi",on:["CHI","JI"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Toprak, zemin' belirleyicisi ve fonetik unsur içerir; fonetik unsur başlangıçta kıvrılan yılanın piktogramıydı.",mm:"🐍 KURTÇUKLAR ZEMINDE KIVRANIR",cp:[{k:"地方",r:"CHIHŌ",m:"Bölge, yöre"},{k:"地下",r:"CHIKA",m:"Yeraltı"},{k:"地元",r:"JImoto",m:"Yerel"}]},
-  {n:185,ch:"池",mn:"Havuz / Gölet",on:["CHI"],kun:["ike"],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Su' belirleyicisi ve 184 ile aynı fonetik unsuru içerir; çeşitli yorumlarda 'su kanalı' ya da 'setlerle çevrilmiş bataklık' anlamına ulaşır.",mm:"🐍 KURTÇUKLAR HAVUZDA YÜZEN YILANLARDIR",cp:[{k:"用水池",r:"YŌSUICHI",m:"Rezervuar"},{k:"電池",r:"DENCHI",m:"Pil"},{k:"古池",r:"furuike",m:"Eski havuz"}]},
-  {n:186,ch:"知",mn:"Bilmek",on:["CHI"],kun:["shiru"],or:"Geç dönem karakter. 'Ağız, konuşmak' ve 'ok' (fonetik, 'hedefe tam isabet' çağrışımlı) unsurlarından oluşur. Genişletilmiş anlam 'tam isabetli biçimde tanımlamak' ve dolayısıyla 'bilmek'tir.",mm:"🏹 OKUN AĞIZDA OLMASINI BİLECEKSİN!",cp:[{k:"知識",r:"CHISHIKI",m:"Bilgi"},{k:"知的",r:"CHITEKI",m:"Entelektüel"},{k:"知り合い",r:"shiriai",m:"Tanıdık"}]},
-  {n:187,ch:"茶",mn:"Çay / Sinir etmek",on:["CHA","SA"],kun:[],or:"Çok geç dönem karakter (muhtemelen Tang Hanedanı). Başlangıçta 'bitki/çimen' ve 'bol' anlamındaki unsurlardan oluşan grafik belirli bir acı bitkiye atıfta bulunurdu. Değiştirilmiş şekil çay bitkisini açıkça ifade etmek için türetildi.",mm:"🍵 NEREDEYSE BOL ÇAY BİTKİLERİ",cp:[{k:"茶碗",r:"CHAWAN",m:"Çay kasesi"},{k:"茶々",r:"CHACHA",m:"Müdahale, karışma"},{k:"茶道",r:"SADŌ",m:"Çay töreni"}]},
-  {n:188,ch:"昼",mn:"Öğlen / Gündüz",on:["CHŪ"],kun:["hiru"],or:"Bronz, mühür ve geleneksel formlar var. Bronz formda 'güneş' ve yazı fırçasıyla ilgili unsurlar birleşerek 'güneşin her yeri aydınlatması' anlamını verir. 'Gündüz' geceyle karşıtlık içinde kullanılır.",mm:"📏 GÜNEŞI UFUK ÜZERİNDE ÖĞLEN ÖLÇERSIN",cp:[{k:"昼食",r:"CHŪSHOKU",m:"Öğle yemeği"},{k:"昼光性",r:"CHŪKŌSEI",m:"Gündüzcül"},{k:"昼間",r:"hiruma",m:"Gündüz vakti"}]},
-  {n:189,ch:"長",mn:"Uzun / Kıdemli",on:["CHŌ"],kun:["nagai"],or:"OBI formları uzun saçlı, bazen bastonlu birini gösterir. Shirakawa yalnızca yaşlı insanların uzun saç taşıyabildiğini belirtir. Tōdō 'uzun' anlamlı bir kelime ailesine dahil eder.",mm:"👴 KIYDEMLİ VATANDAŞ SAÇLARI DALGALANA DALGALANA KOŞAR",cp:[{k:"成長",r:"SEICHŌ",m:"Büyüme, gelişme"},{k:"会長",r:"KAICHŌ",m:"Başkan"},{k:"長生き",r:"nagaiki",m:"Uzun ömür"}]},
-  {n:190,ch:"鳥",mn:"Kuş",on:["CHŌ"],kun:["tori"],or:"Bir kuşun piktogramına dayanır. Bileşik karakterlerde farklı bir kuş grafiği de kullanılır.",mm:"🦅 KANATLARI VE TÜYLERİ VARSA KUŞTUR",cp:[{k:"白鳥",r:"HAKUCHŌ",m:"Kuğu"},{k:"野鳥",r:"YACHŌ",m:"Yabani kuş"},{k:"鳥居",r:"torii",m:"Şinto tapınak kapısı"}]}
+  {n:181,ch:"太",mn:"Şişman / Büyük",on:["TAI","TA"],kun:["futoi","futoru"],or:"Çok geç dönem karakter (Yupian). Kangxi Sözlüğü'nde büyük (大) ile aynı anlama geldiği belirtilir. Katō ek çizginin büyükler arasında bile özellikle büyük olduğunu belirtmek için eklendiğini öne sürer.",mm:"➕ ŞİŞMAN BİRAZ BÜYÜKTEN FAZLASIDIR",cp:[{k:"太子",r:"TAISHI",m:"Prens"},{k:"太陽",r:"TAIYŌ",m:"Güneş"},{k:"太字",r:"futoJI",m:"Kalın yazı"}],ex:[{s:"___陽がまぶしい。",tr:"Güneş kamaştırıcı.",b:"太",br:"TAI"}]},
+  {n:182,ch:"体",mn:"Beden / Vücut",on:["TAI","TEI"],kun:["karada"],or:"Bronz, mühür ve geleneksel formlar var. 'Kemik' ve 'bol' fonetik unsurunu içerir. Daha basit form sonradan 'kişi' ve 'temel' anlamlarının birleşimi olarak yorumlandı.",mm:"🦴 BEDEN BİR KİŞİNİN TEMELİDİR",cp:[{k:"体格",r:"TAIKAKU",m:"Fizik yapı, bünye"},{k:"風体",r:"FŪTEI",m:"Duruş, tutum"},{k:"体つき",r:"karadatsuki",m:"Vücut yapısı"}],ex:[{s:"___を動かすのは大切だ。",tr:"Vücudu hareket ettirmek önemlidir.",b:"体",br:"karada"}]},
+  {n:183,ch:"台",mn:"Stand / Platform",on:["DAI","TAI"],kun:[],or:"Mühür ve geleneksel form. Bir görüşe göre büyük davul ve 'ayak, taban' anlamındaki unsur birleşerek 'davul sehpası' verir. Diğer görüşte gözetleme kulesi olarak yorumlanır.",mm:"👃 BURUN BİR AĞIZ İÇİN BİR TÜR PLATFORMdur",cp:[{k:"土台",r:"DODAI",m:"Temel, zemin"},{k:"台風",r:"TAIFŪ",m:"Tayfun"},{k:"台所",r:"DAIdokoro",m:"Mutfak"}],ex:[{s:"舞___に立った。",tr:"Sahneye çıktım.",b:"台",br:"DAI"}]},
+  {n:184,ch:"地",mn:"Yer / Arazi",on:["CHI","JI"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Toprak, zemin' belirleyicisi ve fonetik unsur içerir; fonetik unsur başlangıçta kıvrılan yılanın piktogramıydı.",mm:"🐍 KURTÇUKLAR ZEMINDE KIVRANIR",cp:[{k:"地方",r:"CHIHŌ",m:"Bölge, yöre"},{k:"地下",r:"CHIKA",m:"Yeraltı"},{k:"地元",r:"JImoto",m:"Yerel"}],ex:[{s:"___図を持って旅した。",tr:"Haritayla seyahat ettim.",b:"地",br:"JI"}]},
+  {n:185,ch:"池",mn:"Havuz / Gölet",on:["CHI"],kun:["ike"],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Su' belirleyicisi ve 184 ile aynı fonetik unsuru içerir; çeşitli yorumlarda 'su kanalı' ya da 'setlerle çevrilmiş bataklık' anlamına ulaşır.",mm:"🐍 KURTÇUKLAR HAVUZDA YÜZEN YILANLARDIR",cp:[{k:"用水池",r:"YŌSUICHI",m:"Rezervuar"},{k:"電池",r:"DENCHI",m:"Pil"},{k:"古池",r:"furuike",m:"Eski havuz"}],ex:[{s:"公園の___に魚がいる。",tr:"Parkın havuzunda balık var.",b:"池",br:"ike"}]},
+  {n:186,ch:"知",mn:"Bilmek",on:["CHI"],kun:["shiru"],or:"Geç dönem karakter. 'Ağız, konuşmak' ve 'ok' (fonetik, 'hedefe tam isabet' çağrışımlı) unsurlarından oluşur. Genişletilmiş anlam 'tam isabetli biçimde tanımlamak' ve dolayısıyla 'bilmek'tir.",mm:"🏹 OKUN AĞIZDA OLMASINI BİLECEKSİN!",cp:[{k:"知識",r:"CHISHIKI",m:"Bilgi"},{k:"知的",r:"CHITEKI",m:"Entelektüel"},{k:"知り合い",r:"shiriai",m:"Tanıdık"}],ex:[{s:"彼女のことをよく___っている。",tr:"Onu çok iyi tanıyorum.",b:"知",br:"shi"}]},
+  {n:187,ch:"茶",mn:"Çay / Sinir etmek",on:["CHA","SA"],kun:[],or:"Çok geç dönem karakter (muhtemelen Tang Hanedanı). Başlangıçta 'bitki/çimen' ve 'bol' anlamındaki unsurlardan oluşan grafik belirli bir acı bitkiye atıfta bulunurdu. Değiştirilmiş şekil çay bitkisini açıkça ifade etmek için türetildi.",mm:"🍵 NEREDEYSE BOL ÇAY BİTKİLERİ",cp:[{k:"茶碗",r:"CHAWAN",m:"Çay kasesi"},{k:"茶々",r:"CHACHA",m:"Müdahale, karışma"},{k:"茶道",r:"SADŌ",m:"Çay töreni"}],ex:[{s:"緑___を一杯飲んだ。",tr:"Bir fincan yeşil çay içtim.",b:"茶",br:"CHA"}]},
+  {n:188,ch:"昼",mn:"Öğlen / Gündüz",on:["CHŪ"],kun:["hiru"],or:"Bronz, mühür ve geleneksel formlar var. Bronz formda 'güneş' ve yazı fırçasıyla ilgili unsurlar birleşerek 'güneşin her yeri aydınlatması' anlamını verir. 'Gündüz' geceyle karşıtlık içinde kullanılır.",mm:"📏 GÜNEŞI UFUK ÜZERİNDE ÖĞLEN ÖLÇERSIN",cp:[{k:"昼食",r:"CHŪSHOKU",m:"Öğle yemeği"},{k:"昼光性",r:"CHŪKŌSEI",m:"Gündüzcül"},{k:"昼間",r:"hiruma",m:"Gündüz vakti"}],ex:[{s:"___ご飯を食べた。",tr:"Öğle yemeği yedim.",b:"昼",br:"hiru"}]},
+  {n:189,ch:"長",mn:"Uzun / Kıdemli",on:["CHŌ"],kun:["nagai"],or:"OBI formları uzun saçlı, bazen bastonlu birini gösterir. Shirakawa yalnızca yaşlı insanların uzun saç taşıyabildiğini belirtir. Tōdō 'uzun' anlamlı bir kelime ailesine dahil eder.",mm:"👴 KIYDEMLİ VATANDAŞ SAÇLARI DALGALANA DALGALANA KOŞAR",cp:[{k:"成長",r:"SEICHŌ",m:"Büyüme, gelişme"},{k:"会長",r:"KAICHŌ",m:"Başkan"},{k:"長生き",r:"nagaiki",m:"Uzun ömür"}],ex:[{s:"___い橋を渡った。",tr:"Uzun köprüden geçtim.",b:"長",br:"naga"}]},
+  {n:190,ch:"鳥",mn:"Kuş",on:["CHŌ"],kun:["tori"],or:"Bir kuşun piktogramına dayanır. Bileşik karakterlerde farklı bir kuş grafiği de kullanılır.",mm:"🦅 KANATLARI VE TÜYLERİ VARSA KUŞTUR",cp:[{k:"白鳥",r:"HAKUCHŌ",m:"Kuğu"},{k:"野鳥",r:"YACHŌ",m:"Yabani kuş"},{k:"鳥居",r:"torii",m:"Şinto tapınak kapısı"}],ex:[{s:"空を___が飛んでいる。",tr:"Gökyüzünde kuşlar uçuyor.",b:"鳥",br:"tori"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

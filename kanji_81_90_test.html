@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:81,ch:"引",mn:"Çekmek",on:["IN"],kun:["hiku"],or:"OBI ve bronz formlar yayı ve kirişi tasvir eder. Karlgren bu yorumu destekler; Katō ve Yamada uzun dikey çizgiyi fonetik unsur olarak değerlendirir.",mm:"🏹 KIRIŞI ÇEKILMEYI BEKLEYEN SÜSLÜ YAY",cp:[{k:"引力",r:"INRYOKU",m:"Yerçekimi"},{k:"辞引",r:"JIbiki",m:"Sözlük"},{k:"取引",r:"torihiki",m:"Alışveriş, işlem"}]},
-  {n:82,ch:"羽",mn:"Kanat / Tüy",on:["U"],kun:["ha","-wa","hane"],or:"OBI formu kuş kanatlarının ya da tüylerin piktogramına dayanır.",mm:"🪶 TÜYLÜ KANATLAR",cp:[{k:"羽毛",r:"UMŌ",m:"Tüy, kılık"},{k:"羽織",r:"haori",m:"Haori (Japon giysisi)"},{k:"一羽",r:"ICHIwa",m:"Bir kuş"}]},
-  {n:83,ch:"雲",mn:"Bulut",on:["UN"],kun:["kumo"],or:"Bir bulutun piktogramından gelir. Grafik, erken Çincede 'söylemek' anlamındaki sözcük için fonetik ödünç alındı; daha sonra bulut anlamını netleştirmek için 'yağmur' belirleyicisi eklendi.",mm:"🌧️ GÖKTEN YAĞAN BULUTLAR",cp:[{k:"星雲",r:"SEIU N",m:"Nebula"},{k:"浮き雲",r:"ukigumo",m:"Yüzen bulut"},{k:"雲行き",r:"kumoyuki",m:"Gelişmelerin seyri"}]},
-  {n:84,ch:"園",mn:"Park / Bahçe",on:["EN"],kun:["sono"],or:"Geç dönem karakter (Shuowen). 'Çevirmek' belirleyicisi ve 'çit' anlamıyla ilişkili fonetik unsur içerir. Etrafı çevrili bir alanı temsil eder.",mm:"🌸 AÇILIŞINDA KIRLI GİYSİLİ TUHAF BİR KAPALI PARK",cp:[{k:"公園",r:"KŌEN",m:"Park"},{k:"動物園",r:"DŌBUTSUEN",m:"Hayvanat bahçesi"},{k:"花園",r:"hanazono",m:"Çiçek bahçesi"}]},
-  {n:85,ch:"遠",mn:"Uzak",on:["EN"],kun:["tōi"],or:"Belirleyici 'yol, gitmek' ve 'durmak' unsurlarından türer. Sağ element fonetik ve anlamsal rol oynar. Katō ve Ogawa temel anlamın 'uzun hareket' olduğu konusunda hemfikirdir.",mm:"🚶 UZAK AÇIKLIĞA KIRIK KIRLI GİYSİLERLE GİT",cp:[{k:"遠足",r:"ENSOKU",m:"Gezi, piknik"},{k:"遠視",r:"ENSHI",m:"Uzak görüşlülük"},{k:"遠回り",r:"tōmawari",m:"Dolambaçlı yol"}]},
-  {n:86,ch:"何",mn:"Ne / Kaç",on:["KA"],kun:["nan","nani"],or:"OBI formu bir kişinin omzunda tüfek/mızrak taşıdığını gösterir. Katō 'sırtında taşımak' anlamını temel alır. Fonetik ödünç yoluyla soru zamiri anlamı kazandı.",mm:"❓ BİR KİŞİ KAÇ YÜKÜ TAŞIYABİLİR?",cp:[{k:"何回",r:"nanKAI",m:"Kaç kez"},{k:"何歳",r:"nanSAI",m:"Kaç yaşında"},{k:"何者",r:"nanimono",m:"Kim, ne türlü kişi"}]},
-  {n:87,ch:"科",mn:"Bölüm / Dal",on:["KA"],kun:[],or:"Tahıl bitkisi piktogramı ve kepçe piktogramını birleştirir; 'ölçmek' > 'elemek' > 'kategori' > 'bölüm' anlamına gelir. Konfüçyüs Analektleri gibi klasik Çin metinlerinde 'sınıf, derece' anlamında kullanılmıştır.",mm:"🌾 TAHIL BİTKİLERİ İÇİN ÖNLEMLER DERSİ",cp:[{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学科",r:"GAKKA",m:"Ders, konu"},{k:"英語科",r:"EIGOKA",m:"İngilizce bölümü"}]},
-  {n:88,ch:"夏",mn:"Yaz",on:["KA","GE"],kun:["natsu"],or:"Erken formlar (bronz) maskeli dans eden birini gösterir. Ogawa bu dansın yaz mevsiminde yapıldığını ve karakterin yaz anlamını bu ilişkiden kazandığını öne sürer.",mm:"🎭 MASKELİ BAŞ VE ÇAPRAZ BACAKLAR YAZ ÇILGINLIĞINI GÖSTERİR",cp:[{k:"初夏",r:"SHOKA",m:"İlkbahar sonu / erken yaz"},{k:"真夏",r:"manatsu",m:"Yaz ortası"},{k:"夏至",r:"GESHI",m:"Yaz gündönümü"}]},
-  {n:89,ch:"家",mn:"Ev / Uzman",on:["KA","KE"],kun:["ie","-ya"],or:"Bazı OBI formları çatı altında domuz, diğerleri köpek olarak yorumlanır. Domuz yorumunu destekleyen Ma, insan ve domuz barınağının o dönemde pek farklı olmadığını öne sürer. Zamanla meslek ve aile anlamlarını da kazandı.",mm:"🐷 UZMANIN EVİ AHIR GİBİ GÖRÜNÜR",cp:[{k:"農家",r:"NŌKA",m:"Çiftlik evi"},{k:"武家",r:"BUKE",m:"Savaşçı ailesi"},{k:"小説家",r:"SHŌSETSUKA",m:"Romancı"}]},
-  {n:90,ch:"歌",mn:"Şarkı / Söylemek",on:["KA"],kun:["uta","utau"],or:"Oldukça geç dönem karakteridir. Daha basit bir forma sonradan 'esnemek, ağzı geniş açmak' anlamındaki unsur eklendi. Bu daha karmaşık karakterde fonetik ve KA-KA gibi uzun artikülasyona işaret eden anlamsal rol görür.",mm:"🎤 GENIŞ AĞIZ ŞARKIYA BAŞLAR",cp:[{k:"歌手",r:"KASHU",m:"Şarkıcı"},{k:"短歌",r:"TANKA",m:"Kısa şiir (tanka)"},{k:"歌声",r:"utagoe",m:"Şarkı sesi"}]}
+  {n:81,ch:"引",mn:"Çekmek",on:["IN"],kun:["hiku"],or:"OBI ve bronz formlar yayı ve kirişi tasvir eder. Karlgren bu yorumu destekler; Katō ve Yamada uzun dikey çizgiyi fonetik unsur olarak değerlendirir.",mm:"🏹 KIRIŞI ÇEKILMEYI BEKLEYEN SÜSLÜ YAY",cp:[{k:"引力",r:"INRYOKU",m:"Yerçekimi"},{k:"辞引",r:"JIbiki",m:"Sözlük"},{k:"取引",r:"torihiki",m:"Alışveriş, işlem"}],ex:[{s:"ドアを___いてください。",tr:"Kapıyı çekiniz.",b:"引",br:"hi"}]},
+  {n:82,ch:"羽",mn:"Kanat / Tüy",on:["U"],kun:["ha","-wa","hane"],or:"OBI formu kuş kanatlarının ya da tüylerin piktogramına dayanır.",mm:"🪶 TÜYLÜ KANATLAR",cp:[{k:"羽毛",r:"UMŌ",m:"Tüy, kılık"},{k:"羽織",r:"haori",m:"Haori (Japon giysisi)"},{k:"一羽",r:"ICHIwa",m:"Bir kuş"}],ex:[{s:"鳥の___が落ちていた。",tr:"Bir kuş tüyü düşmüştü.",b:"羽",br:"ha"}]},
+  {n:83,ch:"雲",mn:"Bulut",on:["UN"],kun:["kumo"],or:"Bir bulutun piktogramından gelir. Grafik, erken Çincede 'söylemek' anlamındaki sözcük için fonetik ödünç alındı; daha sonra bulut anlamını netleştirmek için 'yağmur' belirleyicisi eklendi.",mm:"🌧️ GÖKTEN YAĞAN BULUTLAR",cp:[{k:"星雲",r:"SEIU N",m:"Nebula"},{k:"浮き雲",r:"ukigumo",m:"Yüzen bulut"},{k:"雲行き",r:"kumoyuki",m:"Gelişmelerin seyri"}],ex:[{s:"空に白い___が浮かんでいる。",tr:"Gökyüzünde beyaz bulutlar yüzüyor.",b:"雲",br:"kumo"}]},
+  {n:84,ch:"園",mn:"Park / Bahçe",on:["EN"],kun:["sono"],or:"Geç dönem karakter (Shuowen). 'Çevirmek' belirleyicisi ve 'çit' anlamıyla ilişkili fonetik unsur içerir. Etrafı çevrili bir alanı temsil eder.",mm:"🌸 AÇILIŞINDA KIRLI GİYSİLİ TUHAF BİR KAPALI PARK",cp:[{k:"公園",r:"KŌEN",m:"Park"},{k:"動物園",r:"DŌBUTSUEN",m:"Hayvanat bahçesi"},{k:"花園",r:"hanazono",m:"Çiçek bahçesi"}],ex:[{s:"動物___に行った。",tr:"Hayvanat bahçesine gittim.",b:"園",br:"EN"}]},
+  {n:85,ch:"遠",mn:"Uzak",on:["EN"],kun:["tōi"],or:"Belirleyici 'yol, gitmek' ve 'durmak' unsurlarından türer. Sağ element fonetik ve anlamsal rol oynar. Katō ve Ogawa temel anlamın 'uzun hareket' olduğu konusunda hemfikirdir.",mm:"🚶 UZAK AÇIKLIĞA KIRIK KIRLI GİYSİLERLE GİT",cp:[{k:"遠足",r:"ENSOKU",m:"Gezi, piknik"},{k:"遠視",r:"ENSHI",m:"Uzak görüşlülük"},{k:"遠回り",r:"tōmawari",m:"Dolambaçlı yol"}],ex:[{s:"___い山が見える。",tr:"Uzak dağlar görünüyor.",b:"遠",br:"tō"}]},
+  {n:86,ch:"何",mn:"Ne / Kaç",on:["KA"],kun:["nan","nani"],or:"OBI formu bir kişinin omzunda tüfek/mızrak taşıdığını gösterir. Katō 'sırtında taşımak' anlamını temel alır. Fonetik ödünç yoluyla soru zamiri anlamı kazandı.",mm:"❓ BİR KİŞİ KAÇ YÜKÜ TAŞIYABİLİR?",cp:[{k:"何回",r:"nanKAI",m:"Kaç kez"},{k:"何歳",r:"nanSAI",m:"Kaç yaşında"},{k:"何者",r:"nanimono",m:"Kim, ne türlü kişi"}],ex:[{s:"___時に起きましたか？",tr:"Saat kaçta kalktınız?",b:"何",br:"nan"}]},
+  {n:87,ch:"科",mn:"Bölüm / Dal",on:["KA"],kun:[],or:"Tahıl bitkisi piktogramı ve kepçe piktogramını birleştirir; 'ölçmek' > 'elemek' > 'kategori' > 'bölüm' anlamına gelir. Konfüçyüs Analektleri gibi klasik Çin metinlerinde 'sınıf, derece' anlamında kullanılmıştır.",mm:"🌾 TAHIL BİTKİLERİ İÇİN ÖNLEMLER DERSİ",cp:[{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学科",r:"GAKKA",m:"Ders, konu"},{k:"英語科",r:"EIGOKA",m:"İngilizce bölümü"}],ex:[{s:"理___の授業が好きだ。",tr:"Fen dersini seviyorum.",b:"科",br:"KA"}]},
+  {n:88,ch:"夏",mn:"Yaz",on:["KA","GE"],kun:["natsu"],or:"Erken formlar (bronz) maskeli dans eden birini gösterir. Ogawa bu dansın yaz mevsiminde yapıldığını ve karakterin yaz anlamını bu ilişkiden kazandığını öne sürer.",mm:"🎭 MASKELİ BAŞ VE ÇAPRAZ BACAKLAR YAZ ÇILGINLIĞINI GÖSTERİR",cp:[{k:"初夏",r:"SHOKA",m:"İlkbahar sonu / erken yaz"},{k:"真夏",r:"manatsu",m:"Yaz ortası"},{k:"夏至",r:"GESHI",m:"Yaz gündönümü"}],ex:[{s:"___休みに海へ行く。",tr:"Yaz tatilinde denize gideceğim.",b:"夏",br:"natsu"}]},
+  {n:89,ch:"家",mn:"Ev / Uzman",on:["KA","KE"],kun:["ie","-ya"],or:"Bazı OBI formları çatı altında domuz, diğerleri köpek olarak yorumlanır. Domuz yorumunu destekleyen Ma, insan ve domuz barınağının o dönemde pek farklı olmadığını öne sürer. Zamanla meslek ve aile anlamlarını da kazandı.",mm:"🐷 UZMANIN EVİ AHIR GİBİ GÖRÜNÜR",cp:[{k:"農家",r:"NŌKA",m:"Çiftlik evi"},{k:"武家",r:"BUKE",m:"Savaşçı ailesi"},{k:"小説家",r:"SHŌSETSUKA",m:"Romancı"}],ex:[{s:"___に帰る時間だ。",tr:"Eve dönme zamanı.",b:"家",br:"ie"}]},
+  {n:90,ch:"歌",mn:"Şarkı / Söylemek",on:["KA"],kun:["uta","utau"],or:"Oldukça geç dönem karakteridir. Daha basit bir forma sonradan 'esnemek, ağzı geniş açmak' anlamındaki unsur eklendi. Bu daha karmaşık karakterde fonetik ve KA-KA gibi uzun artikülasyona işaret eden anlamsal rol görür.",mm:"🎤 GENIŞ AĞIZ ŞARKIYA BAŞLAR",cp:[{k:"歌手",r:"KASHU",m:"Şarkıcı"},{k:"短歌",r:"TANKA",m:"Kısa şiir (tanka)"},{k:"歌声",r:"utagoe",m:"Şarkı sesi"}],ex:[{s:"みんなで___を歌った。",tr:"Hep birlikte şarkı söyledik.",b:"歌",br:"uta"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

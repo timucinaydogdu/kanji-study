@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:101,ch:"丸",mn:"Yuvarlak / Top",on:["GAN"],kun:["maru","marui"],or:"Geç dönem karakter (Shuowen). Mühür yazısındaki kapalı unsur 'kişi' olarak yorumlanır. Temel anlamı 'kişinin top gibi yuvarlanması'dır.",mm:"💊 DOKUZ YUVARLAK BİR VURUŞLA TOPLANIYOR",cp:[{k:"丸薬",r:"GAN'YAKU",m:"Hap, ilaç"},{k:"丸み",r:"marumi",m:"Yuvarlıklık"},{k:"日本丸",r:"NIPPON-maru",m:"Japonya gemisi"}]},
-  {n:102,ch:"岩",mn:"Kaya / Çıkıntı",on:["GAN"],kun:["iwa"],or:"Geç dönem karakter. 'Dağ' ve 'taş' unsurlarını birleştirir. Tōdō 'köşeli ve sert' bir kelime ailesine dahil eder.",mm:"⛰️ KAYALI DAĞ TAMAMEN TAŞTIR",cp:[{k:"岩石",r:"GANSEKI",m:"Kaya, taş"},{k:"岩屋",r:"iwaya",m:"Mağara"},{k:"火成岩",r:"KASEIGAN",m:"Volkanik kaya"}]},
-  {n:103,ch:"顔",mn:"Yüz / Çehre",on:["GAN"],kun:["kao"],or:"Bronz formda büyütülmüş bir baş ve tartışmalı etimolojili bir unsur görülür. Katō alından bahseder; Shirakawa alına dövme yapılmasını yetişkinliğin işareti olarak yorumlar.",mm:"👤 BAŞINDA SADECE ÜÇ TEL KALAN SOMURTKAN YÜZ",cp:[{k:"顔面",r:"GANMEN",m:"Yüz (resmi)"},{k:"顔色",r:"kaoiro",m:"Ten rengi, ifade"},{k:"顔つき",r:"kaotsuki",m:"Yüz ifadesi"}]},
-  {n:104,ch:"汽",mn:"Buhar",on:["KI"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'Su' ve 'buhar' unsurlarını birleştirir; ikincisi fonetik işlev de görür.",mm:"🚂 BUHAR SULU BUHARLARDAN OLUŞUR",cp:[{k:"汽車",r:"KISHA",m:"Buharlı tren"},{k:"汽船",r:"KISEN",m:"Buharlı gemi"},{k:"汽笛",r:"KITEKI",m:"Düdük"}]},
-  {n:105,ch:"記",mn:"Kayıt / Kronik",on:["KI"],kun:[],or:"Göreceli geç dönem (Shuowen). 'Kelimeler' ve 'kaydetmek' ya da 'düzene sokmak' anlamı taşıyan unsuru içerir. Tōdō 'karmaşık meseleleri düzene sokmak' anlamını temel alır.",mm:"📖 KIVIRMALI KELİMELERLE DOLU KRONIK",cp:[{k:"記者",r:"KISHA",m:"Gazeteci"},{k:"記事",r:"KIJI",m:"Makale, haber"},{k:"日記",r:"NIKKI",m:"Günlük"}]},
-  {n:106,ch:"帰",mn:"Dönmek",on:["KI"],kun:["kaeru"],or:"OBI formları 'süpürge tutan el' anlamındaki unsuru içerir; aynı unsur 'eş' anlamında da kullanılırdı. 'Dönmek' anlamı, damadın gelinin evine gidip onu kendi evine geri götürdüğü eski geleneğe dayanır.",mm:"🧹 EŞ SÜPÜRGE VE KILIÇLA DÖNER",cp:[{k:"帰化",r:"KIKA",m:"Vatandaşlığa geçmek"},{k:"帰省",r:"KISEI",m:"Memlekete dönüş"},{k:"帰り道",r:"kaerimichi",m:"Dönüş yolu"}]},
-  {n:107,ch:"弓",mn:"Yay / Okçuluk",on:["KYŪ"],kun:["yumi"],or:"Bir yayın piktogramına dayanır. Bazı OBI ve bronz formlarda kiriş bulunur, mühür yazısından itibaren kiriş çıkarılmıştır. 'Yay' anlamından 'yay şekli' gibi anlamlar türetilmiştir.",mm:"🏹 KİRİŞSİZ YAY",cp:[{k:"弓道",r:"KYŪDŌ",m:"Okçuluk"},{k:"弓形",r:"KYŪJŌ",m:"Yay şekli"},{k:"弓取り",r:"yumitori",m:"Okçu"}]},
-  {n:108,ch:"牛",mn:"İnek / Boğa",on:["GYŪ"],kun:["ushi"],or:"Bir inek ya da boğa başının piktogramından gelir. OBI aşamasında boynuzlar belirgindir. Yatay çizginin kulakları mı yoksa başın tepesini mi gösterdiği tartışmalıdır.",mm:"🐄 KULAKLI VE KIRIH BOYNUZLU İNEK",cp:[{k:"牛肉",r:"GYŪNIKU",m:"Sığır eti"},{k:"牛耳る",r:"GYŪJIru",m:"Kontrol altına almak"},{k:"牛飼い",r:"ushigai",m:"Sığır çobanı"}]},
-  {n:109,ch:"魚",mn:"Balık",on:["GYO"],kun:["uo","sakana"],or:"Tüm bir balığın piktogramından gelir. Bronz formda tüm balık görünür. Hafıza tekniği olarak kuyruğun dört çizgisi 'ateş' belirleyicisi olarak hatırlanabilir.",mm:"🐟 KARE GÖVDELİ VE ATEŞLİ KUYRUKLU BALIK",cp:[{k:"金魚",r:"KINGYO",m:"Japon balığı"},{k:"魚釣り",r:"uotsuri",m:"Balık avlama"},{k:"魚屋",r:"sakanaYA",m:"Balıkçı dükkanı"}]},
-  {n:110,ch:"京",mn:"Başkent",on:["KYŌ","KEI"],kun:[],or:"Tipik OBI formu yüksek bir tepede ya da yapay yükseltilmiş bir zemin üzerindeki bir binayı gösterir. Katō ve Ogawa bu yorumu destekler. Shirakawa ise onu kemerli bir kapının üzerindeki gözetleme kulesi olarak yorumlar.",mm:"🏮 SÜSLÜ FENER BAŞKENTİ SİMGELER",cp:[{k:"東京",r:"TŌKYŌ",m:"Tokyo"},{k:"上京",r:"JŌKYŌ",m:"Başkente gitmek"},{k:"京浜",r:"KEIHIN",m:"Tokyo-Yokohama bölgesi"}]}
+  {n:101,ch:"丸",mn:"Yuvarlak / Top",on:["GAN"],kun:["maru","marui"],or:"Geç dönem karakter (Shuowen). Mühür yazısındaki kapalı unsur 'kişi' olarak yorumlanır. Temel anlamı 'kişinin top gibi yuvarlanması'dır.",mm:"💊 DOKUZ YUVARLAK BİR VURUŞLA TOPLANIYOR",cp:[{k:"丸薬",r:"GAN'YAKU",m:"Hap, ilaç"},{k:"丸み",r:"marumi",m:"Yuvarlıklık"},{k:"日本丸",r:"NIPPON-maru",m:"Japonya gemisi"}],ex:[{s:"___い月が出ている。",tr:"Yuvarlak ay doğmuş.",b:"丸",br:"maru"}]},
+  {n:102,ch:"岩",mn:"Kaya / Çıkıntı",on:["GAN"],kun:["iwa"],or:"Geç dönem karakter. 'Dağ' ve 'taş' unsurlarını birleştirir. Tōdō 'köşeli ve sert' bir kelime ailesine dahil eder.",mm:"⛰️ KAYALI DAĞ TAMAMEN TAŞTIR",cp:[{k:"岩石",r:"GANSEKI",m:"Kaya, taş"},{k:"岩屋",r:"iwaya",m:"Mağara"},{k:"火成岩",r:"KASEIGAN",m:"Volkanik kaya"}],ex:[{s:"大きな___に登った。",tr:"Büyük kayaya tırmandım.",b:"岩",br:"iwa"}]},
+  {n:103,ch:"顔",mn:"Yüz / Çehre",on:["GAN"],kun:["kao"],or:"Bronz formda büyütülmüş bir baş ve tartışmalı etimolojili bir unsur görülür. Katō alından bahseder; Shirakawa alına dövme yapılmasını yetişkinliğin işareti olarak yorumlar.",mm:"👤 BAŞINDA SADECE ÜÇ TEL KALAN SOMURTKAN YÜZ",cp:[{k:"顔面",r:"GANMEN",m:"Yüz (resmi)"},{k:"顔色",r:"kaoiro",m:"Ten rengi, ifade"},{k:"顔つき",r:"kaotsuki",m:"Yüz ifadesi"}],ex:[{s:"鏡で___を見た。",tr:"Aynada yüzüme baktım.",b:"顔",br:"kao"}]},
+  {n:104,ch:"汽",mn:"Buhar",on:["KI"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'Su' ve 'buhar' unsurlarını birleştirir; ikincisi fonetik işlev de görür.",mm:"🚂 BUHAR SULU BUHARLARDAN OLUŞUR",cp:[{k:"汽車",r:"KISHA",m:"Buharlı tren"},{k:"汽船",r:"KISEN",m:"Buharlı gemi"},{k:"汽笛",r:"KITEKI",m:"Düdük"}],ex:[{s:"___車に乗って旅をした。",tr:"Buharlı trenle seyahat ettim.",b:"汽",br:"KI"}]},
+  {n:105,ch:"記",mn:"Kayıt / Kronik",on:["KI"],kun:[],or:"Göreceli geç dönem (Shuowen). 'Kelimeler' ve 'kaydetmek' ya da 'düzene sokmak' anlamı taşıyan unsuru içerir. Tōdō 'karmaşık meseleleri düzene sokmak' anlamını temel alır.",mm:"📖 KIVIRMALI KELİMELERLE DOLU KRONIK",cp:[{k:"記者",r:"KISHA",m:"Gazeteci"},{k:"記事",r:"KIJI",m:"Makale, haber"},{k:"日記",r:"NIKKI",m:"Günlük"}],ex:[{s:"日___をつける習慣がある。",tr:"Günlük tutma alışkanlığım var.",b:"記",br:"KI"}]},
+  {n:106,ch:"帰",mn:"Dönmek",on:["KI"],kun:["kaeru"],or:"OBI formları 'süpürge tutan el' anlamındaki unsuru içerir; aynı unsur 'eş' anlamında da kullanılırdı. 'Dönmek' anlamı, damadın gelinin evine gidip onu kendi evine geri götürdüğü eski geleneğe dayanır.",mm:"🧹 EŞ SÜPÜRGE VE KILIÇLA DÖNER",cp:[{k:"帰化",r:"KIKA",m:"Vatandaşlığa geçmek"},{k:"帰省",r:"KISEI",m:"Memlekete dönüş"},{k:"帰り道",r:"kaerimichi",m:"Dönüş yolu"}],ex:[{s:"学校から___る。",tr:"Okuldan eve dönüyorum.",b:"帰",br:"kae"}]},
+  {n:107,ch:"弓",mn:"Yay / Okçuluk",on:["KYŪ"],kun:["yumi"],or:"Bir yayın piktogramına dayanır. Bazı OBI ve bronz formlarda kiriş bulunur, mühür yazısından itibaren kiriş çıkarılmıştır. 'Yay' anlamından 'yay şekli' gibi anlamlar türetilmiştir.",mm:"🏹 KİRİŞSİZ YAY",cp:[{k:"弓道",r:"KYŪDŌ",m:"Okçuluk"},{k:"弓形",r:"KYŪJŌ",m:"Yay şekli"},{k:"弓取り",r:"yumitori",m:"Okçu"}],ex:[{s:"___道の練習をした。",tr:"Okçuluk antrenmanı yaptım.",b:"弓",br:"yumi"}]},
+  {n:108,ch:"牛",mn:"İnek / Boğa",on:["GYŪ"],kun:["ushi"],or:"Bir inek ya da boğa başının piktogramından gelir. OBI aşamasında boynuzlar belirgindir. Yatay çizginin kulakları mı yoksa başın tepesini mi gösterdiği tartışmalıdır.",mm:"🐄 KULAKLI VE KIRIH BOYNUZLU İNEK",cp:[{k:"牛肉",r:"GYŪNIKU",m:"Sığır eti"},{k:"牛耳る",r:"GYŪJIru",m:"Kontrol altına almak"},{k:"牛飼い",r:"ushigai",m:"Sığır çobanı"}],ex:[{s:"___乳を毎朝飲む。",tr:"Her sabah süt içerim.",b:"牛",br:"ushi"}]},
+  {n:109,ch:"魚",mn:"Balık",on:["GYO"],kun:["uo","sakana"],or:"Tüm bir balığın piktogramından gelir. Bronz formda tüm balık görünür. Hafıza tekniği olarak kuyruğun dört çizgisi 'ateş' belirleyicisi olarak hatırlanabilir.",mm:"🐟 KARE GÖVDELİ VE ATEŞLİ KUYRUKLU BALIK",cp:[{k:"金魚",r:"KINGYO",m:"Japon balığı"},{k:"魚釣り",r:"uotsuri",m:"Balık avlama"},{k:"魚屋",r:"sakanaYA",m:"Balıkçı dükkanı"}],ex:[{s:"川で___を釣った。",tr:"Nehirde balık tuttum.",b:"魚",br:"sakana"}]},
+  {n:110,ch:"京",mn:"Başkent",on:["KYŌ","KEI"],kun:[],or:"Tipik OBI formu yüksek bir tepede ya da yapay yükseltilmiş bir zemin üzerindeki bir binayı gösterir. Katō ve Ogawa bu yorumu destekler. Shirakawa ise onu kemerli bir kapının üzerindeki gözetleme kulesi olarak yorumlar.",mm:"🏮 SÜSLÜ FENER BAŞKENTİ SİMGELER",cp:[{k:"東京",r:"TŌKYŌ",m:"Tokyo"},{k:"上京",r:"JŌKYŌ",m:"Başkente gitmek"},{k:"京浜",r:"KEIHIN",m:"Tokyo-Yokohama bölgesi"}],ex:[{s:"東___に住んでいる。",tr:"Tokyo'da yaşıyorum.",b:"京",br:"KYOU"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

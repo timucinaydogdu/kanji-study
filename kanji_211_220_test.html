@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:211,ch:"売",mn:"Satmak",on:["BAI"],kun:["uru","ureru"],or:"Geç dönem karakter (Shuowen). Geleneksel form samurai unsurunu (muhtemelen 'sergilemek' için hatalı) ve 'satın almak' unsurunu birleştirir. 'Para karşılığı sergileme ve takas' anlamı üretilmiştir.",mm:"⚔️ EĞRI BACAKLI SAMURAY TEZGAHTA SATIYOR",cp:[{k:"売買",r:"BAIBAI",m:"Alım satım"},{k:"売店",r:"BAITEN",m:"Büfe, stand"},{k:"売り物",r:"urimono",m:"Satılık ürün"}]},
-  {n:212,ch:"買",mn:"Satın almak",on:["BAI"],kun:["kau"],or:"211'den (satmak) daha eski karakterdir. OBI aşamasından itibaren var. Ogawa 'kabuk para birimi' ve 'ağ' (fonetik, 'almak/edinmek' çağrışımlı) olarak yorumlar. Katō farklı bir analiz önerir.",mm:"🕸️ KABUK KABUĞU ALMAK İÇİN BİR AĞ KULLAN",cp:[{k:"買収",r:"BAISHŪ",m:"Satın alma, rüşvet"},{k:"買い物",r:"kaimono",m:"Alışveriş"},{k:"買い手",r:"kaite",m:"Alıcı"}]},
-  {n:213,ch:"麦",mn:"Arpa / Buğday",on:["BAKU"],kun:["mugi"],or:"OBI ve geleneksel formlar. Karlgren ve Ma buğday ya da arpa bitkisinin piktogramı olarak görür. Tōdō ve Ogawa alt kısmı 'inen ayak' olarak yorumlar — 'cennetten verilen buğday'. Pulleyblank alternatif bir görüş önerir.",mm:"🧘 BUĞDAY BİTKİSİ BÜYÜRKEN BAĞDAŞ KURARAK İZLENİR",cp:[{k:"麦芽",r:"BAKUGA",m:"Malt"},{k:"麦茶",r:"mugiCHA",m:"Arpa çayı"},{k:"小麦",r:"komugi",m:"Buğday"}]},
-  {n:214,ch:"半",mn:"Yarım / Orta",on:["HAN"],kun:["nakaba"],or:"Bronz ve geleneksel form. Üst kısım 'bölmek' (hem anlamsal hem fonetik) ve alt kısım öküz başının stilize temsilidir. Özgün anlam 'öküz gövdesini ikiye bölmek'; daha geniş 'yarım' anlamı buradan gelir.",mm:"🐂 ÖKÜZ KAFASINI ORTADAN İKİYE BÖLEREK YARIMLARA BÖL",cp:[{k:"半分",r:"HANBUN",m:"Yarım"},{k:"半島",r:"HANTŌ",m:"Yarımada"},{k:"半年",r:"HANtoshi",m:"Yarım yıl"}]},
-  {n:215,ch:"番",mn:"Numara / Nöbet / Sıra",on:["BAN"],kun:[],or:"Bronz formu genellikle 'tarla' ve 'el tohum saçıyor' anlamında hem fonetik hem anlamsal unsur olarak yorumlanır. Tōdō 'tohumları yaymak' kelime ailesine dahil eder. 'Sıra, numara, nöbet' ödünç kullanımdır.",mm:"🌾 NÖBET BEKLEYEN FAZLA YAPRAKLI PİRİNÇ BİTKİLERİNİ TARLADA KORUR",cp:[{k:"順番",r:"JUNBAN",m:"Sıra, dizi"},{k:"番人",r:"BANNIN",m:"Bekçi, nöbetçi"},{k:"一番",r:"ICHIBAN",m:"Birinci, en iyi"}]},
-  {n:216,ch:"父",mn:"Baba",on:["FU"],kun:["chichi"],or:"OBI. Yorumcular bu karakterin taş balta tutan eli tasvir ettiğinde hemfikirdir. 'Baba / babanın neslinden erkek akraba' anlamı fonetik ödünç kullanımdır.",mm:"🪓 BABA İKİ KÜÇÜK ŞEY YÜZÜNdEN KIZgın",cp:[{k:"父母",r:"FUBO",m:"Ebeveynler"},{k:"お父様",r:"otōsama",m:"Baba (saygılı)"},{k:"父親",r:"chichioya",m:"Baba"}]},
-  {n:217,ch:"風",mn:"Rüzgar / Tarz",on:["FŪ","FU"],kun:["kaze"],or:"OBI formlarında genellikle bir anka kuşu veya büyük kuş görülür. Şiddetli rüzgarlar antik çağda zararlı bir kuş olarak algılanırdı. Mühür yazısında 'kuş' yerine 'böcek, sürüngen' koyuldu.",mm:"🦟 ŞİK BÖCEĞİ RÜZGAR SÜRÜKLÜYOR",cp:[{k:"風船",r:"FŪSEN",m:"Balon"},{k:"神風",r:"kamikaze",m:"İlahi rüzgar"},{k:"和風",r:"WAFŪ",m:"Japon tarzı"}]},
-  {n:218,ch:"分",mn:"Bölmek / Dakika / Anlamak",on:["BUN","FUN","BU"],kun:["wakaru","wakeru","katsu"],or:"'Bıçak/kesmek' ve 'bölmek' (hem anlamsal hem fonetik) unsurlarından oluşur. Tōdō 'ikiye kesmek' kelime ailesine dahil eder.",mm:"✂️ İKİYE BÖLEBİLECEĞİNİ ANLAYACAKSIN",cp:[{k:"分子",r:"BUNSHI",m:"Molekül"},{k:"一分",r:"IPPUN",m:"Bir dakika"},{k:"分かり",r:"wakari",m:"Anlayış, kavrayış"}]},
-  {n:219,ch:"聞",mn:"Duymak / Sormak",on:["BUN","MON"],kun:["kiku","kikoeru"],or:"OBI formlarında büyütülmüş kulakla elde tutan kişi görülür — 見 (görmek) ile yapısal paralellik kurar. Bronz yazıda 'kulak' ve 'kapı' fonetik unsuru standardize olur.",mm:"👂 KAPIDA BİR KULAK BIRI DİNLİYOR DEMEKTİR",cp:[{k:"新聞",r:"SHINBUN",m:"Gazete"},{k:"聴聞",r:"CHŌMON",m:"Dinleme (resmi)"},{k:"聞き違い",r:"kikichigai",m:"Yanlış duyma"}]},
-  {n:220,ch:"米",mn:"Pirinç / Amerika",on:["BEI","MAI"],kun:["kome"],or:"OBI formu tahıl başaklarının piktogramına dayanır. Katō yatay çizgiyi kavuz olarak görür. 'Amerika' anlamı eski ME okunuşuna dayanır.",mm:"🌾 TAHILLA DOLU AMERİKAN PİRİNÇ BİTKİLERİ",cp:[{k:"米価",r:"BEIKA",m:"Pirinç fiyatı"},{k:"米国",r:"BEIKOKU",m:"Amerika"},{k:"白米",r:"HAKUMAI",m:"Beyaz pirinç"}]}
+  {n:211,ch:"売",mn:"Satmak",on:["BAI"],kun:["uru","ureru"],or:"Geç dönem karakter (Shuowen). Geleneksel form samurai unsurunu (muhtemelen 'sergilemek' için hatalı) ve 'satın almak' unsurunu birleştirir. 'Para karşılığı sergileme ve takas' anlamı üretilmiştir.",mm:"⚔️ EĞRI BACAKLI SAMURAY TEZGAHTA SATIYOR",cp:[{k:"売買",r:"BAIBAI",m:"Alım satım"},{k:"売店",r:"BAITEN",m:"Büfe, stand"},{k:"売り物",r:"urimono",m:"Satılık ürün"}],ex:[{s:"市場で野菜を___っている。",tr:"Pazarda sebze satıyorlar.",b:"売",br:"u"}]},
+  {n:212,ch:"買",mn:"Satın almak",on:["BAI"],kun:["kau"],or:"211'den (satmak) daha eski karakterdir. OBI aşamasından itibaren var. Ogawa 'kabuk para birimi' ve 'ağ' (fonetik, 'almak/edinmek' çağrışımlı) olarak yorumlar. Katō farklı bir analiz önerir.",mm:"🕸️ KABUK KABUĞU ALMAK İÇİN BİR AĞ KULLAN",cp:[{k:"買収",r:"BAISHŪ",m:"Satın alma, rüşvet"},{k:"買い物",r:"kaimono",m:"Alışveriş"},{k:"買い手",r:"kaite",m:"Alıcı"}],ex:[{s:"スーパーで食料を___った。",tr:"Süpermarketten yiyecek satın aldım.",b:"買",br:"ka"}]},
+  {n:213,ch:"麦",mn:"Arpa / Buğday",on:["BAKU"],kun:["mugi"],or:"OBI ve geleneksel formlar. Karlgren ve Ma buğday ya da arpa bitkisinin piktogramı olarak görür. Tōdō ve Ogawa alt kısmı 'inen ayak' olarak yorumlar — 'cennetten verilen buğday'. Pulleyblank alternatif bir görüş önerir.",mm:"🧘 BUĞDAY BİTKİSİ BÜYÜRKEN BAĞDAŞ KURARAK İZLENİR",cp:[{k:"麦芽",r:"BAKUGA",m:"Malt"},{k:"麦茶",r:"mugiCHA",m:"Arpa çayı"},{k:"小麦",r:"komugi",m:"Buğday"}],ex:[{s:"___畑が広がっている。",tr:"Buğday tarlası uzanıyor.",b:"麦",br:"mugi"}]},
+  {n:214,ch:"半",mn:"Yarım / Orta",on:["HAN"],kun:["nakaba"],or:"Bronz ve geleneksel form. Üst kısım 'bölmek' (hem anlamsal hem fonetik) ve alt kısım öküz başının stilize temsilidir. Özgün anlam 'öküz gövdesini ikiye bölmek'; daha geniş 'yarım' anlamı buradan gelir.",mm:"🐂 ÖKÜZ KAFASINI ORTADAN İKİYE BÖLEREK YARIMLARA BÖL",cp:[{k:"半分",r:"HANBUN",m:"Yarım"},{k:"半島",r:"HANTŌ",m:"Yarımada"},{k:"半年",r:"HANtoshi",m:"Yarım yıl"}],ex:[{s:"___分に電車が来る。",tr:"Otuz dakikada tren geliyor.",b:"半",br:"HAN"}]},
+  {n:215,ch:"番",mn:"Numara / Nöbet / Sıra",on:["BAN"],kun:[],or:"Bronz formu genellikle 'tarla' ve 'el tohum saçıyor' anlamında hem fonetik hem anlamsal unsur olarak yorumlanır. Tōdō 'tohumları yaymak' kelime ailesine dahil eder. 'Sıra, numara, nöbet' ödünç kullanımdır.",mm:"🌾 NÖBET BEKLEYEN FAZLA YAPRAKLI PİRİNÇ BİTKİLERİNİ TARLADA KORUR",cp:[{k:"順番",r:"JUNBAN",m:"Sıra, dizi"},{k:"番人",r:"BANNIN",m:"Bekçi, nöbetçi"},{k:"一番",r:"ICHIBAN",m:"Birinci, en iyi"}],ex:[{s:"何___の電車ですか？",tr:"Kaçıncı tren?",b:"番",br:"BAN"}]},
+  {n:216,ch:"父",mn:"Baba",on:["FU"],kun:["chichi"],or:"OBI. Yorumcular bu karakterin taş balta tutan eli tasvir ettiğinde hemfikirdir. 'Baba / babanın neslinden erkek akraba' anlamı fonetik ödünç kullanımdır.",mm:"🪓 BABA İKİ KÜÇÜK ŞEY YÜZÜNdEN KIZgın",cp:[{k:"父母",r:"FUBO",m:"Ebeveynler"},{k:"お父様",r:"otōsama",m:"Baba (saygılı)"},{k:"父親",r:"chichioya",m:"Baba"}],ex:[{s:"___は会社員だ。",tr:"Babam şirket çalışanıdır.",b:"父",br:"chichi"}]},
+  {n:217,ch:"風",mn:"Rüzgar / Tarz",on:["FŪ","FU"],kun:["kaze"],or:"OBI formlarında genellikle bir anka kuşu veya büyük kuş görülür. Şiddetli rüzgarlar antik çağda zararlı bir kuş olarak algılanırdı. Mühür yazısında 'kuş' yerine 'böcek, sürüngen' koyuldu.",mm:"🦟 ŞİK BÖCEĞİ RÜZGAR SÜRÜKLÜYOR",cp:[{k:"風船",r:"FŪSEN",m:"Balon"},{k:"神風",r:"kamikaze",m:"İlahi rüzgar"},{k:"和風",r:"WAFŪ",m:"Japon tarzı"}],ex:[{s:"強い___が吹いている。",tr:"Kuvvetli rüzgar esiyor.",b:"風",br:"kaze"}]},
+  {n:218,ch:"分",mn:"Bölmek / Dakika / Anlamak",on:["BUN","FUN","BU"],kun:["wakaru","wakeru","katsu"],or:"'Bıçak/kesmek' ve 'bölmek' (hem anlamsal hem fonetik) unsurlarından oluşur. Tōdō 'ikiye kesmek' kelime ailesine dahil eder.",mm:"✂️ İKİYE BÖLEBİLECEĞİNİ ANLAYACAKSIN",cp:[{k:"分子",r:"BUNSHI",m:"Molekül"},{k:"一分",r:"IPPUN",m:"Bir dakika"},{k:"分かり",r:"wakari",m:"Anlayış, kavrayış"}],ex:[{s:"十___後に会いましょう。",tr:"On dakika sonra buluşalım.",b:"分",br:"FUN"}]},
+  {n:219,ch:"聞",mn:"Duymak / Sormak",on:["BUN","MON"],kun:["kiku","kikoeru"],or:"OBI formlarında büyütülmüş kulakla elde tutan kişi görülür — 見 (görmek) ile yapısal paralellik kurar. Bronz yazıda 'kulak' ve 'kapı' fonetik unsuru standardize olur.",mm:"👂 KAPIDA BİR KULAK BIRI DİNLİYOR DEMEKTİR",cp:[{k:"新聞",r:"SHINBUN",m:"Gazete"},{k:"聴聞",r:"CHŌMON",m:"Dinleme (resmi)"},{k:"聞き違い",r:"kikichigai",m:"Yanlış duyma"}],ex:[{s:"音楽を___いた。",tr:"Müzik dinledim.",b:"聞",br:"ki"}]},
+  {n:220,ch:"米",mn:"Pirinç / Amerika",on:["BEI","MAI"],kun:["kome"],or:"OBI formu tahıl başaklarının piktogramına dayanır. Katō yatay çizgiyi kavuz olarak görür. 'Amerika' anlamı eski ME okunuşuna dayanır.",mm:"🌾 TAHILLA DOLU AMERİKAN PİRİNÇ BİTKİLERİ",cp:[{k:"米価",r:"BEIKA",m:"Pirinç fiyatı"},{k:"米国",r:"BEIKOKU",m:"Amerika"},{k:"白米",r:"HAKUMAI",m:"Beyaz pirinç"}],ex:[{s:"日本の___はおいしい。",tr:"Japon pirinci lezzetlidir.",b:"米",br:"kome"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

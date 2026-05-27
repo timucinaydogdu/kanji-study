@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:231,ch:"門",mn:"Kapı / Geçit",on:["MON"],kun:["kado"],or:"Kapalı çift yapraklı bir kapı ya da kapının piktogramına dayanır. OBI formu var.",mm:"🚪🚪 ÇİFT KANATLI KAPI",cp:[{k:"正門",r:"SEIMON",m:"Ana kapı"},{k:"門番",r:"MONBAN",m:"Kapıcı, nöbetçi"},{k:"門出",r:"kadode",m:"Yola çıkış"}]},
-  {n:232,ch:"夜",mn:"Gece",on:["YA"],kun:["yo","yoru"],or:"Bronz formda 'ay' ve fonetik unsur (çağrışımı tartışmalı) var. Tōdō 'dönüşümlü şekil ya da desen' kelime ailesine dahil eder — gece ve gündüzün dönüşümü.",mm:"🎩 KİŞİ AYA ÇARPMAMAK İÇİN GECE ŞAPKA TAKIYOR",cp:[{k:"夜光性",r:"YAKŌSEI",m:"Gece aktif, nokturnal"},{k:"夜明け",r:"yoake",m:"Şafak"},{k:"夜昼",r:"yoruhiru",m:"Gece gündüz"}]},
-  {n:233,ch:"野",mn:"Kır / Yabani",on:["YA"],kun:["no"],or:"Mühür yazısından itibaren izlenebilen karakter. 'Köy' ve 'zaten' (fonetik, 'sakin, sessiz' çağrışımlı) unsurlarından oluşur.",mm:"🏘️ KIR ARAZIDE ZATEN KURULU KÖY",cp:[{k:"野生",r:"YASEI",m:"Yabani, vahşi"},{k:"野球",r:"YAKYŪ",m:"Beysbol"},{k:"野原",r:"nohara",m:"Çayır, tarla"}]},
-  {n:234,ch:"友",mn:"Arkadaş",on:["YŪ"],kun:["tomo"],or:"OBI formu iki elin yan yana gelişini gösterir — 'yardım etmek', 'birliktelik' ve dolayısıyla 'arkadaş' anlamlarını taşır.",mm:"🤝 İKİ ELİN BİR ARAYA GELMESİ DOSTLUĞUN İŞARETİDİR",cp:[{k:"友人",r:"YŪJIN",m:"Arkadaş, dost"},{k:"友情",r:"YŪJŌ",m:"Dostluk"},{k:"友達",r:"tomodachi",m:"Arkadaş"}]},
-  {n:235,ch:"用",mn:"Kullanmak",on:["YŌ"],kun:["mochiiru"],or:"OBI formu Shang Hanedanı'nda kurban için zaman zaman kullanılan hayvan ağılını tasvir eder; 'kullanmak' fonetik ödünç kullanım olabilir. Ma bir kova olarak yorumlar.",mm:"🏡 ÇİTLERDEN YARARLAN",cp:[{k:"用事",r:"YŌJI",m:"İş, gidilecek yer"},{k:"用意",r:"YŌUI",m:"Hazırlık"},{k:"悪用",r:"AKUYŌ",m:"Kötüye kullanmak"}]},
-  {n:236,ch:"曜",mn:"Haftanın günü / Parlamak",on:["YŌ"],kun:[],or:"Geç dönem karakter; Shuowen'de yer almaz. 'Haftanın günü' anlamı şöyle açıklanır: 'parlak' (güneş+ay) ile beş gezegen grubu her biri için bir gün oluşturur — Pazar, Pazartesi vb.",mm:"☀️ GÜNEŞ BİR KUŞ GİBİ KANATLANIR — BİR GÜN DAHA GEÇER",cp:[{k:"曜日",r:"YŌbi",m:"Haftanın günü"},{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"七曜",r:"SHICHIYŌ",m:"Haftanın yedi günü"}]},
-  {n:237,ch:"来",mn:"Gelmek",on:["RAI"],kun:["kuru","kitaru","kitasu"],or:"Geleneksel form; OBI. Neredeyse tüm alimler buğday ya da arpa bitkisinin piktogramına dayandığını kabul eder; 'gelmek' için fonetik ödünç kullanım. Modern form 'on tane pirinç tanesi' olarak hatırlanabilir.",mm:"🌾 BUĞDAY ON PIRINÇ TANESİ OLARAK GELIR",cp:[{k:"来月",r:"RAIGETSU",m:"Gelecek ay"},{k:"新来者",r:"SHINRAISHA",m:"Yeni gelen"},{k:"出来事",r:"dekigoto",m:"Olay, hadise"}]},
-  {n:238,ch:"里",mn:"Köy / Ri (mesafe)",on:["RI"],kun:["sato"],or:"Bronz formu 'tarla' ve 'toprak/zemin' unsurlarını içerir; 'tarla biçimindeki arazi' anlamını verir. Yamada 'köy'ü fonetik ödünç kullanım olarak görür. Tōdō 'çizgi çizmek' kelime ailesine dahil eder.",mm:"🌾 TARLALARA BÖLÜNMÜŞ ZEMİN KÖYÜ GÖSTERIR",cp:[{k:"一里",r:"ICHIRI",m:"1 ri (yaklaşık 3.9 km)"},{k:"里子",r:"satogo",m:"Evlatlık çocuk"},{k:"里芋",r:"satoimo",m:"Taro kökü"}]},
-  {n:239,ch:"理",mn:"Neden / Mantık",on:["RI"],kun:[],or:"Geç dönem karakter (Shuowen). 'Mücevher/yeşim' belirleyicisi ve 'köy' (fonetik, 'yeşimi damarına göre kesmek' çağrışımlı) unsurlarından oluşur. 'Organize etmek'ten 'neden, mantık'a genişledi.",mm:"👑 KRAL MANTIKLI BİR NEDENLE KÖYE GELDİ",cp:[{k:"理性",r:"RISEI",m:"Akılcılık, mantık"},{k:"無理",r:"MURI",m:"Makul olmayan, imkansız"},{k:"理由",r:"RIYŪ",m:"Neden, gerekçe"}]},
-  {n:240,ch:"話",mn:"Konuşma / Anlatmak",on:["WA"],kun:["hanashi","hanasu"],or:"Geç dönem karakter (Shuowen). Sol unsur 'kelimeler, konuşmak'. Katō sağ unsuru 'dil' (fonetik, 'iyi') olarak yorumlar. Tōdō 'bir araya gelmek' kelime ailesini temel alır.",mm:"👅 DİL KELİMELERİ KONUŞMADA KULLANIR",cp:[{k:"会話",r:"KAIWA",m:"Konuşma, diyalog"},{k:"話題",r:"WADAI",m:"Konuşma konusu"},{k:"小話",r:"kobanashi",m:"Kısa hikaye, fıkra"}]}
+  {n:231,ch:"門",mn:"Kapı / Geçit",on:["MON"],kun:["kado"],or:"Kapalı çift yapraklı bir kapı ya da kapının piktogramına dayanır. OBI formu var.",mm:"🚪🚪 ÇİFT KANATLI KAPI",cp:[{k:"正門",r:"SEIMON",m:"Ana kapı"},{k:"門番",r:"MONBAN",m:"Kapıcı, nöbetçi"},{k:"門出",r:"kadode",m:"Yola çıkış"}],ex:[{s:"校___を入った。",tr:"Okul kapısından girdim.",b:"門",br:"MON"}]},
+  {n:232,ch:"夜",mn:"Gece",on:["YA"],kun:["yo","yoru"],or:"Bronz formda 'ay' ve fonetik unsur (çağrışımı tartışmalı) var. Tōdō 'dönüşümlü şekil ya da desen' kelime ailesine dahil eder — gece ve gündüzün dönüşümü.",mm:"🎩 KİŞİ AYA ÇARPMAMAK İÇİN GECE ŞAPKA TAKIYOR",cp:[{k:"夜光性",r:"YAKŌSEI",m:"Gece aktif, nokturnal"},{k:"夜明け",r:"yoake",m:"Şafak"},{k:"夜昼",r:"yoruhiru",m:"Gece gündüz"}],ex:[{s:"___に星を見た。",tr:"Gece yıldızlara baktım.",b:"夜",br:"yoru"}]},
+  {n:233,ch:"野",mn:"Kır / Yabani",on:["YA"],kun:["no"],or:"Mühür yazısından itibaren izlenebilen karakter. 'Köy' ve 'zaten' (fonetik, 'sakin, sessiz' çağrışımlı) unsurlarından oluşur.",mm:"🏘️ KIR ARAZIDE ZATEN KURULU KÖY",cp:[{k:"野生",r:"YASEI",m:"Yabani, vahşi"},{k:"野球",r:"YAKYŪ",m:"Beysbol"},{k:"野原",r:"nohara",m:"Çayır, tarla"}],ex:[{s:"___原を走り回った。",tr:"Çayırda koşuşturdum.",b:"野",br:"no"}]},
+  {n:234,ch:"友",mn:"Arkadaş",on:["YŪ"],kun:["tomo"],or:"OBI formu iki elin yan yana gelişini gösterir — 'yardım etmek', 'birliktelik' ve dolayısıyla 'arkadaş' anlamlarını taşır.",mm:"🤝 İKİ ELİN BİR ARAYA GELMESİ DOSTLUĞUN İŞARETİDİR",cp:[{k:"友人",r:"YŪJIN",m:"Arkadaş, dost"},{k:"友情",r:"YŪJŌ",m:"Dostluk"},{k:"友達",r:"tomodachi",m:"Arkadaş"}],ex:[{s:"___達と公園で遊んだ。",tr:"Arkadaşlarımla parkta oynadım.",b:"友",br:"tomo"}]},
+  {n:235,ch:"用",mn:"Kullanmak",on:["YŌ"],kun:["mochiiru"],or:"OBI formu Shang Hanedanı'nda kurban için zaman zaman kullanılan hayvan ağılını tasvir eder; 'kullanmak' fonetik ödünç kullanım olabilir. Ma bir kova olarak yorumlar.",mm:"🏡 ÇİTLERDEN YARARLAN",cp:[{k:"用事",r:"YŌJI",m:"İş, gidilecek yer"},{k:"用意",r:"YŌUI",m:"Hazırlık"},{k:"悪用",r:"AKUYŌ",m:"Kötüye kullanmak"}],ex:[{s:"何の___ですか？",tr:"Ne işiniz var?",b:"用",br:"YŌ"}]},
+  {n:236,ch:"曜",mn:"Haftanın günü / Parlamak",on:["YŌ"],kun:[],or:"Geç dönem karakter; Shuowen'de yer almaz. 'Haftanın günü' anlamı şöyle açıklanır: 'parlak' (güneş+ay) ile beş gezegen grubu her biri için bir gün oluşturur — Pazar, Pazartesi vb.",mm:"☀️ GÜNEŞ BİR KUŞ GİBİ KANATLANIR — BİR GÜN DAHA GEÇER",cp:[{k:"曜日",r:"YŌbi",m:"Haftanın günü"},{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"七曜",r:"SHICHIYŌ",m:"Haftanın yedi günü"}],ex:[{s:"何___日ですか？",tr:"Haftanın hangi günü?",b:"曜",br:"YŌ"}]},
+  {n:237,ch:"来",mn:"Gelmek",on:["RAI"],kun:["kuru","kitaru","kitasu"],or:"Geleneksel form; OBI. Neredeyse tüm alimler buğday ya da arpa bitkisinin piktogramına dayandığını kabul eder; 'gelmek' için fonetik ödünç kullanım. Modern form 'on tane pirinç tanesi' olarak hatırlanabilir.",mm:"🌾 BUĞDAY ON PIRINÇ TANESİ OLARAK GELIR",cp:[{k:"来月",r:"RAIGETSU",m:"Gelecek ay"},{k:"新来者",r:"SHINRAISHA",m:"Yeni gelen"},{k:"出来事",r:"dekigoto",m:"Olay, hadise"}],ex:[{s:"___週また会おう。",tr:"Haftaya yine buluşalım.",b:"来",br:"RAI"}]},
+  {n:238,ch:"里",mn:"Köy / Ri (mesafe)",on:["RI"],kun:["sato"],or:"Bronz formu 'tarla' ve 'toprak/zemin' unsurlarını içerir; 'tarla biçimindeki arazi' anlamını verir. Yamada 'köy'ü fonetik ödünç kullanım olarak görür. Tōdō 'çizgi çizmek' kelime ailesine dahil eder.",mm:"🌾 TARLALARA BÖLÜNMÜŞ ZEMİN KÖYÜ GÖSTERIR",cp:[{k:"一里",r:"ICHIRI",m:"1 ri (yaklaşık 3.9 km)"},{k:"里子",r:"satogo",m:"Evlatlık çocuk"},{k:"里芋",r:"satoimo",m:"Taro kökü"}],ex:[{s:"故___に帰った。",tr:"Memleketime döndüm.",b:"里",br:"sato"}]},
+  {n:239,ch:"理",mn:"Neden / Mantık",on:["RI"],kun:[],or:"Geç dönem karakter (Shuowen). 'Mücevher/yeşim' belirleyicisi ve 'köy' (fonetik, 'yeşimi damarına göre kesmek' çağrışımlı) unsurlarından oluşur. 'Organize etmek'ten 'neden, mantık'a genişledi.",mm:"👑 KRAL MANTIKLI BİR NEDENLE KÖYE GELDİ",cp:[{k:"理性",r:"RISEI",m:"Akılcılık, mantık"},{k:"無理",r:"MURI",m:"Makul olmayan, imkansız"},{k:"理由",r:"RIYŪ",m:"Neden, gerekçe"}],ex:[{s:"料___を作った。",tr:"Yemek yaptım.",b:"理",br:"RI"}]},
+  {n:240,ch:"話",mn:"Konuşma / Anlatmak",on:["WA"],kun:["hanashi","hanasu"],or:"Geç dönem karakter (Shuowen). Sol unsur 'kelimeler, konuşmak'. Katō sağ unsuru 'dil' (fonetik, 'iyi') olarak yorumlar. Tōdō 'bir araya gelmek' kelime ailesini temel alır.",mm:"👅 DİL KELİMELERİ KONUŞMADA KULLANIR",cp:[{k:"会話",r:"KAIWA",m:"Konuşma, diyalog"},{k:"話題",r:"WADAI",m:"Konuşma konusu"},{k:"小話",r:"kobanashi",m:"Kısa hikaye, fıkra"}],ex:[{s:"電___で話した。",tr:"Telefonla konuştum.",b:"話",br:"hanashi"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

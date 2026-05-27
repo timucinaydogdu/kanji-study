@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:121,ch:"古",mn:"Eski",on:["KO"],kun:["furui"],or:"OBI ve tipik bronz formlar tartışmalıdır. Katō ve Tōdō eski kafatasını tasvir eder; Katō antik Çin'de kafatasların ölülerin ruhlarını temsil ettiğini belirtir. Shirakawa ise kalkanın üzerinde dua kabını gösterir.",mm:"💀 AĞIZDA ON KEZ ANLATILAN ESKİ MASAL",cp:[{k:"復古",r:"FUKKO",m:"Restorasyon, eski haline getirme"},{k:"古着",r:"furugi",m:"Eski kıyafet"},{k:"考古学",r:"KŌKOGAKU",m:"Arkeoloji"}]},
-  {n:122,ch:"午",mn:"Öğlen",on:["GO"],kun:[],or:"Bir havaneli piktogramına dayanır. On iki Yer Dalı bağlamında 'at saati' ile ilişkilendirilir; sabah 11'den öğleden sonra 1'e kadar olan iki saatlik dilimidir — dolayısıyla 'öğlen' anlamı.",mm:"🐄 İNEK ÖĞLEN BOYNUZUNUN UCU KIRILDI",cp:[{k:"午後",r:"GOGO",m:"Öğleden sonra"},{k:"午前",r:"GOZEN",m:"Öğleden önce"},{k:"正午",r:"SHŌGO",m:"Tam öğlen"}]},
-  {n:123,ch:"後",mn:"Arkası / Sonra",on:["GO","KŌ"],kun:["ushiro","ato","nochi","okureru"],or:"Bronz ve mühür formları çeşitli şekillerde analiz edilir. Bir görüşe göre 'geri gitmek' anlamını taşır; 'ince iplik' fonetik unsur olarak 'gitmek' çağrışımıyla yer alır.",mm:"🦟 BAĞLAMA YOLUNDA BAĞDAŞ KURARAK GERİDE KALIRSIN",cp:[{k:"以後",r:"IGO",m:"Bundan sonra"},{k:"後半",r:"KŌHAN",m:"İkinci yarı"},{k:"後味",r:"atoaji",m:"Sonradan kalan tat"}]},
-  {n:124,ch:"語",mn:"Söylemek / Dil",on:["GO"],kun:["kataru"],or:"Bronz ve Shuowen formları 'kelimeler, dil' ve 'ben/biz' anlamındaki fonetik unsuru içerir. Tōdō 'sözel savunma yapmak' ya da 'alışveriş yapmak' çağrışımıyla açıklar.",mm:"💬 BEŞ AĞIZ ÇOK KELIME KONUŞUR",cp:[{k:"語調",r:"GOCHŌ",m:"Konuşma tonu"},{k:"物語",r:"monogatari",m:"Hikaye, destan"},{k:"日本語",r:"NIHONGO",m:"Japonca"}]},
-  {n:125,ch:"工",mn:"İş / Çalışma",on:["KŌ","KU"],kun:[],or:"Ma OBI formunu balta başı olarak görür; Katō benzer şekilde balta olarak yorumlar. Shirakawa başka bir alet olarak değerlendirir. Bronz aşamada modern formunu kazandı.",mm:"📐 MARANGOZUN GÖNYESİYLE ÇALIŞMAK",cp:[{k:"工場",r:"KŌJŌ",m:"Fabrika"},{k:"人工",r:"JINKŌ",m:"Yapay, insan yapımı"},{k:"大工",r:"DAIKU",m:"Marangoz, dülger"}]},
-  {n:126,ch:"公",mn:"Kamuya ait / Adil / Lord",on:["KŌ"],kun:["ōyake"],or:"OBI ve mühür formları tartışmalıdır. Bir görüş 'sekiz'i orijinal anlamıyla 'bölmek, açmak' ve alt unsuru 'çevrelemek' olarak değerlendirir. Shirakawa saray törenleri için duvar içi alan olarak yorumlar.",mm:"👃 SEKİZ LORD BURNU KAMUDA GÖSTERIR",cp:[{k:"公共",r:"KŌKYŌ",m:"Kamu, kamusal"},{k:"公平",r:"KŌHEI",m:"Adalet, tarafsızlık"},{k:"公園",r:"KŌEN",m:"Park"}]},
-  {n:127,ch:"広",mn:"Geniş / Ferah",on:["KŌ"],kun:["hiroi","hirogeru","hirogaru"],or:"Bronz ve geleneksel formlar anlamsal-fonetik bileşik kategorisindedir. Qiu belirleyiciyi 'bir tür yapı', fonetik unsuru ise 'yayılmak' çağrışımlı olarak değerlendirir.",mm:"👃 İÇİNDE DOLAŞILACAK GENİŞ BİNA",cp:[{k:"広大",r:"KŌDAI",m:"Geniş, muazzam"},{k:"広島",r:"Hiroshima",m:"Hiroshima (yer adı)"},{k:"広告",r:"KŌKOKU",m:"Reklam"}]},
-  {n:128,ch:"交",mn:"Karışmak / Alışveriş",on:["KŌ"],kun:["majiru","kawasu"],or:"OBI ve bronz formlar bacak bacak üstüne atmış bir kişiyi gösterir — 'alışveriş' gibi genişletilmiş anlamları getirir. Modern form altı (六) üzerinde haç olarak hatırlanabilir.",mm:"✖️ ALTI HAÇI KARIŞTIR — DÜRÜST DEĞİŞ TOKUŞ",cp:[{k:"交通",r:"KŌTSŪ",m:"Trafik, ulaşım"},{k:"外交",r:"GAIKŌ",m:"Diplomasi"},{k:"交換",r:"KŌKAN",m:"Değiş tokuş"}]},
-  {n:129,ch:"光",mn:"Işık / Parlamak",on:["KŌ"],kun:["hikari","hikaru"],or:"OBI, bronz ve mühür formları bir kişinin başı üzerindeki alevleri gösterir — 'ışık' anlamı. Mühür aşamasında alt unsur 'kişi' olarak değiştirildi.",mm:"🔥 KİŞİNİN DÜZ KAFASI ÜZERİNDE TEK ALEVLERİ YANAR",cp:[{k:"日光",r:"NIKKŌ",m:"Güneş ışığı"},{k:"光年",r:"KŌNEN",m:"Işık yılı"},{k:"光学",r:"KŌGAKU",m:"Optik"}]},
-  {n:130,ch:"考",mn:"Düşünmek / Değerlendirmek",on:["KŌ"],kun:["kangaeru"],or:"OBI ve mühür formları 638 (yaşlı, ihtiyar) ile neredeyse aynıdır; eğri sırtlı, uzun saçlı, bastona dayanan yaşlı birini tasvir eder. Bronz aşamada alt unsur fonetik olarak değişti. Sonradan 'değerlendirmek' anlamı için fonetik ödünç kullanım oldu.",mm:"👴 EĞRİ YAŞLI ADAM TOPRAĞI DEĞERLENDİRİR",cp:[{k:"考案",r:"KŌAN",m:"Fikir, plan"},{k:"参考",r:"SANKŌ",m:"Referans, başvuru"},{k:"考え事",r:"kangaegoto",m:"Merak, endişe"}]}
+  {n:121,ch:"古",mn:"Eski",on:["KO"],kun:["furui"],or:"OBI ve tipik bronz formlar tartışmalıdır. Katō ve Tōdō eski kafatasını tasvir eder; Katō antik Çin'de kafatasların ölülerin ruhlarını temsil ettiğini belirtir. Shirakawa ise kalkanın üzerinde dua kabını gösterir.",mm:"💀 AĞIZDA ON KEZ ANLATILAN ESKİ MASAL",cp:[{k:"復古",r:"FUKKO",m:"Restorasyon, eski haline getirme"},{k:"古着",r:"furugi",m:"Eski kıyafet"},{k:"考古学",r:"KŌKOGAKU",m:"Arkeoloji"}],ex:[{s:"___い本を読んだ。",tr:"Eski bir kitap okudum.",b:"古",br:"furu"}]},
+  {n:122,ch:"午",mn:"Öğlen",on:["GO"],kun:[],or:"Bir havaneli piktogramına dayanır. On iki Yer Dalı bağlamında 'at saati' ile ilişkilendirilir; sabah 11'den öğleden sonra 1'e kadar olan iki saatlik dilimidir — dolayısıyla 'öğlen' anlamı.",mm:"🐄 İNEK ÖĞLEN BOYNUZUNUN UCU KIRILDI",cp:[{k:"午後",r:"GOGO",m:"Öğleden sonra"},{k:"午前",r:"GOZEN",m:"Öğleden önce"},{k:"正午",r:"SHŌGO",m:"Tam öğlen"}],ex:[{s:"___後に友達に会う。",tr:"Öğleden sonra arkadaşımla buluşacağım.",b:"午",br:"GO"}]},
+  {n:123,ch:"後",mn:"Arkası / Sonra",on:["GO","KŌ"],kun:["ushiro","ato","nochi","okureru"],or:"Bronz ve mühür formları çeşitli şekillerde analiz edilir. Bir görüşe göre 'geri gitmek' anlamını taşır; 'ince iplik' fonetik unsur olarak 'gitmek' çağrışımıyla yer alır.",mm:"🦟 BAĞLAMA YOLUNDA BAĞDAŞ KURARAK GERİDE KALIRSIN",cp:[{k:"以後",r:"IGO",m:"Bundan sonra"},{k:"後半",r:"KŌHAN",m:"İkinci yarı"},{k:"後味",r:"atoaji",m:"Sonradan kalan tat"}],ex:[{s:"授業の___で話しましょう。",tr:"Dersten sonra konuşalım.",b:"後",br:"ato"}]},
+  {n:124,ch:"語",mn:"Söylemek / Dil",on:["GO"],kun:["kataru"],or:"Bronz ve Shuowen formları 'kelimeler, dil' ve 'ben/biz' anlamındaki fonetik unsuru içerir. Tōdō 'sözel savunma yapmak' ya da 'alışveriş yapmak' çağrışımıyla açıklar.",mm:"💬 BEŞ AĞIZ ÇOK KELIME KONUŞUR",cp:[{k:"語調",r:"GOCHŌ",m:"Konuşma tonu"},{k:"物語",r:"monogatari",m:"Hikaye, destan"},{k:"日本語",r:"NIHONGO",m:"Japonca"}],ex:[{s:"日本___を勉強している。",tr:"Japonca çalışıyorum.",b:"語",br:"GO"}]},
+  {n:125,ch:"工",mn:"İş / Çalışma",on:["KŌ","KU"],kun:[],or:"Ma OBI formunu balta başı olarak görür; Katō benzer şekilde balta olarak yorumlar. Shirakawa başka bir alet olarak değerlendirir. Bronz aşamada modern formunu kazandı.",mm:"📐 MARANGOZUN GÖNYESİYLE ÇALIŞMAK",cp:[{k:"工場",r:"KŌJŌ",m:"Fabrika"},{k:"人工",r:"JINKŌ",m:"Yapay, insan yapımı"},{k:"大工",r:"DAIKU",m:"Marangoz, dülger"}],ex:[{s:"___場で働いている。",tr:"Fabrikada çalışıyorum.",b:"工",br:"KŌ"}]},
+  {n:126,ch:"公",mn:"Kamuya ait / Adil / Lord",on:["KŌ"],kun:["ōyake"],or:"OBI ve mühür formları tartışmalıdır. Bir görüş 'sekiz'i orijinal anlamıyla 'bölmek, açmak' ve alt unsuru 'çevrelemek' olarak değerlendirir. Shirakawa saray törenleri için duvar içi alan olarak yorumlar.",mm:"👃 SEKİZ LORD BURNU KAMUDA GÖSTERIR",cp:[{k:"公共",r:"KŌKYŌ",m:"Kamu, kamusal"},{k:"公平",r:"KŌHEI",m:"Adalet, tarafsızlık"},{k:"公園",r:"KŌEN",m:"Park"}],ex:[{s:"___園でピクニックをした。",tr:"Parkta piknik yaptık.",b:"公",br:"KŌ"}]},
+  {n:127,ch:"広",mn:"Geniş / Ferah",on:["KŌ"],kun:["hiroi","hirogeru","hirogaru"],or:"Bronz ve geleneksel formlar anlamsal-fonetik bileşik kategorisindedir. Qiu belirleyiciyi 'bir tür yapı', fonetik unsuru ise 'yayılmak' çağrışımlı olarak değerlendirir.",mm:"👃 İÇİNDE DOLAŞILACAK GENİŞ BİNA",cp:[{k:"広大",r:"KŌDAI",m:"Geniş, muazzam"},{k:"広島",r:"Hiroshima",m:"Hiroshima (yer adı)"},{k:"広告",r:"KŌKOKU",m:"Reklam"}],ex:[{s:"___い部屋に引っ越した。",tr:"Geniş bir odaya taşındım.",b:"広",br:"hiro"}]},
+  {n:128,ch:"交",mn:"Karışmak / Alışveriş",on:["KŌ"],kun:["majiru","kawasu"],or:"OBI ve bronz formlar bacak bacak üstüne atmış bir kişiyi gösterir — 'alışveriş' gibi genişletilmiş anlamları getirir. Modern form altı (六) üzerinde haç olarak hatırlanabilir.",mm:"✖️ ALTI HAÇI KARIŞTIR — DÜRÜST DEĞİŞ TOKUŞ",cp:[{k:"交通",r:"KŌTSŪ",m:"Trafik, ulaşım"},{k:"外交",r:"GAIKŌ",m:"Diplomasi"},{k:"交換",r:"KŌKAN",m:"Değiş tokuş"}],ex:[{s:"___差点で止まった。",tr:"Kavşakta durdum.",b:"交",br:"KŌ"}]},
+  {n:129,ch:"光",mn:"Işık / Parlamak",on:["KŌ"],kun:["hikari","hikaru"],or:"OBI, bronz ve mühür formları bir kişinin başı üzerindeki alevleri gösterir — 'ışık' anlamı. Mühür aşamasında alt unsur 'kişi' olarak değiştirildi.",mm:"🔥 KİŞİNİN DÜZ KAFASI ÜZERİNDE TEK ALEVLERİ YANAR",cp:[{k:"日光",r:"NIKKŌ",m:"Güneş ışığı"},{k:"光年",r:"KŌNEN",m:"Işık yılı"},{k:"光学",r:"KŌGAKU",m:"Optik"}],ex:[{s:"太陽の___が眩しい。",tr:"Güneşin ışığı göz kamaştırıyor.",b:"光",br:"hikari"}]},
+  {n:130,ch:"考",mn:"Düşünmek / Değerlendirmek",on:["KŌ"],kun:["kangaeru"],or:"OBI ve mühür formları 638 (yaşlı, ihtiyar) ile neredeyse aynıdır; eğri sırtlı, uzun saçlı, bastona dayanan yaşlı birini tasvir eder. Bronz aşamada alt unsur fonetik olarak değişti. Sonradan 'değerlendirmek' anlamı için fonetik ödünç kullanım oldu.",mm:"👴 EĞRİ YAŞLI ADAM TOPRAĞI DEĞERLENDİRİR",cp:[{k:"考案",r:"KŌAN",m:"Fikir, plan"},{k:"参考",r:"SANKŌ",m:"Referans, başvuru"},{k:"考え事",r:"kangaegoto",m:"Merak, endişe"}],ex:[{s:"よく___えてから決める。",tr:"İyi düşündükten sonra karar veririm.",b:"考",br:"kanga"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

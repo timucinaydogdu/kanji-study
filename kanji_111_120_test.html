@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:111,ch:"強",mn:"Güçlü / Zorlamak",on:["KYŌ","GŌ"],kun:["shiiru","tsuyoi"],or:"Qiu'ya göre aslen bir 'böcek' türüne atıfta bulunur; daha karmaşık şekilli başka bir grafik için ikame olarak kullanıldı. Güçlü yay anlamından 'sağlam, güçlü' anlamı türedi.",mm:"🏹 GÜÇLÜ YAY BÖCEĞİN BURNUNA NIŞAN ALIR",cp:[{k:"勉強",r:"BENKYŌ",m:"Çalışmak, ders çalışmak"},{k:"強盗",r:"GŌTŌ",m:"Hırsız, soyguncu"},{k:"強み",r:"tsuyomi",m:"Güçlü yön"}]},
-  {n:112,ch:"教",mn:"Öğretmek",on:["KYŌ"],kun:["oshieru"],or:"OBI ve bronz formlara göre tavan kirişleri (bir binayı temsil eder), çocuk ve sopa tutan el unsurlarından oluşur. Çocukların zorlama yoluyla eğitildiği bir okulu tasvir eder. Modern form 'yaşlı adam' belirleyicisini içerir.",mm:"👴 SOPA TUTAN YAŞLI ADAM ÇOCUĞA KİRİŞLERİ SAYDIRIYOR",cp:[{k:"教会",r:"KYŌKAI",m:"Kilise"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"教え子",r:"oshiego",m:"Öğrenci, talebe"}]},
-  {n:113,ch:"近",mn:"Yakın",on:["KIN"],kun:["chikai"],or:"Mühür formu 'yol boyunca yürümek' ve 'balta' (fonetik, 'biraz' çağrışımlı) unsurlarından oluşur. 'Yakın' anlamı 'kısa mesafe yürümek'ten genişletilmiştir.",mm:"🪓 YAKININDA BİR BALTA VAR",cp:[{k:"近所",r:"KINJO",m:"Mahalle, komşuluk"},{k:"最近",r:"SAIKIN",m:"Son zamanlarda"},{k:"近道",r:"chikamichi",m:"Kısa yol"}]},
-  {n:114,ch:"兄",mn:"Ağabey",on:["KEI","KYŌ"],kun:["ani"],or:"OBI formlarında alt unsur 'kişi' ya da 'diz çökmüş kişiyi' temsil eder. Bazı yorumlar büyük başlı çocuğu; diğerleri yüksek sesle konuşan kişiyi tasvir eder.",mm:"👦 AĞABEY SADECE AĞIZ VE BACAKLARDAN İBARETTİR",cp:[{k:"父兄",r:"FUKEI",m:"Veliler, koruyucular"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"},{k:"お兄さん",r:"niisan",m:"Ağabey (saygılı)"}]},
-  {n:115,ch:"形",mn:"Şekil / Biçim",on:["KEI","GYŌ"],kun:["kata","katachi"],or:"Mühür formları göreceli geç döneme aittir (Shuowen). 'Renk, fırça deseni' belirleyicisi ve 'kuyu' şeklindeki sol unsuru içerir. Yorumlar 'yazı fırçası kılları' ile 'çerçeve veya kalıp' arasında değişir.",mm:"🔲 ÜÇ ÇİZGİ KAFES ŞEKLININ YANINDA BELİRGİN BİR ŞEKİL OLUŞTURUR",cp:[{k:"形式的",r:"KEISHIKITEKI",m:"Biçimsel, resmi"},{k:"人形",r:"NINGYŌ",m:"Bebek, kukla"},{k:"形見",r:"katami",m:"Hatıra eşyası"}]},
-  {n:116,ch:"計",mn:"Ölçmek / Hesaplamak",on:["KEI"],kun:["hakaru"],or:"Geç dönem kaynaklara göre 'kelimeler' ve 'on' unsurlarından oluşur. 'Onlarla saymak hesaplamayı kolaylaştırır' şeklinde yorumlanır. Shirakawa sağ unsuru falcılık pratiğiyle ilişkilendirir.",mm:"🔟 ONLARLA SAYMAK ÖLÇMEYI KOLAYLAŞTIRIR",cp:[{k:"合計",r:"GŌKEI",m:"Toplam"},{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"速度計",r:"SOKUDOKEI",m:"Hız göstergesi"}]},
-  {n:117,ch:"元",mn:"Köken / Kaynak",on:["GEN","GAN"],kun:["moto"],or:"OBI ve bronz formlar büyük başlı bir kişinin yan görünümünü tasvir eder; 'baş' ve 'başlangıç' anlamlarını iletir. Modern formda 'kişi' unsuru kullanılır.",mm:"👤 AYNI KÖKENDEKİ İKİ EĞİLMİŞ KİŞİ",cp:[{k:"元気",r:"GENKI",m:"Sağlık, enerji"},{k:"元来",r:"GANRAI",m:"Başlangıçta, aslen"},{k:"元通り",r:"motodōri",m:"Eskisi gibi"}]},
-  {n:118,ch:"言",mn:"Kelime / Söylemek",on:["GEN","GON"],kun:["koto","iu"],or:"Tipik OBI formu. Yorumlar değişir: bir flüt piktogramı (Karlgren, Ma) ya da 'ağız' ve çeşitli fonetik unsurlar. Shirakawa bunu yemin töreninde dövme yapan iğneyi temsil eder şeklinde yorumlar.",mm:"💬 AĞIZ BİRKAÇ KELİME SÖYLER",cp:[{k:"発言",r:"HATSUGEN",m:"Açıklama, beyan"},{k:"無言",r:"MUGON",m:"Sessizlik, suskunluk"},{k:"言葉",r:"kotoba",m:"Kelime, dil"}]},
-  {n:119,ch:"原",mn:"Düzlük / Köken",on:["GEN"],kun:["hara"],or:"Bronz formlar bir uçurumun eteklerinden fışkıran pınarı tasvir eder. Zamanla 'düzlük, açık arazi' anlamı baskın hale geldi; bu ödünç alınmış bir anlamdır.",mm:"🏔️ ASLEN KÜÇÜK BEYAZ PINARLI UÇURUM, ŞİMDİ DÜZLÜK",cp:[{k:"原子",r:"GENSHI",m:"Atom"},{k:"原文",r:"GENBUN",m:"Özgün metin"},{k:"草原",r:"kusahara",m:"Çimenlik, otlak"}]},
-  {n:120,ch:"戸",mn:"Kapı",on:["KO"],kun:["to"],or:"OBI ve bronz piktograflar tek yapraklı bir kapıyı tasvir eder. Çift yapraklı kapı ya da kapı (231) modern formda ayrı bir karakterle temsil edilir. Üst yatay çizgi tavan olarak hatırlanabilir.",mm:"🚪 TAVAN ALTINDA TEK YAPRAKLI KAPI",cp:[{k:"戸外",r:"KOGAI",m:"Açık hava, dışarısı"},{k:"戸主",r:"KOSHU",m:"Ev reisi"},{k:"戸口",r:"toguchi",m:"Kapı girişi"}]}
+  {n:111,ch:"強",mn:"Güçlü / Zorlamak",on:["KYŌ","GŌ"],kun:["shiiru","tsuyoi"],or:"Qiu'ya göre aslen bir 'böcek' türüne atıfta bulunur; daha karmaşık şekilli başka bir grafik için ikame olarak kullanıldı. Güçlü yay anlamından 'sağlam, güçlü' anlamı türedi.",mm:"🏹 GÜÇLÜ YAY BÖCEĞİN BURNUNA NIŞAN ALIR",cp:[{k:"勉強",r:"BENKYŌ",m:"Çalışmak, ders çalışmak"},{k:"強盗",r:"GŌTŌ",m:"Hırsız, soyguncu"},{k:"強み",r:"tsuyomi",m:"Güçlü yön"}],ex:[{s:"___い風が吹いた。",tr:"Kuvvetli rüzgar esti.",b:"強",br:"tsuyo"}]},
+  {n:112,ch:"教",mn:"Öğretmek",on:["KYŌ"],kun:["oshieru"],or:"OBI ve bronz formlara göre tavan kirişleri (bir binayı temsil eder), çocuk ve sopa tutan el unsurlarından oluşur. Çocukların zorlama yoluyla eğitildiği bir okulu tasvir eder. Modern form 'yaşlı adam' belirleyicisini içerir.",mm:"👴 SOPA TUTAN YAŞLI ADAM ÇOCUĞA KİRİŞLERİ SAYDIRIYOR",cp:[{k:"教会",r:"KYŌKAI",m:"Kilise"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"教え子",r:"oshiego",m:"Öğrenci, talebe"}],ex:[{s:"先生が数学を___えた。",tr:"Öğretmen matematik öğretti.",b:"教",br:"oshi"}]},
+  {n:113,ch:"近",mn:"Yakın",on:["KIN"],kun:["chikai"],or:"Mühür formu 'yol boyunca yürümek' ve 'balta' (fonetik, 'biraz' çağrışımlı) unsurlarından oluşur. 'Yakın' anlamı 'kısa mesafe yürümek'ten genişletilmiştir.",mm:"🪓 YAKININDA BİR BALTA VAR",cp:[{k:"近所",r:"KINJO",m:"Mahalle, komşuluk"},{k:"最近",r:"SAIKIN",m:"Son zamanlarda"},{k:"近道",r:"chikamichi",m:"Kısa yol"}],ex:[{s:"駅の___くに住んでいる。",tr:"İstasyona yakın yerde yaşıyorum.",b:"近",br:"chika"}]},
+  {n:114,ch:"兄",mn:"Ağabey",on:["KEI","KYŌ"],kun:["ani"],or:"OBI formlarında alt unsur 'kişi' ya da 'diz çökmüş kişiyi' temsil eder. Bazı yorumlar büyük başlı çocuğu; diğerleri yüksek sesle konuşan kişiyi tasvir eder.",mm:"👦 AĞABEY SADECE AĞIZ VE BACAKLARDAN İBARETTİR",cp:[{k:"父兄",r:"FUKEI",m:"Veliler, koruyucular"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"},{k:"お兄さん",r:"niisan",m:"Ağabey (saygılı)"}],ex:[{s:"___は大学生だ。",tr:"Ağabeyim üniversite öğrencisi.",b:"兄",br:"ani"}]},
+  {n:115,ch:"形",mn:"Şekil / Biçim",on:["KEI","GYŌ"],kun:["kata","katachi"],or:"Mühür formları göreceli geç döneme aittir (Shuowen). 'Renk, fırça deseni' belirleyicisi ve 'kuyu' şeklindeki sol unsuru içerir. Yorumlar 'yazı fırçası kılları' ile 'çerçeve veya kalıp' arasında değişir.",mm:"🔲 ÜÇ ÇİZGİ KAFES ŞEKLININ YANINDA BELİRGİN BİR ŞEKİL OLUŞTURUR",cp:[{k:"形式的",r:"KEISHIKITEKI",m:"Biçimsel, resmi"},{k:"人形",r:"NINGYŌ",m:"Bebek, kukla"},{k:"形見",r:"katami",m:"Hatıra eşyası"}],ex:[{s:"丸い___のケーキだ。",tr:"Yuvarlak şekilli kek.",b:"形",br:"katachi"}]},
+  {n:116,ch:"計",mn:"Ölçmek / Hesaplamak",on:["KEI"],kun:["hakaru"],or:"Geç dönem kaynaklara göre 'kelimeler' ve 'on' unsurlarından oluşur. 'Onlarla saymak hesaplamayı kolaylaştırır' şeklinde yorumlanır. Shirakawa sağ unsuru falcılık pratiğiyle ilişkilendirir.",mm:"🔟 ONLARLA SAYMAK ÖLÇMEYI KOLAYLAŞTIRIR",cp:[{k:"合計",r:"GŌKEI",m:"Toplam"},{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"速度計",r:"SOKUDOKEI",m:"Hız göstergesi"}],ex:[{s:"時___で時間を確認する。",tr:"Saatimle zamanı kontrol ediyorum.",b:"計",br:"KEI"}]},
+  {n:117,ch:"元",mn:"Köken / Kaynak",on:["GEN","GAN"],kun:["moto"],or:"OBI ve bronz formlar büyük başlı bir kişinin yan görünümünü tasvir eder; 'baş' ve 'başlangıç' anlamlarını iletir. Modern formda 'kişi' unsuru kullanılır.",mm:"👤 AYNI KÖKENDEKİ İKİ EĞİLMİŞ KİŞİ",cp:[{k:"元気",r:"GENKI",m:"Sağlık, enerji"},{k:"元来",r:"GANRAI",m:"Başlangıçta, aslen"},{k:"元通り",r:"motodōri",m:"Eskisi gibi"}],ex:[{s:"___気な声で返事をした。",tr:"Enerjik bir sesle cevap verdim.",b:"元",br:"GEN"}]},
+  {n:118,ch:"言",mn:"Kelime / Söylemek",on:["GEN","GON"],kun:["koto","iu"],or:"Tipik OBI formu. Yorumlar değişir: bir flüt piktogramı (Karlgren, Ma) ya da 'ağız' ve çeşitli fonetik unsurlar. Shirakawa bunu yemin töreninde dövme yapan iğneyi temsil eder şeklinde yorumlar.",mm:"💬 AĞIZ BİRKAÇ KELİME SÖYLER",cp:[{k:"発言",r:"HATSUGEN",m:"Açıklama, beyan"},{k:"無言",r:"MUGON",m:"Sessizlik, suskunluk"},{k:"言葉",r:"kotoba",m:"Kelime, dil"}],ex:[{s:"大切なことを___った。",tr:"Önemli bir şey söyledim.",b:"言",br:"i"}]},
+  {n:119,ch:"原",mn:"Düzlük / Köken",on:["GEN"],kun:["hara"],or:"Bronz formlar bir uçurumun eteklerinden fışkıran pınarı tasvir eder. Zamanla 'düzlük, açık arazi' anlamı baskın hale geldi; bu ödünç alınmış bir anlamdır.",mm:"🏔️ ASLEN KÜÇÜK BEYAZ PINARLI UÇURUM, ŞİMDİ DÜZLÜK",cp:[{k:"原子",r:"GENSHI",m:"Atom"},{k:"原文",r:"GENBUN",m:"Özgün metin"},{k:"草原",r:"kusahara",m:"Çimenlik, otlak"}],ex:[{s:"広い___っぱを走った。",tr:"Geniş çimenlikte koştum.",b:"原",br:"hara"}]},
+  {n:120,ch:"戸",mn:"Kapı",on:["KO"],kun:["to"],or:"OBI ve bronz piktograflar tek yapraklı bir kapıyı tasvir eder. Çift yapraklı kapı ya da kapı (231) modern formda ayrı bir karakterle temsil edilir. Üst yatay çizgi tavan olarak hatırlanabilir.",mm:"🚪 TAVAN ALTINDA TEK YAPRAKLI KAPI",cp:[{k:"戸外",r:"KOGAI",m:"Açık hava, dışarısı"},{k:"戸主",r:"KOSHU",m:"Ev reisi"},{k:"戸口",r:"toguchi",m:"Kapı girişi"}],ex:[{s:"___を閉めてください。",tr:"Kapıyı kapatınız.",b:"戸",br:"to"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

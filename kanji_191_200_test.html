@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:191,ch:"朝",mn:"Sabah / Saray",on:["CHŌ"],kun:["asa"],or:"OBI formu 'güneş', 'bitki/fidan' veya 'bitkiler' ve 'ay' unsurlarını içerir — 'ay hala aydayken bitkilerden doğan güneş', yani sabah. Bronz formda bir unsur 'nehir'e dönüştü.",mm:"🌿 GÜNEŞ BİTKİLERDEN DOĞAR, AY HALA GORUNÜRKEN — SABAH",cp:[{k:"朝食",r:"CHŌSHOKU",m:"Kahvaltı"},{k:"朝日",r:"asahi",m:"Sabah güneşi"},{k:"朝廷",r:"CHŌTEI",m:"İmparatorluk sarayı"}]},
-  {n:192,ch:"直",mn:"Doğrudan / Düzgün",on:["CHOKU","JIKI"],kun:["naoru","naosu","sugu","tadachi"],or:"OBI formu 'göz' ve fonetik unsuru içerir. Mühür yazısında kıvrık çizgi eklenerek 'bakışı doğrultmak' ve dolayısıyla genel anlamda 'düzeltmek' ifade edildi.",mm:"✝️ ÇAPRAZ BAKIŞ — DOĞRUDAN DÜZELTİLMELİ",cp:[{k:"直接",r:"CHOKUSETSU",m:"Doğrudan"},{k:"正直",r:"SHŌJIKI",m:"Dürüstlük"},{k:"直し屋",r:"naoshiya",m:"Tamirci"}]},
-  {n:193,ch:"通",mn:"Geçmek / İşe gidip gelmek",on:["TSŪ"],kun:["tōru","tōsu","kayou"],or:"OBI, bronz ve mühür formlar var. 'Yol boyunca yürümek, gitmek' belirleyicisi ve değişen fonetik unsurlar içerir; 'yol devam eder' anlamını verir. Tōdō bu grafiği 'nüfuz etmek' kelime ailesine dahil eder.",mm:"🚶 EĞRİ FİGÜR GEÇMEK İÇİN KORİDORU KULLANIR",cp:[{k:"通行",r:"TSŪKŌ",m:"Geçiş"},{k:"通勤",r:"TSŪKIN",m:"İşe gidip gelme"},{k:"大通り",r:"ōdōri",m:"Ana cadde"}]},
-  {n:194,ch:"弟",mn:"Küçük erkek kardeş",on:["TEI","DAI","DE"],kun:["otōto"],or:"OBI formlar derinin sarıldığı bir silah sapını tasvir eder. Sarma işleminin belirli bir sırası vardı; bu düzen ve sırayı çağrıştırır. Tōdō 'kısa ve düşük' anlamıyla 'küçük erkek kardeş'i açıklar.",mm:"🪵 KÜÇÜK ERKEK KARDEŞ BİR KAZIGA BAĞI BOLCA BAGLI",cp:[{k:"師弟",r:"SHITEI",m:"Hoca ve öğrenci"},{k:"弟子",r:"DESHI",m:"Öğrenci, talebe"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"}]},
-  {n:195,ch:"店",mn:"Dükkan / Mağaza",on:["TEN"],kun:["mise","tana"],or:"Çok geç dönem karakter (Yupian). 'Çatı, bina' ve fonetik unsuru içerir; fonetik 'düzenlemek, sergilemek' ya da 'sabit bir yerde olmak' çağrışımlıdır. Her ikisi de 'dükkan' anlamını verir.",mm:"🏪 MAĞAZA O BÜYÜK ÇATILI BİNAYI İŞGAL EDER",cp:[{k:"店員",r:"TEN'IN",m:"Mağaza personeli"},{k:"夜店",r:"yomise",m:"Gece pazarı"},{k:"店立て",r:"tanadate",m:"Tahliye"}]},
-  {n:196,ch:"点",mn:"Nokta / İşaret",on:["TEN"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Siyah' ve fonetik unsur (fal, 'küçük' çağrışımlı) içerir; 'küçük siyah lekeler' anlamında. Ateş ve fal unsurları hafıza aracı olarak kullanılabilir.",mm:"🔥 FAL İÇİN ATEŞ SİYAH LEKELER BIRAKIR",cp:[{k:"点線",r:"TENSEN",m:"Noktalı çizgi"},{k:"得点",r:"TOKUTEN",m:"Puan, skor"},{k:"重点",r:"JŪTEN",m:"Vurgu, ağırlık noktası"}]},
-  {n:197,ch:"電",mn:"Elektrik",on:["DEN"],kun:[],or:"Bronz ve mühür formlar var. 'Yağmur/hava unsuru' ve yıldırımı temsil eden unsurları içerir; 'uzanan hava unsuru' ve dolayısıyla 'şimşek' anlamını verir.",mm:"⚡ YILDIRIM ELEKTRİKLİ FIRTINADA TARLAYA VURur",cp:[{k:"電話",r:"DENWA",m:"Telefon"},{k:"電球",r:"DENKYŪ",m:"Ampul"},{k:"電流",r:"DENRYŪ",m:"Elektrik akımı"}]},
-  {n:198,ch:"刀",mn:"Kılıç / Bıçak",on:["TŌ"],kun:["katana"],or:"Bıçak ya da kılıç piktogramı. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"⚔️ İKİ TARAFLI KILIÇ",cp:[{k:"大刀",r:"DAITŌ",m:"Uzun kılıç"},{k:"軍刀",r:"GUNTŌ",m:"Askeri kılıç"},{k:"小刀",r:"kogatana",m:"Çakı"}]},
-  {n:199,ch:"冬",mn:"Kış",on:["TŌ"],kun:["fuyu"],or:"Yorumlar değişir. Mizukami yaprak dökümü sonrası ağaçta kalan ya da asılı yiyeceği görür. Katō buz ve fonetik unsur olarak 'donmak' çağrışımını görür. Shirakawa OBI formunu ip uçları olarak yorumlar.",mm:"🦵 ÇAPRAZ BACAKLAR KIŞ BUZUNDA KAYAR",cp:[{k:"冬眠",r:"TŌMIN",m:"Kış uykusu"},{k:"冬季",r:"TŌKI",m:"Kış mevsimi"},{k:"冬枯れ",r:"fuyugare",m:"Kış solgunluğu"}]},
-  {n:200,ch:"当",mn:"Uygulamak / İsabet",on:["TŌ"],kun:["ataru","ateru"],or:"Bronz, mühür ve geleneksel formlar var. 'Tarla' ve 'değer, fiyat, eşdeğer' çağrışımlı fonetik unsur içerir. Özgün anlam bir tarlayı rehin olarak sunmak; Tōdō 'birbirine itmek, karşılık getirmek' kelime ailesi kapsamında değerlendirir.",mm:"🤏 BU KÜÇÜK EL UYGUN BİÇİMDE HEDEFE İSABET EDER",cp:[{k:"相当",r:"SŌTŌ",m:"Uygun, makul"},{k:"当人",r:"TŌNIN",m:"İlgili kişi"},{k:"手当て",r:"teate",m:"Ödenek, tedavi"}]}
+  {n:191,ch:"朝",mn:"Sabah / Saray",on:["CHŌ"],kun:["asa"],or:"OBI formu 'güneş', 'bitki/fidan' veya 'bitkiler' ve 'ay' unsurlarını içerir — 'ay hala aydayken bitkilerden doğan güneş', yani sabah. Bronz formda bir unsur 'nehir'e dönüştü.",mm:"🌿 GÜNEŞ BİTKİLERDEN DOĞAR, AY HALA GORUNÜRKEN — SABAH",cp:[{k:"朝食",r:"CHŌSHOKU",m:"Kahvaltı"},{k:"朝日",r:"asahi",m:"Sabah güneşi"},{k:"朝廷",r:"CHŌTEI",m:"İmparatorluk sarayı"}],ex:[{s:"___ご飯を食べる。",tr:"Kahvaltı yaparım.",b:"朝",br:"asa"}]},
+  {n:192,ch:"直",mn:"Doğrudan / Düzgün",on:["CHOKU","JIKI"],kun:["naoru","naosu","sugu","tadachi"],or:"OBI formu 'göz' ve fonetik unsuru içerir. Mühür yazısında kıvrık çizgi eklenerek 'bakışı doğrultmak' ve dolayısıyla genel anlamda 'düzeltmek' ifade edildi.",mm:"✝️ ÇAPRAZ BAKIŞ — DOĞRUDAN DÜZELTİLMELİ",cp:[{k:"直接",r:"CHOKUSETSU",m:"Doğrudan"},{k:"正直",r:"SHŌJIKI",m:"Dürüstlük"},{k:"直し屋",r:"naoshiya",m:"Tamirci"}],ex:[{s:"問題を___す。",tr:"Problemi düzeltirim.",b:"直",br:"nao"}]},
+  {n:193,ch:"通",mn:"Geçmek / İşe gidip gelmek",on:["TSŪ"],kun:["tōru","tōsu","kayou"],or:"OBI, bronz ve mühür formlar var. 'Yol boyunca yürümek, gitmek' belirleyicisi ve değişen fonetik unsurlar içerir; 'yol devam eder' anlamını verir. Tōdō bu grafiği 'nüfuz etmek' kelime ailesine dahil eder.",mm:"🚶 EĞRİ FİGÜR GEÇMEK İÇİN KORİDORU KULLANIR",cp:[{k:"通行",r:"TSŪKŌ",m:"Geçiş"},{k:"通勤",r:"TSŪKIN",m:"İşe gidip gelme"},{k:"大通り",r:"ōdōri",m:"Ana cadde"}],ex:[{s:"毎日この道を___る。",tr:"Her gün bu yoldan geçerim.",b:"通",br:"tō"}]},
+  {n:194,ch:"弟",mn:"Küçük erkek kardeş",on:["TEI","DAI","DE"],kun:["otōto"],or:"OBI formlar derinin sarıldığı bir silah sapını tasvir eder. Sarma işleminin belirli bir sırası vardı; bu düzen ve sırayı çağrıştırır. Tōdō 'kısa ve düşük' anlamıyla 'küçük erkek kardeş'i açıklar.",mm:"🪵 KÜÇÜK ERKEK KARDEŞ BİR KAZIGA BAĞI BOLCA BAGLI",cp:[{k:"師弟",r:"SHITEI",m:"Hoca ve öğrenci"},{k:"弟子",r:"DESHI",m:"Öğrenci, talebe"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"}],ex:[{s:"___は小学生だ。",tr:"Erkek kardeşim ilkokul öğrencisi.",b:"弟",br:"otōto"}]},
+  {n:195,ch:"店",mn:"Dükkan / Mağaza",on:["TEN"],kun:["mise","tana"],or:"Çok geç dönem karakter (Yupian). 'Çatı, bina' ve fonetik unsuru içerir; fonetik 'düzenlemek, sergilemek' ya da 'sabit bir yerde olmak' çağrışımlıdır. Her ikisi de 'dükkan' anlamını verir.",mm:"🏪 MAĞAZA O BÜYÜK ÇATILI BİNAYI İŞGAL EDER",cp:[{k:"店員",r:"TEN'IN",m:"Mağaza personeli"},{k:"夜店",r:"yomise",m:"Gece pazarı"},{k:"店立て",r:"tanadate",m:"Tahliye"}],ex:[{s:"お___でケーキを買った。",tr:"Dükkândan kek satın aldım.",b:"店",br:"mise"}]},
+  {n:196,ch:"点",mn:"Nokta / İşaret",on:["TEN"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Siyah' ve fonetik unsur (fal, 'küçük' çağrışımlı) içerir; 'küçük siyah lekeler' anlamında. Ateş ve fal unsurları hafıza aracı olarak kullanılabilir.",mm:"🔥 FAL İÇİN ATEŞ SİYAH LEKELER BIRAKIR",cp:[{k:"点線",r:"TENSEN",m:"Noktalı çizgi"},{k:"得点",r:"TOKUTEN",m:"Puan, skor"},{k:"重点",r:"JŪTEN",m:"Vurgu, ağırlık noktası"}],ex:[{s:"テストで満___を取った。",tr:"Sınavda tam puan aldım.",b:"点",br:"TEN"}]},
+  {n:197,ch:"電",mn:"Elektrik",on:["DEN"],kun:[],or:"Bronz ve mühür formlar var. 'Yağmur/hava unsuru' ve yıldırımı temsil eden unsurları içerir; 'uzanan hava unsuru' ve dolayısıyla 'şimşek' anlamını verir.",mm:"⚡ YILDIRIM ELEKTRİKLİ FIRTINADA TARLAYA VURur",cp:[{k:"電話",r:"DENWA",m:"Telefon"},{k:"電球",r:"DENKYŪ",m:"Ampul"},{k:"電流",r:"DENRYŪ",m:"Elektrik akımı"}],ex:[{s:"___話をかけた。",tr:"Telefon ettim.",b:"電",br:"DEN"}]},
+  {n:198,ch:"刀",mn:"Kılıç / Bıçak",on:["TŌ"],kun:["katana"],or:"Bıçak ya da kılıç piktogramı. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"⚔️ İKİ TARAFLI KILIÇ",cp:[{k:"大刀",r:"DAITŌ",m:"Uzun kılıç"},{k:"軍刀",r:"GUNTŌ",m:"Askeri kılıç"},{k:"小刀",r:"kogatana",m:"Çakı"}],ex:[{s:"侍が___を持っている。",tr:"Samuray kılıç taşıyor.",b:"刀",br:"katana"}]},
+  {n:199,ch:"冬",mn:"Kış",on:["TŌ"],kun:["fuyu"],or:"Yorumlar değişir. Mizukami yaprak dökümü sonrası ağaçta kalan ya da asılı yiyeceği görür. Katō buz ve fonetik unsur olarak 'donmak' çağrışımını görür. Shirakawa OBI formunu ip uçları olarak yorumlar.",mm:"🦵 ÇAPRAZ BACAKLAR KIŞ BUZUNDA KAYAR",cp:[{k:"冬眠",r:"TŌMIN",m:"Kış uykusu"},{k:"冬季",r:"TŌKI",m:"Kış mevsimi"},{k:"冬枯れ",r:"fuyugare",m:"Kış solgunluğu"}],ex:[{s:"___は雪が降る。",tr:"Kışın kar yağar.",b:"冬",br:"fuyu"}]},
+  {n:200,ch:"当",mn:"Uygulamak / İsabet",on:["TŌ"],kun:["ataru","ateru"],or:"Bronz, mühür ve geleneksel formlar var. 'Tarla' ve 'değer, fiyat, eşdeğer' çağrışımlı fonetik unsur içerir. Özgün anlam bir tarlayı rehin olarak sunmak; Tōdō 'birbirine itmek, karşılık getirmek' kelime ailesi kapsamında değerlendirir.",mm:"🤏 BU KÜÇÜK EL UYGUN BİÇİMDE HEDEFE İSABET EDER",cp:[{k:"相当",r:"SŌTŌ",m:"Uygun, makul"},{k:"当人",r:"TŌNIN",m:"İlgili kişi"},{k:"手当て",r:"teate",m:"Ödenek, tedavi"}],ex:[{s:"___然知っている。",tr:"Tabii ki biliyorum.",b:"当",br:"tō"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 

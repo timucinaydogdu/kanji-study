@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:221,ch:"歩",mn:"Yürümek / Oran",on:["HO","BU"],kun:["aruku","ayumu"],or:"Geleneksel form. En eksiksiz OBI grafiği 'kavşak' ve sol ile sağ ayakları temsil eder — 'yürümek'. Modern grafik 'ayak/dur' ve 'az' unsurlarının birleşimi olarak hatırlanabilir.",mm:"🦶 AYAK BİRKAÇ ADIM SONRA DURUR",cp:[{k:"進歩",r:"SHINPO",m:"İlerleme, gelişme"},{k:"歩合",r:"BUai",m:"Oran, pay"},{k:"歩き出す",r:"arukidasu",m:"Yürümeye başlamak"}]},
-  {n:222,ch:"母",mn:"Anne",on:["BO"],kun:["haha"],or:"OBI formlarından itibaren belirgin memeleri ve meme uçları olan kadın piktogramına dayanır.",mm:"👩 BELİRGİN MEMELERİ OLAN KADIN ANNEDİR",cp:[{k:"母性",r:"BOSEI",m:"Annelik, analık"},{k:"お母様",r:"okāsama",m:"Anne (saygılı)"},{k:"母親",r:"hahaoya",m:"Anne"}]},
-  {n:223,ch:"方",mn:"Yön / Taraf / Kişi",on:["HŌ"],kun:["kata"],or:"OBI formu genel olarak pulluk sapasının piktogramına dayandığı yorumlanır. Tüm modern anlamlar fonetik ödünç kullanımdır.",mm:"🌾 BİR YANA EĞİK SABAN — İŞTE YÖN",cp:[{k:"方角",r:"HŌGAKU",m:"Yön"},{k:"親方",r:"oyakata",m:"Patron, usta"},{k:"見方",r:"mikata",m:"Bakış açısı"}]},
-  {n:224,ch:"北",mn:"Kuzey / Kaçmak",on:["HOKU"],kun:["kita"],or:"OBI formu sırt sırta duran iki kişinin piktogramına dayanır. 'Geri dönmek, çekilmek' birincil anlam olarak görülür. 'Kuzey' fonetik ödünç kullanımdır; antik Çin evleri güneye baktığından sakinlerin sırtı kuzeye dönük olurdu.",mm:"🏃 İNSANLAR KUZEYDEN KAÇARAK SIRTLARINI DÖNÜYOR",cp:[{k:"東北",r:"TŌHOKU",m:"Kuzeydoğu"},{k:"敗北",r:"HAIBOKU",m:"Yenilgi"},{k:"北風",r:"kitakaze",m:"Kuzey rüzgarı"}]},
-  {n:225,ch:"毎",mn:"Her / Her biri",on:["MAI"],kun:["-goto"],or:"Geleneksel form; OBI görüşleri ikiye bölünmüştür — saç tokasıyla anne ya da 'bol' çağrışımlı 'anne' fonetik unsuru. 'Her, hepsi' ödünç kullanımdır.",mm:"👤 HER İNSANIN BİR ANNESİ VAR",cp:[{k:"毎日",r:"MAINICHI",m:"Her gün"},{k:"毎度",r:"MAIDO",m:"Her seferinde"},{k:"日ごと",r:"higoto",m:"Günlük, her gün"}]},
-  {n:226,ch:"妹",mn:"Küçük kız kardeş",on:["MAI"],kun:["imōto"],or:"OBI metinlerinden itibaren var. 'Kadın' ve 'olgunlaşmamış' (fonetik, 'devam etme' ya da 'küçük' çağrışımlı) unsurlarından oluşur.",mm:"🛒 KÜÇÜK KIZ KARDEŞ OLGUNLAŞMAMIŞ BİR KADINDIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"妹分",r:"imōtoBUN",m:"Manevi küçük kız kardeş"},{k:"令妹",r:"REIMAI",m:"Küçük kız kardeşiniz (saygılı)"}]},
-  {n:227,ch:"万",mn:"On bin / Sayısız",on:["MAN","BAN"],kun:["yorozu"],or:"Eski yazım şekliydi. OBI formu akrebin piktogramına dayanır. OBI'de zaten büyük sayı için ödünç kullanımdı. Geleneksel olarak MS 11. yüzyıldan itibaren başka bir grafiğin halk versiyonu sayıldı.",mm:"🪱 ON BIN BAŞSIZ KİŞİ",cp:[{k:"五万",r:"GOMAN",m:"Elli bin"},{k:"万事",r:"BANJI",m:"Her şey"},{k:"万屋",r:"yorozuya",m:"Bakkal, genel satıcı"}]},
-  {n:228,ch:"明",mn:"Berrak / Aydınlık",on:["MEI","MYŌ"],kun:["akarui","akaru","akeru","akasu"],or:"OBI'de iki form bulunur: güneş ve ay ya da ay ve pencere. Bunlardan ilki modern Japonca ve Çincedeki formu oluşturur.",mm:"☀️🌙 GÜNEŞ VE AY BİRLİKTE AÇIK VE PARLAK YAPAR",cp:[{k:"明白",r:"MEIHAKU",m:"Açıklık, netlik"},{k:"明日",r:"MYŌNICHI",m:"Yarın"},{k:"明け方",r:"akegata",m:"Şafak"}]},
-  {n:229,ch:"鳴",mn:"İnsan dışı ses",on:["MEI"],kun:["naku","naru"],or:"Modern grafik 'ağız' ve 'kuş' unsurlarını içerir. Bronz formlara göre Katō kuşu horoz olarak tanımlar.",mm:"🐦 KUŞ AĞZINDAN ÇIKAN SESLER İNSAN DEĞİL",cp:[{k:"鳴動",r:"MEIDŌ",m:"Gürültü, çınlama"},{k:"鳴き声",r:"nakigoe",m:"Hayvan sesi"},{k:"鳴り物",r:"narimono",m:"Müzik aleti"}]},
-  {n:230,ch:"毛",mn:"Saç / Tüy",on:["MŌ"],kun:["ke"],or:"Bronz formlar tüy ya da kıl demetine dayanan piktogramı gösterir.",mm:"💈 DÖRT ÇİZGİ BİR TÜY DEMETİ",cp:[{k:"羊毛",r:"YŌMŌ",m:"Yün"},{k:"毛皮",r:"kegawa",m:"Kürk"},{k:"毛虫",r:"kemushi",m:"Tırtıl"}]}
+  {n:221,ch:"歩",mn:"Yürümek / Oran",on:["HO","BU"],kun:["aruku","ayumu"],or:"Geleneksel form. En eksiksiz OBI grafiği 'kavşak' ve sol ile sağ ayakları temsil eder — 'yürümek'. Modern grafik 'ayak/dur' ve 'az' unsurlarının birleşimi olarak hatırlanabilir.",mm:"🦶 AYAK BİRKAÇ ADIM SONRA DURUR",cp:[{k:"進歩",r:"SHINPO",m:"İlerleme, gelişme"},{k:"歩合",r:"BUai",m:"Oran, pay"},{k:"歩き出す",r:"arukidasu",m:"Yürümeye başlamak"}],ex:[{s:"毎日一万___歩く。",tr:"Her gün on bin adım yürürüm.",b:"歩",br:"HO"}]},
+  {n:222,ch:"母",mn:"Anne",on:["BO"],kun:["haha"],or:"OBI formlarından itibaren belirgin memeleri ve meme uçları olan kadın piktogramına dayanır.",mm:"👩 BELİRGİN MEMELERİ OLAN KADIN ANNEDİR",cp:[{k:"母性",r:"BOSEI",m:"Annelik, analık"},{k:"お母様",r:"okāsama",m:"Anne (saygılı)"},{k:"母親",r:"hahaoya",m:"Anne"}],ex:[{s:"___の料理が一番好きだ。",tr:"Annemin yemeği en favori.",b:"母",br:"haha"}]},
+  {n:223,ch:"方",mn:"Yön / Taraf / Kişi",on:["HŌ"],kun:["kata"],or:"OBI formu genel olarak pulluk sapasının piktogramına dayandığı yorumlanır. Tüm modern anlamlar fonetik ödünç kullanımdır.",mm:"🌾 BİR YANA EĞİK SABAN — İŞTE YÖN",cp:[{k:"方角",r:"HŌGAKU",m:"Yön"},{k:"親方",r:"oyakata",m:"Patron, usta"},{k:"見方",r:"mikata",m:"Bakış açısı"}],ex:[{s:"あの___はどなたですか？",tr:"O kişi kim?",b:"方",br:"kata"}]},
+  {n:224,ch:"北",mn:"Kuzey / Kaçmak",on:["HOKU"],kun:["kita"],or:"OBI formu sırt sırta duran iki kişinin piktogramına dayanır. 'Geri dönmek, çekilmek' birincil anlam olarak görülür. 'Kuzey' fonetik ödünç kullanımdır; antik Çin evleri güneye baktığından sakinlerin sırtı kuzeye dönük olurdu.",mm:"🏃 İNSANLAR KUZEYDEN KAÇARAK SIRTLARINI DÖNÜYOR",cp:[{k:"東北",r:"TŌHOKU",m:"Kuzeydoğu"},{k:"敗北",r:"HAIBOKU",m:"Yenilgi"},{k:"北風",r:"kitakaze",m:"Kuzey rüzgarı"}],ex:[{s:"___に向かって歩いた。",tr:"Kuzeye doğru yürüdüm.",b:"北",br:"kita"}]},
+  {n:225,ch:"毎",mn:"Her / Her biri",on:["MAI"],kun:["-goto"],or:"Geleneksel form; OBI görüşleri ikiye bölünmüştür — saç tokasıyla anne ya da 'bol' çağrışımlı 'anne' fonetik unsuru. 'Her, hepsi' ödünç kullanımdır.",mm:"👤 HER İNSANIN BİR ANNESİ VAR",cp:[{k:"毎日",r:"MAINICHI",m:"Her gün"},{k:"毎度",r:"MAIDO",m:"Her seferinde"},{k:"日ごと",r:"higoto",m:"Günlük, her gün"}],ex:[{s:"___日日本語を練習する。",tr:"Her gün Japonca pratik yaparım.",b:"毎",br:"MAI"}]},
+  {n:226,ch:"妹",mn:"Küçük kız kardeş",on:["MAI"],kun:["imōto"],or:"OBI metinlerinden itibaren var. 'Kadın' ve 'olgunlaşmamış' (fonetik, 'devam etme' ya da 'küçük' çağrışımlı) unsurlarından oluşur.",mm:"🛒 KÜÇÜK KIZ KARDEŞ OLGUNLAŞMAMIŞ BİR KADINDIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"妹分",r:"imōtoBUN",m:"Manevi küçük kız kardeş"},{k:"令妹",r:"REIMAI",m:"Küçük kız kardeşiniz (saygılı)"}],ex:[{s:"___は高校生だ。",tr:"Kız kardeşim lise öğrencisi.",b:"妹",br:"imōto"}]},
+  {n:227,ch:"万",mn:"On bin / Sayısız",on:["MAN","BAN"],kun:["yorozu"],or:"Eski yazım şekliydi. OBI formu akrebin piktogramına dayanır. OBI'de zaten büyük sayı için ödünç kullanımdı. Geleneksel olarak MS 11. yüzyıldan itibaren başka bir grafiğin halk versiyonu sayıldı.",mm:"🪱 ON BIN BAŞSIZ KİŞİ",cp:[{k:"五万",r:"GOMAN",m:"Elli bin"},{k:"万事",r:"BANJI",m:"Her şey"},{k:"万屋",r:"yorozuya",m:"Bakkal, genel satıcı"}],ex:[{s:"一___円を貯金した。",tr:"On bin yen biriktirdim.",b:"万",br:"MAN"}]},
+  {n:228,ch:"明",mn:"Berrak / Aydınlık",on:["MEI","MYŌ"],kun:["akarui","akaru","akeru","akasu"],or:"OBI'de iki form bulunur: güneş ve ay ya da ay ve pencere. Bunlardan ilki modern Japonca ve Çincedeki formu oluşturur.",mm:"☀️🌙 GÜNEŞ VE AY BİRLİKTE AÇIK VE PARLAK YAPAR",cp:[{k:"明白",r:"MEIHAKU",m:"Açıklık, netlik"},{k:"明日",r:"MYŌNICHI",m:"Yarın"},{k:"明け方",r:"akegata",m:"Şafak"}],ex:[{s:"部屋を___るくした。",tr:"Odayı aydınlattım.",b:"明",br:"aka"}]},
+  {n:229,ch:"鳴",mn:"İnsan dışı ses",on:["MEI"],kun:["naku","naru"],or:"Modern grafik 'ağız' ve 'kuş' unsurlarını içerir. Bronz formlara göre Katō kuşu horoz olarak tanımlar.",mm:"🐦 KUŞ AĞZINDAN ÇIKAN SESLER İNSAN DEĞİL",cp:[{k:"鳴動",r:"MEIDŌ",m:"Gürültü, çınlama"},{k:"鳴き声",r:"nakigoe",m:"Hayvan sesi"},{k:"鳴り物",r:"narimono",m:"Müzik aleti"}],ex:[{s:"鳥が___いている。",tr:"Kuşlar ötüyor.",b:"鳴",br:"na"}]},
+  {n:230,ch:"毛",mn:"Saç / Tüy",on:["MŌ"],kun:["ke"],or:"Bronz formlar tüy ya da kıl demetine dayanan piktogramı gösterir.",mm:"💈 DÖRT ÇİZGİ BİR TÜY DEMETİ",cp:[{k:"羊毛",r:"YŌMŌ",m:"Yün"},{k:"毛皮",r:"kegawa",m:"Kürk"},{k:"毛虫",r:"kemushi",m:"Tırtıl"}],ex:[{s:"猫の___が服についた。",tr:"Kedinin tüyü kıyafetimize yapıştı.",b:"毛",br:"ke"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,73 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  function mkKA(k){
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+c.m+') — boşluğa hangi kanji gelir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:marked+' ('+c.r+') — altı çizili kanjinin anlamı nedir?',ans,opts:sh([ans,...d]),sc:false};}
+
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,12)).slice(0,5);if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70;
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{const q=MAKERS[pick.i](k);if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}}catch(e){}
+  }
   return sh(qs);
 }
 
