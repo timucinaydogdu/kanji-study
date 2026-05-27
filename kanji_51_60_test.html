@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:51,ch:"先",mn:"Önce / Uç / İleri gitmek",on:["SEN"],kun:["saki"],or:"OBI formu bir kişinin üzerinde duran ayağı gösterir — önde yürümek anlamında. 見 (bakmak) karakteriyle benzer mantık: kişinin üstünde büyütülmüş organ o eylemin odağını vurgular.",mm:"🦶 ÖNDE YÜRÜMEK İÇİN ÇALILIKTAN BÜKÜLÜP GEÇ",cp:[{k:"先生",r:"SENSEI",m:"Öğretmen"},{k:"先月",r:"SENGETSU",m:"Geçen ay"},{k:"指先",r:"yubisaki",m:"Parmak ucu"}]},
-  {n:52,ch:"早",mn:"Erken / Hızlı",on:["SŌ"],kun:["hayai"],or:"Etimoloji belirsiz. Yamada güneşin patlaması olarak yorumlar. On (十) fonetik unsur olarak eklendi, gün doğumu erken anlamını kazandı, sonra hızlı anlamına genişledi.",mm:"☀️ GÜNEŞ ON'U GÖSTERIR AMA HALA ERKEN",cp:[{k:"早急",r:"SŌKYŪ",m:"Acilen, derhal"},{k:"早口",r:"hayakuchi",m:"Hızlı konuşma"},{k:"早死に",r:"hayajini",m:"Erken ölüm"}]},
-  {n:53,ch:"草",mn:"Çimen / Bitki",on:["SŌ"],kun:["kusa"],or:"Geç dönem karakter (Shuowen). Üst kısım bitkinin kısa formu, alt kısım 早 (erken, hızlı) fonetik unsur olarak palamut anlamı verdi; ancak erken dönemde çimen/bitki anlamı baskın hale geldi.",mm:"🌿 ÇİMEN HIZLA BÜYÜR",cp:[{k:"雑草",r:"ZASSŌ",m:"Yabani ot"},{k:"草書",r:"SŌSHO",m:"Kursif yazı"},{k:"草地",r:"kusaCHI",m:"Çayırlık, otlak"}]},
-  {n:54,ch:"足",mn:"Bacak / Ayak / Yetmek",on:["SOKU"],kun:["ashi","tariru"],or:"OBI formu dizden ayağa kadar bir bacağın piktogramıdır. Bu aşamada 正 (doğru) ile sıklıkla aynı şekilde yazılırdı. Yetmek anlamı ödünç kullanımdır.",mm:"🦵 YUVARLAK DİZ VE AYAK BACAĞI GÖSTERİR",cp:[{k:"不足",r:"FUSOKU",m:"Yetersizlik, eksiklik"},{k:"足首",r:"ashikubi",m:"Ayak bileği"},{k:"足音",r:"ashioto",m:"Ayak sesi"}]},
-  {n:55,ch:"村",mn:"Köy",on:["SON"],kun:["mura"],or:"Geç dönem karakter, Shuowen sözlüğünde yer almaz. Ogawa bunu bir cila ağacının varyantı olarak değerlendirir. Köy anlamı fonetik ödünç yoluyla kazanıldı; 木 (ağaç) ve ölçü anlamındaki unsurdan oluşur.",mm:"🌲 AĞAÇLARI ÖLÇEREK KÖY KURARSUN",cp:[{k:"村長",r:"SONCHŌ",m:"Köy muhtarı"},{k:"農村",r:"NŌSON",m:"Tarım köyü"},{k:"村人",r:"murabito",m:"Köylü"}]},
-  {n:56,ch:"大",mn:"Büyük",on:["DAI","TAI"],kun:["kii","ōkii"],or:"Kolları ve bacakları açık yetişkin bir insanın piktogramına dayanır. Büyük anlamı genişletilmiş bir anlam olarak kullanılır.",mm:"🙆 KİŞİ KOL VE BACAKLARINI AÇINCA BÜYÜK GÖRÜNÜR",cp:[{k:"大会",r:"TAIKAI",m:"Büyük toplantı, turnuva"},{k:"大学",r:"DAIGAKU",m:"Üniversite"},{k:"大声",r:"ōgoe",m:"Yüksek ses"}]},
-  {n:57,ch:"男",mn:"Erkek / Adam",on:["DAN","NAN"],kun:["otoko"],or:"OBI formu 田 (tarla) ve 力 (güç) unsurlarından oluşur. Güç başlangıçta bir sabanı temsil etmiş olabilir; ancak erken formlar tarlada çalışan bir kol gösterir — erkeklerle ilişkilendirilir.",mm:"💪 ERKEK TARLADA GÜÇ SAĞLAR",cp:[{k:"男子",r:"DANSHI",m:"Erkek çocuk, oğlan"},{k:"長男",r:"CHŌNAN",m:"En büyük oğul"},{k:"男気",r:"otokogi",m:"Mertlik, yiğitlik"}]},
-  {n:58,ch:"竹",mn:"Bambu",on:["CHIKU"],kun:["take"],or:"OBI formu alçak, çizgili bir bambu bitkisinin piktogramına dayanır (Mizukami ve Katō). Bambu anlamı genel kullanıma genişledi. Bileşik karakterlerde ⺮ biçimini alır.",mm:"🎋 İKİ BAMBU SEGMENTI",cp:[{k:"爆竹",r:"BAKUCHIKU",m:"Havai fişek (maytap)"},{k:"竹馬",r:"takeuma",m:"Bambu bacaklar (kukla at)"},{k:"竹藪",r:"takeyabu",m:"Bambu korusu"}]},
-  {n:59,ch:"中",mn:"Orta / İçeri / Çin",on:["CHŪ"],kun:["naka"],or:"OBI formları iki kategoride görülür: modern forma benzer olanlar ve flama eklenmiş olanlar — ikincisi bayrak gibi görünür. Temel anlam orta, içeri; uzantı olarak hedefe isabet etmek anlamı da taşır.",mm:"🎯 ÇİN MIZRAKI HEDEFIN ORTASINA SAPLANIR",cp:[{k:"中立",r:"CHŪRITSU",m:"Tarafsızlık"},{k:"中国",r:"CHŪGOKU",m:"Çin"},{k:"真ん中",r:"mannaka",m:"Tam orta"}]},
-  {n:60,ch:"虫",mn:"Böcek / Solucan",on:["CHŪ"],kun:["mushi"],or:"OBI formu bir yılanın piktogramından gelir. Qiu'ya göre daha sonra anlam kayması yaşandı; Qin ve Han dönemlerinde böcek (geniş anlamda) anlamı baskın hale geldi. Hafıza tekniği: başlığını kaldırmış yılan.",mm:"🐍 BAŞLIKLI YILAN BÖCEK AVLAMAK İÇİN KALKAR",cp:[{k:"寄生虫",r:"KISEICHŪ",m:"Parazit"},{k:"害虫",r:"GAICHŪ",m:"Zararlı böcek"},{k:"虫歯",r:"mushiba",m:"Çürük diş"}]}
+  {n:51,ch:"先",mn:"Önce / Uç / İleri gitmek",on:["SEN"],kun:["saki"],or:"OBI formu bir kişinin üzerinde duran ayağı gösterir — önde yürümek anlamında. 見 (bakmak) karakteriyle benzer mantık: kişinin üstünde büyütülmüş organ o eylemin odağını vurgular.",mm:"🦶 ÖNDE YÜRÜMEK İÇİN ÇALILIKTAN BÜKÜLÜP GEÇ",cp:[{k:"先生",r:"SENSEI",m:"Öğretmen"},{k:"先月",r:"SENGETSU",m:"Geçen ay"},{k:"指先",r:"yubisaki",m:"Parmak ucu"}],ex:[{s:"___生に質問した。",tr:"Öğretmene soru sordum.",b:"先",br:"SEN"}]},
+  {n:52,ch:"早",mn:"Erken / Hızlı",on:["SŌ"],kun:["hayai"],or:"Etimoloji belirsiz. Yamada güneşin patlaması olarak yorumlar. On (十) fonetik unsur olarak eklendi, gün doğumu erken anlamını kazandı, sonra hızlı anlamına genişledi.",mm:"☀️ GÜNEŞ ON'U GÖSTERIR AMA HALA ERKEN",cp:[{k:"早急",r:"SŌKYŪ",m:"Acilen, derhal"},{k:"早口",r:"hayakuchi",m:"Hızlı konuşma"},{k:"早死に",r:"hayajini",m:"Erken ölüm"}],ex:[{s:"___起きは体に良い。",tr:"Erken kalkmak vücut için iyidir.",b:"早",br:"haya"}]},
+  {n:53,ch:"草",mn:"Çimen / Bitki",on:["SŌ"],kun:["kusa"],or:"Geç dönem karakter (Shuowen). Üst kısım bitkinin kısa formu, alt kısım 早 (erken, hızlı) fonetik unsur olarak palamut anlamı verdi; ancak erken dönemde çimen/bitki anlamı baskın hale geldi.",mm:"🌿 ÇİMEN HIZLA BÜYÜR",cp:[{k:"雑草",r:"ZASSŌ",m:"Yabani ot"},{k:"草書",r:"SŌSHO",m:"Kursif yazı"},{k:"草地",r:"kusaCHI",m:"Çayırlık, otlak"}],ex:[{s:"___原を歩いた。",tr:"Çimenlikte yürüdüm.",b:"草",br:"kusa"}]},
+  {n:54,ch:"足",mn:"Bacak / Ayak / Yetmek",on:["SOKU"],kun:["ashi","tariru"],or:"OBI formu dizden ayağa kadar bir bacağın piktogramıdır. Bu aşamada 正 (doğru) ile sıklıkla aynı şekilde yazılırdı. Yetmek anlamı ödünç kullanımdır.",mm:"🦵 YUVARLAK DİZ VE AYAK BACAĞI GÖSTERİR",cp:[{k:"不足",r:"FUSOKU",m:"Yetersizlik, eksiklik"},{k:"足首",r:"ashikubi",m:"Ayak bileği"},{k:"足音",r:"ashioto",m:"Ayak sesi"}],ex:[{s:"___が痛くて歩けない。",tr:"Ayağım ağrıyor yürüyemiyorum.",b:"足",br:"ashi"}]},
+  {n:55,ch:"村",mn:"Köy",on:["SON"],kun:["mura"],or:"Geç dönem karakter, Shuowen sözlüğünde yer almaz. Ogawa bunu bir cila ağacının varyantı olarak değerlendirir. Köy anlamı fonetik ödünç yoluyla kazanıldı; 木 (ağaç) ve ölçü anlamındaki unsurdan oluşur.",mm:"🌲 AĞAÇLARI ÖLÇEREK KÖY KURARSUN",cp:[{k:"村長",r:"SONCHŌ",m:"Köy muhtarı"},{k:"農村",r:"NŌSON",m:"Tarım köyü"},{k:"村人",r:"murabito",m:"Köylü"}],ex:[{s:"小さな___に住んでいる。",tr:"Küçük bir köyde yaşıyorum.",b:"村",br:"mura"}]},
+  {n:56,ch:"大",mn:"Büyük",on:["DAI","TAI"],kun:["kii","ōkii"],or:"Kolları ve bacakları açık yetişkin bir insanın piktogramına dayanır. Büyük anlamı genişletilmiş bir anlam olarak kullanılır.",mm:"🙆 KİŞİ KOL VE BACAKLARINI AÇINCA BÜYÜK GÖRÜNÜR",cp:[{k:"大会",r:"TAIKAI",m:"Büyük toplantı, turnuva"},{k:"大学",r:"DAIGAKU",m:"Üniversite"},{k:"大声",r:"ōgoe",m:"Yüksek ses"}],ex:[{s:"___きな犬が走ってきた。",tr:"Büyük bir köpek koşarak geldi.",b:"大",br:"ōki"}]},
+  {n:57,ch:"男",mn:"Erkek / Adam",on:["DAN","NAN"],kun:["otoko"],or:"OBI formu 田 (tarla) ve 力 (güç) unsurlarından oluşur. Güç başlangıçta bir sabanı temsil etmiş olabilir; ancak erken formlar tarlada çalışan bir kol gösterir — erkeklerle ilişkilendirilir.",mm:"💪 ERKEK TARLADA GÜÇ SAĞLAR",cp:[{k:"男子",r:"DANSHI",m:"Erkek çocuk, oğlan"},{k:"長男",r:"CHŌNAN",m:"En büyük oğul"},{k:"男気",r:"otokogi",m:"Mertlik, yiğitlik"}],ex:[{s:"___の人が道を聞いた。",tr:"Bir adam yol sordu.",b:"男",br:"otoko"}]},
+  {n:58,ch:"竹",mn:"Bambu",on:["CHIKU"],kun:["take"],or:"OBI formu alçak, çizgili bir bambu bitkisinin piktogramına dayanır (Mizukami ve Katō). Bambu anlamı genel kullanıma genişledi. Bileşik karakterlerde ⺮ biçimini alır.",mm:"🎋 İKİ BAMBU SEGMENTI",cp:[{k:"爆竹",r:"BAKUCHIKU",m:"Havai fişek (maytap)"},{k:"竹馬",r:"takeuma",m:"Bambu bacaklar (kukla at)"},{k:"竹藪",r:"takeyabu",m:"Bambu korusu"}],ex:[{s:"___林の中を歩く。",tr:"Bambu ormanında yürümek.",b:"竹",br:"take"}]},
+  {n:59,ch:"中",mn:"Orta / İçeri / Çin",on:["CHŪ"],kun:["naka"],or:"OBI formları iki kategoride görülür: modern forma benzer olanlar ve flama eklenmiş olanlar — ikincisi bayrak gibi görünür. Temel anlam orta, içeri; uzantı olarak hedefe isabet etmek anlamı da taşır.",mm:"🎯 ÇİN MIZRAKI HEDEFIN ORTASINA SAPLANIR",cp:[{k:"中立",r:"CHŪRITSU",m:"Tarafsızlık"},{k:"中国",r:"CHŪGOKU",m:"Çin"},{k:"真ん中",r:"mannaka",m:"Tam orta"}],ex:[{s:"箱の___に手紙があった。",tr:"Kutunun içinde mektup vardı.",b:"中",br:"naka"}]},
+  {n:60,ch:"虫",mn:"Böcek / Solucan",on:["CHŪ"],kun:["mushi"],or:"OBI formu bir yılanın piktogramından gelir. Qiu'ya göre daha sonra anlam kayması yaşandı; Qin ve Han dönemlerinde böcek (geniş anlamda) anlamı baskın hale geldi. Hafıza tekniği: başlığını kaldırmış yılan.",mm:"🐍 BAŞLIKLI YILAN BÖCEK AVLAMAK İÇİN KALKAR",cp:[{k:"寄生虫",r:"KISEICHŪ",m:"Parazit"},{k:"害虫",r:"GAICHŪ",m:"Zararlı böcek"},{k:"虫歯",r:"mushiba",m:"Çürük diş"}],ex:[{s:"夏に___が多い。",tr:"Yazın böcek çok olur.",b:"虫",br:"mushi"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 

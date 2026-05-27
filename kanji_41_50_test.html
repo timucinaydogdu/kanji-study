@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:41,ch:"人",mn:"İnsan / Kişi",on:["JIN","NIN"],kun:["hito"],or:"OBI formu yana bakış açısından duran bir insanın piktogramıdır. Belirleyici olarak kullanıldığında 亻 biçimini alır.",mm:"🚶 KOLSUZ VE BAŞSIZ YÜRÜYEN BİR KİŞİ",cp:[{k:"日本人",r:"NIHONJIN",m:"Japon (kişi)"},{k:"人間",r:"NINGEN",m:"İnsan varlığı"},{k:"人出",r:"hitode",m:"Kalabalık, izdiham"}]},
-  {n:42,ch:"水",mn:"Su",on:["SUI"],kun:["mizu"],or:"OBI formu akan suyu tasvir eden bir piktogramdır; sonradan stilize edildi. Bileşik karakterlerde genellikle 氵 biçimini alır.",mm:"💧 SU NEHIR KIYILARI ARASINDA DARALIR",cp:[{k:"水曜日",r:"SUIYŌbi",m:"Çarşamba"},{k:"水素",r:"SUISO",m:"Hidrojen"},{k:"大水",r:"ōmizu",m:"Sel, taşkın"}]},
-  {n:43,ch:"正",mn:"Doğru / Düzgün",on:["SEI","SHŌ"],kun:["tadashii","tadasu","masa"],or:"Etimoloji tartışmalıdır. Shirakawa, erken OBI formlarına dayanarak özgün anlamın 'surlu kaleye yürümek' olduğunu düşünür. Doğru anlamı muhtemelen fonetik ödünç yoluyla kazanıldı.",mm:"🛑 ÇIZGIDE DURMAK DOĞRU VE DÜZGÜN OLANDIR",cp:[{k:"正解",r:"SEIKAI",m:"Doğru cevap"},{k:"正月",r:"SHŌGATSU",m:"Yeni Yıl"},{k:"まさに",r:"masa ni",m:"Tam olarak, aynen"}]},
-  {n:44,ch:"生",mn:"Yaşam / Doğum / Büyümek",on:["SEI","SHŌ"],kun:["ikiru","kasu","umu","mareru","nama"],or:"OBI formu büyüyen bir bitkinin piktogramına dayanır.",mm:"🌱 BÜYÜYEN BİTKİ HAYATIN SİMGESİDİR",cp:[{k:"学生",r:"GAKUSEI",m:"Öğrenci"},{k:"一生",r:"ISSHŌ",m:"Bütün bir yaşam"},{k:"生き物",r:"ikimono",m:"Canlı varlık"}]},
-  {n:45,ch:"青",mn:"Genç / Taze / Mavi-Yeşil",on:["SEI","SHŌ"],kun:["aoi"],or:"Bronz formda alt kısım sinabar çıkarmak için kazılan bir kuyuyu temsil eder. Üst kısım 生 (yaşam) in bir varyantı olup fonetik işlev görür. Mavi ile yeşil Japonca'da geleneksel olarak aynı kelimeyle ifade edilir.",mm:"🌿 GENÇ MAVİ-YEŞİL BİTKİLER AYDA YETİŞİR",cp:[{k:"青年",r:"SEINEN",m:"Genç, delikanlı"},{k:"青空",r:"aozora",m:"Mavi gökyüzü"},{k:"青物",r:"aomono",m:"Yeşil sebzeler"}]},
-  {n:46,ch:"夕",mn:"Akşam",on:["SEKI"],kun:["yū"],or:"OBI döneminde bu karakterin şekilleri çoğunlukla 月 (ay) ile birbirine karışırdı; bronz yazıtlarda iki ayrı şekil gelişti. Hilali ya da akşamı temsil eder.",mm:"🌙 HİLAL VE BİR BULUT AKŞAMI GÖSTERİR",cp:[{k:"今夕",r:"KONSEKI",m:"Bu akşam"},{k:"夕食",r:"yūSHOKU",m:"Akşam yemeği"},{k:"夕日",r:"yūhi",m:"Batan güneş"}]},
-  {n:47,ch:"石",mn:"Taş / Kaya",on:["SEKI","SHAKU"],kun:["ishi"],or:"OBI ve bronz formları sarkık bir kayanın altındaki taşı tasvir ediyor olabilir. Shirakawa alt kısmı ritüel bir kap olarak yorumlar.",mm:"🪨 SARKIK KAYADAN DÜŞEN BÜYÜK TAŞ",cp:[{k:"化石",r:"KASEKI",m:"Fosil"},{k:"小石",r:"koishi",m:"Çakıl"},{k:"石油",r:"SEKIYU",m:"Petrol"}]},
-  {n:48,ch:"赤",mn:"Kırmızı",on:["SEKI","SHAKU"],kun:["akai"],or:"OBI ve bronz formlar 大 (büyük) ve 火 (ateş) unsurlarından oluştuğu görülür — parlak yanan ateş demek. Shirakawa ise üst kısmı kolları açık bir insan olarak yorumlar.",mm:"🔥 BÜYÜK ATEŞ TOPRAĞI KIRMIZIYA BOYAR",cp:[{k:"赤道",r:"SEKIDŌ",m:"Ekvator"},{k:"赤面",r:"SEKIMEN",m:"Yüzü kızarmak"},{k:"赤ちゃん",r:"akanbō",m:"Bebek"}]},
-  {n:49,ch:"千",mn:"Bin",on:["SEN"],kun:["chi"],or:"Etimoloji belirsiz. Erken formlar 人 (insan) ve 十 (on) unsurlarını içeriyor gibi görünür. Shirakawa ve Katō bunu yatay çizgi eklenmiş bir insan figürü olarak yorumlar.",mm:"✋ ON'UN ÜZERİNE BİR ÇIZGI EKLEYİNCE BİN OLUR",cp:[{k:"千円",r:"SEN'EN",m:"Bin yen"},{k:"五千",r:"GOSEN",m:"Beş bin"},{k:"千鳥",r:"chidori",m:"Yağmur kuşu (martı)"}]},
-  {n:50,ch:"川",mn:"Nehir",on:["SEN"],kun:["kawa"],or:"OBI formu iki nehir kıyısı arasında akan suyu tasvir eden bir piktogramdan gelir. 水 (su, #42) ile karşılaştırılabilir.",mm:"〰️ NEHİR İKİ KIYI ARASINDA AKAR",cp:[{k:"川口",r:"kawaguchi",m:"Nehir ağzı"},{k:"川柳",r:"SENRYŪ",m:"Kısa şiir (senryu)"},{k:"江戸川",r:"edogawa",m:"Edo Nehri"}]}
+  {n:41,ch:"人",mn:"İnsan / Kişi",on:["JIN","NIN"],kun:["hito"],or:"OBI formu yana bakış açısından duran bir insanın piktogramıdır. Belirleyici olarak kullanıldığında 亻 biçimini alır.",mm:"🚶 KOLSUZ VE BAŞSIZ YÜRÜYEN BİR KİŞİ",cp:[{k:"日本人",r:"NIHONJIN",m:"Japon (kişi)"},{k:"人間",r:"NINGEN",m:"İnsan varlığı"},{k:"人出",r:"hitode",m:"Kalabalık, izdiham"}],ex:[{s:"たくさんの___が集まった。",tr:"Çok sayıda insan toplandı.",b:"人",br:"hito"}]},
+  {n:42,ch:"水",mn:"Su",on:["SUI"],kun:["mizu"],or:"OBI formu akan suyu tasvir eden bir piktogramdır; sonradan stilize edildi. Bileşik karakterlerde genellikle 氵 biçimini alır.",mm:"💧 SU NEHIR KIYILARI ARASINDA DARALIR",cp:[{k:"水曜日",r:"SUIYŌbi",m:"Çarşamba"},{k:"水素",r:"SUISO",m:"Hidrojen"},{k:"大水",r:"ōmizu",m:"Sel, taşkın"}],ex:[{s:"冷たい___を飲んだ。",tr:"Soğuk su içtim.",b:"水",br:"mizu"}]},
+  {n:43,ch:"正",mn:"Doğru / Düzgün",on:["SEI","SHŌ"],kun:["tadashii","tadasu","masa"],or:"Etimoloji tartışmalıdır. Shirakawa, erken OBI formlarına dayanarak özgün anlamın 'surlu kaleye yürümek' olduğunu düşünür. Doğru anlamı muhtemelen fonetik ödünç yoluyla kazanıldı.",mm:"🛑 ÇIZGIDE DURMAK DOĞRU VE DÜZGÜN OLANDIR",cp:[{k:"正解",r:"SEIKAI",m:"Doğru cevap"},{k:"正月",r:"SHŌGATSU",m:"Yeni Yıl"},{k:"まさに",r:"masa ni",m:"Tam olarak, aynen"}],ex:[{s:"___しい答えを書く。",tr:"Doğru cevabı yazıyorum.",b:"正",br:"tadashi"}]},
+  {n:44,ch:"生",mn:"Yaşam / Doğum / Büyümek",on:["SEI","SHŌ"],kun:["ikiru","kasu","umu","mareru","nama"],or:"OBI formu büyüyen bir bitkinin piktogramına dayanır.",mm:"🌱 BÜYÜYEN BİTKİ HAYATIN SİMGESİDİR",cp:[{k:"学生",r:"GAKUSEI",m:"Öğrenci"},{k:"一生",r:"ISSHŌ",m:"Bütün bir yaşam"},{k:"生き物",r:"ikimono",m:"Canlı varlık"}],ex:[{s:"花が___きている。",tr:"Çiçek yaşıyor.",b:"生",br:"i"}]},
+  {n:45,ch:"青",mn:"Genç / Taze / Mavi-Yeşil",on:["SEI","SHŌ"],kun:["aoi"],or:"Bronz formda alt kısım sinabar çıkarmak için kazılan bir kuyuyu temsil eder. Üst kısım 生 (yaşam) in bir varyantı olup fonetik işlev görür. Mavi ile yeşil Japonca'da geleneksel olarak aynı kelimeyle ifade edilir.",mm:"🌿 GENÇ MAVİ-YEŞİL BİTKİLER AYDA YETİŞİR",cp:[{k:"青年",r:"SEINEN",m:"Genç, delikanlı"},{k:"青空",r:"aozora",m:"Mavi gökyüzü"},{k:"青物",r:"aomono",m:"Yeşil sebzeler"}],ex:[{s:"___い空が広がる。",tr:"Mavi gökyüzü uzanıyor.",b:"青",br:"ao"}]},
+  {n:46,ch:"夕",mn:"Akşam",on:["SEKI"],kun:["yū"],or:"OBI döneminde bu karakterin şekilleri çoğunlukla 月 (ay) ile birbirine karışırdı; bronz yazıtlarda iki ayrı şekil gelişti. Hilali ya da akşamı temsil eder.",mm:"🌙 HİLAL VE BİR BULUT AKŞAMI GÖSTERİR",cp:[{k:"今夕",r:"KONSEKI",m:"Bu akşam"},{k:"夕食",r:"yūSHOKU",m:"Akşam yemeği"},{k:"夕日",r:"yūhi",m:"Batan güneş"}],ex:[{s:"___日がきれいだ。",tr:"Gün batımı güzel.",b:"夕",br:"yū"}]},
+  {n:47,ch:"石",mn:"Taş / Kaya",on:["SEKI","SHAKU"],kun:["ishi"],or:"OBI ve bronz formları sarkık bir kayanın altındaki taşı tasvir ediyor olabilir. Shirakawa alt kısmı ritüel bir kap olarak yorumlar.",mm:"🪨 SARKIK KAYADAN DÜŞEN BÜYÜK TAŞ",cp:[{k:"化石",r:"KASEKI",m:"Fosil"},{k:"小石",r:"koishi",m:"Çakıl"},{k:"石油",r:"SEKIYU",m:"Petrol"}],ex:[{s:"川原で___を拾った。",tr:"Dere kenarında taş topladım.",b:"石",br:"ishi"}]},
+  {n:48,ch:"赤",mn:"Kırmızı",on:["SEKI","SHAKU"],kun:["akai"],or:"OBI ve bronz formlar 大 (büyük) ve 火 (ateş) unsurlarından oluştuğu görülür — parlak yanan ateş demek. Shirakawa ise üst kısmı kolları açık bir insan olarak yorumlar.",mm:"🔥 BÜYÜK ATEŞ TOPRAĞI KIRMIZIYA BOYAR",cp:[{k:"赤道",r:"SEKIDŌ",m:"Ekvator"},{k:"赤面",r:"SEKIMEN",m:"Yüzü kızarmak"},{k:"赤ちゃん",r:"akanbō",m:"Bebek"}],ex:[{s:"___いバラを贈った。",tr:"Kırmızı gül hediye ettim.",b:"赤",br:"aka"}]},
+  {n:49,ch:"千",mn:"Bin",on:["SEN"],kun:["chi"],or:"Etimoloji belirsiz. Erken formlar 人 (insan) ve 十 (on) unsurlarını içeriyor gibi görünür. Shirakawa ve Katō bunu yatay çizgi eklenmiş bir insan figürü olarak yorumlar.",mm:"✋ ON'UN ÜZERİNE BİR ÇIZGI EKLEYİNCE BİN OLUR",cp:[{k:"千円",r:"SEN'EN",m:"Bin yen"},{k:"五千",r:"GOSEN",m:"Beş bin"},{k:"千鳥",r:"chidori",m:"Yağmur kuşu (martı)"}],ex:[{s:"___円のランチを食べた。",tr:"Bin yenlik öğle yemeği yedim.",b:"千",br:"SEN"}]},
+  {n:50,ch:"川",mn:"Nehir",on:["SEN"],kun:["kawa"],or:"OBI formu iki nehir kıyısı arasında akan suyu tasvir eden bir piktogramdan gelir. 水 (su, #42) ile karşılaştırılabilir.",mm:"〰️ NEHİR İKİ KIYI ARASINDA AKAR",cp:[{k:"川口",r:"kawaguchi",m:"Nehir ağzı"},{k:"川柳",r:"SENRYŪ",m:"Kısa şiir (senryu)"},{k:"江戸川",r:"edogawa",m:"Edo Nehri"}],ex:[{s:"___で泳いだ。",tr:"Nehirde yüzdüm.",b:"川",br:"kawa"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 

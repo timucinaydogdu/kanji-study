@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:71,ch:"百",mn:"Yüz",on:["HYAKU"],kun:[],or:"OBI ve bronz formlarda 白 (beyaz) üzerine bir yatay çizgi eklenir. Erken Çincede yüz ve beyaz sözcükleri benzer seslerdi. Katō başparmağın yüzü ifade ettiğini öne sürer.",mm:"👍 BİR BEYAZ BAŞPARMAK YÜZ PALAMUTA BEDELDIR",cp:[{k:"百倍",r:"HYAKUBAI",m:"Yüz kat"},{k:"百姓",r:"HYAKUSHŌ",m:"Çiftçi, köylü"},{k:"百貨店",r:"HYAKKATEN",m:"Büyük mağaza"}]},
-  {n:72,ch:"文",mn:"Yazı / Metin",on:["BUN","MON"],kun:["fumi"],or:"OBI ve bronz formların etimolojisi tartışmalıdır. Shirakawa dövme yapılmış bir kişi olarak yorumlarken Ogawa ve Katō boyun giysisi giyen bir figür olarak değerlendirir. Desen ve yazı anlamları genişletilmiş anlamlardır.",mm:"✝️ HAÇ YAZININ EN BASIT BİÇİMİDİR: DAHA İYİSİNİ YAP",cp:[{k:"文学",r:"BUNGAKU",m:"Edebiyat"},{k:"文字",r:"MOJI",m:"Karakter, harf"},{k:"恋文",r:"koibumi",m:"Aşk mektubu"}]},
-  {n:73,ch:"木",mn:"Ağaç / Tahta",on:["BOKU","MOKU"],kun:["ki","ko"],or:"Bir ağacın piktogramına dayanır. Kökleri, gövdesi ve dallarıyla birlikte stilize edilmiştir.",mm:"🌳 GENIŞ DALLARIYLA AĞAÇ — İYİ TAHTA",cp:[{k:"木曜日",r:"MOKUYŌbi",m:"Perşembe"},{k:"木目",r:"kime",m:"Tahta damarı, doku"},{k:"木立",r:"kodachi",m:"Ağaçlık, koru"}]},
-  {n:74,ch:"本",mn:"Kök / Kitap / Asıl",on:["HON"],kun:["moto"],or:"Köklerini gösteren ağaç piktogramına dayanır. Kök ya da gövde anlamından kitap anlamına geçiş Çin ve Japonya'da kitapların silindir şeklinde rulolar halinde olmasından kaynaklanır.",mm:"🌲 AĞACIN TOPRAK ALTINDA BİR ANA KÖK İZİ VAR",cp:[{k:"日本",r:"NIHON",m:"Japonya"},{k:"本屋",r:"HONya",m:"Kitapçı"},{k:"本社",r:"HONSHA",m:"Genel merkez"}]},
-  {n:75,ch:"名",mn:"İsim / Şöhret",on:["MEI","MYŌ"],kun:["na"],or:"Çeşitli yorumlar mevcuttur. Ağız (口) ve hilal ay (夕) bileşiminden oluştuğu düşünülür — gece karanlığında birini seslenerek çağırmak. Shirakawa en erken formların üç aylık bebeğin adlandırma törenini tasvir ettiğini öne sürer.",mm:"🌙 AY IŞIĞINDA AĞIZ ÜNLÜ İSMİ ÇAĞIRIR",cp:[{k:"有名",r:"YŪMEI",m:"Ünlü, meşhur"},{k:"名字",r:"MYŌJI",m:"Soyadı"},{k:"名前",r:"namae",m:"İsim, ad"}]},
-  {n:76,ch:"目",mn:"Göz / Bakmak",on:["MOKU"],kun:["me","ma"],or:"OBI formu bir gözün piktogramıdır. Sıra son eki olarak kullanımı ödünç kullanımdır. Daha sonra dikey konuma çevrildi.",mm:"📺 KARE GÖZLÜ VE DİKEY — ÇOK FAZLA TV İZLEMEK",cp:[{k:"一目",r:"hitome",m:"Bir bakış"},{k:"一つ目",r:"hitotsu me",m:"Birinci, ilk"},{k:"注目",r:"CHŪMOKU",m:"Dikkat, ilgi"}]},
-  {n:77,ch:"立",mn:"Ayakta durmak / Kalkmak",on:["RITSU"],kun:["tatsu","teru"],or:"OBI ve bronz formlar, ayağa kalkmayı vurgulamak için altında zemin olan duran bir kişiyi tasvir eder. Ayrılmak anlamı yükselmekten genişletilmiş bir anlamdır.",mm:"🧍 AYAĞA KALKMAK AYRILMAK DEMEKTİR",cp:[{k:"自立",r:"JIRITSU",m:"Bağımsızlık"},{k:"立場",r:"tachiba",m:"Durum, bakış açısı"},{k:"目立つ",r:"medatsu",m:"Göze çarpmak"}]},
-  {n:78,ch:"力",mn:"Güç / Çaba",on:["RYOKU","RIKI"],kun:["chikara"],or:"OBI formları genel olarak bir kol ve eli tasvir ettiği şeklinde yorumlanır. Shirakawa bir saban olarak yorumlar ve tarım işiyle ilişkilendirir. Modern form omuz ve üst kol olarak hatırlanabilir.",mm:"💪 GÜÇLÜ KOL VE OMUZ",cp:[{k:"能力",r:"NŌRYOKU",m:"Yetenek, kapasite"},{k:"人力車",r:"JINRIKISHA",m:"Riksa"},{k:"力持ち",r:"chikaramochi",m:"Güçlü kişi"}]},
-  {n:79,ch:"林",mn:"Orman (ince)",on:["RIN"],kun:["hayashi"],or:"Erken formlar 木 (ağaç) karakterinin basit bir çiftlemesini gösterir. Japonca ve Çincede başından beri 森 (40) ile aynı anlamda kullanılmıştır.",mm:"🌲🌲 ORMANDA İKİ UZUN AĞAÇ",cp:[{k:"林学",r:"RINGAKU",m:"Ormancılık"},{k:"小林",r:"Kobayashi",m:"Kobayashi (soyad)"},{k:"密林",r:"MITSURI N",m:"Yoğun orman, cengel"}]},
-  {n:80,ch:"六",mn:"Altı",on:["ROKU"],kun:["mu-"],or:"OBI ve bronz formlar basit bir bina yapısını andırır (Shirakawa). Grafik muhtemelen fonetik ödünç yoluyla altı anlamını kazandı. Qiu daha soyut geometrik bir sembol olarak yorumlar.",mm:"🍽️ ALTI KİŞİLİK YÜKLÜ MASA AYAKLARINI KAYBEDER",cp:[{k:"六月",r:"ROKUGATSU",m:"Haziran"},{k:"六日",r:"muika",m:"Altıncı gün"},{k:"六角",r:"ROKKAKU",m:"Altıgen"}]}
+  {n:71,ch:"百",mn:"Yüz",on:["HYAKU"],kun:[],or:"OBI ve bronz formlarda 白 (beyaz) üzerine bir yatay çizgi eklenir. Erken Çincede yüz ve beyaz sözcükleri benzer seslerdi. Katō başparmağın yüzü ifade ettiğini öne sürer.",mm:"👍 BİR BEYAZ BAŞPARMAK YÜZ PALAMUTA BEDELDIR",cp:[{k:"百倍",r:"HYAKUBAI",m:"Yüz kat"},{k:"百姓",r:"HYAKUSHŌ",m:"Çiftçi, köylü"},{k:"百貨店",r:"HYAKKATEN",m:"Büyük mağaza"}],ex:[{s:"___円玉を持っている。",tr:"Yüz yenlik para sahibim.",b:"百",br:"HYAKU"}]},
+  {n:72,ch:"文",mn:"Yazı / Metin",on:["BUN","MON"],kun:["fumi"],or:"OBI ve bronz formların etimolojisi tartışmalıdır. Shirakawa dövme yapılmış bir kişi olarak yorumlarken Ogawa ve Katō boyun giysisi giyen bir figür olarak değerlendirir. Desen ve yazı anlamları genişletilmiş anlamlardır.",mm:"✝️ HAÇ YAZININ EN BASIT BİÇİMİDİR: DAHA İYİSİNİ YAP",cp:[{k:"文学",r:"BUNGAKU",m:"Edebiyat"},{k:"文字",r:"MOJI",m:"Karakter, harf"},{k:"恋文",r:"koibumi",m:"Aşk mektubu"}],ex:[{s:"手紙に___章を書いた。",tr:"Mektuba paragraf yazdım.",b:"文",br:"BUN"}]},
+  {n:73,ch:"木",mn:"Ağaç / Tahta",on:["BOKU","MOKU"],kun:["ki","ko"],or:"Bir ağacın piktogramına dayanır. Kökleri, gövdesi ve dallarıyla birlikte stilize edilmiştir.",mm:"🌳 GENIŞ DALLARIYLA AĞAÇ — İYİ TAHTA",cp:[{k:"木曜日",r:"MOKUYŌbi",m:"Perşembe"},{k:"木目",r:"kime",m:"Tahta damarı, doku"},{k:"木立",r:"kodachi",m:"Ağaçlık, koru"}],ex:[{s:"公園の___の下で休む。",tr:"Parkta ağacın altında dinlenirim.",b:"木",br:"ki"}]},
+  {n:74,ch:"本",mn:"Kök / Kitap / Asıl",on:["HON"],kun:["moto"],or:"Köklerini gösteren ağaç piktogramına dayanır. Kök ya da gövde anlamından kitap anlamına geçiş Çin ve Japonya'da kitapların silindir şeklinde rulolar halinde olmasından kaynaklanır.",mm:"🌲 AĞACIN TOPRAK ALTINDA BİR ANA KÖK İZİ VAR",cp:[{k:"日本",r:"NIHON",m:"Japonya"},{k:"本屋",r:"HONya",m:"Kitapçı"},{k:"本社",r:"HONSHA",m:"Genel merkez"}],ex:[{s:"図書館で___を借りた。",tr:"Kütüphaneden kitap ödünç aldım.",b:"本",br:"HON"}]},
+  {n:75,ch:"名",mn:"İsim / Şöhret",on:["MEI","MYŌ"],kun:["na"],or:"Çeşitli yorumlar mevcuttur. Ağız (口) ve hilal ay (夕) bileşiminden oluştuğu düşünülür — gece karanlığında birini seslenerek çağırmak. Shirakawa en erken formların üç aylık bebeğin adlandırma törenini tasvir ettiğini öne sürer.",mm:"🌙 AY IŞIĞINDA AĞIZ ÜNLÜ İSMİ ÇAĞIRIR",cp:[{k:"有名",r:"YŪMEI",m:"Ünlü, meşhur"},{k:"名字",r:"MYŌJI",m:"Soyadı"},{k:"名前",r:"namae",m:"İsim, ad"}],ex:[{s:"お___前を教えてください。",tr:"Adınızı söyler misiniz?",b:"名",br:"na"}]},
+  {n:76,ch:"目",mn:"Göz / Bakmak",on:["MOKU"],kun:["me","ma"],or:"OBI formu bir gözün piktogramıdır. Sıra son eki olarak kullanımı ödünç kullanımdır. Daha sonra dikey konuma çevrildi.",mm:"📺 KARE GÖZLÜ VE DİKEY — ÇOK FAZLA TV İZLEMEK",cp:[{k:"一目",r:"hitome",m:"Bir bakış"},{k:"一つ目",r:"hitotsu me",m:"Birinci, ilk"},{k:"注目",r:"CHŪMOKU",m:"Dikkat, ilgi"}],ex:[{s:"___が疲れた。",tr:"Gözlerim yoruldu.",b:"目",br:"me"}]},
+  {n:77,ch:"立",mn:"Ayakta durmak / Kalkmak",on:["RITSU"],kun:["tatsu","teru"],or:"OBI ve bronz formlar, ayağa kalkmayı vurgulamak için altında zemin olan duran bir kişiyi tasvir eder. Ayrılmak anlamı yükselmekten genişletilmiş bir anlamdır.",mm:"🧍 AYAĞA KALKMAK AYRILMAK DEMEKTİR",cp:[{k:"自立",r:"JIRITSU",m:"Bağımsızlık"},{k:"立場",r:"tachiba",m:"Durum, bakış açısı"},{k:"目立つ",r:"medatsu",m:"Göze çarpmak"}],ex:[{s:"椅子から___ち上がった。",tr:"Sandalyeden kalktım.",b:"立",br:"ta"}]},
+  {n:78,ch:"力",mn:"Güç / Çaba",on:["RYOKU","RIKI"],kun:["chikara"],or:"OBI formları genel olarak bir kol ve eli tasvir ettiği şeklinde yorumlanır. Shirakawa bir saban olarak yorumlar ve tarım işiyle ilişkilendirir. Modern form omuz ve üst kol olarak hatırlanabilir.",mm:"💪 GÜÇLÜ KOL VE OMUZ",cp:[{k:"能力",r:"NŌRYOKU",m:"Yetenek, kapasite"},{k:"人力車",r:"JINRIKISHA",m:"Riksa"},{k:"力持ち",r:"chikaramochi",m:"Güçlü kişi"}],ex:[{s:"全___で走った。",tr:"Tüm gücümle koştum.",b:"力",br:"chikara"}]},
+  {n:79,ch:"林",mn:"Orman (ince)",on:["RIN"],kun:["hayashi"],or:"Erken formlar 木 (ağaç) karakterinin basit bir çiftlemesini gösterir. Japonca ve Çincede başından beri 森 (40) ile aynı anlamda kullanılmıştır.",mm:"🌲🌲 ORMANDA İKİ UZUN AĞAÇ",cp:[{k:"林学",r:"RINGAKU",m:"Ormancılık"},{k:"小林",r:"Kobayashi",m:"Kobayashi (soyad)"},{k:"密林",r:"MITSURI N",m:"Yoğun orman, cengel"}],ex:[{s:"___の中で鳥が鳴く。",tr:"Ormanda kuşlar ötüyor.",b:"林",br:"hayashi"}]},
+  {n:80,ch:"六",mn:"Altı",on:["ROKU"],kun:["mu-"],or:"OBI ve bronz formlar basit bir bina yapısını andırır (Shirakawa). Grafik muhtemelen fonetik ödünç yoluyla altı anlamını kazandı. Qiu daha soyut geometrik bir sembol olarak yorumlar.",mm:"🍽️ ALTI KİŞİLİK YÜKLÜ MASA AYAKLARINI KAYBEDER",cp:[{k:"六月",r:"ROKUGATSU",m:"Haziran"},{k:"六日",r:"muika",m:"Altıncı gün"},{k:"六角",r:"ROKKAKU",m:"Altıgen"}],ex:[{s:"___月は梅雨の季節だ。",tr:"Haziran yağmur mevsimidir.",b:"六",br:"ROKU"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 

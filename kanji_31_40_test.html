@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:31,ch:"耳",mn:"Kulak",on:["JI"],kun:["mimi"],or:"OBI formlarına dayanan bir kulak piktogramıdır.",mm:"👂 SİVRİ KULAK",cp:[{k:"耳科",r:"JIKA",m:"Kulak hastalıkları"},{k:"耳鳴り",r:"miminari",m:"Kulak çınlaması"},{k:"耳飾り",r:"mimikazari",m:"Küpe"}]},
-  {n:32,ch:"七",mn:"Yedi",on:["SHICHI"],kun:["nana-"],or:"Modern 十 (on) a benzeyen OBI formlarından gelir. Erken Çincede kesmek ve yedi benzer seslerdi, grafik ödünç alındı.",mm:"✏️ KÖTÜ YAZILMIŞ ON — SADECE YEDİ EDER",cp:[{k:"七月",r:"SHICHIGATSU",m:"Temmuz"},{k:"七日",r:"nanoka",m:"Yedinci gün"},{k:"七重",r:"nanae",m:"Yedi kat"}]},
-  {n:33,ch:"車",mn:"Araç / Taşıt",on:["SHA"],kun:["kuruma"],or:"İki tekerlekli bir savaş arabasının piktogramına dayanır.",mm:"🚗 İKİ TEKERLEKLİ SAVAŞ ARABASI",cp:[{k:"電車",r:"DENSHA",m:"Tren"},{k:"洗車場",r:"SENSHAJŌ",m:"Araç yıkama yeri"},{k:"手車",r:"teguruma",m:"El arabası"}]},
-  {n:34,ch:"手",mn:"El",on:["SHU"],kun:["te"],or:"Bronz form beş parmaklı bir eli gösterir. Bileşik karakterlerde genellikle 扌 biçimini alır.",mm:"🖐️ BEŞ PARMAKLI EL — ORTASI BÜKÜK",cp:[{k:"手段",r:"SHUDAN",m:"Yöntem, araç"},{k:"手袋",r:"tebukuro",m:"Eldiven"},{k:"上手",r:"JŌZU",m:"Becerikli, usta"}]},
-  {n:35,ch:"十",mn:"On",on:["JŪ"],kun:["tō"],or:"Katō erken bronz formlarını bir iğne olarak görür ve on için fonetik ödünç alındığını öne sürer. Shirakawa ahşap sayım çubuğu olarak yorumlar.",mm:"✝️ DÜZGÜN BİR HAÇ ON'DAN ON ALIR",cp:[{k:"十月",r:"JŪGATSU",m:"Ekim"},{k:"十日",r:"tōka",m:"Onuncu gün"},{k:"十字",r:"JŪJI",m:"Haç şekli"}]},
-  {n:36,ch:"出",mn:"Çıkmak / Dışarı koymak",on:["SHUTSU"],kun:["deru","dasu"],or:"Qiu grafiği bir çukur konuttan çıkan ayak olarak görür — antik insanların çukurlarda yaşadığına dikkat çeker.",mm:"⛰️ BİR DAĞIN ÜZERİNE BAŞKA DAĞ ÇIKAR",cp:[{k:"出発",r:"SHUPPATSU",m:"Kalkış, hareket"},{k:"思い出",r:"omoide",m:"Anı, hatıra"},{k:"引き出し",r:"hikidashi",m:"Çekmece"}]},
-  {n:37,ch:"女",mn:"Kadın",on:["JO","NYO","NYŌ"],kun:["onna","me"],or:"OBI formları diz çökmüş bir kadını gösterir; zamanla stilize edilmiştir.",mm:"🙏 DİZ ÇÖKMÜŞ KADIN",cp:[{k:"女性",r:"JOSEI",m:"Kadın"},{k:"女房",r:"NYŌBŌ",m:"Eş, hanım"},{k:"女の子",r:"onna-no-ko",m:"Kız çocuğu"}]},
-  {n:38,ch:"小",mn:"Küçük",on:["SHŌ"],kun:["chiisai","ko-","o-"],or:"OBI formları birkaç küçük nesneyi gösterir, genellikle üç tane. Bir çizginin ikiye bölünmesi olarak da hatırlanabilir.",mm:"🤏 BİR ÇIZGI İKİ KÜÇÜK ÇIZGIYE BÖLÜNÜR",cp:[{k:"小説",r:"SHŌSETSU",m:"Roman"},{k:"子犬",r:"koinu",m:"Küçük köpek"},{k:"小川",r:"ogawa",m:"Dere, çay"}]},
-  {n:39,ch:"上",mn:"Yukarı / Üst",on:["JŌ"],kun:["ue","uwa-","kami","ageru","noboru"],or:"OBI formlarında iki yatay çizgi görülür; üstteki daha kısa. Dikey çizgi sonradan eklendi.",mm:"⬆️ SAPA SAHİP BAR TABAN ÇİZGİSİNİN ÜZERİNE ÇIKAR",cp:[{k:"以上",r:"IJŌ",m:"Daha fazla, üzerinde"},{k:"川上",r:"kawakami",m:"Nehrin yukarısı"},{k:"値上げ",r:"neage",m:"Fiyat artışı"}]},
-  {n:40,ch:"森",mn:"Orman",on:["SHIN"],kun:["mori"],or:"OBI formu üç ağacın piktogramına dayanır — çokluk anlamında. Japonca da Şinto çağrışımları taşıyabilir.",mm:"🌲 ORMANDA ÜÇER ÜÇER BÜYÜYEN AĞAÇLAR",cp:[{k:"森林",r:"SHINRIN",m:"Orman"},{k:"森閑",r:"SHINKAN",m:"Derin sessizlik"},{k:"青森",r:"Aomori",m:"Aomori şehri"}]}
+  {n:31,ch:"耳",mn:"Kulak",on:["JI"],kun:["mimi"],or:"OBI formlarına dayanan bir kulak piktogramıdır.",mm:"👂 SİVRİ KULAK",cp:[{k:"耳科",r:"JIKA",m:"Kulak hastalıkları"},{k:"耳鳴り",r:"miminari",m:"Kulak çınlaması"},{k:"耳飾り",r:"mimikazari",m:"Küpe"}],ex:[{s:"___が痛い。",tr:"Kulağım ağrıyor.",b:"耳",br:"mimi"}]},
+  {n:32,ch:"七",mn:"Yedi",on:["SHICHI"],kun:["nana-"],or:"Modern 十 (on) a benzeyen OBI formlarından gelir. Erken Çincede kesmek ve yedi benzer seslerdi, grafik ödünç alındı.",mm:"✏️ KÖTÜ YAZILMIŞ ON — SADECE YEDİ EDER",cp:[{k:"七月",r:"SHICHIGATSU",m:"Temmuz"},{k:"七日",r:"nanoka",m:"Yedinci gün"},{k:"七重",r:"nanae",m:"Yedi kat"}],ex:[{s:"___月は夏です。",tr:"Temmuz yaz mevsimidir.",b:"七",br:"SHICHI"}]},
+  {n:33,ch:"車",mn:"Araç / Taşıt",on:["SHA"],kun:["kuruma"],or:"İki tekerlekli bir savaş arabasının piktogramına dayanır.",mm:"🚗 İKİ TEKERLEKLİ SAVAŞ ARABASI",cp:[{k:"電車",r:"DENSHA",m:"Tren"},{k:"洗車場",r:"SENSHAJŌ",m:"Araç yıkama yeri"},{k:"手車",r:"teguruma",m:"El arabası"}],ex:[{s:"___で駅まで行く。",tr:"Arabayla istasyona giderim.",b:"車",br:"kuruma"}]},
+  {n:34,ch:"手",mn:"El",on:["SHU"],kun:["te"],or:"Bronz form beş parmaklı bir eli gösterir. Bileşik karakterlerde genellikle 扌 biçimini alır.",mm:"🖐️ BEŞ PARMAKLI EL — ORTASI BÜKÜK",cp:[{k:"手段",r:"SHUDAN",m:"Yöntem, araç"},{k:"手袋",r:"tebukuro",m:"Eldiven"},{k:"上手",r:"JŌZU",m:"Becerikli, usta"}],ex:[{s:"___を洗ってください。",tr:"Lütfen ellerinizi yıkayın.",b:"手",br:"te"}]},
+  {n:35,ch:"十",mn:"On",on:["JŪ"],kun:["tō"],or:"Katō erken bronz formlarını bir iğne olarak görür ve on için fonetik ödünç alındığını öne sürer. Shirakawa ahşap sayım çubuğu olarak yorumlar.",mm:"✝️ DÜZGÜN BİR HAÇ ON'DAN ON ALIR",cp:[{k:"十月",r:"JŪGATSU",m:"Ekim"},{k:"十日",r:"tōka",m:"Onuncu gün"},{k:"十字",r:"JŪJI",m:"Haç şekli"}],ex:[{s:"___分後に出発する。",tr:"On dakika sonra hareket ediyorum.",b:"十",br:"JŪ"}]},
+  {n:36,ch:"出",mn:"Çıkmak / Dışarı koymak",on:["SHUTSU"],kun:["deru","dasu"],or:"Qiu grafiği bir çukur konuttan çıkan ayak olarak görür — antik insanların çukurlarda yaşadığına dikkat çeker.",mm:"⛰️ BİR DAĞIN ÜZERİNE BAŞKA DAĞ ÇIKAR",cp:[{k:"出発",r:"SHUPPATSU",m:"Kalkış, hareket"},{k:"思い出",r:"omoide",m:"Anı, hatıra"},{k:"引き出し",r:"hikidashi",m:"Çekmece"}],ex:[{s:"朝早く家を___た。",tr:"Sabah erken evden çıktım.",b:"出",br:"de"}]},
+  {n:37,ch:"女",mn:"Kadın",on:["JO","NYO","NYŌ"],kun:["onna","me"],or:"OBI formları diz çökmüş bir kadını gösterir; zamanla stilize edilmiştir.",mm:"🙏 DİZ ÇÖKMÜŞ KADIN",cp:[{k:"女性",r:"JOSEI",m:"Kadın"},{k:"女房",r:"NYŌBŌ",m:"Eş, hanım"},{k:"女の子",r:"onna-no-ko",m:"Kız çocuğu"}],ex:[{s:"___の子が歌を歌う。",tr:"Kız çocuğu şarkı söylüyor.",b:"女",br:"onna"}]},
+  {n:38,ch:"小",mn:"Küçük",on:["SHŌ"],kun:["chiisai","ko-","o-"],or:"OBI formları birkaç küçük nesneyi gösterir, genellikle üç tane. Bir çizginin ikiye bölünmesi olarak da hatırlanabilir.",mm:"🤏 BİR ÇIZGI İKİ KÜÇÜK ÇIZGIYE BÖLÜNÜR",cp:[{k:"小説",r:"SHŌSETSU",m:"Roman"},{k:"子犬",r:"koinu",m:"Küçük köpek"},{k:"小川",r:"ogawa",m:"Dere, çay"}],ex:[{s:"___さな猫を見つけた。",tr:"Küçük bir kedi buldum.",b:"小",br:"chiisa"}]},
+  {n:39,ch:"上",mn:"Yukarı / Üst",on:["JŌ"],kun:["ue","uwa-","kami","ageru","noboru"],or:"OBI formlarında iki yatay çizgi görülür; üstteki daha kısa. Dikey çizgi sonradan eklendi.",mm:"⬆️ SAPA SAHİP BAR TABAN ÇİZGİSİNİN ÜZERİNE ÇIKAR",cp:[{k:"以上",r:"IJŌ",m:"Daha fazla, üzerinde"},{k:"川上",r:"kawakami",m:"Nehrin yukarısı"},{k:"値上げ",r:"neage",m:"Fiyat artışı"}],ex:[{s:"棚の___に本がある。",tr:"Rafın üstünde kitap var.",b:"上",br:"ue"}]},
+  {n:40,ch:"森",mn:"Orman",on:["SHIN"],kun:["mori"],or:"OBI formu üç ağacın piktogramına dayanır — çokluk anlamında. Japonca da Şinto çağrışımları taşıyabilir.",mm:"🌲 ORMANDA ÜÇER ÜÇER BÜYÜYEN AĞAÇLAR",cp:[{k:"森林",r:"SHINRIN",m:"Orman"},{k:"森閑",r:"SHINKAN",m:"Derin sessizlik"},{k:"青森",r:"Aomori",m:"Aomori şehri"}],ex:[{s:"深い___を歩いた。",tr:"Derin ormanda yürüdüm.",b:"森",br:"mori"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 

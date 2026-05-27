@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:1,ch:"一",mn:"Bir",on:["ICHI","ITSU"],kun:["hito-"],or:"Tek bir yatay çizgiyle 'bir' sayısını temsil eder. Eski Mısır hiyerogliflerinde ve Sümer çivi yazısında da aynı yaklaşım kullanılmıştır.",mm:"☝️ BİR PARMAK — tek bir çizgi, kaldırılmış bir parmağı andırır.",cp:[{k:"一月",r:"ICHIGATSU",m:"Ocak"},{k:"均一",r:"KIN'ITSU",m:"Tekdüzelik"},{k:"一人",r:"hitori",m:"Bir kişi"}]},
-  {n:2,ch:"右",mn:"Sağ",on:["U","YŪ"],kun:["migi"],or:"Aslen bir elin stilize çizimiydi. Eski formlarda bir ağzın ya da ritüel kabın sağ yanında duran bir el görülür.",mm:"✋ SAĞ EL AĞZA — sağ elinizi ağzınıza götürün.",cp:[{k:"右派",r:"UHA",m:"Sağ kanat"},{k:"左右",r:"SAYŪ",m:"Sol-sağ / kontrol"},{k:"右手",r:"migite",m:"Sağ el"}]},
-  {n:3,ch:"雨",mn:"Yağmur",on:["U"],kun:["ame","ama-"],or:"Yağmurun kavramsal bir tasvirinden oluşur. Üstteki yatay çizgi gökyüzünü, altındaki noktalar düşen yağmur damlalarını temsil eder.",mm:"🌧️ GÖKTEN YAĞAN BULUTLAR — üst çizgi gökyüzü, noktalar yağmur.",cp:[{k:"雨季",r:"UKI",m:"Yağmurlu mevsim"},{k:"大雨",r:"ōame",m:"Şiddetli yağmur"},{k:"雨雲",r:"amagumo",m:"Yağmur bulutu"}]},
-  {n:4,ch:"円",mn:"Yuvarlak / Yen",on:["EN"],kun:["marui"],or:"圓 karakterinin modern sadeleştirilmiş biçimidir. 'Daire' anlamındaki 囗 ve fonetik unsur 員'den oluşur.",mm:"🏦 BANKA GİŞESİNDEKİ YUVARLAK YEN PARALARI.",cp:[{k:"円形",r:"ENKEI",m:"Daire şekli"},{k:"円高",r:"ENdaka",m:"Güçlü yen"},{k:"百円",r:"HYAKUEN",m:"Yüz yen"}]},
-  {n:5,ch:"王",mn:"Kral / Hükümdar",on:["Ō"],kun:[],or:"Orijinali bir savaş baltası bıçağını temsil eder. Yalnızca hükümdar gibi yüksek statülü kişilerin kullandığı ritüel bir bıçağı gösterir.",mm:"🪓 KRAL BALTASIYLA YÖNETİR — üç yatay çizgi dikey bir çizgiyle birleşir.",cp:[{k:"王子",r:"ŌJI",m:"Prens"},{k:"女王",r:"JOŌ",m:"Kraliçe"},{k:"王様",r:"Ōsama",m:"Kral (saygılı)"}]},
-  {n:6,ch:"音",mn:"Ses / Ton",on:["ON","IN"],kun:["oto","ne"],or:"Erken bronz formları belirsizdir. Alt kısım ağız ya da dua kabı olarak yorumlanır. 立 (yükselen) ve 日 (güneş) unsurlarından oluştuğu da önerilir.",mm:"🌅 YÜKSELİYOR GÜNEŞ — güneşin doğuşundaki ses.",cp:[{k:"音楽",r:"ONGAKU",m:"Müzik"},{k:"子音",r:"SHIIN",m:"Ünsüz harf"},{k:"発音",r:"HATSUON",m:"Telaffuz"}]},
-  {n:7,ch:"下",mn:"Alt / Aşağı",on:["KA","GE"],kun:["shita","shimo","moto","sageru","oriru"],or:"İki karakterle karışmaması için eğri eklendi: 二 ('iki') ve 上 ('yukarı'). Shirakawa, uzun yatay çizginin yana yatık el ayasını tasvir ettiğini öne sürer.",mm:"⬇️ T ÇUBUĞUNUN SARKAN KOLU — aşağıya doğru inen bir kol.",cp:[{k:"下品",r:"GEHIN",m:"Kaba, bayağı"},{k:"低下",r:"TEIKA",m:"Düşüş, azalma"},{k:"川下",r:"kawashimo",m:"Nehrin aşağısı"}]},
-  {n:8,ch:"火",mn:"Ateş / Alev",on:["KA"],kun:["hi"],or:"Yanan bir ateşin stilize çiziminden gelir. Alt belirleyici olarak kullanıldığında 灬 biçimini alır.",mm:"🔥 ATEŞİN ALEVLERİ — yükselen alevleri andıran çizgiler.",cp:[{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"火山",r:"KAZAN",m:"Yanardağ"},{k:"火花",r:"hibana",m:"Kıvılcım"}]},
-  {n:9,ch:"花",mn:"Çiçek",on:["KA"],kun:["hana"],or:"Geç dönem karakteridir. Üstteki 艹 'bitki' belirleyicisinin kısaltmasıdır. Alttaki 化 'değişim' fonetik unsur olarak KA okunuşuna işaret eder.",mm:"🌸 BİTKİLER DEĞİŞİNCE ÇİÇEK AÇAR — üst bitki, alt değişim.",cp:[{k:"花弁",r:"KABEN",m:"Taç yaprak"},{k:"花見",r:"hanami",m:"Kiraz çiçeği izleme"},{k:"花火",r:"hanabi",m:"Havai fişek"}]},
-  {n:10,ch:"貝",mn:"Kabuk / Deniz kabuğu",on:[],kun:["kai"],or:"İki kapaklı bir deniz kabuğunun piktogramından gelir. Antik Çin'de kabuklar para olarak kullanıldığından 貝, bileşik karakterlerde 'servet' anlamına işaret eder.",mm:"👁️ KABUKLU GÖZLE BAKIYOR — 目 'göz' karakterine benzer, üstünde çıkıntılar.",cp:[{k:"帆立貝",r:"hotategai",m:"Deniz tarağı"},{k:"貝殻",r:"kaigara",m:"Deniz kabuğu"},{k:"貝類",r:"kaiRUI",m:"Kabuklu deniz ürünleri"}]}
+  {n:1,ch:"一",mn:"Bir",on:["ICHI","ITSU"],kun:["hito-"],or:"Tek bir yatay çizgiyle 'bir' sayısını temsil eder. Eski Mısır hiyerogliflerinde ve Sümer çivi yazısında da aynı yaklaşım kullanılmıştır.",mm:"☝️ BİR PARMAK — tek bir çizgi, kaldırılmış bir parmağı andırır.",cp:[{k:"一月",r:"ICHIGATSU",m:"Ocak"},{k:"均一",r:"KIN'ITSU",m:"Tekdüzelik"},{k:"一人",r:"hitori",m:"Bir kişi"}],ex:[{s:"___日に三回薬を飲む。",tr:"Günde üç kez ilaç içilir.",b:"一",br:"ICHI"}]},
+  {n:2,ch:"右",mn:"Sağ",on:["U","YŪ"],kun:["migi"],or:"Aslen bir elin stilize çizimiydi. Eski formlarda bir ağzın ya da ritüel kabın sağ yanında duran bir el görülür.",mm:"✋ SAĞ EL AĞZA — sağ elinizi ağzınıza götürün.",cp:[{k:"右派",r:"UHA",m:"Sağ kanat"},{k:"左右",r:"SAYŪ",m:"Sol-sağ / kontrol"},{k:"右手",r:"migite",m:"Sağ el"}],ex:[{s:"___手でご飯を食べる。",tr:"Sağ elle yemek yenir.",b:"右",br:"U"}]},
+  {n:3,ch:"雨",mn:"Yağmur",on:["U"],kun:["ame","ama-"],or:"Yağmurun kavramsal bir tasvirinden oluşur. Üstteki yatay çizgi gökyüzünü, altındaki noktalar düşen yağmur damlalarını temsil eder.",mm:"🌧️ GÖKTEN YAĞAN BULUTLAR — üst çizgi gökyüzü, noktalar yağmur.",cp:[{k:"雨季",r:"UKI",m:"Yağmurlu mevsim"},{k:"大雨",r:"ōame",m:"Şiddetli yağmur"},{k:"雨雲",r:"amagumo",m:"Yağmur bulutu"}],ex:[{s:"今日は___が降っている。",tr:"Bugün yağmur yağıyor.",b:"雨",br:"ame"}]},
+  {n:4,ch:"円",mn:"Yuvarlak / Yen",on:["EN"],kun:["marui"],or:"圓 karakterinin modern sadeleştirilmiş biçimidir. 'Daire' anlamındaki 囗 ve fonetik unsur 員'den oluşur.",mm:"🏦 BANKA GİŞESİNDEKİ YUVARLAK YEN PARALARI.",cp:[{k:"円形",r:"ENKEI",m:"Daire şekli"},{k:"円高",r:"ENdaka",m:"Güçlü yen"},{k:"百円",r:"HYAKUEN",m:"Yüz yen"}],ex:[{s:"これは百___です。",tr:"Bu yüz yendir.",b:"円",br:"EN"}]},
+  {n:5,ch:"王",mn:"Kral / Hükümdar",on:["Ō"],kun:[],or:"Orijinali bir savaş baltası bıçağını temsil eder. Yalnızca hükümdar gibi yüksek statülü kişilerin kullandığı ritüel bir bıçağı gösterir.",mm:"🪓 KRAL BALTASIYLA YÖNETİR — üç yatay çizgi dikey bir çizgiyle birleşir.",cp:[{k:"王子",r:"ŌJI",m:"Prens"},{k:"女王",r:"JOŌ",m:"Kraliçe"},{k:"王様",r:"Ōsama",m:"Kral (saygılı)"}],ex:[{s:"___様が国を治める。",tr:"Kral ülkeyi yönetir.",b:"王",br:"Ō"}]},
+  {n:6,ch:"音",mn:"Ses / Ton",on:["ON","IN"],kun:["oto","ne"],or:"Erken bronz formları belirsizdir. Alt kısım ağız ya da dua kabı olarak yorumlanır. 立 (yükselen) ve 日 (güneş) unsurlarından oluştuğu da önerilir.",mm:"🌅 YÜKSELİYOR GÜNEŞ — güneşin doğuşundaki ses.",cp:[{k:"音楽",r:"ONGAKU",m:"Müzik"},{k:"子音",r:"SHIIN",m:"Ünsüz harf"},{k:"発音",r:"HATSUON",m:"Telaffuz"}],ex:[{s:"大きな___が聞こえた。",tr:"Büyük bir ses duyuldu.",b:"音",br:"oto"}]},
+  {n:7,ch:"下",mn:"Alt / Aşağı",on:["KA","GE"],kun:["shita","shimo","moto","sageru","oriru"],or:"İki karakterle karışmaması için eğri eklendi: 二 ('iki') ve 上 ('yukarı'). Shirakawa, uzun yatay çizginin yana yatık el ayasını tasvir ettiğini öne sürer.",mm:"⬇️ T ÇUBUĞUNUN SARKAN KOLU — aşağıya doğru inen bir kol.",cp:[{k:"下品",r:"GEHIN",m:"Kaba, bayağı"},{k:"低下",r:"TEIKA",m:"Düşüş, azalma"},{k:"川下",r:"kawashimo",m:"Nehrin aşağısı"}],ex:[{s:"机の___に猫がいる。",tr:"Masanın altında kedi var.",b:"下",br:"shita"}]},
+  {n:8,ch:"火",mn:"Ateş / Alev",on:["KA"],kun:["hi"],or:"Yanan bir ateşin stilize çiziminden gelir. Alt belirleyici olarak kullanıldığında 灬 biçimini alır.",mm:"🔥 ATEŞİN ALEVLERİ — yükselen alevleri andıran çizgiler.",cp:[{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"火山",r:"KAZAN",m:"Yanardağ"},{k:"火花",r:"hibana",m:"Kıvılcım"}],ex:[{s:"___山が噴火した。",tr:"Yanardağ patladı.",b:"火",br:"KA"}]},
+  {n:9,ch:"花",mn:"Çiçek",on:["KA"],kun:["hana"],or:"Geç dönem karakteridir. Üstteki 艹 'bitki' belirleyicisinin kısaltmasıdır. Alttaki 化 'değişim' fonetik unsur olarak KA okunuşuna işaret eder.",mm:"🌸 BİTKİLER DEĞİŞİNCE ÇİÇEK AÇAR — üst bitki, alt değişim.",cp:[{k:"花弁",r:"KABEN",m:"Taç yaprak"},{k:"花見",r:"hanami",m:"Kiraz çiçeği izleme"},{k:"花火",r:"hanabi",m:"Havai fişek"}],ex:[{s:"公園に___が咲いている。",tr:"Parkta çiçekler açıyor.",b:"花",br:"hana"}]},
+  {n:10,ch:"貝",mn:"Kabuk / Deniz kabuğu",on:[],kun:["kai"],or:"İki kapaklı bir deniz kabuğunun piktogramından gelir. Antik Çin'de kabuklar para olarak kullanıldığından 貝, bileşik karakterlerde 'servet' anlamına işaret eder.",mm:"👁️ KABUKLU GÖZLE BAKIYOR — 目 'göz' karakterine benzer, üstünde çıkıntılar.",cp:[{k:"帆立貝",r:"hotategai",m:"Deniz tarağı"},{k:"貝殻",r:"kaigara",m:"Deniz kabuğu"},{k:"貝類",r:"kaiRUI",m:"Kabuklu deniz ürünleri"}],ex:[{s:"海で___を拾った。",tr:"Denizde kabuk topladım.",b:"貝",br:"kai"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 

@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:11,ch:"学",mn:"Öğrenme",on:["GAKU"],kun:["manabu"],or:"OBI formları kirişler, çatı, eller ve çocuk unsurlarını içerir. Sonraki formlarda çocuk öne çıkar: çatı altında öğrenen çocuk.",mm:"🏫 SÜSLÜ ÇATI ALTINDA ÖĞRENEN ÇOCUK",cp:[{k:"学校",r:"GAKKŌ",m:"Okul"},{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学者",r:"GAKUSHA",m:"Bilim insanı"}]},
-  {n:12,ch:"気",mn:"Ruh / Enerji / Hava",on:["KI","KE"],kun:[],or:"Geleneksel form 氣. Han hanedanından itibaren buhar anlamında kullanıldı. Tanıdık şekil muhtemelen 气 nin bir kursif formuna dayanır.",mm:"💨 HAÇIN ÜZERİNDEKİ BUHAR GİBİ RUH",cp:[{k:"気分",r:"KIBUN",m:"Ruh hali"},{k:"天気",r:"TENKI",m:"Hava durumu"},{k:"電気",r:"DENKI",m:"Elektrik"}]},
-  {n:13,ch:"九",mn:"Dokuz",on:["KYŪ","KU"],kun:["kokono-"],or:"Etimoloji belirsiz. Shirakawa ejderhayı, Katō dirsek şeklini, Qiu ödünç alınmış bir karakteri temsil ettiğini öne sürer.",mm:"🪝 ONDAN BİR KOPARILINCA DOKUZ KALIR",cp:[{k:"十九",r:"JŪKYŪ",m:"On dokuz"},{k:"九日",r:"kokonoka",m:"Dokuzuncu gün"},{k:"九月",r:"KUGATSU",m:"Eylül"}]},
-  {n:14,ch:"休",mn:"Dinlenme",on:["KYŪ"],kun:["yasumu"],or:"Mantıksal bileşik: kişiyi (人) ağacın (木) yanında gölgede dinleniyor olarak tasvir eder.",mm:"🌳 KİŞİ AĞACA YASLANARAK DİNLENİR",cp:[{k:"休日",r:"KYŪJITSU",m:"Tatil günü"},{k:"休戦",r:"KYŪSEN",m:"Ateşkes"},{k:"夏休み",r:"natsuyasumi",m:"Yaz tatili"}]},
-  {n:15,ch:"玉",mn:"Mücevher / Top",on:["GYOKU"],kun:["tama"],or:"OBI formları ipe dizilmiş değerli taş parçalarını gösterir. 王 (kral) ile karışmaması için sonradan nokta eklendi.",mm:"💎 KRAL İÇİN İPE DİZİLMİŞ MÜCEVHERLER",cp:[{k:"玉杯",r:"GYOKUHAI",m:"Yeşim kupa"},{k:"玉突き",r:"tamatsuki",m:"Bilardo"},{k:"目玉",r:"medama",m:"Göz küresi"}]},
-  {n:16,ch:"金",mn:"Altın / Metal / Para",on:["KIN","KON"],kun:["kane"],or:"En eski bronz yazıtlardaki şekil farklılıkları yorumlara yol açmıştır. Shirakawa küçük noktaları dökme metal parçaları olarak görür.",mm:"👑 KRAL İKİ ALTIN KÜLCESİNİ SAKLAR",cp:[{k:"金曜日",r:"KIN'YŌbi",m:"Cuma"},{k:"金色",r:"KONJIKI",m:"Altın rengi"},{k:"金持ち",r:"kanemochi",m:"Zengin kişi"}]},
-  {n:17,ch:"空",mn:"Gökyüzü / Boş",on:["KŪ"],kun:["sora","kara"],or:"Üstteki çizgiler oyulmuş bir çukurun girişini tasvir eder. Sonradan gökyüzü anlamına genişledi.",mm:"🌤️ ÇATIYI AÇINCA BOŞ GÖKYÜZÜ GÖRÜNÜR",cp:[{k:"空気",r:"KŪKI",m:"Hava"},{k:"空色",r:"sorairo",m:"Gök mavisi"},{k:"空箱",r:"karabako",m:"Boş kutu"}]},
-  {n:18,ch:"月",mn:"Ay / Ay (takvim)",on:["GETSU","GATSU"],kun:["tsuki"],or:"Çukurlu yüzeyi olan hilali tasvir ediyordu, zamanla stilize oldu. 肉 (et) belirleyicisi de aynı şekle sahiptir.",mm:"🌙 HİLAL ÇUKURLU VE AŞAĞI BAKAR",cp:[{k:"今月",r:"KONGETSU",m:"Bu ay"},{k:"月曜日",r:"GETSUYŌbi",m:"Pazartesi"},{k:"月見",r:"tsukimi",m:"Ay seyretme"}]},
-  {n:19,ch:"犬",mn:"Köpek",on:["KEN"],kun:["inu"],or:"Ayağa kalkmış bir köpeğin piktogramından gelir. 大 (büyük) artı bir nokta olarak hatırlanabilir.",mm:"🐕 BÜYÜK KÖPEĞİN BİR BENİ VAR",cp:[{k:"猟犬",r:"RYŌKEN",m:"Av köpeği"},{k:"犬小屋",r:"inugoya",m:"Köpek kulübesi"},{k:"子犬",r:"koinu",m:"Yavru köpek"}]},
-  {n:20,ch:"見",mn:"Görmek / Bakmak",on:["KEN"],kun:["miru","seru","eru"],or:"OBI formları aşırı büyütülmüş bir gözü (目) kişinin (人) üzerinde gösterir — eğilen figür.",mm:"👁 BÜYÜK GÖZLÜ KİŞİ EĞİLEREK BAKAR",cp:[{k:"発見",r:"HAKKEN",m:"Keşif"},{k:"見物",r:"KENBUTSU",m:"Gezinti / Seyir"},{k:"見物",r:"mimono",m:"Seyirlik şey"}]}
+  {n:11,ch:"学",mn:"Öğrenme",on:["GAKU"],kun:["manabu"],or:"OBI formları kirişler, çatı, eller ve çocuk unsurlarını içerir. Sonraki formlarda çocuk öne çıkar: çatı altında öğrenen çocuk.",mm:"🏫 SÜSLÜ ÇATI ALTINDA ÖĞRENEN ÇOCUK",cp:[{k:"学校",r:"GAKKŌ",m:"Okul"},{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学者",r:"GAKUSHA",m:"Bilim insanı"}],ex:[{s:"毎日___校へ行く。",tr:"Her gün okula giderim.",b:"学",br:"GAKU"}]},
+  {n:12,ch:"気",mn:"Ruh / Enerji / Hava",on:["KI","KE"],kun:[],or:"Geleneksel form 氣. Han hanedanından itibaren buhar anlamında kullanıldı. Tanıdık şekil muhtemelen 气 nin bir kursif formuna dayanır.",mm:"💨 HAÇIN ÜZERİNDEKİ BUHAR GİBİ RUH",cp:[{k:"気分",r:"KIBUN",m:"Ruh hali"},{k:"天気",r:"TENKI",m:"Hava durumu"},{k:"電気",r:"DENKI",m:"Elektrik"}],ex:[{s:"元___ですか？",tr:"İyi misiniz?",b:"気",br:"KI"}]},
+  {n:13,ch:"九",mn:"Dokuz",on:["KYŪ","KU"],kun:["kokono-"],or:"Etimoloji belirsiz. Shirakawa ejderhayı, Katō dirsek şeklini, Qiu ödünç alınmış bir karakteri temsil ettiğini öne sürer.",mm:"🪝 ONDAN BİR KOPARILINCA DOKUZ KALIR",cp:[{k:"十九",r:"JŪKYŪ",m:"On dokuz"},{k:"九日",r:"kokonoka",m:"Dokuzuncu gün"},{k:"九月",r:"KUGATSU",m:"Eylül"}],ex:[{s:"___月に試験がある。",tr:"Eylül'de sınav var.",b:"九",br:"KU"}]},
+  {n:14,ch:"休",mn:"Dinlenme",on:["KYŪ"],kun:["yasumu"],or:"Mantıksal bileşik: kişiyi (人) ağacın (木) yanında gölgede dinleniyor olarak tasvir eder.",mm:"🌳 KİŞİ AĞACA YASLANARAK DİNLENİR",cp:[{k:"休日",r:"KYŪJITSU",m:"Tatil günü"},{k:"休戦",r:"KYŪSEN",m:"Ateşkes"},{k:"夏休み",r:"natsuyasumi",m:"Yaz tatili"}],ex:[{s:"日曜日に___む。",tr:"Pazar günü dinlenirim.",b:"休",br:"yasumu"}]},
+  {n:15,ch:"玉",mn:"Mücevher / Top",on:["GYOKU"],kun:["tama"],or:"OBI formları ipe dizilmiş değerli taş parçalarını gösterir. 王 (kral) ile karışmaması için sonradan nokta eklendi.",mm:"💎 KRAL İÇİN İPE DİZİLMİŞ MÜCEVHERLER",cp:[{k:"玉杯",r:"GYOKUHAI",m:"Yeşim kupa"},{k:"玉突き",r:"tamatsuki",m:"Bilardo"},{k:"目玉",r:"medama",m:"Göz küresi"}],ex:[{s:"___手箱を開けた。",tr:"Mücevher kutusunu açtı.",b:"玉",br:"tama"}]},
+  {n:16,ch:"金",mn:"Altın / Metal / Para",on:["KIN","KON"],kun:["kane"],or:"En eski bronz yazıtlardaki şekil farklılıkları yorumlara yol açmıştır. Shirakawa küçük noktaları dökme metal parçaları olarak görür.",mm:"👑 KRAL İKİ ALTIN KÜLCESİNİ SAKLAR",cp:[{k:"金曜日",r:"KIN'YŌbi",m:"Cuma"},{k:"金色",r:"KONJIKI",m:"Altın rengi"},{k:"金持ち",r:"kanemochi",m:"Zengin kişi"}],ex:[{s:"___曜日に映画を見る。",tr:"Cuma günü film izlerim.",b:"金",br:"KIN"}]},
+  {n:17,ch:"空",mn:"Gökyüzü / Boş",on:["KŪ"],kun:["sora","kara"],or:"Üstteki çizgiler oyulmuş bir çukurun girişini tasvir eder. Sonradan gökyüzü anlamına genişledi.",mm:"🌤️ ÇATIYI AÇINCA BOŞ GÖKYÜZÜ GÖRÜNÜR",cp:[{k:"空気",r:"KŪKI",m:"Hava"},{k:"空色",r:"sorairo",m:"Gök mavisi"},{k:"空箱",r:"karabako",m:"Boş kutu"}],ex:[{s:"青い___を見上げた。",tr:"Mavi gökyüzüne baktım.",b:"空",br:"sora"}]},
+  {n:18,ch:"月",mn:"Ay / Ay (takvim)",on:["GETSU","GATSU"],kun:["tsuki"],or:"Çukurlu yüzeyi olan hilali tasvir ediyordu, zamanla stilize oldu. 肉 (et) belirleyicisi de aynı şekle sahiptir.",mm:"🌙 HİLAL ÇUKURLU VE AŞAĞI BAKAR",cp:[{k:"今月",r:"KONGETSU",m:"Bu ay"},{k:"月曜日",r:"GETSUYŌbi",m:"Pazartesi"},{k:"月見",r:"tsukimi",m:"Ay seyretme"}],ex:[{s:"___明かりが美しい。",tr:"Ay ışığı güzeldir.",b:"月",br:"tsuki"}]},
+  {n:19,ch:"犬",mn:"Köpek",on:["KEN"],kun:["inu"],or:"Ayağa kalkmış bir köpeğin piktogramından gelir. 大 (büyük) artı bir nokta olarak hatırlanabilir.",mm:"🐕 BÜYÜK KÖPEĞİN BİR BENİ VAR",cp:[{k:"猟犬",r:"RYŌKEN",m:"Av köpeği"},{k:"犬小屋",r:"inugoya",m:"Köpek kulübesi"},{k:"子犬",r:"koinu",m:"Yavru köpek"}],ex:[{s:"小さな___を飼っている。",tr:"Küçük bir köpek besliyorum.",b:"犬",br:"inu"}]},
+  {n:20,ch:"見",mn:"Görmek / Bakmak",on:["KEN"],kun:["miru","seru","eru"],or:"OBI formları aşırı büyütülmüş bir gözü (目) kişinin (人) üzerinde gösterir — eğilen figür.",mm:"👁 BÜYÜK GÖZLÜ KİŞİ EĞİLEREK BAKAR",cp:[{k:"発見",r:"HAKKEN",m:"Keşif"},{k:"見物",r:"KENBUTSU",m:"Gezinti / Seyir"},{k:"見物",r:"mimono",m:"Seyirlik şey"}],ex:[{s:"富士山を___た。",tr:"Fuji Dağı'nı gördüm.",b:"見",br:"mi"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,16 +161,96 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
+
+  const oM =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const oC =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const oCM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const oR =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // T1: Kanji → Anlam
+  function mkKA(k){
+    const ans=k.mn;
+    const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T2: Bileşik → Anlam
+  function mkCM(k){
+    const c=r(k.cp);const ans=c.m;
+    const d=sh(oCM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:`"${c.k}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span> kelimesinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T3: Bileşik boşluk → Kanji bul
+  function mkBF(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const blank=c.k.replace(k.ch,'___');
+    const ans=k.ch;const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:`"${blank}" &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.m})</span><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T4: Cümle içi boşluk → Kanji bul
+  function mkEX(k){
+    if(!k.ex||!k.ex.length)return null;
+    const ex=r(k.ex);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+    return{tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+      q:`<span style="font-size:1.05rem;line-height:1.8">${qs}</span><br><span style="color:#6b7599;font-size:.82rem">${ex.tr}</span><br><br>Boşluğa hangi kanji gelir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T5: Bileşikteki işaretli kanji → Anlam
+  function mkCK(k){
+    const c=k.cp.find(x=>x.k.includes(k.ch));if(!c)return null;
+    const marked=c.k.replace(k.ch,`<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">${k.ch}</u>`);
+    const ans=k.mn;const d=sh(oM(k,12)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+      q:`${marked} &nbsp;<span style="color:#6b7599;font-size:.85rem">(${c.r})</span><br>Altı çizili kanjinin anlamı nedir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  // T6: Kanji → Okunuş
+  function mkKR(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const ans=r(all);const d=sh(oR(k,14)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...d]),sc:true};}
+
+  // T7: Okunuş → Kanji
+  function mkRK(k){
+    const all=[...k.on,...k.kun];if(!all.length)return null;
+    const rd=r(all);const ans=k.ch;
+    const d=sh(oC(k,10)).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+      q:`"<b style="font-size:1.1rem">${rd}</b>" okunuşuna sahip kanji hangisidir?`,
+      ans,opts:sh([ans,...d]),sc:false};}
+
+  const MAKERS=[mkKA,mkCM,mkBF,mkEX,mkCK,mkKR,mkRK];
+  const TOTAL=70; // 10 kanji × 7 tip = tam döngü, her soru farklı
+
+  // Tekrar önleme: kanji × tip sayacı — aynı kombinasyon 1 kereden fazla gelmez
+  const cnt={};K.forEach(k=>{cnt[k.ch]=new Array(MAKERS.length).fill(0);});
+  const qs=[];let tries=0;
+  while(qs.length<TOTAL&&tries<2000){
+    tries++;
+    const k=r(K);
+    // Sayacı en düşük olan tipleri seç (henüz kullanılmamış olanlar önce)
+    const minV=Math.min(...cnt[k.ch]);
+    const pool=cnt[k.ch].map((v,i)=>({i,v})).filter(x=>x.v===minV);
+    const pick=r(pool);
+    try{
+      const q=MAKERS[pick.i](k);
+      if(q&&q.opts.length===6){cnt[k.ch][pick.i]++;qs.push(q);}
+    }catch(e){}
+  }
   return sh(qs);
 }
 
