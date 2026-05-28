@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanji #821–830 | Notlar & Test</title>
+<title>Kanji #1–10 | Notlar & Test</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
@@ -111,19 +111,20 @@ a.back:hover{color:var(--text);}
   <div id="rv" style="display:none"></div>
 </div>
 
-<script>
-const K=[
-  {n:821,ch:"預",mn:"Yatırmak / Emanet etmek",on:["YO"],kun:["azukaru","azukeru"],or:"Geç dönem karakter (Shuowen). 'Baş' (yüz ifadesini gösteriyor) ve fonetik unsur ('mekik'; 'rahat, dingin' çağrışımlı) içerir; 'rahat yüz ifadesi'. 'Yatırmak' ve 'emanet etmek' ödünç anlamlardır.",mm:"💆 ZATEN YATIRILAN BAŞA BAKIYORUM!",cp:[{k:"預金",r:"YOKIN",m:"Banka yatırımı, mevduat"},{k:"預かり人",r:"azukariNIN",m:"Vasi, mütevelli"},{k:"預かり証",r:"azukariSHŌ",m:"Makbuz, fiş"}]},
-  {n:822,ch:"容",mn:"İçermek / Görünüş",on:["YŌ"],kun:["ireru"],or:"Bronz ve mühür formlar. 'Çatı/bina' ve fonetik unsur ('kamusal alan' ya da 'vadi'; 'geniş, ferah' çağrışımlı) içerir; 'geniş ev'. 'Görünüş, şekil' ödünç anlamlardır.",mm:"🏔️ VADİ BİNAYI İÇERİYOR",cp:[{k:"美容院",r:"BIYŌIN",m:"Güzellik salonu"},{k:"内容",r:"NAIYŌ",m:"İçerik"},{k:"形容詞",r:"KEIYŌSHI",m:"Sıfat (dilbilgisi)"}]},
-  {n:823,ch:"略",mn:"Kısaltmak / Özetlemek",on:["RYAKU"],kun:[],or:"Geç dönem karakter (Shuowen). 'Pirinç tarlası' ve fonetik unsur ('her biri, her'; 'bölmek, sınırlamak' çağrışımlı) içerir; 'tarlaları bölmek, tarlalar arasındaki sınırlar'. 'Yaklaşık', 'özet' ve 'kısaltma' ödünç anlamlardır.",mm:"🌾 HER TARLANIN KISALTILMIŞ TASLAGI VAR",cp:[{k:"略語",r:"RYAKUGO",m:"Kısaltma"},{k:"略説",r:"RYAKUSETSU",m:"Özet"},{k:"略図",r:"RYAKUZU",m:"Eskiz, taslak"}]},
-  {n:824,ch:"留",mn:"Durmak / Tutturmak",on:["RYŪ","RU"],kun:["tomaru","tomeru"],or:"Bronz ve mühür formlar. Yorumlar farklılık gösterir. Bir yorum 'koşum takımı' ve fonetik unsur ('metal gem'; 'at gemine güçlüce takmak' çağrışımlı) içerir; atı durdurmak > 'durdurmak'. Ogawa 'pirinç tarlasını çevrelemek' anlamını önerir.",mm:"⚔️ EĞİLMİŞ KILIÇLA TARLADA KAZIRKEN DURDURMAK ZORUNDAYDIM",cp:[{k:"留学",r:"RYŪGAKU",m:"Yurt dışında çalışmak"},{k:"留守番",r:"RUSUBAN",m:"Ev bekçisi, vekil"},{k:"留め金",r:"tomegane",m:"Toka, klips"}]},
-  {n:825,ch:"領",mn:"Kontrol etmek / Toprak / Şef",on:["RYŌ"],kun:[],or:"Geç dönem karakter (Shuowen). 'Baş' ve fonetik unsur ('düzen, kural'; 'dik' çağrışımlı) içerir; 'başın dik kısmı' yani boyun. Mevcut anlamlar genişletilmiş anlamlardır.",mm:"👑 KONTROL BAŞIN KURALLARA GÖRE YÖNETİLMESİNİ GEREKTİRİYOR",cp:[{k:"領事",r:"RYŌJI",m:"Konsolos"},{k:"領土",r:"RYŌDO",m:"Toprak, egemenlik alanı"},{k:"要領",r:"YŌRYŌ",m:"Özet, ana nokta"}]},
-  {n:826,ch:"異",mn:"Farklı / Tuhaf",on:["I"],kun:["kotonaru"],or:"OBI ve mühür formlar. Tören sırasında kötü ruhları kovmak için maske takan kişinin piktogramı. Maske takan kişi normalden farklı görünür, dolayısıyla 'farklı, tuhaf'.",mm:"🎭 FARKLI BİR TARLADA YENİDEN BİR ARAYA GELMEk — NE TUHAF",cp:[{k:"異様な",r:"IYŌNA",m:"Tuhaf, olağandışı"},{k:"異常",r:"IJŌ",m:"Anormallik, sapma"},{k:"異性",r:"ISEI no",m:"Karşı cins"}]},
-  {n:827,ch:"遺",mn:"Geride bırakmak / Miras",on:["I","YUI"],kun:[],or:"Bronz ve mühür formlar. 'Yol; hareket etmek' ve fonetik unsur ('değerli'; 'kaybetmek' çağrışımlı) içerir; 'yolda değerli bir şey kaybetmek'. 'Miras bırakmak' genişletilmiş anlamdır.",mm:"🛤️ İLERLEYİP DEĞERLİ BİR ŞEY GERİDE BIRAK",cp:[{k:"遺伝",r:"IDEN",m:"Kalıtım, miras"},{k:"遺失",r:"ISHITSU",m:"Kayıp"},{k:"遺言",r:"YUIGON",m:"Vasiyetname, vasiyet"}]},
-  {n:828,ch:"域",mn:"Alan / Sınır",on:["IKI"],kun:[],or:"Mühür formu. 'Sınır' ve fonetik unsur ('kazık'; 'sınır kazığı' çağrışımlı) içerir; 'sınır kazıklı tarla sınırları'. Alternatifte 'çevrilmiş alan' ve 'halberd' ile 'silahla bölümlenen alan' yorumu da mevcuttur.",mm:"🗡️ YERDE MIZAR OLAN TEK GİRİŞ — YASAK ALAN",cp:[{k:"領域",r:"RYŌIKI",m:"Alan, bölge"},{k:"地域",r:"CHIIKI",m:"Bölge, yöre"},{k:"区域",r:"KUIKI",m:"Sınırlar, bölge"}]},
-  {n:829,ch:"宇",mn:"Saçak / Çatı / Evren",on:["U"],kun:[],or:"Bronz ve mühür formlar. 'Çatı/bina' ve fonetik unsur ('bükülmüş odun, belki yay'; 'tamamen örtmek' çağrışımlı) içerir; 'evi tamamen örten çatı'. Buradan 'evren' anlamı türedi.",mm:"🏚️ ÇIVI İLE TUTTURULAN ÇATI — TAN TANRIYA ŞÜKÜR",cp:[{k:"宇宙",r:"UCHŪ",m:"Evren, uzay"},{k:"堂宇",r:"DŌU",m:"Salon, tapınak"},{k:"眉宇",r:"BIU",m:"Kaşlar"}]},
-  {n:830,ch:"映",mn:"Yansıtmak / Parlamak",on:["EI"],kun:["utsuru","utsusu","haeru"],or:"Mühür formu; Altı Hanedan dönemi ya da daha sonrası. 'Güneş' ve fonetik unsur ('merkez'; 'parlak biçimde parlamak' çağrışımlı) içerir; 'güneş ışığı yayar'. Buradan 'yansıtmak' türedi.",mm:"☀️ GÜNEŞİN MERKEZİ PARLAK PARLAK PARLAR",cp:[{k:"映画館",r:"EIGAKAN",m:"Sinema"},{k:"反映",r:"HAN'EI",m:"Yansıma, yansıtma"},{k:"夕映え",r:"yūbae",m:"Gün batımı parlaklığı"}]}
+<script>const K=[
+  {n:821,ch:"預",mn:"deposit,",on:["YO"],kun:["azukaru","keru"],or:"預 karakterinin kökeni.",mm:"💡 預 — DEPOSIT,",cp:[{k:"預dep",r:"YOKIN",m:"deposit"},{k:"預tru",r:"azukariNIN",m:"trustee"},{k:"預rec",r:"azukariSHŌ",m:"receipt"}],ex:[{s:"___求した。",tr:"Talep etti.",b:"要",br:"YŌ"}]},
+  {n:822,ch:"容",mn:"contain, looks",on:["YŌ"],kun:["ireru"],or:"容 karakterinin kökeni.",mm:"💡 容 — CONTAIN, LOOKS",cp:[{k:"容sal",r:"BIYŌIN beauty",m:"salon"},{k:"容con",r:"NAIYŌ",m:"contents"},{k:"容adj",r:"KEIYŌSHI",m:"adjective"}],ex:[{s:"___解できた。",tr:"Anlayabildi.",b:"理",br:"RI"}]},
+  {n:823,ch:"略",mn:"abbreviate, outline",on:["RYAKU"],kun:[],or:"略 karakterinin kökeni.",mm:"💡 略 — ABBREVIATE, OUTLINE",cp:[{k:"略abb",r:"RYAKUGO",m:"abbreviation"},{k:"略sum",r:"RYAKUSETSU",m:"summary"},{k:"略ske",r:"RYAKUZU",m:"sketch"}],ex:[{s:"___制した。",tr:"Kontrol altına aldı.",b:"統",br:"TŌ"}]},
+  {n:824,ch:"留",mn:"tomaru/meru",on:["RYŪ","RU"],kun:[],or:"留 karakterinin kökeni.",mm:"💡 留 — TOMARU/MERU",cp:[{k:"留abr",r:"RYŪGAKU study",m:"abroad"},{k:"留car",r:"RUSUBAN",m:"caretaker"},{k:"留cla",r:"tomegane a",m:"clasp"}],ex:[{s:"___続中だ。",tr:"Sürmektedir.",b:"継",br:"KEI"}]},
+  {n:825,ch:"領",mn:"control, possess,",on:["RYŌ"],kun:[],or:"領 karakterinin kökeni.",mm:"💡 領 — CONTROL, POSSESS,",cp:[{k:"領con",r:"RYŌJI",m:"consul"},{k:"領ter",r:"RYŌDO",m:"territory, dominion"},{k:"領gis",r:"YŌRYŌ",m:"gist"}],ex:[{s:"___格を持つ。",tr:"Niteliği var.",b:"資",br:"SHI"}]},
+  {n:826,ch:"異",mn:"differ, strange",on:["I"],kun:["kotonaru"],or:"異 karakterinin kökeni.",mm:"💡 異 — DIFFER, STRANGE",cp:[{k:"異str",r:"IYŌ na",m:"strange"},{k:"異abn",r:"IJŌ",m:"abnormality"},{k:"異het",r:"ISEI no",m:"heterosexual"}],ex:[{s:"___方を変えた。",tr:"Yönü değiştirdi.",b:"方",br:"HŌ"}]},
+  {n:827,ch:"遺",mn:"leave, lose, bequeath",on:["I","YUI"],kun:[],or:"遺 karakterinin kökeni.",mm:"💡 遺 — LEAVE, LOSE, BEQUEATH",cp:[{k:"遺her",r:"IDEN",m:"heredity"},{k:"遺los",r:"ISHITSU",m:"loss"},{k:"遺wil",r:"YUIGON",m:"will, testament"}],ex:[{s:"___面した。",tr:"Karşılaştı.",b:"直",br:"CHOKU"}]},
+  {n:828,ch:"域",mn:"area, limits",on:["IKI"],kun:[],or:"域 karakterinin kökeni.",mm:"💡 域 — AREA, LIMITS",cp:[{k:"域dom",r:"RYŌIKI",m:"domain, area"},{k:"域reg",r:"CHIIKI",m:"region"},{k:"域lim",r:"KUIKI",m:"limits, zone"}],ex:[{s:"___数を数えた。",tr:"Sayıyı saydı.",b:"総",br:"SŌ"}]},
+  {n:829,ch:"宇",mn:"eaves, roof,",on:["U"],kun:[],or:"宇 karakterinin kökeni.",mm:"💡 宇 — EAVES, ROOF,",cp:[{k:"宇uni",r:"UCHŪ",m:"universe"},{k:"宇hal",r:"DŌU",m:"hall, temple"},{k:"宇eye",r:"BIU",m:"eyebrows"}],ex:[{s:"___律を守った。",tr:"Kurala uydu.",b:"規",br:"KI"}]},
+  {n:830,ch:"映",mn:"reflect, shine",on:["EI"],kun:["utsuru","su","haeru"],or:"映 karakterinin kökeni.",mm:"💡 映 — REFLECT, SHINE",cp:[{k:"映cin",r:"EIGAKAN",m:"cinema"},{k:"映glo",r:"yūbae sunset",m:"glow"},{k:"映cin",r:"EIGAKAN",m:"cinema"}],ex:[{s:"___速で動いた。",tr:"Hızla hareket etti.",b:"急",br:"KYŪ"}]}
 ];
+
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,24 +161,115 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
 function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
 function renderQ(){
   const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
-  document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #821–830</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
+  document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #1–10</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
 function doAns(i){
   const q=tqs[ti];document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
   const chosen=q.opts[i],ok=chosen===q.ans;if(ok)sc++;ans[ti]={ok,ch:q.ch,lb:q.lb};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #821–830</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
