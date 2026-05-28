@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:501,ch:"固",mn:"Sert / Katı / Sağlam",on:["KO"],kun:["katai","katameru","katamaru"],or:"'Çevre/duvar' (kale surları) ve 'eski' (fonetik, 'sağlam, katı' çağrışımlı) içerir; 'kale surlarını sağlamca savunmak'. Anlam 'sert, katı'ya genelleşti.",mm:"🏰 ESKİ ÇEVRELEYEN DUVARLAR SERT VE SAĞLAMDIR",cp:[{k:"固体",r:"KOTAI",m:"Katı hâl"},{k:"強固",r:"KYŌKO",m:"Sağlamlık"},{k:"固まり",r:"katamari",m:"Küme, yığın"}]},
-  {n:502,ch:"功",mn:"Liyakat / Hizmet",on:["KŌ","KU"],kun:[],or:"'Güç, çaba' ve 'alet' (fonetik, 'çalışmak' çağrışımlı) içerir; 'çalışmaya güç harcamak' ve dolayısıyla 'liyakatli'.",mm:"💪 GÜÇ VE ALET KULLANIMI LİYAKATLİ HİZMET DEMEKTİR",cp:[{k:"成功",r:"SEIKŌ",m:"Başarı"},{k:"功罪",r:"KŌZAI",m:"Artı ve eksiler"},{k:"功労",r:"KŌRŌ",m:"Köklü hizmet"}]},
-  {n:503,ch:"好",mn:"Sevmek / İyi / Güzel",on:["KŌ"],kun:["suku","konomu"],or:"'Kadın' ve 'çocuk' içerir. Geleneksel yorumda 'çocuğa bakan kadın' > 'sevmek'. Alternatif: 'güzel kadın' > 'sevmek'.",mm:"👩‍👦 KADIN ÇOCUĞU SEVER — NE GÜZEL ŞEY",cp:[{k:"好意",r:"KŌUI",m:"İyi niyet"},{k:"好きな",r:"suki na",m:"Sevilen"},{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"}]},
-  {n:504,ch:"候",mn:"Hava / İşaret / Hizmet etmek",on:["KŌ"],kun:["sōrō"],or:"'Kişi' ve fonetik unsur ('karşılayıp selamlamak' çağrışımlı) içerir. 'Hava' ve 'işaret' genişletilmiş anlamlardır.",mm:"🏹 KİŞİLER OK İŞARETİYLE HAVA İŞARETLERİNE İŞARET EDİYOR",cp:[{k:"気候",r:"KIKŌ",m:"İklim"},{k:"候補",r:"KŌHO",m:"Adaylık"},{k:"候文",r:"sōrōBUN",m:"Tarihi yazı stili"}]},
-  {n:505,ch:"航",mn:"Deniz yolculuğu / Yelken açmak",on:["KŌ"],kun:[],or:"'Tekne' ve fonetik unsur ('yan; boyun') içerir; 'yan yana bağlanmış tekneler'. Anlam 'seyretmek'e genişledi.",mm:"⛵ MASA GİBİ TEKNE YOLCULUĞU",cp:[{k:"航空",r:"KŌKŪ",m:"Havacılık"},{k:"航海",r:"KŌKAI",m:"Deniz yolculuğu"},{k:"航路",r:"KŌRO",m:"Rota"}]},
-  {n:506,ch:"康",mn:"Barış / Sağlık",on:["KŌ"],kun:[],or:"OBI ve bronz formlar tokmakla tahıl döven iki eli tasvir eder. 'Barış' ve 'sağlık' ödünç anlamlardır.",mm:"🏠 BİNADA SAĞLIKLI KEPEĞİ TOKMAKLA DÖVEN EL",cp:[{k:"小康",r:"SHŌKŌ",m:"Geçici rahatlama"},{k:"不健康",r:"FUKENKŌ",m:"Sağlıksız"},{k:"健康体",r:"KENKŌTAI",m:"Sağlıklı beden"}]},
-  {n:507,ch:"告",mn:"İlan etmek / Bilgilendirmek",on:["KOKU"],kun:["tsugeru"],or:"'Ağız/kelimeler' ve 'öküz' içerir. Alternatif yorumda 'öne sürmek' çağrışımlı fonetik unsur.",mm:"🐄 KUYRUKSUZ İNEK HAKKINDA AĞIZLA BİLGİ VER",cp:[{k:"広告",r:"KŌKOKU",m:"Reklam"},{k:"告白",r:"KOKUHAKU",m:"İtiraf"},{k:"予告",r:"YOKOKU",m:"Önceden haber"}]},
-  {n:508,ch:"差",mn:"Fark / İşaret etmek",on:["SA"],kun:["sasu"],or:"'Sol' (fonetik, 'düzensiz' çağrışımlı) ve genç ağaçtaki filizler içerir. 'Düzensiz sarkık filizler' > 'fark, ayrılık'.",mm:"🐑 SOLDAKİ KOYUN FARKLIYDI",cp:[{k:"時差",r:"JISA",m:"Zaman farkı"},{k:"差別",r:"SABETSU",m:"Ayrımcılık"},{k:"差し込む",r:"sashikomu",m:"Takmak"}]},
-  {n:509,ch:"菜",mn:"Sebze / Kolza",on:["SAI"],kun:["na"],or:"'Bitki/çimen' ve 'el meyve/sebze toplayan' içerir; 'toplanacak yenebilir bitki'. Japonca'da ayrıca 'kolza' özel anlamını taşır.",mm:"🥬 EL AĞACIN YAKININDA SEBZE KOPARTIYOR",cp:[{k:"野菜",r:"YASAI",m:"Sebze"},{k:"菜の花",r:"nanohana",m:"Kolza çiçeği"},{k:"菜食",r:"SAISHOKU",m:"Vejetaryen beslenme"}]},
-  {n:510,ch:"最",mn:"En / -in en",on:["SAI"],kun:["mottomo"],or:"'Miğfer/başlık' ve 'almak' (anlamsal ve fonetik) içerir; 'yasa dışı ele geçirmek'. 'En' ödünç anlamdır. Üst kısım şekil değişimiyle 'güneş' gibi görünür.",mm:"☀️ EN YÜKSEKTE GÜNEŞİ ALE GEÇİR",cp:[{k:"最大",r:"SAIDAI",m:"En büyük"},{k:"最後",r:"SAIGO",m:"En son"},{k:"最新",r:"SAISHIN",m:"En yeni"}]}
+  {n:501,ch:"固",mn:"Sert / Katı / Sağlam",on:["KO"],kun:["katai","katameru","katamaru"],or:"'Çevre/duvar' (kale surları) ve 'eski' (fonetik, 'sağlam, katı' çağrışımlı) içerir; 'kale surlarını sağlamca savunmak'. Anlam 'sert, katı'ya genelleşti.",mm:"🏰 ESKİ ÇEVRELEYEN DUVARLAR SERT VE SAĞLAMDIR",cp:[{k:"固体",r:"KOTAI",m:"Katı hâl"},{k:"強固",r:"KYŌKO",m:"Sağlamlık"},{k:"固まり",r:"katamari",m:"Küme, yığın"}],ex:[{s:"コンクリートが___まった。",tr:"Beton sertleşti.",b:"固",br:"kata"}]},
+  {n:502,ch:"功",mn:"Liyakat / Hizmet",on:["KŌ","KU"],kun:[],or:"'Güç, çaba' ve 'alet' (fonetik, 'çalışmak' çağrışımlı) içerir; 'çalışmaya güç harcamak' ve dolayısıyla 'liyakatli'.",mm:"💪 GÜÇ VE ALET KULLANIMI LİYAKATLİ HİZMET DEMEKTİR",cp:[{k:"成功",r:"SEIKŌ",m:"Başarı"},{k:"功罪",r:"KŌZAI",m:"Artı ve eksiler"},{k:"功労",r:"KŌRŌ",m:"Köklü hizmet"}],ex:[{s:"努力が___を奏した。",tr:"Çaba karşılık buldu.",b:"功",br:"KŌ"}]},
+  {n:503,ch:"好",mn:"Sevmek / İyi / Güzel",on:["KŌ"],kun:["suku","konomu"],or:"'Kadın' ve 'çocuk' içerir. Geleneksel yorumda 'çocuğa bakan kadın' > 'sevmek'. Alternatif: 'güzel kadın' > 'sevmek'.",mm:"👩‍👦 KADIN ÇOCUĞU SEVER — NE GÜZEL ŞEY",cp:[{k:"好意",r:"KŌUI",m:"İyi niyet"},{k:"好きな",r:"suki na",m:"Sevilen"},{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"}],ex:[{s:"___きな食べ物は何ですか？",tr:"Sevdiğin yiyecek nedir?",b:"好",br:"su"}]},
+  {n:504,ch:"候",mn:"Hava / İşaret / Hizmet etmek",on:["KŌ"],kun:["sōrō"],or:"'Kişi' ve fonetik unsur ('karşılayıp selamlamak' çağrışımlı) içerir. 'Hava' ve 'işaret' genişletilmiş anlamlardır.",mm:"🏹 KİŞİLER OK İŞARETİYLE HAVA İŞARETLERİNE İŞARET EDİYOR",cp:[{k:"気候",r:"KIKŌ",m:"İklim"},{k:"候補",r:"KŌHO",m:"Adaylık"},{k:"候文",r:"sōrōBUN",m:"Tarihi yazı stili"}],ex:[{s:"天___が不安定だ。",tr:"Hava durumu kararsız.",b:"候",br:"KŌ"}]},
+  {n:505,ch:"航",mn:"Deniz yolculuğu / Yelken açmak",on:["KŌ"],kun:[],or:"'Tekne' ve fonetik unsur ('yan; boyun') içerir; 'yan yana bağlanmış tekneler'. Anlam 'seyretmek'e genişledi.",mm:"⛵ MASA GİBİ TEKNE YOLCULUĞU",cp:[{k:"航空",r:"KŌKŪ",m:"Havacılık"},{k:"航海",r:"KŌKAI",m:"Deniz yolculuğu"},{k:"航路",r:"KŌRO",m:"Rota"}],ex:[{s:"船で海を___行した。",tr:"Gemiyle denizde yolculuk ettim.",b:"航",br:"KŌ"}]},
+  {n:506,ch:"康",mn:"Barış / Sağlık",on:["KŌ"],kun:[],or:"OBI ve bronz formlar tokmakla tahıl döven iki eli tasvir eder. 'Barış' ve 'sağlık' ödünç anlamlardır.",mm:"🏠 BİNADA SAĞLIKLI KEPEĞİ TOKMAKLA DÖVEN EL",cp:[{k:"小康",r:"SHŌKŌ",m:"Geçici rahatlama"},{k:"不健康",r:"FUKENKŌ",m:"Sağlıksız"},{k:"健康体",r:"KENKŌTAI",m:"Sağlıklı beden"}],ex:[{s:"健___を保つために運動する。",tr:"Sağlığı korumak için egzersiz yaparım.",b:"康",br:"KŌ"}]},
+  {n:507,ch:"告",mn:"İlan etmek / Bilgilendirmek",on:["KOKU"],kun:["tsugeru"],or:"'Ağız/kelimeler' ve 'öküz' içerir. Alternatif yorumda 'öne sürmek' çağrışımlı fonetik unsur.",mm:"🐄 KUYRUKSUZ İNEK HAKKINDA AĞIZLA BİLGİ VER",cp:[{k:"広告",r:"KŌKOKU",m:"Reklam"},{k:"告白",r:"KOKUHAKU",m:"İtiraf"},{k:"予告",r:"YOKOKU",m:"Önceden haber"}],ex:[{s:"結果を報___した。",tr:"Sonucu raporladım.",b:"告",br:"KOKU"}]},
+  {n:508,ch:"差",mn:"Fark / İşaret etmek",on:["SA"],kun:["sasu"],or:"'Sol' (fonetik, 'düzensiz' çağrışımlı) ve genç ağaçtaki filizler içerir. 'Düzensiz sarkık filizler' > 'fark, ayrılık'.",mm:"🐑 SOLDAKİ KOYUN FARKLIYDI",cp:[{k:"時差",r:"JISA",m:"Zaman farkı"},{k:"差別",r:"SABETSU",m:"Ayrımcılık"},{k:"差し込む",r:"sashikomu",m:"Takmak"}],ex:[{s:"気温に___がある。",tr:"Sıcaklıkta fark var.",b:"差",br:"SA"}]},
+  {n:509,ch:"菜",mn:"Sebze / Kolza",on:["SAI"],kun:["na"],or:"'Bitki/çimen' ve 'el meyve/sebze toplayan' içerir; 'toplanacak yenebilir bitki'. Japonca'da ayrıca 'kolza' özel anlamını taşır.",mm:"🥬 EL AĞACIN YAKININDA SEBZE KOPARTIYOR",cp:[{k:"野菜",r:"YASAI",m:"Sebze"},{k:"菜の花",r:"nanohana",m:"Kolza çiçeği"},{k:"菜食",r:"SAISHOKU",m:"Vejetaryen beslenme"}],ex:[{s:"野___をたくさん食べる。",tr:"Çok sebze yerim.",b:"菜",br:"SAI"}]},
+  {n:510,ch:"最",mn:"En / -in en",on:["SAI"],kun:["mottomo"],or:"'Miğfer/başlık' ve 'almak' (anlamsal ve fonetik) içerir; 'yasa dışı ele geçirmek'. 'En' ödünç anlamdır. Üst kısım şekil değişimiyle 'güneş' gibi görünür.",mm:"☀️ EN YÜKSEKTE GÜNEŞİ ALE GEÇİR",cp:[{k:"最大",r:"SAIDAI",m:"En büyük"},{k:"最後",r:"SAIGO",m:"En son"},{k:"最新",r:"SAISHIN",m:"En yeni"}],ex:[{s:"___近忙しい。",tr:"Son zamanlarda meşgulüm.",b:"最",br:"SAI"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,17 +161,108 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #501–510</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}

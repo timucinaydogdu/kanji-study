@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:481,ch:"給",mn:"Sağlamak / Temin etmek",on:["KYŪ"],kun:["tamau"],or:"Geç dönem karakter (Shuowen). 'İplik' (orijinalde ipek ipliği) ve 'birleştirmek' (hem anlamsal hem fonetik) içerir; 'kopuk iplik bağlamak'. İpek ipliğindeki kopukları hızla birleştirmeden 'tamamlamak, eksikliği gidermek' anlamı türedi.",mm:"🧵 SAĞLANAN BİRLEŞTİRİLMİŞ İPLİKLER",cp:[{k:"供給",r:"KYŌKYŪ",m:"Arz, tedarik"},{k:"月給",r:"GEKKYŪ",m:"Aylık ücret"},{k:"きたまえ",r:"kitamae",m:"Buyurun! (eski)"}]},
-  {n:482,ch:"挙",mn:"Kaldırmak / Teklif etmek / Birlikte",on:["KYO"],kun:["ageru","kozotte"],or:"Bronz, mühür ve geleneksel formlar. 'El' ve fonetik unsur ('vermek'; 'yüksek kaldırmak' çağrışımlı) içerir; 'elleriyle yüksek kaldırmak'. 'Hepsi birlikte' genişletilmiş anlamdır.",mm:"🏋️ EL YÜKLÜ MASAYI KALDIRIYOR — NE EYLEM!",cp:[{k:"挙手",r:"KYOSHU",m:"El kaldırma"},{k:"選挙",r:"SENKYO",m:"Seçim"},{k:"一挙に",r:"IKKYO ni",m:"Bir hamlede"}]},
-  {n:483,ch:"漁",mn:"Balık avlamak / Balıkçılık",on:["GYO","RYŌ"],kun:[],or:"OBI ve mühür formlar. 'Su' ve 'balık' içerir; 'suda balık' ve dolayısıyla 'balık avlamak'. Bazı OBI formlarında dört balık; bronz formda iki el eklenmiş.",mm:"🎣 BALIK AVLAMAK SUDA BALIK TUTMAK DEMEKTİR",cp:[{k:"漁船",r:"GYOSEN",m:"Balıkçı teknesi"},{k:"漁師",r:"RYŌSHI",m:"(Profesyonel) balıkçı"},{k:"漁業",r:"GYOGYŌ",m:"Balıkçılık endüstrisi"}]},
-  {n:484,ch:"共",mn:"Birlikte / Beraber",on:["KYŌ"],kun:["tomo"],or:"OBI, bronz ve mühür formlar. İki elin bir nesneyi (muhtemelen ortası delikli yeşim diski) takdim etmesi. 'Sağlamak' genişletilmiş anlamdır; 'hepsi birlikte' ön-Han döneminden beri kullanılır.",mm:"🌿 BİTKİ VE MASA BİRLİKTE UYUM İÇİNDE",cp:[{k:"共通",r:"KYŌTSŪ",m:"Ortaklık, ortak"},{k:"共食い",r:"tomogui",m:"Yamyamlık"},{k:"共同",r:"KYŌDŌ",m:"Ortak, müşterek"}]},
-  {n:485,ch:"協",mn:"İşbirliği yapmak",on:["KYŌ"],kun:[],or:"Geç dönem karakter (Shuowen). 'Güç'ün üç katı ve fonetik unsur 'on, birçok' (Katō; 'toplamak' çağrışımlı) içerir. OBI formunda güç üçlenmiş. 'Güçleri bir araya getirip işbirliği yapmak'.",mm:"💪 ON ÜÇ GÜÇLÜ KOL İŞBİRLİĞİ YAPARAK",cp:[{k:"協定",r:"KYŌTEI",m:"Anlaşma, protokol"},{k:"協力",r:"KYŌRYOKU",m:"İşbirliği"},{k:"協会",r:"KYŌKAI",m:"Dernek, birlik"}]},
-  {n:486,ch:"鏡",mn:"Ayna",on:["KYŌ"],kun:["kagami"],or:"Geç dönem karakter (Shuowen). 'Metal' ve fonetik unsur ('son; görünüm, şekil' anlamındaki CO) içerir. Eski Çin'de aynalar bronz diskten yapılırdı ve zenginlere özgüydü.",mm:"🔮 METAL AYNADA BÜKÜK BACAKLARIN SESİ!?",cp:[{k:"望遠鏡",r:"BŌENKYŌ",m:"Teleskop"},{k:"鏡台",r:"KYŌDAI",m:"Tuvalet masası"},{k:"手鏡",r:"tekagami",m:"El aynası"}]},
-  {n:487,ch:"競",mn:"Yarışmak / Teklif vermek",on:["KYŌ","KEI"],kun:["kisou","seru"],or:"Bronz ve mühür formlar. 'İki kişi takip eder' ve 'tartışma' (kelimeler ikiye katlanmış) içerir; özgün anlam 'iki kişi tartışır', sonra 'yarışmak'. Mühür sonrası formda bileşenler şekil değiştirdi.",mm:"👦 İKİ AĞABEY KARŞI KARŞIYA DURARAK YARIŞIYOR",cp:[{k:"競争",r:"KYŌSŌ",m:"Yarışma, rekabet"},{k:"競馬",r:"KEIBA",m:"At yarışı"},{k:"競り売り",r:"seriuri",m:"Açık arttırma"}]},
-  {n:488,ch:"極",mn:"Son derece / Kutup",on:["KYOKU","GOKU"],kun:["kiwameru","kiwamaru"],or:"Geç dönem karakter (Shuowen). 'Ağaç/odun' ve fonetik unsur ('acele etmek; en yüksek yerde' çağrışımlı) içerir; 'bina içindeki en yüksek yerdeki ahşap, ana kiriş'. Genişletilmiş anlam 'aşırı uç, kutup'.",mm:"🔨 İKİ ÇUBUK ARASINDA DELİKTE TUTTURULAN KAREMSAL EL",cp:[{k:"北極",r:"HOKKYOKU",m:"Kuzey Kutbu"},{k:"至極",r:"SHIGOKU",m:"Son derece, aşırı"},{k:"消極",r:"SHŌKYOKU",m:"Katot"}]},
-  {n:489,ch:"訓",mn:"Öğreti / Kun okuyuş",on:["KUN"],kun:[],or:"Geç dönem karakter (Shuowen). 'Kelimeler' ve 'nehir' (fonetik, 'takip etmek' çağrışımlı) içerir; 'sözlerle takip ettirmek, öğretmek'. Japonca'da kanji'nin yerli Japonca okunuşu 'kun' için özel anlam taşır.",mm:"🌊 ÖĞRETI SIRASINDA KELIMELER NEHIR GİBİ AKAR",cp:[{k:"訓読み",r:"KUNyomi",m:"Kun okuyuşu"},{k:"訓練",r:"KUNREN",m:"Eğitim, antrenman"},{k:"教訓的",r:"KYŌKUNTEKI",m:"Öğretici, aydınlatıcı"}]},
-  {n:490,ch:"軍",mn:"Ordu / Askeri",on:["GUN"],kun:[],or:"Bronz ve mühür formlar. 'Taşıt/savaş arabası' ve 'çevreleme/sarma' unsuru içerir; 'dairesel koruyucu kamp oluşturan arabalar' anlamını verir; bu antik bir askeri uygulama.",mm:"🚗 KAPALI ASKERI ARAÇLAR",cp:[{k:"空軍",r:"KŪGUN",m:"Hava kuvvetleri"},{k:"軍人",r:"GUNJIN",m:"Asker, er"},{k:"米軍",r:"BEIGUN",m:"Amerikan ordusu"}]}
+  {n:481,ch:"給",mn:"Sağlamak / Temin etmek",on:["KYŪ"],kun:["tamau"],or:"Geç dönem karakter (Shuowen). 'İplik' (orijinalde ipek ipliği) ve 'birleştirmek' (hem anlamsal hem fonetik) içerir; 'kopuk iplik bağlamak'. İpek ipliğindeki kopukları hızla birleştirmeden 'tamamlamak, eksikliği gidermek' anlamı türedi.",mm:"🧵 SAĞLANAN BİRLEŞTİRİLMİŞ İPLİKLER",cp:[{k:"供給",r:"KYŌKYŪ",m:"Arz, tedarik"},{k:"月給",r:"GEKKYŪ",m:"Aylık ücret"},{k:"きたまえ",r:"kitamae",m:"Buyurun! (eski)"}],ex:[{s:"毎月___料をもらう。",tr:"Her ay maaş alırım.",b:"給",br:"KYŪ"}]},
+  {n:482,ch:"挙",mn:"Kaldırmak / Teklif etmek / Birlikte",on:["KYO"],kun:["ageru","kozotte"],or:"Bronz, mühür ve geleneksel formlar. 'El' ve fonetik unsur ('vermek'; 'yüksek kaldırmak' çağrışımlı) içerir; 'elleriyle yüksek kaldırmak'. 'Hepsi birlikte' genişletilmiş anlamdır.",mm:"🏋️ EL YÜKLÜ MASAYI KALDIRIYOR — NE EYLEM!",cp:[{k:"挙手",r:"KYOSHU",m:"El kaldırma"},{k:"選挙",r:"SENKYO",m:"Seçim"},{k:"一挙に",r:"IKKYO ni",m:"Bir hamlede"}],ex:[{s:"手を___げて発言した。",tr:"El kaldırıp söz aldım.",b:"挙",br:"a"}]},
+  {n:483,ch:"漁",mn:"Balık avlamak / Balıkçılık",on:["GYO","RYŌ"],kun:[],or:"OBI ve mühür formlar. 'Su' ve 'balık' içerir; 'suda balık' ve dolayısıyla 'balık avlamak'. Bazı OBI formlarında dört balık; bronz formda iki el eklenmiş.",mm:"🎣 BALIK AVLAMAK SUDA BALIK TUTMAK DEMEKTİR",cp:[{k:"漁船",r:"GYOSEN",m:"Balıkçı teknesi"},{k:"漁師",r:"RYŌSHI",m:"(Profesyonel) balıkçı"},{k:"漁業",r:"GYOGYŌ",m:"Balıkçılık endüstrisi"}],ex:[{s:"___師が魚を取った。",tr:"Balıkçı balık tuttu.",b:"漁",br:"GYO"}]},
+  {n:484,ch:"共",mn:"Birlikte / Beraber",on:["KYŌ"],kun:["tomo"],or:"OBI, bronz ve mühür formlar. İki elin bir nesneyi (muhtemelen ortası delikli yeşim diski) takdim etmesi. 'Sağlamak' genişletilmiş anlamdır; 'hepsi birlikte' ön-Han döneminden beri kullanılır.",mm:"🌿 BİTKİ VE MASA BİRLİKTE UYUM İÇİNDE",cp:[{k:"共通",r:"KYŌTSŪ",m:"Ortaklık, ortak"},{k:"共食い",r:"tomogui",m:"Yamyamlık"},{k:"共同",r:"KYŌDŌ",m:"Ortak, müşterek"}],ex:[{s:"___に頑張ろう。",tr:"Birlikte çabalayalım.",b:"共",br:"tomo"}]},
+  {n:485,ch:"協",mn:"İşbirliği yapmak",on:["KYŌ"],kun:[],or:"Geç dönem karakter (Shuowen). 'Güç'ün üç katı ve fonetik unsur 'on, birçok' (Katō; 'toplamak' çağrışımlı) içerir. OBI formunda güç üçlenmiş. 'Güçleri bir araya getirip işbirliği yapmak'.",mm:"💪 ON ÜÇ GÜÇLÜ KOL İŞBİRLİĞİ YAPARAK",cp:[{k:"協定",r:"KYŌTEI",m:"Anlaşma, protokol"},{k:"協力",r:"KYŌRYOKU",m:"İşbirliği"},{k:"協会",r:"KYŌKAI",m:"Dernek, birlik"}],ex:[{s:"___力して仕事を終えた。",tr:"İşbirliği yaparak işi bitirdik.",b:"協",br:"KYŌ"}]},
+  {n:486,ch:"鏡",mn:"Ayna",on:["KYŌ"],kun:["kagami"],or:"Geç dönem karakter (Shuowen). 'Metal' ve fonetik unsur ('son; görünüm, şekil' anlamındaki CO) içerir. Eski Çin'de aynalar bronz diskten yapılırdı ve zenginlere özgüydü.",mm:"🔮 METAL AYNADA BÜKÜK BACAKLARIN SESİ!?",cp:[{k:"望遠鏡",r:"BŌENKYŌ",m:"Teleskop"},{k:"鏡台",r:"KYŌDAI",m:"Tuvalet masası"},{k:"手鏡",r:"tekagami",m:"El aynası"}],ex:[{s:"___で顔を見た。",tr:"Aynada yüzüme baktım.",b:"鏡",br:"kagami"}]},
+  {n:487,ch:"競",mn:"Yarışmak / Teklif vermek",on:["KYŌ","KEI"],kun:["kisou","seru"],or:"Bronz ve mühür formlar. 'İki kişi takip eder' ve 'tartışma' (kelimeler ikiye katlanmış) içerir; özgün anlam 'iki kişi tartışır', sonra 'yarışmak'. Mühür sonrası formda bileşenler şekil değiştirdi.",mm:"👦 İKİ AĞABEY KARŞI KARŞIYA DURARAK YARIŞIYOR",cp:[{k:"競争",r:"KYŌSŌ",m:"Yarışma, rekabet"},{k:"競馬",r:"KEIBA",m:"At yarışı"},{k:"競り売り",r:"seriuri",m:"Açık arttırma"}],ex:[{s:"マラソンで___争した。",tr:"Maratonda yarıştım.",b:"競",br:"KYŌ"}]},
+  {n:488,ch:"極",mn:"Son derece / Kutup",on:["KYOKU","GOKU"],kun:["kiwameru","kiwamaru"],or:"Geç dönem karakter (Shuowen). 'Ağaç/odun' ve fonetik unsur ('acele etmek; en yüksek yerde' çağrışımlı) içerir; 'bina içindeki en yüksek yerdeki ahşap, ana kiriş'. Genişletilmiş anlam 'aşırı uç, kutup'.",mm:"🔨 İKİ ÇUBUK ARASINDA DELİKTE TUTTURULAN KAREMSAL EL",cp:[{k:"北極",r:"HOKKYOKU",m:"Kuzey Kutbu"},{k:"至極",r:"SHIGOKU",m:"Son derece, aşırı"},{k:"消極",r:"SHŌKYOKU",m:"Katot"}],ex:[{s:"北___点に近い場所だ。",tr:"Kuzey kutbuna yakın bir yer.",b:"極",br:"KYOKU"}]},
+  {n:489,ch:"訓",mn:"Öğreti / Kun okuyuş",on:["KUN"],kun:[],or:"Geç dönem karakter (Shuowen). 'Kelimeler' ve 'nehir' (fonetik, 'takip etmek' çağrışımlı) içerir; 'sözlerle takip ettirmek, öğretmek'. Japonca'da kanji'nin yerli Japonca okunuşu 'kun' için özel anlam taşır.",mm:"🌊 ÖĞRETI SIRASINDA KELIMELER NEHIR GİBİ AKAR",cp:[{k:"訓読み",r:"KUNyomi",m:"Kun okuyuşu"},{k:"訓練",r:"KUNREN",m:"Eğitim, antrenman"},{k:"教訓的",r:"KYŌKUNTEKI",m:"Öğretici, aydınlatıcı"}],ex:[{s:"新入社員の___練をした。",tr:"Yeni çalışanların eğitimini yaptım.",b:"訓",br:"KUN"}]},
+  {n:490,ch:"軍",mn:"Ordu / Askeri",on:["GUN"],kun:[],or:"Bronz ve mühür formlar. 'Taşıt/savaş arabası' ve 'çevreleme/sarma' unsuru içerir; 'dairesel koruyucu kamp oluşturan arabalar' anlamını verir; bu antik bir askeri uygulama.",mm:"🚗 KAPALI ASKERI ARAÇLAR",cp:[{k:"空軍",r:"KŪGUN",m:"Hava kuvvetleri"},{k:"軍人",r:"GUNJIN",m:"Asker, er"},{k:"米軍",r:"BEIGUN",m:"Amerikan ordusu"}],ex:[{s:"___隊が行進した。",tr:"Ordu yürüyüş yaptı.",b:"軍",br:"GUN"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,17 +161,108 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #481–490</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
