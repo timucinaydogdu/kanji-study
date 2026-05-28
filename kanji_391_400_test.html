@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:391,ch:"畑",mn:"Kuru tarla",on:[],kun:["hata","hatake"],or:"Japonya'da Çin karakterlerinin biçimsel ilkeleri temel alınarak oluşturulan sınırlı sayıdaki karakterlerden biri ('kokuji'). 'Ateş' ve 'tarla' unsurlarından oluşur; 'kolay yanan/kuruyan tarla' anlamı.",mm:"🔥 KURU TARLA KOLAYCA TUTUŞUR",cp:[{k:"茶畑",r:"CHAbatake",m:"Çay tarlası"},{k:"田畑",r:"tahata",m:"Tarla ve bahçe"},{k:"麦畑",r:"mugibatake",m:"Buğday tarlası"}]},
-  {n:392,ch:"発",mn:"Ateşlemek / Başlamak",on:["HATSU","HOTSU"],kun:[],or:"Bronz, mühür ve geleneksel formlar. 'Yay' ve fonetik unsur (bir yay çözüldüğünde çıkan ses) içerir. 'Dışarı çıkmak, ayrılmak, başlamak' genişletilmiş anlamlardır.",mm:"🦶 İKİ KOMIK AYAK VE İKİ EĞİK BACAKLA ATEŞLEME",cp:[{k:"発表",r:"HAPPYŌ",m:"Duyuru, sunum"},{k:"発足",r:"HOSSOKU",m:"Açılış, kuruluş"},{k:"発電機",r:"HATSUDENKO",m:"Jeneratör"}]},
-  {n:393,ch:"反",mn:"Karşı koymak / Anti / Ters",on:["HAN","TAN"],kun:["soru","sorasu"],or:"OBI ve mühür formlar. Genel olarak 'el' ve fonetik unsur ('elleri kaldırmak, devirmek' çağrışımlı) içerir. 'Karşı koymak' genişletilmiş anlamdır.",mm:"🧗 KAYALIKLARA KARŞI DURAN EL",cp:[{k:"反応",r:"HAN'Ō",m:"Tepki, reaksiyon"},{k:"反核",r:"HANKAKU",m:"Anti-nükleer"},{k:"反物",r:"TANmono",m:"Kumaş (tekstil)"}]},
-  {n:394,ch:"坂",mn:"Eğim / Rampa",on:["HAN"],kun:["saka"],or:"Geç, Shuowen sonrası karakter. Genel olarak 'toprak/zemin' ve 'karşı koymak' (fonetik, 'eğimli' çağrışımlı) unsurlarından oluşur; 'eğimli zemin'.",mm:"⛰️ EĞIMLI ARAZIYE KARŞI KOYAN ZEMIN",cp:[{k:"急坂",r:"KYŪHAN",m:"Dik yokuş"},{k:"坂道",r:"sakamichi",m:"Yokuş"},{k:"下り坂",r:"kudarizaka",m:"İniş yokuşu"}]},
-  {n:395,ch:"板",mn:"Tahta / Levha",on:["HAN","BAN"],kun:["ita"],or:"Mühür formunda mevcuttur; Shuowen'de yer almaz. Genel olarak 'ağaç, ahşap' ve 'karşı koymak' (fonetik, 'ince, düz' çağrışımlı) unsurlarından oluşur; 'düz tahta'.",mm:"🪵 KARŞILIKLI DURAN AHŞAP TAHTALAR",cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"板紙",r:"itagami",m:"Mukavva"},{k:"板前",r:"itamae",m:"Aşçı"}]},
-  {n:396,ch:"皮",mn:"Deri / Dış yüzey",on:["HI"],kun:["kawa"],or:"Bronz ve mühür formlar. 'El' ve fonetik unsur ('çıkarmak' çağrışımlı) içerir; özgün anlam 'hayvan derisini elle soymak'. Modern anlam aralığı 'hayvan derisi, deri, kürk, ten' olarak sınırlandı.",mm:"✋ EKSTRİ VURUŞLU DERILER",cp:[{k:"皮膚",r:"HIFU",m:"Ten"},{k:"皮肉",r:"HINIKU",m:"Alaycılık, ironi"},{k:"木の皮",r:"kinokawa",m:"Ağaç kabuğu"}]},
-  {n:397,ch:"悲",mn:"Üzgün / Hüzünlü",on:["HI"],kun:["kanashii","kanashimu"],or:"Geç dönem karakter (Shuowen). 'Kalp, zihin' ve 'kuş kanatları, karşı koymak' (fonetik, 'üzgün, acı, keder' çağrışımlı) unsurlarını içerir. Genel anlam 'çatışan/karmaşık duygular'.",mm:"❤️ KALBİMİN KANATLARI VAR — YINE DE ÜZGÜNüm!",cp:[{k:"悲劇",r:"HIGEKI",m:"Trajedi"},{k:"悲鳴",r:"HIMEI",m:"Çığlık, ağlama sesi"},{k:"悲しみ",r:"kanashimi",m:"Keder, hüzün"}]},
-  {n:398,ch:"美",mn:"Güzel",on:["BI"],kun:["utsukushii"],or:"OBI ve mühür formlar. 'Koyun' ve 'büyük' unsurlarını içerir; 'büyük/şişman koyun' anlamı. Bu olumlu çağrışımdan 'yemesi içmesi güzel' ve 'güzel' anlamları türedi.",mm:"🐑 GÜZEL ŞİŞMAN KOYUN",cp:[{k:"美人",r:"BIJIN",m:"Güzel kadın"},{k:"美術",r:"BIJUTSU",m:"Güzel sanatlar"},{k:"美学",r:"BIGAKU",m:"Estetik"}]},
-  {n:399,ch:"鼻",mn:"Burun",on:["BI"],kun:["hana"],or:"OBI'de 'kendisi' anlamındaki daha basit grafik kullanılırdı. Mühür formu burun piktografı ve fonetik unsur (çıkıntı ya da 'iki şeyin bir arada' çağrışımlı) içerir.",mm:"👃 BURNU YİRMİ TARLADAN GEÇİYOR",cp:[{k:"鼻音",r:"BION",m:"Burun sesi"},{k:"鼻先",r:"hanasaki",m:"Burun ucu"},{k:"鼻薬",r:"hanagusuri",m:"Rüşvet (mecaz)"}]},
-  {n:400,ch:"筆",mn:"Yazı fırçası",on:["HITSU"],kun:["fude"],or:"OBI ve mühür formlar. Daha basit eski form yazı fırçası tutan eli gösterir; sonradan 'bambu' eklendi (fırçaların genellikle bambu sapı olduğunu yansıtır).",mm:"✍️ EL BAMBU YAZMA FIRCASINI TUTUYOR",cp:[{k:"鉛筆",r:"ENPITSU",m:"Kalem"},{k:"筆者",r:"HISSHA",m:"Yazar"},{k:"筆遣い",r:"fudezukai",m:"Hat kalemi kullanımı"}]}
+  {n:391,ch:"畑",mn:"Kuru tarla",on:[],kun:["hata","hatake"],or:"Japonya'da Çin karakterlerinin biçimsel ilkeleri temel alınarak oluşturulan sınırlı sayıdaki karakterlerden biri ('kokuji'). 'Ateş' ve 'tarla' unsurlarından oluşur; 'kolay yanan/kuruyan tarla' anlamı.",mm:"🔥 KURU TARLA KOLAYCA TUTUŞUR",cp:[{k:"茶畑",r:"CHAbatake",m:"Çay tarlası"},{k:"田畑",r:"tahata",m:"Tarla ve bahçe"},{k:"麦畑",r:"mugibatake",m:"Buğday tarlası"}],ex:[{s:"___で野菜を育てている。",tr:"Tarlada sebze yetiştiriyorum.",b:"畑",br:"hatake"}]},
+  {n:392,ch:"発",mn:"Ateşlemek / Başlamak",on:["HATSU","HOTSU"],kun:[],or:"Bronz, mühür ve geleneksel formlar. 'Yay' ve fonetik unsur (bir yay çözüldüğünde çıkan ses) içerir. 'Dışarı çıkmak, ayrılmak, başlamak' genişletilmiş anlamlardır.",mm:"🦶 İKİ KOMIK AYAK VE İKİ EĞİK BACAKLA ATEŞLEME",cp:[{k:"発表",r:"HAPPYŌ",m:"Duyuru, sunum"},{k:"発足",r:"HOSSOKU",m:"Açılış, kuruluş"},{k:"発電機",r:"HATSUDENKO",m:"Jeneratör"}],ex:[{s:"電車が___車した。",tr:"Tren hareket etti.",b:"発",br:"HATSU"}]},
+  {n:393,ch:"反",mn:"Karşı koymak / Anti / Ters",on:["HAN","TAN"],kun:["soru","sorasu"],or:"OBI ve mühür formlar. Genel olarak 'el' ve fonetik unsur ('elleri kaldırmak, devirmek' çağrışımlı) içerir. 'Karşı koymak' genişletilmiş anlamdır.",mm:"🧗 KAYALIKLARA KARŞI DURAN EL",cp:[{k:"反応",r:"HAN'Ō",m:"Tepki, reaksiyon"},{k:"反核",r:"HANKAKU",m:"Anti-nükleer"},{k:"反物",r:"TANmono",m:"Kumaş (tekstil)"}],ex:[{s:"___対意見を言った。",tr:"Karşıt görüş söyledim.",b:"反",br:"HAN"}]},
+  {n:394,ch:"坂",mn:"Eğim / Rampa",on:["HAN"],kun:["saka"],or:"Geç, Shuowen sonrası karakter. Genel olarak 'toprak/zemin' ve 'karşı koymak' (fonetik, 'eğimli' çağrışımlı) unsurlarından oluşur; 'eğimli zemin'.",mm:"⛰️ EĞIMLI ARAZIYE KARŞI KOYAN ZEMIN",cp:[{k:"急坂",r:"KYŪHAN",m:"Dik yokuş"},{k:"坂道",r:"sakamichi",m:"Yokuş"},{k:"下り坂",r:"kudarizaka",m:"İniş yokuşu"}],ex:[{s:"急な___を登った。",tr:"Dik yokuşu tırmandım.",b:"坂",br:"saka"}]},
+  {n:395,ch:"板",mn:"Tahta / Levha",on:["HAN","BAN"],kun:["ita"],or:"Mühür formunda mevcuttur; Shuowen'de yer almaz. Genel olarak 'ağaç, ahşap' ve 'karşı koymak' (fonetik, 'ince, düz' çağrışımlı) unsurlarından oluşur; 'düz tahta'.",mm:"🪵 KARŞILIKLI DURAN AHŞAP TAHTALAR",cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"板紙",r:"itagami",m:"Mukavva"},{k:"板前",r:"itamae",m:"Aşçı"}],ex:[{s:"木の___でテーブルを作った。",tr:"Tahta ile masa yaptım.",b:"板",br:"ita"}]},
+  {n:396,ch:"皮",mn:"Deri / Dış yüzey",on:["HI"],kun:["kawa"],or:"Bronz ve mühür formlar. 'El' ve fonetik unsur ('çıkarmak' çağrışımlı) içerir; özgün anlam 'hayvan derisini elle soymak'. Modern anlam aralığı 'hayvan derisi, deri, kürk, ten' olarak sınırlandı.",mm:"✋ EKSTRİ VURUŞLU DERILER",cp:[{k:"皮膚",r:"HIFU",m:"Ten"},{k:"皮肉",r:"HINIKU",m:"Alaycılık, ironi"},{k:"木の皮",r:"kinokawa",m:"Ağaç kabuğu"}],ex:[{s:"りんごの___をむいた。",tr:"Elmanın kabuğunu soyduk.",b:"皮",br:"kawa"}]},
+  {n:397,ch:"悲",mn:"Üzgün / Hüzünlü",on:["HI"],kun:["kanashii","kanashimu"],or:"Geç dönem karakter (Shuowen). 'Kalp, zihin' ve 'kuş kanatları, karşı koymak' (fonetik, 'üzgün, acı, keder' çağrışımlı) unsurlarını içerir. Genel anlam 'çatışan/karmaşık duygular'.",mm:"❤️ KALBİMİN KANATLARI VAR — YINE DE ÜZGÜNüm!",cp:[{k:"悲劇",r:"HIGEKI",m:"Trajedi"},{k:"悲鳴",r:"HIMEI",m:"Çığlık, ağlama sesi"},{k:"悲しみ",r:"kanashimi",m:"Keder, hüzün"}],ex:[{s:"悲しい映画を見て___しくなった。",tr:"Üzücü film izleyerek hüzünlendim.",b:"悲",br:"kana"}]},
+  {n:398,ch:"美",mn:"Güzel",on:["BI"],kun:["utsukushii"],or:"OBI ve mühür formlar. 'Koyun' ve 'büyük' unsurlarını içerir; 'büyük/şişman koyun' anlamı. Bu olumlu çağrışımdan 'yemesi içmesi güzel' ve 'güzel' anlamları türedi.",mm:"🐑 GÜZEL ŞİŞMAN KOYUN",cp:[{k:"美人",r:"BIJIN",m:"Güzel kadın"},{k:"美術",r:"BIJUTSU",m:"Güzel sanatlar"},{k:"美学",r:"BIGAKU",m:"Estetik"}],ex:[{s:"___しい景色を見た。",tr:"Güzel manzara gördüm.",b:"美",br:"utsuku"}]},
+  {n:399,ch:"鼻",mn:"Burun",on:["BI"],kun:["hana"],or:"OBI'de 'kendisi' anlamındaki daha basit grafik kullanılırdı. Mühür formu burun piktografı ve fonetik unsur (çıkıntı ya da 'iki şeyin bir arada' çağrışımlı) içerir.",mm:"👃 BURNU YİRMİ TARLADAN GEÇİYOR",cp:[{k:"鼻音",r:"BION",m:"Burun sesi"},{k:"鼻先",r:"hanasaki",m:"Burun ucu"},{k:"鼻薬",r:"hanagusuri",m:"Rüşvet (mecaz)"}],ex:[{s:"___をかんだ。",tr:"Burnumu sildim.",b:"鼻",br:"hana"}]},
+  {n:400,ch:"筆",mn:"Yazı fırçası",on:["HITSU"],kun:["fude"],or:"OBI ve mühür formlar. Daha basit eski form yazı fırçası tutan eli gösterir; sonradan 'bambu' eklendi (fırçaların genellikle bambu sapı olduğunu yansıtır).",mm:"✍️ EL BAMBU YAZMA FIRCASINI TUTUYOR",cp:[{k:"鉛筆",r:"ENPITSU",m:"Kalem"},{k:"筆者",r:"HISSHA",m:"Yazar"},{k:"筆遣い",r:"fudezukai",m:"Hat kalemi kullanımı"}],ex:[{s:"___で字を書いた。",tr:"Kalemle yazı yazdım.",b:"筆",br:"HITSU"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,17 +161,108 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #391–400</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}

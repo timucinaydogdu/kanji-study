@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:401,ch:"氷",mn:"Buz",on:["HYŌ"],kun:["kōri"],or:"OBI ve bronz formlar. OBI formu buzun çatlaklarını ya da düzensizliklerini tasvir eder. Bronz aşamada 'su' eklendi; Japonca standardı Tang Hanedanı'ndan itibaren yerleşti.",mm:"❄️ SUDAKI BİR ÇATLAK? — BU BUZ OLMALI",cp:[{k:"氷山",r:"HYŌZAN",m:"Buzdağı"},{k:"氷点",r:"HYŌTEN",m:"Donma noktası"},{k:"氷水",r:"kōrimizu",m:"Buzlu su"}]},
-  {n:402,ch:"表",mn:"Göstermek / Yüzey / Liste",on:["HYŌ"],kun:["omote","arawasu"],or:"Mühür formu. 'Giysi' ve 'kürk, saç' unsurlarını içerir. 'Örtmek/kapatmak' ya da 'kürk üzerine giyilen dış giysi' anlamı verir. Ön yüzey ve göstermek genişletilmiş anlamlardır.",mm:"🧥 TUHAF EFENDİNİN GİYSİLERİ UZUN BİR LİSTEYİ GÖSTERİYOR",cp:[{k:"表面",r:"HYŌMEN",m:"Yüzey"},{k:"表現",r:"HYŌGEN",m:"Anlatım, ifade"},{k:"時刻表",r:"JIKOKUHYŌ",m:"Zaman çizelgesi"}]},
-  {n:403,ch:"秒",mn:"Saniye (zaman)",on:["BYŌ"],kun:[],or:"Geç dönem karakter (Shuowen). 'Tahıl bitkisi/hububat' ve 'az, küçük' (fonetik, 'ince, dar' ya da 'tahıl başağı' çağrışımlı) unsurlarını içerir; 'küçük' anlamından küçük zaman birimine 'saniye' anlamına geçildi.",mm:"🌾 AĞIZDA BİR SANİYEDE YENİLEN AZ MİKTAR HUBUBAT",cp:[{k:"二秒",r:"NIBYŌ",m:"İki saniye"},{k:"秒針",r:"BYŌSHIN",m:"Saniye ibresi"},{k:"秒速",r:"BYŌSOKU",m:"Saniyedeki hız"}]},
-  {n:404,ch:"病",mn:"Hastalık",on:["BYŌ"],kun:["yamai","yamu"],or:"Geç dönem karakter (Shuowen). 'Hasta yatağı' (hastalık belirleyicisi) ve fonetik unsur ('eklenmek' çağrışımlı) içerir; 'kötüleşen hastalık' anlamı verir.",mm:"🏥 ÜÇÜNCÜ KALİTE SAĞLIK HASTALIĞA GÖTÜRÜR",cp:[{k:"病気",r:"BYŌKI",m:"Hastalık"},{k:"病人",r:"BYŌNIN",m:"Hasta kişi"},{k:"黒死病",r:"KOKUSHIBYŌ",m:"Veba (kara ölüm)"}]},
-  {n:405,ch:"品",mn:"Mal / Kalite / Tür",on:["HIN"],kun:["shina"],or:"OBI ve mühür formlar. Üç ağız unsuru içerir; 'çok konuşmak, pek çok kişi' anlamında. Yamada benzer şekilde genel bir anlam verir. Ma 'mal' anlamını ödünç kullanım olarak görür.",mm:"📦 KALİTELİ MALLARIN ÜÇ KUTUSU",cp:[{k:"商品",r:"SHŌHIN",m:"Ticari mal"},{k:"品質",r:"HINSHITSU",m:"Kalite"},{k:"品物",r:"shinamono",m:"Mal, eşya"}]},
-  {n:406,ch:"負",mn:"Yenilgi / Taşımak",on:["FU"],kun:["makeru","makasu","ou"],or:"Bronz ve mühür formlar. Genel olarak 'kişi' ve 'kabuk, para' (fonetik, 'sırt' çağrışımlı) içerir; 'birini sırtında taşımak'. Dönmek anlamından 'yenilgi' ödünç anlamdır.",mm:"🐚 YENİLEN KİŞİ KABUK PARAYI SIRTLAYARAK GİDİYOR",cp:[{k:"負傷",r:"FUSHŌ",m:"Yara"},{k:"負担",r:"FUTAN",m:"Yük, sorumluluk"},{k:"負け嫌い",r:"makegirai",m:"İnatçı, yenilgiyi kabullenemeyen"}]},
-  {n:407,ch:"部",mn:"Bölüm / Kısım",on:["BU"],kun:[],or:"Geç dönem karakter (Shuowen). Sağ tarafta 'köy, yerleşim' belirleyicisi ve fonetik unsur (anlamı tartışmalı; Tōdō 'karşı koymak; bölmek' der) içerir.",mm:"🗣️ SAĞDA KÖYDE AĞZI AÇIK BÖLÜMÜN KARŞISINDA DUR",cp:[{k:"部分",r:"BUBUN",m:"Kısım, bölüm"},{k:"部長",r:"BUCHŌ",m:"Bölüm başkanı"},{k:"部屋",r:"heya",m:"Oda"}]},
-  {n:408,ch:"服",mn:"Giysi / Itaat etmek",on:["FUKU"],kun:[],or:"OBI ve mühür formlar. 'Tekne/oyulmuş kap' ve 'el' (fonetik ve anlamsal) unsurlarından oluşur. Ogawa ve Shirakawa 'diz çökmüş kişiye saldırmak' anlamını; Mizukami 'tekneye sıkı tahta bağlamak'tan 'giysi' anlamını verir.",mm:"🌙 İTAATKAR EL GİYSİLERİ ASYIYE ASKI ALTINDA AYIN ALTına KOYUYOR",cp:[{k:"服装",r:"FUKUSŌ",m:"Giyim, kıyafet"},{k:"服従",r:"FUKUJŪ",m:"Teslimiyet, itaat"},{k:"服部",r:"Hattori",m:"Hattori (soyad)"}]},
-  {n:409,ch:"福",mn:"İyi şans / Mutluluk",on:["FUKU"],kun:[],or:"OBI formları. İlk OBI formu 'sunak/ilah' ve 'şarap küpü dolu' piktogramını içerir. Genel anlam 'ritüelden tanrılardan alınan kutsal/uğurlu şarap'; sonradan 'tanrılardan gelen şey' ve dolayısıyla 'iyi şans'.",mm:"⛩️ SUNAKTA TEK GİRİŞ TARLASINDA İYİ ŞANS",cp:[{k:"幸福",r:"KŌFUKU",m:"Mutluluk, saadet"},{k:"福引き",r:"FUKUbiki",m:"Piyango"},{k:"福音書",r:"FUKUINSHO",m:"İncil"}]},
-  {n:410,ch:"物",mn:"Şey / Nesne",on:["BUTSU","MOTSU"],kun:["mono"],or:"OBI ve mühür formlar. 'İnek' ve fonetik unsur (renkli fiyonklar, 'çeşitli' çağrışımlı) içerir; 'çeşitli renklerde (alacalı) inek'. Schuessler'e göre 'şey' anlamı OBI metinlerinde zaten mevcuttu.",mm:"🐄 BOYNUZLARINDA FİYONK OLAN İNEK — NE TUHAF ŞEY",cp:[{k:"人物",r:"JINBUTSU",m:"Kişi"},{k:"食物",r:"SHOKUMOTSU",m:"Yiyecek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"}]}
+  {n:401,ch:"氷",mn:"Buz",on:["HYŌ"],kun:["kōri"],or:"OBI ve bronz formlar. OBI formu buzun çatlaklarını ya da düzensizliklerini tasvir eder. Bronz aşamada 'su' eklendi; Japonca standardı Tang Hanedanı'ndan itibaren yerleşti.",mm:"❄️ SUDAKI BİR ÇATLAK? — BU BUZ OLMALI",cp:[{k:"氷山",r:"HYŌZAN",m:"Buzdağı"},{k:"氷点",r:"HYŌTEN",m:"Donma noktası"},{k:"氷水",r:"kōrimizu",m:"Buzlu su"}],ex:[{s:"コップに___を入れた。",tr:"Bardağa buz koydum.",b:"氷",br:"kōri"}]},
+  {n:402,ch:"表",mn:"Göstermek / Yüzey / Liste",on:["HYŌ"],kun:["omote","arawasu"],or:"Mühür formu. 'Giysi' ve 'kürk, saç' unsurlarını içerir. 'Örtmek/kapatmak' ya da 'kürk üzerine giyilen dış giysi' anlamı verir. Ön yüzey ve göstermek genişletilmiş anlamlardır.",mm:"🧥 TUHAF EFENDİNİN GİYSİLERİ UZUN BİR LİSTEYİ GÖSTERİYOR",cp:[{k:"表面",r:"HYŌMEN",m:"Yüzey"},{k:"表現",r:"HYŌGEN",m:"Anlatım, ifade"},{k:"時刻表",r:"JIKOKUHYŌ",m:"Zaman çizelgesi"}],ex:[{s:"意見を___した。",tr:"Görüşümü ifade ettim.",b:"表",br:"HYŌ"}]},
+  {n:403,ch:"秒",mn:"Saniye (zaman)",on:["BYŌ"],kun:[],or:"Geç dönem karakter (Shuowen). 'Tahıl bitkisi/hububat' ve 'az, küçük' (fonetik, 'ince, dar' ya da 'tahıl başağı' çağrışımlı) unsurlarını içerir; 'küçük' anlamından küçük zaman birimine 'saniye' anlamına geçildi.",mm:"🌾 AĞIZDA BİR SANİYEDE YENİLEN AZ MİKTAR HUBUBAT",cp:[{k:"二秒",r:"NIBYŌ",m:"İki saniye"},{k:"秒針",r:"BYŌSHIN",m:"Saniye ibresi"},{k:"秒速",r:"BYŌSOKU",m:"Saniyedeki hız"}],ex:[{s:"十___後にスタートする。",tr:"On saniye sonra başlıyor.",b:"秒",br:"BYŌ"}]},
+  {n:404,ch:"病",mn:"Hastalık",on:["BYŌ"],kun:["yamai","yamu"],or:"Geç dönem karakter (Shuowen). 'Hasta yatağı' (hastalık belirleyicisi) ve fonetik unsur ('eklenmek' çağrışımlı) içerir; 'kötüleşen hastalık' anlamı verir.",mm:"🏥 ÜÇÜNCÜ KALİTE SAĞLIK HASTALIĞA GÖTÜRÜR",cp:[{k:"病気",r:"BYŌKI",m:"Hastalık"},{k:"病人",r:"BYŌNIN",m:"Hasta kişi"},{k:"黒死病",r:"KOKUSHIBYŌ",m:"Veba (kara ölüm)"}],ex:[{s:"___院に行った。",tr:"Hastaneye gittim.",b:"病",br:"BYŌ"}]},
+  {n:405,ch:"品",mn:"Mal / Kalite / Tür",on:["HIN"],kun:["shina"],or:"OBI ve mühür formlar. Üç ağız unsuru içerir; 'çok konuşmak, pek çok kişi' anlamında. Yamada benzer şekilde genel bir anlam verir. Ma 'mal' anlamını ödünç kullanım olarak görür.",mm:"📦 KALİTELİ MALLARIN ÜÇ KUTUSU",cp:[{k:"商品",r:"SHŌHIN",m:"Ticari mal"},{k:"品質",r:"HINSHITSU",m:"Kalite"},{k:"品物",r:"shinamono",m:"Mal, eşya"}],ex:[{s:"この___物は高品質だ。",tr:"Bu ürün yüksek kaliteli.",b:"品",br:"SHIN"}]},
+  {n:406,ch:"負",mn:"Yenilgi / Taşımak",on:["FU"],kun:["makeru","makasu","ou"],or:"Bronz ve mühür formlar. Genel olarak 'kişi' ve 'kabuk, para' (fonetik, 'sırt' çağrışımlı) içerir; 'birini sırtında taşımak'. Dönmek anlamından 'yenilgi' ödünç anlamdır.",mm:"🐚 YENİLEN KİŞİ KABUK PARAYI SIRTLAYARAK GİDİYOR",cp:[{k:"負傷",r:"FUSHŌ",m:"Yara"},{k:"負担",r:"FUTAN",m:"Yük, sorumluluk"},{k:"負け嫌い",r:"makegirai",m:"İnatçı, yenilgiyi kabullenemeyen"}],ex:[{s:"試合に___けた。",tr:"Maçı kaybettim.",b:"負",br:"ma"}]},
+  {n:407,ch:"部",mn:"Bölüm / Kısım",on:["BU"],kun:[],or:"Geç dönem karakter (Shuowen). Sağ tarafta 'köy, yerleşim' belirleyicisi ve fonetik unsur (anlamı tartışmalı; Tōdō 'karşı koymak; bölmek' der) içerir.",mm:"🗣️ SAĞDA KÖYDE AĞZI AÇIK BÖLÜMÜN KARŞISINDA DUR",cp:[{k:"部分",r:"BUBUN",m:"Kısım, bölüm"},{k:"部長",r:"BUCHŌ",m:"Bölüm başkanı"},{k:"部屋",r:"heya",m:"Oda"}],ex:[{s:"サッカー___に入った。",tr:"Futbol kulübüne girdim.",b:"部",br:"BU"}]},
+  {n:408,ch:"服",mn:"Giysi / Itaat etmek",on:["FUKU"],kun:[],or:"OBI ve mühür formlar. 'Tekne/oyulmuş kap' ve 'el' (fonetik ve anlamsal) unsurlarından oluşur. Ogawa ve Shirakawa 'diz çökmüş kişiye saldırmak' anlamını; Mizukami 'tekneye sıkı tahta bağlamak'tan 'giysi' anlamını verir.",mm:"🌙 İTAATKAR EL GİYSİLERİ ASYIYE ASKI ALTINDA AYIN ALTına KOYUYOR",cp:[{k:"服装",r:"FUKUSŌ",m:"Giyim, kıyafet"},{k:"服従",r:"FUKUJŪ",m:"Teslimiyet, itaat"},{k:"服部",r:"Hattori",m:"Hattori (soyad)"}],ex:[{s:"新しい___を買った。",tr:"Yeni kıyafet satın aldım.",b:"服",br:"FUKU"}]},
+  {n:409,ch:"福",mn:"İyi şans / Mutluluk",on:["FUKU"],kun:[],or:"OBI formları. İlk OBI formu 'sunak/ilah' ve 'şarap küpü dolu' piktogramını içerir. Genel anlam 'ritüelden tanrılardan alınan kutsal/uğurlu şarap'; sonradan 'tanrılardan gelen şey' ve dolayısıyla 'iyi şans'.",mm:"⛩️ SUNAKTA TEK GİRİŞ TARLASINDA İYİ ŞANS",cp:[{k:"幸福",r:"KŌFUKU",m:"Mutluluk, saadet"},{k:"福引き",r:"FUKUbiki",m:"Piyango"},{k:"福音書",r:"FUKUINSHO",m:"İncil"}],ex:[{s:"___祉施設で働く。",tr:"Sosyal hizmet tesisinde çalışıyorum.",b:"福",br:"FUKU"}]},
+  {n:410,ch:"物",mn:"Şey / Nesne",on:["BUTSU","MOTSU"],kun:["mono"],or:"OBI ve mühür formlar. 'İnek' ve fonetik unsur (renkli fiyonklar, 'çeşitli' çağrışımlı) içerir; 'çeşitli renklerde (alacalı) inek'. Schuessler'e göre 'şey' anlamı OBI metinlerinde zaten mevcuttu.",mm:"🐄 BOYNUZLARINDA FİYONK OLAN İNEK — NE TUHAF ŞEY",cp:[{k:"人物",r:"JINBUTSU",m:"Kişi"},{k:"食物",r:"SHOKUMOTSU",m:"Yiyecek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"}],ex:[{s:"買い___をした。",tr:"Alışveriş yaptım.",b:"物",br:"MONO"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,17 +161,108 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #401–410</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}

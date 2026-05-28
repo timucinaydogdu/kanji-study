@@ -113,17 +113,18 @@ a.back:hover{color:var(--text);}
 
 <script>
 const K=[
-  {n:291,ch:"県",mn:"İl / Prefektörlük",on:["KEN"],kun:[],or:"Bronz form ağaçta ters asılı kesilmiş başı gösterir — bir ceza sahnesi. Geleneksel form 'birleşik iplikler' (fonetik, 'asmak' çağrışımlı) içerir. Çince'de benzer sesli kelime 'ilçe, nahiye'; Japonca'da 'il' oldu.",mm:"👁️ İL GÖSTERİSİNDE SEHPAYA GÖZ KULAK OL",cp:[{k:"三重県",r:"MieKEN",m:"Mie İli"},{k:"県令",r:"KENREI",m:"İl yönetmeliği"},{k:"県庁",r:"KENCHŌ",m:"İl müdürlüğü"}]},
-  {n:292,ch:"庫",mn:"Ambar / Depo",on:["KO"],kun:[],or:"Bronz form. 'Bina' ve 'araç, araba' (hem anlamsal hem fonetik) unsurlarını içerir. Özgün anlam arabaları barındıran bina; sonradan genel anlam kazandı.",mm:"🚗 DEPODA BIRAKILAN ARAÇ",cp:[{k:"車庫",r:"SHAKO",m:"Garaj, araç deposu"},{k:"倉庫",r:"SŌKO",m:"Depo, ambar"},{k:"冷蔵庫",r:"REIZŌKO",m:"Buzdolabı"}]},
-  {n:293,ch:"湖",mn:"Göl",on:["KO"],kun:["mizuumi"],or:"Bronz formdaki basit şekle dayanır. 'Su' ve fonetik unsur (büyük çağrışımlı) içerir. Modern form su, ay ve eski unsurlarıyla hatırlanabilir.",mm:"🌙 GÖLÜN SUYUNDA ESKİ AY GÖRÜNÜYOR",cp:[{k:"琵琶湖",r:"BIWAKO",m:"Biwa Gölü"},{k:"湖岸",r:"KOGAN",m:"Göl kıyısı"},{k:"湖水",r:"KOSUI",m:"Göl suyu"}]},
-  {n:294,ch:"向",mn:"Yönelmek / Yüzleşmek",on:["KŌ"],kun:["muku","mukeru","mukō"],or:"OBI formu görünüşe göre kuzeye bakan pencereli bir evi gösterir. Mizukami, Ma ve Yamada yüzleşmek ve yön anlamlarını sonraki anlamlar olarak görür.",mm:"🪟 YÜKSEK PENCERELİ EVE DÖN",cp:[{k:"向上",r:"KŌJŌ",m:"Gelişme, ilerleme"},{k:"向こう側",r:"mukōgawa",m:"Karşı taraf"},{k:"前向き",r:"maemuki",m:"İleriye dönük, iyimser"}]},
-  {n:295,ch:"幸",mn:"Mutluluk / Şans",on:["KŌ"],kun:["saiwai","sachi","shiawase"],or:"Mühür formu. Geç dönem karakter (Shuowen). Baş eğik figür (güzel, narin; ancak felaketi temsil etmek için ödünç alındı) ve 'tersine çevrilmiş' unsurlarından oluşur. Tüm birlikte 'iyi talih' anlamı verir.",mm:"⚔️ EKSTRİ KESKİN VURUŞ MUTLULUK VE ŞANS GETİRİR",cp:[{k:"幸運",r:"KŌUN",m:"İyi şans"},{k:"不幸",r:"FUKŌ",m:"Mutsuzluk, talihsizlik"},{k:"幸いに",r:"saiwai ni",m:"Neyse ki"}]},
-  {n:296,ch:"港",mn:"Liman",on:["KŌ"],kun:["minato"],or:"Geç dönem karakter (Shuowen). 'Su' ve 'yerleşim caddesi' (hem anlamsal hem fonetik, 'yol, güzergah' çağrışımlı) unsurlarını içerir; tekne yolu ve dolayısıyla liman anlamına gelir.",mm:"⚓ SUDA BİR ARADA BULURSUN KENDİNİ — LİMAN",cp:[{k:"空港",r:"KŪKŌ",m:"Havalimanı"},{k:"入港",r:"NYŪKŌ",m:"Limana giriş"},{k:"港町",r:"minatomachi",m:"Liman kasabası"}]},
-  {n:297,ch:"号",mn:"Numara / Çağırmak / İşaret",on:["GŌ"],kun:[],or:"Geç dönem karakter (Shuowen). Geleneksel form kaplan içerir. Çeşitli analizler sesi 'uluyan kaplan' gibi howl çağrışımlı olarak yorumlar. Kısaltılmış modern form daha genel anlamlıdır; 'ad, numara' ödünç anlamlardır.",mm:"📢 YÜKSELEN YÜKSEk SES BİR NUMARA ÇAĞIRIYOR",cp:[{k:"番号",r:"BANGŌ",m:"Numara"},{k:"号令",r:"GŌREI",m:"Komut, emir"},{k:"号泣",r:"GŌKYŪ",m:"Hıçkıra hıçkıra ağlamak"}]},
-  {n:298,ch:"根",mn:"Kök / Temel",on:["KON"],kun:["ne"],or:"Geç dönem karakter (Shuowen). 'Ağaç, ahşap' ve 'durup bakmak' (fonetik, 'kök, gövde' çağrışımlı) unsurlarını içerir. Tōdō 'hareketsiz kalmak' kelime ailesine dahil eder.",mm:"🌳 AĞAÇ KÖKÜNÜ DURARAK SEYRET",cp:[{k:"根本",r:"KONPON",m:"Temel, kök"},{k:"大根",r:"DAIKON",m:"Dev turp"},{k:"屋根",r:"yane",m:"Çatı"}]},
-  {n:299,ch:"祭",mn:"Festival / İbadet",on:["SAI"],kun:["matsuri","matsuru"],or:"OBI ve bronz formlar et ve şarabın bir sunak üzerine elle yerleştirilmesini tasvir eder. Kullanım 'tanrıları çağırmak için törenler'e genişledi.",mm:"🍖 EL ETİ FESTIYAL İBADETINDE SUNAĞA KOYAR",cp:[{k:"祭日",r:"SAIJITSU",m:"Tatil, bayram"},{k:"祭壇",r:"SAIDAN",m:"Sunak"},{k:"雪まつり",r:"yukimatsuri",m:"Kar Festivali"}]},
-  {n:300,ch:"皿",mn:"Tabak / Kase",on:[],kun:["sara"],or:"OBI formları yüksek tabanlı derin eğri kaseyi gösterir. Sonraki formlar metal işlemeli daha ayrıntılı versiyonları gösterir.",mm:"🍽️ DİKEY ÇİZGİLİ TABAK",cp:[{k:"灰皿",r:"haizara",m:"Küllük"},{k:"大皿",r:"ōzara",m:"Büyük tabak"},{k:"皿洗い",r:"saraarai",m:"Bulaşık yıkama"}]}
+  {n:291,ch:"県",mn:"İl / Prefektörlük",on:["KEN"],kun:[],or:"Bronz form ağaçta ters asılı kesilmiş başı gösterir — bir ceza sahnesi. Geleneksel form 'birleşik iplikler' (fonetik, 'asmak' çağrışımlı) içerir. Çince'de benzer sesli kelime 'ilçe, nahiye'; Japonca'da 'il' oldu.",mm:"👁️ İL GÖSTERİSİNDE SEHPAYA GÖZ KULAK OL",cp:[{k:"三重県",r:"MieKEN",m:"Mie İli"},{k:"県令",r:"KENREI",m:"İl yönetmeliği"},{k:"県庁",r:"KENCHŌ",m:"İl müdürlüğü"}],ex:[{s:"神奈川___に住んでいる。",tr:"Kanagawa ilinde yaşıyorum.",b:"県",br:"KEN"}]},
+  {n:292,ch:"庫",mn:"Ambar / Depo",on:["KO"],kun:[],or:"Bronz form. 'Bina' ve 'araç, araba' (hem anlamsal hem fonetik) unsurlarını içerir. Özgün anlam arabaları barındıran bina; sonradan genel anlam kazandı.",mm:"🚗 DEPODA BIRAKILAN ARAÇ",cp:[{k:"車庫",r:"SHAKO",m:"Garaj, araç deposu"},{k:"倉庫",r:"SŌKO",m:"Depo, ambar"},{k:"冷蔵庫",r:"REIZŌKO",m:"Buzdolabı"}],ex:[{s:"冷蔵___に食べ物を入れた。",tr:"Buzdolabına yiyecek koydum.",b:"庫",br:"KO"}]},
+  {n:293,ch:"湖",mn:"Göl",on:["KO"],kun:["mizuumi"],or:"Bronz formdaki basit şekle dayanır. 'Su' ve fonetik unsur (büyük çağrışımlı) içerir. Modern form su, ay ve eski unsurlarıyla hatırlanabilir.",mm:"🌙 GÖLÜN SUYUNDA ESKİ AY GÖRÜNÜYOR",cp:[{k:"琵琶湖",r:"BIWAKO",m:"Biwa Gölü"},{k:"湖岸",r:"KOGAN",m:"Göl kıyısı"},{k:"湖水",r:"KOSUI",m:"Göl suyu"}],ex:[{s:"___のほとりを散歩した。",tr:"Göl kıyısında yürüyüş yaptım.",b:"湖",br:"mizuumi"}]},
+  {n:294,ch:"向",mn:"Yönelmek / Yüzleşmek",on:["KŌ"],kun:["muku","mukeru","mukō"],or:"OBI formu görünüşe göre kuzeye bakan pencereli bir evi gösterir. Mizukami, Ma ve Yamada yüzleşmek ve yön anlamlarını sonraki anlamlar olarak görür.",mm:"🪟 YÜKSEK PENCERELİ EVE DÖN",cp:[{k:"向上",r:"KŌJŌ",m:"Gelişme, ilerleme"},{k:"向こう側",r:"mukōgawa",m:"Karşı taraf"},{k:"前向き",r:"maemuki",m:"İleriye dönük, iyimser"}],ex:[{s:"駅に___かって歩いた。",tr:"İstasyona doğru yürüdüm.",b:"向",br:"mu"}]},
+  {n:295,ch:"幸",mn:"Mutluluk / Şans",on:["KŌ"],kun:["saiwai","sachi","shiawase"],or:"Mühür formu. Geç dönem karakter (Shuowen). Baş eğik figür (güzel, narin; ancak felaketi temsil etmek için ödünç alındı) ve 'tersine çevrilmiş' unsurlarından oluşur. Tüm birlikte 'iyi talih' anlamı verir.",mm:"⚔️ EKSTRİ KESKİN VURUŞ MUTLULUK VE ŞANS GETİRİR",cp:[{k:"幸運",r:"KŌUN",m:"İyi şans"},{k:"不幸",r:"FUKŌ",m:"Mutsuzluk, talihsizlik"},{k:"幸いに",r:"saiwai ni",m:"Neyse ki"}],ex:[{s:"今日は___運な日だ。",tr:"Bugün şanslı bir gün.",b:"幸",br:"KŌ"}]},
+  {n:296,ch:"港",mn:"Liman",on:["KŌ"],kun:["minato"],or:"Geç dönem karakter (Shuowen). 'Su' ve 'yerleşim caddesi' (hem anlamsal hem fonetik, 'yol, güzergah' çağrışımlı) unsurlarını içerir; tekne yolu ve dolayısıyla liman anlamına gelir.",mm:"⚓ SUDA BİR ARADA BULURSUN KENDİNİ — LİMAN",cp:[{k:"空港",r:"KŪKŌ",m:"Havalimanı"},{k:"入港",r:"NYŪKŌ",m:"Limana giriş"},{k:"港町",r:"minatomachi",m:"Liman kasabası"}],ex:[{s:"___から船が出発した。",tr:"Limandan gemi kalktı.",b:"港",br:"minato"}]},
+  {n:297,ch:"号",mn:"Numara / Çağırmak / İşaret",on:["GŌ"],kun:[],or:"Geç dönem karakter (Shuowen). Geleneksel form kaplan içerir. Çeşitli analizler sesi 'uluyan kaplan' gibi howl çağrışımlı olarak yorumlar. Kısaltılmış modern form daha genel anlamlıdır; 'ad, numara' ödünç anlamlardır.",mm:"📢 YÜKSELEN YÜKSEk SES BİR NUMARA ÇAĞIRIYOR",cp:[{k:"番号",r:"BANGŌ",m:"Numara"},{k:"号令",r:"GŌREI",m:"Komut, emir"},{k:"号泣",r:"GŌKYŪ",m:"Hıçkıra hıçkıra ağlamak"}],ex:[{s:"部屋___を確認した。",tr:"Oda numarasını kontrol ettim.",b:"号",br:"GŌ"}]},
+  {n:298,ch:"根",mn:"Kök / Temel",on:["KON"],kun:["ne"],or:"Geç dönem karakter (Shuowen). 'Ağaç, ahşap' ve 'durup bakmak' (fonetik, 'kök, gövde' çağrışımlı) unsurlarını içerir. Tōdō 'hareketsiz kalmak' kelime ailesine dahil eder.",mm:"🌳 AĞAÇ KÖKÜNÜ DURARAK SEYRET",cp:[{k:"根本",r:"KONPON",m:"Temel, kök"},{k:"大根",r:"DAIKON",m:"Dev turp"},{k:"屋根",r:"yane",m:"Çatı"}],ex:[{s:"木の___が地面に広がる。",tr:"Ağacın kökleri yere yayılıyor.",b:"根",br:"ne"}]},
+  {n:299,ch:"祭",mn:"Festival / İbadet",on:["SAI"],kun:["matsuri","matsuru"],or:"OBI ve bronz formlar et ve şarabın bir sunak üzerine elle yerleştirilmesini tasvir eder. Kullanım 'tanrıları çağırmak için törenler'e genişledi.",mm:"🍖 EL ETİ FESTIYAL İBADETINDE SUNAĞA KOYAR",cp:[{k:"祭日",r:"SAIJITSU",m:"Tatil, bayram"},{k:"祭壇",r:"SAIDAN",m:"Sunak"},{k:"雪まつり",r:"yukimatsuri",m:"Kar Festivali"}],ex:[{s:"夏___りに浴衣を着た。",tr:"Yaz festivalinde yukata giydim.",b:"祭",br:"matsuri"}]},
+  {n:300,ch:"皿",mn:"Tabak / Kase",on:[],kun:["sara"],or:"OBI formları yüksek tabanlı derin eğri kaseyi gösterir. Sonraki formlar metal işlemeli daha ayrıntılı versiyonları gösterir.",mm:"🍽️ DİKEY ÇİZGİLİ TABAK",cp:[{k:"灰皿",r:"haizara",m:"Küllük"},{k:"大皿",r:"ōzara",m:"Büyük tabak"},{k:"皿洗い",r:"saraarai",m:"Bulaşık yıkama"}],ex:[{s:"___に料理を盛り付けた。",tr:"Tabağa yemek koydum.",b:"皿",br:"sara"}]}
 ];
+
 
 // Notlar bölümünü oluştur
 function buildNotes(){
@@ -160,17 +161,108 @@ function toggleNotes(){
 function build(){
   const r=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
-  const oM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const oC=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
-  const oCM=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>r(k.cp).m);
-  const oR=(ex,n)=>{const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(r(rds));if(out.length>=n)break;}return out;};
-  const qs=[];
-  sh(K).slice(0,8).forEach(k=>{const c=r(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,q:`"${c.k}" (${c.r}) kelimesinin anlamı nedir?`,ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});});
-  sh(K).slice(0,3).forEach(k=>{const c=r(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,q:`"${c.m}" anlamındaki "${c.k}" hangi kanjiden türemiştir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});});
-  sh(K).slice(0,4).forEach(k=>qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true}));
-  sh(K).slice(0,3).forEach(k=>qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,q:`"${k.mn}" anlamına gelen kanji hangisidir?`,ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false}));
-  sh(K).slice(0,2).forEach(k=>{const rds=[...k.on,...k.kun];const ans=r(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});});
-  return sh(qs);
+
+  // ── DİSTRACTOR: YALNIZCA BU SETIN KANJİLERİ ──────────────────────────────
+  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).slice(0,n);};
+
+  // ── GRUP A: GARANTİLİ 40 SORU ─────────────────────────────────────────────
+  // A1: Kanji → Anlam — her kanji 1 kez (10 soru)
+  const POOL_KA = K.map(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,9)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return null;
+    return{tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true};
+  }).filter(Boolean);
+
+  // A2: Bileşik → Anlam — her kanjinin tüm bileşikleri (30 soru)
+  const POOL_CM=[];
+  K.forEach(k=>{
+    k.cp.forEach(cp=>{
+      const ans=cp.m;
+      const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+      if(d.length<5)return;
+      POOL_CM.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+        q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+        ans,opts:sh([ans,...d]),sc:false});
+    });
+  });
+
+  // ── GRUP B: 5 TİP HAVUZU (her tipten 6 seçilir = 30 soru) ─────────────────
+  const POOL_BF=[],POOL_EX=[],POOL_CK=[],POOL_KR=[],POOL_RK=[];
+
+  K.forEach(k=>{
+    // Boşluk Doldurma & Bileşikteki Anlam — her bileşik için
+    k.cp.forEach(cp=>{
+      if(!cp.k.includes(k.ch))return;
+      // BF
+      const bf_d=sh(dCh(k,9)).slice(0,5);
+      if(bf_d.length>=5){
+        const blank=cp.k.replace(k.ch,'___');
+        POOL_BF.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+          q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...bf_d]),sc:false});
+      }
+      // CK
+      const ck_d=sh(dMn(k,9)).filter(x=>x!==k.mn).slice(0,5);
+      if(ck_d.length>=5){
+        const marked=cp.k.replace(k.ch,'<u style="color:#f7a64f;font-size:1.2rem;text-decoration-color:#f7a64f">'+k.ch+'</u>');
+        POOL_CK.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlr',ch:k.ch,
+          q:marked+' ('+cp.r+') — altı çizili kanjinin anlamı nedir?',
+          ans:k.mn,opts:sh([k.mn,...ck_d]),sc:false});
+      }
+    });
+
+    // Cümle → Kanji
+    if(k.ex&&k.ex.length){
+      k.ex.forEach(ex=>{
+        const d=sh(dCh(k,9)).slice(0,5);
+        if(d.length<5)return;
+        const qs=ex.s.replace('___','<span style="display:inline-block;min-width:1.4rem;border-bottom:2px solid #4f8ef7;text-align:center;color:#4f8ef7;padding:0 2px">＿</span>');
+        POOL_EX.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlc',ch:k.ch,
+          q:'<span style="font-size:1.05rem;line-height:1.8">'+qs+'</span><br><span style="color:#6b7599;font-size:.82rem">'+ex.tr+'</span><br><br>Boşluğa hangi kanji gelir?',
+          ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+      });
+    }
+
+    // Kanji → Okunuş
+    const all=[...k.on,...k.kun];
+    if(all.length){
+      all.forEach(rd=>{
+        const d=sh(dRd(k,12)).filter(x=>x!==rd).slice(0,5);
+        if(d.length<5)return;
+        POOL_KR.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlm',ch:k.ch,
+          q:'Bu kanjinin okunuşlarından biri nedir?',
+          ans:rd,opts:sh([rd,...d]),sc:true});
+        // Okunuş → Kanji
+        const d2=sh(dCh(k,9)).slice(0,5);
+        if(d2.length>=5){
+          POOL_RK.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlc',ch:k.ch,
+            q:'"<b style="font-size:1.1rem">'+rd+'</b>" okunuşuna sahip kanji hangisidir?',
+            ans:k.ch,opts:sh([k.ch,...d2]),sc:false});
+        }
+      });
+    }
+  });
+
+  // ── HAVUZ BOYUTLARINI LOGLA (DEBUG) ─────────────────────────────────────
+  // console.log('Havuz:',POOL_KA.length,POOL_CM.length,POOL_BF.length,POOL_EX.length,POOL_CK.length,POOL_KR.length,POOL_RK.length);
+
+  // ── GRUP B'DEN HER TİPTEN 6 SEÇ ──────────────────────────────────────────
+  const N=6;
+  const sel_B=[
+    ...sh(POOL_BF).slice(0,N),
+    ...sh(POOL_EX).slice(0,N),
+    ...sh(POOL_CK).slice(0,N),
+    ...sh(POOL_KR).slice(0,N),
+    ...sh(POOL_RK).slice(0,N),
+  ];
+
+  // Toplam: 10(ka) + 30(cm) + 30(B) = 70
+  return sh([...POOL_KA,...POOL_CM,...sel_B]);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
@@ -188,8 +280,8 @@ function showR(){
   const tot=tqs.length,pct=Math.round(sc/tot*100);
   const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
   const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  const tsum=['cm','ck','ka','ak','rd'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
+  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
+  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
   const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
   document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
   document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #291–300</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
