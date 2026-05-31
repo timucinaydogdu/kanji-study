@@ -11,496 +11,454 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
 .wrap{max-width:680px;margin:0 auto;}
-.hero{text-align:center;margin-bottom:2rem;}
+
+/* HERO */
+.hero{text-align:center;margin-bottom:1.5rem;}
 .hero-char{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:var(--p900);line-height:1;margin-bottom:0.75rem;display:block;}
 .hero-title{font-size:22px;font-weight:600;color:var(--text);margin-bottom:0.5rem;}
 .hero-sub{font-size:14px;color:var(--text2);}
-.exam-card{border-radius:var(--rl);padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;transition:opacity 0.15s;}
-.exam-card:hover{opacity:0.92;}
-.exam-card-g1{background:linear-gradient(135deg,var(--p900),var(--p600));box-shadow:0 4px 16px rgba(83,74,183,0.3);}
-.exam-card-g2{background:linear-gradient(135deg,#085041,#1D9E75);box-shadow:0 4px 16px rgba(13,111,86,0.3);}
-.exam-card-g3{background:linear-gradient(135deg,#412402,#BA7517);box-shadow:0 4px 16px rgba(186,117,23,0.3);}
-.exam-card-g4{background:linear-gradient(135deg,#082840,#1B5E8A);box-shadow:0 4px 16px rgba(27,94,138,0.3);}
-.exam-icon{font-size:32px;min-width:44px;text-align:center;}
-.exam-info{flex:1;}
-.exam-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;}
-.exam-sub{font-size:12px;color:rgba(255,255,255,0.7);}
-.exam-arrow{font-size:18px;color:rgba(255,255,255,0.6);}
-.section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;margin-top:1.75rem;}
-.section-badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;}
-.badge-g1{background:#EEEDFE;color:#3C3489;}
-.badge-g2{background:#E1F5EE;color:#0F6E56;}
-.badge-g3{background:#FAEEDA;color:#633806;}
+
+/* NAV BUTONLARI */
+.nav-btns{display:flex;gap:10px;margin-bottom:1.75rem;}
+.nav-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:1rem 1.25rem;border-radius:var(--rl);text-decoration:none;font-weight:600;font-size:14px;transition:opacity 0.15s,transform 0.1s;}
+.nav-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.nav-btn:active{transform:translateY(0);}
+.nav-btn-kanji{background:linear-gradient(135deg,var(--p900),var(--p600));color:#fff;box-shadow:0 4px 16px rgba(83,74,183,0.3);}
+.nav-btn-grammar{background:linear-gradient(135deg,#085041,#1D9E75);color:#fff;box-shadow:0 4px 16px rgba(13,111,86,0.3);}
+.nav-btn-icon{font-size:22px;}
+.nav-btn-text{text-align:left;}
+.nav-btn-label{font-size:13px;opacity:0.8;font-weight:400;margin-top:1px;}
+
+/* SECTION HEADER */
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;margin-top:1.5rem;padding:6px 4px;border-radius:var(--rm);transition:background 0.15s;}
+.section-header:hover{background:var(--bg2);}
+.section-badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;}
 .section-line{flex:1;height:0.5px;background:var(--border);}
-.section-note{font-size:12px;color:var(--text3);}
-.sets{display:flex;flex-direction:column;gap:8px;margin-bottom:0.5rem;}
+.section-note{font-size:12px;color:var(--text3);white-space:nowrap;}
+.toggle-icon{transition:transform 0.2s;}
+
+/* SET CARDS */
+.sets{display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;}
 .set-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:box-shadow 0.15s;}
 .set-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);}
-.set-num{font-size:12px;font-weight:600;color:var(--text3);min-width:28px;}
+.set-num{font-size:12px;font-weight:600;color:var(--text3);min-width:32px;}
 .set-info{flex:1;}
 .set-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;}
-.set-chars{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text2);letter-spacing:3px;}
+.set-chars{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text2);letter-spacing:2px;}
 .set-badge{font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;white-space:nowrap;}
 .badge-ready{background:var(--t50);color:var(--t600);}
-.badge-soon{background:var(--bg2);color:var(--text3);}
 .set-arrow{font-size:16px;color:var(--text3);}
-.footer{text-align:center;margin-top:2rem;font-size:12px;color:var(--text3);}
+
+/* EXAM CARD */
+.exam-card{display:none;}
+
+/* FOOTER */
+.footer{text-align:center;margin-top:2.5rem;font-size:12px;color:var(--text3);padding-bottom:1rem;}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+  <!-- HERO -->
   <div class="hero">
     <span class="hero-char">漢字</span>
-    <div class="hero-title">Japonca Kanji Çalışma Seti</div>
+    <div class="hero-title">Japonca Çalışma Seti</div>
     <div class="hero-sub">The Complete Guide to Japanese Kanji — Türkçe</div>
   </div>
 
-  <!-- FIRST GRADE (#1–80) -->
-  <div class="section-header">
-    <span class="section-badge badge-g1">First Grade · N5</span>
+  <!-- NAV BUTONLARI -->
+  <div class="nav-btns">
+    <a class="nav-btn nav-btn-kanji" href="#kanji-section">
+      <span class="nav-btn-icon">漢</span>
+      <div class="nav-btn-text">
+        <div>Kanji Dersleri</div>
+        <div class="nav-btn-label">2136 kanji · 214 set · 12 grade</div>
+      </div>
+    </a>
+    <a class="nav-btn nav-btn-grammar" href="grammar.html">
+      <span class="nav-btn-icon">文</span>
+      <div class="nav-btn-text">
+        <div>Gramer Dersleri</div>
+        <div class="nav-btn-label">N5→N1 · Konu + Test</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- KANJİ BÖLÜMü -->
+  <div id="kanji-section">
+
+  <!-- First Grade · N5 -->
+  <div class="section-header" onclick="toggleGrade('g1')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#EEEDFE;color:#3C3489;">First Grade · N5</span>
     <div class="section-line"></div>
     <span class="section-note">Kanji #1–80 · 8 Set</span>
+    <span class="toggle-icon" id="icon-g1" style="font-size:13px;color:#3C3489;min-width:20px;text-align:right;">▼</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_01_10_test.html"><div class="set-num">#01</div><div class="set-info"><div class="set-title">Kanji #1–10</div><div class="set-chars">一右雨円王音下火花貝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_11_20_test.html"><div class="set-num">#02</div><div class="set-info"><div class="set-title">Kanji #11–20</div><div class="set-chars">学気九休玉金空月犬見</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_21_30_test.html"><div class="set-num">#03</div><div class="set-info"><div class="set-title">Kanji #21–30</div><div class="set-chars">五口校左三山子四糸字</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_31_40_test.html"><div class="set-num">#04</div><div class="set-info"><div class="set-title">Kanji #31–40</div><div class="set-chars">耳七車手十出女小上森</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_41_50_test.html"><div class="set-num">#05</div><div class="set-info"><div class="set-title">Kanji #41–50</div><div class="set-chars">人水正生青夕石赤千川</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_51_60_test.html"><div class="set-num">#06</div><div class="set-info"><div class="set-title">Kanji #51–60</div><div class="set-chars">先早草足村大男竹中虫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_61_70_test.html"><div class="set-num">#07</div><div class="set-info"><div class="set-title">Kanji #61–70</div><div class="set-chars">町天田土二日入年白八</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_71_80_test.html"><div class="set-num">#08</div><div class="set-info"><div class="set-title">Kanji #71–80</div><div class="set-chars">百文木本名目立力林六</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g1" style="display:flex;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_01_10_test.html"><div class="set-num">#01</div><div class="set-info"><div class="set-title">Kanji #1–10</div><div class="set-chars">一右雨円王音下火花貝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_11_20_test.html"><div class="set-num">#02</div><div class="set-info"><div class="set-title">Kanji #11–20</div><div class="set-chars">学気九休玉金空月犬見</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_21_30_test.html"><div class="set-num">#03</div><div class="set-info"><div class="set-title">Kanji #21–30</div><div class="set-chars">五口校左三山子四糸字</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_31_40_test.html"><div class="set-num">#04</div><div class="set-info"><div class="set-title">Kanji #31–40</div><div class="set-chars">耳七車手十出女小上森</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_41_50_test.html"><div class="set-num">#05</div><div class="set-info"><div class="set-title">Kanji #41–50</div><div class="set-chars">人水正生青夕石赤千川</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_51_60_test.html"><div class="set-num">#06</div><div class="set-info"><div class="set-title">Kanji #51–60</div><div class="set-chars">先早草足村大男竹中虫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_61_70_test.html"><div class="set-num">#07</div><div class="set-info"><div class="set-title">Kanji #61–70</div><div class="set-chars">町天田土二日入年白八</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_71_80_test.html"><div class="set-num">#08</div><div class="set-info"><div class="set-title">Kanji #71–80</div><div class="set-chars">百文木本名目立力林六</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
-  <a class="exam-card exam-card-g1" href="sinav_1_80.html">
-    <div class="exam-icon">🏆</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — First Grade</div>
-      <div class="exam-sub">Kanji #1–80 · 100 soru · 5 tip · Rastgele</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
+  <a class="exam-card" id="exam-g1" style="background:linear-gradient(135deg,var(--p900),var(--p600));box-shadow:0 4px 16px rgba(83,74,183,0.3);display:block;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1_80.html"><div style="font-size:32px;min-width:44px;text-align:center;">🏆</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 1</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1–80 · 80 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <!-- SECOND GRADE (#81–240) -->
-  <div class="section-header">
-    <span class="section-badge badge-g2">Second Grade · N4</span>
+
+  <!-- Second Grade · N4 -->
+  <div class="section-header" onclick="toggleGrade('g2')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#E1F5EE;color:#0F6E56;">Second Grade · N4</span>
     <div class="section-line"></div>
     <span class="section-note">Kanji #81–240 · 16 Set</span>
+    <span class="toggle-icon" id="icon-g2" style="font-size:13px;color:#0F6E56;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_81_90_test.html"><div class="set-num">#09</div><div class="set-info"><div class="set-title">Kanji #81–90</div><div class="set-chars">引羽雲園遠何科夏家歌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_91_100_test.html"><div class="set-num">#10</div><div class="set-info"><div class="set-title">Kanji #91–100</div><div class="set-chars">画回会海絵外角楽活間</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_101_110_test.html"><div class="set-num">#11</div><div class="set-info"><div class="set-title">Kanji #101–110</div><div class="set-chars">丸岩顔汽記帰弓牛魚京</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_111_120_test.html"><div class="set-num">#12</div><div class="set-info"><div class="set-title">Kanji #111–120</div><div class="set-chars">強教近兄形計元言原戸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_121_130_test.html"><div class="set-num">#13</div><div class="set-info"><div class="set-title">Kanji #121–130</div><div class="set-chars">古午後語工公広交光考</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_131_140_test.html"><div class="set-num">#14</div><div class="set-info"><div class="set-title">Kanji #131–140</div><div class="set-chars">行高黄合谷国黒今才細</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_141_150_test.html"><div class="set-num">#15</div><div class="set-info"><div class="set-title">Kanji #141–150</div><div class="set-chars">作算止市矢姉思紙寺自</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_151_160_test.html"><div class="set-num">#16</div><div class="set-info"><div class="set-title">Kanji #151–160</div><div class="set-chars">時室社弱首秋週春書少</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_161_170_test.html"><div class="set-num">#17</div><div class="set-info"><div class="set-title">Kanji #161–170</div><div class="set-chars">場色食心新親図数西声</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_171_180_test.html"><div class="set-num">#18</div><div class="set-info"><div class="set-title">Kanji #171–180</div><div class="set-chars">星晴切雪船線前組走多</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_181_190_test.html"><div class="set-num">#19</div><div class="set-info"><div class="set-title">Kanji #181–190</div><div class="set-chars">太体台地池知茶昼長鳥</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_191_200_test.html"><div class="set-num">#20</div><div class="set-info"><div class="set-title">Kanji #191–200</div><div class="set-chars">朝直通弟店点電刀冬当</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_201_210_test.html"><div class="set-num">#21</div><div class="set-info"><div class="set-title">Kanji #201–210</div><div class="set-chars">東答頭同道読内南肉馬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_211_220_test.html"><div class="set-num">#22</div><div class="set-info"><div class="set-title">Kanji #211–220</div><div class="set-chars">売買麦半番父風分聞米</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_221_230_test.html"><div class="set-num">#23</div><div class="set-info"><div class="set-title">Kanji #221–230</div><div class="set-chars">歩母方北毎妹万明鳴毛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_231_240_test.html"><div class="set-num">#24</div><div class="set-info"><div class="set-title">Kanji #231–240</div><div class="set-chars">門夜野友用曜来里理話</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g2" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_81_90_test.html"><div class="set-num">#09</div><div class="set-info"><div class="set-title">Kanji #81–90</div><div class="set-chars">引羽雲園遠何科夏家歌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_91_100_test.html"><div class="set-num">#10</div><div class="set-info"><div class="set-title">Kanji #91–100</div><div class="set-chars">画回会海絵外角楽活間</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_101_110_test.html"><div class="set-num">#11</div><div class="set-info"><div class="set-title">Kanji #101–110</div><div class="set-chars">丸岩顔汽記帰弓牛魚京</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_111_120_test.html"><div class="set-num">#12</div><div class="set-info"><div class="set-title">Kanji #111–120</div><div class="set-chars">強教近兄形計元言原戸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_121_130_test.html"><div class="set-num">#13</div><div class="set-info"><div class="set-title">Kanji #121–130</div><div class="set-chars">古午後語工公広交光考</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_131_140_test.html"><div class="set-num">#14</div><div class="set-info"><div class="set-title">Kanji #131–140</div><div class="set-chars">行高黄合谷国黒今才細</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_141_150_test.html"><div class="set-num">#15</div><div class="set-info"><div class="set-title">Kanji #141–150</div><div class="set-chars">作算止市矢姉思紙寺自</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_151_160_test.html"><div class="set-num">#16</div><div class="set-info"><div class="set-title">Kanji #151–160</div><div class="set-chars">時室社弱首秋週春書少</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_161_170_test.html"><div class="set-num">#17</div><div class="set-info"><div class="set-title">Kanji #161–170</div><div class="set-chars">場色食心新親図数西声</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_171_180_test.html"><div class="set-num">#18</div><div class="set-info"><div class="set-title">Kanji #171–180</div><div class="set-chars">星晴切雪船線前組走多</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_181_190_test.html"><div class="set-num">#19</div><div class="set-info"><div class="set-title">Kanji #181–190</div><div class="set-chars">太体台地池知茶昼長鳥</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_191_200_test.html"><div class="set-num">#20</div><div class="set-info"><div class="set-title">Kanji #191–200</div><div class="set-chars">朝直通弟店点電刀冬当</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_201_210_test.html"><div class="set-num">#21</div><div class="set-info"><div class="set-title">Kanji #201–210</div><div class="set-chars">東答頭同道読内南肉馬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_211_220_test.html"><div class="set-num">#22</div><div class="set-info"><div class="set-title">Kanji #211–220</div><div class="set-chars">売買麦半番父風分聞米</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_221_230_test.html"><div class="set-num">#23</div><div class="set-info"><div class="set-title">Kanji #221–230</div><div class="set-chars">歩母方北毎妹万明鳴毛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_231_240_test.html"><div class="set-num">#24</div><div class="set-info"><div class="set-title">Kanji #231–240</div><div class="set-chars">門夜野友用曜来里理話</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
-  <a class="exam-card exam-card-g2" href="sinav_81_240.html">
-    <div class="exam-icon">🥈</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — Second Grade</div>
-      <div class="exam-sub">Kanji #81–240 · 160 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
+  <a class="exam-card" id="exam-g2" style="background:linear-gradient(135deg,#085041,#1D9E75);box-shadow:0 4px 16px rgba(13,111,86,0.3);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_81_240.html"><div style="font-size:32px;min-width:44px;text-align:center;">🥈</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 2</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #81–240 · 160 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <!-- THIRD GRADE (#241–440) -->
-  <div class="section-header">
-    <span class="section-badge badge-g3">Third Grade · N3</span>
+
+  <!-- Third Grade · N3 -->
+  <div class="section-header" onclick="toggleGrade('g3')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#FAEEDA;color:#633806;">Third Grade · N3</span>
     <div class="section-line"></div>
     <span class="section-note">Kanji #241–440 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g3" style="font-size:13px;color:#633806;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_241_250_test.html"><div class="set-num">#25</div><div class="set-info"><div class="set-title">Kanji #241–250</div><div class="set-chars">悪安暗医委意育員院飲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_251_260_test.html"><div class="set-num">#26</div><div class="set-info"><div class="set-title">Kanji #251–260</div><div class="set-chars">運泳駅央横屋温化荷界</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_261_270_test.html"><div class="set-num">#27</div><div class="set-info"><div class="set-title">Kanji #261–270</div><div class="set-chars">開階寒感漢館岸起期客</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_271_280_test.html"><div class="set-num">#28</div><div class="set-info"><div class="set-title">Kanji #271–280</div><div class="set-chars">究急級宮球去橋業曲局</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_281_290_test.html"><div class="set-num">#29</div><div class="set-info"><div class="set-title">Kanji #281–290</div><div class="set-chars">銀区苦具君係軽血決研</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_291_300_test.html"><div class="set-num">#30</div><div class="set-info"><div class="set-title">Kanji #291–300</div><div class="set-chars">県庫湖向幸港号根祭皿</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_301_310_test.html"><div class="set-num">#31</div><div class="set-info"><div class="set-title">Kanji #301–310</div><div class="set-chars">仕死使始指歯詩次事持</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_311_320_test.html"><div class="set-num">#32</div><div class="set-info"><div class="set-title">Kanji #311–320</div><div class="set-chars">式実写者主守取酒受州</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_321_330_test.html"><div class="set-num">#33</div><div class="set-info"><div class="set-title">Kanji #321–330</div><div class="set-chars">拾終習集住重宿所暑助</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_331_340_test.html"><div class="set-num">#34</div><div class="set-info"><div class="set-title">Kanji #331–340</div><div class="set-chars">昭消商章勝乗植申身神</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_341_350_test.html"><div class="set-num">#35</div><div class="set-info"><div class="set-title">Kanji #341–350</div><div class="set-chars">真深進世整昔全相送想</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_351_360_test.html"><div class="set-num">#36</div><div class="set-info"><div class="set-title">Kanji #351–360</div><div class="set-chars">息速族他打対待代第題</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_361_370_test.html"><div class="set-num">#37</div><div class="set-info"><div class="set-title">Kanji #361–370</div><div class="set-chars">炭短談着注柱丁帳調追</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_371_380_test.html"><div class="set-num">#38</div><div class="set-info"><div class="set-title">Kanji #371–380</div><div class="set-chars">定庭笛鉄転都度投豆島</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_381_390_test.html"><div class="set-num">#39</div><div class="set-info"><div class="set-title">Kanji #381–390</div><div class="set-chars">湯登等動童農波配倍箱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_391_400_test.html"><div class="set-num">#40</div><div class="set-info"><div class="set-title">Kanji #391–400</div><div class="set-chars">畑発反坂板皮悲美鼻筆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_401_410_test.html"><div class="set-num">#41</div><div class="set-info"><div class="set-title">Kanji #401–410</div><div class="set-chars">氷表秒病品負部服福物</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_411_420_test.html"><div class="set-num">#42</div><div class="set-info"><div class="set-title">Kanji #411–420</div><div class="set-chars">平返勉放味命面問役薬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_421_430_test.html"><div class="set-num">#43</div><div class="set-info"><div class="set-title">Kanji #421–430</div><div class="set-chars">由油有遊予羊洋葉陽様</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_431_440_test.html"><div class="set-num">#44</div><div class="set-info"><div class="set-title">Kanji #431–440</div><div class="set-chars">落流旅両緑礼列練路和</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g3" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_241_250_test.html"><div class="set-num">#25</div><div class="set-info"><div class="set-title">Kanji #241–250</div><div class="set-chars">悪安暗医委意育員院飲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_251_260_test.html"><div class="set-num">#26</div><div class="set-info"><div class="set-title">Kanji #251–260</div><div class="set-chars">運泳駅央横屋温化荷界</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_261_270_test.html"><div class="set-num">#27</div><div class="set-info"><div class="set-title">Kanji #261–270</div><div class="set-chars">開階寒感漢館岸起期客</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_271_280_test.html"><div class="set-num">#28</div><div class="set-info"><div class="set-title">Kanji #271–280</div><div class="set-chars">究急級宮球去橋業曲局</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_281_290_test.html"><div class="set-num">#29</div><div class="set-info"><div class="set-title">Kanji #281–290</div><div class="set-chars">銀区苦具君係軽血決研</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_291_300_test.html"><div class="set-num">#30</div><div class="set-info"><div class="set-title">Kanji #291–300</div><div class="set-chars">県庫湖向幸港号根祭皿</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_301_310_test.html"><div class="set-num">#31</div><div class="set-info"><div class="set-title">Kanji #301–310</div><div class="set-chars">仕死使始指歯詩次事持</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_311_320_test.html"><div class="set-num">#32</div><div class="set-info"><div class="set-title">Kanji #311–320</div><div class="set-chars">式実写者主守取酒受州</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_321_330_test.html"><div class="set-num">#33</div><div class="set-info"><div class="set-title">Kanji #321–330</div><div class="set-chars">拾終習集住重宿所暑助</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_331_340_test.html"><div class="set-num">#34</div><div class="set-info"><div class="set-title">Kanji #331–340</div><div class="set-chars">昭消商章勝乗植申身神</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_341_350_test.html"><div class="set-num">#35</div><div class="set-info"><div class="set-title">Kanji #341–350</div><div class="set-chars">真深進世整昔全相送想</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_351_360_test.html"><div class="set-num">#36</div><div class="set-info"><div class="set-title">Kanji #351–360</div><div class="set-chars">息速族他打対待代第題</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_361_370_test.html"><div class="set-num">#37</div><div class="set-info"><div class="set-title">Kanji #361–370</div><div class="set-chars">炭短談着注柱丁帳調追</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_371_380_test.html"><div class="set-num">#38</div><div class="set-info"><div class="set-title">Kanji #371–380</div><div class="set-chars">定庭笛鉄転都度投豆島</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_381_390_test.html"><div class="set-num">#39</div><div class="set-info"><div class="set-title">Kanji #381–390</div><div class="set-chars">湯登等動童農波配倍箱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_391_400_test.html"><div class="set-num">#40</div><div class="set-info"><div class="set-title">Kanji #391–400</div><div class="set-chars">畑発反坂板皮悲美鼻筆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_401_410_test.html"><div class="set-num">#41</div><div class="set-info"><div class="set-title">Kanji #401–410</div><div class="set-chars">氷表秒病品負部服福物</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_411_420_test.html"><div class="set-num">#42</div><div class="set-info"><div class="set-title">Kanji #411–420</div><div class="set-chars">平返勉放味命面問役薬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_421_430_test.html"><div class="set-num">#43</div><div class="set-info"><div class="set-title">Kanji #421–430</div><div class="set-chars">由油有遊予羊洋葉陽様</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_431_440_test.html"><div class="set-num">#44</div><div class="set-info"><div class="set-title">Kanji #431–440</div><div class="set-chars">落流旅両緑礼列練路和</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
-  <a class="exam-card exam-card-g3" href="sinav_241_440.html">
-    <div class="exam-icon">🥉</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — Third Grade</div>
-      <div class="exam-sub">Kanji #241–440 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
+  <a class="exam-card" id="exam-g3" style="background:linear-gradient(135deg,#412402,#BA7517);box-shadow:0 4px 16px rgba(186,117,23,0.3);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_241_440.html"><div style="font-size:32px;min-width:44px;text-align:center;">🥉</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 3</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #241–440 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <!-- FOURTH GRADE (#441–640) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+
+  <!-- Fourth Grade · N3 -->
+  <div class="section-header" onclick="toggleGrade('g4')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#E8F4F8;color:#1B5E8A;">Fourth Grade · N3</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #441–640 · 6 Set hazır</span>
+    <span class="section-note">Kanji #441–640 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g4" style="font-size:13px;color:#1B5E8A;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_441_450_test.html"><div class="set-num">#45</div><div class="set-info"><div class="set-title">Kanji #441–450</div><div class="set-chars">愛案以衣位囲胃印英栄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_451_460_test.html"><div class="set-num">#46</div><div class="set-info"><div class="set-title">Kanji #451–460</div><div class="set-chars">塩億加果貨課芽改械害</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_461_470_test.html"><div class="set-num">#47</div><div class="set-info"><div class="set-title">Kanji #461–470</div><div class="set-chars">街各覚完官管関観願希</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_471_480_test.html"><div class="set-num">#48</div><div class="set-info"><div class="set-title">Kanji #471–480</div><div class="set-chars">季紀喜旗器機議求泣救</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_481_490_test.html"><div class="set-num">#49</div><div class="set-info"><div class="set-title">Kanji #481–490</div><div class="set-chars">給挙漁共協鏡競極訓軍</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_491_500_test.html"><div class="set-num">#50</div><div class="set-info"><div class="set-title">Kanji #491–500</div><div class="set-chars">郡径型景芸欠結建健験</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_501_510_test.html"><div class="set-num">#51</div><div class="set-info"><div class="set-title">Kanji #501–510</div><div class="set-chars">固功好候航康告差菜最</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_511_520_test.html"><div class="set-num">#52</div><div class="set-info"><div class="set-title">Kanji #511–520</div><div class="set-chars">材昨札刷殺察参産散残</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_521_530_test.html"><div class="set-num">#53</div><div class="set-info"><div class="set-title">Kanji #521–530</div><div class="set-chars">士氏史司試児治辞失借</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_531_540_test.html"><div class="set-num">#54</div><div class="set-info"><div class="set-title">Kanji #531–540</div><div class="set-chars">種周祝順初松笑唱焼象</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_541_550_test.html"><div class="set-num">#55</div><div class="set-info"><div class="set-title">Kanji #541–550</div><div class="set-chars">照賞臣信成省清静席積</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_551_560_test.html"><div class="set-num">#56</div><div class="set-info"><div class="set-title">Kanji #551–560</div><div class="set-chars">折節説浅戦選然争倉巣</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_561_570_test.html"><div class="set-num">#57</div><div class="set-info"><div class="set-title">Kanji #561–570</div><div class="set-chars">束側続卒孫帯隊達単置</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_571_580_test.html"><div class="set-num">#58</div><div class="set-info"><div class="set-title">Kanji #571–580</div><div class="set-chars">仲貯兆腸低底停的典伝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_581_590_test.html"><div class="set-num">#59</div><div class="set-info"><div class="set-title">Kanji #581–590</div><div class="set-chars">徒努灯堂働特得毒熱念</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_591_600_test.html"><div class="set-num">#60</div><div class="set-info"><div class="set-title">Kanji #591–600</div><div class="set-chars">敗梅博飯飛費必票標不</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_601_610_test.html"><div class="set-num">#61</div><div class="set-info"><div class="set-title">Kanji #601–610</div><div class="set-chars">夫付府副粉兵別辺変便</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_611_620_test.html"><div class="set-num">#62</div><div class="set-info"><div class="set-title">Kanji #611–620</div><div class="set-chars">包法望牧末満未脈民無</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_621_630_test.html"><div class="set-num">#63</div><div class="set-info"><div class="set-title">Kanji #621–630</div><div class="set-chars">約勇要養浴利陸良料量</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_631_640_test.html"><div class="set-num">#64</div><div class="set-info"><div class="set-title">Kanji #631–640</div><div class="set-chars">輪類令冷例歴連老労録</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g4" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_441_450_test.html"><div class="set-num">#45</div><div class="set-info"><div class="set-title">Kanji #441–450</div><div class="set-chars">愛案以衣位囲胃印英栄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_451_460_test.html"><div class="set-num">#46</div><div class="set-info"><div class="set-title">Kanji #451–460</div><div class="set-chars">塩億加果貨課芽改械害</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_461_470_test.html"><div class="set-num">#47</div><div class="set-info"><div class="set-title">Kanji #461–470</div><div class="set-chars">街各覚完官管関観願希</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_471_480_test.html"><div class="set-num">#48</div><div class="set-info"><div class="set-title">Kanji #471–480</div><div class="set-chars">季紀喜旗器機議求泣救</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_481_490_test.html"><div class="set-num">#49</div><div class="set-info"><div class="set-title">Kanji #481–490</div><div class="set-chars">給挙漁共協鏡競極訓軍</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_491_500_test.html"><div class="set-num">#50</div><div class="set-info"><div class="set-title">Kanji #491–500</div><div class="set-chars">郡径型景芸欠結建健験</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_501_510_test.html"><div class="set-num">#51</div><div class="set-info"><div class="set-title">Kanji #501–510</div><div class="set-chars">固功好候航康告差菜最</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_511_520_test.html"><div class="set-num">#52</div><div class="set-info"><div class="set-title">Kanji #511–520</div><div class="set-chars">材昨札刷殺察参産散残</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_521_530_test.html"><div class="set-num">#53</div><div class="set-info"><div class="set-title">Kanji #521–530</div><div class="set-chars">士氏史司試児治辞失借</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_531_540_test.html"><div class="set-num">#54</div><div class="set-info"><div class="set-title">Kanji #531–540</div><div class="set-chars">種周祝順初松笑唱焼象</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_541_550_test.html"><div class="set-num">#55</div><div class="set-info"><div class="set-title">Kanji #541–550</div><div class="set-chars">照賞臣信成省清静席積</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_551_560_test.html"><div class="set-num">#56</div><div class="set-info"><div class="set-title">Kanji #551–560</div><div class="set-chars">折節説浅戦選然争倉巣</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_561_570_test.html"><div class="set-num">#57</div><div class="set-info"><div class="set-title">Kanji #561–570</div><div class="set-chars">束側続卒孫帯隊達単置</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_571_580_test.html"><div class="set-num">#58</div><div class="set-info"><div class="set-title">Kanji #571–580</div><div class="set-chars">仲貯兆腸低底停的典伝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_581_590_test.html"><div class="set-num">#59</div><div class="set-info"><div class="set-title">Kanji #581–590</div><div class="set-chars">徒努灯堂働特得毒熱念</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_591_600_test.html"><div class="set-num">#60</div><div class="set-info"><div class="set-title">Kanji #591–600</div><div class="set-chars">敗梅博飯飛費必票標不</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_601_610_test.html"><div class="set-num">#61</div><div class="set-info"><div class="set-title">Kanji #601–610</div><div class="set-chars">夫付府副粉兵別辺変便</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_611_620_test.html"><div class="set-num">#62</div><div class="set-info"><div class="set-title">Kanji #611–620</div><div class="set-chars">包法望牧末満未脈民無</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_621_630_test.html"><div class="set-num">#63</div><div class="set-info"><div class="set-title">Kanji #621–630</div><div class="set-chars">約勇要養浴利陸良料量</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_631_640_test.html"><div class="set-num">#64</div><div class="set-info"><div class="set-title">Kanji #631–640</div><div class="set-chars">輪類令冷例歴連老労録</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
-  <a class="exam-card exam-card-g4" href="sinav_441_640.html">
-    <div class="exam-icon">🎖️</div>
-    <div class="exam-info">
-      <div class="exam-title">Büyük Sınav — Fourth Grade</div>
-      <div class="exam-sub">Kanji #441–640 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div class="exam-arrow">→</div>
-  </a>
+  <a class="exam-card" id="exam-g4" style="background:linear-gradient(135deg,#082840,#1B5E8A);box-shadow:0 4px 16px rgba(27,94,138,0.3);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_441_640.html"><div style="font-size:32px;min-width:44px;text-align:center;">🎖️</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 4</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #441–640 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <!-- FIFTH GRADE (#641–825) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+
+  <!-- Fifth Grade · N2 -->
+  <div class="section-header" onclick="toggleGrade('g5')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#F0E8FF;color:#5B2D9E;">Fifth Grade · N2</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #641–840 · 20 Set hazır</span>
+    <span class="section-note">Kanji #641–840 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g5" style="font-size:13px;color:#5B2D9E;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_641_650_test.html"><div class="set-num">#65</div><div class="set-info"><div class="set-title">Kanji #641–650</div><div class="set-chars">圧移因永営衛易益液演</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_651_660_test.html"><div class="set-num">#66</div><div class="set-info"><div class="set-title">Kanji #651–660</div><div class="set-chars">応往桜恩可仮価河過賀</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_661_670_test.html"><div class="set-num">#67</div><div class="set-info"><div class="set-title">Kanji #661–670</div><div class="set-chars">快解格確額刊幹慣眼基</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_671_680_test.html"><div class="set-num">#68</div><div class="set-info"><div class="set-title">Kanji #671–680</div><div class="set-chars">寄規技義逆久旧居許境</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_681_690_test.html"><div class="set-num">#69</div><div class="set-info"><div class="set-title">Kanji #681–690</div><div class="set-chars">均禁句群経潔件券険検</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_691_700_test.html"><div class="set-num">#70</div><div class="set-info"><div class="set-title">Kanji #691–700</div><div class="set-chars">限現減故個護効厚耕鉱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_701_710_test.html"><div class="set-num">#71</div><div class="set-info"><div class="set-title">Kanji #701–710</div><div class="set-chars">構興講混査再災妻採際</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_711_720_test.html"><div class="set-num">#72</div><div class="set-info"><div class="set-title">Kanji #711–720</div><div class="set-chars">在財罪雑酸賛支志枝師</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_721_730_test.html"><div class="set-num">#73</div><div class="set-info"><div class="set-title">Kanji #721–730</div><div class="set-chars">資飼示似識質舎謝授修</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_731_740_test.html"><div class="set-num">#74</div><div class="set-info"><div class="set-title">Kanji #731–740</div><div class="set-chars">述術準序招承証条状常</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_741_750_test.html"><div class="set-num">#75</div><div class="set-info"><div class="set-title">Kanji #741–750</div><div class="set-chars">情織職制性政勢精製税</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_751_760_test.html"><div class="set-num">#76</div><div class="set-info"><div class="set-title">Kanji #751–760</div><div class="set-chars">責績接設舌絶銭祖素総</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_761_770_test.html"><div class="set-num">#77</div><div class="set-info"><div class="set-title">Kanji #761–770</div><div class="set-chars">造像増則測属率損退貸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_771_780_test.html"><div class="set-num">#78</div><div class="set-info"><div class="set-title">Kanji #771–780</div><div class="set-chars">態団断築張提程適敵統</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_781_790_test.html"><div class="set-num">#79</div><div class="set-info"><div class="set-title">Kanji #781–790</div><div class="set-chars">銅導徳独任燃能破犯判</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_791_800_test.html"><div class="set-num">#80</div><div class="set-info"><div class="set-title">Kanji #791–800</div><div class="set-chars">版比肥非備俵評貧布婦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_801_810_test.html"><div class="set-num">#81</div><div class="set-info"><div class="set-title">Kanji #801–810</div><div class="set-chars">富武復複仏編弁保墓報</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_811_820_test.html"><div class="set-num">#82</div><div class="set-info"><div class="set-title">Kanji #811–820</div><div class="set-chars">豊防貿暴務夢迷綿輸余</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_821_830_test.html"><div class="set-num">#83</div><div class="set-info"><div class="set-title">Kanji #821–830</div><div class="set-chars">預容略留領異遺域宇映</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_831_840_test.html"><div class="set-num">#84</div><div class="set-info"><div class="set-title">Kanji #831–840</div><div class="set-chars">延沿我灰拡革閣割株干</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g5" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_641_650_test.html"><div class="set-num">#65</div><div class="set-info"><div class="set-title">Kanji #641–650</div><div class="set-chars">圧移因永営衛易益液演</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_651_660_test.html"><div class="set-num">#66</div><div class="set-info"><div class="set-title">Kanji #651–660</div><div class="set-chars">応往桜恩可仮価河過賀</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_661_670_test.html"><div class="set-num">#67</div><div class="set-info"><div class="set-title">Kanji #661–670</div><div class="set-chars">快解格確額刊幹慣眼基</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_671_680_test.html"><div class="set-num">#68</div><div class="set-info"><div class="set-title">Kanji #671–680</div><div class="set-chars">寄規技義逆久旧居許境</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_681_690_test.html"><div class="set-num">#69</div><div class="set-info"><div class="set-title">Kanji #681–690</div><div class="set-chars">均禁句群経潔件券険検</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_691_700_test.html"><div class="set-num">#70</div><div class="set-info"><div class="set-title">Kanji #691–700</div><div class="set-chars">限現減故個護効厚耕鉱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_701_710_test.html"><div class="set-num">#71</div><div class="set-info"><div class="set-title">Kanji #701–710</div><div class="set-chars">構興講混査再災妻採際</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_711_720_test.html"><div class="set-num">#72</div><div class="set-info"><div class="set-title">Kanji #711–720</div><div class="set-chars">在財罪雑酸賛支志枝師</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_721_730_test.html"><div class="set-num">#73</div><div class="set-info"><div class="set-title">Kanji #721–730</div><div class="set-chars">資飼示似識質舎謝授修</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_731_740_test.html"><div class="set-num">#74</div><div class="set-info"><div class="set-title">Kanji #731–740</div><div class="set-chars">述術準序招承証条状常</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_741_750_test.html"><div class="set-num">#75</div><div class="set-info"><div class="set-title">Kanji #741–750</div><div class="set-chars">情織職制性政勢精製税</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_751_760_test.html"><div class="set-num">#76</div><div class="set-info"><div class="set-title">Kanji #751–760</div><div class="set-chars">責績接設舌絶銭祖素総</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_761_770_test.html"><div class="set-num">#77</div><div class="set-info"><div class="set-title">Kanji #761–770</div><div class="set-chars">造像増則測属率損退貸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_771_780_test.html"><div class="set-num">#78</div><div class="set-info"><div class="set-title">Kanji #771–780</div><div class="set-chars">態団断築張提程適敵統</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_781_790_test.html"><div class="set-num">#79</div><div class="set-info"><div class="set-title">Kanji #781–790</div><div class="set-chars">銅導徳独任燃能破犯判</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_791_800_test.html"><div class="set-num">#80</div><div class="set-info"><div class="set-title">Kanji #791–800</div><div class="set-chars">版比肥非備俵評貧布婦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_801_810_test.html"><div class="set-num">#81</div><div class="set-info"><div class="set-title">Kanji #801–810</div><div class="set-chars">富武復複仏編弁保墓報</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_811_820_test.html"><div class="set-num">#82</div><div class="set-info"><div class="set-title">Kanji #811–820</div><div class="set-chars">豊防貿暴務夢迷綿輸余</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_821_830_test.html"><div class="set-num">#83</div><div class="set-info"><div class="set-title">Kanji #821–830</div><div class="set-chars">預容略留領異遺域宇映</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_831_840_test.html"><div class="set-num">#84</div><div class="set-info"><div class="set-title">Kanji #831–840</div><div class="set-chars">延沿我灰拡革閣割株干</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
-  <a class="exam-card" style="background:linear-gradient(135deg,#2A0D5C,#5B2D9E);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(91,45,158,0.35);" href="sinav_641_840.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">⭐</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Fifth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #641–840 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
+  <a class="exam-card" id="exam-g5" style="background:linear-gradient(135deg,#2A0D5C,#5B2D9E);box-shadow:0 4px 16px rgba(91,45,158,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_641_840.html"><div style="font-size:32px;min-width:44px;text-align:center;">⭐</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 5</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #641–840 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <!-- 
-  TODO (bir sonraki session):
-  Grade seviye etiketlerini düzelt:
-  - First Grade   → N5
-  - Second Grade  → N5–N4
-  - Third Grade   → N4–N3
-  - Fourth Grade  → N3–N2   (şu an N4 yazıyor — YANLIŞ)
-  - Fifth Grade   → N2–N1
-  - Sixth Grade   → N1
--->
-<!-- SIXTH GRADE (#841–1006) -->
-  <div class="section-header" style="margin-top:1.75rem;">
-    <span class="section-badge" style="background:#E8F4F8;color:#1B5E8A;">Sixth Grade · N2</span>
+
+  <!-- Sixth Grade · N2 -->
+  <div class="section-header" onclick="toggleGrade('g6')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#E1F5EE;color:#0F6E56;">Sixth Grade · N2</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #841–1040 · 20 Set hazır</span>
+    <span class="section-note">Kanji #841–1040 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g6" style="font-size:13px;color:#0F6E56;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_841_850_test.html"><div class="set-num">#85</div><div class="set-info"><div class="set-title">Kanji #841–850</div><div class="set-chars">巻看簡危机揮貴疑吸供</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_851_860_test.html"><div class="set-num">#86</div><div class="set-info"><div class="set-title">Kanji #851–860</div><div class="set-chars">胸郷勤筋系敬警劇激穴</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_861_870_test.html"><div class="set-num">#87</div><div class="set-info"><div class="set-title">Kanji #861–870</div><div class="set-chars">絹権憲源厳己呼誤后孝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_871_880_test.html"><div class="set-num">#88</div><div class="set-info"><div class="set-title">Kanji #871–880</div><div class="set-chars">皇紅降鋼刻穀骨困砂座</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_881_890_test.html"><div class="set-num">#89</div><div class="set-info"><div class="set-title">Kanji #881–890</div><div class="set-chars">済裁策冊蚕至私姿視詞</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_891_900_test.html"><div class="set-num">#90</div><div class="set-info"><div class="set-title">Kanji #891–900</div><div class="set-chars">誌磁射捨尺若樹収宗就</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_901_910_test.html"><div class="set-num">#91</div><div class="set-info"><div class="set-title">Kanji #901–910</div><div class="set-chars">衆従縦縮熟純処署諸除</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_911_920_test.html"><div class="set-num">#92</div><div class="set-info"><div class="set-title">Kanji #911–920</div><div class="set-chars">将傷障城蒸針仁垂推寸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_921_930_test.html"><div class="set-num">#93</div><div class="set-info"><div class="set-title">Kanji #921–930</div><div class="set-chars">盛聖誠宣専泉洗染善奏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_931_940_test.html"><div class="set-num">#94</div><div class="set-info"><div class="set-title">Kanji #931–940</div><div class="set-chars">窓創装層操蔵臓存尊宅</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_941_950_test.html"><div class="set-num">#95</div><div class="set-info"><div class="set-title">Kanji #941–950</div><div class="set-chars">担探誕段暖値宙忠著庁</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_951_960_test.html"><div class="set-num">#96</div><div class="set-info"><div class="set-title">Kanji #951–960</div><div class="set-chars">頂潮賃痛展討党糖届難</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_961_970_test.html"><div class="set-num">#97</div><div class="set-info"><div class="set-title">Kanji #961–970</div><div class="set-chars">乳認納脳派拝背肺俳班</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_971_980_test.html"><div class="set-num">#98</div><div class="set-info"><div class="set-title">Kanji #971–980</div><div class="set-chars">晩否批秘俵疲被避泌腹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_981_990_test.html"><div class="set-num">#99</div><div class="set-info"><div class="set-title">Kanji #981–990</div><div class="set-chars">複覆噴墳奮並陛壁癖偏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_991_1000_test.html"><div class="set-num">#100</div><div class="set-info"><div class="set-title">Kanji #991–1000</div><div class="set-chars">弁保幕密盟模訳郵湧欲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1001_1010_test.html"><div class="set-num">#101</div><div class="set-info"><div class="set-title">Kanji #1001–1010</div><div class="set-chars">翌乱卵覧裏律略劉慮林</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1011_1020_test.html"><div class="set-num">#102</div><div class="set-info"><div class="set-title">Kanji #1011–1020</div><div class="set-chars">隣涙累塁令励歴烈廉恋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1021_1030_test.html"><div class="set-num">#103</div><div class="set-info"><div class="set-title">Kanji #1021–1030</div><div class="set-chars">麗齢列劣療糧臨輪朗廊</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1031_1040_test.html"><div class="set-num">#104</div><div class="set-info"><div class="set-title">Kanji #1031–1040</div><div class="set-chars">浪漏賄惑枠湾腕翁恩穏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g6" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_841_850_test.html"><div class="set-num">#85</div><div class="set-info"><div class="set-title">Kanji #841–850</div><div class="set-chars">巻看簡危机揮貴疑吸供</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_851_860_test.html"><div class="set-num">#86</div><div class="set-info"><div class="set-title">Kanji #851–860</div><div class="set-chars">胸郷勤筋系敬警劇激穴</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_861_870_test.html"><div class="set-num">#87</div><div class="set-info"><div class="set-title">Kanji #861–870</div><div class="set-chars">絹権憲源厳己呼誤后孝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_871_880_test.html"><div class="set-num">#88</div><div class="set-info"><div class="set-title">Kanji #871–880</div><div class="set-chars">皇紅降鋼刻穀骨困砂座</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_881_890_test.html"><div class="set-num">#89</div><div class="set-info"><div class="set-title">Kanji #881–890</div><div class="set-chars">済裁策冊蚕至私姿視詞</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_891_900_test.html"><div class="set-num">#90</div><div class="set-info"><div class="set-title">Kanji #891–900</div><div class="set-chars">誌磁射捨尺若樹収宗就</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_901_910_test.html"><div class="set-num">#91</div><div class="set-info"><div class="set-title">Kanji #901–910</div><div class="set-chars">衆従縦縮熟純処署諸除</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_911_920_test.html"><div class="set-num">#92</div><div class="set-info"><div class="set-title">Kanji #911–920</div><div class="set-chars">将傷障城蒸針仁垂推寸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_921_930_test.html"><div class="set-num">#93</div><div class="set-info"><div class="set-title">Kanji #921–930</div><div class="set-chars">盛聖誠宣専泉洗染善奏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_931_940_test.html"><div class="set-num">#94</div><div class="set-info"><div class="set-title">Kanji #931–940</div><div class="set-chars">窓創装層操蔵臓存尊宅</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_941_950_test.html"><div class="set-num">#95</div><div class="set-info"><div class="set-title">Kanji #941–950</div><div class="set-chars">担探誕段暖値宙忠著庁</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_951_960_test.html"><div class="set-num">#96</div><div class="set-info"><div class="set-title">Kanji #951–960</div><div class="set-chars">頂潮賃痛展討党糖届難</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_961_970_test.html"><div class="set-num">#97</div><div class="set-info"><div class="set-title">Kanji #961–970</div><div class="set-chars">乳認納脳派拝背肺俳班</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_971_980_test.html"><div class="set-num">#98</div><div class="set-info"><div class="set-title">Kanji #971–980</div><div class="set-chars">晩否批秘俵疲被避泌腹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_981_990_test.html"><div class="set-num">#99</div><div class="set-info"><div class="set-title">Kanji #981–990</div><div class="set-chars">複覆噴墳奮並陛壁癖偏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_991_1000_test.html"><div class="set-num">#100</div><div class="set-info"><div class="set-title">Kanji #991–1000</div><div class="set-chars">弁保幕密盟模訳郵湧欲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1001_1010_test.html"><div class="set-num">#101</div><div class="set-info"><div class="set-title">Kanji #1001–1010</div><div class="set-chars">翌乱卵覧裏律略慮緑臨</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1011_1020_test.html"><div class="set-num">#102</div><div class="set-info"><div class="set-title">Kanji #1011–1020</div><div class="set-chars">隣涙累塁令励歴烈廉恋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1021_1030_test.html"><div class="set-num">#103</div><div class="set-info"><div class="set-title">Kanji #1021–1030</div><div class="set-chars">錬呂炉露弄郎浪廊楼漏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1031_1040_test.html"><div class="set-num">#104</div><div class="set-info"><div class="set-title">Kanji #1031–1040</div><div class="set-chars">籠麓賄惑枠湾腕翁恩穏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g6" style="background:linear-gradient(135deg,#082A1C,#1B6B4A);box-shadow:0 4px 16px rgba(27,107,74,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_841_1040.html"><div style="font-size:32px;min-width:44px;text-align:center;">🔷</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 6</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #841–1040 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
-  <a class="exam-card" style="background:linear-gradient(135deg,#082A1C,#1B6B4A);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(27,107,74,0.35);" href="sinav_841_1040.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🔷</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Sixth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #841–1040 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
 
-  <!-- SEVENTH GRADE (#1041–1240) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+  <!-- Seventh Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g7')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#FFF3E0;color:#E65100;">Seventh Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #1041–1240 · 20 Set hazır</span>
+    <span class="section-note">Kanji #1041–1240 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g7" style="font-size:13px;color:#E65100;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_1041_1050_test.html"><div class="set-num">#105</div><div class="set-info"><div class="set-title">Kanji #1041–1050</div><div class="set-chars">乾勧喚堪寛患憾換敢柑</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1051_1060_test.html"><div class="set-num">#106</div><div class="set-info"><div class="set-title">Kanji #1051–1060</div><div class="set-chars">款歓環監緩缶肝艦観貫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1061_1070_test.html"><div class="set-num">#107</div><div class="set-info"><div class="set-title">Kanji #1061–1070</div><div class="set-chars">凹押旺欧殴翁奥岡憶臆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1071_1080_test.html"><div class="set-num">#108</div><div class="set-info"><div class="set-title">Kanji #1071–1080</div><div class="set-chars">虞乙俺卸穏佳架華菓渦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1081_1090_test.html"><div class="set-num">#109</div><div class="set-info"><div class="set-title">Kanji #1081–1090</div><div class="set-chars">嫁暇禍靴寡箇稼蚊牙瓦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1091_1100_test.html"><div class="set-num">#110</div><div class="set-info"><div class="set-title">Kanji #1091–1100</div><div class="set-chars">雅餓介戒怪拐悔皆塊楷</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1101_1110_test.html"><div class="set-num">#111</div><div class="set-info"><div class="set-title">Kanji #1101–1110</div><div class="set-chars">潰壊懐諧劾崖涯慨蓋該</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1111_1120_test.html"><div class="set-num">#112</div><div class="set-info"><div class="set-title">Kanji #1111–1120</div><div class="set-chars">概骸垣柿核殻郭較隔獲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1121_1130_test.html"><div class="set-num">#113</div><div class="set-info"><div class="set-title">Kanji #1121–1130</div><div class="set-chars">嚇穫岳顎掛潟括喝渇葛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1131_1140_test.html"><div class="set-num">#114</div><div class="set-info"><div class="set-title">Kanji #1131–1140</div><div class="set-chars">滑褐轄且釜鎌刈甘汗缶</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1141_1150_test.html"><div class="set-num">#115</div><div class="set-info"><div class="set-title">Kanji #1141–1150</div><div class="set-chars">肝冠陥乾勘患貫堪換敢</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1151_1160_test.html"><div class="set-num">#116</div><div class="set-info"><div class="set-title">Kanji #1151–1160</div><div class="set-chars">棺款閑勧寛歓監緩憾還</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1161_1170_test.html"><div class="set-num">#117</div><div class="set-info"><div class="set-title">Kanji #1161–1170</div><div class="set-chars">環韓艦鑑含玩頑企伎岐</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1171_1180_test.html"><div class="set-num">#118</div><div class="set-info"><div class="set-title">Kanji #1171–1180</div><div class="set-chars">忌奇祈軌既飢鬼亀幾棋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1181_1190_test.html"><div class="set-num">#119</div><div class="set-info"><div class="set-title">Kanji #1181–1190</div><div class="set-chars">棄毀畿輝騎宜偽欺儀戯</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1191_1200_test.html"><div class="set-num">#120</div><div class="set-info"><div class="set-title">Kanji #1191–1200</div><div class="set-chars">擬犠菊吉詰却脚虐丘及</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1201_1210_test.html"><div class="set-num">#121</div><div class="set-info"><div class="set-title">Kanji #1201–1210</div><div class="set-chars">朽臼糾嗅窮巨拒拠虚距</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1211_1220_test.html"><div class="set-num">#122</div><div class="set-info"><div class="set-title">Kanji #1211–1220</div><div class="set-chars">御凶叫狂享況峡挟狭恐</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1221_1230_test.html"><div class="set-num">#123</div><div class="set-info"><div class="set-title">Kanji #1221–1230</div><div class="set-chars">恭脅矯響驚仰暁凝巾斤</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1231_1240_test.html"><div class="set-num">#124</div><div class="set-info"><div class="set-title">Kanji #1231–1240</div><div class="set-chars">菌琴僅緊錦謹襟吟銀襟</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g7" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_1041_1050_test.html"><div class="set-num">#105</div><div class="set-info"><div class="set-title">Kanji #1041–1050</div><div class="set-chars">乾勧喚堪寛患憾換敢柑</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1051_1060_test.html"><div class="set-num">#106</div><div class="set-info"><div class="set-title">Kanji #1051–1060</div><div class="set-chars">款歓環監緩缶肝艦観貫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1061_1070_test.html"><div class="set-num">#107</div><div class="set-info"><div class="set-title">Kanji #1061–1070</div><div class="set-chars">凹押旺欧殴翁奥岡憶臆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1071_1080_test.html"><div class="set-num">#108</div><div class="set-info"><div class="set-title">Kanji #1071–1080</div><div class="set-chars">虞乙俺卸穏佳架華菓渦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1081_1090_test.html"><div class="set-num">#109</div><div class="set-info"><div class="set-title">Kanji #1081–1090</div><div class="set-chars">嫁暇禍靴寡箇稼蚊牙瓦</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1091_1100_test.html"><div class="set-num">#110</div><div class="set-info"><div class="set-title">Kanji #1091–1100</div><div class="set-chars">雅餓介戒怪拐悔皆塊楷</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1101_1110_test.html"><div class="set-num">#111</div><div class="set-info"><div class="set-title">Kanji #1101–1110</div><div class="set-chars">潰壊懐諧劾崖涯慨蓋該</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1111_1120_test.html"><div class="set-num">#112</div><div class="set-info"><div class="set-title">Kanji #1111–1120</div><div class="set-chars">概骸垣柿核殻郭較隔獲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1121_1130_test.html"><div class="set-num">#113</div><div class="set-info"><div class="set-title">Kanji #1121–1130</div><div class="set-chars">嚇穫岳顎掛潟括喝渇葛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1131_1140_test.html"><div class="set-num">#114</div><div class="set-info"><div class="set-title">Kanji #1131–1140</div><div class="set-chars">滑褐轄且釜鎌刈甘汗缶</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1141_1150_test.html"><div class="set-num">#115</div><div class="set-info"><div class="set-title">Kanji #1141–1150</div><div class="set-chars">肝冠陥乾勘患貫堪換敢</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1151_1160_test.html"><div class="set-num">#116</div><div class="set-info"><div class="set-title">Kanji #1151–1160</div><div class="set-chars">棺款閑勧寛歓監緩憾還</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1161_1170_test.html"><div class="set-num">#117</div><div class="set-info"><div class="set-title">Kanji #1161–1170</div><div class="set-chars">環韓艦鑑含玩頑企伎岐</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1171_1180_test.html"><div class="set-num">#118</div><div class="set-info"><div class="set-title">Kanji #1171–1180</div><div class="set-chars">忌奇祈軌既飢鬼亀幾棋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1181_1190_test.html"><div class="set-num">#119</div><div class="set-info"><div class="set-title">Kanji #1181–1190</div><div class="set-chars">棄毀畿輝騎宜偽欺儀戯</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1191_1200_test.html"><div class="set-num">#120</div><div class="set-info"><div class="set-title">Kanji #1191–1200</div><div class="set-chars">擬犠菊吉詰却脚虐丘及</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1201_1210_test.html"><div class="set-num">#121</div><div class="set-info"><div class="set-title">Kanji #1201–1210</div><div class="set-chars">朽臼糾嗅窮巨拒拠虚距</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1211_1220_test.html"><div class="set-num">#122</div><div class="set-info"><div class="set-title">Kanji #1211–1220</div><div class="set-chars">御凶叫狂享況峡挟狭恐</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1221_1230_test.html"><div class="set-num">#123</div><div class="set-info"><div class="set-title">Kanji #1221–1230</div><div class="set-chars">恭脅矯響驚仰暁凝巾斤</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1231_1240_test.html"><div class="set-num">#124</div><div class="set-info"><div class="set-title">Kanji #1231–1240</div><div class="set-chars">菌琴僅緊錦謹襟吟銀緊</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g7" style="background:linear-gradient(135deg,#3A1A00,#B05A00);box-shadow:0 4px 16px rgba(176,90,0,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1041_1240.html"><div style="font-size:32px;min-width:44px;text-align:center;">🌟</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 7</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1041–1240 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
 
-  <a class="exam-card" style="background:linear-gradient(135deg,#3A1A00,#B05A00);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(176,90,0,0.35);" href="sinav_1041_1240.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🌟</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Seventh Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1041–1240 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <!-- EIGHTH GRADE (#1241–1440) -->
-  <div class="section-header" style="margin-top:1.75rem;">
-    <span class="section-badge" style="background:#FFF3E0;color:#B05A00;">Eighth Grade · N1</span>
+  <!-- Eighth Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g8')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#E8EAF6;color:#1A237E;">Eighth Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #1241–1440 · 20 Set hazır</span>
+    <span class="section-note">Kanji #1241–1440 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g8" style="font-size:13px;color:#1A237E;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_1241_1250_test.html"><div class="set-num">#125</div><div class="set-info"><div class="set-title">Kanji #1241–1250</div><div class="set-chars">駆惧愚偶遇隅串屈掘窟</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1251_1260_test.html"><div class="set-num">#126</div><div class="set-info"><div class="set-title">Kanji #1251–1260</div><div class="set-chars">熊繰勲薫刑茎契恵啓掲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1261_1270_test.html"><div class="set-num">#127</div><div class="set-info"><div class="set-title">Kanji #1261–1270</div><div class="set-chars">渓蛍傾携継詣慶憬稽憩</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1271_1280_test.html"><div class="set-num">#128</div><div class="set-info"><div class="set-title">Kanji #1271–1280</div><div class="set-chars">鶏迎鯨隙撃桁傑肩倹兼</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1281_1290_test.html"><div class="set-num">#129</div><div class="set-info"><div class="set-title">Kanji #1281–1290</div><div class="set-chars">剣拳軒圏堅嫌献遣賢謙</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1291_1300_test.html"><div class="set-num">#130</div><div class="set-info"><div class="set-title">Kanji #1291–1300</div><div class="set-chars">鍵繭顕懸幻玄弦舷股孤</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1301_1310_test.html"><div class="set-num">#131</div><div class="set-info"><div class="set-title">Kanji #1301–1310</div><div class="set-chars">虎弧枯雇誇鼓錮顧互呉</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1311_1320_test.html"><div class="set-num">#132</div><div class="set-info"><div class="set-title">Kanji #1311–1320</div><div class="set-chars">娯悟碁勾孔巧甲坑抗攻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1321_1330_test.html"><div class="set-num">#133</div><div class="set-info"><div class="set-title">Kanji #1321–1330</div><div class="set-chars">更拘肯侯恒洪荒郊香貢</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1331_1340_test.html"><div class="set-num">#134</div><div class="set-info"><div class="set-title">Kanji #1331–1340</div><div class="set-chars">控梗喉慌硬絞項溝綱酵</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1341_1350_test.html"><div class="set-num">#135</div><div class="set-info"><div class="set-title">Kanji #1341–1350</div><div class="set-chars">稿衡購乞拷剛傲豪克酷</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1351_1360_test.html"><div class="set-num">#136</div><div class="set-info"><div class="set-title">Kanji #1351–1360</div><div class="set-chars">獄駒込頃昆恨婚痕紺魂</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1361_1370_test.html"><div class="set-num">#137</div><div class="set-info"><div class="set-title">Kanji #1361–1370</div><div class="set-chars">紺魂墾懇佐沙唆詐鎖挫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1371_1380_test.html"><div class="set-num">#138</div><div class="set-info"><div class="set-title">Kanji #1371–1380</div><div class="set-chars">采砕宰栽彩斎債催塞歳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1381_1390_test.html"><div class="set-num">#139</div><div class="set-info"><div class="set-title">Kanji #1381–1390</div><div class="set-chars">載埼剤崎削柵索酢搾錯</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1391_1400_test.html"><div class="set-num">#140</div><div class="set-info"><div class="set-title">Kanji #1391–1400</div><div class="set-chars">咲刹拶撮擦桟惨傘斬暫</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1401_1410_test.html"><div class="set-num">#141</div><div class="set-info"><div class="set-title">Kanji #1401–1410</div><div class="set-chars">旨伺刺祉肢施恣脂紫嗣</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1411_1420_test.html"><div class="set-num">#142</div><div class="set-info"><div class="set-title">Kanji #1411–1420</div><div class="set-chars">雌摯賜諮侍滋慈餌璽鹿</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1421_1430_test.html"><div class="set-num">#143</div><div class="set-info"><div class="set-title">Kanji #1421–1430</div><div class="set-chars">軸叱疾執湿嫉漆芝赦斜</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1431_1440_test.html"><div class="set-num">#144</div><div class="set-info"><div class="set-title">Kanji #1431–1440</div><div class="set-chars">煮遮邪蛇酌釈爵寂朱狩</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g8" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_1241_1250_test.html"><div class="set-num">#125</div><div class="set-info"><div class="set-title">Kanji #1241–1250</div><div class="set-chars">吟駆惧愚偶遇隅串屈掘</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1251_1260_test.html"><div class="set-num">#126</div><div class="set-info"><div class="set-title">Kanji #1251–1260</div><div class="set-chars">窟熊繰勲薫刑茎契恵啓</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1261_1270_test.html"><div class="set-num">#127</div><div class="set-info"><div class="set-title">Kanji #1261–1270</div><div class="set-chars">掲渓蛍傾携継詣慶憬稽</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1271_1280_test.html"><div class="set-num">#128</div><div class="set-info"><div class="set-title">Kanji #1271–1280</div><div class="set-chars">憩鶏迎鯨隙撃桁傑肩倹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1281_1290_test.html"><div class="set-num">#129</div><div class="set-info"><div class="set-title">Kanji #1281–1290</div><div class="set-chars">兼剣拳軒圏堅嫌献遣賢</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1291_1300_test.html"><div class="set-num">#130</div><div class="set-info"><div class="set-title">Kanji #1291–1300</div><div class="set-chars">謙鍵繭顕懸幻玄弦舷股</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1301_1310_test.html"><div class="set-num">#131</div><div class="set-info"><div class="set-title">Kanji #1301–1310</div><div class="set-chars">虎孤弧枯雇誇鼓錮顧互</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1311_1320_test.html"><div class="set-num">#132</div><div class="set-info"><div class="set-title">Kanji #1311–1320</div><div class="set-chars">呉娯悟碁勾孔巧甲坑抗</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1321_1330_test.html"><div class="set-num">#133</div><div class="set-info"><div class="set-title">Kanji #1321–1330</div><div class="set-chars">攻更拘肯侯恒洪荒郊香</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1331_1340_test.html"><div class="set-num">#134</div><div class="set-info"><div class="set-title">Kanji #1331–1340</div><div class="set-chars">貢控梗喉慌硬絞項溝綱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1341_1350_test.html"><div class="set-num">#135</div><div class="set-info"><div class="set-title">Kanji #1341–1350</div><div class="set-chars">酵稿衡購乞拷剛傲豪克</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1351_1360_test.html"><div class="set-num">#136</div><div class="set-info"><div class="set-title">Kanji #1351–1360</div><div class="set-chars">酷獄駒込頃昆恨婚痕紺</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1361_1370_test.html"><div class="set-num">#137</div><div class="set-info"><div class="set-title">Kanji #1361–1370</div><div class="set-chars">魂墾懇佐沙唆詐鎖挫采</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1371_1380_test.html"><div class="set-num">#138</div><div class="set-info"><div class="set-title">Kanji #1371–1380</div><div class="set-chars">砕宰栽彩斎債催塞歳載</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1381_1390_test.html"><div class="set-num">#139</div><div class="set-info"><div class="set-title">Kanji #1381–1390</div><div class="set-chars">埼剤崎削柵索搾錯咲刹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1391_1400_test.html"><div class="set-num">#140</div><div class="set-info"><div class="set-title">Kanji #1391–1400</div><div class="set-chars">拶撮擦桟惨傘斬暫旨伺</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1401_1410_test.html"><div class="set-num">#141</div><div class="set-info"><div class="set-title">Kanji #1401–1410</div><div class="set-chars">刺祉肢施恣脂紫嗣雌摯</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1411_1420_test.html"><div class="set-num">#142</div><div class="set-info"><div class="set-title">Kanji #1411–1420</div><div class="set-chars">賜諮侍滋慈餌璽鹿軸叱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1421_1430_test.html"><div class="set-num">#143</div><div class="set-info"><div class="set-title">Kanji #1421–1430</div><div class="set-chars">疾執湿嫉漆芝赦斜煮遮</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1431_1440_test.html"><div class="set-num">#144</div><div class="set-info"><div class="set-title">Kanji #1431–1440</div><div class="set-chars">邪蛇酌釈爵寂朱狩旨伺</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g8" style="background:linear-gradient(135deg,#0D1B3E,#1A3A6B);box-shadow:0 4px 16px rgba(26,58,107,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1241_1440.html"><div style="font-size:32px;min-width:44px;text-align:center;">🎯</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 8</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1241–1440 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
 
-
-  <a class="exam-card" style="background:linear-gradient(135deg,#0D1B3E,#1A3A6B);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(26,58,107,0.35);" href="sinav_1241_1440.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🎯</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Eighth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1241–1440 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <!-- NINTH GRADE (#1441–1640) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+  <!-- Ninth Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g9')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#E8F5E9;color:#1B5E20;">Ninth Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #1441–1640 · 20 Set hazır</span>
+    <span class="section-note">Kanji #1441–1640 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g9" style="font-size:13px;color:#1B5E20;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_1441_1450_test.html"><div class="set-num">#145</div><div class="set-info"><div class="set-title">Kanji #1441–1450</div><div class="set-chars">殊珠腫趣寿呪需儒囚秀</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1451_1460_test.html"><div class="set-num">#146</div><div class="set-info"><div class="set-title">Kanji #1451–1460</div><div class="set-chars">臭袖羞愁酬醜蹴襲汁充</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1461_1470_test.html"><div class="set-num">#147</div><div class="set-info"><div class="set-title">Kanji #1461–1470</div><div class="set-chars">柔渋銃獣叔淑粛塾俊瞬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1471_1480_test.html"><div class="set-num">#148</div><div class="set-info"><div class="set-title">Kanji #1471–1480</div><div class="set-chars">旬巡盾准殉循潤遵庶緒</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1481_1490_test.html"><div class="set-num">#149</div><div class="set-info"><div class="set-title">Kanji #1481–1490</div><div class="set-chars">如叙徐升召匠床抄肖尚</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1491_1500_test.html"><div class="set-num">#150</div><div class="set-info"><div class="set-title">Kanji #1491–1500</div><div class="set-chars">昇沼宵症祥称渉紹訟掌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1501_1510_test.html"><div class="set-num">#151</div><div class="set-info"><div class="set-title">Kanji #1501–1510</div><div class="set-chars">晶焦硝粧詔奨詳彰憧衝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1511_1520_test.html"><div class="set-num">#152</div><div class="set-info"><div class="set-title">Kanji #1511–1520</div><div class="set-chars">償礁鐘丈冗浄剰畳縄壌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1521_1530_test.html"><div class="set-num">#153</div><div class="set-info"><div class="set-title">Kanji #1521–1530</div><div class="set-chars">嬢錠譲醸拭殖飾触嘱辱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1531_1540_test.html"><div class="set-num">#154</div><div class="set-info"><div class="set-title">Kanji #1531–1540</div><div class="set-chars">尻伸芯辛侵津唇娠振浸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1541_1550_test.html"><div class="set-num">#155</div><div class="set-info"><div class="set-title">Kanji #1541–1550</div><div class="set-chars">紳診寝慎審震薪刃尽迅</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1551_1560_test.html"><div class="set-num">#156</div><div class="set-info"><div class="set-title">Kanji #1551–1560</div><div class="set-chars">甚陣尋腎須吹炊帥粋衰</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1561_1570_test.html"><div class="set-num">#157</div><div class="set-info"><div class="set-title">Kanji #1561–1570</div><div class="set-chars">酔遂睡穂随髄枢崇据杉</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1571_1580_test.html"><div class="set-num">#158</div><div class="set-info"><div class="set-title">Kanji #1571–1580</div><div class="set-chars">裾瀬是井姓征斉牲凄逝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1581_1590_test.html"><div class="set-num">#159</div><div class="set-info"><div class="set-title">Kanji #1581–1590</div><div class="set-chars">婿誓請醒斥析脊隻惜戚</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1591_1600_test.html"><div class="set-num">#160</div><div class="set-info"><div class="set-title">Kanji #1591–1600</div><div class="set-chars">跡籍拙窃摂仙占扇栓旋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1601_1610_test.html"><div class="set-num">#161</div><div class="set-info"><div class="set-title">Kanji #1601–1610</div><div class="set-chars">煎羨腺詮践箋潜遷薦繊</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1611_1620_test.html"><div class="set-num">#162</div><div class="set-info"><div class="set-title">Kanji #1611–1620</div><div class="set-chars">鮮禅漸膳繕狙阻租措粗</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1621_1630_test.html"><div class="set-num">#163</div><div class="set-info"><div class="set-title">Kanji #1621–1630</div><div class="set-chars">疎訴塑遡礎双壮荘捜挿</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1631_1640_test.html"><div class="set-num">#164</div><div class="set-info"><div class="set-title">Kanji #1631–1640</div><div class="set-chars">桑掃曹曽爽喪痩葬僧遭</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g9" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_1441_1450_test.html"><div class="set-num">#145</div><div class="set-info"><div class="set-title">Kanji #1441–1450</div><div class="set-chars">殊珠腫趣寿呪需儒囚秀</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1451_1460_test.html"><div class="set-num">#146</div><div class="set-info"><div class="set-title">Kanji #1451–1460</div><div class="set-chars">臭袖羞愁酬醜蹴襲汁充</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1461_1470_test.html"><div class="set-num">#147</div><div class="set-info"><div class="set-title">Kanji #1461–1470</div><div class="set-chars">柔渋銃獣叔淑粛塾俊瞬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1471_1480_test.html"><div class="set-num">#148</div><div class="set-info"><div class="set-title">Kanji #1471–1480</div><div class="set-chars">旬巡盾准殉循潤遵庶緒</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1481_1490_test.html"><div class="set-num">#149</div><div class="set-info"><div class="set-title">Kanji #1481–1490</div><div class="set-chars">如叙徐升召匠床抄肖尚</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1491_1500_test.html"><div class="set-num">#150</div><div class="set-info"><div class="set-title">Kanji #1491–1500</div><div class="set-chars">昇沼宵症祥称渉紹訟掌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1501_1510_test.html"><div class="set-num">#151</div><div class="set-info"><div class="set-title">Kanji #1501–1510</div><div class="set-chars">晶焦硝粧詔奨詳彰憧衝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1511_1520_test.html"><div class="set-num">#152</div><div class="set-info"><div class="set-title">Kanji #1511–1520</div><div class="set-chars">償礁鐘丈冗浄剰畳縄壌</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1521_1530_test.html"><div class="set-num">#153</div><div class="set-info"><div class="set-title">Kanji #1521–1530</div><div class="set-chars">嬢錠譲醸拭殖飾触嘱辱</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1531_1540_test.html"><div class="set-num">#154</div><div class="set-info"><div class="set-title">Kanji #1531–1540</div><div class="set-chars">尻伸芯辛侵津唇娠振浸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1541_1550_test.html"><div class="set-num">#155</div><div class="set-info"><div class="set-title">Kanji #1541–1550</div><div class="set-chars">紳診寝慎審震薪刃尽迅</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1551_1560_test.html"><div class="set-num">#156</div><div class="set-info"><div class="set-title">Kanji #1551–1560</div><div class="set-chars">甚陣尋腎須吹炊帥粋衰</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1561_1570_test.html"><div class="set-num">#157</div><div class="set-info"><div class="set-title">Kanji #1561–1570</div><div class="set-chars">酔遂睡穂随髄枢崇据杉</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1571_1580_test.html"><div class="set-num">#158</div><div class="set-info"><div class="set-title">Kanji #1571–1580</div><div class="set-chars">裾瀬是井姓征斉牲凄逝</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1581_1590_test.html"><div class="set-num">#159</div><div class="set-info"><div class="set-title">Kanji #1581–1590</div><div class="set-chars">婿誓請醒斥析脊隻惜戚</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1591_1600_test.html"><div class="set-num">#160</div><div class="set-info"><div class="set-title">Kanji #1591–1600</div><div class="set-chars">跡籍拙窃摂仙占扇栓旋</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1601_1610_test.html"><div class="set-num">#161</div><div class="set-info"><div class="set-title">Kanji #1601–1610</div><div class="set-chars">煎羨腺詮践箋潜遷薦繊</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1611_1620_test.html"><div class="set-num">#162</div><div class="set-info"><div class="set-title">Kanji #1611–1620</div><div class="set-chars">鮮禅漸膳繕狙阻租措粗</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1621_1630_test.html"><div class="set-num">#163</div><div class="set-info"><div class="set-title">Kanji #1621–1630</div><div class="set-chars">疎訴塑遡礎双壮荘捜挿</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1631_1640_test.html"><div class="set-num">#164</div><div class="set-info"><div class="set-title">Kanji #1631–1640</div><div class="set-chars">桑掃曹曽爽喪痩葬僧遭</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g9" style="background:linear-gradient(135deg,#0A2E0A,#1B6B1B);box-shadow:0 4px 16px rgba(27,107,27,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1441_1640.html"><div style="font-size:32px;min-width:44px;text-align:center;">🌿</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 9</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1441–1640 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
 
-
-  <a class="exam-card" style="background:linear-gradient(135deg,#0A2E0A,#1B6B1B);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(27,107,27,0.35);" href="sinav_1441_1640.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🌿</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Ninth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1441–1640 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <!-- TENTH GRADE (#1641–1840) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+  <!-- Tenth Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g10')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#FFF8E1;color:#F57F17;">Tenth Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #1641–1840 · 20 Set hazır</span>
+    <span class="section-note">Kanji #1641–1840 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g10" style="font-size:13px;color:#F57F17;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_1641_1650_test.html"><div class="set-num">#165</div><div class="set-info"><div class="set-title">Kanji #1641–1650</div><div class="set-chars">槽踪燥霜騒藻憎贈即促</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1651_1660_test.html"><div class="set-num">#166</div><div class="set-info"><div class="set-title">Kanji #1651–1660</div><div class="set-chars">捉俗賊遜汰妥唾堕惰駄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1661_1670_test.html"><div class="set-num">#167</div><div class="set-info"><div class="set-title">Kanji #1661–1670</div><div class="set-chars">耐怠胎泰堆袋逮替滞胆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1671_1680_test.html"><div class="set-num">#168</div><div class="set-info"><div class="set-title">Kanji #1671–1680</div><div class="set-chars">戴滝択沢卓拓託濯諾濁</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1681_1690_test.html"><div class="set-num">#169</div><div class="set-info"><div class="set-title">Kanji #1681–1690</div><div class="set-chars">但脱奪棚誰丹旦淡嘆端</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1691_1700_test.html"><div class="set-num">#170</div><div class="set-info"><div class="set-title">Kanji #1691–1700</div><div class="set-chars">綻鍛弾壇恥致遅痴稚緻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1701_1710_test.html"><div class="set-num">#171</div><div class="set-info"><div class="set-title">Kanji #1701–1710</div><div class="set-chars">畜逐蓄秩窒嫡沖抽衷酎</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1711_1720_test.html"><div class="set-num">#172</div><div class="set-info"><div class="set-title">Kanji #1711–1720</div><div class="set-chars">鋳駐弔挑彫眺釣貼超跳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1721_1730_test.html"><div class="set-num">#173</div><div class="set-info"><div class="set-title">Kanji #1721–1730</div><div class="set-chars">徴嘲澄聴懲勅捗沈珍朕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1731_1740_test.html"><div class="set-num">#174</div><div class="set-info"><div class="set-title">Kanji #1731–1740</div><div class="set-chars">陳鎮椎墜塚漬坪爪鶴呈</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1741_1750_test.html"><div class="set-num">#175</div><div class="set-info"><div class="set-title">Kanji #1741–1750</div><div class="set-chars">廷抵邸亭貞帝訂逓偵堤</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1751_1760_test.html"><div class="set-num">#176</div><div class="set-info"><div class="set-title">Kanji #1751–1760</div><div class="set-chars">艇締諦泥摘滴溺迭哲徹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1761_1770_test.html"><div class="set-num">#177</div><div class="set-info"><div class="set-title">Kanji #1761–1770</div><div class="set-chars">撤添填殿斗吐妬途渡塗</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1771_1780_test.html"><div class="set-num">#178</div><div class="set-info"><div class="set-title">Kanji #1771–1780</div><div class="set-chars">賭奴怒到逃倒凍唐桃透</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1781_1790_test.html"><div class="set-num">#179</div><div class="set-info"><div class="set-title">Kanji #1781–1790</div><div class="set-chars">悼盗陶塔搭棟痘筒稲踏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1791_1800_test.html"><div class="set-num">#180</div><div class="set-info"><div class="set-title">Kanji #1791–1800</div><div class="set-chars">謄藤闘騰洞胴瞳峠匿督</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1801_1810_test.html"><div class="set-num">#181</div><div class="set-info"><div class="set-title">Kanji #1801–1810</div><div class="set-chars">篤栃凸突屯豚頓貪鈍曇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1811_1820_test.html"><div class="set-num">#182</div><div class="set-info"><div class="set-title">Kanji #1811–1820</div><div class="set-chars">丼那奈梨謎鍋軟尼弐匂</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1821_1830_test.html"><div class="set-num">#183</div><div class="set-info"><div class="set-title">Kanji #1821–1830</div><div class="set-chars">尿妊忍寧捻粘悩濃把覇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1831_1840_test.html"><div class="set-num">#184</div><div class="set-info"><div class="set-title">Kanji #1831–1840</div><div class="set-chars">婆罵杯排廃輩培陪媒賠</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g10" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_1641_1650_test.html"><div class="set-num">#165</div><div class="set-info"><div class="set-title">Kanji #1641–1650</div><div class="set-chars">層争走奏窓藻憎贈即促</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1651_1660_test.html"><div class="set-num">#166</div><div class="set-info"><div class="set-title">Kanji #1651–1660</div><div class="set-chars">捉俗賊遜汰妥唾堕惰駄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1661_1670_test.html"><div class="set-num">#167</div><div class="set-info"><div class="set-title">Kanji #1661–1670</div><div class="set-chars">耐怠胎泰堆袋逮替滞戴</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1671_1680_test.html"><div class="set-num">#168</div><div class="set-info"><div class="set-title">Kanji #1671–1680</div><div class="set-chars">滝択沢卓拓託濯諾濁但</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1681_1690_test.html"><div class="set-num">#169</div><div class="set-info"><div class="set-title">Kanji #1681–1690</div><div class="set-chars">脱奪棚誰丹旦胆淡嘆端</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1691_1700_test.html"><div class="set-num">#170</div><div class="set-info"><div class="set-title">Kanji #1691–1700</div><div class="set-chars">綻鍛弾壇恥致遅痴稚緻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1701_1710_test.html"><div class="set-num">#171</div><div class="set-info"><div class="set-title">Kanji #1701–1710</div><div class="set-chars">畜逐蓄秩窒嫡沖抽衷酎</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1711_1720_test.html"><div class="set-num">#172</div><div class="set-info"><div class="set-title">Kanji #1711–1720</div><div class="set-chars">鋳駐弔挑彫眺釣貼超跳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1721_1730_test.html"><div class="set-num">#173</div><div class="set-info"><div class="set-title">Kanji #1721–1730</div><div class="set-chars">徴嘲澄聴懲勅捗沈珍朕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1731_1740_test.html"><div class="set-num">#174</div><div class="set-info"><div class="set-title">Kanji #1731–1740</div><div class="set-chars">陳鎮椎墜塚漬坪爪鶴呈</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1741_1750_test.html"><div class="set-num">#175</div><div class="set-info"><div class="set-title">Kanji #1741–1750</div><div class="set-chars">廷抵邸亭貞帝訂逓偵堤</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1751_1760_test.html"><div class="set-num">#176</div><div class="set-info"><div class="set-title">Kanji #1751–1760</div><div class="set-chars">艇締諦泥摘滴溺迭哲徹</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1761_1770_test.html"><div class="set-num">#177</div><div class="set-info"><div class="set-title">Kanji #1761–1770</div><div class="set-chars">撤添填殿斗吐妬途渡塗</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1771_1780_test.html"><div class="set-num">#178</div><div class="set-info"><div class="set-title">Kanji #1771–1780</div><div class="set-chars">賭奴怒到逃倒凍唐桃透</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1781_1790_test.html"><div class="set-num">#179</div><div class="set-info"><div class="set-title">Kanji #1781–1790</div><div class="set-chars">悼盗陶塔搭棟痘筒稲踏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1791_1800_test.html"><div class="set-num">#180</div><div class="set-info"><div class="set-title">Kanji #1791–1800</div><div class="set-chars">謄藤闘騰洞胴瞳峠匿督</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1801_1810_test.html"><div class="set-num">#181</div><div class="set-info"><div class="set-title">Kanji #1801–1810</div><div class="set-chars">篤栃凸突屯豚頓貪鈍曇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1811_1820_test.html"><div class="set-num">#182</div><div class="set-info"><div class="set-title">Kanji #1811–1820</div><div class="set-chars">丼那奈梨謎鍋軟尼弐匂</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1821_1830_test.html"><div class="set-num">#183</div><div class="set-info"><div class="set-title">Kanji #1821–1830</div><div class="set-chars">尿妊忍寧捻粘悩濃把覇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1831_1840_test.html"><div class="set-num">#184</div><div class="set-info"><div class="set-title">Kanji #1831–1840</div><div class="set-chars">婆罵杯排廃敗培陪媒賠</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g10" style="background:linear-gradient(135deg,#3E2000,#B06000);box-shadow:0 4px 16px rgba(176,96,0,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1641_1840.html"><div style="font-size:32px;min-width:44px;text-align:center;">🔥</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 10</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1641–1840 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
 
-
-  <a class="exam-card" style="background:linear-gradient(135deg,#4A1500,#B03000);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(176,48,0,0.35);" href="sinav_1641_1840.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🔥</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Tenth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1641–1840 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <!-- ELEVENTH GRADE (#1841–2040) -->
-  <div class="section-header" style="margin-top:1.75rem;">
-    <span class="section-badge" style="background:#F3E5F5;color:#6A1B9A;">Eleventh Grade · N1</span>
+  <!-- Eleventh Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g11')" style="cursor:pointer;user-select:none;">
+    <span class="section-badge" style="background:#FCE4EC;color:#880E4F;">Eleventh Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #1841–2040 · 20 Set hazır</span>
+    <span class="section-note">Kanji #1841–2040 · 20 Set</span>
+    <span class="toggle-icon" id="icon-g11" style="font-size:13px;color:#880E4F;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_1841_1850_test.html"><div class="set-num">#185</div><div class="set-info"><div class="set-title">Kanji #1841–1850</div><div class="set-chars">伯拍泊迫剥舶薄漠縛爆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1851_1860_test.html"><div class="set-num">#186</div><div class="set-info"><div class="set-title">Kanji #1851–1860</div><div class="set-chars">箸肌鉢髪伐抜罰閥氾帆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1861_1870_test.html"><div class="set-num">#187</div><div class="set-info"><div class="set-title">Kanji #1861–1870</div><div class="set-chars">汎伴阪畔般販斑搬煩頒</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1871_1880_test.html"><div class="set-num">#188</div><div class="set-info"><div class="set-title">Kanji #1871–1880</div><div class="set-chars">範繁藩蛮盤妃彼披卑疲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1881_1890_test.html"><div class="set-num">#189</div><div class="set-info"><div class="set-title">Kanji #1881–1890</div><div class="set-chars">被扉碑罷避尾眉微膝肘</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1891_1900_test.html"><div class="set-num">#190</div><div class="set-info"><div class="set-title">Kanji #1891–1900</div><div class="set-chars">匹泌姫漂苗描猫浜賓頻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1901_1910_test.html"><div class="set-num">#191</div><div class="set-info"><div class="set-title">Kanji #1901–1910</div><div class="set-chars">敏瓶扶怖阜附訃赴浮符</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1911_1920_test.html"><div class="set-num">#192</div><div class="set-info"><div class="set-title">Kanji #1911–1920</div><div class="set-chars">普腐敷膚賦譜侮舞封伏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1921_1930_test.html"><div class="set-num">#193</div><div class="set-info"><div class="set-title">Kanji #1921–1930</div><div class="set-chars">幅覆払沸紛雰噴墳憤丙</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1931_1940_test.html"><div class="set-num">#194</div><div class="set-info"><div class="set-title">Kanji #1931–1940</div><div class="set-chars">併柄塀幣弊蔽餅壁璧癖</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1941_1950_test.html"><div class="set-num">#195</div><div class="set-info"><div class="set-title">Kanji #1941–1950</div><div class="set-chars">蔑偏遍哺捕舗募慕簿芳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1951_1960_test.html"><div class="set-num">#196</div><div class="set-info"><div class="set-title">Kanji #1951–1960</div><div class="set-chars">邦奉抱泡胞俸倣峰砲崩</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1961_1970_test.html"><div class="set-num">#197</div><div class="set-info"><div class="set-title">Kanji #1961–1970</div><div class="set-chars">蜂飽褒縫乏忙坊妨房肪</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1971_1980_test.html"><div class="set-num">#198</div><div class="set-info"><div class="set-title">Kanji #1971–1980</div><div class="set-chars">某冒剖紡傍帽貌膨謀頬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1981_1990_test.html"><div class="set-num">#199</div><div class="set-info"><div class="set-title">Kanji #1981–1990</div><div class="set-chars">朴睦僕墨撲没勃堀奔翻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_1991_2000_test.html"><div class="set-num">#200</div><div class="set-info"><div class="set-title">Kanji #1991–2000</div><div class="set-chars">凡盆麻摩磨魔昧埋膜枕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2001_2010_test.html"><div class="set-num">#201</div><div class="set-info"><div class="set-title">Kanji #2001–2010</div><div class="set-chars">又抹慢漫魅岬蜜妙眠矛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2011_2020_test.html"><div class="set-num">#202</div><div class="set-info"><div class="set-title">Kanji #2011–2020</div><div class="set-chars">霧娘冥銘滅免麺茂妄盲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2021_2030_test.html"><div class="set-num">#203</div><div class="set-info"><div class="set-title">Kanji #2021–2030</div><div class="set-chars">耗猛網黙紋冶弥厄躍闇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2031_2040_test.html"><div class="set-num">#204</div><div class="set-info"><div class="set-title">Kanji #2031–2040</div><div class="set-chars">喩愉諭癒唯幽悠湧猶裕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g11" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_1841_1850_test.html"><div class="set-num">#185</div><div class="set-info"><div class="set-title">Kanji #1841–1850</div><div class="set-chars">伯拍泊迫剥舶薄漠縛爆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1851_1860_test.html"><div class="set-num">#186</div><div class="set-info"><div class="set-title">Kanji #1851–1860</div><div class="set-chars">箸肌鉢髪伐抜罰閥氾帆</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1861_1870_test.html"><div class="set-num">#187</div><div class="set-info"><div class="set-title">Kanji #1861–1870</div><div class="set-chars">汎伴阪畔般販斑搬煩頒</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1871_1880_test.html"><div class="set-num">#188</div><div class="set-info"><div class="set-title">Kanji #1871–1880</div><div class="set-chars">範繁藩蛮盤妃彼披卑疲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1881_1890_test.html"><div class="set-num">#189</div><div class="set-info"><div class="set-title">Kanji #1881–1890</div><div class="set-chars">被扉碑罷避尾眉微膝肘</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1891_1900_test.html"><div class="set-num">#190</div><div class="set-info"><div class="set-title">Kanji #1891–1900</div><div class="set-chars">匹泌姫漂苗描猫浜賓頻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1901_1910_test.html"><div class="set-num">#191</div><div class="set-info"><div class="set-title">Kanji #1901–1910</div><div class="set-chars">敏瓶扶怖阜附訃赴浮符</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1911_1920_test.html"><div class="set-num">#192</div><div class="set-info"><div class="set-title">Kanji #1911–1920</div><div class="set-chars">普腐敷膚賦譜侮舞封伏</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1921_1930_test.html"><div class="set-num">#193</div><div class="set-info"><div class="set-title">Kanji #1921–1930</div><div class="set-chars">幅覆払沸紛雰噴墳憤丙</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1931_1940_test.html"><div class="set-num">#194</div><div class="set-info"><div class="set-title">Kanji #1931–1940</div><div class="set-chars">併柄塀幣弊蔽餅壁璧癖</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1941_1950_test.html"><div class="set-num">#195</div><div class="set-info"><div class="set-title">Kanji #1941–1950</div><div class="set-chars">蔑偏遍哺捕舗募慕簿芳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1951_1960_test.html"><div class="set-num">#196</div><div class="set-info"><div class="set-title">Kanji #1951–1960</div><div class="set-chars">邦奉抱泡胞俸倣峰砲崩</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1961_1970_test.html"><div class="set-num">#197</div><div class="set-info"><div class="set-title">Kanji #1961–1970</div><div class="set-chars">蜂飽褒縫乏忙坊妨房肪</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1971_1980_test.html"><div class="set-num">#198</div><div class="set-info"><div class="set-title">Kanji #1971–1980</div><div class="set-chars">某冒剖紡傍帽貌膨謀頬</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1981_1990_test.html"><div class="set-num">#199</div><div class="set-info"><div class="set-title">Kanji #1981–1990</div><div class="set-chars">朴睦僕墨撲没勃堀奔翻</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_1991_2000_test.html"><div class="set-num">#200</div><div class="set-info"><div class="set-title">Kanji #1991–2000</div><div class="set-chars">凡盆麻摩磨魔昧埋膜枕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2001_2010_test.html"><div class="set-num">#201</div><div class="set-info"><div class="set-title">Kanji #2001–2010</div><div class="set-chars">又抹慢漫魅岬蜜妙眠矛</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2011_2020_test.html"><div class="set-num">#202</div><div class="set-info"><div class="set-title">Kanji #2011–2020</div><div class="set-chars">霧娘冥銘滅免麺茂妄盲</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2021_2030_test.html"><div class="set-num">#203</div><div class="set-info"><div class="set-title">Kanji #2021–2030</div><div class="set-chars">耗猛網黙紋冶弥厄躍闇</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2031_2040_test.html"><div class="set-num">#204</div><div class="set-info"><div class="set-title">Kanji #2031–2040</div><div class="set-chars">喩愉諭癒唯幽悠湧猶裕</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
   </div>
+  <a class="exam-card" id="exam-g11" style="background:linear-gradient(135deg,#2E0020,#880E4F);box-shadow:0 4px 16px rgba(136,14,79,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_1841_2040.html"><div style="font-size:32px;min-width:44px;text-align:center;">💎</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 11</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1841–2040 · 200 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
 
 
-
-  <a class="exam-card" style="background:linear-gradient(135deg,#3D0050,#9C27B0);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(156,39,176,0.35);" href="sinav_1841_2040.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🌸</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Eleventh Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #1841–2040 · 200 kanji · 100 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <!-- TWELFTH GRADE (#2041–2136) -->
-  <div class="section-header" style="margin-top:1.75rem;">
+  <!-- Twelfth Grade · N1 -->
+  <div class="section-header" onclick="toggleGrade('g12')" style="cursor:pointer;user-select:none;">
     <span class="section-badge" style="background:#E0F2F1;color:#004D40;">Twelfth Grade · N1</span>
     <div class="section-line"></div>
-    <span class="section-note">Kanji #2041–2136 · 10 Set · Son Grup 🎓</span>
+    <span class="section-note">Kanji #2041–2136 · 10 Set</span>
+    <span class="toggle-icon" id="icon-g12" style="font-size:13px;color:#004D40;min-width:20px;text-align:right;">▶</span>
   </div>
-  <div class="sets">
-    <a class="set-card" href="kanji_2041_2050_test.html"><div class="set-num">#205</div><div class="set-info"><div class="set-title">Kanji #2041–2050</div><div class="set-chars">猶裕雄誘憂融与誉妖庸</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2051_2060_test.html"><div class="set-num">#206</div><div class="set-info"><div class="set-title">Kanji #2051–2060</div><div class="set-chars">揚揺溶腰瘍踊窯擁謡抑</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2061_2070_test.html"><div class="set-num">#207</div><div class="set-info"><div class="set-title">Kanji #2061–2070</div><div class="set-chars">沃翼拉裸羅雷頼絡酪辣</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2071_2080_test.html"><div class="set-num">#208</div><div class="set-info"><div class="set-title">Kanji #2071–2080</div><div class="set-chars">濫藍欄吏痢履璃離慄柳</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2081_2090_test.html"><div class="set-num">#209</div><div class="set-info"><div class="set-title">Kanji #2081–2090</div><div class="set-chars">竜粒隆硫侶虜慮了涼猟</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2091_2100_test.html"><div class="set-num">#210</div><div class="set-info"><div class="set-title">Kanji #2091–2100</div><div class="set-chars">陵僚寮療瞭糧厘倫隣瑠</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2101_2110_test.html"><div class="set-num">#211</div><div class="set-info"><div class="set-title">Kanji #2101–2110</div><div class="set-chars">涙累塁励戻鈴零霊隷齢</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2111_2120_test.html"><div class="set-num">#212</div><div class="set-info"><div class="set-title">Kanji #2111–2120</div><div class="set-chars">麗暦劣烈裂恋廉錬呂炉</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2121_2130_test.html"><div class="set-num">#213</div><div class="set-info"><div class="set-title">Kanji #2121–2130</div><div class="set-chars">賂露弄郎浪廊楼漏籠麓</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
-    <a class="set-card" href="kanji_2131_2136_test.html"><div class="set-num">#214</div><div class="set-info"><div class="set-title">Kanji #2131–2136</div><div class="set-chars">賄脇惑枠湾腕</div></div><span class="set-badge badge-ready" style="background:#E8F5E9;color:#1B5E20;border:1px solid #1B5E20;">🎓 Son Set!</span><div class="set-arrow">→</div></a>
+  <div class="sets" id="sets-g12" style="display:none;flex-direction:column;gap:8px;margin-bottom:0.5rem;">
+<a class="set-card" href="kanji_2041_2050_test.html"><div class="set-num">#205</div><div class="set-info"><div class="set-title">Kanji #2041–2050</div><div class="set-chars">雄誘憂融与誉妖庸揚揺</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2051_2060_test.html"><div class="set-num">#206</div><div class="set-info"><div class="set-title">Kanji #2051–2060</div><div class="set-chars">溶腰瘍踊窯擁謡抑沃翼</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2061_2070_test.html"><div class="set-num">#207</div><div class="set-info"><div class="set-title">Kanji #2061–2070</div><div class="set-chars">拉裸羅雷頼絡酪辣濫藍</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2071_2080_test.html"><div class="set-num">#208</div><div class="set-info"><div class="set-title">Kanji #2071–2080</div><div class="set-chars">欄吏痢履璃離慄柳竜粒</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2081_2090_test.html"><div class="set-num">#209</div><div class="set-info"><div class="set-title">Kanji #2081–2090</div><div class="set-chars">隆硫侶虜慮了涼寮陵僚</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2091_2100_test.html"><div class="set-num">#210</div><div class="set-info"><div class="set-title">Kanji #2091–2100</div><div class="set-chars">療瞭糧厘倫隣瑠涙累塁</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2101_2110_test.html"><div class="set-num">#211</div><div class="set-info"><div class="set-title">Kanji #2101–2110</div><div class="set-chars">励戻鈴零霊隷齢麗暦劣</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2111_2120_test.html"><div class="set-num">#212</div><div class="set-info"><div class="set-title">Kanji #2111–2120</div><div class="set-chars">烈裂恋廉錬呂炉賂露弄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2121_2130_test.html"><div class="set-num">#213</div><div class="set-info"><div class="set-title">Kanji #2121–2130</div><div class="set-chars">郎浪廊楼漏籠麓賄脇惑</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+<a class="set-card" href="kanji_2131_2136_test.html"><div class="set-num">#214</div><div class="set-info"><div class="set-title">Kanji #2131–2136</div><div class="set-chars">枠湾腕猶裕雄</div></div><span class="set-badge badge-ready">✓ Hazır</span><div class="set-arrow">→</div></a>
+  </div>
+  <a class="exam-card" id="exam-g12" style="background:linear-gradient(135deg,#00251A,#00695C);box-shadow:0 4px 16px rgba(0,105,92,0.35);display:none;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;align-items:center;gap:1.25rem;text-decoration:none;" href="sinav_2041_2136.html"><div style="font-size:32px;min-width:44px;text-align:center;">🎓</div><div style="flex:1;"><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Grade 12</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #2041–2136 · 96 kanji · 300 soru · 7 tip</div></div><div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div></a>
+
   </div>
 
-
-  <a class="exam-card" style="background:linear-gradient(135deg,#004D40,#00897B);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:8px;display:flex;align-items:center;gap:1.25rem;text-decoration:none;box-shadow:0 4px 20px rgba(0,137,123,0.35);" href="sinav_2041_2136.html">
-    <div style="font-size:32px;min-width:44px;text-align:center;">🎓</div>
-    <div style="flex:1;">
-      <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;">Büyük Sınav — Twelfth Grade</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);">Kanji #2041–2136 · 96 kanji · 48 soru · Rastgele</div>
-    </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.6);">→</div>
-  </a>
-
-  <div class="footer">Kaynak: The Complete Guide to Japanese Kanji — Seely &amp; Procter</div>
+  <div class="footer">2136 Kanji · 214 Set · 12 Grade · Türkçe açıklamalar</div>
 </div>
+
+<script>
+function toggleGrade(id) {
+  const sets = document.getElementById('sets-' + id);
+  const exam = document.getElementById('exam-' + id);
+  const icon = document.getElementById('icon-' + id);
+  const isOpen = sets.style.display === 'flex';
+  sets.style.display = isOpen ? 'none' : 'flex';
+  if (exam) exam.style.display = isOpen ? 'none' : 'block';
+  icon.textContent = isOpen ? '▶' : '▼';
+}
+</script>
 </body>
 </html>
