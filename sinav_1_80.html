@@ -83,20 +83,27 @@ a.back:hover{color:var(--text);}
 <body>
 <div class="app">
   <a class="back" href="index.html">← Ana Sayfa</a>
+
+  <!-- HERO — sınav başlamadan görünür -->
   <div class="hero" id="heroWrap">
     <div class="hero-chars">一人水火山王目木六百</div>
     <div class="hero-title">Büyük Sınav — First Grade Kanji</div>
     <div class="hero-sub">Kanji #1–80 · Tüm setler · 300 Soru</div>
     <div class="hero-stats">
       <div class="hstat"><div class="hstat-val">80</div><div class="hstat-lbl">Kanji</div></div>
-      <div class="hstat"><div class="hstat-val">100</div><div class="hstat-lbl">Soru</div></div>
-      <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">Soru Tipi</div></div>
+      <div class="hstat"><div class="hstat-val">300</div><div class="hstat-lbl">Soru</div></div>
+      <div class="hstat"><div class="hstat-val">7</div><div class="hstat-lbl">Soru Tipi</div></div>
     </div>
     <button class="start-btn" onclick="startExam()">Sınava Başla →</button>
   </div>
+
+  <!-- TEST görünümü — başlangıçta gizli -->
   <div id="tv" style="display:none"></div>
+
+  <!-- SONUÇ görünümü — başlangıçta gizli -->
   <div id="rv" style="display:none"></div>
 </div>
+
 <script>
 const K=[
   {n:1,ch:"一",mn:"Bir",on:["ICHI", "ITSU"],kun:["hito-"],or:"Tek bir yatay çizgiyle 'bir' sayısını temsil eder. Eski Mısır hiyerogliflerinde ve Sümer çivi yazısında da aynı yaklaşım kullanılmıştır.",mm:"☝️ BİR PARMAK — tek bir çizgi, kaldırılmış bir parmağı andırır.",cp:[{k:"一月",r:"ICHIGATSU",m:"Ocak"},{k:"均一",r:"KIN'ITSU",m:"Tekdüzelik"},{k:"一人",r:"hitori",m:"Bir kişi"}],ex:[{s:"___日に三回薬を飲む。",tr:"Günde üç kez ilaç içilir.",b:"一",br:"ICHI"}]},
@@ -181,208 +188,207 @@ const K=[
   {n:80,ch:"六",mn:"Altı",on:["ROKU"],kun:["mu-"],or:"OBI ve bronz formlar basit bir bina yapısını andırır (Shirakawa). Grafik muhtemelen fonetik ödünç yoluyla altı anlamını kazandı. Qiu daha soyut geometrik bir sembol olarak yorumlar.",mm:"🍽️ ALTI KİŞİLİK YÜKLÜ MASA AYAKLARINI KAYBEDER",cp:[{k:"六月",r:"ROKUGATSU",m:"Haziran"},{k:"六日",r:"muika",m:"Altıncı gün"},{k:"六角",r:"ROKKAKU",m:"Altıgen"}],ex:[{s:"___月は梅雨の季節だ。",tr:"Haziran yağmur mevsimidir.",b:"六",br:"ROKU"}]}
 ];
 
-
-
-// Notlar bölümünü oluştur
-function buildNotes(){
-  const body=document.getElementById('nbody');
-  body.innerHTML=K.map(k=>`
-    <div class="kanji-row">
-      <div class="kanji-left">
-        <div class="kanji-char">${k.ch}</div>
-        <div class="kanji-num">#${k.n}</div>
-      </div>
-      <div class="kanji-right">
-        <div class="kanji-meaning">${k.mn}</div>
-        <div class="reading-row">
-          ${k.on.map(r=>`<span class="rbadge on-b"><span class="rl">ON</span>${r}</span>`).join('')}
-          ${k.kun.map(r=>`<span class="rbadge kun-b"><span class="rl">KUN</span>${r}</span>`).join('')}
-        </div>
-        <div class="kanji-origin">${k.or}</div>
-        <div class="kanji-mnemonic">${k.mm}</div>
-        <div class="compounds">
-          ${k.cp.map(c=>`<div class="ccard"><div class="ckanji">${c.k}</div><div class="creading">${c.r}</div><div class="cmeaning">${c.m}</div></div>`).join('')}
-        </div>
-      </div>
-    </div>`).join('');
-}
-
-let notesOpen=true;
-function toggleNotes(){
-  notesOpen=!notesOpen;
-  document.getElementById('nbody').style.display=notesOpen?'block':'none';
-  document.getElementById('ntoggle').textContent=notesOpen?'Gizle ▲':'Göster ▼';
-}
-
-// BÜYÜK SINAV — 300 SORU
+// ── BUILD: 300 SORU ─────────────────────────────────────────────────────────
 function build(){
-  const r=a=>a[Math.floor(Math.random()*a.length)];
+  const rnd=a=>a[Math.floor(Math.random()*a.length)];
   const sh=a=>[...a].sort(()=>Math.random()-0.5);
 
-  // Distractor fonksiyonları — TÜM K havuzundan
-  const dMn =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
-  const dCh =(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dMn=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
   const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
-  const dRd =(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(rd=>p.push(rd)));return sh(p).filter(Boolean).slice(0,n);};
-
-  // Kanji kullanım sayacı — tekrarsız soru üretimi
-  const used={};
-  K.forEach(k=>{used[k.ch]={ka:0,cm:0,bf:0,ex:0,ck:0,kr:0,rk:0};});
-  function least(pool,tp){
-    const s=[...pool].sort((a,b)=>used[a.ch][tp]-used[b.ch][tp]);
-    const mn=used[s[0].ch][tp];
-    return r(s.filter(x=>used[x.ch][tp]===mn));
-  }
+  const dRd=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(r=>{if(r)p.push(r);}));return sh(p).slice(0,n);};
 
   const qs=[];
 
-  // ── KA: Kanji → Anlam (80 soru, her kanji 1 kez) ─────────────────────────
-  const kaPool=sh([...K]);
-  for(const k of kaPool){
+  // KA: Kanji→Anlam — 80 soru (her kanji 1 kez)
+  sh([...K]).forEach(k=>{
     const ans=k.mn;
     const d=sh(dMn(k,10)).filter(x=>x!==ans).slice(0,5);
-    if(d.length<5)continue;
+    if(d.length<5)return;
     qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
       q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true});
-    used[k.ch].ka++;
-  }
+  });
 
-  // ── CM: Bileşik → Anlam (80 soru) ─────────────────────────────────────────
+  // CM: Bileşik→Anlam — 80 soru
   const cmPool=[];
   K.forEach(k=>k.cp.forEach(cp=>{
     const ans=cp.m;
     const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
     if(d.length>=5)cmPool.push({k,cp,ans,d});
   }));
-  const cmSh=sh(cmPool);
-  let cmCount=0;
-  for(const {k,cp,ans,d} of cmSh){
-    if(cmCount>=80)break;
+  sh(cmPool).slice(0,80).forEach(({k,cp,ans,d})=>{
     qs.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
       q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
       ans,opts:sh([ans,...d]),sc:false});
-    used[k.ch].cm++;
-    cmCount++;
-  }
+  });
 
-  // ── BF: Boşluk Doldurma (35 soru) ─────────────────────────────────────────
+  // BF: Boşluk Doldurma — 35 soru
   const bfPool=[];
   K.forEach(k=>k.cp.forEach(cp=>{
     if(!cp.k.includes(k.ch))return;
     const d=sh(dCh(k,10)).slice(0,5);
-    if(d.length>=5){
-      const blank=cp.k.replace(k.ch,'___');
-      bfPool.push({k,cp,blank,d});
-    }
+    if(d.length>=5)bfPool.push({k,cp,d});
   }));
-  const bfSh=sh(bfPool);
-  let bfCount=0;
-  for(const {k,cp,blank,d} of bfSh){
-    if(bfCount>=35)break;
+  sh(bfPool).slice(0,35).forEach(({k,cp,d})=>{
+    const blank=cp.k.replace(k.ch,'___');
     qs.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
       q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
       ans:k.ch,opts:sh([k.ch,...d]),sc:false});
-    used[k.ch].bf++;
-    bfCount++;
-  }
+  });
 
-  // ── EX: Cümle → Kanji (35 soru) ───────────────────────────────────────────
+  // EX: Cümle→Kanji — 35 soru
   const exPool=K.filter(k=>k.ex&&k.ex.length>0);
-  const exSh=sh(exPool);
-  let exCount=0;
-  for(const k of exSh){
-    if(exCount>=35)break;
+  sh(exPool).slice(0,35).forEach(k=>{
     const ex=k.ex[0];
     const d=sh(dCh(k,10)).slice(0,5);
-    if(d.length<5)continue;
-    const q=ex.s.replace(new RegExp(ex.b,'g'),'___');
+    if(d.length<5)return;
+    const q=ex.s.replace(new RegExp(ex.b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'),'___');
     qs.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlr',ch:k.ch,
-      q:'"'+q+'" cümlesindeki boşluk hangi kanji?',
+      q:'"'+q+'" — boşluk hangi kanji?',
       ans:k.ch,opts:sh([k.ch,...d]),sc:false});
-    used[k.ch].ex++;
-    exCount++;
-  }
+  });
 
-  // ── CK: Bileşikteki Kanji Anlamı (35 soru) ────────────────────────────────
+  // CK: Bileşikteki Anlam — 35 soru
   const ckPool=[];
   K.forEach(k=>k.cp.forEach(cp=>{
     const ans=k.mn;
     const d=sh(dMn(k,10)).filter(x=>x!==ans).slice(0,5);
     if(d.length>=5)ckPool.push({k,cp,ans,d});
   }));
-  const ckSh=sh(ckPool);
-  let ckCount=0;
-  for(const {k,cp,ans,d} of ckSh){
-    if(ckCount>=35)break;
+  sh(ckPool).slice(0,35).forEach(({k,cp,ans,d})=>{
     qs.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlm',ch:k.ch,
       q:'"'+cp.k+'" kelimesindeki "'+k.ch+'" kanjisi ne anlama gelir?',
       ans,opts:sh([ans,...d]),sc:false});
-    used[k.ch].ck++;
-    ckCount++;
-  }
+  });
 
-  // ── KR: Kanji → Okunuş (18 soru) ──────────────────────────────────────────
+  // KR: Kanji→Okunuş — 18 soru
   const krPool=K.filter(k=>(k.on.length+k.kun.length)>0);
-  const krSh=sh(krPool);
-  let krCount=0;
-  for(const k of krSh){
-    if(krCount>=18)break;
+  sh(krPool).slice(0,18).forEach(k=>{
     const rds=[...k.on,...k.kun].filter(Boolean);
-    if(!rds.length)continue;
-    const ans=r(rds);
+    if(!rds.length)return;
+    const ans=rnd(rds);
     const d=sh(dRd(k,10)).filter(x=>x!==ans).slice(0,5);
-    if(d.length<5)continue;
+    if(d.length<5)return;
     qs.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlr',ch:k.ch,
       q:'Bu kanjinin okunuşlarından biri nedir?',
       ans,opts:sh([ans,...d]),sc:true});
-    used[k.ch].kr++;
-    krCount++;
-  }
+  });
 
-  // ── RK: Okunuş → Kanji (17 soru) ──────────────────────────────────────────
+  // RK: Okunuş→Kanji — 17 soru
   const rkPool=K.filter(k=>k.on.length>0);
-  const rkSh=sh(rkPool);
-  let rkCount=0;
-  for(const k of rkSh){
-    if(rkCount>=17)break;
-    const ans=k.ch;
-    const rd=r(k.on);
+  sh(rkPool).slice(0,17).forEach(k=>{
+    const rd=rnd(k.on);
     const d=sh(dCh(k,10)).slice(0,5);
-    if(d.length<5)continue;
+    if(d.length<5)return;
     qs.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlm',ch:k.ch,
       q:'"'+rd+'" okunuşuna sahip kanji hangisidir?',
-      ans,opts:sh([ans,...d]),sc:false});
-    used[k.ch].rk++;
-    rkCount++;
-  }
+      ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+  });
 
   return sh(qs);
 }
 
-let TOTAL=300;
+// ── DURUM DEĞİŞKENLERİ ─────────────────────────────────────────────────────
 let tqs=[],ti=0,sc=0,ans={};
-function startT(){tqs=build();ti=0;sc=0;ans={};document.getElementById('rv').style.display='none';document.getElementById('tv').style.display='block';renderQ();}
-function renderQ(){
-  const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
-  document.getElementById('tv').innerHTML=`<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:${pct}%"></div></div><div class="thead"><div class="ttitle">📝 Test — Kanji #1–10</div><div class="tscore">Soru ${ti+1} / ${tot} · ${sc} ✓</div></div><div class="tbody"><span class="tqlabel ${q.lc}">${q.lb}</span><div class="tq">${q.q}</div>${q.sc?`<span class="tchar">${q.ch}</span>`:''}<div class="topts" id="opts">${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}</button></div></div>`;}
-function doAns(i){
-  const q=tqs[ti];document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
-  const chosen=q.opts[i],ok=chosen===q.ans;if(ok)sc++;ans[ti]={ok,ch:q.ch,lb:q.lb};
-  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
-  const fb=document.getElementById('fb');fb.className='tfb show '+(ok?'ok':'bad');fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;document.getElementById('nq').classList.add('show');}
-function nextQ(){ti++;ti>=tqs.length?showR():renderQ();}
-function showR(){
-  const tot=tqs.length,pct=Math.round(sc/tot*100);
-  const emoji=pct>=90?'🏆':pct>=70?'👍':pct>=50?'📚':'💪';
-  const lbl=pct>=90?'Mükemmel!':pct>=70?'İyi iş!':pct>=50?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={ka:'Kanji → Anlam',cm:'Bileşik → Anlam',bf:'Boşluk Doldurma',ex:'Cümle → Kanji',ck:'Bileşikteki Anlam',kr:'Kanji → Okunuş',rk:'Okunuş → Kanji'};
-  const tsum=['ka','cm','bf','ex','ck','kr','rk'].map(t=>{const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);if(!tl.length)return '';const ok=tl.filter(x=>x.a&&x.a.ok).length;return `<div class="tsc"><div class="tsl">${tlbls[t]}</div><div class="tsv">${ok} / ${tl.length}</div></div>`;}).join('');
-  const rep=tqs.map((_,i)=>{const a=ans[i],q=tqs[i],k=K.find(x=>x.ch===q.ch);return `<div class="krow"><div class="kchar2">${q.ch}</div><div class="kinfo"><div class="kmean">${k?k.mn:''}</div><div class="kqt">${q.lb}</div></div><span class="rs ${a?a.ok?'rs-ok':'rs-bad':''}">${a?a.ok?'✓ Doğru':'✗ Yanlış':'—'}</span></div>`;}).join('');
-  document.getElementById('tv').style.display='none';document.getElementById('rv').style.display='block';
-  document.getElementById('rv').innerHTML=`<div class="twrap"><div class="thead"><div class="ttitle">Test Sonucu — Kanji #1–10</div></div><div class="rwrap"><div class="remoji">${emoji}</div><div class="rscore">${sc} / ${tot}</div><div class="rlabel">${lbl} · %${pct}</div><div class="rbdown"><div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Tip Bazında Sonuç</div><div class="tsum">${tsum}</div><button class="rbtn" onclick="startT()">Tekrar</button><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>${rep}</div></div></div>`;}
 
-buildNotes();
-startT();
+// ── BAŞLAT ──────────────────────────────────────────────────────────────────
+function startExam(){
+  tqs=build();
+  ti=0; sc=0; ans={};
+  document.getElementById('heroWrap').style.display='none';
+  document.getElementById('rv').style.display='none';
+  document.getElementById('tv').style.display='block';
+  renderQ();
+}
+
+// ── SORU RENDER ─────────────────────────────────────────────────────────────
+function renderQ(){
+  const q=tqs[ti], tot=tqs.length, pct=Math.round(ti/tot*100);
+  const typeCols={tlm:'var(--p600)',tlc:'var(--t400)',tlr:'var(--a600)'};
+  const tc=typeCols[q.lc]||'var(--p600)';
+  document.getElementById('tv').innerHTML=`
+    <div class="tw">
+      <div class="tprog">
+        <div class="tpbar"><div class="tpfill" style="width:${pct}%"></div></div>
+        <div class="tpnum">${ti+1} / ${tot}</div>
+      </div>
+      <div class="tcard">
+        <div class="tlabel" style="color:${tc}">${q.lb}</div>
+        ${q.sc?`<div class="tkanji">${q.ch}</div>`:``}
+        <div class="tq">${q.q}</div>
+        <div class="topts">
+          ${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}
+        </div>
+        <div class="tfb" id="fb" style="display:none"></div>
+        <button class="tnext" id="nq" onclick="nextQ()" style="display:none">
+          ${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}
+        </button>
+      </div>
+    </div>`;
+}
+
+// ── CEVAP ───────────────────────────────────────────────────────────────────
+function doAns(i){
+  const q=tqs[ti];
+  const sel=q.opts[i];
+  const ok=sel===q.ans;
+  if(ok)sc++;
+  ans[ti]={q:q.q,ch:q.ch,ans:q.ans,sel,ok,tp:q.tp,lb:q.lb};
+  document.querySelectorAll('.topt').forEach((b,j)=>{
+    b.disabled=true;
+    if(j===i) b.classList.add(ok?'ok':'ng');
+    if(q.opts[j]===q.ans&&!ok) b.classList.add('show');
+  });
+  const fb=document.getElementById('fb');
+  fb.style.display='block';
+  fb.className='tfb '+(ok?'ok':'ng');
+  fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
+  document.getElementById('nq').style.display='block';
+}
+
+// ── SONRAKİ ─────────────────────────────────────────────────────────────────
+function nextQ(){
+  ti++;
+  if(ti>=tqs.length){ showR(); return; }
+  renderQ();
+}
+
+// ── SONUÇ ───────────────────────────────────────────────────────────────────
+function showR(){
+  const tot=tqs.length;
+  const pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
+  const lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
+
+  const typeMap={};
+  tqs.forEach((q,i)=>{
+    if(!typeMap[q.tp])typeMap[q.tp]={lb:q.lb,ok:0,tot:0};
+    typeMap[q.tp].tot++;
+    if(ans[i]&&ans[i].ok)typeMap[q.tp].ok++;
+  });
+  const tsum=Object.values(typeMap).map(t=>
+    `<div class="tsrow"><span class="tslb">${t.lb}</span><span class="tspct">${t.ok}/${t.tot}</span></div>`
+  ).join('');
+
+  document.getElementById('tv').style.display='none';
+  const rv=document.getElementById('rv');
+  rv.style.display='block';
+  rv.innerHTML=`
+    <div class="rcard">
+      <div class="remoji">${emoji}</div>
+      <div class="rscore">${sc} / ${tot}</div>
+      <div class="rlabel">${lbl} · %${pct}</div>
+      <div class="rstats">
+        <div class="rsbox"><div class="rsbv rg">${sc}</div><div class="rsbl">Doğru</div></div>
+        <div class="rsbox"><div class="rsbv rr">${tot-sc}</div><div class="rsbl">Yanlış</div></div>
+        <div class="rsbox"><div class="rsbv">${tot}</div><div class="rsbl">Toplam</div></div>
+      </div>
+      <div class="slabel">Tip Bazında Sonuç</div>
+      <div class="tsum">${tsum}</div>
+      <button class="rbtn" onclick="location.reload()">Tekrar Başla</button>
+      <a class="rbtn" href="index.html" style="display:inline-block;margin-top:8px">Ana Sayfa</a>
+    </div>`;
+}
 </script>
 </body>
 </html>

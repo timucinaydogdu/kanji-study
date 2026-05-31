@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Büyük Sınav — Second Grade Kanji #81–240</title>
+<title>Büyük Sınav — Kanji #81–240</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
@@ -13,23 +13,23 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
 .app{width:100%;max-width:680px;margin:0 auto;}
 a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
 a.back:hover{color:var(--text);}
-.hero{background:linear-gradient(135deg,#085041,#1D9E75);border-radius:var(--rl);padding:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1.25rem;box-shadow:0 4px 20px rgba(13,111,86,0.3);}
-.hero-icon{font-size:40px;min-width:50px;text-align:center;}
-.hero-info{flex:1;}
-.hero-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:3px;}
-.hero-sub{font-size:13px;color:rgba(255,255,255,0.75);}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1rem;}
-.hstat{background:rgba(255,255,255,0.15);border-radius:var(--rm);padding:10px 8px;text-align:center;}
-.hstat-val{font-size:22px;font-weight:600;color:#fff;}
-.hstat-lbl{font-size:10px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
-.start-btn{margin-top:1.25rem;width:100%;padding:14px;background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:var(--rm);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.15s;}
-.start-btn:hover{background:rgba(255,255,255,0.3);}
+.hero{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);padding:1.5rem;margin-bottom:1.5rem;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.hero-chars{font-family:'Noto Serif JP',serif;font-size:28px;color:var(--p900);letter-spacing:6px;margin-bottom:8px;}
+.hero-title{font-size:18px;font-weight:600;color:var(--text);margin-bottom:4px;}
+.hero-sub{font-size:13px;color:var(--text2);margin-bottom:1rem;}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.hstat{background:var(--bg2);border-radius:var(--rm);padding:10px 8px;text-align:center;}
+.hstat-val{font-size:20px;font-weight:600;color:var(--p800);}
+.hstat-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.start-btn{margin-top:1.25rem;width:100%;padding:14px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;}
+.start-btn:hover{background:var(--p800);}
+/* TEST */
 .twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
-.thead{background:var(--t50);border-bottom:0.5px solid var(--t400);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-.ttitle{font-size:14px;font-weight:500;color:var(--t800);}
-.tscore{font-size:13px;color:var(--t600);}
+.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.ttitle{font-size:14px;font-weight:500;color:var(--a900);}
+.tscore{font-size:13px;color:var(--a800);}
 .pstrip{height:5px;background:var(--bg2);}
-.pstrip-fill{height:100%;background:linear-gradient(90deg,var(--t600),var(--p600));transition:width 0.4s;}
+.pstrip-fill{height:100%;background:linear-gradient(90deg,var(--p600),var(--t400));transition:width 0.4s;}
 .tbody{padding:1.5rem;}
 .tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
 .tlc{background:var(--p50);color:var(--p800);}
@@ -49,6 +49,7 @@ a.back:hover{color:var(--text);}
 .tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
 .tnext:hover{background:var(--p800);}
 .tnext.show{display:block;}
+/* RESULT */
 .rwrap{padding:2rem 1.5rem;}
 .r-top{text-align:center;margin-bottom:1.5rem;}
 .remoji{font-size:52px;margin-bottom:0.75rem;}
@@ -83,299 +84,366 @@ a.back:hover{color:var(--text);}
 <div class="app">
   <a class="back" href="index.html">← Ana Sayfa</a>
   <div class="hero" id="heroWrap">
-    <div class="hero-icon">🥈</div>
-    <div class="hero-info">
-      <div class="hero-title">Büyük Sınav — Second Grade Kanji</div>
-      <div class="hero-sub">Kanji #81–240 · 160 kanji · 100 soru · Rastgele</div>
-      <div class="hero-stats">
-        <div class="hstat"><div class="hstat-val">160</div><div class="hstat-lbl">Kanji</div></div>
-        <div class="hstat"><div class="hstat-val">100</div><div class="hstat-lbl">Soru</div></div>
-        <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">Tip</div></div>
-      </div>
-      <button class="start-btn" onclick="startExam()">Sınava Başla →</button>
+    <div class="hero-chars">引角近光矢場前通肉毎</div>
+    <div class="hero-title">Büyük Sınav — Kanji #81–240</div>
+    <div class="hero-sub">Kanji #81–240 · Tüm setler · 300 Soru</div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-val">160</div><div class="hstat-lbl">Kanji</div></div>
+      <div class="hstat"><div class="hstat-val">300</div><div class="hstat-lbl">Soru</div></div>
+      <div class="hstat"><div class="hstat-val">7</div><div class="hstat-lbl">Soru Tipi</div></div>
     </div>
+    <button class="start-btn" onclick="startExam()">Sınava Başla →</button>
   </div>
   <div id="tv" style="display:none"></div>
   <div id="rv" style="display:none"></div>
 </div>
 <script>
 const K=[
-  {n:81,ch:"引",mn:"Çekmek",on:["IN"],kun:["hiku"],cp:[{k:"引力",r:"INRYOKU",m:"Yerçekimi"},{k:"辞引",r:"JIbiki",m:"Sözlük"},{k:"取引",r:"torihiki",m:"Alışveriş"}]},
-  {n:82,ch:"羽",mn:"Kanat / Tüy",on:["U"],kun:["ha","hane"],cp:[{k:"羽毛",r:"UMŌ",m:"Tüy"},{k:"羽織",r:"haori",m:"Haori giysisi"},{k:"一羽",r:"ICHIwa",m:"Bir kuş"}]},
-  {n:83,ch:"雲",mn:"Bulut",on:["UN"],kun:["kumo"],cp:[{k:"星雲",r:"SEIU N",m:"Nebula"},{k:"浮き雲",r:"ukigumo",m:"Yüzen bulut"},{k:"雲行き",r:"kumoyuki",m:"Gelişmelerin seyri"}]},
-  {n:84,ch:"園",mn:"Park / Bahçe",on:["EN"],kun:["sono"],cp:[{k:"公園",r:"KŌEN",m:"Park"},{k:"動物園",r:"DŌBUTSUEN",m:"Hayvanat bahçesi"},{k:"花園",r:"hanazono",m:"Çiçek bahçesi"}]},
-  {n:85,ch:"遠",mn:"Uzak",on:["EN"],kun:["tōi"],cp:[{k:"遠足",r:"ENSOKU",m:"Gezi, piknik"},{k:"遠視",r:"ENSHI",m:"Uzak görüşlülük"},{k:"遠回り",r:"tōmawari",m:"Dolambaçlı yol"}]},
-  {n:86,ch:"何",mn:"Ne / Kaç",on:["KA"],kun:["nan","nani"],cp:[{k:"何回",r:"nanKAI",m:"Kaç kez"},{k:"何歳",r:"nanSAI",m:"Kaç yaşında"},{k:"何者",r:"nanimono",m:"Ne tür kişi"}]},
-  {n:87,ch:"科",mn:"Bölüm / Dal",on:["KA"],kun:[],cp:[{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学科",r:"GAKKA",m:"Ders, konu"},{k:"英語科",r:"EIGOKA",m:"İngilizce bölümü"}]},
-  {n:88,ch:"夏",mn:"Yaz",on:["KA","GE"],kun:["natsu"],cp:[{k:"初夏",r:"SHOKA",m:"Erken yaz"},{k:"真夏",r:"manatsu",m:"Yaz ortası"},{k:"夏至",r:"GESHI",m:"Yaz gündönümü"}]},
-  {n:89,ch:"家",mn:"Ev / Uzman",on:["KA","KE"],kun:["ie"],cp:[{k:"農家",r:"NŌKA",m:"Çiftlik evi"},{k:"武家",r:"BUKE",m:"Savaşçı ailesi"},{k:"小説家",r:"SHŌSETSUKA",m:"Romancı"}]},
-  {n:90,ch:"歌",mn:"Şarkı",on:["KA"],kun:["uta","utau"],cp:[{k:"歌手",r:"KASHU",m:"Şarkıcı"},{k:"短歌",r:"TANKA",m:"Kısa şiir"},{k:"歌声",r:"utagoe",m:"Şarkı sesi"}]},
-  {n:91,ch:"画",mn:"Resim / Çizgi",on:["GA","KAKU"],kun:[],cp:[{k:"映画",r:"EIGA",m:"Film"},{k:"画面",r:"GAMEN",m:"Ekran"},{k:"計画",r:"KEIKAKU",m:"Plan"}]},
-  {n:92,ch:"回",mn:"Dönmek / Tur",on:["KAI"],kun:["mawaru"],cp:[{k:"回転",r:"KAITEN",m:"Dönme"},{k:"回数",r:"KAISŪ",m:"Frekans"},{k:"言い回し",r:"iimawashi",m:"İfade tarzı"}]},
-  {n:93,ch:"会",mn:"Buluşmak",on:["KAI","E"],kun:["au"],cp:[{k:"会社",r:"KAISHA",m:"Şirket"},{k:"会釈",r:"ESHAKU",m:"Hafif eğilme"},{k:"国会",r:"KOKKAI",m:"Parlamento"}]},
-  {n:94,ch:"海",mn:"Deniz",on:["KAI"],kun:["umi"],cp:[{k:"海軍",r:"KAIGUN",m:"Donanma"},{k:"日本海",r:"NIHONKAI",m:"Japonya Denizi"},{k:"海辺",r:"umibe",m:"Deniz kıyısı"}]},
-  {n:95,ch:"絵",mn:"Resim / Çizim",on:["KAI","E"],kun:[],cp:[{k:"絵画",r:"KAIGA",m:"Resim, tablo"},{k:"口絵",r:"kuchiE",m:"Frontispis"},{k:"絵本",r:"EHON",m:"Resimli kitap"}]},
-  {n:96,ch:"外",mn:"Dış / Diğer",on:["GAI","GE"],kun:["soto","hoka"],cp:[{k:"外人",r:"GAIJIN",m:"Yabancı"},{k:"外科",r:"GEKA",m:"Cerrahi"},{k:"外側",r:"sotogawa",m:"Dış taraf"}]},
-  {n:97,ch:"角",mn:"Boynuz / Açı / Köşe",on:["KAKU"],kun:["tsuno","kado"],cp:[{k:"角度",r:"KAKUDO",m:"Açı"},{k:"角笛",r:"tsunobue",m:"Boru flüt"},{k:"街角",r:"machikado",m:"Sokak köşesi"}]},
-  {n:98,ch:"楽",mn:"Zevk / Müzik",on:["GAKU","RAKU"],kun:["tanoshii"],cp:[{k:"気楽",r:"KIRAKU",m:"Rahat, serbest"},{k:"楽器",r:"GAKKI",m:"Müzik aleti"},{k:"楽しみ",r:"tanoshimi",m:"Zevk, eğlence"}]},
-  {n:99,ch:"活",mn:"Aktivite / Yaşam",on:["KATSU"],kun:[],cp:[{k:"生活",r:"SEIKATSU",m:"Yaşam, hayat"},{k:"活気",r:"KAKKI",m:"Canlılık"},{k:"活動",r:"KATSUDŌ",m:"Faaliyet"}]},
-  {n:100,ch:"間",mn:"Aralık / Boşluk",on:["KAN","KEN"],kun:["aida","ma"],cp:[{k:"時間",r:"JIKAN",m:"Saat, zaman"},{k:"人間",r:"NINGEN",m:"İnsan"},{k:"間違い",r:"machigai",m:"Hata"}]},
-  {n:101,ch:"丸",mn:"Yuvarlak / Top",on:["GAN"],kun:["maru","marui"],cp:[{k:"丸薬",r:"GAN'YAKU",m:"Hap, ilaç"},{k:"丸み",r:"marumi",m:"Yuvarlıklık"},{k:"日本丸",r:"NIPPON-maru",m:"Japonya gemisi"}]},
-  {n:102,ch:"岩",mn:"Kaya / Çıkıntı",on:["GAN"],kun:["iwa"],cp:[{k:"岩石",r:"GANSEKI",m:"Kaya, taş"},{k:"岩屋",r:"iwaya",m:"Mağara"},{k:"火成岩",r:"KASEIGAN",m:"Volkanik kaya"}]},
-  {n:103,ch:"顔",mn:"Yüz / Çehre",on:["GAN"],kun:["kao"],cp:[{k:"顔面",r:"GANMEN",m:"Yüz (resmi)"},{k:"顔色",r:"kaoiro",m:"Ten rengi"},{k:"顔つき",r:"kaotsuki",m:"Yüz ifadesi"}]},
-  {n:104,ch:"汽",mn:"Buhar",on:["KI"],kun:[],cp:[{k:"汽車",r:"KISHA",m:"Buharlı tren"},{k:"汽船",r:"KISEN",m:"Buharlı gemi"},{k:"汽笛",r:"KITEKI",m:"Düdük"}]},
-  {n:105,ch:"記",mn:"Kayıt / Kronik",on:["KI"],kun:[],cp:[{k:"記者",r:"KISHA",m:"Gazeteci"},{k:"記事",r:"KIJI",m:"Makale, haber"},{k:"日記",r:"NIKKI",m:"Günlük"}]},
-  {n:106,ch:"帰",mn:"Dönmek",on:["KI"],kun:["kaeru"],cp:[{k:"帰化",r:"KIKA",m:"Vatandaşlığa geçmek"},{k:"帰省",r:"KISEI",m:"Memlekete dönüş"},{k:"帰り道",r:"kaerimichi",m:"Dönüş yolu"}]},
-  {n:107,ch:"弓",mn:"Yay / Okçuluk",on:["KYŪ"],kun:["yumi"],cp:[{k:"弓道",r:"KYŪDŌ",m:"Okçuluk"},{k:"弓形",r:"KYŪJŌ",m:"Yay şekli"},{k:"弓取り",r:"yumitori",m:"Okçu"}]},
-  {n:108,ch:"牛",mn:"İnek / Boğa",on:["GYŪ"],kun:["ushi"],cp:[{k:"牛肉",r:"GYŪNIKU",m:"Sığır eti"},{k:"牛耳る",r:"GYŪJIru",m:"Kontrol altına almak"},{k:"牛飼い",r:"ushigai",m:"Sığır çobanı"}]},
-  {n:109,ch:"魚",mn:"Balık",on:["GYO"],kun:["uo","sakana"],cp:[{k:"金魚",r:"KINGYO",m:"Japon balığı"},{k:"魚釣り",r:"uotsuri",m:"Balık avlama"},{k:"魚屋",r:"sakanaYA",m:"Balıkçı dükkanı"}]},
-  {n:110,ch:"京",mn:"Başkent",on:["KYŌ","KEI"],kun:[],cp:[{k:"東京",r:"TŌKYŌ",m:"Tokyo"},{k:"上京",r:"JŌKYŌ",m:"Başkente gitmek"},{k:"京浜",r:"KEIHIN",m:"Tokyo-Yokohama bölgesi"}]},
-  {n:111,ch:"強",mn:"Güçlü",on:["KYŌ","GŌ"],kun:["tsuyoi"],cp:[{k:"勉強",r:"BENKYŌ",m:"Ders çalışmak"},{k:"強盗",r:"GŌTŌ",m:"Soyguncu"},{k:"強み",r:"tsuyomi",m:"Güçlü yön"}]},
-  {n:112,ch:"教",mn:"Öğretmek",on:["KYŌ"],kun:["oshieru"],cp:[{k:"教会",r:"KYŌKAI",m:"Kilise"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"教え子",r:"oshiego",m:"Öğrenci, talebe"}]},
-  {n:113,ch:"近",mn:"Yakın",on:["KIN"],kun:["chikai"],cp:[{k:"近所",r:"KINJO",m:"Mahalle"},{k:"最近",r:"SAIKIN",m:"Son zamanlarda"},{k:"近道",r:"chikamichi",m:"Kısa yol"}]},
-  {n:114,ch:"兄",mn:"Ağabey",on:["KEI","KYŌ"],kun:["ani"],cp:[{k:"父兄",r:"FUKEI",m:"Veliler"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"},{k:"お兄さん",r:"niisan",m:"Ağabey (saygılı)"}]},
-  {n:115,ch:"形",mn:"Şekil / Biçim",on:["KEI","GYŌ"],kun:["kata","katachi"],cp:[{k:"形式的",r:"KEISHIKITEKI",m:"Biçimsel, resmi"},{k:"人形",r:"NINGYŌ",m:"Bebek, kukla"},{k:"形見",r:"katami",m:"Hatıra eşyası"}]},
-  {n:116,ch:"計",mn:"Ölçmek / Hesaplamak",on:["KEI"],kun:["hakaru"],cp:[{k:"合計",r:"GŌKEI",m:"Toplam"},{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"速度計",r:"SOKUDOKEI",m:"Hız göstergesi"}]},
-  {n:117,ch:"元",mn:"Köken / Kaynak",on:["GEN","GAN"],kun:["moto"],cp:[{k:"元気",r:"GENKI",m:"Sağlık, enerji"},{k:"元来",r:"GANRAI",m:"Başlangıçta"},{k:"元通り",r:"motodōri",m:"Eskisi gibi"}]},
-  {n:118,ch:"言",mn:"Kelime / Söylemek",on:["GEN","GON"],kun:["koto","iu"],cp:[{k:"発言",r:"HATSUGEN",m:"Açıklama, beyan"},{k:"無言",r:"MUGON",m:"Sessizlik"},{k:"言葉",r:"kotoba",m:"Kelime, dil"}]},
-  {n:119,ch:"原",mn:"Düzlük / Köken",on:["GEN"],kun:["hara"],cp:[{k:"原子",r:"GENSHI",m:"Atom"},{k:"原文",r:"GENBUN",m:"Özgün metin"},{k:"草原",r:"kusahara",m:"Çimenlik"}]},
-  {n:120,ch:"戸",mn:"Kapı",on:["KO"],kun:["to"],cp:[{k:"戸外",r:"KOGAI",m:"Açık hava"},{k:"戸主",r:"KOSHU",m:"Ev reisi"},{k:"戸口",r:"toguchi",m:"Kapı girişi"}]},
-  {n:121,ch:"古",mn:"Eski",on:["KO"],kun:["furui"],cp:[{k:"復古",r:"FUKKO",m:"Restorasyon"},{k:"古着",r:"furugi",m:"Eski kıyafet"},{k:"考古学",r:"KŌKOGAKU",m:"Arkeoloji"}]},
-  {n:122,ch:"午",mn:"Öğlen",on:["GO"],kun:[],cp:[{k:"午後",r:"GOGO",m:"Öğleden sonra"},{k:"午前",r:"GOZEN",m:"Öğleden önce"},{k:"正午",r:"SHŌGO",m:"Tam öğlen"}]},
-  {n:123,ch:"後",mn:"Arkası / Sonra",on:["GO","KŌ"],kun:["ushiro","ato"],cp:[{k:"以後",r:"IGO",m:"Bundan sonra"},{k:"後半",r:"KŌHAN",m:"İkinci yarı"},{k:"後味",r:"atoaji",m:"Sonradan kalan tat"}]},
-  {n:124,ch:"語",mn:"Söylemek / Dil",on:["GO"],kun:["kataru"],cp:[{k:"語調",r:"GOCHŌ",m:"Konuşma tonu"},{k:"物語",r:"monogatari",m:"Hikaye"},{k:"日本語",r:"NIHONGO",m:"Japonca"}]},
-  {n:125,ch:"工",mn:"İş / Çalışma",on:["KŌ","KU"],kun:[],cp:[{k:"工場",r:"KŌJŌ",m:"Fabrika"},{k:"人工",r:"JINKŌ",m:"Yapay"},{k:"大工",r:"DAIKU",m:"Marangoz"}]},
-  {n:126,ch:"公",mn:"Kamuya ait / Adil",on:["KŌ"],kun:["ōyake"],cp:[{k:"公共",r:"KŌKYŌ",m:"Kamu"},{k:"公平",r:"KŌHEI",m:"Adalet"},{k:"公園",r:"KŌEN",m:"Park"}]},
-  {n:127,ch:"広",mn:"Geniş / Ferah",on:["KŌ"],kun:["hiroi"],cp:[{k:"広大",r:"KŌDAI",m:"Geniş, muazzam"},{k:"広島",r:"Hiroshima",m:"Hiroshima"},{k:"広告",r:"KŌKOKU",m:"Reklam"}]},
-  {n:128,ch:"交",mn:"Karışmak / Alışveriş",on:["KŌ"],kun:["majiru"],cp:[{k:"交通",r:"KŌTSŪ",m:"Trafik, ulaşım"},{k:"外交",r:"GAIKŌ",m:"Diplomasi"},{k:"交換",r:"KŌKAN",m:"Değiş tokuş"}]},
-  {n:129,ch:"光",mn:"Işık / Parlamak",on:["KŌ"],kun:["hikari","hikaru"],cp:[{k:"日光",r:"NIKKŌ",m:"Güneş ışığı"},{k:"光年",r:"KŌNEN",m:"Işık yılı"},{k:"光学",r:"KŌGAKU",m:"Optik"}]},
-  {n:130,ch:"考",mn:"Düşünmek",on:["KŌ"],kun:["kangaeru"],cp:[{k:"考案",r:"KŌAN",m:"Fikir, plan"},{k:"参考",r:"SANKŌ",m:"Referans"},{k:"考え事",r:"kangaegoto",m:"Merak, endişe"}]},
-  {n:131,ch:"行",mn:"Gitmek / Yapmak",on:["KŌ","GYŌ"],kun:["iku","okonau"],cp:[{k:"実行",r:"JIKKŌ",m:"Uygulama"},{k:"行列",r:"GYŌRETSU",m:"Tören alayı"},{k:"行方",r:"yukue",m:"Nereye gittiği"}]},
-  {n:132,ch:"高",mn:"Yüksek / Uzun",on:["KŌ"],kun:["takai"],cp:[{k:"高原",r:"KŌGEN",m:"Yayla"},{k:"最高",r:"SAIKŌ",m:"En yüksek"},{k:"高値",r:"takane",m:"Yüksek fiyat"}]},
-  {n:133,ch:"黄",mn:"Sarı",on:["KŌ","Ō"],kun:["ki"],cp:[{k:"黄葉",r:"KŌYŌ",m:"Sarı yapraklar"},{k:"黄金",r:"ŌGON",m:"Altın"},{k:"黄色い",r:"kiiroi",m:"Sarı"}]},
-  {n:134,ch:"合",mn:"Buluşmak / Birleşmek",on:["GŌ"],kun:["au"],cp:[{k:"合理",r:"GŌRI",m:"Akılcılık"},{k:"合戦",r:"KASSEN",m:"Savaş"},{k:"話し合い",r:"hanashiai",m:"Görüşme"}]},
-  {n:135,ch:"谷",mn:"Vadi / Boğaz",on:["KOKU"],kun:["tani"],cp:[{k:"幽谷",r:"YŪKOKU",m:"Derin vadi"},{k:"谷底",r:"tanisoko",m:"Vadi tabanı"},{k:"長谷川",r:"Hasegawa",m:"Hasegawa (soyad)"}]},
-  {n:136,ch:"国",mn:"Ülke / Bölge",on:["KOKU"],kun:["kuni"],cp:[{k:"外国",r:"GAIKOKU",m:"Yabancı ülke"},{k:"国家",r:"KOKKA",m:"Devlet, ulus"},{k:"国々",r:"kuniguni",m:"Uluslar"}]},
-  {n:137,ch:"黒",mn:"Siyah",on:["KOKU"],kun:["kuroi"],cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"黒海",r:"KOKKAI",m:"Karadeniz"},{k:"黒幕",r:"kuroMAKU",m:"Perde arkasındaki güç"}]},
-  {n:138,ch:"今",mn:"Şimdi",on:["KON","KIN"],kun:["ima"],cp:[{k:"今週",r:"KONSHŪ",m:"Bu hafta"},{k:"今度",r:"KONDO",m:"Bu sefer"},{k:"今ごろ",r:"imagoro",m:"Şu sıralar"}]},
-  {n:139,ch:"才",mn:"Yetenek / Yaş",on:["SAI"],kun:[],cp:[{k:"天才",r:"TENSAI",m:"Deha, dahi"},{k:"五才",r:"GOSAI",m:"Beş yaşında"},{k:"才能",r:"SAINŌ",m:"Yetenek"}]},
-  {n:140,ch:"細",mn:"İnce / Ayrıntılı",on:["SAI"],kun:["hosoi","komakai"],cp:[{k:"細工",r:"SAIKU",m:"El işi, zanaat"},{k:"細長い",r:"hosonagai",m:"İnce ve uzun"},{k:"こまごま",r:"komagoma",m:"Ayrıntılı olarak"}]},
-  {n:141,ch:"作",mn:"Yapmak / Üretmek",on:["SAKU","SA"],kun:["tsukuru"],cp:[{k:"製作",r:"SEISAKU",m:"Üretim, yapım"},{k:"作品",r:"SAKUHIN",m:"Bir eser"},{k:"動作",r:"DŌSA",m:"Hareket, eylem"}]},
-  {n:142,ch:"算",mn:"Saymak / Hesap",on:["SAN"],kun:[],cp:[{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"予算",r:"YOSAN",m:"Bütçe"},{k:"算数",r:"SANSŪ",m:"Aritmetik"}]},
-  {n:143,ch:"止",mn:"Durmak",on:["SHI"],kun:["tomeru","tomaru"],cp:[{k:"中止",r:"CHŪSHI",m:"Durdurma"},{k:"止め役",r:"tomeYAKU",m:"Arabulucu"},{k:"止め処",r:"tomedo",m:"Son"}]},
-  {n:144,ch:"市",mn:"Şehir / Pazar",on:["SHI"],kun:["ichi"],cp:[{k:"吹田市",r:"SuitaSHI",m:"Suita şehri"},{k:"市場",r:"SHIJŌ",m:"Pazar"},{k:"魚市",r:"uoichi",m:"Balık pazarı"}]},
-  {n:145,ch:"矢",mn:"Ok",on:["SHI"],kun:["ya"],cp:[{k:"一矢",r:"ISSHI",m:"Misilleme"},{k:"矢印",r:"yajirushi",m:"Ok işareti"},{k:"矢先に",r:"yasaki ni",m:"Tam o noktada"}]},
-  {n:146,ch:"姉",mn:"Abla",on:["SHI"],kun:["ane"],cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"お姉さん",r:"neesan",m:"Abla (saygılı)"},{k:"姉上",r:"aneue",m:"Abla (resmi)"}]},
-  {n:147,ch:"思",mn:"Düşünmek",on:["SHI"],kun:["omou"],cp:[{k:"思想",r:"SHISŌ",m:"İdeoloji, düşünce"},{k:"思考",r:"SHIKŌ",m:"Düşünce"},{k:"思い出",r:"omoide",m:"Hatıra, anı"}]},
-  {n:148,ch:"紙",mn:"Kağıt",on:["SHI"],kun:["kami"],cp:[{k:"表紙",r:"HYŌSHI",m:"Kitap kapağı"},{k:"和紙",r:"WASHI",m:"Japon kağıdı"},{k:"手紙",r:"tegami",m:"Mektup"}]},
-  {n:149,ch:"寺",mn:"Tapınak",on:["JI"],kun:["tera"],cp:[{k:"龍安寺",r:"RYŌANJI",m:"Ryoanji Tapınağı"},{k:"寺院",r:"JIIN",m:"Budist tapınak"},{k:"山寺",r:"yamadera",m:"Dağ tapınağı"}]},
-  {n:150,ch:"自",mn:"Kendisi / Kendi",on:["JI","SHI"],kun:["mizukara"],cp:[{k:"自分",r:"JIBUN",m:"Kendisi, ben"},{k:"自然",r:"SHIZEN",m:"Doğa"},{k:"自信",r:"JISHIN",m:"Öz güven"}]},
-  {n:151,ch:"時",mn:"Zaman / Saat",on:["JI"],kun:["toki"],cp:[{k:"時代",r:"JIDAI",m:"Dönem, çağ"},{k:"二時",r:"NIJI",m:"İki o'clock"},{k:"時々",r:"tokidoki",m:"Zaman zaman"}]},
-  {n:152,ch:"室",mn:"Oda / Ev",on:["SHITSU"],kun:["muro"],cp:[{k:"室内",r:"SHITSUNAI",m:"İç mekan"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"室町",r:"Muromachi",m:"Muromachi"}]},
-  {n:153,ch:"社",mn:"Şinto tapınağı / Şirket",on:["SHA"],kun:["yashiro"],cp:[{k:"社会",r:"SHAKAI",m:"Toplum"},{k:"会社",r:"KAISHA",m:"Şirket"},{k:"社交性",r:"SHAKŌSEI",m:"Sosyallik"}]},
-  {n:154,ch:"弱",mn:"Zayıf",on:["JAKU"],kun:["yowai"],cp:[{k:"弱点",r:"JAKUTEN",m:"Zayıf nokta"},{k:"弱み",r:"yowami",m:"Zayıflık"},{k:"弱虫",r:"yowamushi",m:"Korkak"}]},
-  {n:155,ch:"首",mn:"Baş / Boyun / Şef",on:["SHU"],kun:["kubi"],cp:[{k:"首領",r:"SHURYŌ",m:"Lider, şef"},{k:"首輪",r:"kubiwa",m:"Boyunluk"},{k:"首切り",r:"kubikiri",m:"İşten atma"}]},
-  {n:156,ch:"秋",mn:"Sonbahar",on:["SHŪ"],kun:["aki"],cp:[{k:"晩秋",r:"BANSHŪ",m:"Sonbaharın sonu"},{k:"秋分",r:"SHŪBUN",m:"Sonbahar ekinoksu"},{k:"秋空",r:"akizora",m:"Sonbahar gökyüzü"}]},
-  {n:157,ch:"週",mn:"Hafta",on:["SHŪ"],kun:[],cp:[{k:"週間",r:"SHŪKAN",m:"Hafta"},{k:"先週",r:"SENSHŪ",m:"Geçen hafta"},{k:"二週め",r:"NISHŪME",m:"İkinci hafta"}]},
-  {n:158,ch:"春",mn:"İlkbahar",on:["SHUN"],kun:["haru"],cp:[{k:"青春",r:"SEISHUN",m:"Gençlik"},{k:"売春",r:"BAISHUN",m:"Fuhuş"},{k:"春着",r:"harugi",m:"İlkbahar kıyafetleri"}]},
-  {n:159,ch:"書",mn:"Yazmak / Metin",on:["SHO"],kun:["kaku"],cp:[{k:"書記",r:"SHOKI",m:"Sekreter"},{k:"教科書",r:"KYŌKASHO",m:"Ders kitabı"},{k:"葉書",r:"hagaki",m:"Kartpostal"}]},
-  {n:160,ch:"少",mn:"Az / Biraz",on:["SHŌ"],kun:["sukunai","sukoshi"],cp:[{k:"少年",r:"SHŌNEN",m:"Genç erkek"},{k:"少数",r:"SHŌSŪ",m:"Azınlık"},{k:"多少",r:"TASHŌ",m:"Az ya da çok"}]},
-  {n:161,ch:"場",mn:"Yer / Alan",on:["JŌ"],kun:["ba"],cp:[{k:"会場",r:"KAIJŌ",m:"Toplantı yeri"},{k:"入場",r:"NYŪJŌ",m:"Giriş"},{k:"広場",r:"hiroba",m:"Meydan"}]},
-  {n:162,ch:"色",mn:"Renk / Seks",on:["SHOKU","SHIKI"],kun:["iro"],cp:[{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"},{k:"色素",r:"SHIKISO",m:"Pigment"},{k:"銀色",r:"GIN'iro",m:"Gümüş rengi"}]},
-  {n:163,ch:"食",mn:"Yiyecek / Yemek",on:["SHOKU"],kun:["taberu","kuu"],cp:[{k:"食事",r:"SHOKUJI",m:"Yemek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"},{k:"食い物",r:"kuimono",m:"Kurban"}]},
-  {n:164,ch:"心",mn:"Kalp / Zihin",on:["SHIN"],kun:["kokoro"],cp:[{k:"中心",r:"CHŪSHIN",m:"Merkez"},{k:"心臓",r:"SHINZŌ",m:"Kalp (organ)"},{k:"真心",r:"magokoro",m:"Samimiyet"}]},
-  {n:165,ch:"新",mn:"Yeni",on:["SHIN"],kun:["atarashii","arata"],cp:[{k:"新年",r:"SHINNEN",m:"Yeni Yıl"},{k:"新品",r:"SHINPIN",m:"Yeni ürün"},{k:"新潟",r:"Niigata",m:"Niigata"}]},
-  {n:166,ch:"親",mn:"Ebeveyn / Yakın",on:["SHIN"],kun:["oya","shitashii"],cp:[{k:"両親",r:"RYŌSHIN",m:"Ebeveynler"},{k:"親類",r:"SHINRUI",m:"Akrabalar"},{k:"親方",r:"oyakata",m:"Patron, usta"}]},
-  {n:167,ch:"図",mn:"Plan / Diyagram",on:["ZU","TO"],kun:["hakaru"],cp:[{k:"地図",r:"CHIZU",m:"Harita"},{k:"図画",r:"ZUGA",m:"Çizim"},{k:"図書館",r:"TOSHOKAN",m:"Kütüphane"}]},
-  {n:168,ch:"数",mn:"Sayı / Saymak",on:["SŪ"],kun:["kazu","kazoeru"],cp:[{k:"数学",r:"SŪGAKU",m:"Matematik"},{k:"数日",r:"SŪJITSU",m:"Birkaç gün"},{k:"数々",r:"kazukazu",m:"Çok sayıda"}]},
-  {n:169,ch:"西",mn:"Batı",on:["SEI","SAI"],kun:["nishi"],cp:[{k:"西洋",r:"SEIYŌ",m:"Batı (dünya)"},{k:"関西",r:"KANSAI",m:"Kansai bölgesi"},{k:"西日",r:"nishibi",m:"Öğleden sonraki güneş"}]},
-  {n:170,ch:"声",mn:"Ses / Ses tonu",on:["SEI","SHŌ"],kun:["koe"],cp:[{k:"声援",r:"SEIEN",m:"Sesli destek"},{k:"大音声",r:"DAIONJŌ",m:"Yüksek ses"},{k:"泣き声",r:"nakigoe",m:"Ağlama sesi"}]},
-  {n:171,ch:"星",mn:"Yıldız",on:["SEI","SHŌ"],kun:["hoshi"],cp:[{k:"火星",r:"KASEI",m:"Mars"},{k:"明星",r:"MYŌJŌ",m:"Venüs"},{k:"流れ星",r:"nagareboshi",m:"Kayan yıldız"}]},
-  {n:172,ch:"晴",mn:"Açık / Parlak",on:["SEI"],kun:["hareru"],cp:[{k:"晴天",r:"SEITEN",m:"Açık gökyüzü"},{k:"晴れ晴れ",r:"harebare",m:"Berrak, neşeli"},{k:"晴れ着",r:"haregi",m:"En güzel kıyafet"}]},
-  {n:173,ch:"切",mn:"Kesmek",on:["SETSU","SAI"],kun:["kiru"],cp:[{k:"親切",r:"SHINSETSU",m:"Nezaket"},{k:"一切",r:"ISSAI",m:"Her şey"},{k:"腹切り",r:"harakiri",m:"Harakiri"}]},
-  {n:174,ch:"雪",mn:"Kar",on:["SETSU"],kun:["yuki"],cp:[{k:"降雪",r:"KŌSETSU",m:"Kar yağışı"},{k:"大雪",r:"ōyuki",m:"Yoğun kar"},{k:"除雪車",r:"JOSETSUSHA",m:"Kar temizleme aracı"}]},
-  {n:175,ch:"船",mn:"Tekne / Gemi",on:["SEN"],kun:["fune"],cp:[{k:"船長",r:"SENCHŌ",m:"Kaptan"},{k:"小舟",r:"kogibune",m:"Küçük tekne"},{k:"船便",r:"funaBIN",m:"Deniz postası"}]},
-  {n:176,ch:"線",mn:"Hat / Çizgi",on:["SEN"],kun:[],cp:[{k:"脱線",r:"DASSEN",m:"Demiryolu kazası"},{k:"光線",r:"KŌSEN",m:"Işın"},{k:"直線",r:"CHOKUSEN",m:"Düz çizgi"}]},
-  {n:177,ch:"前",mn:"Önce / Ön",on:["ZEN"],kun:["mae"],cp:[{k:"前者",r:"ZENSHA",m:"Önceki"},{k:"空前",r:"KŪZEN",m:"Emsalsiz"},{k:"前払い",r:"maebarai",m:"Ön ödeme"}]},
-  {n:178,ch:"組",mn:"Grup / Toplamak",on:["SO"],kun:["kumi","kumu"],cp:[{k:"組織",r:"SOSHIKI",m:"Organizasyon"},{k:"組合",r:"kumiai",m:"Sendika"},{k:"組み立て",r:"kumitate",m:"Montaj"}]},
-  {n:179,ch:"走",mn:"Koşmak",on:["SŌ"],kun:["hashiru"],cp:[{k:"競走",r:"KYŌSŌ",m:"Yarış"},{k:"走行",r:"SŌKŌ",m:"Seyahat etmek"},{k:"走り書き",r:"hashirigaki",m:"Çabuk yazı"}]},
-  {n:180,ch:"多",mn:"Çok / Fazla",on:["TA"],kun:["ōi"],cp:[{k:"多数",r:"TASŪ",m:"Çoğunluk"},{k:"多面的",r:"TAMENTEKI",m:"Çok yönlü"},{k:"多すぎ",r:"ōsugi",m:"Çok fazla"}]},
-  {n:181,ch:"太",mn:"Şişman / Büyük",on:["TAI","TA"],kun:["futoi"],cp:[{k:"太子",r:"TAISHI",m:"Prens"},{k:"太陽",r:"TAIYŌ",m:"Güneş"},{k:"太字",r:"futoJI",m:"Kalın yazı"}]},
-  {n:182,ch:"体",mn:"Beden / Vücut",on:["TAI","TEI"],kun:["karada"],cp:[{k:"体格",r:"TAIKAKU",m:"Fizik yapı"},{k:"風体",r:"FŪTEI",m:"Duruş, tutum"},{k:"体つき",r:"karadatsuki",m:"Vücut yapısı"}]},
-  {n:183,ch:"台",mn:"Stand / Platform",on:["DAI","TAI"],kun:[],cp:[{k:"土台",r:"DODAI",m:"Temel, zemin"},{k:"台風",r:"TAIFŪ",m:"Tayfun"},{k:"台所",r:"DAIdokoro",m:"Mutfak"}]},
-  {n:184,ch:"地",mn:"Yer / Arazi",on:["CHI","JI"],kun:[],cp:[{k:"地方",r:"CHIHŌ",m:"Bölge, yöre"},{k:"地下",r:"CHIKA",m:"Yeraltı"},{k:"地元",r:"JImoto",m:"Yerel"}]},
-  {n:185,ch:"池",mn:"Havuz / Gölet",on:["CHI"],kun:["ike"],cp:[{k:"用水池",r:"YŌSUICHI",m:"Rezervuar"},{k:"電池",r:"DENCHI",m:"Pil"},{k:"古池",r:"furuike",m:"Eski havuz"}]},
-  {n:186,ch:"知",mn:"Bilmek",on:["CHI"],kun:["shiru"],cp:[{k:"知識",r:"CHISHIKI",m:"Bilgi"},{k:"知的",r:"CHITEKI",m:"Entelektüel"},{k:"知り合い",r:"shiriai",m:"Tanıdık"}]},
-  {n:187,ch:"茶",mn:"Çay",on:["CHA","SA"],kun:[],cp:[{k:"茶碗",r:"CHAWAN",m:"Çay kasesi"},{k:"茶々",r:"CHACHA",m:"Müdahale"},{k:"茶道",r:"SADŌ",m:"Çay töreni"}]},
-  {n:188,ch:"昼",mn:"Öğlen / Gündüz",on:["CHŪ"],kun:["hiru"],cp:[{k:"昼食",r:"CHŪSHOKU",m:"Öğle yemeği"},{k:"昼光性",r:"CHŪKŌSEI",m:"Gündüzcül"},{k:"昼間",r:"hiruma",m:"Gündüz vakti"}]},
-  {n:189,ch:"長",mn:"Uzun / Kıdemli",on:["CHŌ"],kun:["nagai"],cp:[{k:"成長",r:"SEICHŌ",m:"Büyüme"},{k:"会長",r:"KAICHŌ",m:"Başkan"},{k:"長生き",r:"nagaiki",m:"Uzun ömür"}]},
-  {n:190,ch:"鳥",mn:"Kuş",on:["CHŌ"],kun:["tori"],cp:[{k:"白鳥",r:"HAKUCHŌ",m:"Kuğu"},{k:"野鳥",r:"YACHŌ",m:"Yabani kuş"},{k:"鳥居",r:"torii",m:"Şinto tapınak kapısı"}]},
-  {n:191,ch:"朝",mn:"Sabah / Saray",on:["CHŌ"],kun:["asa"],cp:[{k:"朝食",r:"CHŌSHOKU",m:"Kahvaltı"},{k:"朝日",r:"asahi",m:"Sabah güneşi"},{k:"朝廷",r:"CHŌTEI",m:"İmparatorluk sarayı"}]},
-  {n:192,ch:"直",mn:"Doğrudan / Düzgün",on:["CHOKU","JIKI"],kun:["naoru","naosu"],cp:[{k:"直接",r:"CHOKUSETSU",m:"Doğrudan"},{k:"正直",r:"SHŌJIKI",m:"Dürüstlük"},{k:"直し屋",r:"naoshiya",m:"Tamirci"}]},
-  {n:193,ch:"通",mn:"Geçmek / İşe gidip gelmek",on:["TSŪ"],kun:["tōru","kayou"],cp:[{k:"通行",r:"TSŪKŌ",m:"Geçiş"},{k:"通勤",r:"TSŪKIN",m:"İşe gidip gelme"},{k:"大通り",r:"ōdōri",m:"Ana cadde"}]},
-  {n:194,ch:"弟",mn:"Küçük erkek kardeş",on:["TEI","DAI"],kun:["otōto"],cp:[{k:"師弟",r:"SHITEI",m:"Hoca ve öğrenci"},{k:"弟子",r:"DESHI",m:"Öğrenci"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"}]},
-  {n:195,ch:"店",mn:"Dükkan / Mağaza",on:["TEN"],kun:["mise","tana"],cp:[{k:"店員",r:"TEN'IN",m:"Mağaza personeli"},{k:"夜店",r:"yomise",m:"Gece pazarı"},{k:"店立て",r:"tanadate",m:"Tahliye"}]},
-  {n:196,ch:"点",mn:"Nokta / İşaret",on:["TEN"],kun:[],cp:[{k:"点線",r:"TENSEN",m:"Noktalı çizgi"},{k:"得点",r:"TOKUTEN",m:"Puan"},{k:"重点",r:"JŪTEN",m:"Vurgu"}]},
-  {n:197,ch:"電",mn:"Elektrik",on:["DEN"],kun:[],cp:[{k:"電話",r:"DENWA",m:"Telefon"},{k:"電球",r:"DENKYŪ",m:"Ampul"},{k:"電流",r:"DENRYŪ",m:"Elektrik akımı"}]},
-  {n:198,ch:"刀",mn:"Kılıç / Bıçak",on:["TŌ"],kun:["katana"],cp:[{k:"大刀",r:"DAITŌ",m:"Uzun kılıç"},{k:"軍刀",r:"GUNTŌ",m:"Askeri kılıç"},{k:"小刀",r:"kogatana",m:"Çakı"}]},
-  {n:199,ch:"冬",mn:"Kış",on:["TŌ"],kun:["fuyu"],cp:[{k:"冬眠",r:"TŌMIN",m:"Kış uykusu"},{k:"冬季",r:"TŌKI",m:"Kış mevsimi"},{k:"冬枯れ",r:"fuyugare",m:"Kış solgunluğu"}]},
-  {n:200,ch:"当",mn:"Uygulamak / İsabet",on:["TŌ"],kun:["ataru"],cp:[{k:"相当",r:"SŌTŌ",m:"Uygun"},{k:"当人",r:"TŌNIN",m:"İlgili kişi"},{k:"手当て",r:"teate",m:"Ödenek"}]},
-  {n:201,ch:"東",mn:"Doğu",on:["TŌ"],kun:["higashi"],cp:[{k:"東洋",r:"TŌYŌ",m:"Doğu (dünya)"},{k:"東側",r:"higashigawa",m:"Doğu tarafı"},{k:"東屋",r:"azumaya",m:"Çardak"}]},
-  {n:202,ch:"答",mn:"Cevap",on:["TŌ"],kun:["kotaeru"],cp:[{k:"回答",r:"KAITŌ",m:"Çözüm, yanıt"},{k:"答案",r:"TŌAN",m:"Sınav kağıdı"},{k:"口答え",r:"kuchigotae",m:"Karşılık"}]},
-  {n:203,ch:"頭",mn:"Baş / Tepe",on:["TŌ","ZU"],kun:["atama"],cp:[{k:"頭骨",r:"TŌKOTSU",m:"Kafatası"},{k:"頭痛",r:"ZUTSŪ",m:"Baş ağrısı"},{k:"頭金",r:"atamaKIN",m:"Peşinat"}]},
-  {n:204,ch:"同",mn:"Aynı",on:["DŌ"],kun:["onaji"],cp:[{k:"同様",r:"DŌYŌ",m:"Benzer"},{k:"同時",r:"DŌJI",m:"Eş zamanlı"},{k:"同意",r:"DŌUI",m:"Anlaşma"}]},
-  {n:205,ch:"道",mn:"Yol / Tarz",on:["DŌ","TŌ"],kun:["michi"],cp:[{k:"鉄道",r:"TETSUDŌ",m:"Demiryolu"},{k:"神道",r:"SHINTŌ",m:"Şintoizm"},{k:"道端",r:"michibata",m:"Yol kenarı"}]},
-  {n:206,ch:"読",mn:"Okumak",on:["DOKU","TOKU"],kun:["yomu"],cp:[{k:"読者",r:"DOKUSHA",m:"Okuyucu"},{k:"読本",r:"TOKUHON",m:"Okuma kitabı"},{k:"読み方",r:"yomikata",m:"Okuma biçimi"}]},
-  {n:207,ch:"内",mn:"İç / İçeri",on:["NAI","DAI"],kun:["uchi"],cp:[{k:"内部",r:"NAIBU",m:"İç kısım"},{k:"家内",r:"KANAI",m:"Eş (resmi)"},{k:"内気",r:"uchiKI",m:"Çekingenlik"}]},
-  {n:208,ch:"南",mn:"Güney",on:["NAN"],kun:["minami"],cp:[{k:"東南",r:"TŌNAN",m:"Güneydoğu"},{k:"南極",r:"NANKYOKU",m:"Güney Kutbu"},{k:"南側",r:"minamigawa",m:"Güney tarafı"}]},
-  {n:209,ch:"肉",mn:"Et / Beden",on:["NIKU"],kun:[],cp:[{k:"馬肉",r:"BANIKU",m:"At eti"},{k:"肉屋",r:"NIKUya",m:"Kasap"},{k:"肉眼",r:"NIKUGAN",m:"Çıplak göz"}]},
-  {n:210,ch:"馬",mn:"At",on:["BA"],kun:["uma","ma"],cp:[{k:"馬術",r:"BAJUTSU",m:"Binicilik"},{k:"馬乗り",r:"umanori",m:"At binme"},{k:"馬子",r:"mago",m:"Yük atı sürücüsü"}]},
-  {n:211,ch:"売",mn:"Satmak",on:["BAI"],kun:["uru"],cp:[{k:"売買",r:"BAIBAI",m:"Alım satım"},{k:"売店",r:"BAITEN",m:"Büfe"},{k:"売り物",r:"urimono",m:"Satılık ürün"}]},
-  {n:212,ch:"買",mn:"Satın almak",on:["BAI"],kun:["kau"],cp:[{k:"買収",r:"BAISHŪ",m:"Satın alma"},{k:"買い物",r:"kaimono",m:"Alışveriş"},{k:"買い手",r:"kaite",m:"Alıcı"}]},
-  {n:213,ch:"麦",mn:"Arpa / Buğday",on:["BAKU"],kun:["mugi"],cp:[{k:"麦芽",r:"BAKUGA",m:"Malt"},{k:"麦茶",r:"mugiCHA",m:"Arpa çayı"},{k:"小麦",r:"komugi",m:"Buğday"}]},
-  {n:214,ch:"半",mn:"Yarım / Orta",on:["HAN"],kun:["nakaba"],cp:[{k:"半分",r:"HANBUN",m:"Yarım"},{k:"半島",r:"HANTŌ",m:"Yarımada"},{k:"半年",r:"HANtoshi",m:"Yarım yıl"}]},
-  {n:215,ch:"番",mn:"Numara / Nöbet",on:["BAN"],kun:[],cp:[{k:"順番",r:"JUNBAN",m:"Sıra, dizi"},{k:"番人",r:"BANNIN",m:"Bekçi"},{k:"一番",r:"ICHIBAN",m:"Birinci"}]},
-  {n:216,ch:"父",mn:"Baba",on:["FU"],kun:["chichi"],cp:[{k:"父母",r:"FUBO",m:"Ebeveynler"},{k:"お父様",r:"otōsama",m:"Baba (saygılı)"},{k:"父親",r:"chichioya",m:"Baba"}]},
-  {n:217,ch:"風",mn:"Rüzgar / Tarz",on:["FŪ","FU"],kun:["kaze"],cp:[{k:"風船",r:"FŪSEN",m:"Balon"},{k:"神風",r:"kamikaze",m:"İlahi rüzgar"},{k:"和風",r:"WAFŪ",m:"Japon tarzı"}]},
-  {n:218,ch:"分",mn:"Bölmek / Dakika",on:["BUN","FUN"],kun:["wakaru"],cp:[{k:"分子",r:"BUNSHI",m:"Molekül"},{k:"一分",r:"IPPUN",m:"Bir dakika"},{k:"分かり",r:"wakari",m:"Anlayış"}]},
-  {n:219,ch:"聞",mn:"Duymak / Sormak",on:["BUN","MON"],kun:["kiku"],cp:[{k:"新聞",r:"SHINBUN",m:"Gazete"},{k:"聴聞",r:"CHŌMON",m:"Dinleme"},{k:"聞き違い",r:"kikichigai",m:"Yanlış duyma"}]},
-  {n:220,ch:"米",mn:"Pirinç / Amerika",on:["BEI","MAI"],kun:["kome"],cp:[{k:"米価",r:"BEIKA",m:"Pirinç fiyatı"},{k:"米国",r:"BEIKOKU",m:"Amerika"},{k:"白米",r:"HAKUMAI",m:"Beyaz pirinç"}]},
-  {n:221,ch:"歩",mn:"Yürümek / Oran",on:["HO","BU"],kun:["aruku"],cp:[{k:"進歩",r:"SHINPO",m:"İlerleme"},{k:"歩合",r:"BUai",m:"Oran, pay"},{k:"歩き出す",r:"arukidasu",m:"Yürümeye başlamak"}]},
-  {n:222,ch:"母",mn:"Anne",on:["BO"],kun:["haha"],cp:[{k:"母性",r:"BOSEI",m:"Annelik"},{k:"お母様",r:"okāsama",m:"Anne (saygılı)"},{k:"母親",r:"hahaoya",m:"Anne"}]},
-  {n:223,ch:"方",mn:"Yön / Taraf",on:["HŌ"],kun:["kata"],cp:[{k:"方角",r:"HŌGAKU",m:"Yön"},{k:"親方",r:"oyakata",m:"Patron, usta"},{k:"見方",r:"mikata",m:"Bakış açısı"}]},
-  {n:224,ch:"北",mn:"Kuzey / Kaçmak",on:["HOKU"],kun:["kita"],cp:[{k:"東北",r:"TŌHOKU",m:"Kuzeydoğu"},{k:"敗北",r:"HAIBOKU",m:"Yenilgi"},{k:"北風",r:"kitakaze",m:"Kuzey rüzgarı"}]},
-  {n:225,ch:"毎",mn:"Her / Her biri",on:["MAI"],kun:[],cp:[{k:"毎日",r:"MAINICHI",m:"Her gün"},{k:"毎度",r:"MAIDO",m:"Her seferinde"},{k:"日ごと",r:"higoto",m:"Günlük"}]},
-  {n:226,ch:"妹",mn:"Küçük kız kardeş",on:["MAI"],kun:["imōto"],cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"妹分",r:"imōtoBUN",m:"Manevi küçük kız kardeş"},{k:"令妹",r:"REIMAI",m:"Küçük kız kardeşiniz"}]},
-  {n:227,ch:"万",mn:"On bin / Sayısız",on:["MAN","BAN"],kun:["yorozu"],cp:[{k:"五万",r:"GOMAN",m:"Elli bin"},{k:"万事",r:"BANJI",m:"Her şey"},{k:"万屋",r:"yorozuya",m:"Bakkal"}]},
-  {n:228,ch:"明",mn:"Berrak / Aydınlık",on:["MEI","MYŌ"],kun:["akarui","akeru"],cp:[{k:"明白",r:"MEIHAKU",m:"Açıklık"},{k:"明日",r:"MYŌNICHI",m:"Yarın"},{k:"明け方",r:"akegata",m:"Şafak"}]},
-  {n:229,ch:"鳴",mn:"İnsan dışı ses",on:["MEI"],kun:["naku","naru"],cp:[{k:"鳴動",r:"MEIDŌ",m:"Gürültü"},{k:"鳴き声",r:"nakigoe",m:"Hayvan sesi"},{k:"鳴り物",r:"narimono",m:"Müzik aleti"}]},
-  {n:230,ch:"毛",mn:"Saç / Tüy",on:["MŌ"],kun:["ke"],cp:[{k:"羊毛",r:"YŌMŌ",m:"Yün"},{k:"毛皮",r:"kegawa",m:"Kürk"},{k:"毛虫",r:"kemushi",m:"Tırtıl"}]},
-  {n:231,ch:"門",mn:"Kapı / Geçit",on:["MON"],kun:["kado"],cp:[{k:"正門",r:"SEIMON",m:"Ana kapı"},{k:"門番",r:"MONBAN",m:"Kapıcı"},{k:"門出",r:"kadode",m:"Yola çıkış"}]},
-  {n:232,ch:"夜",mn:"Gece",on:["YA"],kun:["yo","yoru"],cp:[{k:"夜光性",r:"YAKŌSEI",m:"Nokturnal"},{k:"夜明け",r:"yoake",m:"Şafak"},{k:"夜昼",r:"yoruhiru",m:"Gece gündüz"}]},
-  {n:233,ch:"野",mn:"Kır / Yabani",on:["YA"],kun:["no"],cp:[{k:"野生",r:"YASEI",m:"Yabani"},{k:"野球",r:"YAKYŪ",m:"Beysbol"},{k:"野原",r:"nohara",m:"Çayır"}]},
-  {n:234,ch:"友",mn:"Arkadaş",on:["YŪ"],kun:["tomo"],cp:[{k:"友人",r:"YŪJIN",m:"Arkadaş"},{k:"友情",r:"YŪJŌ",m:"Dostluk"},{k:"友達",r:"tomodachi",m:"Arkadaş"}]},
-  {n:235,ch:"用",mn:"Kullanmak",on:["YŌ"],kun:["mochiiru"],cp:[{k:"用事",r:"YŌJI",m:"İş"},{k:"用意",r:"YŌUI",m:"Hazırlık"},{k:"悪用",r:"AKUYŌ",m:"Kötüye kullanmak"}]},
-  {n:236,ch:"曜",mn:"Haftanın günü",on:["YŌ"],kun:[],cp:[{k:"曜日",r:"YŌbi",m:"Haftanın günü"},{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"七曜",r:"SHICHIYŌ",m:"Yedi gün"}]},
-  {n:237,ch:"来",mn:"Gelmek",on:["RAI"],kun:["kuru","kitaru"],cp:[{k:"来月",r:"RAIGETSU",m:"Gelecek ay"},{k:"新来者",r:"SHINRAISHA",m:"Yeni gelen"},{k:"出来事",r:"dekigoto",m:"Olay"}]},
-  {n:238,ch:"里",mn:"Köy / Ri (mesafe)",on:["RI"],kun:["sato"],cp:[{k:"一里",r:"ICHIRI",m:"1 ri"},{k:"里子",r:"satogo",m:"Evlatlık çocuk"},{k:"里芋",r:"satoimo",m:"Taro kökü"}]},
-  {n:239,ch:"理",mn:"Neden / Mantık",on:["RI"],kun:[],cp:[{k:"理性",r:"RISEI",m:"Akılcılık"},{k:"無理",r:"MURI",m:"Makul olmayan"},{k:"理由",r:"RIYŪ",m:"Neden"}]},
-  {n:240,ch:"話",mn:"Konuşma / Anlatmak",on:["WA"],kun:["hanashi","hanasu"],cp:[{k:"会話",r:"KAIWA",m:"Konuşma"},{k:"話題",r:"WADAI",m:"Konuşma konusu"},{k:"小話",r:"kobanashi",m:"Kısa hikaye"}]}
+  {n:81,ch:"引",mn:"Çekmek",on:["IN"],kun:["hiku"],or:"OBI ve bronz formlar yayı ve kirişi tasvir eder. Karlgren bu yorumu destekler; Katō ve Yamada uzun dikey çizgiyi fonetik unsur olarak değerlendirir.",mm:"🏹 KIRIŞI ÇEKILMEYI BEKLEYEN SÜSLÜ YAY",cp:[{k:"引力",r:"INRYOKU",m:"Yerçekimi"},{k:"辞引",r:"JIbiki",m:"Sözlük"},{k:"取引",r:"torihiki",m:"Alışveriş, işlem"}],ex:[{s:"ドアを___いてください。",tr:"Kapıyı çekiniz.",b:"引",br:"hi"}]},
+  {n:82,ch:"羽",mn:"Kanat / Tüy",on:["U"],kun:["ha", "-wa", "hane"],or:"OBI formu kuş kanatlarının ya da tüylerin piktogramına dayanır.",mm:"🪶 TÜYLÜ KANATLAR",cp:[{k:"羽毛",r:"UMŌ",m:"Tüy, kılık"},{k:"羽織",r:"haori",m:"Haori (Japon giysisi)"},{k:"一羽",r:"ICHIwa",m:"Bir kuş"}],ex:[{s:"鳥の___が落ちていた。",tr:"Bir kuş tüyü düşmüştü.",b:"羽",br:"ha"}]},
+  {n:83,ch:"雲",mn:"Bulut",on:["UN"],kun:["kumo"],or:"Bir bulutun piktogramından gelir. Grafik, erken Çincede 'söylemek' anlamındaki sözcük için fonetik ödünç alındı; daha sonra bulut anlamını netleştirmek için 'yağmur' belirleyicisi eklendi.",mm:"🌧️ GÖKTEN YAĞAN BULUTLAR",cp:[{k:"星雲",r:"SEIU N",m:"Nebula"},{k:"浮き雲",r:"ukigumo",m:"Yüzen bulut"},{k:"雲行き",r:"kumoyuki",m:"Gelişmelerin seyri"}],ex:[{s:"空に白い___が浮かんでいる。",tr:"Gökyüzünde beyaz bulutlar yüzüyor.",b:"雲",br:"kumo"}]},
+  {n:84,ch:"園",mn:"Park / Bahçe",on:["EN"],kun:["sono"],or:"Geç dönem karakter (Shuowen). 'Çevirmek' belirleyicisi ve 'çit' anlamıyla ilişkili fonetik unsur içerir. Etrafı çevrili bir alanı temsil eder.",mm:"🌸 AÇILIŞINDA KIRLI GİYSİLİ TUHAF BİR KAPALI PARK",cp:[{k:"公園",r:"KŌEN",m:"Park"},{k:"動物園",r:"DŌBUTSUEN",m:"Hayvanat bahçesi"},{k:"花園",r:"hanazono",m:"Çiçek bahçesi"}],ex:[{s:"動物___に行った。",tr:"Hayvanat bahçesine gittim.",b:"園",br:"EN"}]},
+  {n:85,ch:"遠",mn:"Uzak",on:["EN"],kun:["tōi"],or:"Belirleyici 'yol, gitmek' ve 'durmak' unsurlarından türer. Sağ element fonetik ve anlamsal rol oynar. Katō ve Ogawa temel anlamın 'uzun hareket' olduğu konusunda hemfikirdir.",mm:"🚶 UZAK AÇIKLIĞA KIRIK KIRLI GİYSİLERLE GİT",cp:[{k:"遠足",r:"ENSOKU",m:"Gezi, piknik"},{k:"遠視",r:"ENSHI",m:"Uzak görüşlülük"},{k:"遠回り",r:"tōmawari",m:"Dolambaçlı yol"}],ex:[{s:"___い山が見える。",tr:"Uzak dağlar görünüyor.",b:"遠",br:"tō"}]},
+  {n:86,ch:"何",mn:"Ne / Kaç",on:["KA"],kun:["nan", "nani"],or:"OBI formu bir kişinin omzunda tüfek/mızrak taşıdığını gösterir. Katō 'sırtında taşımak' anlamını temel alır. Fonetik ödünç yoluyla soru zamiri anlamı kazandı.",mm:"❓ BİR KİŞİ KAÇ YÜKÜ TAŞIYABİLİR?",cp:[{k:"何回",r:"nanKAI",m:"Kaç kez"},{k:"何歳",r:"nanSAI",m:"Kaç yaşında"},{k:"何者",r:"nanimono",m:"Kim, ne türlü kişi"}],ex:[{s:"___時に起きましたか？",tr:"Saat kaçta kalktınız?",b:"何",br:"nan"}]},
+  {n:87,ch:"科",mn:"Bölüm / Dal",on:["KA"],kun:[],or:"Tahıl bitkisi piktogramı ve kepçe piktogramını birleştirir; 'ölçmek' > 'elemek' > 'kategori' > 'bölüm' anlamına gelir. Konfüçyüs Analektleri gibi klasik Çin metinlerinde 'sınıf, derece' anlamında kull",mm:"🌾 TAHIL BİTKİLERİ İÇİN ÖNLEMLER DERSİ",cp:[{k:"科学",r:"KAGAKU",m:"Bilim"},{k:"学科",r:"GAKKA",m:"Ders, konu"},{k:"英語科",r:"EIGOKA",m:"İngilizce bölümü"}],ex:[{s:"理___の授業が好きだ。",tr:"Fen dersini seviyorum.",b:"科",br:"KA"}]},
+  {n:88,ch:"夏",mn:"Yaz",on:["KA", "GE"],kun:["natsu"],or:"Erken formlar (bronz) maskeli dans eden birini gösterir. Ogawa bu dansın yaz mevsiminde yapıldığını ve karakterin yaz anlamını bu ilişkiden kazandığını öne sürer.",mm:"🎭 MASKELİ BAŞ VE ÇAPRAZ BACAKLAR YAZ ÇILGINLIĞINI GÖSTERİR",cp:[{k:"初夏",r:"SHOKA",m:"İlkbahar sonu / erken yaz"},{k:"真夏",r:"manatsu",m:"Yaz ortası"},{k:"夏至",r:"GESHI",m:"Yaz gündönümü"}],ex:[{s:"___休みに海へ行く。",tr:"Yaz tatilinde denize gideceğim.",b:"夏",br:"natsu"}]},
+  {n:89,ch:"家",mn:"Ev / Uzman",on:["KA", "KE"],kun:["ie", "-ya"],or:"Bazı OBI formları çatı altında domuz, diğerleri köpek olarak yorumlanır. Domuz yorumunu destekleyen Ma, insan ve domuz barınağının o dönemde pek farklı olmadığını öne sürer. Zamanla meslek ve aile anl",mm:"🐷 UZMANIN EVİ AHIR GİBİ GÖRÜNÜR",cp:[{k:"農家",r:"NŌKA",m:"Çiftlik evi"},{k:"武家",r:"BUKE",m:"Savaşçı ailesi"},{k:"小説家",r:"SHŌSETSUKA",m:"Romancı"}],ex:[{s:"___に帰る時間だ。",tr:"Eve dönme zamanı.",b:"家",br:"ie"}]},
+  {n:90,ch:"歌",mn:"Şarkı / Söylemek",on:["KA"],kun:["uta", "utau"],or:"Oldukça geç dönem karakteridir. Daha basit bir forma sonradan 'esnemek, ağzı geniş açmak' anlamındaki unsur eklendi. Bu daha karmaşık karakterde fonetik ve KA-KA gibi uzun artikülasyona işaret eden an",mm:"🎤 GENIŞ AĞIZ ŞARKIYA BAŞLAR",cp:[{k:"歌手",r:"KASHU",m:"Şarkıcı"},{k:"短歌",r:"TANKA",m:"Kısa şiir (tanka)"},{k:"歌声",r:"utagoe",m:"Şarkı sesi"}],ex:[{s:"みんなで___を歌った。",tr:"Hep birlikte şarkı söyledik.",b:"歌",br:"uta"}]},
+  {n:91,ch:"画",mn:"Resim / Çizgi",on:["GA", "KAKU"],kun:[],or:"OBI formunun üst kısmı yazı fırçası tutan eli temsil eder. Katō bronz aşamada 'tarla sınır çizgileri çizmek' anlamını verir. Geleneksel form daha sonra kısaltıldı.",mm:"🖼️ ÇİZGİLERLE BÖLÜNMÜŞ TARLALAR RESİM YAPAR",cp:[{k:"映画",r:"EIGA",m:"Film"},{k:"画面",r:"GAMEN",m:"Ekran"},{k:"計画",r:"KEIKAKU",m:"Plan"}],ex:[{s:"映___を見に行こう。",tr:"Sinemaya gidelim.",b:"画",br:"GA"}]},
+  {n:92,ch:"回",mn:"Dönmek / Tur",on:["KAI"],kun:["mawaru", "mawasu"],or:"Dönel hareketi simgeleyen bir sembol. Shirakawa bronz formlara dayanarak dönen bir akıntıyı tasvir ettiğini öne sürer.",mm:"🔄 EŞ MERKEZLİ DÖNGÜ",cp:[{k:"回転",r:"KAITEN",m:"Dönme, devrim"},{k:"回数",r:"KAISŪ",m:"Frekans, sayı"},{k:"言い回し",r:"iimawashi",m:"İfade tarzı"}],ex:[{s:"三___練習した。",tr:"Üç kez pratik yaptım.",b:"回",br:"KAI"}]},
+  {n:93,ch:"会",mn:"Buluşmak",on:["KAI", "E"],kun:["au"],or:"Erken formlar kapak ve kap üzerini gösterir — muhtemelen pişirme kabı. Kapağı kaba koymak 'birleştirmek, bir araya getirmek' anlamını çağrıştırır. Geleneksel form kısaltıldı.",mm:"👃 İKİ KİŞİNİN BURUNLARI BULUŞUR",cp:[{k:"会社",r:"KAISHA",m:"Şirket"},{k:"会釈",r:"ESHAKU",m:"Hafif eğilme (selamlama)"},{k:"国会",r:"KOKKAI",m:"Parlamento"}],ex:[{s:"友達に___った。",tr:"Arkadaşımla karşılaştım.",b:"会",br:"a"}]},
+  {n:94,ch:"海",mn:"Deniz",on:["KAI"],kun:["umi"],or:"Bronz formda 'su' ve 'her' (fonetik, 'karanlık' çağrışımlı) unsurları var. Erken Çin'de deniz ve karanlık sözcükleri benzer seslerdi.",mm:"💧 HER SU DAMLASI DENİZDE SONLANIR",cp:[{k:"海軍",r:"KAIGUN",m:"Donanma"},{k:"日本海",r:"NIHONKAI",m:"Japonya Denizi"},{k:"海辺",r:"umibe",m:"Deniz kıyısı"}],ex:[{s:"夏は___で泳ぐ。",tr:"Yazın denizde yüzerim.",b:"海",br:"umi"}]},
+  {n:95,ch:"絵",mn:"Resim / Çizim",on:["KAI", "E"],kun:[],or:"Geç dönem karakter. Sağ unsur fonetik olup 'bir araya gelmek' anlamı taşır (93 buluşmak ile aynı); 'iplik' belirleyicisiyle birleşince 'işlemeli desen', sonra genel olarak 'resim' anlamını kazandı.",mm:"🧵 İPLİKLER İŞLEMELİ RESİMDE BULUŞUR",cp:[{k:"絵画",r:"KAIGA",m:"Resim, tablo"},{k:"口絵",r:"kuchiE",m:"Frontispis"},{k:"絵本",r:"EHON",m:"Resimli kitap"}],ex:[{s:"___を描くのが好きだ。",tr:"Resim çizmeyi seviyorum.",b:"絵",br:"e"}]},
+  {n:96,ch:"外",mn:"Dış / Diğer",on:["GAI", "GE"],kun:["soto", "hoka", "hazusu"],or:"Bronz ve mühür formları fal anlamındaki unsuru içerir — antik Çin'de kaplumbağa kabuğu çatlakları yorumlanarak yapılan fal. Shirakawa sol unsuru et olarak yorumlar; hayvan kurbanları fal töreninin par",mm:"🌙 HİLALİN DIŞINDA BİR ÇATLAK?",cp:[{k:"外人",r:"GAIJIN",m:"Yabancı"},{k:"外科",r:"GEKA",m:"Cerrahi"},{k:"外側",r:"sotogawa",m:"Dış taraf"}],ex:[{s:"___で遊ぶのは楽しい。",tr:"Dışarıda oynamak eğlencelidir.",b:"外",br:"soto"}]},
+  {n:97,ch:"角",mn:"Boynuz / Açı / Köşe",on:["KAKU"],kun:["tsuno", "kado"],or:"Öküz, koyun ya da benzeri bir hayvanın boynuzunun piktogramına dayanır. Köşe ve açı anlamları dışarı doğru çıkan boynuzdan genişletilmiş anlamlardır.",mm:"🦄 KIRIŞIK UCU OLAN KÖŞELI BOYNUZ",cp:[{k:"角度",r:"KAKUDO",m:"Açı (derece)"},{k:"角笛",r:"tsunobue",m:"Boru (boynuz flüt)"},{k:"街角",r:"machikado",m:"Sokak köşesi"}],ex:[{s:"道の___を曲がる。",tr:"Yolun köşesini dönüyorum.",b:"角",br:"kado"}]},
+  {n:98,ch:"楽",mn:"Zevk / Müzik",on:["GAKU", "RAKU"],kun:["tanoshii", "tanoshimu"],or:"OBI formu meşe/at kestanesi ağacı olarak yorumlanır. Shirakawa onu çan tutan ahşap sap olarak görür; tanrıları memnun etmek için çalınan el çanı. Tōdō temel anlamın 'yüksek sesli gürültü yapmak' olduğ",mm:"🥁 AHŞAP SEHPADA PUL PUL DAVUL GÜZEL MÜZİK YAPAR",cp:[{k:"気楽",r:"KIRAKU",m:"Rahat, serbest"},{k:"楽器",r:"GAKKI",m:"Müzik aleti"},{k:"楽しみ",r:"tanoshimi",m:"Zevk, eğlence"}],ex:[{s:"音___を聞いてリラックスする。",tr:"Müzik dinleyerek rahatlarım.",b:"楽",br:"RAKU"}]},
+  {n:99,ch:"活",mn:"Aktivite / Yaşam",on:["KATSU"],kun:[],or:"Geç dönem karakter (Shuowen). 'Su' ve 'dil' (fonetik, 'serbestçe hareket etmek' çağrışımlı) unsurlarını içerir. 'Yaşam' anlamı 'güçlü hareket etmek'ten genişletilmiştir.",mm:"💧 ISLAK DİL AKTİF BİR YAŞAMIN İŞARETİDİR",cp:[{k:"生活",r:"SEIKATSU",m:"Yaşam, hayat"},{k:"活気",r:"KAKKI",m:"Canlılık"},{k:"活動",r:"KATSUDŌ",m:"Faaliyet"}],ex:[{s:"毎日元気に生___する。",tr:"Her gün enerjik yaşıyorum.",b:"活",br:"KATSU"}]},
+  {n:100,ch:"間",mn:"Aralık / Boşluk",on:["KAN", "KEN"],kun:["aida", "ma"],or:"Bronz ve mühür formları 'kapı' arasından geçen 'ay' ışığını gösterir. Modern formda ay yerine güneş kullanılır. Katō ay unsurunu fonetik; Qiu 'kapı içinden ay görünüyor' olarak yorumlar.",mm:"☀️ GÜNEŞ SALON KAPILARI ARASINDAKİ BOŞLUKTAN PARLAR",cp:[{k:"時間",r:"JIKAN",m:"Saat, zaman"},{k:"人間",r:"NINGEN",m:"İnsan"},{k:"間違い",r:"machigai",m:"Hata"}],ex:[{s:"部屋の___に机がある。",tr:"Odanın ortasında masa var.",b:"間",br:"aida"}]},
+  {n:101,ch:"丸",mn:"Yuvarlak / Top",on:["GAN"],kun:["maru", "marui"],or:"Geç dönem karakter (Shuowen). Mühür yazısındaki kapalı unsur 'kişi' olarak yorumlanır. Temel anlamı 'kişinin top gibi yuvarlanması'dır.",mm:"💊 DOKUZ YUVARLAK BİR VURUŞLA TOPLANIYOR",cp:[{k:"丸薬",r:"GAN'YAKU",m:"Hap, ilaç"},{k:"丸み",r:"marumi",m:"Yuvarlıklık"},{k:"日本丸",r:"NIPPON-maru",m:"Japonya gemisi"}],ex:[{s:"___い月が出ている。",tr:"Yuvarlak ay doğmuş.",b:"丸",br:"maru"}]},
+  {n:102,ch:"岩",mn:"Kaya / Çıkıntı",on:["GAN"],kun:["iwa"],or:"Geç dönem karakter. 'Dağ' ve 'taş' unsurlarını birleştirir. Tōdō 'köşeli ve sert' bir kelime ailesine dahil eder.",mm:"⛰️ KAYALI DAĞ TAMAMEN TAŞTIR",cp:[{k:"岩石",r:"GANSEKI",m:"Kaya, taş"},{k:"岩屋",r:"iwaya",m:"Mağara"},{k:"火成岩",r:"KASEIGAN",m:"Volkanik kaya"}],ex:[{s:"大きな___に登った。",tr:"Büyük kayaya tırmandım.",b:"岩",br:"iwa"}]},
+  {n:103,ch:"顔",mn:"Yüz / Çehre",on:["GAN"],kun:["kao"],or:"Bronz formda büyütülmüş bir baş ve tartışmalı etimolojili bir unsur görülür. Katō alından bahseder; Shirakawa alına dövme yapılmasını yetişkinliğin işareti olarak yorumlar.",mm:"👤 BAŞINDA SADECE ÜÇ TEL KALAN SOMURTKAN YÜZ",cp:[{k:"顔面",r:"GANMEN",m:"Yüz (resmi)"},{k:"顔色",r:"kaoiro",m:"Ten rengi, ifade"},{k:"顔つき",r:"kaotsuki",m:"Yüz ifadesi"}],ex:[{s:"鏡で___を見た。",tr:"Aynada yüzüme baktım.",b:"顔",br:"kao"}]},
+  {n:104,ch:"汽",mn:"Buhar",on:["KI"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'Su' ve 'buhar' unsurlarını birleştirir; ikincisi fonetik işlev de görür.",mm:"🚂 BUHAR SULU BUHARLARDAN OLUŞUR",cp:[{k:"汽車",r:"KISHA",m:"Buharlı tren"},{k:"汽船",r:"KISEN",m:"Buharlı gemi"},{k:"汽笛",r:"KITEKI",m:"Düdük"}],ex:[{s:"___車に乗って旅をした。",tr:"Buharlı trenle seyahat ettim.",b:"汽",br:"KI"}]},
+  {n:105,ch:"記",mn:"Kayıt / Kronik",on:["KI"],kun:[],or:"Göreceli geç dönem (Shuowen). 'Kelimeler' ve 'kaydetmek' ya da 'düzene sokmak' anlamı taşıyan unsuru içerir. Tōdō 'karmaşık meseleleri düzene sokmak' anlamını temel alır.",mm:"📖 KIVIRMALI KELİMELERLE DOLU KRONIK",cp:[{k:"記者",r:"KISHA",m:"Gazeteci"},{k:"記事",r:"KIJI",m:"Makale, haber"},{k:"日記",r:"NIKKI",m:"Günlük"}],ex:[{s:"日___をつける習慣がある。",tr:"Günlük tutma alışkanlığım var.",b:"記",br:"KI"}]},
+  {n:106,ch:"帰",mn:"Dönmek",on:["KI"],kun:["kaeru"],or:"OBI formları 'süpürge tutan el' anlamındaki unsuru içerir; aynı unsur 'eş' anlamında da kullanılırdı. 'Dönmek' anlamı, damadın gelinin evine gidip onu kendi evine geri götürdüğü eski geleneğe dayanır.",mm:"🧹 EŞ SÜPÜRGE VE KILIÇLA DÖNER",cp:[{k:"帰化",r:"KIKA",m:"Vatandaşlığa geçmek"},{k:"帰省",r:"KISEI",m:"Memlekete dönüş"},{k:"帰り道",r:"kaerimichi",m:"Dönüş yolu"}],ex:[{s:"学校から___る。",tr:"Okuldan eve dönüyorum.",b:"帰",br:"kae"}]},
+  {n:107,ch:"弓",mn:"Yay / Okçuluk",on:["KYŪ"],kun:["yumi"],or:"Bir yayın piktogramına dayanır. Bazı OBI ve bronz formlarda kiriş bulunur, mühür yazısından itibaren kiriş çıkarılmıştır. 'Yay' anlamından 'yay şekli' gibi anlamlar türetilmiştir.",mm:"🏹 KİRİŞSİZ YAY",cp:[{k:"弓道",r:"KYŪDŌ",m:"Okçuluk"},{k:"弓形",r:"KYŪJŌ",m:"Yay şekli"},{k:"弓取り",r:"yumitori",m:"Okçu"}],ex:[{s:"___道の練習をした。",tr:"Okçuluk antrenmanı yaptım.",b:"弓",br:"yumi"}]},
+  {n:108,ch:"牛",mn:"İnek / Boğa",on:["GYŪ"],kun:["ushi"],or:"Bir inek ya da boğa başının piktogramından gelir. OBI aşamasında boynuzlar belirgindir. Yatay çizginin kulakları mı yoksa başın tepesini mi gösterdiği tartışmalıdır.",mm:"🐄 KULAKLI VE KIRIH BOYNUZLU İNEK",cp:[{k:"牛肉",r:"GYŪNIKU",m:"Sığır eti"},{k:"牛耳る",r:"GYŪJIru",m:"Kontrol altına almak"},{k:"牛飼い",r:"ushigai",m:"Sığır çobanı"}],ex:[{s:"___乳を毎朝飲む。",tr:"Her sabah süt içerim.",b:"牛",br:"ushi"}]},
+  {n:109,ch:"魚",mn:"Balık",on:["GYO"],kun:["uo", "sakana"],or:"Tüm bir balığın piktogramından gelir. Bronz formda tüm balık görünür. Hafıza tekniği olarak kuyruğun dört çizgisi 'ateş' belirleyicisi olarak hatırlanabilir.",mm:"🐟 KARE GÖVDELİ VE ATEŞLİ KUYRUKLU BALIK",cp:[{k:"金魚",r:"KINGYO",m:"Japon balığı"},{k:"魚釣り",r:"uotsuri",m:"Balık avlama"},{k:"魚屋",r:"sakanaYA",m:"Balıkçı dükkanı"}],ex:[{s:"川で___を釣った。",tr:"Nehirde balık tuttum.",b:"魚",br:"sakana"}]},
+  {n:110,ch:"京",mn:"Başkent",on:["KYŌ", "KEI"],kun:[],or:"Tipik OBI formu yüksek bir tepede ya da yapay yükseltilmiş bir zemin üzerindeki bir binayı gösterir. Katō ve Ogawa bu yorumu destekler. Shirakawa ise onu kemerli bir kapının üzerindeki gözetleme kules",mm:"🏮 SÜSLÜ FENER BAŞKENTİ SİMGELER",cp:[{k:"東京",r:"TŌKYŌ",m:"Tokyo"},{k:"上京",r:"JŌKYŌ",m:"Başkente gitmek"},{k:"京浜",r:"KEIHIN",m:"Tokyo-Yokohama bölgesi"}],ex:[{s:"東___に住んでいる。",tr:"Tokyo'da yaşıyorum.",b:"京",br:"KYOU"}]},
+  {n:111,ch:"強",mn:"Güçlü / Zorlamak",on:["KYŌ", "GŌ"],kun:["shiiru", "tsuyoi"],or:"Qiu'ya göre aslen bir 'böcek' türüne atıfta bulunur; daha karmaşık şekilli başka bir grafik için ikame olarak kullanıldı. Güçlü yay anlamından 'sağlam, güçlü' anlamı türedi.",mm:"🏹 GÜÇLÜ YAY BÖCEĞİN BURNUNA NIŞAN ALIR",cp:[{k:"勉強",r:"BENKYŌ",m:"Çalışmak, ders çalışmak"},{k:"強盗",r:"GŌTŌ",m:"Hırsız, soyguncu"},{k:"強み",r:"tsuyomi",m:"Güçlü yön"}],ex:[{s:"___い風が吹いた。",tr:"Kuvvetli rüzgar esti.",b:"強",br:"tsuyo"}]},
+  {n:112,ch:"教",mn:"Öğretmek",on:["KYŌ"],kun:["oshieru"],or:"OBI ve bronz formlara göre tavan kirişleri (bir binayı temsil eder), çocuk ve sopa tutan el unsurlarından oluşur. Çocukların zorlama yoluyla eğitildiği bir okulu tasvir eder. Modern form 'yaşlı adam' ",mm:"👴 SOPA TUTAN YAŞLI ADAM ÇOCUĞA KİRİŞLERİ SAYDIRIYOR",cp:[{k:"教会",r:"KYŌKAI",m:"Kilise"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"教え子",r:"oshiego",m:"Öğrenci, talebe"}],ex:[{s:"先生が数学を___えた。",tr:"Öğretmen matematik öğretti.",b:"教",br:"oshi"}]},
+  {n:113,ch:"近",mn:"Yakın",on:["KIN"],kun:["chikai"],or:"Mühür formu 'yol boyunca yürümek' ve 'balta' (fonetik, 'biraz' çağrışımlı) unsurlarından oluşur. 'Yakın' anlamı 'kısa mesafe yürümek'ten genişletilmiştir.",mm:"🪓 YAKININDA BİR BALTA VAR",cp:[{k:"近所",r:"KINJO",m:"Mahalle, komşuluk"},{k:"最近",r:"SAIKIN",m:"Son zamanlarda"},{k:"近道",r:"chikamichi",m:"Kısa yol"}],ex:[{s:"駅の___くに住んでいる。",tr:"İstasyona yakın yerde yaşıyorum.",b:"近",br:"chika"}]},
+  {n:114,ch:"兄",mn:"Ağabey",on:["KEI", "KYŌ"],kun:["ani"],or:"OBI formlarında alt unsur 'kişi' ya da 'diz çökmüş kişiyi' temsil eder. Bazı yorumlar büyük başlı çocuğu; diğerleri yüksek sesle konuşan kişiyi tasvir eder.",mm:"👦 AĞABEY SADECE AĞIZ VE BACAKLARDAN İBARETTİR",cp:[{k:"父兄",r:"FUKEI",m:"Veliler, koruyucular"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"},{k:"お兄さん",r:"niisan",m:"Ağabey (saygılı)"}],ex:[{s:"___は大学生だ。",tr:"Ağabeyim üniversite öğrencisi.",b:"兄",br:"ani"}]},
+  {n:115,ch:"形",mn:"Şekil / Biçim",on:["KEI", "GYŌ"],kun:["kata", "katachi"],or:"Mühür formları göreceli geç döneme aittir (Shuowen). 'Renk, fırça deseni' belirleyicisi ve 'kuyu' şeklindeki sol unsuru içerir. Yorumlar 'yazı fırçası kılları' ile 'çerçeve veya kalıp' arasında değişi",mm:"🔲 ÜÇ ÇİZGİ KAFES ŞEKLININ YANINDA BELİRGİN BİR ŞEKİL OLUŞTURUR",cp:[{k:"形式的",r:"KEISHIKITEKI",m:"Biçimsel, resmi"},{k:"人形",r:"NINGYŌ",m:"Bebek, kukla"},{k:"形見",r:"katami",m:"Hatıra eşyası"}],ex:[{s:"丸い___のケーキだ。",tr:"Yuvarlak şekilli kek.",b:"形",br:"katachi"}]},
+  {n:116,ch:"計",mn:"Ölçmek / Hesaplamak",on:["KEI"],kun:["hakaru"],or:"Geç dönem kaynaklara göre 'kelimeler' ve 'on' unsurlarından oluşur. 'Onlarla saymak hesaplamayı kolaylaştırır' şeklinde yorumlanır. Shirakawa sağ unsuru falcılık pratiğiyle ilişkilendirir.",mm:"🔟 ONLARLA SAYMAK ÖLÇMEYI KOLAYLAŞTIRIR",cp:[{k:"合計",r:"GŌKEI",m:"Toplam"},{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"速度計",r:"SOKUDOKEI",m:"Hız göstergesi"}],ex:[{s:"時___で時間を確認する。",tr:"Saatimle zamanı kontrol ediyorum.",b:"計",br:"KEI"}]},
+  {n:117,ch:"元",mn:"Köken / Kaynak",on:["GEN", "GAN"],kun:["moto"],or:"OBI ve bronz formlar büyük başlı bir kişinin yan görünümünü tasvir eder; 'baş' ve 'başlangıç' anlamlarını iletir. Modern formda 'kişi' unsuru kullanılır.",mm:"👤 AYNI KÖKENDEKİ İKİ EĞİLMİŞ KİŞİ",cp:[{k:"元気",r:"GENKI",m:"Sağlık, enerji"},{k:"元来",r:"GANRAI",m:"Başlangıçta, aslen"},{k:"元通り",r:"motodōri",m:"Eskisi gibi"}],ex:[{s:"___気な声で返事をした。",tr:"Enerjik bir sesle cevap verdim.",b:"元",br:"GEN"}]},
+  {n:118,ch:"言",mn:"Kelime / Söylemek",on:["GEN", "GON"],kun:["koto", "iu"],or:"Tipik OBI formu. Yorumlar değişir: bir flüt piktogramı (Karlgren, Ma) ya da 'ağız' ve çeşitli fonetik unsurlar. Shirakawa bunu yemin töreninde dövme yapan iğneyi temsil eder şeklinde yorumlar.",mm:"💬 AĞIZ BİRKAÇ KELİME SÖYLER",cp:[{k:"発言",r:"HATSUGEN",m:"Açıklama, beyan"},{k:"無言",r:"MUGON",m:"Sessizlik, suskunluk"},{k:"言葉",r:"kotoba",m:"Kelime, dil"}],ex:[{s:"大切なことを___った。",tr:"Önemli bir şey söyledim.",b:"言",br:"i"}]},
+  {n:119,ch:"原",mn:"Düzlük / Köken",on:["GEN"],kun:["hara"],or:"Bronz formlar bir uçurumun eteklerinden fışkıran pınarı tasvir eder. Zamanla 'düzlük, açık arazi' anlamı baskın hale geldi; bu ödünç alınmış bir anlamdır.",mm:"🏔️ ASLEN KÜÇÜK BEYAZ PINARLI UÇURUM, ŞİMDİ DÜZLÜK",cp:[{k:"原子",r:"GENSHI",m:"Atom"},{k:"原文",r:"GENBUN",m:"Özgün metin"},{k:"草原",r:"kusahara",m:"Çimenlik, otlak"}],ex:[{s:"広い___っぱを走った。",tr:"Geniş çimenlikte koştum.",b:"原",br:"hara"}]},
+  {n:120,ch:"戸",mn:"Kapı",on:["KO"],kun:["to"],or:"OBI ve bronz piktograflar tek yapraklı bir kapıyı tasvir eder. Çift yapraklı kapı ya da kapı (231) modern formda ayrı bir karakterle temsil edilir. Üst yatay çizgi tavan olarak hatırlanabilir.",mm:"🚪 TAVAN ALTINDA TEK YAPRAKLI KAPI",cp:[{k:"戸外",r:"KOGAI",m:"Açık hava, dışarısı"},{k:"戸主",r:"KOSHU",m:"Ev reisi"},{k:"戸口",r:"toguchi",m:"Kapı girişi"}],ex:[{s:"___を閉めてください。",tr:"Kapıyı kapatınız.",b:"戸",br:"to"}]},
+  {n:121,ch:"古",mn:"Eski",on:["KO"],kun:["furui"],or:"OBI ve tipik bronz formlar tartışmalıdır. Katō ve Tōdō eski kafatasını tasvir eder; Katō antik Çin'de kafatasların ölülerin ruhlarını temsil ettiğini belirtir. Shirakawa ise kalkanın üzerinde dua kabı",mm:"💀 AĞIZDA ON KEZ ANLATILAN ESKİ MASAL",cp:[{k:"復古",r:"FUKKO",m:"Restorasyon, eski haline getirme"},{k:"古着",r:"furugi",m:"Eski kıyafet"},{k:"考古学",r:"KŌKOGAKU",m:"Arkeoloji"}],ex:[{s:"___い本を読んだ。",tr:"Eski bir kitap okudum.",b:"古",br:"furu"}]},
+  {n:122,ch:"午",mn:"Öğlen",on:["GO"],kun:[],or:"Bir havaneli piktogramına dayanır. On iki Yer Dalı bağlamında 'at saati' ile ilişkilendirilir; sabah 11'den öğleden sonra 1'e kadar olan iki saatlik dilimidir — dolayısıyla 'öğlen' anlamı.",mm:"🐄 İNEK ÖĞLEN BOYNUZUNUN UCU KIRILDI",cp:[{k:"午後",r:"GOGO",m:"Öğleden sonra"},{k:"午前",r:"GOZEN",m:"Öğleden önce"},{k:"正午",r:"SHŌGO",m:"Tam öğlen"}],ex:[{s:"___後に友達に会う。",tr:"Öğleden sonra arkadaşımla buluşacağım.",b:"午",br:"GO"}]},
+  {n:123,ch:"後",mn:"Arkası / Sonra",on:["GO", "KŌ"],kun:["ushiro", "ato", "nochi", "okureru"],or:"Bronz ve mühür formları çeşitli şekillerde analiz edilir. Bir görüşe göre 'geri gitmek' anlamını taşır; 'ince iplik' fonetik unsur olarak 'gitmek' çağrışımıyla yer alır.",mm:"🦟 BAĞLAMA YOLUNDA BAĞDAŞ KURARAK GERİDE KALIRSIN",cp:[{k:"以後",r:"IGO",m:"Bundan sonra"},{k:"後半",r:"KŌHAN",m:"İkinci yarı"},{k:"後味",r:"atoaji",m:"Sonradan kalan tat"}],ex:[{s:"授業の___で話しましょう。",tr:"Dersten sonra konuşalım.",b:"後",br:"ato"}]},
+  {n:124,ch:"語",mn:"Söylemek / Dil",on:["GO"],kun:["kataru"],or:"Bronz ve Shuowen formları 'kelimeler, dil' ve 'ben/biz' anlamındaki fonetik unsuru içerir. Tōdō 'sözel savunma yapmak' ya da 'alışveriş yapmak' çağrışımıyla açıklar.",mm:"💬 BEŞ AĞIZ ÇOK KELIME KONUŞUR",cp:[{k:"語調",r:"GOCHŌ",m:"Konuşma tonu"},{k:"物語",r:"monogatari",m:"Hikaye, destan"},{k:"日本語",r:"NIHONGO",m:"Japonca"}],ex:[{s:"日本___を勉強している。",tr:"Japonca çalışıyorum.",b:"語",br:"GO"}]},
+  {n:125,ch:"工",mn:"İş / Çalışma",on:["KŌ", "KU"],kun:[],or:"Ma OBI formunu balta başı olarak görür; Katō benzer şekilde balta olarak yorumlar. Shirakawa başka bir alet olarak değerlendirir. Bronz aşamada modern formunu kazandı.",mm:"📐 MARANGOZUN GÖNYESİYLE ÇALIŞMAK",cp:[{k:"工場",r:"KŌJŌ",m:"Fabrika"},{k:"人工",r:"JINKŌ",m:"Yapay, insan yapımı"},{k:"大工",r:"DAIKU",m:"Marangoz, dülger"}],ex:[{s:"___場で働いている。",tr:"Fabrikada çalışıyorum.",b:"工",br:"KŌ"}]},
+  {n:126,ch:"公",mn:"Kamuya ait / Adil / Lord",on:["KŌ"],kun:["ōyake"],or:"OBI ve mühür formları tartışmalıdır. Bir görüş 'sekiz'i orijinal anlamıyla 'bölmek, açmak' ve alt unsuru 'çevrelemek' olarak değerlendirir. Shirakawa saray törenleri için duvar içi alan olarak yorumla",mm:"👃 SEKİZ LORD BURNU KAMUDA GÖSTERIR",cp:[{k:"公共",r:"KŌKYŌ",m:"Kamu, kamusal"},{k:"公平",r:"KŌHEI",m:"Adalet, tarafsızlık"},{k:"公園",r:"KŌEN",m:"Park"}],ex:[{s:"___園でピクニックをした。",tr:"Parkta piknik yaptık.",b:"公",br:"KŌ"}]},
+  {n:127,ch:"広",mn:"Geniş / Ferah",on:["KŌ"],kun:["hiroi", "hirogeru", "hirogaru"],or:"Bronz ve geleneksel formlar anlamsal-fonetik bileşik kategorisindedir. Qiu belirleyiciyi 'bir tür yapı', fonetik unsuru ise 'yayılmak' çağrışımlı olarak değerlendirir.",mm:"👃 İÇİNDE DOLAŞILACAK GENİŞ BİNA",cp:[{k:"広大",r:"KŌDAI",m:"Geniş, muazzam"},{k:"広島",r:"Hiroshima",m:"Hiroshima (yer adı)"},{k:"広告",r:"KŌKOKU",m:"Reklam"}],ex:[{s:"___い部屋に引っ越した。",tr:"Geniş bir odaya taşındım.",b:"広",br:"hiro"}]},
+  {n:128,ch:"交",mn:"Karışmak / Alışveriş",on:["KŌ"],kun:["majiru", "kawasu"],or:"OBI ve bronz formlar bacak bacak üstüne atmış bir kişiyi gösterir — 'alışveriş' gibi genişletilmiş anlamları getirir. Modern form altı (六) üzerinde haç olarak hatırlanabilir.",mm:"✖️ ALTI HAÇI KARIŞTIR — DÜRÜST DEĞİŞ TOKUŞ",cp:[{k:"交通",r:"KŌTSŪ",m:"Trafik, ulaşım"},{k:"外交",r:"GAIKŌ",m:"Diplomasi"},{k:"交換",r:"KŌKAN",m:"Değiş tokuş"}],ex:[{s:"___差点で止まった。",tr:"Kavşakta durdum.",b:"交",br:"KŌ"}]},
+  {n:129,ch:"光",mn:"Işık / Parlamak",on:["KŌ"],kun:["hikari", "hikaru"],or:"OBI, bronz ve mühür formları bir kişinin başı üzerindeki alevleri gösterir — 'ışık' anlamı. Mühür aşamasında alt unsur 'kişi' olarak değiştirildi.",mm:"🔥 KİŞİNİN DÜZ KAFASI ÜZERİNDE TEK ALEVLERİ YANAR",cp:[{k:"日光",r:"NIKKŌ",m:"Güneş ışığı"},{k:"光年",r:"KŌNEN",m:"Işık yılı"},{k:"光学",r:"KŌGAKU",m:"Optik"}],ex:[{s:"太陽の___が眩しい。",tr:"Güneşin ışığı göz kamaştırıyor.",b:"光",br:"hikari"}]},
+  {n:130,ch:"考",mn:"Düşünmek / Değerlendirmek",on:["KŌ"],kun:["kangaeru"],or:"OBI ve mühür formları 638 (yaşlı, ihtiyar) ile neredeyse aynıdır; eğri sırtlı, uzun saçlı, bastona dayanan yaşlı birini tasvir eder. Bronz aşamada alt unsur fonetik olarak değişti. Sonradan 'değerlend",mm:"👴 EĞRİ YAŞLI ADAM TOPRAĞI DEĞERLENDİRİR",cp:[{k:"考案",r:"KŌAN",m:"Fikir, plan"},{k:"参考",r:"SANKŌ",m:"Referans, başvuru"},{k:"考え事",r:"kangaegoto",m:"Merak, endişe"}],ex:[{s:"よく___えてから決める。",tr:"İyi düşündükten sonra karar veririm.",b:"考",br:"kanga"}]},
+  {n:131,ch:"行",mn:"Gitmek / Yapmak / Satır",on:["KŌ", "GYŌ"],kun:["iku", "yuku", "okonau"],or:"OBI formları dörtyol kavşağının piktogramına dayandığını gösterir. 'Gitmek, yolculuk etmek', 'eylemde bulunmak', 'sıra, satır' gibi genişletilmiş anlamlara sahiptir.",mm:"🚦 SATIR HALINDE DÖRTYOL KAVŞAĞINA GİT",cp:[{k:"実行",r:"JIKKŌ",m:"Uygulama, icra"},{k:"行列",r:"GYŌRETSU",m:"Tören alayı, kuyruk"},{k:"行方",r:"yukue",m:"Nereden gittiği"}],ex:[{s:"学校へ___く。",tr:"Okula gidiyorum.",b:"行",br:"i"}]},
+  {n:132,ch:"高",mn:"Yüksek / Uzun",on:["KŌ"],kun:["taka", "takai"],or:"OBI ve bronz formlar bir tepe ya da tümsek üzerindeki yapıyı — muhtemelen bir gözetleme kulesi — gösterir. 'Başkent' (110) ile şekil açısından benzerdir.",mm:"🏮 YÜKSEK TEPEDE UZUN FENER GİBİ GÖZETLEME KULESİ",cp:[{k:"高原",r:"KŌGEN",m:"Yüksek düzlük, yayla"},{k:"最高",r:"SAIKŌ",m:"En yüksek"},{k:"高値",r:"takane",m:"Yüksek fiyat"}],ex:[{s:"___い山に登りたい。",tr:"Yüksek dağa tırmanmak istiyorum.",b:"高",br:"taka"}]},
+  {n:133,ch:"黄",mn:"Sarı",on:["KŌ", "Ō"],kun:["ki"],or:"Bazı OBI ve erken formlar ağırlık dengeli alevli bir oku tasvir eder. 'Sarı' rengi alevli okun ya da mücevherli kemerin renginden genişletilmiş bir anlamdır.",mm:"🏹 OK TARLADAN OTLA SARI YANAR",cp:[{k:"黄葉",r:"KŌYŌ",m:"Sarı yapraklar"},{k:"黄金",r:"ŌGON",m:"Altın"},{k:"黄色い",r:"kiiroi",m:"Sarı"}],ex:[{s:"___色いひまわりが咲いた。",tr:"Sarı ayçiçekleri açtı.",b:"黄",br:"ki"}]},
+  {n:134,ch:"合",mn:"Buluşmak / Birleşmek",on:["GŌ", "KATSU"],kun:["au", "awaseru"],or:"OBI ve bronz form kapakla kap piktogramı olarak yorumlanır. 'Karşılaşmak, bir araya getirmek, katılmak' genişletilmiş anlamlardır.",mm:"🫙 KAPAĞI KABININ ÜZERİNE OTURTABİLİRSİN",cp:[{k:"合理",r:"GŌRI",m:"Akılcılık, mantıklılık"},{k:"合戦",r:"KASSEN",m:"Savaş, muharebe"},{k:"話し合い",r:"hanashiai",m:"Görüşme, müzakere"}],ex:[{s:"待ち___わせ場所で会う。",tr:"Buluşma yerinde karşılaşıyoruz.",b:"合",br:"a"}]},
+  {n:135,ch:"谷",mn:"Vadi / Boğaz",on:["KOKU"],kun:["tani"],or:"OBI ve bronz formlar tartışmalıdır. Bir görüş üst çizgileri akan su ve dağ pınarı olarak yorumlar. Shirakawa dağ yamaçları ve vadi çöküntüsünü görür.",mm:"🗻 BOYUNA GENİŞ AÇIK VADİ AĞZI",cp:[{k:"幽谷",r:"YŪKOKU",m:"Derin vadi"},{k:"谷底",r:"tanisoko",m:"Vadi tabanı"},{k:"長谷川",r:"Hasegawa",m:"Hasegawa (soyad)"}],ex:[{s:"深い___を歩いた。",tr:"Derin vadide yürüdüm.",b:"谷",br:"tani"}]},
+  {n:136,ch:"国",mn:"Ülke / Bölge",on:["KOKU"],kun:["kuni"],or:"OBI formu 'mızrak, silah' ve 'sınır' unsurlarını içerir — 'tanımlanmış alanı silahla savunmak' anlamında. Bronz formda sınır vurgusu yapılır. Modern form içinde 'mücevher'i barındırır.",mm:"💎 ÜLKE ÇEVRILMIŞ BİR MÜCEVHERDİR",cp:[{k:"外国",r:"GAIKOKU",m:"Yabancı ülke"},{k:"国家",r:"KOKKA",m:"Devlet, ulus"},{k:"国々",r:"kuniguni",m:"Uluslar, ülkeler"}],ex:[{s:"この___の首都はどこですか？",tr:"Bu ülkenin başkenti neresi?",b:"国",br:"kuni"}]},
+  {n:137,ch:"黒",mn:"Siyah",on:["KOKU"],kun:["kuroi"],or:"Bronz ve mühür formlarının yorumları farklılık gösterse de (ilkel pencere ya da baca ya da ızgara) genel olarak bronz formların alevler ve yükselen duman içerdiği ve siyah anlamının is birikiminden ge",mm:"🔥 YANMIŞ TARLA TOPRAĞINI KARAYA BOYAR",cp:[{k:"黒板",r:"KOKUBAN",m:"Kara tahta"},{k:"黒海",r:"KOKKAI",m:"Karadeniz"},{k:"黒幕",r:"kuroMAKU",m:"Perde arkasındaki güç"}],ex:[{s:"___い猫が塀の上にいた。",tr:"Siyah kedi duvarın üzerindeydi.",b:"黒",br:"kuro"}]},
+  {n:138,ch:"今",mn:"Şimdi",on:["KON", "KIN"],kun:["ima"],or:"OBI formları Katō ve Ogawa'ya göre bir tür nesnenin üstünü örten çatıyı tasvir eder; Shirakawa kapak ve tıkaç üzerini yorumlar. 'Şimdi' anlamı fonetik ödünç kullanımdır.",mm:"⏰ ŞİMDİ O NESNEYİ ÖRTME VAKTIDIR",cp:[{k:"今週",r:"KONSHŪ",m:"Bu hafta"},{k:"今度",r:"KONDO",m:"Bu sefer"},{k:"今ごろ",r:"imagoro",m:"Şu sıralar"}],ex:[{s:"___日は天気がいい。",tr:"Bugün hava güzel.",b:"今",br:"kyō"}]},
+  {n:139,ch:"才",mn:"Yetenek / Yaş",on:["SAI"],kun:[],or:"Etimoloji belirsizdir. Ma, yüzeyin üstüne çıkan bitkiyi tasvir ettiğini öne sürer. Ogawa ve Shirakawa yere saplanmış ve yatay parça ile haç şeklinde oluşturulmuş tahtayı görür. Günümüzdeki anlamları b",mm:"✝️ HAÇI DESTEKLEMEK YETENEK GEREKTİRİR",cp:[{k:"天才",r:"TENSAI",m:"Deha, dahi"},{k:"五才",r:"GOSAI",m:"Beş yaşında"},{k:"才能",r:"SAINŌ",m:"Yetenek, beceri"}],ex:[{s:"彼女は音楽の___能がある。",tr:"Onun müzik yeteneği var.",b:"才",br:"SAI"}]},
+  {n:140,ch:"細",mn:"İnce / Ayrıntılı",on:["SAI"],kun:["hosoi", "komakai"],or:"Geç dönem karakter (Shuowen). Mühür formu 'iplik' belirleyicisi ve 'kafa tası ya da bıngıldak piktogramı' fonetik unsurunu içerir; 'ince, narin' çağrışımlı. Standart yazıya geçişte fonetik unsur değiş",mm:"🌾 İNCE YOL TARLADAN GEÇER",cp:[{k:"細工",r:"SAIKU",m:"El işi, zanaat"},{k:"細長い",r:"hosonagai",m:"İnce ve uzun"},{k:"細心",r:"SAISHIN",m:"Dikkatli"}],ex:[{s:"___い糸で縫った。",tr:"İnce iplikle diktim.",b:"細",br:"hoso"}]},
+  {n:141,ch:"作",mn:"Yapmak / Üretmek",on:["SAKU", "SA"],kun:["tsukuru"],or:"Orijinal grafik sadece kesmek unsuruydu; OBI formları kereste keserek balta biçiminde yorumlanır. Sonradan el unsuru eklendi, daha sonra kaldırıldı ve 'kişi' belirleyicisi eklendi.",mm:"🪚 KİŞİ TESTEREYLE ŞEY YAPAR",cp:[{k:"製作",r:"SEISAKU",m:"Üretim, yapım"},{k:"作品",r:"SAKUHIN",m:"Bir eser"},{k:"動作",r:"DŌSA",m:"Hareket, eylem"}],ex:[{s:"料理を___るのが好きだ。",tr:"Yemek yapmayı seviyorum.",b:"作",br:"tsuku"}]},
+  {n:142,ch:"算",mn:"Saymak / Hesap",on:["SAN"],kun:[],or:"Göreceli geç dönem (Shuowen). Üst unsur 'bambu'yu temsil eder — antik zamanlarda sayım için kullanılan bambu sayım çubuklarını simgeler; 'donatım, araç' fonetik unsuru 'saymak' çağrışımlıdır.",mm:"🎋 HER İKİ ELİNİ BAMBU ABAKÜSTE SAYARKEN KULLAN",cp:[{k:"計算",r:"KEISAN",m:"Hesaplama"},{k:"予算",r:"YOSAN",m:"Bütçe"},{k:"算数",r:"SANSŪ",m:"Aritmetik"}],ex:[{s:"計___が得意だ。",tr:"Hesap yapmakta iyiyim.",b:"算",br:"SAN"}]},
+  {n:143,ch:"止",mn:"Durmak",on:["SHI"],kun:["tomeru", "tomaru"],or:"OBI formları insan ayağı olarak yorumlanır; 'durmak, kalmak' genişletilmiş anlamdır. Grafik aynı zamanda 'gitmek, hareket etmek' anlamını da taşıyabilir.",mm:"👣 AYAK İZİ ÇİZGİNİN ÜZERİNDE DURUR",cp:[{k:"中止",r:"CHŪSHI",m:"Askıya alma, durdurma"},{k:"止め役",r:"tomeYAKU",m:"Arabulucu"},{k:"止め処",r:"tomedo",m:"Son"}],ex:[{s:"赤信号で___まる。",tr:"Kırmızı ışıkta durulur.",b:"止",br:"to"}]},
+  {n:144,ch:"市",mn:"Şehir / Pazar",on:["SHI"],kun:["ichi"],or:"Bronz forma göre Mizukami 'düz ya da dengeli' ve 'durmak' unsurlarını birleştiren grafik olarak yorumlar — 'eşit değerde mal alışverişi için durmak', antik takas sistemini yansıtır.",mm:"🎩 PAZAR YERİNDE BEZ VE ŞAPKA SAT",cp:[{k:"吹田市",r:"SuitaSHI",m:"Suita şehri"},{k:"市場",r:"SHIJŌ",m:"Pazar"},{k:"魚市",r:"uoichi",m:"Balık pazarı"}],ex:[{s:"___場で野菜を買った。",tr:"Çarşıdan sebze satın aldım.",b:"市",br:"ichi"}]},
+  {n:145,ch:"矢",mn:"Ok",on:["SHI"],kun:["ya"],or:"OBI ve bronz formlar bir ok piktogramına dayanır. 'Büyük' (大) ve üst kısmında kırık ucuyla da hatırlanabilir.",mm:"🏹 KIRIK UÇLU BÜYÜK OK",cp:[{k:"一矢",r:"ISSHI",m:"Misilleme"},{k:"矢印",r:"yajirushi",m:"Ok işareti"},{k:"矢先に",r:"yasaki ni",m:"Tam o noktada"}],ex:[{s:"___で的を射た。",tr:"Okla hedefe nişan aldım.",b:"矢",br:"ya"}]},
+  {n:146,ch:"姉",mn:"Abla",on:["SHI"],kun:["ane"],or:"Etimoloji tartışmalıdır. Genellikle bronz aşamadan itibaren tanınır; 'kadın' ve çeşitli fonetik unsurları içerir. Kangxi Sözlüğü her iki varyantı listeler ancak birini esas alır.",mm:"🛒 PAZARA GİDEN KADIN ABLADIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"お姉さん",r:"neesan",m:"Abla (saygılı)"},{k:"姉上",r:"aneue",m:"Abla (resmi)"}],ex:[{s:"___は医者だ。",tr:"Ablam doktordur.",b:"姉",br:"ane"}]},
+  {n:147,ch:"思",mn:"Düşünmek",on:["SHI"],kun:["omou"],or:"Göreceli geç dönem karakteri. Mizukami üst unsuru kafa tasası olarak yorumlar, 'kalp, zihin' ile birleşince 'düşünmek' anlamına gelir. Shirakawa üst kısmı 'beyin' olarak görür.",mm:"💭 KALBİM HER ZAMAN TARLADA OLACAK",cp:[{k:"思想",r:"SHISŌ",m:"İdeoloji, düşünce"},{k:"思考",r:"SHIKŌ",m:"Düşünce"},{k:"思い出",r:"omoide",m:"Hatıra, anı"}],ex:[{s:"君のことをいつも___っている。",tr:"Hep seni düşünüyorum.",b:"思",br:"omo"}]},
+  {n:148,ch:"紙",mn:"Kağıt",on:["SHI"],kun:["kami"],or:"Geç dönem karakter (Shuowen). Kağıdın icadı Cai Lun'a atfedilir. Kağıttan önce metinler çeşitli malzemelere yazılırdı; en yakın olanı ipek olduğundan 'iplik' belirleyicisi kullanılır.",mm:"🥄 KEPÇEYI İPLİKLERE UYGULA VE KAĞIT YAP",cp:[{k:"表紙",r:"HYŌSHI",m:"Kitap kapağı"},{k:"和紙",r:"WASHI",m:"Japon kağıdı"},{k:"手紙",r:"tegami",m:"Mektup"}],ex:[{s:"手___を書いた。",tr:"Mektup yazdım.",b:"紙",br:"kami"}]},
+  {n:149,ch:"寺",mn:"Tapınak",on:["JI"],kun:["tera"],or:"Mizukami bronz formları 'el' ve 'durmak' birleşimi olarak yorumlar; 'kontrolde tutmak' çağrışımlı. Budizm'in Çin'e MS 1. yüzyılda girmesiyle birlikte Budist tapınak anlamı kazandı.",mm:"🙏 EL TAPINAĞA TOPRAK SUNAR",cp:[{k:"龍安寺",r:"RYŌANJI",m:"Ryoanji Tapınağı"},{k:"寺院",r:"JIIN",m:"Budist tapınak"},{k:"山寺",r:"yamadera",m:"Dağ tapınağı"}],ex:[{s:"古い___を参拝した。",tr:"Eski tapınağı ziyaret ettim.",b:"寺",br:"tera"}]},
+  {n:150,ch:"自",mn:"Kendisi / Kendi",on:["JI", "SHI"],kun:["mizukara"],or:"Burun piktogramına dayanır. 'Kendisi' anlamı Çinlilerin kendilerinden bahsederken buruna işaret etme geleneğini yansıtır (Batılılar göğse işaret eder).",mm:"👃 BURUN GÖZDEN BİR VURUŞ UZAKTA, KENDİNİ TEMSİL EDER",cp:[{k:"自分",r:"JIBUN",m:"Kendisi, ben"},{k:"自然",r:"SHIZEN",m:"Doğa"},{k:"自信",r:"JISHIN",m:"Öz güven"}],ex:[{s:"___転車で学校に行く。",tr:"Bisikletle okula gidiyorum.",b:"自",br:"JI"}]},
+  {n:151,ch:"時",mn:"Zaman / Saat",on:["JI"],kun:["toki"],or:"OBI formları 'hareket etmek, gitmek' ve 'güneş, gün' unsurlarını birleştirir — 'güneşin hareketi', dolayısıyla 'mevsim, zaman'. On iki Dal sistemi saatleri belirtmek için benimsendikten sonra 'saat' a",mm:"⛩️ ZAMANIMI TAPINAKTA GÜNEŞİN HAREKETİYLE ÖLÇERIM",cp:[{k:"時代",r:"JIDAI",m:"Dönem, çağ"},{k:"二時",r:"NIJI",m:"İki o'clock"},{k:"時々",r:"tokidoki",m:"Zaman zaman"}],ex:[{s:"今何___ですか？",tr:"Şu an saat kaç?",b:"時",br:"toki"}]},
+  {n:152,ch:"室",mn:"Oda / Ev",on:["SHITSU"],kun:["muro"],or:"OBI formları 'çatı/bina' altında, hedefe ulaşan oku tasvir eder — 'barınacak yer' ve dolayısıyla 'oda' anlamı.",mm:"🏹 OK ODANIN ÇATISINA ULAŞIR",cp:[{k:"室内",r:"SHITSUNAI",m:"İç mekan"},{k:"教室",r:"KYŌSHITSU",m:"Sınıf"},{k:"室町",r:"Muromachi",m:"Muromachi (yer/dönem adı)"}],ex:[{s:"教___に入った。",tr:"Sınıfa girdim.",b:"室",br:"SHITSU"}]},
+  {n:153,ch:"社",mn:"Şinto tapınağı / Şirket",on:["SHA"],kun:["yashiro"],or:"OBI aşamasında toprak yığınını ya da toprak tanrısını temsil eden basit bir grafikle yazılırdı. Sonra bronz yazıtlarda 'sunak' belirleyicisi eklendi. Budizm'in gelişiyle tapınak anlamı; modernleşmeyle",mm:"🌍 TOPRAK BİR TAPINAK GİBİDİR",cp:[{k:"社会",r:"SHAKAI",m:"Toplum"},{k:"会社",r:"KAISHA",m:"Şirket"},{k:"社交性",r:"SHAKŌSEI",m:"Sosyallik"}],ex:[{s:"会___に電話した。",tr:"Şirketi aradım.",b:"社",br:"SHA"}]},
+  {n:154,ch:"弱",mn:"Zayıf",on:["JAKU"],kun:["yowai", "yowameru"],or:"Geç dönem (Shuowen). Erken form mühür yazısında iki yay ve üç çizgili 'süsleme' unsurlarından oluşur. Shirakawa tören yaylarını (savaşta kullanılmayan) yorumlar — dolayısıyla 'zayıf'. Ogawa yay bükme ",mm:"🧊 DONMUŞ YAYLAR ZAYIF, İKİ KAT ZAYIF",cp:[{k:"弱点",r:"JAKUTEN",m:"Zayıf nokta"},{k:"弱み",r:"yowami",m:"Zayıflık"},{k:"弱虫",r:"yowamushi",m:"Korkak, ödlek"}],ex:[{s:"体が___くなった。",tr:"Vücudum zayıfladı.",b:"弱",br:"yowa"}]},
+  {n:155,ch:"首",mn:"Baş / Boyun / Şef",on:["SHU"],kun:["kubi"],or:"OBI ve bronz formlar bir hayvanın başını açıkça tasvir eder; bazılarında boynuz görülür. Shirakawa ve diğerleri bazı bronz formların bir kişinin başına ya da gözüne tutturulmuş saçı gösterdiğini öne s",mm:"🦬 BURUN, ALÇAK ALIN VE BOYNUZLAR BAŞI GÖSTERİR",cp:[{k:"首領",r:"SHURYŌ",m:"Lider, şef"},{k:"首輪",r:"kubiwa",m:"Boyunluk, tasma"},{k:"首切り",r:"kubikiri",m:"Kafa kesme, işten atma"}],ex:[{s:"___が痛い。",tr:"Boynun ağrıyor.",b:"首",br:"kubi"}]},
+  {n:156,ch:"秋",mn:"Sonbahar",on:["SHŪ"],kun:["aki"],or:"OBI formlarında büyük çeşitlilik vardır. Bazı karmaşık OBI formları ateş altında bir yaratık gösterir — Qiu boynuzsuz ejderha, Ma ise cırcır böceği olarak yorumlar. Mizukami ve Katō tahıl bitkileri de",mm:"🌾 PİRİNÇ BİTKİLERİ SONBAHARDA YANABİLİR",cp:[{k:"晩秋",r:"BANSHŪ",m:"Sonbaharın sonu"},{k:"秋分",r:"SHŪBUN",m:"Sonbahar ekinoksu"},{k:"秋空",r:"akizora",m:"Sonbahar gökyüzü"}],ex:[{s:"___になると葉が赤くなる。",tr:"Sonbaharda yapraklar kızarır.",b:"秋",br:"aki"}]},
+  {n:157,ch:"週",mn:"Hafta",on:["SHŪ"],kun:[],or:"Geç dönem karakter (Shuowen sonrası). 'Yürümek, gitmek' ve 'etrafında dolaşmak' (fonetik, 'turlamak' çağrışımlı) unsurlarını içerir. Batı etkisiyle yedi günlük döngü için kullanılmaya başlandı.",mm:"🔄 BİR HAFTA DAHA GEÇIYOR",cp:[{k:"週間",r:"SHŪKAN",m:"Hafta"},{k:"先週",r:"SENSHŪ",m:"Geçen hafta"},{k:"二週め",r:"NISHŪME",m:"İkinci hafta"}],ex:[{s:"来___また会いましょう。",tr:"Haftaya yine buluşalım.",b:"週",br:"SHŪ"}]},
+  {n:158,ch:"春",mn:"İlkbahar",on:["SHUN"],kun:["haru"],or:"OBI formları bir tür ağaç ve 'güneş, gün' unsurlarını içerir; bazen üçüncü bir unsur daha eklenir. Bazı alimler ağacı dut ağacı olarak tanımlar. Modern formun üst kısmı 'üç kişi güneşte' olarak da hat",mm:"🌞 ÜÇ KİŞİ GÜNEŞTE — İLKBAHAR OLMALI",cp:[{k:"青春",r:"SEISHUN",m:"Gençlik"},{k:"売春",r:"BAISHUN",m:"Fuhuş"},{k:"春着",r:"harugi",m:"İlkbahar kıyafetleri"}],ex:[{s:"___になると桜が咲く。",tr:"İlkbaharda kirazlar açar.",b:"春",br:"haru"}]},
+  {n:159,ch:"書",mn:"Yazmak / Metin",on:["SHO"],kun:["kaku"],or:"Bronz form 'yazı fırçası tutan el' ve fonetik unsur olarak 'kişi'yi içerir. OBI'de çok nadir görülür; OBI tabletleri genellikle bir bıçakla doğrudan yüzeye kazınırdı.",mm:"✍️ EL FIRCAYI TUTARAK METNİ SATIR SATIR YAZAR",cp:[{k:"書記",r:"SHOKI",m:"Sekreter, yazman"},{k:"教科書",r:"KYŌKASHO",m:"Ders kitabı"},{k:"葉書",r:"hagaki",m:"Kartpostal"}],ex:[{s:"日記を___いた。",tr:"Günlük yazdım.",b:"書",br:"ka"}]},
+  {n:160,ch:"少",mn:"Az / Biraz",on:["SHŌ"],kun:["sukunai", "sukoshi"],or:"OBI formları dört kısa dikey çizgiden oluşur — 'küçük' (小) için üç çizgiyle karşıtlık oluşturur. Dördüncü çizginin anlamı tartışmalıdır; büyük olasılıkla fonetik ödünç kullanım.",mm:"3️⃣ ÜÇE BİR EKLENINCE HALA AZ KALIR",cp:[{k:"少年",r:"SHŌNEN",m:"Genç erkek"},{k:"少数",r:"SHŌSŪ",m:"Azınlık"},{k:"多少",r:"TASHŌ",m:"Az ya da çok"}],ex:[{s:"___し待ってください。",tr:"Lütfen biraz bekleyin.",b:"少",br:"suko"}]},
+  {n:161,ch:"場",mn:"Yer / Alan",on:["JŌ"],kun:["ba"],or:"Göreceli geç dönem (Shuowen). 'Toprak, zemin' ve 'güneş yükseliyor' anlamındaki fonetik unsurdan oluşur. Katō düzlenmiş yer, Shirakawa ritüel alan olarak yorumlar. Anlam 'yer'e genelleşti.",mm:"☀️ GÜNEŞİN IŞINLARI YERİ AYDINLATIR",cp:[{k:"会場",r:"KAIJŌ",m:"Toplantı yeri"},{k:"入場",r:"NYŪJŌ",m:"Giriş, kabul"},{k:"広場",r:"hiroba",m:"Meydan, açık alan"}],ex:[{s:"駐車___に車を止めた。",tr:"Otoparka araba park ettim.",b:"場",br:"BA"}]},
+  {n:162,ch:"色",mn:"Renk / Seks",on:["SHOKU", "SHIKI"],kun:["iro"],or:"Görece geç dönem karakter. Shuowen formu üst üste eğilen iki kişiyi cinsel birleşimi simgeleyecek biçimde gösterir. Alt unsur da fonetik rol oynar. Genişletilmiş anlamlar 'cinsel arzu', 'güzel kadın',",mm:"🎨 CİNSEL EYLEMDEKİ EĞİLMİŞ BEDENLERİN RENKLİ HİKAYESİ",cp:[{k:"好色",r:"KŌSHOKU",m:"Şehvet düşkünlüğü"},{k:"色素",r:"SHIKISO",m:"Pigment"},{k:"銀色",r:"GIN'iro",m:"Gümüş rengi"}],ex:[{s:"好きな___は何ですか？",tr:"Favori renginiz nedir?",b:"色",br:"iro"}]},
+  {n:163,ch:"食",mn:"Yiyecek / Yemek",on:["SHOKU"],kun:["taberu", "kuu"],or:"Piktogram: OBI formları kapı veya phonetik 'ısırmak' anlamıyla yiyeceğin biriktirildiği bir kabi gösterir. Bileşik karakterlerde belirleyici olarak da kullanılabilir.",mm:"🍱 KAPAKLI KAPTA BİRİKMİŞ YİYECEK",cp:[{k:"食事",r:"SHOKUJI",m:"Yemek"},{k:"食べ物",r:"tabemono",m:"Yiyecek"},{k:"食い物",r:"kuimono",m:"Yiyecek, kurban"}],ex:[{s:"朝___を食べた。",tr:"Kahvaltı yaptım.",b:"食",br:"SHOKU"}]},
+  {n:164,ch:"心",mn:"Kalp / Zihin",on:["SHIN"],kun:["kokoro"],or:"Piktogram: Bronz formlar bir kalbi tasvir eder; OBI formları da aynı şekildedir. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"❤️ KALBİN DÖRT PARÇASI VAR",cp:[{k:"中心",r:"CHŪSHIN",m:"Merkez, çekirdek"},{k:"心臓",r:"SHINZŌ",m:"Kalp (organ)"},{k:"真心",r:"magokoro",m:"Samimiyet"}],ex:[{s:"___が落ち着いた。",tr:"Kalbim sakinleşti.",b:"心",br:"kokoro"}]},
+  {n:165,ch:"新",mn:"Yeni",on:["SHIN"],kun:["atarashii", "arata", "nii-"],or:"OBI formları balta ve iğne veya balta ve ağaç kombinasyonlarını içerir. En yaygın yorum 'ağaç kesme' anlamındadır. 'Yeni' anlamı taze kesilmiş ahşabın yeniliğiyle ilişkilendirilir.",mm:"🪓 AĞACIN YANINDA DURAN BALTA YENİ ODUN KESMEYE HAZIR",cp:[{k:"新年",r:"SHINNEN",m:"Yeni Yıl"},{k:"新品",r:"SHINPIN",m:"Yeni ürün"},{k:"新潟",r:"Niigata",m:"Niigata (yer adı)"}],ex:[{s:"___しい本を買った。",tr:"Yeni bir kitap satın aldım.",b:"新",br:"atara"}]},
+  {n:166,ch:"親",mn:"Ebeveyn / Yakın",on:["SHIN"],kun:["oya", "shitashii"],or:"Bronz aşamadan itibaren 見 (görmek) ve iğne+ağaç unsurlarının birleşimi olarak yorumlanır. Shirakawa dini amaçlı seçilmiş ağacı görür. Mizukami yakın olanları görmek anlamını temel alır.",mm:"🌲 BİR EBEVEYN AĞAÇLARDAN BİLE İĞNELERE KARŞI GÖZ KULAK OLMALI",cp:[{k:"両親",r:"RYŌSHIN",m:"Ebeveynler"},{k:"親類",r:"SHINRUI",m:"Akrabalar"},{k:"親方",r:"oyakata",m:"Patron, usta"}],ex:[{s:"___切にしてもらった。",tr:"Bana nazik davranıldı.",b:"親",br:"shita"}]},
+  {n:167,ch:"図",mn:"Plan / Diyagram",on:["ZU", "TO"],kun:["hakaru"],or:"Erken form ve geleneksel form. Mizukami ve Katō sınırlar içindeki araziyi tasvir eden bir çizim olarak yorumlar. Shirakawa tarım arazisindeki tahıl ambarları olarak görür.",mm:"📄 KAĞIT ÜZERİNDE X NOKTASINI GÖSTERİR",cp:[{k:"地図",r:"CHIZU",m:"Harita"},{k:"図画",r:"ZUGA",m:"Çizim"},{k:"図書館",r:"TOSHOKAN",m:"Kütüphane"}],ex:[{s:"地___を見て道を探した。",tr:"Haritaya bakarak yol aradım.",b:"図",br:"ZU"}]},
+  {n:168,ch:"数",mn:"Sayı / Saymak",on:["SŪ"],kun:["kazu", "kazoeru"],or:"Mühür ve geleneksel form. 'Vurmak, çarpmak' ve 'büyücü kadın' (fonetik, 'yüksek sesle saymak' çağrışımlı) unsurlarını içerir. Shirakawa topuzu çözülen saçlı kadını yorumlar.",mm:"🌾 KADIN PİRİNÇ TANELERİNİ ELLE SAYAR",cp:[{k:"数学",r:"SŪGAKU",m:"Matematik"},{k:"数日",r:"SŪJITSU",m:"Birkaç gün"},{k:"数々",r:"kazukazu",m:"Çok sayıda"}],ex:[{s:"___学のテストがある。",tr:"Matematik sınavı var.",b:"数",br:"SŪ"}]},
+  {n:169,ch:"西",mn:"Batı",on:["SEI", "SAI"],kun:["nishi"],or:"OBI ve diğer erken formlar sepet, şarap presi veya yuva olarak yorumlanır. Başından beri 'batı' için fonetik ödünç kullanım olduğu görülür. Modern form şarap kavanozuna benzetilerek hatırlanabilir.",mm:"🍶 ŞARAP KAVANOZU İÇİN VAKIT GELDI — GÜNEŞ BATIDA",cp:[{k:"西洋",r:"SEIYŌ",m:"Batı (dünya)"},{k:"関西",r:"KANSAI",m:"Kansai bölgesi"},{k:"西日",r:"nishibi",m:"Öğleden sonraki güneş"}],ex:[{s:"太陽は___に沈む。",tr:"Güneş batıda batar.",b:"西",br:"nishi"}]},
+  {n:170,ch:"声",mn:"Ses / Ses tonu",on:["SEI", "SHŌ"],kun:["koe"],or:"Geleneksel form. OBI'de asılı taş ve tokmaktan oluşan eski Çin müzik aleti 'qing' ile kulak unsurları birleşir. Shirakawa 'ağız'ı ritüel kap olarak yorumlar. 'Ses, ün' anlamları gelişti.",mm:"🥷 SAMURAY SESİNİ KAPININ ARKASINA YAKTIRIR",cp:[{k:"声援",r:"SEIEN",m:"Sesli destek"},{k:"大音声",r:"DAIONJŌ",m:"Yüksek ses"},{k:"泣き声",r:"nakigoe",m:"Ağlama sesi"}],ex:[{s:"大きな___で呼んだ。",tr:"Yüksek sesle çağırdım.",b:"声",br:"koe"}]},
+  {n:171,ch:"星",mn:"Yıldız",on:["SEI", "SHŌ"],kun:["hoshi"],or:"Bazı OBI formları güneşe benzer beş daire veya kare şekil içerir; bunlar yıldızları piktografik olarak temsil eder. 生 (yaşam) fonetik unsur olarak 'berrak' çağrışımı taşır.",mm:"⭐ YILDIZLAR GÜNEŞTEN DOĞAR",cp:[{k:"火星",r:"KASEI",m:"Mars"},{k:"明星",r:"MYŌJŌ",m:"Venüs (sabah yıldızı)"},{k:"流れ星",r:"nagareboshi",m:"Kayan yıldız"}],ex:[{s:"夜空に___が輝く。",tr:"Gece gökyüzünde yıldızlar parlıyor.",b:"星",br:"hoshi"}]},
+  {n:172,ch:"晴",mn:"Açık / Parlak",on:["SEI"],kun:["hareru"],or:"Çok geç dönem karakter; Shuowen'de yer almaz. 'Güneş/parlak' belirleyicisi ve 'mavi/yeşil' fonetik unsurunu içerir; fonetik 'berrak, taze' çağrışımlıdır.",mm:"☀️ PARLAK GÜNEŞ KARŞISINDA MAVİ AÇIK HAVA DEMEKTİR",cp:[{k:"晴天",r:"SEITEN",m:"Açık gökyüzü"},{k:"晴れ晴れ",r:"harebare",m:"Berrak, neşeli"},{k:"晴れ着",r:"haregi",m:"En güzel kıyafet"}],ex:[{s:"今日は___れている。",tr:"Bugün hava açık.",b:"晴",br:"ha"}]},
+  {n:173,ch:"切",mn:"Kesmek",on:["SETSU", "SAI"],kun:["kiru"],or:"Göreceli geç dönem (Shuowen). 'Kılıç, bıçak' ve 'yedi' (fonetik, 'kemik kesmek' çağrışımlı) unsurlarından oluşur. Geç Han döneminde bu iki grafik aynı sese yakındı.",mm:"⚔️ YEDİ KILIÇ DARBESİ",cp:[{k:"親切",r:"SHINSETSU",m:"Nezaket, iyilik"},{k:"一切",r:"ISSAI",m:"Her şey"},{k:"腹切り",r:"harakiri",m:"Harakiri"}],ex:[{s:"ナイフでパンを___った。",tr:"Bıçakla ekmeği kestim.",b:"切",br:"ki"}]},
+  {n:174,ch:"雪",mn:"Kar",on:["SETSU"],kun:["yuki"],or:"OBI formları rüzgarlı fırtınadaki kar desenlerini ya da kar tanelerini tasvir eder. Mühür yazısında alt unsur hatalı olarak süpürge şeklinde yorumlandı. Modern form 'süpürülen yağmur' olarak hatırlana",mm:"🧹 SÜPÜRGEYLE SÜPÜRÜLEBILEN YAĞMUR ASLINDA KARDUR",cp:[{k:"降雪",r:"KŌSETSU",m:"Kar yağışı"},{k:"大雪",r:"ōyuki",m:"Yoğun kar"},{k:"除雪車",r:"JOSETSUSHI A",m:"Kar temizleme aracı"}],ex:[{s:"冬に___が降った。",tr:"Kışın kar yağdı.",b:"雪",br:"yuki"}]},
+  {n:175,ch:"船",mn:"Tekne / Gemi",on:["SEN"],kun:["fune", "funa-"],or:"Bronz formlar eski grafikle 'tekne' ve sağ unsur fonetik olarak birleşir. Schuessler fonetik değerlerin yakınlığına dayanarak 'oyulmuş kereste' ve dolayısıyla 'tekne' anlamını açıklar.",mm:"⛵ SEKİZ LİMBOSU OLAN TEKNE GEMİDİR",cp:[{k:"船長",r:"SENCHŌ",m:"Kaptan"},{k:"小舟",r:"kogibune",m:"Küçük tekne"},{k:"船便",r:"funaBIN",m:"Deniz postası"}],ex:[{s:"___で島に渡った。",tr:"Tekneyle adaya geçtim.",b:"船",br:"fune"}]},
+  {n:176,ch:"線",mn:"Hat / Çizgi",on:["SEN"],kun:[],or:"Göreceli geç dönem karakter (Shuowen). 'İplik' belirleyicisi ve 'pınar/kaynak' fonetik unsurunu içerir; 'ince/narin iplik' çağrışımlıdır. 'Çizgi' anlamı bu ince iplikten türemiştir.",mm:"🧵 İNCE İPLİK KAYNAĞINA KADAR İZLE",cp:[{k:"脱線",r:"DASSEN",m:"Demiryolu kazası, sapma"},{k:"光線",r:"KŌSEN",m:"Işın"},{k:"直線",r:"CHOKUSEN",m:"Düz çizgi"}],ex:[{s:"電___に乗って行く。",tr:"Trenle gidiyorum.",b:"線",br:"SEN"}]},
+  {n:177,ch:"前",mn:"Önce / Ön",on:["ZEN"],kun:["mae"],or:"Erken formlar 'ayak izi' unsurunu içerir. Alt unsur genellikle ilkel sandal şeklinde yorumlanır; 'ileri gitmek', zamansal olarak 'önce' anlamını kazandırmıştır. Sonradan bıçak unsuru eklenerek 'kesmek",mm:"🥩 ETİ KESMEDEN ÖNCE BOYNUZLARINI KES",cp:[{k:"前者",r:"ZENSHA",m:"Önceki (kişi/şey)"},{k:"空前",r:"KŪZEN",m:"Emsalsiz"},{k:"前払い",r:"maebarai",m:"Ön ödeme"}],ex:[{s:"駅の___で待っている。",tr:"İstasyonun önünde bekliyorum.",b:"前",br:"mae"}]},
+  {n:178,ch:"組",mn:"Grup / Toplamak",on:["SO"],kun:["kumi", "kumu"],or:"Bronz formlar genellikle 'el' unsurunu içerir (mühür yazısında düşürüldü). 'İplik' belirleyicisi ve 'birikmiş et' fonetik unsuru ile 'bir araya getirilmiş iplikten yapılmış ip' anlamına ulaşır. 'Grup'",mm:"🧵 GRUP İPLİK YIĞINLARINI BİR ARAYA TOPLAR",cp:[{k:"組織",r:"SOSHIKI",m:"Organizasyon"},{k:"組合",r:"kumiai",m:"Sendika, birlik"},{k:"組み立て",r:"kumitate",m:"Montaj, kurulum"}],ex:[{s:"三年一___に入った。",tr:"3-1 sınıfına girdim.",b:"組",br:"KUMI"}]},
+  {n:179,ch:"走",mn:"Koşmak",on:["SŌ"],kun:["hashiru"],or:"Bronz formun alt kısmı ayağı, üst unsur ise hızla hareket etme çağrışımlı fonetik unsurudur. Modern Japonca 'koşmak' anlamını korurken Çincede 'yürümek' anlamına dönüştü.",mm:"🦶 AYAK YER BOYUNCA KOŞAR",cp:[{k:"競走",r:"KYŌSŌ",m:"Yarış, koşu"},{k:"走行",r:"SŌKŌ",m:"Seyahat etmek"},{k:"走り書き",r:"hashirigaki",m:"Çabuk yazı"}],ex:[{s:"毎朝公園を___る。",tr:"Her sabah parkta koşarım.",b:"走",br:"hashi"}]},
+  {n:180,ch:"多",mn:"Çok / Fazla",on:["TA"],kun:["ōi"],or:"OBI formu bir et parçasının diğerinin üzerinde tasviri — 'yığılmış et, bol et; bol' anlamlarını verir. Shuowen bunu 'ikiz ay' olarak yorumlar, ama bu daha geç bir şekle dayanır.",mm:"🌙 ÇOK AY, ÇOK AKŞAM",cp:[{k:"多数",r:"TASŪ",m:"Çoğunluk"},{k:"多面的",r:"TAMENTEKI",m:"Çok yönlü"},{k:"多すぎ",r:"ōsugi",m:"Çok fazla"}],ex:[{s:"今日は宿題が___い。",tr:"Bugün çok ödevim var.",b:"多",br:"ō"}]},
+  {n:181,ch:"太",mn:"Şişman / Büyük",on:["TAI", "TA"],kun:["futoi", "futoru"],or:"Çok geç dönem karakter (Yupian). Kangxi Sözlüğü'nde büyük (大) ile aynı anlama geldiği belirtilir. Katō ek çizginin büyükler arasında bile özellikle büyük olduğunu belirtmek için eklendiğini öne sürer.",mm:"➕ ŞİŞMAN BİRAZ BÜYÜKTEN FAZLASIDIR",cp:[{k:"太子",r:"TAISHI",m:"Prens"},{k:"太陽",r:"TAIYŌ",m:"Güneş"},{k:"太字",r:"futoJI",m:"Kalın yazı"}],ex:[{s:"___陽がまぶしい。",tr:"Güneş kamaştırıcı.",b:"太",br:"TAI"}]},
+  {n:182,ch:"体",mn:"Beden / Vücut",on:["TAI", "TEI"],kun:["karada"],or:"Bronz, mühür ve geleneksel formlar var. 'Kemik' ve 'bol' fonetik unsurunu içerir. Daha basit form sonradan 'kişi' ve 'temel' anlamlarının birleşimi olarak yorumlandı.",mm:"🦴 BEDEN BİR KİŞİNİN TEMELİDİR",cp:[{k:"体格",r:"TAIKAKU",m:"Fizik yapı, bünye"},{k:"風体",r:"FŪTEI",m:"Duruş, tutum"},{k:"体つき",r:"karadatsuki",m:"Vücut yapısı"}],ex:[{s:"___を動かすのは大切だ。",tr:"Vücudu hareket ettirmek önemlidir.",b:"体",br:"karada"}]},
+  {n:183,ch:"台",mn:"Stand / Platform",on:["DAI", "TAI"],kun:[],or:"Mühür ve geleneksel form. Bir görüşe göre büyük davul ve 'ayak, taban' anlamındaki unsur birleşerek 'davul sehpası' verir. Diğer görüşte gözetleme kulesi olarak yorumlanır.",mm:"👃 BURUN BİR AĞIZ İÇİN BİR TÜR PLATFORMdur",cp:[{k:"土台",r:"DODAI",m:"Temel, zemin"},{k:"台風",r:"TAIFŪ",m:"Tayfun"},{k:"台所",r:"DAIdokoro",m:"Mutfak"}],ex:[{s:"舞___に立った。",tr:"Sahneye çıktım.",b:"台",br:"DAI"}]},
+  {n:184,ch:"地",mn:"Yer / Arazi",on:["CHI", "JI"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Toprak, zemin' belirleyicisi ve fonetik unsur içerir; fonetik unsur başlangıçta kıvrılan yılanın piktogramıydı.",mm:"🐍 KURTÇUKLAR ZEMINDE KIVRANIR",cp:[{k:"地方",r:"CHIHŌ",m:"Bölge, yöre"},{k:"地下",r:"CHIKA",m:"Yeraltı"},{k:"地元",r:"JImoto",m:"Yerel"}],ex:[{s:"___図を持って旅した。",tr:"Haritayla seyahat ettim.",b:"地",br:"JI"}]},
+  {n:185,ch:"池",mn:"Havuz / Gölet",on:["CHI"],kun:["ike"],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Su' belirleyicisi ve 184 ile aynı fonetik unsuru içerir; çeşitli yorumlarda 'su kanalı' ya da 'setlerle çevrilmiş bataklık' anlamına ulaşır.",mm:"🐍 KURTÇUKLAR HAVUZDA YÜZEN YILANLARDIR",cp:[{k:"用水池",r:"YŌSUICHI",m:"Rezervuar"},{k:"電池",r:"DENCHI",m:"Pil"},{k:"古池",r:"furuike",m:"Eski havuz"}],ex:[{s:"公園の___に魚がいる。",tr:"Parkın havuzunda balık var.",b:"池",br:"ike"}]},
+  {n:186,ch:"知",mn:"Bilmek",on:["CHI"],kun:["shiru"],or:"Geç dönem karakter. 'Ağız, konuşmak' ve 'ok' (fonetik, 'hedefe tam isabet' çağrışımlı) unsurlarından oluşur. Genişletilmiş anlam 'tam isabetli biçimde tanımlamak' ve dolayısıyla 'bilmek'tir.",mm:"🏹 OKUN AĞIZDA OLMASINI BİLECEKSİN!",cp:[{k:"知識",r:"CHISHIKI",m:"Bilgi"},{k:"知的",r:"CHITEKI",m:"Entelektüel"},{k:"知り合い",r:"shiriai",m:"Tanıdık"}],ex:[{s:"彼女のことをよく___っている。",tr:"Onu çok iyi tanıyorum.",b:"知",br:"shi"}]},
+  {n:187,ch:"茶",mn:"Çay / Sinir etmek",on:["CHA", "SA"],kun:[],or:"Çok geç dönem karakter (muhtemelen Tang Hanedanı). Başlangıçta 'bitki/çimen' ve 'bol' anlamındaki unsurlardan oluşan grafik belirli bir acı bitkiye atıfta bulunurdu. Değiştirilmiş şekil çay bitkisini ",mm:"🍵 NEREDEYSE BOL ÇAY BİTKİLERİ",cp:[{k:"茶碗",r:"CHAWAN",m:"Çay kasesi"},{k:"茶々",r:"CHACHA",m:"Müdahale, karışma"},{k:"茶道",r:"SADŌ",m:"Çay töreni"}],ex:[{s:"緑___を一杯飲んだ。",tr:"Bir fincan yeşil çay içtim.",b:"茶",br:"CHA"}]},
+  {n:188,ch:"昼",mn:"Öğlen / Gündüz",on:["CHŪ"],kun:["hiru"],or:"Bronz, mühür ve geleneksel formlar var. Bronz formda 'güneş' ve yazı fırçasıyla ilgili unsurlar birleşerek 'güneşin her yeri aydınlatması' anlamını verir. 'Gündüz' geceyle karşıtlık içinde kullanılır.",mm:"📏 GÜNEŞI UFUK ÜZERİNDE ÖĞLEN ÖLÇERSIN",cp:[{k:"昼食",r:"CHŪSHOKU",m:"Öğle yemeği"},{k:"昼光性",r:"CHŪKŌSEI",m:"Gündüzcül"},{k:"昼間",r:"hiruma",m:"Gündüz vakti"}],ex:[{s:"___ご飯を食べた。",tr:"Öğle yemeği yedim.",b:"昼",br:"hiru"}]},
+  {n:189,ch:"長",mn:"Uzun / Kıdemli",on:["CHŌ"],kun:["nagai"],or:"OBI formları uzun saçlı, bazen bastonlu birini gösterir. Shirakawa yalnızca yaşlı insanların uzun saç taşıyabildiğini belirtir. Tōdō 'uzun' anlamlı bir kelime ailesine dahil eder.",mm:"👴 KIYDEMLİ VATANDAŞ SAÇLARI DALGALANA DALGALANA KOŞAR",cp:[{k:"成長",r:"SEICHŌ",m:"Büyüme, gelişme"},{k:"会長",r:"KAICHŌ",m:"Başkan"},{k:"長生き",r:"nagaiki",m:"Uzun ömür"}],ex:[{s:"___い橋を渡った。",tr:"Uzun köprüden geçtim.",b:"長",br:"naga"}]},
+  {n:190,ch:"鳥",mn:"Kuş",on:["CHŌ"],kun:["tori"],or:"Bir kuşun piktogramına dayanır. Bileşik karakterlerde farklı bir kuş grafiği de kullanılır.",mm:"🦅 KANATLARI VE TÜYLERİ VARSA KUŞTUR",cp:[{k:"白鳥",r:"HAKUCHŌ",m:"Kuğu"},{k:"野鳥",r:"YACHŌ",m:"Yabani kuş"},{k:"鳥居",r:"torii",m:"Şinto tapınak kapısı"}],ex:[{s:"空を___が飛んでいる。",tr:"Gökyüzünde kuşlar uçuyor.",b:"鳥",br:"tori"}]},
+  {n:191,ch:"朝",mn:"Sabah / Saray",on:["CHŌ"],kun:["asa"],or:"OBI formu 'güneş', 'bitki/fidan' veya 'bitkiler' ve 'ay' unsurlarını içerir — 'ay hala aydayken bitkilerden doğan güneş', yani sabah. Bronz formda bir unsur 'nehir'e dönüştü.",mm:"🌿 GÜNEŞ BİTKİLERDEN DOĞAR, AY HALA GORUNÜRKEN — SABAH",cp:[{k:"朝食",r:"CHŌSHOKU",m:"Kahvaltı"},{k:"朝日",r:"asahi",m:"Sabah güneşi"},{k:"朝廷",r:"CHŌTEI",m:"İmparatorluk sarayı"}],ex:[{s:"___ご飯を食べる。",tr:"Kahvaltı yaparım.",b:"朝",br:"asa"}]},
+  {n:192,ch:"直",mn:"Doğrudan / Düzgün",on:["CHOKU", "JIKI"],kun:["naoru", "naosu", "sugu", "tadachi"],or:"OBI formu 'göz' ve fonetik unsuru içerir. Mühür yazısında kıvrık çizgi eklenerek 'bakışı doğrultmak' ve dolayısıyla genel anlamda 'düzeltmek' ifade edildi.",mm:"✝️ ÇAPRAZ BAKIŞ — DOĞRUDAN DÜZELTİLMELİ",cp:[{k:"直接",r:"CHOKUSETSU",m:"Doğrudan"},{k:"正直",r:"SHŌJIKI",m:"Dürüstlük"},{k:"直し屋",r:"naoshiya",m:"Tamirci"}],ex:[{s:"問題を___す。",tr:"Problemi düzeltirim.",b:"直",br:"nao"}]},
+  {n:193,ch:"通",mn:"Geçmek / İşe gidip gelmek",on:["TSŪ"],kun:["tōru", "tōsu", "kayou"],or:"OBI, bronz ve mühür formlar var. 'Yol boyunca yürümek, gitmek' belirleyicisi ve değişen fonetik unsurlar içerir; 'yol devam eder' anlamını verir. Tōdō bu grafiği 'nüfuz etmek' kelime ailesine dahil ed",mm:"🚶 EĞRİ FİGÜR GEÇMEK İÇİN KORİDORU KULLANIR",cp:[{k:"通行",r:"TSŪKŌ",m:"Geçiş"},{k:"通勤",r:"TSŪKIN",m:"İşe gidip gelme"},{k:"大通り",r:"ōdōri",m:"Ana cadde"}],ex:[{s:"毎日この道を___る。",tr:"Her gün bu yoldan geçerim.",b:"通",br:"tō"}]},
+  {n:194,ch:"弟",mn:"Küçük erkek kardeş",on:["TEI", "DAI", "DE"],kun:["otōto"],or:"OBI formlar derinin sarıldığı bir silah sapını tasvir eder. Sarma işleminin belirli bir sırası vardı; bu düzen ve sırayı çağrıştırır. Tōdō 'kısa ve düşük' anlamıyla 'küçük erkek kardeş'i açıklar.",mm:"🪵 KÜÇÜK ERKEK KARDEŞ BİR KAZIGA BAĞI BOLCA BAGLI",cp:[{k:"師弟",r:"SHITEI",m:"Hoca ve öğrenci"},{k:"弟子",r:"DESHI",m:"Öğrenci, talebe"},{k:"兄弟",r:"KYŌDAI",m:"Erkek kardeşler"}],ex:[{s:"___は小学生だ。",tr:"Erkek kardeşim ilkokul öğrencisi.",b:"弟",br:"otōto"}]},
+  {n:195,ch:"店",mn:"Dükkan / Mağaza",on:["TEN"],kun:["mise", "tana"],or:"Çok geç dönem karakter (Yupian). 'Çatı, bina' ve fonetik unsuru içerir; fonetik 'düzenlemek, sergilemek' ya da 'sabit bir yerde olmak' çağrışımlıdır. Her ikisi de 'dükkan' anlamını verir.",mm:"🏪 MAĞAZA O BÜYÜK ÇATILI BİNAYI İŞGAL EDER",cp:[{k:"店員",r:"TEN'IN",m:"Mağaza personeli"},{k:"夜店",r:"yomise",m:"Gece pazarı"},{k:"店立て",r:"tanadate",m:"Tahliye"}],ex:[{s:"お___でケーキを買った。",tr:"Dükkândan kek satın aldım.",b:"店",br:"mise"}]},
+  {n:196,ch:"点",mn:"Nokta / İşaret",on:["TEN"],kun:[],or:"Mühür formu. Geç dönem karakter (Shuowen). 'Siyah' ve fonetik unsur (fal, 'küçük' çağrışımlı) içerir; 'küçük siyah lekeler' anlamında. Ateş ve fal unsurları hafıza aracı olarak kullanılabilir.",mm:"🔥 FAL İÇİN ATEŞ SİYAH LEKELER BIRAKIR",cp:[{k:"点線",r:"TENSEN",m:"Noktalı çizgi"},{k:"得点",r:"TOKUTEN",m:"Puan, skor"},{k:"重点",r:"JŪTEN",m:"Vurgu, ağırlık noktası"}],ex:[{s:"テストで満___を取った。",tr:"Sınavda tam puan aldım.",b:"点",br:"TEN"}]},
+  {n:197,ch:"電",mn:"Elektrik",on:["DEN"],kun:[],or:"Bronz ve mühür formlar var. 'Yağmur/hava unsuru' ve yıldırımı temsil eden unsurları içerir; 'uzanan hava unsuru' ve dolayısıyla 'şimşek' anlamını verir.",mm:"⚡ YILDIRIM ELEKTRİKLİ FIRTINADA TARLAYA VURur",cp:[{k:"電話",r:"DENWA",m:"Telefon"},{k:"電球",r:"DENKYŪ",m:"Ampul"},{k:"電流",r:"DENRYŪ",m:"Elektrik akımı"}],ex:[{s:"___話をかけた。",tr:"Telefon ettim.",b:"電",br:"DEN"}]},
+  {n:198,ch:"刀",mn:"Kılıç / Bıçak",on:["TŌ"],kun:["katana"],or:"Bıçak ya da kılıç piktogramı. Bileşik karakterlerde genellikle kısa form olarak görünür.",mm:"⚔️ İKİ TARAFLI KILIÇ",cp:[{k:"大刀",r:"DAITŌ",m:"Uzun kılıç"},{k:"軍刀",r:"GUNTŌ",m:"Askeri kılıç"},{k:"小刀",r:"kogatana",m:"Çakı"}],ex:[{s:"侍が___を持っている。",tr:"Samuray kılıç taşıyor.",b:"刀",br:"katana"}]},
+  {n:199,ch:"冬",mn:"Kış",on:["TŌ"],kun:["fuyu"],or:"Yorumlar değişir. Mizukami yaprak dökümü sonrası ağaçta kalan ya da asılı yiyeceği görür. Katō buz ve fonetik unsur olarak 'donmak' çağrışımını görür. Shirakawa OBI formunu ip uçları olarak yorumlar.",mm:"🦵 ÇAPRAZ BACAKLAR KIŞ BUZUNDA KAYAR",cp:[{k:"冬眠",r:"TŌMIN",m:"Kış uykusu"},{k:"冬季",r:"TŌKI",m:"Kış mevsimi"},{k:"冬枯れ",r:"fuyugare",m:"Kış solgunluğu"}],ex:[{s:"___は雪が降る。",tr:"Kışın kar yağar.",b:"冬",br:"fuyu"}]},
+  {n:200,ch:"当",mn:"Uygulamak / İsabet",on:["TŌ"],kun:["ataru", "ateru"],or:"Bronz, mühür ve geleneksel formlar var. 'Tarla' ve 'değer, fiyat, eşdeğer' çağrışımlı fonetik unsur içerir. Özgün anlam bir tarlayı rehin olarak sunmak; Tōdō 'birbirine itmek, karşılık getirmek' kelim",mm:"🤏 BU KÜÇÜK EL UYGUN BİÇİMDE HEDEFE İSABET EDER",cp:[{k:"相当",r:"SŌTŌ",m:"Uygun, makul"},{k:"当人",r:"TŌNIN",m:"İlgili kişi"},{k:"手当て",r:"teate",m:"Ödenek, tedavi"}],ex:[{s:"___然知っている。",tr:"Tabii ki biliyorum.",b:"当",br:"tō"}]},
+  {n:201,ch:"東",mn:"Doğu",on:["TŌ"],kun:["higashi", "azuma"],or:"OBI formları iki ucu bağlı dipsiz çantayı gösterir; çantanın ortasından dikey bir sopa geçer. 'Doğu' için fonetik ödünç kullanım. Modern form 'ağacın arkasından doğan güneş' olarak hatırlanabilir.",mm:"🌅 AĞACIN ARKASINDA GÜNEŞ DOĞUYOR — DOĞU",cp:[{k:"東洋",r:"TŌYŌ",m:"Doğu (dünya), Orient"},{k:"東側",r:"higashigawa",m:"Doğu tarafı"},{k:"東屋",r:"azumaya",m:"Çardak, köşk"}],ex:[{s:"太陽は___から昇る。",tr:"Güneş doğudan yükselir.",b:"東",br:"higashi"}]},
+  {n:202,ch:"答",mn:"Cevap",on:["TŌ"],kun:["kotaeru"],or:"Geç dönem karakter (Shuowen sonrası). 'Karşılaşmak, birleşmek' bağımsız olarak 'cevap vermek' ve 'bir araya gelmek' için kullanılırdı. Daha sonra 'bambu' unsuru eklenerek 'cevap vermek' anlamı netleşt",mm:"🎋 BAMBU UYGUN BİR CEVAPtir",cp:[{k:"回答",r:"KAITŌ",m:"Çözüm, yanıt"},{k:"答案",r:"TŌAN",m:"Sınav kağıdı"},{k:"口答え",r:"kuchigotae",m:"Karşılık, itiraz"}],ex:[{s:"質問に___えた。",tr:"Soruyu cevapladım.",b:"答",br:"kota"}]},
+  {n:203,ch:"頭",mn:"Baş / Tepe",on:["TŌ", "ZU"],kun:["atama", "kashira"],or:"Bronz formda 'baş' ve 'ayakta duran kap' fonetik unsuru (dik durma ve dolayısıyla 'baş' çağrışımı) içerir. 155 (baş) gibi 'başlangıç; ilk sırada' genişletilmiş anlamları vardır.",mm:"🫘 FASULYE KAFA!",cp:[{k:"頭骨",r:"TŌKOTSU",m:"Kafatası"},{k:"頭痛",r:"ZUTSŪ",m:"Baş ağrısı"},{k:"頭金",r:"atamaKIN",m:"Peşinat"}],ex:[{s:"___が痛い。",tr:"Başım ağrıyor.",b:"頭",br:"atama"}]},
+  {n:204,ch:"同",mn:"Aynı",on:["DŌ"],kun:["onaji"],or:"Erken formlar tartışmalıdır. Mizukami 'ağız'ı 'kelimeler' olarak değerlendirir, fonetik 'toplamak' çağrışımlıdır. Tōdō 'nüfuz etmek' kelime ailesine dahil eder; yuvarlak delik herhangi açıdan ölçüldüğ",mm:"🏑 BENZERİ ÇEMBERLER AYNI TEK AÇIKLIĞA SAHIP",cp:[{k:"同様",r:"DŌYŌ",m:"Benzer, aynı şekilde"},{k:"同時",r:"DŌJI",m:"Eş zamanlı"},{k:"同意",r:"DŌUI",m:"Anlaşma, onay"}],ex:[{s:"___じ意見を持っている。",tr:"Aynı fikirdeyim.",b:"同",br:"ona"}]},
+  {n:205,ch:"道",mn:"Yol / Tarz",on:["DŌ", "TŌ"],kun:["michi"],or:"Çeşitli bronz formlar 'kavşaklar, yollar, gitmek' ve 'el' unsurlarını içerir; mühür aşamasında 'baş' fonetik unsura dönüştü. Tōdō 'dar çizgide uzanmak' kelime ailesine dahil eder.",mm:"👑 BAŞ YOLU YÖNETIR",cp:[{k:"鉄道",r:"TETSUDŌ",m:"Demiryolu"},{k:"神道",r:"SHINTŌ",m:"Şintoizm"},{k:"道端",r:"michibata",m:"Yol kenarı"}],ex:[{s:"この___を真っすぐ行く。",tr:"Bu yolda düz gidiyorum.",b:"道",br:"michi"}]},
+  {n:206,ch:"読",mn:"Okumak",on:["DOKU", "TOKU"],kun:["yomu"],or:"Geç dönem karakter (Shuowen). 'Kelimeler' belirleyicisi ve fonetik unsur 'yüksek sesle okumak' çağrışımı taşır. Geleneksel form sağ unsur bakımından biraz farklıdır.",mm:"📚 OKUMAK İÇİN KELİMELERİ SAT",cp:[{k:"読者",r:"DOKUSHI A",m:"Okuyucu"},{k:"読本",r:"TOKUHON",m:"Okuma kitabı"},{k:"読み方",r:"yomikata",m:"Okuma biçimi"}],ex:[{s:"毎日本を___む。",tr:"Her gün kitap okurum.",b:"読",br:"yo"}]},
+  {n:207,ch:"内",mn:"İç / İçeri",on:["NAI", "DAI"],kun:["uchi"],or:"OBI. Bileşenler 'çatı ya da konut' ve 'giriş'tir. 'İçeri girmek', 'içerisi' genişletilmiş anlamlardır.",mm:"🙆 ÇERÇEVEYE TAMAMEN SIĞAMAYAN KİŞİ",cp:[{k:"内部",r:"NAIBU",m:"İç kısım"},{k:"家内",r:"KANAI",m:"Eş (resmi)"},{k:"内気",r:"uchiKI",m:"Çekingenlik"}],ex:[{s:"建物の___に入った。",tr:"Binanın içine girdim.",b:"内",br:"naka"}]},
+  {n:208,ch:"南",mn:"Güney",on:["NAN"],kun:["minami"],or:"OBI'den itibaren bulunur, etimoloji tartışmalıdır. Hipotezler arasında 'süslü çadır' piktogramı ve 'sıcak' çağrışımlı fonetik unsur yer alır. 'Güney' fonetik ödünç kullanımdır.",mm:"⛺ GÜNEYE BAKAN GİRİŞİ KAPALI HAÇLI ÇADIR",cp:[{k:"東南",r:"TŌNAN",m:"Güneydoğu"},{k:"南極",r:"NANKYOKU",m:"Güney Kutbu"},{k:"南側",r:"minamigawa",m:"Güney tarafı"}],ex:[{s:"___の方向に進んだ。",tr:"Güney yönünde ilerledi.",b:"南",br:"minami"}]},
+  {n:209,ch:"肉",mn:"Et / Beden",on:["NIKU"],kun:[],or:"OBI formu bir et parçasının piktogramına dayanır. Bronz formlardan itibaren iç kısımda etlerin lifini veya siniri temsil eden birden fazla çizgi görülür. Modern yazıda bileşik karakterlerde ay (月) ile",mm:"🥩 DAMARSIZ FİLETO ET",cp:[{k:"馬肉",r:"BANIKU",m:"At eti"},{k:"肉屋",r:"NIKUya",m:"Kasap"},{k:"肉眼",r:"NIKUGAN",m:"Çıplak göz"}],ex:[{s:"___を焼いて食べた。",tr:"Et pişirip yedim.",b:"肉",br:"NIKU"}]},
+  {n:210,ch:"馬",mn:"At",on:["BA"],kun:["uma", "ma"],or:"OBI formları atın piktogramından geldiğini açıkça gösterir.",mm:"🐴 AKAN YELESİ, DÖRT BACAĞI VE KUYRUĞUYLA AT",cp:[{k:"馬術",r:"BAJUTSU",m:"Binicililik sanatı"},{k:"馬乗り",r:"umanori",m:"At binme"},{k:"馬子",r:"mago",m:"Yük atı sürücüsü"}],ex:[{s:"___に乗って野原を走った。",tr:"Ata binerek ovada koştum.",b:"馬",br:"uma"}]},
+  {n:211,ch:"売",mn:"Satmak",on:["BAI"],kun:["uru", "ureru"],or:"Geç dönem karakter (Shuowen). Geleneksel form samurai unsurunu (muhtemelen 'sergilemek' için hatalı) ve 'satın almak' unsurunu birleştirir. 'Para karşılığı sergileme ve takas' anlamı üretilmiştir.",mm:"⚔️ EĞRI BACAKLI SAMURAY TEZGAHTA SATIYOR",cp:[{k:"売買",r:"BAIBAI",m:"Alım satım"},{k:"売店",r:"BAITEN",m:"Büfe, stand"},{k:"売り物",r:"urimono",m:"Satılık ürün"}],ex:[{s:"市場で野菜を___っている。",tr:"Pazarda sebze satıyorlar.",b:"売",br:"u"}]},
+  {n:212,ch:"買",mn:"Satın almak",on:["BAI"],kun:["kau"],or:"211'den (satmak) daha eski karakterdir. OBI aşamasından itibaren var. Ogawa 'kabuk para birimi' ve 'ağ' (fonetik, 'almak/edinmek' çağrışımlı) olarak yorumlar. Katō farklı bir analiz önerir.",mm:"🕸️ KABUK KABUĞU ALMAK İÇİN BİR AĞ KULLAN",cp:[{k:"買収",r:"BAISHŪ",m:"Satın alma, rüşvet"},{k:"買い物",r:"kaimono",m:"Alışveriş"},{k:"買い手",r:"kaite",m:"Alıcı"}],ex:[{s:"スーパーで食料を___った。",tr:"Süpermarketten yiyecek satın aldım.",b:"買",br:"ka"}]},
+  {n:213,ch:"麦",mn:"Arpa / Buğday",on:["BAKU"],kun:["mugi"],or:"OBI ve geleneksel formlar. Karlgren ve Ma buğday ya da arpa bitkisinin piktogramı olarak görür. Tōdō ve Ogawa alt kısmı 'inen ayak' olarak yorumlar — 'cennetten verilen buğday'. Pulleyblank alternatif",mm:"🧘 BUĞDAY BİTKİSİ BÜYÜRKEN BAĞDAŞ KURARAK İZLENİR",cp:[{k:"麦芽",r:"BAKUGA",m:"Malt"},{k:"麦茶",r:"mugiCHA",m:"Arpa çayı"},{k:"小麦",r:"komugi",m:"Buğday"}],ex:[{s:"___畑が広がっている。",tr:"Buğday tarlası uzanıyor.",b:"麦",br:"mugi"}]},
+  {n:214,ch:"半",mn:"Yarım / Orta",on:["HAN"],kun:["nakaba"],or:"Bronz ve geleneksel form. Üst kısım 'bölmek' (hem anlamsal hem fonetik) ve alt kısım öküz başının stilize temsilidir. Özgün anlam 'öküz gövdesini ikiye bölmek'; daha geniş 'yarım' anlamı buradan gelir",mm:"🐂 ÖKÜZ KAFASINI ORTADAN İKİYE BÖLEREK YARIMLARA BÖL",cp:[{k:"半分",r:"HANBUN",m:"Yarım"},{k:"半島",r:"HANTŌ",m:"Yarımada"},{k:"半年",r:"HANtoshi",m:"Yarım yıl"}],ex:[{s:"___分に電車が来る。",tr:"Otuz dakikada tren geliyor.",b:"半",br:"HAN"}]},
+  {n:215,ch:"番",mn:"Numara / Nöbet / Sıra",on:["BAN"],kun:[],or:"Bronz formu genellikle 'tarla' ve 'el tohum saçıyor' anlamında hem fonetik hem anlamsal unsur olarak yorumlanır. Tōdō 'tohumları yaymak' kelime ailesine dahil eder. 'Sıra, numara, nöbet' ödünç kullanı",mm:"🌾 NÖBET BEKLEYEN FAZLA YAPRAKLI PİRİNÇ BİTKİLERİNİ TARLADA KORUR",cp:[{k:"順番",r:"JUNBAN",m:"Sıra, dizi"},{k:"番人",r:"BANNIN",m:"Bekçi, nöbetçi"},{k:"一番",r:"ICHIBAN",m:"Birinci, en iyi"}],ex:[{s:"何___の電車ですか？",tr:"Kaçıncı tren?",b:"番",br:"BAN"}]},
+  {n:216,ch:"父",mn:"Baba",on:["FU"],kun:["chichi"],or:"OBI. Yorumcular bu karakterin taş balta tutan eli tasvir ettiğinde hemfikirdir. 'Baba / babanın neslinden erkek akraba' anlamı fonetik ödünç kullanımdır.",mm:"🪓 BABA İKİ KÜÇÜK ŞEY YÜZÜNdEN KIZgın",cp:[{k:"父母",r:"FUBO",m:"Ebeveynler"},{k:"お父様",r:"otōsama",m:"Baba (saygılı)"},{k:"父親",r:"chichioya",m:"Baba"}],ex:[{s:"___は会社員だ。",tr:"Babam şirket çalışanıdır.",b:"父",br:"chichi"}]},
+  {n:217,ch:"風",mn:"Rüzgar / Tarz",on:["FŪ", "FU"],kun:["kaze"],or:"OBI formlarında genellikle bir anka kuşu veya büyük kuş görülür. Şiddetli rüzgarlar antik çağda zararlı bir kuş olarak algılanırdı. Mühür yazısında 'kuş' yerine 'böcek, sürüngen' koyuldu.",mm:"🦟 ŞİK BÖCEĞİ RÜZGAR SÜRÜKLÜYOR",cp:[{k:"風船",r:"FŪSEN",m:"Balon"},{k:"神風",r:"kamikaze",m:"İlahi rüzgar"},{k:"和風",r:"WAFŪ",m:"Japon tarzı"}],ex:[{s:"強い___が吹いている。",tr:"Kuvvetli rüzgar esiyor.",b:"風",br:"kaze"}]},
+  {n:218,ch:"分",mn:"Bölmek / Dakika / Anlamak",on:["BUN", "FUN", "BU"],kun:["wakaru", "wakeru", "katsu"],or:"'Bıçak/kesmek' ve 'bölmek' (hem anlamsal hem fonetik) unsurlarından oluşur. Tōdō 'ikiye kesmek' kelime ailesine dahil eder.",mm:"✂️ İKİYE BÖLEBİLECEĞİNİ ANLAYACAKSIN",cp:[{k:"分子",r:"BUNSHI",m:"Molekül"},{k:"一分",r:"IPPUN",m:"Bir dakika"},{k:"分かり",r:"wakari",m:"Anlayış, kavrayış"}],ex:[{s:"十___後に会いましょう。",tr:"On dakika sonra buluşalım.",b:"分",br:"FUN"}]},
+  {n:219,ch:"聞",mn:"Duymak / Sormak",on:["BUN", "MON"],kun:["kiku", "kikoeru"],or:"OBI formlarında büyütülmüş kulakla elde tutan kişi görülür — 見 (görmek) ile yapısal paralellik kurar. Bronz yazıda 'kulak' ve 'kapı' fonetik unsuru standardize olur.",mm:"👂 KAPIDA BİR KULAK BIRI DİNLİYOR DEMEKTİR",cp:[{k:"新聞",r:"SHINBUN",m:"Gazete"},{k:"聴聞",r:"CHŌMON",m:"Dinleme (resmi)"},{k:"聞き違い",r:"kikichigai",m:"Yanlış duyma"}],ex:[{s:"音楽を___いた。",tr:"Müzik dinledim.",b:"聞",br:"ki"}]},
+  {n:220,ch:"米",mn:"Pirinç / Amerika",on:["BEI", "MAI"],kun:["kome"],or:"OBI formu tahıl başaklarının piktogramına dayanır. Katō yatay çizgiyi kavuz olarak görür. 'Amerika' anlamı eski ME okunuşuna dayanır.",mm:"🌾 TAHILLA DOLU AMERİKAN PİRİNÇ BİTKİLERİ",cp:[{k:"米価",r:"BEIKA",m:"Pirinç fiyatı"},{k:"米国",r:"BEIKOKU",m:"Amerika"},{k:"白米",r:"HAKUMAI",m:"Beyaz pirinç"}],ex:[{s:"日本の___はおいしい。",tr:"Japon pirinci lezzetlidir.",b:"米",br:"kome"}]},
+  {n:221,ch:"歩",mn:"Yürümek / Oran",on:["HO", "BU"],kun:["aruku", "ayumu"],or:"Geleneksel form. En eksiksiz OBI grafiği 'kavşak' ve sol ile sağ ayakları temsil eder — 'yürümek'. Modern grafik 'ayak/dur' ve 'az' unsurlarının birleşimi olarak hatırlanabilir.",mm:"🦶 AYAK BİRKAÇ ADIM SONRA DURUR",cp:[{k:"進歩",r:"SHINPO",m:"İlerleme, gelişme"},{k:"歩合",r:"BUai",m:"Oran, pay"},{k:"歩き出す",r:"arukidasu",m:"Yürümeye başlamak"}],ex:[{s:"毎日一万___歩く。",tr:"Her gün on bin adım yürürüm.",b:"歩",br:"HO"}]},
+  {n:222,ch:"母",mn:"Anne",on:["BO"],kun:["haha"],or:"OBI formlarından itibaren belirgin memeleri ve meme uçları olan kadın piktogramına dayanır.",mm:"👩 BELİRGİN MEMELERİ OLAN KADIN ANNEDİR",cp:[{k:"母性",r:"BOSEI",m:"Annelik, analık"},{k:"お母様",r:"okāsama",m:"Anne (saygılı)"},{k:"母親",r:"hahaoya",m:"Anne"}],ex:[{s:"___の料理が一番好きだ。",tr:"Annemin yemeği en favori.",b:"母",br:"haha"}]},
+  {n:223,ch:"方",mn:"Yön / Taraf / Kişi",on:["HŌ"],kun:["kata"],or:"OBI formu genel olarak pulluk sapasının piktogramına dayandığı yorumlanır. Tüm modern anlamlar fonetik ödünç kullanımdır.",mm:"🌾 BİR YANA EĞİK SABAN — İŞTE YÖN",cp:[{k:"方角",r:"HŌGAKU",m:"Yön"},{k:"親方",r:"oyakata",m:"Patron, usta"},{k:"見方",r:"mikata",m:"Bakış açısı"}],ex:[{s:"あの___はどなたですか？",tr:"O kişi kim?",b:"方",br:"kata"}]},
+  {n:224,ch:"北",mn:"Kuzey / Kaçmak",on:["HOKU"],kun:["kita"],or:"OBI formu sırt sırta duran iki kişinin piktogramına dayanır. 'Geri dönmek, çekilmek' birincil anlam olarak görülür. 'Kuzey' fonetik ödünç kullanımdır; antik Çin evleri güneye baktığından sakinlerin sı",mm:"🏃 İNSANLAR KUZEYDEN KAÇARAK SIRTLARINI DÖNÜYOR",cp:[{k:"東北",r:"TŌHOKU",m:"Kuzeydoğu"},{k:"敗北",r:"HAIBOKU",m:"Yenilgi"},{k:"北風",r:"kitakaze",m:"Kuzey rüzgarı"}],ex:[{s:"___に向かって歩いた。",tr:"Kuzeye doğru yürüdüm.",b:"北",br:"kita"}]},
+  {n:225,ch:"毎",mn:"Her / Her biri",on:["MAI"],kun:["-goto"],or:"Geleneksel form; OBI görüşleri ikiye bölünmüştür — saç tokasıyla anne ya da 'bol' çağrışımlı 'anne' fonetik unsuru. 'Her, hepsi' ödünç kullanımdır.",mm:"👤 HER İNSANIN BİR ANNESİ VAR",cp:[{k:"毎日",r:"MAINICHI",m:"Her gün"},{k:"毎度",r:"MAIDO",m:"Her seferinde"},{k:"日ごと",r:"higoto",m:"Günlük, her gün"}],ex:[{s:"___日日本語を練習する。",tr:"Her gün Japonca pratik yaparım.",b:"毎",br:"MAI"}]},
+  {n:226,ch:"妹",mn:"Küçük kız kardeş",on:["MAI"],kun:["imōto"],or:"OBI metinlerinden itibaren var. 'Kadın' ve 'olgunlaşmamış' (fonetik, 'devam etme' ya da 'küçük' çağrışımlı) unsurlarından oluşur.",mm:"🛒 KÜÇÜK KIZ KARDEŞ OLGUNLAŞMAMIŞ BİR KADINDIR",cp:[{k:"姉妹",r:"SHIMAI",m:"Kız kardeşler"},{k:"妹分",r:"imōtoBUN",m:"Manevi küçük kız kardeş"},{k:"令妹",r:"REIMAI",m:"Küçük kız kardeşiniz (saygılı)"}],ex:[{s:"___は高校生だ。",tr:"Kız kardeşim lise öğrencisi.",b:"妹",br:"imōto"}]},
+  {n:227,ch:"万",mn:"On bin / Sayısız",on:["MAN", "BAN"],kun:["yorozu"],or:"Eski yazım şekliydi. OBI formu akrebin piktogramına dayanır. OBI'de zaten büyük sayı için ödünç kullanımdı. Geleneksel olarak MS 11. yüzyıldan itibaren başka bir grafiğin halk versiyonu sayıldı.",mm:"🪱 ON BIN BAŞSIZ KİŞİ",cp:[{k:"五万",r:"GOMAN",m:"Elli bin"},{k:"万事",r:"BANJI",m:"Her şey"},{k:"万屋",r:"yorozuya",m:"Bakkal, genel satıcı"}],ex:[{s:"一___円を貯金した。",tr:"On bin yen biriktirdim.",b:"万",br:"MAN"}]},
+  {n:228,ch:"明",mn:"Berrak / Aydınlık",on:["MEI", "MYŌ"],kun:["akarui", "akaru", "akeru", "akasu"],or:"OBI'de iki form bulunur: güneş ve ay ya da ay ve pencere. Bunlardan ilki modern Japonca ve Çincedeki formu oluşturur.",mm:"☀️🌙 GÜNEŞ VE AY BİRLİKTE AÇIK VE PARLAK YAPAR",cp:[{k:"明白",r:"MEIHAKU",m:"Açıklık, netlik"},{k:"明日",r:"MYŌNICHI",m:"Yarın"},{k:"明け方",r:"akegata",m:"Şafak"}],ex:[{s:"部屋を___るくした。",tr:"Odayı aydınlattım.",b:"明",br:"aka"}]},
+  {n:229,ch:"鳴",mn:"İnsan dışı ses",on:["MEI"],kun:["naku", "naru"],or:"Modern grafik 'ağız' ve 'kuş' unsurlarını içerir. Bronz formlara göre Katō kuşu horoz olarak tanımlar.",mm:"🐦 KUŞ AĞZINDAN ÇIKAN SESLER İNSAN DEĞİL",cp:[{k:"鳴動",r:"MEIDŌ",m:"Gürültü, çınlama"},{k:"鳴き声",r:"nakigoe",m:"Hayvan sesi"},{k:"鳴り物",r:"narimono",m:"Müzik aleti"}],ex:[{s:"鳥が___いている。",tr:"Kuşlar ötüyor.",b:"鳴",br:"na"}]},
+  {n:230,ch:"毛",mn:"Saç / Tüy",on:["MŌ"],kun:["ke"],or:"Bronz formlar tüy ya da kıl demetine dayanan piktogramı gösterir.",mm:"💈 DÖRT ÇİZGİ BİR TÜY DEMETİ",cp:[{k:"羊毛",r:"YŌMŌ",m:"Yün"},{k:"毛皮",r:"kegawa",m:"Kürk"},{k:"毛虫",r:"kemushi",m:"Tırtıl"}],ex:[{s:"猫の___が服についた。",tr:"Kedinin tüyü kıyafetimize yapıştı.",b:"毛",br:"ke"}]},
+  {n:231,ch:"門",mn:"Kapı / Geçit",on:["MON"],kun:["kado"],or:"Kapalı çift yapraklı bir kapı ya da kapının piktogramına dayanır. OBI formu var.",mm:"🚪🚪 ÇİFT KANATLI KAPI",cp:[{k:"正門",r:"SEIMON",m:"Ana kapı"},{k:"門番",r:"MONBAN",m:"Kapıcı, nöbetçi"},{k:"門出",r:"kadode",m:"Yola çıkış"}],ex:[{s:"校___を入った。",tr:"Okul kapısından girdim.",b:"門",br:"MON"}]},
+  {n:232,ch:"夜",mn:"Gece",on:["YA"],kun:["yo", "yoru"],or:"Bronz formda 'ay' ve fonetik unsur (çağrışımı tartışmalı) var. Tōdō 'dönüşümlü şekil ya da desen' kelime ailesine dahil eder — gece ve gündüzün dönüşümü.",mm:"🎩 KİŞİ AYA ÇARPMAMAK İÇİN GECE ŞAPKA TAKIYOR",cp:[{k:"夜光性",r:"YAKŌSEI",m:"Gece aktif, nokturnal"},{k:"夜明け",r:"yoake",m:"Şafak"},{k:"夜昼",r:"yoruhiru",m:"Gece gündüz"}],ex:[{s:"___に星を見た。",tr:"Gece yıldızlara baktım.",b:"夜",br:"yoru"}]},
+  {n:233,ch:"野",mn:"Kır / Yabani",on:["YA"],kun:["no"],or:"Mühür yazısından itibaren izlenebilen karakter. 'Köy' ve 'zaten' (fonetik, 'sakin, sessiz' çağrışımlı) unsurlarından oluşur.",mm:"🏘️ KIR ARAZIDE ZATEN KURULU KÖY",cp:[{k:"野生",r:"YASEI",m:"Yabani, vahşi"},{k:"野球",r:"YAKYŪ",m:"Beysbol"},{k:"野原",r:"nohara",m:"Çayır, tarla"}],ex:[{s:"___原を走り回った。",tr:"Çayırda koşuşturdum.",b:"野",br:"no"}]},
+  {n:234,ch:"友",mn:"Arkadaş",on:["YŪ"],kun:["tomo"],or:"OBI formu iki elin yan yana gelişini gösterir — 'yardım etmek', 'birliktelik' ve dolayısıyla 'arkadaş' anlamlarını taşır.",mm:"🤝 İKİ ELİN BİR ARAYA GELMESİ DOSTLUĞUN İŞARETİDİR",cp:[{k:"友人",r:"YŪJIN",m:"Arkadaş, dost"},{k:"友情",r:"YŪJŌ",m:"Dostluk"},{k:"友達",r:"tomodachi",m:"Arkadaş"}],ex:[{s:"___達と公園で遊んだ。",tr:"Arkadaşlarımla parkta oynadım.",b:"友",br:"tomo"}]},
+  {n:235,ch:"用",mn:"Kullanmak",on:["YŌ"],kun:["mochiiru"],or:"OBI formu Shang Hanedanı'nda kurban için zaman zaman kullanılan hayvan ağılını tasvir eder; 'kullanmak' fonetik ödünç kullanım olabilir. Ma bir kova olarak yorumlar.",mm:"🏡 ÇİTLERDEN YARARLAN",cp:[{k:"用事",r:"YŌJI",m:"İş, gidilecek yer"},{k:"用意",r:"YŌUI",m:"Hazırlık"},{k:"悪用",r:"AKUYŌ",m:"Kötüye kullanmak"}],ex:[{s:"何の___ですか？",tr:"Ne işiniz var?",b:"用",br:"YŌ"}]},
+  {n:236,ch:"曜",mn:"Haftanın günü / Parlamak",on:["YŌ"],kun:[],or:"Geç dönem karakter; Shuowen'de yer almaz. 'Haftanın günü' anlamı şöyle açıklanır: 'parlak' (güneş+ay) ile beş gezegen grubu her biri için bir gün oluşturur — Pazar, Pazartesi vb.",mm:"☀️ GÜNEŞ BİR KUŞ GİBİ KANATLANIR — BİR GÜN DAHA GEÇER",cp:[{k:"曜日",r:"YŌbi",m:"Haftanın günü"},{k:"火曜日",r:"KAYŌbi",m:"Salı"},{k:"七曜",r:"SHICHIYŌ",m:"Haftanın yedi günü"}],ex:[{s:"何___日ですか？",tr:"Haftanın hangi günü?",b:"曜",br:"YŌ"}]},
+  {n:237,ch:"来",mn:"Gelmek",on:["RAI"],kun:["kuru", "kitaru", "kitasu"],or:"Geleneksel form; OBI. Neredeyse tüm alimler buğday ya da arpa bitkisinin piktogramına dayandığını kabul eder; 'gelmek' için fonetik ödünç kullanım. Modern form 'on tane pirinç tanesi' olarak hatırlana",mm:"🌾 BUĞDAY ON PIRINÇ TANESİ OLARAK GELIR",cp:[{k:"来月",r:"RAIGETSU",m:"Gelecek ay"},{k:"新来者",r:"SHINRAISHA",m:"Yeni gelen"},{k:"出来事",r:"dekigoto",m:"Olay, hadise"}],ex:[{s:"___週また会おう。",tr:"Haftaya yine buluşalım.",b:"来",br:"RAI"}]},
+  {n:238,ch:"里",mn:"Köy / Ri (mesafe)",on:["RI"],kun:["sato"],or:"Bronz formu 'tarla' ve 'toprak/zemin' unsurlarını içerir; 'tarla biçimindeki arazi' anlamını verir. Yamada 'köy'ü fonetik ödünç kullanım olarak görür. Tōdō 'çizgi çizmek' kelime ailesine dahil eder.",mm:"🌾 TARLALARA BÖLÜNMÜŞ ZEMİN KÖYÜ GÖSTERIR",cp:[{k:"一里",r:"ICHIRI",m:"1 ri (yaklaşık 3.9 km)"},{k:"里子",r:"satogo",m:"Evlatlık çocuk"},{k:"里芋",r:"satoimo",m:"Taro kökü"}],ex:[{s:"故___に帰った。",tr:"Memleketime döndüm.",b:"里",br:"sato"}]},
+  {n:239,ch:"理",mn:"Neden / Mantık",on:["RI"],kun:[],or:"Geç dönem karakter (Shuowen). 'Mücevher/yeşim' belirleyicisi ve 'köy' (fonetik, 'yeşimi damarına göre kesmek' çağrışımlı) unsurlarından oluşur. 'Organize etmek'ten 'neden, mantık'a genişledi.",mm:"👑 KRAL MANTIKLI BİR NEDENLE KÖYE GELDİ",cp:[{k:"理性",r:"RISEI",m:"Akılcılık, mantık"},{k:"無理",r:"MURI",m:"Makul olmayan, imkansız"},{k:"理由",r:"RIYŪ",m:"Neden, gerekçe"}],ex:[{s:"料___を作った。",tr:"Yemek yaptım.",b:"理",br:"RI"}]},
+  {n:240,ch:"話",mn:"Konuşma / Anlatmak",on:["WA"],kun:["hanashi", "hanasu"],or:"Geç dönem karakter (Shuowen). Sol unsur 'kelimeler, konuşmak'. Katō sağ unsuru 'dil' (fonetik, 'iyi') olarak yorumlar. Tōdō 'bir araya gelmek' kelime ailesini temel alır.",mm:"👅 DİL KELİMELERİ KONUŞMADA KULLANIR",cp:[{k:"会話",r:"KAIWA",m:"Konuşma, diyalog"},{k:"話題",r:"WADAI",m:"Konuşma konusu"},{k:"小話",r:"kobanashi",m:"Kısa hikaye, fıkra"}],ex:[{s:"電___で話した。",tr:"Telefonla konuştum.",b:"話",br:"hanashi"}]}
 ];
 
-function rand(a){return a[Math.floor(Math.random()*a.length)];}
-function sh(a){return[...a].sort(()=>Math.random()-0.5);}
-function oM(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);}
-function oC(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);}
-function oCM(ex,n){return sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>rand(k.cp).m);}
-function oR(ex,n){const out=[];for(const k of sh(K.filter(x=>x.ch!==ex.ch))){const rds=[...k.on,...k.kun];if(rds.length)out.push(rand(rds));if(out.length>=n)break;}return out;}
-
-function buildExam(){
-  const uses={};K.forEach(k=>uses[k.ch]=0);
+function build(){
+  const rnd=a=>a[Math.floor(Math.random()*a.length)];
+  const sh=a=>[...a].sort(()=>Math.random()-0.5);
+  const dMn=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.mn);
+  const dCh=(ex,n)=>sh(K.filter(k=>k.ch!==ex.ch)).slice(0,n).map(k=>k.ch);
+  const dCpM=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>k.cp.forEach(c=>p.push(c.m)));return sh(p).slice(0,n);};
+  const dRd=(ex,n)=>{const p=[];K.filter(k=>k.ch!==ex.ch).forEach(k=>[...k.on,...k.kun].forEach(r=>{if(r)p.push(r);}));return sh(p).slice(0,n);};
   const qs=[];
-  function pick(ex){
-    const unused=sh(K.filter(k=>uses[k.ch]===0&&(!ex||k.ch!==ex.ch)));
-    const once=sh(K.filter(k=>uses[k.ch]===1&&(!ex||k.ch!==ex.ch)));
-    const src=unused.length>0?unused:once;
-    return src.length>0?rand(src):rand(K.filter(k=>!ex||k.ch!==ex.ch));
-  }
-  for(let i=0;i<40;i++){const k=pick();uses[k.ch]++;const c=rand(k.cp);qs.push({tp:'cm',lb:'Birleşik → Anlam',lc:'tlc',ch:k.ch,n:k.n,q:'"'+c.k+'" ('+c.r+') kelimesinin anlamı nedir?',ans:c.m,opts:sh([c.m,...oCM(k,3)]),sc:false});}
-  for(let i=0;i<15;i++){const k=pick();uses[k.ch]++;const c=rand(k.cp);qs.push({tp:'ck',lb:'Birleşik → Kanji',lc:'tlc',ch:k.ch,n:k.n,q:'"'+c.m+'" anlamındaki "'+c.k+'" hangi kanjiden türemiştir?',ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});}
-  for(let i=0;i<20;i++){const k=pick();uses[k.ch]++;qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,n:k.n,q:'Bu kanji ne anlama gelir?',ans:k.mn,opts:sh([k.mn,...oM(k,3)]),sc:true});}
-  for(let i=0;i<15;i++){const k=pick();uses[k.ch]++;qs.push({tp:'ak',lb:'Anlam → Kanji',lc:'tlm',ch:k.ch,n:k.n,q:'"'+k.mn+'" anlamına gelen kanji hangisidir?',ans:k.ch,opts:sh([k.ch,...oC(k,3)]),sc:false});}
-  for(let i=0;i<10;i++){const k=pick();uses[k.ch]++;const rds=[...k.on,...k.kun];if(!rds.length){i--;continue;}const ans=rand(rds);qs.push({tp:'rd',lb:'Okunuş (ON/KUN)',lc:'tlr',ch:k.ch,n:k.n,q:'Bu kanjinin okunuşlarından biri nedir?',ans,opts:sh([ans,...oR(k,3)]),sc:true});}
+  // KA: 80 soru
+  sh([...K]).slice(0,80).forEach(k=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,10)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return;
+    qs.push({tp:'ka',lb:'Kanji → Anlam',lc:'tlm',ch:k.ch,
+      q:'Bu kanji ne anlama gelir?',ans,opts:sh([ans,...d]),sc:true});
+  });
+  // CM: 80 soru
+  const cmPool=[];
+  K.forEach(k=>k.cp.forEach(cp=>{
+    const ans=cp.m;
+    const d=sh(dCpM(k,10)).filter(x=>x!==ans).slice(0,5);
+    if(d.length>=5)cmPool.push({k,cp,ans,d});
+  }));
+  sh(cmPool).slice(0,80).forEach(({k,cp,ans,d})=>{
+    qs.push({tp:'cm',lb:'Bileşik → Anlam',lc:'tlc',ch:k.ch,
+      q:'"'+cp.k+'" ('+cp.r+') kelimesinin anlamı nedir?',
+      ans,opts:sh([ans,...d]),sc:false});
+  });
+  // BF: 35 soru
+  const bfPool=[];
+  K.forEach(k=>k.cp.forEach(cp=>{
+    if(!cp.k.includes(k.ch))return;
+    const d=sh(dCh(k,10)).slice(0,5);
+    if(d.length>=5)bfPool.push({k,cp,d});
+  }));
+  sh(bfPool).slice(0,35).forEach(({k,cp,d})=>{
+    const blank=cp.k.replace(k.ch,'___');
+    qs.push({tp:'bf',lb:'Boşluk Doldurma',lc:'tlr',ch:k.ch,
+      q:'"'+blank+'" ('+cp.m+') — boşluğa hangi kanji gelir?',
+      ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+  });
+  // EX: 35 soru
+  const exPool=K.filter(k=>k.ex&&k.ex.length>0);
+  let exC=0;
+  sh(exPool).forEach(k=>{
+    if(exC>=35)return;
+    const ex=k.ex[0];
+    const d=sh(dCh(k,10)).slice(0,5);
+    if(d.length<5)return;
+    const q=ex.s.replace(new RegExp(ex.b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'),'___');
+    qs.push({tp:'ex',lb:'Cümle → Kanji',lc:'tlr',ch:k.ch,
+      q:'"'+q+'" — boşluk hangi kanji?',
+      ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+    exC++;
+  });
+  // CK: 35 soru
+  const ckPool=[];
+  K.forEach(k=>k.cp.forEach(cp=>{
+    const ans=k.mn;
+    const d=sh(dMn(k,10)).filter(x=>x!==ans).slice(0,5);
+    if(d.length>=5)ckPool.push({k,cp,ans,d});
+  }));
+  sh(ckPool).slice(0,35).forEach(({k,cp,ans,d})=>{
+    qs.push({tp:'ck',lb:'Bileşikteki Anlam',lc:'tlm',ch:k.ch,
+      q:'"'+cp.k+'" kelimesindeki "'+k.ch+'" kanjisi ne anlama gelir?',
+      ans,opts:sh([ans,...d]),sc:false});
+  });
+  // KR: 18 soru
+  const krPool=K.filter(k=>(k.on.length+k.kun.length)>0);
+  let krC=0;
+  sh(krPool).forEach(k=>{
+    if(krC>=18)return;
+    const rds=[...k.on,...k.kun].filter(Boolean);
+    if(!rds.length)return;
+    const ans=rnd(rds);
+    const d=sh(dRd(k,10)).filter(x=>x!==ans).slice(0,5);
+    if(d.length<5)return;
+    qs.push({tp:'kr',lb:'Kanji → Okunuş',lc:'tlr',ch:k.ch,
+      q:'Bu kanjinin okunuşlarından biri nedir?',
+      ans,opts:sh([ans,...d]),sc:true});
+    krC++;
+  });
+  // RK: 17 soru
+  const rkPool=K.filter(k=>k.on.length>0);
+  let rkC=0;
+  sh(rkPool).forEach(k=>{
+    if(rkC>=17)return;
+    const rd=rnd(k.on);
+    const d=sh(dCh(k,10)).slice(0,5);
+    if(d.length<5)return;
+    qs.push({tp:'rk',lb:'Okunuş → Kanji',lc:'tlm',ch:k.ch,
+      q:'"'+rd+'" okunuşuna sahip kanji hangisidir?',
+      ans:k.ch,opts:sh([k.ch,...d]),sc:false});
+    rkC++;
+  });
   return sh(qs);
 }
 
 let tqs=[],ti=0,sc=0,ans={};
-
 function startExam(){
-  tqs=buildExam();ti=0;sc=0;ans={};
+  tqs=build(); ti=0; sc=0; ans={};
   document.getElementById('heroWrap').style.display='none';
   document.getElementById('rv').style.display='none';
   document.getElementById('tv').style.display='block';
   renderQ();
 }
-
 function renderQ(){
   const q=tqs[ti],tot=tqs.length,pct=Math.round(ti/tot*100);
-  let html='<div class="twrap"><div class="pstrip"><div class="pstrip-fill" style="width:'+pct+'%"></div></div>';
-  html+='<div class="thead"><div class="ttitle">🥈 Second Grade Sınav — #81–240</div><div class="tscore">'+
-    (ti+1)+' / '+tot+' &nbsp;·&nbsp; '+sc+' ✓ &nbsp;·&nbsp; '+(ti-sc)+' ✗</div></div>';
-  html+='<div class="tbody"><span class="tqlabel '+q.lc+'">'+q.lb+'</span><div class="tq">'+q.q+'</div>';
-  if(q.sc)html+='<span class="tchar">'+q.ch+'</span>';
-  html+='<div class="topts" id="opts">'+q.opts.map((o,i)=>'<button class="topt" onclick="doAns('+i+')">'+o+'</button>').join('')+'</div>';
-  html+='<div class="tfb" id="fb"></div>';
-  html+='<button class="tnext" id="nq" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
-  html+='</div></div>';
-  document.getElementById('tv').innerHTML=html;
+  const typeCols={tlm:'var(--p600)',tlc:'var(--t400)',tlr:'var(--a600)'};
+  const tc=typeCols[q.lc]||'var(--p600)';
+  document.getElementById('tv').innerHTML=`
+    <div class="tw">
+      <div class="tprog">
+        <div class="tpbar"><div class="tpfill" style="width:${pct}%"></div></div>
+        <div class="tpnum">${ti+1} / ${tot}</div>
+      </div>
+      <div class="tcard">
+        <div class="tlabel" style="color:${tc}">${q.lb}</div>
+        ${q.sc?`<div class="tkanji">${q.ch}</div>`:''}
+        <div class="tq">${q.q}</div>
+        <div class="topts">
+          ${q.opts.map((o,i)=>`<button class="topt" onclick="doAns(${i})">${o}</button>`).join('')}
+        </div>
+        <div class="tfb" id="fb" style="display:none"></div>
+        <button class="tnext" id="nq" onclick="nextQ()" style="display:none">
+          ${ti===tot-1?'Sonuçları Gör →':'Sonraki →'}
+        </button>
+      </div>
+    </div>`;
 }
-
 function doAns(i){
   const q=tqs[ti];
-  document.querySelectorAll('.topt').forEach(b=>b.disabled=true);
-  const chosen=q.opts[i],ok=chosen===q.ans;
+  const sel=q.opts[i];
+  const ok=sel===q.ans;
   if(ok)sc++;
-  ans[ti]={ok,ch:q.ch,n:q.n,lb:q.lb,given:chosen,correct:q.ans};
-  document.querySelectorAll('.topt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('correct');else if(j===i&&!ok)b.classList.add('wrong');});
-  const fb=document.getElementById('fb');
-  fb.className='tfb show '+(ok?'ok':'bad');
-  fb.textContent=ok?'✓ Doğru!':`✗ Yanlış — Doğru cevap: ${q.ans}`;
-  document.getElementById('nq').classList.add('show');
-}
-
-function nextQ(){ti++;ti>=tqs.length?showResult():renderQ();}
-
-function showResult(){
-  const tot=tqs.length,pct=Math.round(sc/tot*100);
-  const emoji=pct>=90?'🏆':pct>=75?'🥈':pct>=60?'👍':pct>=45?'📚':'💪';
-  const lbl=pct>=90?'Olağanüstü!':pct>=75?'Çok iyi!':pct>=60?'İyi iş!':pct>=45?'Biraz daha çalış':'Tekrar et!';
-  const tlbls={cm:'Birleşik → Anlam',ck:'Birleşik → Kanji',ka:'Kanji → Anlam',ak:'Anlam → Kanji',rd:'Okunuş'};
-  let tsum='';
-  ['cm','ck','ka','ak','rd'].forEach(t=>{
-    const tl=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.q.tp===t);
-    if(!tl.length)return;
-    const okc=tl.filter(x=>x.a&&x.a.ok).length;
-    const p=Math.round(okc/tl.length*100);
-    tsum+='<div class="tsc"><div class="tsl">'+tlbls[t]+'</div><div class="tsv">'+okc+'/'+tl.length+' <span style="font-size:11px;color:var(--text3)">(%'+p+')</span></div></div>';
+  ans[ti]={q:q.q,ch:q.ch,ans:q.ans,sel,ok,tp:q.tp,lb:q.lb};
+  document.querySelectorAll('.topt').forEach((b,j)=>{
+    b.disabled=true;
+    if(j===i)b.classList.add(ok?'ok':'ng');
+    if(q.opts[j]===q.ans&&!ok)b.classList.add('show');
   });
-  const wrongItems=tqs.map((q,i)=>({q,a:ans[i]})).filter(x=>x.a&&!x.a.ok);
-  let wrongHtml='';
-  if(wrongItems.length){
-    wrongHtml='<div class="wrong-list"><div class="slabel" style="margin-bottom:12px">Yanlış Cevaplar ('+wrongItems.length+')</div>';
-    wrongItems.forEach(({q,a})=>{
-      const k=K.find(x=>x.ch===q.ch);
-      wrongHtml+='<div class="wrow"><div class="wchar">'+q.ch+'</div><div class="winfo"><div class="wmean">'+(k?k.mn:'')+'</div><div class="wqtype">'+q.lb+'</div><div class="wanswers"><span class="wgiven">Verilen: '+a.given+'</span> → <span class="wcorrect">Doğru: '+a.correct+'</span></div></div></div>';
-    });
-    wrongHtml+='</div>';
-  } else {
-    wrongHtml='<div style="text-align:center;padding:1rem;color:var(--t600);font-weight:500;">🎉 Hiç yanlış yok!</div>';
-  }
+  const fb=document.getElementById('fb');
+  fb.style.display='block';
+  fb.className='tfb '+(ok?'ok':'ng');
+  fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
+  document.getElementById('nq').style.display='block';
+}
+function nextQ(){
+  ti++;
+  if(ti>=tqs.length){showR();return;}
+  renderQ();
+}
+function showR(){
+  const tot=tqs.length;
+  const pct=Math.round(sc/tot*100);
+  const emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
+  const lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
+  const typeMap={};
+  tqs.forEach((q,i)=>{
+    if(!typeMap[q.tp])typeMap[q.tp]={lb:q.lb,ok:0,tot:0};
+    typeMap[q.tp].tot++;
+    if(ans[i]&&ans[i].ok)typeMap[q.tp].ok++;
+  });
+  const tsum=Object.values(typeMap).map(t=>
+    `<div class="tsrow"><span class="tslb">${t.lb}</span><span class="tspct">${t.ok}/${t.tot}</span></div>`
+  ).join('');
   document.getElementById('tv').style.display='none';
-  document.getElementById('rv').style.display='block';
-  document.getElementById('rv').innerHTML=`
-    <div class="twrap">
-      <div class="thead" style="background:var(--t50);border-bottom-color:var(--t400);">
-        <div class="ttitle" style="color:var(--t800);">Sınav Sonucu — Second Grade #81–240</div>
+  const rv=document.getElementById('rv');
+  rv.style.display='block';
+  rv.innerHTML=`
+    <div class="rcard">
+      <div class="remoji">${emoji}</div>
+      <div class="rscore">${sc} / ${tot}</div>
+      <div class="rlabel">${lbl} · %${pct}</div>
+      <div class="rstats">
+        <div class="rsbox"><div class="rsbv rg">${sc}</div><div class="rsbl">Doğru</div></div>
+        <div class="rsbox"><div class="rsbv rr">${tot-sc}</div><div class="rsbl">Yanlış</div></div>
+        <div class="rsbox"><div class="rsbv">${tot}</div><div class="rsbl">Toplam</div></div>
       </div>
-      <div class="rwrap">
-        <div class="r-top">
-          <div class="remoji">${emoji}</div>
-          <div class="rscore">${sc} / ${tot}</div>
-          <div class="rlabel">${lbl} &nbsp;·&nbsp; %${pct}</div>
-          <div class="rbdown">
-            <div class="rbc"><div class="rbv rg">${sc}</div><div class="rbl">Doğru</div></div>
-            <div class="rbc"><div class="rbv rr">${tot-sc}</div><div class="rbl">Yanlış</div></div>
-            <div class="rbc"><div class="rbv rgr">${tot}</div><div class="rbl">Toplam</div></div>
-          </div>
-        </div>
-        <div class="slabel" style="margin-bottom:8px">Tip Bazında Sonuç</div>
-        <div class="tsum">${tsum}</div>
-        <div class="btn-row">
-          <button class="rbtn" onclick="startExam()">Tekrar</button>
-          <button class="rbtn sec" onclick="window.location.href='index.html'">Ana Sayfa</button>
-        </div>
-        ${wrongHtml}
-      </div>
+      <div class="slabel">Tip Bazında Sonuç</div>
+      <div class="tsum">${tsum}</div>
+      <button class="rbtn" onclick="location.reload()">Tekrar Başla</button>
+      <a class="rbtn" href="index.html" style="display:inline-block;margin-top:8px">Ana Sayfa</a>
     </div>`;
 }
 </script>
