@@ -2,245 +2,74 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>N5-012 も | N5 Gramer</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
-.app{width:100%;max-width:660px;margin:0 auto;}
-a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
-a.back:hover{color:var(--text);}
-.lesson-wrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:1.5rem;}
-.lesson-header{background:var(--p50);border-bottom:0.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
-.lesson-header-title{font-size:15px;font-weight:500;color:var(--p900);}
-.lesson-toggle{font-size:13px;color:var(--p800);}
-.rule-hero{padding:2rem 1.5rem;text-align:center;}
-.rule-badge{display:inline-block;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.rule-jp{font-family:'Noto Serif JP',serif;font-size:46px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
-.rule-romaji{font-size:15px;color:rgba(255,255,255,0.75);margin-bottom:6px;}
-.rule-meaning{font-size:17px;font-weight:600;color:#fff;}
-.rule-sub{font-size:13px;color:rgba(255,255,255,0.65);margin-top:4px;}
-.lesson-body{padding:1.5rem;}
-.section{margin-bottom:1.75rem;}
-.section:last-child{margin-bottom:0;}
-.section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.section-title::after{content:'';flex:1;height:0.5px;background:var(--border);}
-.structure-box{background:var(--p50);border:0.5px solid var(--p200);border-radius:var(--rl);padding:1.25rem 1.5rem;}
-.structure-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.structure-row:last-child{margin-bottom:0;}
-.s-block{padding:5px 12px;border-radius:6px;font-size:13px;font-weight:600;font-family:'Noto Serif JP',serif;line-height:1.3;}
-.s-noun{background:var(--p200);color:var(--p900);}
-.s-adj{background:var(--t400);color:#fff;}
-.s-verb{background:#2A7D2A;color:#fff;}
-.s-particle{background:var(--p900);color:#fff;}
-.s-cop{background:var(--a600);color:#fff;}
-.s-neg{background:var(--r600);color:#fff;}
-.s-plus{font-size:16px;color:var(--text3);font-weight:300;}
-.s-arrow{font-size:14px;color:var(--text3);}
-.s-label{font-size:12px;color:var(--text2);}
-.conj-table{width:100%;border-collapse:collapse;border-radius:var(--rl);overflow:hidden;border:0.5px solid var(--border);}
-.conj-table th{background:var(--p600);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:8px 12px;text-align:left;}
-.conj-table td{padding:10px 12px;font-size:13px;border-bottom:0.5px solid var(--border);vertical-align:middle;}
-.conj-table tr:last-child td{border-bottom:none;}
-.conj-table tr:nth-child(even) td{background:var(--bg2);}
-.td-jp{font-family:'Noto Serif JP',serif;font-size:14px;color:var(--text);font-weight:700;}
-.td-rom{font-size:11px;color:var(--p600);font-style:italic;}
-.td-tr{font-size:12px;color:var(--text2);}
-.example-list{display:flex;flex-direction:column;gap:10px;}
-.example-card{background:var(--bg2);border-radius:var(--rm);padding:12px 14px;border-left:3px solid var(--p600);}
-.ex-jp{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text);margin-bottom:4px;}
-.ex-rom{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:3px;}
-.ex-tr{font-size:13px;color:var(--text2);}
-.ex-highlight{color:var(--p600);font-weight:700;}
-.tip-box{background:var(--a50);border:0.5px solid var(--a600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--a800);line-height:1.6;margin-bottom:8px;}
-.warn-box{background:var(--r50);border:0.5px solid var(--r600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--r800);line-height:1.6;margin-bottom:8px;}
-.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
-.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
-.ttitle{font-size:15px;font-weight:500;color:var(--a900);}
-.tscore{font-size:13px;color:var(--a800);}
-.pstrip{height:4px;background:var(--bg2);}
-.pstrip-fill{height:100%;background:var(--a600);transition:width 0.4s;width:0%;}
-.tbody{padding:1.5rem;}
-.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.tlc{background:var(--p50);color:var(--p800);}
-.tlm{background:var(--t50);color:var(--t800);}
-.tlr{background:var(--a50);color:var(--a800);}
-.tq{font-size:15px;color:var(--text);line-height:1.6;}
-.tword{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 0.5rem;display:block;}
-.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
-.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
-.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200);}
-.topt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
-.topt.ng{background:var(--r50);border-color:var(--r600);color:var(--r800);}
-.topt.show{background:var(--t50);border-color:var(--t400);color:var(--t800);}
-.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
-.tfb.ok{display:block;background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
-.tfb.ng{display:block;background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
-.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
-.tnext:hover{background:var(--p800);}
-.rwrap{text-align:center;padding:2rem 1.5rem;}
-.remoji{font-size:52px;margin-bottom:1rem;}
-.rscore{font-size:38px;font-weight:500;color:var(--p800);margin-bottom:.4rem;}
-.rlabel{font-size:15px;color:var(--text2);margin-bottom:1.5rem;}
-.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
-.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;}
-.rbv{font-size:22px;font-weight:500;}
-.rbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
-.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
-.rbtn{padding:11px 28px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
-.rbtn:hover{background:var(--p800);}
-.tsrow{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12px;margin-bottom:4px;}
-.tslb{color:var(--text2);}
-.tspct{font-weight:600;color:var(--text);}
-.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px;}
-.krep{text-align:left;margin-top:1.5rem;border-top:.5px solid var(--border);padding-top:1.25rem;}
-.krow{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);font-size:13px;}
-.krow:last-child{border-bottom:none;}
-.knum{min-width:24px;font-size:12px;color:var(--text3);padding-top:1px;}
-.kinfo{flex:1;}
-.kqt{color:var(--text);margin-bottom:2px;white-space:pre-line;}
-.kans{font-size:12px;color:var(--text2);}
-.kcorrect{font-size:12px;color:var(--t600);}
-.rs{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;}
-.rs-ok{background:var(--t50);color:var(--t800);}
-.rs-bad{background:var(--r50);color:var(--r800);}
-</style>
+<style>:root{--bg:#fff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px}@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB}}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem}.app{width:100%;max-width:660px;margin:0 auto}a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem}a.back:hover{color:var(--text)}.lesson-wrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:1.5rem}.lesson-header{background:var(--p50);border-bottom:.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}.lesson-header-title{font-size:15px;font-weight:500;color:var(--p900)}.lesson-toggle{font-size:13px;color:var(--p800)}.rule-hero{padding:2rem 1.5rem;text-align:center}.rule-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:12px}.rule-jp{font-family:'Noto Serif JP',serif;font-size:46px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px}.rule-romaji{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:6px}.rule-meaning{font-size:17px;font-weight:600;color:#fff}.rule-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:4px}.lesson-body{padding:1.5rem}.section{margin-bottom:1.75rem}.section:last-child{margin-bottom:0}.section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;display:flex;align-items:center;gap:8px}.section-title::after{content:'';flex:1;height:.5px;background:var(--border)}.structure-box{background:var(--p50);border:.5px solid var(--p200);border-radius:var(--rl);padding:1.25rem 1.5rem}.structure-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}.structure-row:last-child{margin-bottom:0}.s-block{padding:5px 12px;border-radius:6px;font-size:13px;font-weight:600;font-family:'Noto Serif JP',serif;line-height:1.3}.s-noun{background:var(--p200);color:var(--p900)}.s-adj{background:var(--t400);color:#fff}.s-verb{background:#2A7D2A;color:#fff}.s-particle{background:var(--p900);color:#fff}.s-cop{background:var(--a600);color:#fff}.s-neg{background:var(--r600);color:#fff}.s-plus{font-size:16px;color:var(--text3);font-weight:300}.s-arrow{font-size:14px;color:var(--text3)}.s-label{font-size:12px;color:var(--text2)}.conj-table{width:100%;border-collapse:collapse;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--border)}.conj-table th{background:var(--p600);color:#fff;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:8px 12px;text-align:left}.conj-table td{padding:10px 12px;font-size:13px;border-bottom:.5px solid var(--border);vertical-align:middle}.conj-table tr:last-child td{border-bottom:none}.conj-table tr:nth-child(even) td{background:var(--bg2)}.td-jp{font-family:'Noto Serif JP',serif;font-size:14px;color:var(--text);font-weight:700}.td-rom{font-size:11px;color:var(--p600);font-style:italic}.td-tr{font-size:12px;color:var(--text2)}.example-list{display:flex;flex-direction:column;gap:10px}.example-card{background:var(--bg2);border-radius:var(--rm);padding:12px 14px;border-left:3px solid var(--p600)}.ex-jp{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text);margin-bottom:4px}.ex-rom{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:3px}.ex-tr{font-size:13px;color:var(--text2)}.ex-highlight{color:var(--p600);font-weight:700}.tip-box{background:var(--a50);border:.5px solid var(--a600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--a800);line-height:1.6;margin-bottom:8px}.warn-box{background:var(--r50);border:.5px solid var(--r600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--r800);line-height:1.6;margin-bottom:8px}.twrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}.thead{background:var(--a50);border-bottom:.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}.ttitle{font-size:15px;font-weight:500;color:var(--a900)}.tscore{font-size:13px;color:var(--a800)}.pstrip{height:4px;background:var(--bg2)}.pstrip-fill{height:100%;background:var(--a600);transition:width .4s;width:0}.tbody{padding:1.5rem}.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px}.tlc{background:var(--p50);color:var(--p800)}.tlm{background:var(--t50);color:var(--t800)}.tlr{background:var(--a50);color:var(--a800)}.tq{font-size:15px;color:var(--text);line-height:1.6}.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem}.topt{background:var(--bg2);border:.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background .15s;line-height:1.4}.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200)}.topt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500}.topt.ng{background:var(--r50);border-color:var(--r600);color:var(--r800)}.topt.show{background:var(--t50);border-color:var(--t400);color:var(--t800)}.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none}.tfb.ok{display:block;background:var(--t50);color:var(--t800);border-left:2px solid var(--t400)}.tfb.ng{display:block;background:var(--r50);color:var(--r800);border-left:2px solid var(--r600)}.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none}.tnext:hover{background:var(--p800)}.rwrap{text-align:center;padding:2rem 1.5rem}.remoji{font-size:52px;margin-bottom:1rem}.rscore{font-size:38px;font-weight:500;color:var(--p800);margin-bottom:.4rem}.rlabel{font-size:15px;color:var(--text2);margin-bottom:1.5rem}.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px}.rbv{font-size:22px;font-weight:500}.rbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}.rg{color:var(--t600)}.rr{color:var(--r600)}.rgr{color:var(--text3)}.rbtn{padding:11px 28px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit}.rbtn:hover{background:var(--p800)}.tsrow{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12px;margin-bottom:4px}.tslb{color:var(--text2)}.tspct{font-weight:600;color:var(--text)}.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px}.krep{text-align:left;margin-top:1.5rem;border-top:.5px solid var(--border);padding-top:1.25rem}.krow{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);font-size:13px}.krow:last-child{border-bottom:none}.knum{min-width:24px;font-size:12px;color:var(--text3);padding-top:1px}.kinfo{flex:1}.kqt{color:var(--text);margin-bottom:2px;white-space:pre-line}.kans{font-size:12px;color:var(--text2)}.kcorrect{font-size:12px;color:var(--t600)}.rs{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px}.rs-ok{background:var(--t50);color:var(--t800)}.rs-bad{background:var(--r50);color:var(--r800)}</style>
 </head>
 <body>
 <div class="app">
-  <a class="back" href="../index.html">← Ana Sayfa</a>
-  <div style="display:flex;gap:10px;margin-bottom:1.5rem;"><a href="N5_011.html" style="color:var(--p600);text-decoration:none;font-size:13px;">← Önceki</a><span style="flex:1"></span><a href="N5_013.html" style="color:var(--p600);text-decoration:none;font-size:13px;">Sonraki →</a></div>
-
-  <div class="lesson-wrap" id="lessonWrap">
-    <div class="lesson-header" onclick="toggleLesson()">
-      <div class="lesson-header-title">📖 N5-012 — N5 Gramer Dersi</div>
-      <div class="lesson-toggle" id="ltoggle">Gizle ▲</div>
-    </div>
-    <div id="lbody">
-      <div class="rule-hero" style="background:linear-gradient(135deg,#1B3A6B,#2E6BA8)">
-        <div class="rule-badge">N5 · 012 · Partikül</div>
-        <div class="rule-jp">も</div>
-        <div class="rule-romaji">mo</div>
-        <div class="rule-meaning">de, da (hem de, ayrıca)</div>
-        <div class="rule-sub">N5 temel gramer yapısı — Partikül</div>
-      </div>
-      <div class="lesson-body">
-        
-        
-        <div class='section'><div class='section-title'>Örnek Cümleler</div><div class="example-list"></div></div>
-        <div class='section'><div class='section-title'>Dikkat Noktaları</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span><strong>も</strong> (mo): de, da (hem de, ayrıca)</div>
-<div class="tip-box"><span style="font-size:16px;margin-right:6px">📚</span>Kategori: Partikül · Seviye: N5</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="twrap">
-    <div class="thead">
-      <div class="ttitle">📝 Test — N5-012 も</div>
-      <div class="tscore" id="scoreDisplay">0 / 30</div>
-    </div>
-    <div class="pstrip"><div class="pstrip-fill" id="prog"></div></div>
-    <div class="tbody" id="tv"></div>
-    <div class="tbody" id="rv" style="display:none"></div>
-  </div>
+<a class="back" href="../index.html">← Ana Sayfa</a>
+<div style="display:flex;gap:10px;margin-bottom:1.5rem;"><a href="N5_011.html" style="color:var(--p600);text-decoration:none;font-size:13px;">← Önceki</a><span style="flex:1"></span><a href="N5_013.html" style="color:var(--p600);text-decoration:none;font-size:13px;">Sonraki →</a></div>
+<div class="lesson-wrap">
+<div class="lesson-header" onclick="toggleLesson()">
+<div class="lesson-header-title">📖 N5-012 — N5 Gramer Dersi</div>
+<div class="lesson-toggle" id="ltoggle">Gizle ▲</div>
+</div>
+<div id="lbody">
+<div class="rule-hero" style="background:linear-gradient(135deg,#2A0D5C,#7048C0)">
+<div class="rule-badge">N5 · 012 · Partikül</div>
+<div class="rule-jp">も</div>
+<div class="rule-romaji">mo</div>
+<div class="rule-meaning">de, da (hem de, ayrıca)</div>
+<div class="rule-sub">De, da, hem…hem de, ayrıca, bile</div>
+</div>
+<div class="lesson-body"><div class='section'><div class='section-title'>Yapı</div><div class="structure-box"><div class="structure-row"><span class="s-block s-noun">İsim</span><span class="s-plus">+</span><span class="s-block s-particle">も</span><span class="s-arrow">→</span><span class="s-label">…de, …da (ayrıca, ekstra)</span></div><div class="structure-row"><span class="s-block s-noun">Olumsuz</span><span class="s-plus">+</span><span class="s-block s-particle">〜も〜ない</span><span class="s-arrow">→</span><span class="s-label">… de değil / hiç yok</span></div><div class="structure-row"><span class="s-block s-noun">İkisi de</span><span class="s-plus">+</span><span class="s-block s-particle">AもBも</span><span class="s-arrow">→</span><span class="s-label">hem A hem B</span></div><div class="structure-row"><span class="s-block s-noun">Bile</span><span class="s-plus">+</span><span class="s-block s-particle">〜も</span><span class="s-arrow">→</span><span class="s-label">…bile, …dahi</span></div></div></div><div class='section'><div class='section-title'>Çekim / Kullanım Tablosu</div><table class="conj-table"><thead><tr><th>Form</th><th>Japonca</th><th>Türkçe</th></tr></thead><tbody><tr><td class="td-jp">Ayrıca / De</td><td class="td-jp">わたしも いく</td><td class="td-tr">Ben de gidiyorum</td></tr><tr><td class="td-jp">Olumsuz De</td><td class="td-jp">わたしも いかない</td><td class="td-tr">Ben de gitmiyorum</td></tr><tr><td class="td-jp">Hem…Hem</td><td class="td-jp">りんごも みかんも</td><td class="td-tr">Hem elma hem mandalina</td></tr><tr><td class="td-jp">Hiçbiri</td><td class="td-jp">りんごも みかんも ない</td><td class="td-tr">Ne elma ne mandalina</td></tr><tr><td class="td-jp">Bile</td><td class="td-jp">こどもも わかる</td><td class="td-tr">Çocuklar bile anlıyor</td></tr><tr><td class="td-jp">Miktar vurgusu</td><td class="td-jp">ひゃくまいも</td><td class="td-tr">100 tane kadar bile</td></tr></tbody></table></div><div class='section'><div class='section-title'>Örnek Cümleler</div><div class="example-list"><div class="example-card"><div class="ex-jp">わたし <span class="ex-highlight">も</span> いきます。</div><div class="ex-rom">Watashi mo ikimasu.</div><div class="ex-tr">Ben de gidiyorum.</div></div><div class="example-card"><div class="ex-jp">かれ <span class="ex-highlight">も</span> にほんご が わかります。</div><div class="ex-rom">Kare mo nihongo ga wakarimasu.</div><div class="ex-tr">O da Japonca biliyor.</div></div><div class="example-card"><div class="ex-jp">りんご <span class="ex-highlight">も</span> みかん <span class="ex-highlight">も</span> すき です。</div><div class="ex-rom">Ringo mo mikan mo suki desu.</div><div class="ex-tr">Hem elmayı hem mandalinayi seviyorum.</div></div><div class="example-card"><div class="ex-jp">なに <span class="ex-highlight">も</span> たべたく ない です。</div><div class="ex-rom">Nani mo tabetakunai desu.</div><div class="ex-tr">Hiçbir şey yemek istemiyorum.</div></div><div class="example-card"><div class="ex-jp">こど<span class="ex-highlight">も</span> <span class="ex-highlight">も</span> わかる かんたん な ほん です。</div><div class="ex-rom">Kodomo mo wakaru kantan na hon desu.</div><div class="ex-tr">Çocukların bile anlayabileceği kolay kitap.</div></div><div class="example-card"><div class="ex-jp">さんじかん <span class="ex-highlight">も</span> まちました。</div><div class="ex-rom">Sanjikan mo machimashita.</div><div class="ex-tr">3 saat bile bekledim.</div></div></div></div><div class='section'><div class='section-title'>Dikkat Noktaları</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span><strong>AもBも</strong> (hem A hem B) + olumlu fiil. <strong>AもBも</strong> + olumsuz = ne A ne B.</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span>「なにも〜ない」= hiçbir şey …değil; 「だれも〜ない」= kimse …değil; 「どこも〜ない」= hiçbir yerde değil</div><div class="warn-box"><span style="font-size:16px;margin-right:6px">⚠️</span><strong>は</strong> ve <strong>が</strong> yerini alır: 私<s>は</s>も → 私も / 誰<s>が</s>も → 誰も</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span>Miktar + も: 「3時間<strong>も</strong>待った」= 3 saat kadar uzun bekledi (abartı/şaşkınlık)</div></div></div>
+</div>
+</div>
+<div class="twrap">
+<div class="thead"><div class="ttitle">📝 Test — N5-012 も</div><div class="tscore" id="scoreDisplay">0 / 30</div></div>
+<div class="pstrip"><div class="pstrip-fill" id="prog"></div></div>
+<div class="tbody" id="tv"></div>
+<div class="tbody" id="rv" style="display:none"></div>
+</div>
 </div>
 <script>
 var POOL=[
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「も」gramer yapısının Türkçe anlamı nedir?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…dir, …dır (temel yüklem)", "yön, konum, zaman belirteci (-e, -de, zamanı)", "yön belirteci (-e doğru)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「も」gramer yapısının Türkçe anlamı nedir?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "yön, konum, zaman belirteci (-e, -de, zamanı)", "…den daha (karşılaştırma)", "…değil (olumsuz geniş)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「も」gramer yapısının Türkçe anlamı nedir?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "soru eki; veya", "geniş zaman / olumsuz geniş", "…dir, …dır (temel yüklem)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「も」gramer yapısının Türkçe anlamı nedir?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…dir, …dır (temel yüklem)", "eylem konumu, araç, sebep (-de, ile, yüzünden)", "…değil (olumsuz geniş)"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「de, da (hem de, ayrıca)」Japonca gramer karşılığı nedir?",ans:"も",opts:["も", "〜くて・〜で", "どうして・なぜ", "この・その・あの・どの"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「de, da (hem de, ayrıca)」Japonca gramer karşılığı nedir?",ans:"も",opts:["も", "〜たり〜たりする", "まだ", "〜て形"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「de, da (hem de, ayrıca)」Japonca gramer karşılığı nedir?",ans:"も",opts:["も", "〜てから", "〜でも", "へ"]},
-  {tp:"kip",lb:"Kategori",lc:"tlm",q:"「も」(mo) hangi gramer kategorisine girer?",ans:"Partikül",opts:["Partikül", "Fiil Çekimi", "Sıfat", "Bağlaç"]},
-  {tp:"apply",lb:"Kullanım",lc:"tlm",q:"「も」yapısı ne zaman kullanılır?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…dir, …dır (temel yüklem)", "nesne belirteci (direct object)", "…değil (olumsuz geniş)"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「も」(mo) — Bu yapı N5 seviyesinde öğrenilir mi?",ans:"Evet, temel N5 yapılarından.",opts:["Evet, temel N5 yapılarından.", "Hayır, N4 seviyesi.", "Hayır, N3.", "Hayır, N1."]},
-  {tp:"form",lb:"Romaji",lc:"tlm",q:"「も」yapısının Romaji (harf çevrimi) nedir?",ans:"mo",opts:["mo", "nakereba naranai", "ne / yo / wa", "i Adj. + ku te / na Adj. + de"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 1)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…değil (olumsuz geniş)", "geçmiş / geçmiş olumsuz", "eylem konumu, araç, sebep (-de, ile, yüzünden)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 2)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…di / …değildi (geçmiş)", "…den daha (karşılaştırma)", "eylem konumu, araç, sebep (-de, ile, yüzünden)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 3)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "özne belirteci; ama, fakat", "geçmiş / geçmiş olumsuz", "soru eki; veya"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 4)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "değil mi? (ne) / biliyorsun (yo)", "geçmiş / geçmiş olumsuz", "nesne belirteci (direct object)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 5)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…den itibaren; çünkü, …dığı için", "soru eki; veya", "geçmiş / geçmiş olumsuz"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「も」yapısı Türkçede neye karşılık gelir? (örnek: 6)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "soru eki; veya", "geniş zaman / olumsuz geniş", "…değil (olumsuz geniş)"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「も」öğrenilmesi neden önemlidir?",ans:"N5 temel yapılarından; günlük Japonca için zorunlu",opts:["N5 temel yapılarından; günlük Japonca için zorunlu", "N1 ileri yapılarından; nadiren kullanılır", "Sadece yazılı Japonca'da gerekli", "Sadece resmi konuşmada kullanılır"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「も」ile「だ・です」farkı?",ans:"も = de, da (hem de, ayrıca); farklı işlev",opts:["も = de, da (hem de, ayrıca); farklı işlev", "Tamamen aynı anlam", "Sadece yazım farkı var", "Biri resmi diğeri sade"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 1)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "muhtemelen; …olsa gerek; …değil mi?", "değil mi? (ne) / biliyorsun (yo)", "özne belirteci; ama, fakat"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 2)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "muhtemelen; …olsa gerek; …değil mi?", "konu belirteci (topic marker)", "iyelik; sıfat yapısı (…'nın)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 3)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "muhtemelen; …olsa gerek; …değil mi?", "değil mi? (ne) / biliyorsun (yo)", "soru eki; veya"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 4)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "geniş zaman / olumsuz geniş", "özne belirteci; ama, fakat", "nesne belirteci (direct object)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 5)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…e kadar, …e dek", "…değil (olumsuz geniş)", "iyelik; sıfat yapısı (…'nın)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「も」(mo) — Bu yapının Türkçe karşılığı: (test 6)",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "…dir, …dır (temel yüklem)", "nesne belirteci (direct object)", "özne belirteci; ama, fakat"]},
-  {tp:"mean",lb:"Özet",lc:"tlc",q:"N5-012: 「も」 = ?",ans:"de, da (hem de, ayrıca)",opts:["de, da (hem de, ayrıca)", "eylem konumu, araç, sebep (-de, ile, yüzünden)", "…di / …değildi (geçmiş)", "özne belirteci; ama, fakat"]}
+{tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"わたし ___ がくせい です。\n(Ben de öğrenciyim.)",ans:"も",opts:["も", "は", "が", "と"]},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"かれ ___ こない と おもいます。\n(O da gelmeyecek sanırım.)",ans:"も",opts:["も", "は", "が", "を"]},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"にほんご ___ ちゅうごくご ___ はなせます。\n(Hem Japonca hem Çince konuşabilirim.)",ans:"も も",opts:["も も", "と と", "か か", "や や"]},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"なに ___ わからない です。\n(Hiçbir şey anlamıyorum.)",ans:"も",opts:["も", "か", "は", "が"]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「かのじょ も にほんじん です。」",ans:"O da Japon.",opts:["O da Japon.", "O Japon değil.", "O Japon mı?", "Sadece o Japon."]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「だれも いません でした。」",ans:"Kimse yoktu.",opts:["Kimse yoktu.", "Herkes vardı.", "Biri vardı.", "Kim yok?"]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「コーヒー も こうちゃ も のみます。」",ans:"Hem kahve hem çay içerim.",opts:["Hem kahve hem çay içerim.", "Kahve veya çay içerim.", "Kahve de çay da içmem.", "Kahve mi çay mı?"]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「こんなに むずかしい もんだい は こども に は とけない が、おとな も むずかしい。」",ans:"Bu kadar zor problem çocuk için çözülemez, yetişkin için de zor.",opts:["Yetişkin için de zor.", "Sadece çocuk için zor.", "Çocuk çözdü.", "Zor değil."]},
+{tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"「AもBも + olumlu」vs「AもBも + olumsuz」farkı?",ans:"olumlu: hem A hem B; olumsuz: ne A ne B",opts:["olumlu: hem A hem B; olumsuz: ne A ne B", "Anlam aynı", "olumsuz daha güçlü", "olumlu seçmeli"]},
+{tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"「も」が veya は yerini alır — fark ne?",ans:"は/が düşer; も katar: 私も、誰も",opts:["は/が düşer; も katar", "は ve も birlikte gelir", "が ve も birlikte gelir", "Hepsi birlikte kullanılır"]},
+{tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「わたしもです。」",ans:"Doğru — 'Ben de öyle' kısa onay ✅",opts:["Doğru ✅", "Yanlış", "Yanlış — が olmalı", "Yanlış — は olmalı"]},
+{tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「なにもわかります。」",ans:"Yanlış — も + olumsuz: なにもわかりません",opts:["Yanlış — なにもわかりません olmalı", "Doğru", "Doğru ama eski", "Doğru ama kibar değil"]},
+{tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「このえいがはこどもにもわかります。」",ans:"Doğru ✅",opts:["Doğru ✅", "Yanlış", "Yanlış — が olmalı", "Yanlış — を olmalı"]},
+{tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Kardeşim de Japoncayı seviyor.」",ans:"おとうと も にほんご が すき です。",opts:["おとうと も にほんご が すき です。", "おとうと は にほんご が すき です。", "おとうと が にほんご も すき です。", "おとうと と にほんご が すき です。"]},
+{tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Ne yedim ne içtim.」",ans:"なに も たべなかった し、なに も のまなかった です。",opts:["なに も たべなかった し、なに も のまなかった です。", "なに か たべた し、なに か のんだ です。", "なに も たべました し、なに も のみました。", "なに が たべた し、のまなかった。"]},
+{tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Ben de seni anlıyorum.」",ans:"わたし も あなた の きもち が わかります。",opts:["わたし も あなた の きもち が わかります。", "わたし は あなた の きもち が わかります。", "わたし が あなた の きもち を わかります。", "わたし に あなた の きもち が わかります。"]},
+{tp:"apply",lb:"Uygulama",lc:"tlm",q:"「3時間も待った！」— も burada ne anlamda?",ans:"Abartı/şaşkınlık: 3 saat kadar uzun",opts:["Abartı: 3 saat kadar uzun", "Yalnızca 3 saat", "3 saatte bir", "3. saatte"]},
+{tp:"apply",lb:"Uygulama",lc:"tlm",q:"「どこにも行かない」— ne anlama gelir?",ans:"Hiçbir yere gitmeyeceğim.",opts:["Hiçbir yere gitmeyeceğim.", "Nereye gideyim?", "Her yere gideceğim.", "Bir yere gideceğim."]},
+{tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「かれ ___ きます か？」(O da geliyor mu?)",ans:"も",opts:["も", "は", "が", "を"]},
+{tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「だれ ___ しらない。」(Kimse bilmiyor)",ans:"も",opts:["も", "か", "は", "が"]},
+{tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「じゅっさい ___ みえない。」(10 yaşına bile görünmüyor)",ans:"も",opts:["も", "は", "が", "に"]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「そんなことはだれにもできません。」",ans:"Öyle bir şey kimse yapamaz.",opts:["Kimse yapamaz.", "Herkes yapabilir.", "Biri yapabilir.", "Sen yapabilirsin."]},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"えいご ___ ちゅうごくご ___ むずかしい です。\n(Hem İngilizce hem Çince zor.)",ans:"も も",opts:["も も", "と と", "か か", "は は"]},
+{tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"「も」ile「まで」abartı farkı?",ans:"も: miktarda abartı; まで: sınıra kadar",opts:["も: miktar abartısı; まで: sınır", "Aynı anlam", "も daha güçlü", "まで daha resmi"]},
+{tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「どこにもないです。」",ans:"Doğru ✅",opts:["Doğru ✅", "Yanlış", "Yanlış — が olmalı", "Yanlış — は olmalı"]},
+{tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Bunu herkes biliyor.」",ans:"これは だれ でも しっています。",opts:["これは だれ でも しっています。", "これは だれ も しっています。", "これは みんな も しっています。", "これは だれ か しっています。"]},
+{tp:"apply",lb:"Uygulama",lc:"tlm",q:"「〜もいい」ne anlama gelir?",ans:"…de/da olur (seçenek kabul etme)",opts:["…de/da olur (seçenek kabul)", "…kesinlikle iyi", "…bile iyi değil", "…muhtemelen iyi"]},
+{tp:"fill",lb:"Boşlouğu Doldur",lc:"tlr",q:"わたし の くに ___ さくら が さきます。\n(Benim ülkemde de kiraz çiçeği açıyor.)",ans:"も",opts:["も", "は", "が", "に"]},
+{tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「あのひとはえいごもにほんごもはなせます。」",ans:"O hem İngilizce hem Japonca konuşabiliyor.",opts:["Hem İngilizce hem Japonca.", "İngilizce veya Japonca.", "Ne İngilizce ne Japonca.", "İngilizce mi Japonca mı?"]},
+{tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「あのこはまだ3さいなのに、じをよめます。もすごいですね！」",ans:"Yanlış cümle içinde も kullanımı yanlış",opts:["Yanlış — 「もうすごいですね」ya da「すごいですね」olmalı", "Doğru", "Doğru ama eski", "Doğru ama kibar değil"]},
+{tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Kimse gelmedi.」",ans:"だれ も きませんでした。",opts:["だれ も きませんでした。", "だれ か きませんでした。", "だれ は きませんでした。", "だれ が きませんでした。"]},
+{tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「かれはすうがく ___ さいえんす ___ とくいです。」",ans:"も も",opts:["も も", "と と", "か か", "や や"]}
 ];
-
-function toggleLesson(){
-  var b=document.getElementById('lbody');
-  var t=document.getElementById('ltoggle');
-  var open=b.style.display!=='none';
-  b.style.display=open?'none':'block';
-  t.textContent=open?'Göster ▼':'Gizle ▲';
-}
-function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
-var tqs=[],ti=0,sc=0,log=[];
-function initTest(){
-  tqs=shuffle(POOL).slice(0,30);
-  ti=0;sc=0;log=[];
-  renderQ();
-}
-function renderQ(){
-  var q=tqs[ti],tot=tqs.length;
-  document.getElementById('prog').style.width=(ti/tot*100)+'%';
-  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
-  var opts=shuffle(q.opts);
-  document.getElementById('tv').innerHTML=
-    '<div class="tqlabel '+q.lc+'">'+q.lb+'</div>'+
-    '<div class="tq" style="white-space:pre-line">'+q.q+'</div>'+
-    '<div class="topts">'+
-    opts.map(function(o,i){return '<button class="topt" onclick="doAns('+i+')">'+o+'</button>';}).join('')+
-    '</div>'+
-    '<div class="tfb" id="fb"></div>'+
-    '<button class="tnext" id="nq" onclick="nextQ()">'+
-    (ti===tot-1?'Sonuçları Gör →':'Sonraki →')+
-    '</button>';
-  window._opts=opts;
-}
-function doAns(i){
-  var q=tqs[ti],sel=window._opts[i],ok=sel===q.ans;
-  if(ok)sc++;
-  log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});
-  document.querySelectorAll('.topt').forEach(function(b,j){
-    b.disabled=true;
-    if(j===i)b.classList.add(ok?'ok':'ng');
-    if(window._opts[j]===q.ans&&!ok)b.classList.add('show');
-  });
-  var fb=document.getElementById('fb');
-  fb.className='tfb '+(ok?'ok':'ng');
-  fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
-  document.getElementById('nq').style.display='block';
-}
-function nextQ(){ti++;if(ti>=tqs.length){showR();return;}renderQ();}
-function showR(){
-  var tot=tqs.length,pct=Math.round(sc/tot*100);
-  var emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
-  var lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
-  document.getElementById('tv').style.display='none';
-  document.getElementById('prog').style.width='100%';
-  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
-  var typeMap={};
-  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++;});
-  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return '<div class="tsrow"><span class="tslb">'+lb+'</span><span class="tspct">'+v.ok+'/'+v.tot+'</span></div>';}).join('');
-  var rep=log.map(function(l,i){return '<div class="krow"><div class="knum">'+(i+1)+'</div><div class="kinfo"><div class="kqt">'+l.q+'</div>'+(l.ok?'<div class="kcorrect">✓ '+l.ans+'</div>':'<div class="kans">Verilen: <strong>'+l.sel+'</strong> → Doğru: <strong>'+l.ans+'</strong></div>')+'</div><span class="rs '+(l.ok?'rs-ok':'rs-bad')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
-  var rv=document.getElementById('rv');
-  rv.style.display='block';
-  rv.innerHTML='<div class="rwrap"><div class="remoji">'+emoji+'</div><div class="rscore">'+sc+' / '+tot+'</div><div class="rlabel">'+lbl+' · %'+pct+'</div><div class="rbdown"><div class="rbc"><div class="rbv rg">'+sc+'</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">'+(tot-sc)+'</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">'+tot+'</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Soru Tipi Bazında</div>'+tsum+'<button class="rbtn" onclick="restartTest()" style="margin-top:1.25rem">Tekrar Dene</button> <a href="../index.html" class="rbtn" style="display:inline-block;margin-top:8px;text-decoration:none">← Anasayfa</a></div><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>'+rep+'</div>';
-}
-function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest();}
-initTest();
-
+function toggleLesson(){var b=document.getElementById('lbody'),t=document.getElementById('ltoggle'),open=b.style.display!=='none';b.style.display=open?'none':'block';t.textContent=open?'Göster ▼':'Gizle ▲'}function shuffle(a){return[...a].sort(()=>Math.random()-.5)}var tqs=[],ti=0,sc=0,log=[];function initTest(){tqs=shuffle(POOL).slice(0,30);ti=0;sc=0;log=[];renderQ()}function renderQ(){var q=tqs[ti],tot=tqs.length;document.getElementById('prog').style.width=(ti/tot*100)+'%';document.getElementById('scoreDisplay').textContent=sc+' / '+tot;var opts=shuffle(q.opts);document.getElementById('tv').innerHTML='<div class="tqlabel '+q.lc+'">'+q.lb+'</div><div class="tq" style="white-space:pre-line">'+q.q+'</div><div class="topts">'+opts.map(function(o,i){return'<button class="topt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+'</div><div class="tfb" id="fb"></div><button class="tnext" id="nq" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';window._opts=opts}function doAns(i){var q=tqs[ti],sel=window._opts[i],ok=sel===q.ans;if(ok)sc++;log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});document.querySelectorAll('.topt').forEach(function(b,j){b.disabled=true;if(j===i)b.classList.add(ok?'ok':'ng');if(window._opts[j]===q.ans&&!ok)b.classList.add('show')});var fb=document.getElementById('fb');fb.className='tfb '+(ok?'ok':'ng');fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;document.getElementById('nq').style.display='block'}function nextQ(){ti++;if(ti>=tqs.length){showR();return}renderQ()}function showR(){var tot=tqs.length,pct=Math.round(sc/tot*100),emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪',lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';document.getElementById('tv').style.display='none';document.getElementById('prog').style.width='100%';document.getElementById('scoreDisplay').textContent=sc+' / '+tot;var typeMap={};log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++});var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return'<div class="tsrow"><span class="tslb">'+lb+'</span><span class="tspct">'+v.ok+'/'+v.tot+'</span></div>'}).join(''),rep=log.map(function(l,i){return'<div class="krow"><div class="knum">'+(i+1)+'</div><div class="kinfo"><div class="kqt">'+l.q+'</div>'+(l.ok?'<div class="kcorrect">✓ '+l.ans+'</div>':'<div class="kans">Verilen: <strong>'+l.sel+'</strong> → Doğru: <strong>'+l.ans+'</strong></div>')+'</div><span class="rs '+(l.ok?'rs-ok':'rs-bad')+'">'+(l.ok?'✓':'✗')+'</span></div>'}).join(''),rv=document.getElementById('rv');rv.style.display='block';rv.innerHTML='<div class="rwrap"><div class="remoji">'+emoji+'</div><div class="rscore">'+sc+' / '+tot+'</div><div class="rlabel">'+lbl+' · %'+pct+'</div><div class="rbdown"><div class="rbc"><div class="rbv rg">'+sc+'</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">'+(tot-sc)+'</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">'+tot+'</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Soru Tipi</div>'+tsum+'<button class="rbtn" onclick="restartTest()" style="margin-top:1.25rem">Tekrar Dene</button> <a href="../index.html" class="rbtn" style="display:inline-block;margin-top:8px;text-decoration:none">← Anasayfa</a></div><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>'+rep+'</div>'}function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest()}initTest()
 </script>
 </body>
 </html>
