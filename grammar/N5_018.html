@@ -232,7 +232,7 @@ function renderQ(){
   document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
   var opts=shuffle(q.opts);window._opts=opts;
   document.getElementById('tv').innerHTML=
-    '<div class="q-label '+q.lc+'">'+q.lb+' ('+（ti+1)+'/'+tot+')</div>'+
+    '<div class="q-label '+q.lc+'">'+q.lb+' ('+(ti+1)+'/'+tot+')</div>'+
     '<div class="q-text">'+q.q+'</div>'+
     '<div class="q-opts">'+
     opts.map(function(o,i){return'<button class="q-opt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+
