@@ -6,279 +6,678 @@
 <title>N5-005 は | N5 Gramer</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
-.app{width:100%;max-width:660px;margin:0 auto;}
-a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
-a.back:hover{color:var(--text);}
-.lesson-wrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:1.5rem;}
-.lesson-header{background:var(--p50);border-bottom:0.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
-.lesson-header-title{font-size:15px;font-weight:500;color:var(--p900);}
-.lesson-toggle{font-size:13px;color:var(--p800);}
-.rule-hero{padding:2rem 1.5rem;text-align:center;}
-.rule-badge{display:inline-block;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.rule-jp{font-family:'Noto Serif JP',serif;font-size:46px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
-.rule-romaji{font-size:15px;color:rgba(255,255,255,0.75);margin-bottom:6px;}
-.rule-meaning{font-size:17px;font-weight:600;color:#fff;}
-.rule-sub{font-size:13px;color:rgba(255,255,255,0.65);margin-top:4px;}
-.lesson-body{padding:1.5rem;}
-.section{margin-bottom:1.75rem;}
-.section:last-child{margin-bottom:0;}
-.section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.section-title::after{content:'';flex:1;height:0.5px;background:var(--border);}
-.structure-box{background:var(--p50);border:0.5px solid var(--p200);border-radius:var(--rl);padding:1.25rem 1.5rem;}
-.structure-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.structure-row:last-child{margin-bottom:0;}
-.s-block{padding:5px 12px;border-radius:6px;font-size:13px;font-weight:600;font-family:'Noto Serif JP',serif;line-height:1.3;}
-.s-noun{background:var(--p200);color:var(--p900);}
-.s-adj{background:var(--t400);color:#fff;}
-.s-verb{background:#2A7D2A;color:#fff;}
-.s-particle{background:var(--p900);color:#fff;}
-.s-cop{background:var(--a600);color:#fff;}
-.s-neg{background:var(--r600);color:#fff;}
-.s-plus{font-size:16px;color:var(--text3);font-weight:300;}
-.s-arrow{font-size:14px;color:var(--text3);}
-.s-label{font-size:12px;color:var(--text2);}
-.conj-table{width:100%;border-collapse:collapse;border-radius:var(--rl);overflow:hidden;border:0.5px solid var(--border);}
-.conj-table th{background:var(--p600);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:8px 12px;text-align:left;}
-.conj-table td{padding:10px 12px;font-size:13px;border-bottom:0.5px solid var(--border);vertical-align:middle;}
-.conj-table tr:last-child td{border-bottom:none;}
-.conj-table tr:nth-child(even) td{background:var(--bg2);}
-.td-jp{font-family:'Noto Serif JP',serif;font-size:14px;color:var(--text);font-weight:700;}
-.td-rom{font-size:11px;color:var(--p600);font-style:italic;}
-.td-tr{font-size:12px;color:var(--text2);}
-.example-list{display:flex;flex-direction:column;gap:10px;}
-.example-card{background:var(--bg2);border-radius:var(--rm);padding:12px 14px;border-left:3px solid var(--p600);}
-.ex-jp{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text);margin-bottom:4px;}
-.ex-rom{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:3px;}
-.ex-tr{font-size:13px;color:var(--text2);}
-.ex-highlight{color:var(--p600);font-weight:700;}
-.tip-box{background:var(--a50);border:0.5px solid var(--a600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--a800);line-height:1.6;margin-bottom:8px;}
-.warn-box{background:var(--r50);border:0.5px solid var(--r600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--r800);line-height:1.6;margin-bottom:8px;}
-.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
-.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
-.ttitle{font-size:15px;font-weight:500;color:var(--a900);}
-.tscore{font-size:13px;color:var(--a800);}
-.pstrip{height:4px;background:var(--bg2);}
-.pstrip-fill{height:100%;background:var(--a600);transition:width 0.4s;width:0%;}
-.tbody{padding:1.5rem;}
-.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.tlc{background:var(--p50);color:var(--p800);}
-.tlm{background:var(--t50);color:var(--t800);}
-.tlr{background:var(--a50);color:var(--a800);}
-.tq{font-size:15px;color:var(--text);line-height:1.6;}
-.tword{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 0.5rem;display:block;}
-.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
-.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
-.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200);}
-.topt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
-.topt.ng{background:var(--r50);border-color:var(--r600);color:var(--r800);}
-.topt.show{background:var(--t50);border-color:var(--t400);color:var(--t800);}
-.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
-.tfb.ok{display:block;background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
-.tfb.ng{display:block;background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
-.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
-.tnext:hover{background:var(--p800);}
-.rwrap{text-align:center;padding:2rem 1.5rem;}
-.remoji{font-size:52px;margin-bottom:1rem;}
-.rscore{font-size:38px;font-weight:500;color:var(--p800);margin-bottom:.4rem;}
-.rlabel{font-size:15px;color:var(--text2);margin-bottom:1.5rem;}
-.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
-.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;}
-.rbv{font-size:22px;font-weight:500;}
-.rbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
-.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
-.rbtn{padding:11px 28px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
-.rbtn:hover{background:var(--p800);}
-.tsrow{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12px;margin-bottom:4px;}
-.tslb{color:var(--text2);}
-.tspct{font-weight:600;color:var(--text);}
-.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px;}
-.krep{text-align:left;margin-top:1.5rem;border-top:.5px solid var(--border);padding-top:1.25rem;}
-.krow{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);font-size:13px;}
-.krow:last-child{border-bottom:none;}
-.knum{min-width:24px;font-size:12px;color:var(--text3);padding-top:1px;}
-.kinfo{flex:1;}
-.kqt{color:var(--text);margin-bottom:2px;white-space:pre-line;}
-.kans{font-size:12px;color:var(--text2);}
-.kcorrect{font-size:12px;color:var(--t600);}
-.rs{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;}
-.rs-ok{background:var(--t50);color:var(--t800);}
-.rs-bad{background:var(--r50);color:var(--r800);}
+:root{
+  --bg:#fff;--bg2:#f5f5f4;--bg3:#e8e8e7;
+  --text:#1a1a1a;--text2:#5a5a5a;--text3:#999;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);
+  --p50:#EEEDFE;--p100:#D5D2FA;--p200:#AFA9EC;
+  --p600:#534AB7;--p800:#3C3489;--p900:#26215C;
+  --t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;
+  --a50:#FFF3DC;--a400:#D4920A;--a600:#BA7517;--a800:#7A4A00;
+  --r50:#FEF0F0;--r400:#D94040;--r600:#A32D2D;
+  --g50:#F0F7FF;--g400:#2E7DB0;--g600:#1B5E8A;
+  --rm:10px;--rl:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1a;--bg2:#252523;--bg3:#2f2f2d;
+  --text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --p50:#1e1a48;--p100:#2a2466;--p200:#3C3489;
+  --p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;
+  --t50:#072e1e;--t400:#9FE1CB;--t600:#9FE1CB;--t800:#9FE1CB;
+  --a50:#2e1e00;--a400:#FAC775;--a600:#FAC775;--a800:#FAC775;
+  --r50:#2e0e0e;--r400:#F09595;--r600:#F09595;
+  --g50:#0d1f2e;--g400:#7ABEE0;--g600:#7ABEE0;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:1.5rem 1rem;color:var(--text);line-height:1.6}
+.app{width:100%;max-width:660px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+/* NAV */
+.top-nav{display:flex;align-items:center;gap:8px}
+.back-btn{font-size:13px;color:var(--text2);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.back-btn:hover{color:var(--text);background:var(--bg2)}
+.page-nav{display:flex;gap:8px;margin-left:auto}
+.nav-arrow{font-size:13px;color:var(--p600);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.nav-arrow:hover{background:var(--p50)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#26215C,#534AB7);border-radius:var(--rl);padding:2rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'は';position:absolute;font-family:'Noto Serif JP',serif;font-size:180px;font-weight:700;color:rgba(255,255,255,0.05);top:-20px;right:-10px;line-height:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
+.hero-jp{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem}
+.hero-romaji{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:.5rem}
+.hero-tr{font-size:20px;font-weight:600;color:#fff;margin-bottom:.25rem}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.6)}
+/* KART */
+.card{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:.875rem 1.25rem;background:var(--bg2);border-bottom:.5px solid var(--border);cursor:pointer;user-select:none}
+.card-header-title{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.card-toggle{font-size:12px;color:var(--text3)}
+.card-body{padding:1.25rem}
+/* AÇIKLAMA */
+.explain-text{font-size:14.5px;color:var(--text);line-height:1.75;margin-bottom:1rem}
+.explain-text strong{color:var(--p600)}
+.explain-text em{font-style:normal;color:var(--a600);font-weight:500}
+/* FORMULA */
+.formula-wrap{background:var(--p50);border:.5px solid var(--p100);border-radius:var(--rm);padding:1rem 1.25rem;margin-bottom:.875rem}
+.formula-row{display:flex;align-items:center;gap:8px;margin-bottom:.5rem;flex-wrap:wrap}
+.formula-row:last-child{margin-bottom:0}
+.f-box{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap}
+.f-topic{background:rgba(83,74,183,0.15);color:var(--p800);border:.5px solid var(--p200)}
+.f-verb{background:rgba(29,158,117,0.15);color:var(--t600);border:.5px solid var(--t400)}
+.f-particle{background:var(--p600);color:#fff;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;padding:4px 14px}
+.f-result{background:rgba(186,117,23,0.12);color:var(--a800);border:.5px solid var(--a400);font-size:12px;padding:4px 12px}
+.f-op{font-size:16px;color:var(--text3);font-weight:300}
+.formula-note{font-size:12px;color:var(--text2);margin-top:.5rem;padding-left:4px}
+/* ÖRNEKLER */
+.examples{display:flex;flex-direction:column;gap:.75rem}
+.ex-card{border-radius:var(--rm);overflow:hidden;border:.5px solid var(--border)}
+.ex-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--p600);color:#fff;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0}
+.ex-top{padding:.875rem 1rem .5rem;background:var(--bg);display:flex;gap:10px;align-items:flex-start}
+.ex-text{flex:1}
+.ex-jp{font-family:'Noto Serif JP',serif;font-size:17px;color:var(--text);margin-bottom:3px;line-height:1.5}
+.ex-jp .hl{color:var(--p600);font-weight:700;background:var(--p50);border-radius:3px;padding:0 2px}
+.ex-romaji{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:2px}
+.ex-turkish{font-size:14px;color:var(--text2)}
+.ex-bottom{padding:.5rem 1rem .75rem 1rem;background:var(--bg2);border-top:.5px solid var(--border);display:flex;flex-wrap:wrap;gap:6px}
+.vocab-chip{font-size:11.5px;background:var(--bg);border:.5px solid var(--border2);border-radius:20px;padding:2px 10px;color:var(--text2)}
+.vocab-chip strong{color:var(--text);font-weight:600}
+/* KARŞILAŞTIRMA */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.875rem}
+.compare-card{border-radius:var(--rm);padding:1rem;border:.5px solid var(--border)}
+.compare-card.c-a{background:var(--p50);border-color:var(--p200)}
+.compare-card.c-b{background:var(--t50);border-color:var(--t400)}
+.compare-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem}
+.compare-card.c-a .compare-label{color:var(--p800)}
+.compare-card.c-b .compare-label{color:var(--t800)}
+.compare-jp{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;margin-bottom:.25rem}
+.compare-card.c-a .compare-jp{color:var(--p900)}
+.compare-card.c-b .compare-jp{color:var(--t800)}
+.compare-desc{font-size:12px;color:var(--text2);line-height:1.5}
+/* İPUÇLARI */
+.tip{border-radius:var(--rm);padding:.875rem 1rem;font-size:13.5px;line-height:1.65;margin-bottom:.625rem;display:flex;gap:10px}
+.tip:last-child{margin-bottom:0}
+.tip-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.tip-text{flex:1}
+.tip.tip-info{background:var(--a50);border:.5px solid var(--a400);color:var(--a800)}
+.tip.tip-warn{background:var(--r50);border:.5px solid var(--r400);color:var(--r600)}
+.tip.tip-note{background:var(--g50);border:.5px solid var(--g400);color:var(--g600)}
+/* TEST */
+.test-wrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.test-header{background:var(--a50);border-bottom:.5px solid var(--a400);padding:.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.test-title{font-size:14px;font-weight:600;color:var(--a800);display:flex;align-items:center;gap:8px}
+.test-score{font-size:13px;font-weight:500;color:var(--a600)}
+.progress{height:3px;background:var(--bg2)}
+.progress-fill{height:100%;background:var(--a600);transition:width .35s;width:0}
+.test-body{padding:1.25rem}
+.q-label{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;margin-bottom:.875rem}
+.q-label.lm{background:var(--t50);color:var(--t800)}
+.q-label.lc{background:var(--p50);color:var(--p800)}
+.q-label.lr{background:var(--a50);color:var(--a800)}
+.q-text{font-size:15px;color:var(--text);line-height:1.65;white-space:pre-line}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:1rem}
+.q-opt{background:var(--bg2);border:.5px solid var(--border2);border-radius:var(--rm);padding:11px 14px;font-size:13.5px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:all .15s;line-height:1.4;width:100%}
+.q-opt:hover:not(:disabled){background:var(--p50);border-color:var(--p200)}
+.q-opt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500}
+.q-opt.ng{background:var(--r50);border-color:var(--r400);color:var(--r600)}
+.q-opt.show{background:var(--t50);border-color:var(--t400);color:var(--t800)}
+.q-feedback{margin-top:.875rem;padding:.75rem 1rem;border-radius:var(--rm);font-size:13.5px;line-height:1.5;display:none}
+.q-feedback.ok{display:block;background:var(--t50);color:var(--t800);border:.5px solid var(--t400)}
+.q-feedback.ng{display:block;background:var(--r50);color:var(--r600);border:.5px solid var(--r400)}
+.q-next{margin-top:1rem;width:100%;padding:11px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none}
+.q-next:hover{background:var(--p800)}
+/* SONUÇ */
+.result-wrap{padding:2rem 1.25rem;text-align:center}
+.result-emoji{font-size:54px;margin-bottom:1rem}
+.result-score{font-size:40px;font-weight:500;color:var(--p800);margin-bottom:.25rem}
+.result-label{font-size:15px;color:var(--text2);margin-bottom:1.5rem}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}
+.rs-box{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center}
+.rs-val{font-size:24px;font-weight:500}
+.rs-lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.rs-ok{color:var(--t600)}.rs-ng{color:var(--r600)}.rs-tot{color:var(--text3)}
+.type-summary{text-align:left;margin-bottom:1.25rem}
+.ts-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12.5px;margin-bottom:4px}
+.ts-lbl{color:var(--text2)}.ts-val{font-weight:600}
+.result-btns{display:flex;gap:8px;justify-content:center;margin-top:1.25rem}
+.r-btn{padding:10px 24px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit;text-decoration:none}
+.r-btn:hover{background:var(--p800)}
+.r-btn.outline{background:var(--bg);border:.5px solid var(--border2);color:var(--text)}
+.r-btn.outline:hover{background:var(--bg2)}
+.detail-section{text-align:left;border-top:.5px solid var(--border);padding-top:1.25rem;margin-top:1.25rem}
+.detail-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.875rem}
+.d-row{display:flex;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);align-items:flex-start}
+.d-row:last-child{border-bottom:none}
+.d-num{min-width:22px;font-size:11px;color:var(--text3);padding-top:2px}
+.d-content{flex:1}
+.d-q{font-size:12.5px;color:var(--text);white-space:pre-line;margin-bottom:2px}
+.d-ans{font-size:12px}
+.d-correct{color:var(--t600)}
+.d-wrong{color:var(--r600)}
+.d-badge{font-size:10.5px;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.d-badge.ok{background:var(--t50);color:var(--t800)}
+.d-badge.ng{background:var(--r50);color:var(--r600)}
 </style>
 </head>
 <body>
 <div class="app">
-  <a class="back" href="../index.html">← Ana Sayfa</a>
-  <div style="display:flex;gap:10px;margin-bottom:1.5rem;"><a href="N5_004.html" style="color:var(--p600);text-decoration:none;font-size:13px;">← Önceki</a><span style="flex:1"></span><a href="N5_006.html" style="color:var(--p600);text-decoration:none;font-size:13px;">Sonraki →</a></div>
 
-  <div class="lesson-wrap" id="lessonWrap">
-    <div class="lesson-header" onclick="toggleLesson()">
-      <div class="lesson-header-title">📖 N5-005 — N5 Gramer Dersi</div>
-      <div class="lesson-toggle" id="ltoggle">Gizle ▲</div>
-    </div>
-    <div id="lbody">
-      <div class="rule-hero" style="background:linear-gradient(135deg,#26215C,#534AB7)">
-        <div class="rule-badge">N5 · 005 · Partikül</div>
-        <div class="rule-jp">は</div>
-        <div class="rule-romaji">wa</div>
-        <div class="rule-meaning">konu belirteci (topic marker)</div>
-        <div class="rule-sub">Cümlenin konusunu belirtir — hakkında konuşulan şey</div>
-      </div>
-      <div class="lesson-body">
-        <div class='section'><div class='section-title'>Yapı</div><div class="structure-box"><div class="structure-row">
-    <span class="s-block s-noun">Konu</span>
-    <span class="s-plus">+</span>
-    <span class="s-block s-particle">は</span>
-    <span class="s-arrow">→</span>
-    <span class="s-label">…konusunda / …e gelince</span>
-  </div>
-<div class="structure-row">
-    <span class="s-block s-noun">Konu</span>
-    <span class="s-plus">+</span>
-    <span class="s-block s-cop">は + Yüklem</span>
-    <span class="s-arrow">→</span>
-    <span class="s-label">[Konu] …dir</span>
-  </div></div></div>
-        
-        <div class='section'><div class='section-title'>Örnek Cümleler</div><div class="example-list"><div class="example-card">
-    <div class="ex-jp">わたし <span class="ex-highlight">は</span> がくせい です。</div>
-    <div class="ex-rom">Watashi wa gakusei desu.</div>
-    <div class="ex-tr">Ben öğrenciyim.</div>
-  </div>
-<div class="example-card">
-    <div class="ex-jp">たなかさん <span class="ex-highlight">は</span> せんせい です。</div>
-    <div class="ex-rom">Tanaka-san wa sensei desu.</div>
-    <div class="ex-tr">Tanaka Bey öğretmen.</div>
-  </div>
-<div class="example-card">
-    <div class="ex-jp">この ほん <span class="ex-highlight">は</span> おもしろい です。</div>
-    <div class="ex-rom">Kono hon wa omoshiroi desu.</div>
-    <div class="ex-tr">Bu kitap ilginç.</div>
-  </div>
-<div class="example-card">
-    <div class="ex-jp">きょう <span class="ex-highlight">は</span> にちようび です。</div>
-    <div class="ex-rom">Kyō wa nichiyōbi desu.</div>
-    <div class="ex-tr">Bugün Pazar.</div>
-  </div></div></div>
-        <div class='section'><div class='section-title'>Dikkat Noktaları</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span><strong>は</strong> konuyu belirtir; özneyi değil. 「私は学生です」= Ben (konusunda) öğrenciyim.</div>
-<div class="warn-box"><span style="font-size:16px;margin-right:6px">⚠️</span>Konuşmada 「わたしは」sık düşürülür: 「学生です」= (Ben) öğrenciyim.</div></div>
-      </div>
+  <!-- NAV -->
+  <div class="top-nav">
+    <a class="back-btn" href="../index.html">← Ana Sayfa</a>
+    <div class="page-nav">
+      <a class="nav-arrow" href="N5_004.html">← Önceki</a>
+      <a class="nav-arrow" href="N5_006.html">Sonraki →</a>
     </div>
   </div>
 
-  <div class="twrap">
-    <div class="thead">
-      <div class="ttitle">📝 Test — N5-005 は</div>
-      <div class="tscore" id="scoreDisplay">0 / 30</div>
-    </div>
-    <div class="pstrip"><div class="pstrip-fill" id="prog"></div></div>
-    <div class="tbody" id="tv"></div>
-    <div class="tbody" id="rv" style="display:none"></div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">N5 · 005 · Partikül</div>
+    <div class="hero-jp">は</div>
+    <div class="hero-romaji">wa</div>
+    <div class="hero-tr">Konu Belirteci</div>
+    <div class="hero-sub">Cümlede ne hakkında konuştuğumuzu gösterir</div>
   </div>
-</div>
+
+  <!-- DERS -->
+  <div class="card" id="lessonCard">
+    <div class="card-header" onclick="toggleCard('lessonBody','lessonToggle')">
+      <div class="card-header-title">📖 Ders İçeriği</div>
+      <div class="card-toggle" id="lessonToggle">Gizle ▲</div>
+    </div>
+    <div class="card-body" id="lessonBody">
+
+      <!-- AÇIKLAMA -->
+      <p class="explain-text">
+        <strong>は (wa)</strong> partikülü cümlede <em>konuyu</em> belirtir — yani "şu anda <em>hakkında konuştuğumuz şey</em> bu" demek.
+        Türkçede karşılığı yoktur; bir tür "…a gelince" ya da söylenmeyen önek gibidir.
+      </p>
+      <p class="explain-text">
+        Örneğin: <em>わたし は がくせい です。</em> cümlesinde は, <strong>わたし (ben)</strong>'i konu olarak işaret eder,
+        yani "ben hakkında konuşacak olursak → öğrenciyim" anlamı taşır.
+      </p>
+
+      <!-- YAPI -->
+      <div style="margin-bottom:.875rem">
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Yapı</div>
+        <div class="formula-wrap">
+          <div class="formula-row">
+            <span class="f-box f-topic">Konu (isim)</span>
+            <span class="f-op">+</span>
+            <span class="f-box f-particle">は</span>
+            <span class="f-op">+</span>
+            <span class="f-box f-verb">Yüklem</span>
+            <span class="f-op">→</span>
+            <span class="f-box f-result">Konu … dir/var/yapar</span>
+          </div>
+          <div class="formula-note">わたし<strong>は</strong> がくせい です — Ben öğrenciyim.</div>
+        </div>
+      </div>
+
+      <!-- は vs が -->
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">は ile が Farkı</div>
+        <div class="compare-wrap">
+          <div class="compare-card c-a">
+            <div class="compare-label">は — Konu</div>
+            <div class="compare-jp">わたし<span style="color:var(--p600)">は</span></div>
+            <div class="compare-desc">"Ben hakkında konuşursak…" Genel bilgi, devam eden konu.</div>
+          </div>
+          <div class="compare-card c-b">
+            <div class="compare-label">が — Özne (Vurgu)</div>
+            <div class="compare-jp">わたし<span style="color:var(--t600)">が</span></div>
+            <div class="compare-desc">"Başkası değil, ben!" Yeni bilgi, özellikle ben vurgusu.</div>
+          </div>
+        </div>
+        <div class="tip tip-note">
+          <div class="tip-icon">💬</div>
+          <div class="tip-text">
+            「だれがきましたか？」(Kim geldi?) → 「たなかさん<strong>が</strong>きました。」(Tanaka geldi — başkası değil)<br>
+            「たなかさん<strong>は</strong>どこですか？」(Tanaka nerede?) → は ile konu değişmedi, bilgi soruyoruz.
+          </div>
+        </div>
+      </div>
+
+      <!-- ÖRNEKLER -->
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Örnek Cümleler</div>
+        <div class="examples">
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">1</div>
+              <div class="ex-text">
+                <div class="ex-jp">わたし <span class="hl">は</span> がくせい です。</div>
+                <div class="ex-romaji">watashi wa gakusei desu.</div>
+                <div class="ex-turkish">Ben öğrenciyim.</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>わたし</strong> = ben</span>
+              <span class="vocab-chip"><strong>がくせい</strong> = öğrenci</span>
+              <span class="vocab-chip"><strong>です</strong> = …dir / …yim</span>
+            </div>
+          </div>
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">2</div>
+              <div class="ex-text">
+                <div class="ex-jp">この ほん <span class="hl">は</span> おもしろい です。</div>
+                <div class="ex-romaji">kono hon wa omoshiroi desu.</div>
+                <div class="ex-turkish">Bu kitap ilginç.</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>この</strong> = bu</span>
+              <span class="vocab-chip"><strong>ほん</strong> = kitap</span>
+              <span class="vocab-chip"><strong>おもしろい</strong> = ilginç, eğlenceli</span>
+            </div>
+          </div>
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">3</div>
+              <div class="ex-text">
+                <div class="ex-jp">たなかさん <span class="hl">は</span> せんせい です か？</div>
+                <div class="ex-romaji">Tanaka-san wa sensei desu ka?</div>
+                <div class="ex-turkish">Tanaka Bey öğretmen mi?</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>〜さん</strong> = Bay/Bayan (saygı)</span>
+              <span class="vocab-chip"><strong>せんせい</strong> = öğretmen</span>
+              <span class="vocab-chip"><strong>か</strong> = soru eki (…mı?)</span>
+            </div>
+          </div>
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">4</div>
+              <div class="ex-text">
+                <div class="ex-jp">きょう <span class="hl">は</span> さむい です ね。</div>
+                <div class="ex-romaji">kyō wa samui desu ne.</div>
+                <div class="ex-turkish">Bugün soğuk, değil mi.</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>きょう</strong> = bugün</span>
+              <span class="vocab-chip"><strong>さむい</strong> = soğuk</span>
+              <span class="vocab-chip"><strong>ね</strong> = değil mi? (onay)</span>
+            </div>
+          </div>
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">5</div>
+              <div class="ex-text">
+                <div class="ex-jp">にほんご <span class="hl">は</span> むずかしい です が、たのしい です。</div>
+                <div class="ex-romaji">Nihongo wa muzukashii desu ga, tanoshii desu.</div>
+                <div class="ex-turkish">Japonca zor ama eğlenceli.</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>にほんご</strong> = Japonca</span>
+              <span class="vocab-chip"><strong>むずかしい</strong> = zor</span>
+              <span class="vocab-chip"><strong>たのしい</strong> = eğlenceli, zevkli</span>
+              <span class="vocab-chip"><strong>が</strong> = ama (bağlaç)</span>
+            </div>
+          </div>
+
+          <div class="ex-card">
+            <div class="ex-top">
+              <div class="ex-num">6</div>
+              <div class="ex-text">
+                <div class="ex-jp">コーヒー <span class="hl">は</span> すき です。でも おちゃ <span class="hl">は</span> きらい です。</div>
+                <div class="ex-romaji">Kōhī wa suki desu. Demo ocha wa kirai desu.</div>
+                <div class="ex-turkish">Kahveyi seviyorum. Ama çaydan hoşlanmıyorum.</div>
+              </div>
+            </div>
+            <div class="ex-bottom">
+              <span class="vocab-chip"><strong>コーヒー</strong> = kahve</span>
+              <span class="vocab-chip"><strong>すき</strong> = sevmek, hoşlanmak</span>
+              <span class="vocab-chip"><strong>おちゃ</strong> = çay (yeşil çay)</span>
+              <span class="vocab-chip"><strong>きらい</strong> = sevmemek, hoşlanmamak</span>
+              <span class="vocab-chip"><strong>は は</strong> = iki は = kontrast vurgusu</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- İPUÇLARI -->
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Dikkat Noktaları</div>
+
+        <div class="tip tip-info">
+          <div class="tip-icon">💡</div>
+          <div class="tip-text">
+            <strong>İki は kullanımı = kontrast:</strong>
+            「コーヒー<strong>は</strong>すきです。でもおちゃ<strong>は</strong>きらいです。」gibi iki cümlede は kullanılırsa,
+            "kahve seviyorum <em>ama</em> çay sevmiyorum" şeklinde karşıtlık vurgulanır.
+          </div>
+        </div>
+
+        <div class="tip tip-warn">
+          <div class="tip-icon">⚠️</div>
+          <div class="tip-text">
+            <strong>は soru sözcükleriyle kullanılmaz.</strong>
+            「だれ<s>は</s>きましたか」❌ → 「だれ<strong>が</strong>きましたか」✅
+            Soru sözcükleri (だれ、なに、どこ) her zaman が alır.
+          </div>
+        </div>
+
+        <div class="tip tip-note">
+          <div class="tip-icon">🗣️</div>
+          <div class="tip-text">
+            <strong>は okunuşu:</strong> Japonca'da は genellikle <em>ha</em> okunur, ancak partikül olarak kullanıldığında
+            <em>wa</em> okunur. Bu istisna ezberlenmelidir: 「わたし<strong>は</strong>」= "watashi <em>wa</em>"
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- card-body -->
+  </div><!-- card -->
+
+  <!-- TEST -->
+  <div class="test-wrap">
+    <div class="test-header">
+      <div class="test-title">📝 Test — は partikülü</div>
+      <div class="test-score" id="scoreDisplay">0 / 30</div>
+    </div>
+    <div class="progress"><div class="progress-fill" id="prog"></div></div>
+    <div class="test-body" id="tv"></div>
+    <div class="test-body" id="rv" style="display:none"></div>
+  </div>
+
+</div><!-- app -->
 <script>
-var POOL=[
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"わたし ___ がくせい です。\n(Ben öğrenciyim.)",ans:"は",opts:["は", "が", "を", "に"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"きょう ___ さむい です。\n(Bugün soğuk.)",ans:"は",opts:["は", "が", "を", "で"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"この えいが ___ たのしかった です。\n(Bu film eğlenceliydi.)",ans:"は",opts:["は", "が", "を", "に"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「は」partiküllünün temel işlevi nedir?",ans:"Cümlenin konusunu/temasını belirlemek",opts:["Cümlenin konusunu/temasını belirlemek", "Özneyi belirtmek", "Nesneyi belirtmek", "Yeri belirtmek"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「田中さん は 先生 です。」",ans:"Tanaka Bey öğretmen.",opts:["Tanaka Bey öğretmen.", "Tanaka Bey değil.", "Tanaka Bey öğretmen mi?", "Ben öğretmenim."]},
-  {tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"「は」ile「が」temel farkı?",ans:"は konu belirteci; が özne belirteci",opts:["は konu belirteci; が özne belirteci", "Aynı şey", "は nesne; が konu", "は geçmiş; が şimdi"]},
-  {tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「Bugün Pazar.」→ Japonca?",ans:"きょう は にちようび です。",opts:["きょう は にちようび です。", "きょう が にちようび です。", "きょう を にちようび です。", "きょう に にちようび です。"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「わたし は にほんじん です。」",ans:"Doğru ✅",opts:["Doğru ✅", "Yanlış — が olmalı", "Yanlış — を olmalı", "Yanlız — で olmalı"]},
-  {tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Bu kahve sıcak.」",ans:"このコーヒー は あつい です。",opts:["このコーヒー は あつい です。", "このコーヒー が あつい です。", "このコーヒー を あつい です。", "このコーヒー に あつい です。"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「〜は〜が好きです。」yapısında は ne işlevi görür?",ans:"Genel konuyu belirtir (kişiyi)",opts:["Genel konuyu belirtir (kişiyi)", "Nesneyi belirtir", "Özneyi vurgular", "Yer belirtir"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"あの ひと ___ だれ です か？\n(O kişi kim?)",ans:"は",opts:["は", "が", "を", "の"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「この へや は せまい です。」",ans:"Bu oda dar.",opts:["Bu oda dar.", "Bu oda dar değil.", "Bu oda mı dar?", "O oda dar."]},
-  {tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「田中さん ___ かいしゃいん です。」",ans:"は",opts:["は", "が", "を", "で"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「わたしはすしはすきです。」— iki は kullanımı?",ans:"Kabul edilir — konu + alt konu yapısı",opts:["Kabul edilir — konu + alt konu yapısı", "Tamamen yanlış", "Sadece biri kullanılmalı", "は yerine が olmalı"]},
-  {tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Japonya güzel bir ülke.」",ans:"にほん は きれい な くに です。",opts:["にほん は きれい な くに です。", "にほん が きれい な くに です。", "にほん を きれい な くに です。", "にほん に きれい な くに です。"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「ねこ は どこ ですか。」",ans:"Kedi nerede?",opts:["Kedi nerede?", "Kedi var mı?", "Hangi kedi?", "Kedi kim?"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"たなかさん ___ えいご が とくい です。\n(Tanaka İngilizce'de iyi.)",ans:"は",opts:["は", "が", "を", "で"]},
-  {tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"「は」hangi konumlarda düşürülebilir?",ans:"Bağlamdan anlaşılan konu (özellikle 1. şahıs)",opts:["Bağlamdan anlaşılan konu (özellikle 1. şahıs)", "Hiç düşürülemez", "Her zaman düşürülür", "Sadece soru cümlelerinde"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「テスト は むずかしかった です。」",ans:"Test zordu.",opts:["Test zordu.", "Test zor.", "Test zor değil.", "Test zor muydu?"]},
-  {tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「きのう ___ たのしかった です。」",ans:"は",opts:["は", "が", "を", "に"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「これはなんですか。」",ans:"Doğru ✅",opts:["Doğru ✅", "Yanlış", "Yanlış — が olmalı", "Yanlış — を olmalı"]},
-  {tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Bu yemek lezzetli.」",ans:"この りょうり は おいしい です。",opts:["この りょうり は おいしい です。", "この りょうり が おいしい です。", "この りょうり を おいしい です。", "この りょうり で おいしい です。"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「〜は〜ではありません。」— は ve ではありません?",ans:"は konu; ではありません olumsuz yüklem",opts:["は konu; ではありません olumsuz yüklem", "İkisi de yüklem", "は olumsuz; ではありません konu", "İkisi de partikül"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"かのじょ ___ やさしい ひと です。\n(O nazik bir insan.)",ans:"は",opts:["は", "が", "を", "と"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「このくに は ひろい です。」",ans:"Bu ülke geniş.",opts:["Bu ülke geniş.", "Bu ülke geniş değil.", "Bu ülke geniş miydi?", "O ülke geniş."]},
-  {tp:"form",lb:"Doğru Formu Seç",lc:"tlm",q:"「この えいが ___ おもしろい と おもいます。」",ans:"は",opts:["は", "が", "を", "で"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「あのひとはだれですか。」",ans:"Doğru ✅",opts:["Doğru ✅", "Yanlış", "Yanlış — が olmalı", "Yanlış — の olmalı"]},
-  {tp:"trans",lb:"Japonca Çeviri",lc:"tlc",q:"「Japon yemeği seviyorum.」",ans:"わたし は にほんりょうり が すき です。",opts:["わたし は にほんりょうり が すき です。", "わたし が にほんりょうり は すき です。", "わたし を にほんりょうり は すき です。", "わたし に にほんりょうり が すき です。"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「あれはなんですか？」cevabı nasıl?",ans:"「あれは〜です。」",opts:["「あれは〜です。」", "「あれに〜です。」", "「あれが〜です。」", "「あれを〜です。」"]},
-  {tp:"kip",lb:"Kip Farkı",lc:"tlm",q:"Zıtlık durumunda は nasıl kullanılır?",ans:"「コーヒーは好きです。でも、お茶は嫌いです。」— kontrast",opts:["「コーヒーは好きです。でも、お茶は嫌いです。」— kontrast", "は hiç kontrast yapmaz", "が kontrast yapar", "を kontrast yapar"]},
-  {tp:"fill",lb:"Boşluğu Doldur",lc:"tlr",q:"まいにち ___ たのしい です。\n(Her gün eğlenceli.)",ans:"は",opts:["は", "が", "を", "に"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「たんじょうびは いつですか。」",ans:"Doğum günü ne zaman?",opts:["Doğum günü ne zaman?", "Doğum günü nasıl?", "Doğum günü nerede?", "Doğum günü kim?"]}
+function toggleCard(bodyId, toggleId) {
+  var b = document.getElementById(bodyId);
+  var t = document.getElementById(toggleId);
+  var open = b.style.display !== 'none';
+  b.style.display = open ? 'none' : 'block';
+  t.textContent = open ? 'Göster ▼' : 'Gizle ▲';
+}
+
+var POOL = [
+
+/* ── GRUP 1: Boşluk Doldur ── は veya が veya başka partikül? ──────── */
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'わたし ___ がくせい です。\n🇹🇷 Ben öğrenciyim.\n💡 わたし=ben | がくせい=öğrenci',
+ ans:'は', opts:['は','が','を','に'],
+ exp:'わたし (ben) cümlenin konusu, genel tanıtım → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'この ほん ___ おもしろい です。\n🇹🇷 Bu kitap ilginç.\n💡 ほん=kitap | おもしろい=ilginç',
+ ans:'は', opts:['は','が','を','で'],
+ exp:'ほん (kitap) cümlenin konusu → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'たなかさん ___ せんせい です か？\n🇹🇷 Tanaka Bey öğretmen mi?\n💡 せんせい=öğretmen',
+ ans:'は', opts:['は','が','の','に'],
+ exp:'たなかさん hakkında konuşuyoruz → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'きょう ___ いい てんき です ね。\n🇹🇷 Bugün hava güzel, değil mi.\n💡 きょう=bugün | いいてんき=güzel hava',
+ ans:'は', opts:['は','が','に','で'],
+ exp:'きょう (bugün) konumuz → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'にほんご ___ むずかしい です が、たのしい です。\n🇹🇷 Japonca zor ama eğlenceli.\n💡 むずかしい=zor | たのしい=eğlenceli',
+ ans:'は', opts:['は','が','を','と'],
+ exp:'にほんご (Japonca) genel konu → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'このまち ___ にぎやか です ね。\n🇹🇷 Bu kasaba canlı, değil mi.\n💡 まち=kasaba | にぎやか=canlı',
+ ans:'は', opts:['は','が','で','の'],
+ exp:'このまち (bu kasaba) cümlenin konusu → は'},
+
+{tp:'fill', lb:'Boşluğu Doldur', lc:'lr',
+ q:'わたし の なまえ ___ ゆき です。\n🇹🇷 Benim adım Yuki.\n💡 なまえ=isim | ゆき=Yuki (isim)',
+ ans:'は', opts:['は','が','を','に'],
+ exp:'なまえ (isim) cümlenin konusu → は'},
+
+/* ── GRUP 2: Bu cümle ne demek? ────────────────────────────────────── */
+
+{tp:'mean', lb:'Bu cümle ne demek?', lc:'lc',
+ q:'「これ は なん です か。」\n💡 これ=bu | なん=ne | です=…dir | か=soru eki',
+ ans:'Bu nedir?',
+ opts:['Bu nedir?','Bu nerede?','Bu ne zaman?','Bu benim mi?'],
+ exp:'これ=bu, なん=ne, ですか=…mı → Bu nedir?'},
+
+{tp:'mean', lb:'Bu cümle ne demek?', lc:'lc',
+ q:'「あの ひと は だれ です か。」\n💡 あのひと=o kişi | だれ=kim',
+ ans:'O kişi kim?',
+ opts:['O kişi kim?','O kişi nerede?','O kişi ne yapıyor?','Bu kişi kim?'],
+ exp:'あのひと=o kişi, だれ=kim → O kişi kim?'},
+
+{tp:'mean', lb:'Bu cümle ne demek?', lc:'lc',
+ q:'「この コーヒー は あつい です。」\n💡 コーヒー=kahve | あつい=sıcak',
+ ans:'Bu kahve sıcak.',
+ opts:['Bu kahve sıcak.','Bu kahve soğuk.','Bu kahve lezzetli.','Bu kahve sıcak mı?'],
+ exp:'このコーヒー=bu kahve, あつい=sıcak → Bu kahve sıcak.'},
+
+{tp:'mean', lb:'Bu cümle ne demek?', lc:'lc',
+ q:'「しごと は たのしい です か。」\n💡 しごと=iş | たのしい=eğlenceli',
+ ans:'İşiniz eğlenceli mi?',
+ opts:['İşiniz eğlenceli mi?','Nerede çalışıyorsunuz?','Ne iş yapıyorsunuz?','İşe gidiyor musunuz?'],
+ exp:'しごと=iş, たのしい=eğlenceli, ですか=…mı → İşiniz eğlenceli mi?'},
+
+{tp:'mean', lb:'Bu cümle ne demek?', lc:'lc',
+ q:'「わたし は にほんじん では ありません。」\n💡 にほんじん=Japon | ではありません=değilim',
+ ans:'Ben Japon değilim.',
+ opts:['Ben Japon değilim.','Ben Japonım.','Sen Japon değilsin.','O Japon değil.'],
+ exp:'わたし=ben, にほんじん=Japon, ではありません=değilim → Ben Japon değilim.'},
+
+/* ── GRUP 3: は mı? が mı? ─────────────────────────────────────────── */
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'Kendini tanıtıyorsun: "Ben öğrenciyim."\nわたし ___ がくせい です。\nGenel bilgi, konu kendisi.',
+ ans:'は', opts:['は','が','を','で'],
+ exp:'Tanıtım / genel bilgi → は'},
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'"Kim geldi?" sorusuna cevap veriyorsun:\n"Tanaka Bey geldi."\nたなかさん ___ きました。\n💡 きました=geldi',
+ ans:'が', opts:['が','は','を','に'],
+ exp:'Kim sorusunun cevabı, belirli kişi vurgusu → が'},
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'Parkta kedi gördün, ilk defa söylüyorsun:\nねこ ___ います！\n💡 ねこ=kedi | います=var (canlı)',
+ ans:'が', opts:['が','は','を','で'],
+ exp:'İlk kez bahsedilen, yeni bilgi → が'},
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'"Japonca hakkında: Japonca zor."\nにほんご ___ むずかしい です。\n💡 むずかしい=zor',
+ ans:'は', opts:['は','が','を','に'],
+ exp:'Japonca genel konu olarak konuşuluyor → は'},
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'Soru sözcükleri: だれ=kim, なに=ne, どこ=nerede\nBunlarla hangi partikül kullanılır?',
+ ans:'が', opts:['が','は','を','に'],
+ exp:'Soru sözcükleri (だれ・なに・どこ) daima が alır'},
+
+{tp:'kip', lb:'は mı? が mı?', lc:'lm',
+ q:'"Bugün hava soğuk." — hava durumu, genel konu\nきょう ___ さむい です。\n💡 さむい=soğuk',
+ ans:'は', opts:['は','が','に','で'],
+ exp:'きょう (bugün) genel konu → は'},
+
+/* ── GRUP 4: Doğru cümle hangisi? ──────────────────────────────────── */
+
+{tp:'check', lb:'Doğru cümle hangisi?', lc:'lr',
+ q:'"Bu sınav zor." demek istiyorsun.\n💡 テスト=sınav | むずかしい=zor',
+ ans:'この テスト は むずかしい です。',
+ opts:['この テスト は むずかしい です。',
+       'この テスト が むずかしい です。',
+       'この テスト を むずかしい です。',
+       'この テスト で むずかしい です。'],
+ exp:'テスト cümlenin konusu → は. を nesne için, で yer/araç için kullanılır.'},
+
+{tp:'check', lb:'Doğru cümle hangisi?', lc:'lr',
+ q:'"Kim geldi?" demek istiyorsun.\n💡 だれ=kim | きました=geldi',
+ ans:'だれ が きました か。',
+ opts:['だれ が きました か。',
+       'だれ は きました か。',
+       'だれ を きました か。',
+       'だれ の きました か。'],
+ exp:'だれ (kim) soru sözcüğü → daima が kullanılır, は değil.'},
+
+{tp:'check', lb:'Doğru cümle hangisi?', lc:'lr',
+ q:'"Adım Aiko." — kendini tanıtıyorsun\n💡 なまえ=isim | あいこ=Aiko',
+ ans:'わたし の なまえ は あいこ です。',
+ opts:['わたし の なまえ は あいこ です。',
+       'わたし の なまえ が あいこ です。',
+       'わたし の なまえ を あいこ です。',
+       'わたし の なまえ に あいこ です。'],
+ exp:'なまえ (isim) cümlenin konusu, tanıtım → は'},
+
+/* ── GRUP 5: Kural ve Uygulama ──────────────────────────────────────── */
+
+{tp:'rule', lb:'Kural', lc:'lm',
+ q:'「は」Japonca\'da nasıl okunur?\n(Harfin normal okunuşu değil, partikül olarak)',
+ ans:'"wa" okunur',
+ opts:['"wa" okunur','"ha" okunur','"ba" okunur','"yo" okunur'],
+ exp:'は harfi normalde "ha" ama partikül olarak "wa" okunur — istisna'},
+
+{tp:'rule', lb:'Kural', lc:'lm',
+ q:'Hangi durumda は kullanmak YANLIŞ olur?\nÖrnek: だれ=kim, なに=ne, どこ=nerede',
+ ans:'Soru sözcükleriyle: だれはきた → YANLIŞ',
+ opts:['Soru sözcükleriyle: だれはきた → YANLIŞ',
+       'Kişi tanıtırken',
+       'Hava durumu konuşurken',
+       'İki şeyi karşılaştırırken'],
+ exp:'だれ/なに/どこ gibi soru sözcükleri は almaz, が alır.'},
+
+{tp:'rule', lb:'Kural', lc:'lm',
+ q:'「は」ile「が」arasındaki temel fark:',
+ ans:'は = genel konu | が = yeni bilgi / vurgu',
+ opts:['は = genel konu | が = yeni bilgi / vurgu',
+       'は = özne | が = konu',
+       'は = resmi | が = sade',
+       'は ve が aynı şeydir'],
+ exp:'は: "bu konu hakkında konuşuyoruz". が: "işte bu!" (yeni/vurgulu)'},
+
+/* ── GRUP 6: Çeviri ─────────────────────────────────────────────────── */
+
+{tp:'trans', lb:'Türkçeyi Japonca\'ya Çevir', lc:'lc',
+ q:'"Bu kek lezzetli!" demek istiyorsun.\n💡 ケーキ=kek | おいしい=lezzetli',
+ ans:'この ケーキ は おいしい です。',
+ opts:['この ケーキ は おいしい です。',
+       'この ケーキ が おいしい です。',
+       'この ケーキ を おいしい です。',
+       'この ケーキ に おいしい です。'],
+ exp:'このケーキ (bu kek) cümlenin konusu → は'},
+
+{tp:'trans', lb:'Türkçeyi Japonca\'ya Çevir', lc:'lc',
+ q:'"Tanaka Bey nerede?" demek istiyorsun.\n💡 どこ=nerede',
+ ans:'たなかさん は どこ です か。',
+ opts:['たなかさん は どこ です か。',
+       'たなかさん が どこ です か。',
+       'たなかさん を どこ です か。',
+       'たなかさん で どこ です か。'],
+ exp:'たなかさん cümlenin konusu → は. Nerede sorusu どこ ile'},
+
+{tp:'trans', lb:'Türkçeyi Japonca\'ya Çevir', lc:'lc',
+ q:'"Japonya güzel bir ülke." demek istiyorsun.\n💡 にほん=Japonya | きれい=güzel | くに=ülke',
+ ans:'にほん は きれい な くに です。',
+ opts:['にほん は きれい な くに です。',
+       'にほん が きれい な くに です。',
+       'にほん を きれい な くに です。',
+       'にほん に きれい な くに です。'],
+ exp:'にほん (Japonya) cümlenin konusu → は'},
+
+{tp:'trans', lb:'Türkçeyi Japonca\'ya Çevir', lc:'lc',
+ q:'"Bugün soğuk, değil mi." demek istiyorsun.\n💡 さむい=soğuk | ね=değil mi',
+ ans:'きょう は さむい です ね。',
+ opts:['きょう は さむい です ね。',
+       'きょう が さむい です ね。',
+       'きょう を さむい です ね。',
+       'きょう に さむい です ね。'],
+ exp:'きょう (bugün) genel konu → は'},
+
 ];
 
-function toggleLesson(){
-  var b=document.getElementById('lbody');
-  var t=document.getElementById('ltoggle');
-  var open=b.style.display!=='none';
-  b.style.display=open?'none':'block';
-  t.textContent=open?'Göster ▼':'Gizle ▲';
-}
-function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
 var tqs=[],ti=0,sc=0,log=[];
-function initTest(){
-  tqs=shuffle(POOL).slice(0,30);
-  ti=0;sc=0;log=[];
-  renderQ();
-}
+function initTest(){tqs=shuffle(POOL).slice(0,30);ti=0;sc=0;log=[];renderQ()}
 function renderQ(){
   var q=tqs[ti],tot=tqs.length;
   document.getElementById('prog').style.width=(ti/tot*100)+'%';
   document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
   var opts=shuffle(q.opts);
-  document.getElementById('tv').innerHTML=
-    '<div class="tqlabel '+q.lc+'">'+q.lb+'</div>'+
-    '<div class="tq" style="white-space:pre-line">'+q.q+'</div>'+
-    '<div class="topts">'+
-    opts.map(function(o,i){return '<button class="topt" onclick="doAns('+i+')">'+o+'</button>';}).join('')+
-    '</div>'+
-    '<div class="tfb" id="fb"></div>'+
-    '<button class="tnext" id="nq" onclick="nextQ()">'+
-    (ti===tot-1?'Sonuçları Gör →':'Sonraki →')+
-    '</button>';
   window._opts=opts;
+  document.getElementById('tv').innerHTML=
+    '<div class="q-label '+q.lc+'">'+q.lb+' ('+(ti+1)+'/'+tot+')</div>'+
+    '<div class="q-text">'+q.q+'</div>'+
+    '<div class="q-opts">'+opts.map(function(o,i){return'<button class="q-opt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+'</div>'+
+    '<div class="q-feedback" id="qfb"></div>'+
+    '<button class="q-next" id="qnext" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
 }
 function doAns(i){
   var q=tqs[ti],sel=window._opts[i],ok=sel===q.ans;
   if(ok)sc++;
   log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});
-  document.querySelectorAll('.topt').forEach(function(b,j){
+  document.querySelectorAll('.q-opt').forEach(function(b,j){
     b.disabled=true;
     if(j===i)b.classList.add(ok?'ok':'ng');
     if(window._opts[j]===q.ans&&!ok)b.classList.add('show');
   });
-  var fb=document.getElementById('fb');
-  fb.className='tfb '+(ok?'ok':'ng');
-  fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
-  document.getElementById('nq').style.display='block';
+  var fb=document.getElementById('qfb');
+  fb.className='q-feedback '+(ok?'ok':'ng');
+  var msg = ok ? '✅ Doğru!' : '❌ Yanlış — Doğru cevap: ' + q.ans;
+  if(q.exp) msg += '\n📌 ' + q.exp;
+  fb.textContent = msg;
+  document.getElementById('qnext').style.display='block';
 }
-function nextQ(){ti++;if(ti>=tqs.length){showR();return;}renderQ();}
+function nextQ(){ti++;if(ti>=tqs.length){showR();return}renderQ()}
 function showR(){
   var tot=tqs.length,pct=Math.round(sc/tot*100);
   var emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
   var lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
   document.getElementById('tv').style.display='none';
   document.getElementById('prog').style.width='100%';
-  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
   var typeMap={};
-  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++;});
-  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return '<div class="tsrow"><span class="tslb">'+lb+'</span><span class="tspct">'+v.ok+'/'+v.tot+'</span></div>';}).join('');
-  var rep=log.map(function(l,i){return '<div class="krow"><div class="knum">'+(i+1)+'</div><div class="kinfo"><div class="kqt">'+l.q+'</div>'+(l.ok?'<div class="kcorrect">✓ '+l.ans+'</div>':'<div class="kans">Verilen: <strong>'+l.sel+'</strong> → Doğru: <strong>'+l.ans+'</strong></div>')+'</div><span class="rs '+(l.ok?'rs-ok':'rs-bad')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
+  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++});
+  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return'<div class="ts-row"><span class="ts-lbl">'+lb+'</span><span class="ts-val">'+v.ok+'/'+v.tot+'</span></div>'}).join('');
+  var rep=log.map(function(l,i){
+    return'<div class="d-row"><div class="d-num">'+(i+1)+'</div><div class="d-content"><div class="d-q">'+l.q+'</div>'+
+    (l.ok?'<div class="d-ans d-correct">✓ '+l.ans+'</div>':'<div class="d-ans d-wrong">✗ Verilen: '+l.sel+' → Doğru: '+l.ans+'</div>')+
+    '</div><span class="d-badge '+(l.ok?'ok':'ng')+'">'+(l.ok?'✓':'✗')+'</span></div>';
+  }).join('');
   var rv=document.getElementById('rv');
   rv.style.display='block';
-  rv.innerHTML='<div class="rwrap"><div class="remoji">'+emoji+'</div><div class="rscore">'+sc+' / '+tot+'</div><div class="rlabel">'+lbl+' · %'+pct+'</div><div class="rbdown"><div class="rbc"><div class="rbv rg">'+sc+'</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">'+(tot-sc)+'</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">'+tot+'</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Soru Tipi Bazında</div>'+tsum+'<button class="rbtn" onclick="restartTest()" style="margin-top:1.25rem">Tekrar Dene</button> <a href="../index.html" class="rbtn" style="display:inline-block;margin-top:8px;text-decoration:none">← Anasayfa</a></div><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>'+rep+'</div>';
+  rv.innerHTML='<div class="result-wrap"><div class="result-emoji">'+emoji+'</div><div class="result-score">'+sc+' / '+tot+'</div><div class="result-label">'+lbl+' · %'+pct+'</div>'+
+  '<div class="result-stats"><div class="rs-box"><div class="rs-val rs-ok">'+sc+'</div><div class="rs-lbl">Doğru</div></div>'+
+  '<div class="rs-box"><div class="rs-val rs-ng">'+(tot-sc)+'</div><div class="rs-lbl">Yanlış</div></div>'+
+  '<div class="rs-box"><div class="rs-val rs-tot">'+tot+'</div><div class="rs-lbl">Toplam</div></div></div>'+
+  '<div class="type-summary"><div class="ts-row" style="background:transparent;padding:0 0 6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3)"><span>Soru Tipi</span><span>Doğru/Top</span></div>'+tsum+'</div>'+
+  '<div class="result-btns"><button class="r-btn" onclick="restartTest()">Tekrar Dene</button><a class="r-btn outline" href="../index.html">← Anasayfa</a></div></div>'+
+  '<div class="detail-section"><div class="detail-title">Soru Detayı</div>'+rep+'</div>';
 }
-function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest();}
-initTest();
+function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest()}
 
+// ═══ ANS-OPTS VALIDATOR ═══════════════════════════════════════════
+(function validatePool(){
+  var errors = [];
+  POOL.forEach(function(q, i){
+    if(q.opts.indexOf(q.ans) === -1){
+      errors.push('Soru #' + (i+1) + ': ANS eksik opts içinde!\n  ans: "' + q.ans + '"\n  opts: ' + JSON.stringify(q.opts));
+    }
+  });
+  if(errors.length > 0){
+    console.error('❌ POOL HATALARI:\n' + errors.join('\n\n'));
+    document.getElementById('tv').innerHTML =
+      '<div style="background:#fee;border:1px solid #f00;border-radius:8px;padding:1rem;font-size:13px;color:#900;white-space:pre-wrap">' +
+      '❌ Soru havuzunda hata:\n\n' + errors.join('\n\n') + '</div>';
+  } else {
+    console.log('✅ POOL OK: ' + POOL.length + ' soru doğrulandı');
+  }
+})();
+// ══════════════════════════════════════════════════════════════════
+
+initTest();
 </script>
 </body>
 </html>
