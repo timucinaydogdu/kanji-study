@@ -91,11 +91,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;paddi
 
   <!-- ══ GRAMER BÖLÜMü ══════════════════════════════════════════════ -->
   <div id="grammar-section" style="display:none;">
-  <div class="section-header" style="margin-top:0.5rem;background:linear-gradient(90deg,#EEEDFE,transparent);border-radius:var(--rm);padding:8px 4px;">
-    <span class="section-badge" style="background:#26215C;color:#EEEDFE;font-size:12px;padding:5px 14px;">📝 Gramer Dersleri</span>
-    <div class="section-line"></div>
-    <span class="section-note">N5 → N1 · JLPT</span>
-  </div>
 
   <!-- N5 Gramer -->
   <div class="section-header" onclick="toggleGrade('gn5')" style="cursor:pointer;user-select:none;">
@@ -586,6 +581,11 @@ function showTab(tab) {
     tabGrammar.classList.remove('inactive');
     tabKanji.classList.add('inactive');
     tabKanji.classList.remove('active');
+    // N5 grubunu varsayılan olarak aç
+    var gn5sets = document.getElementById('sets-gn5');
+    if (gn5sets && gn5sets.style.display !== 'flex') {
+      toggleGrade('gn5');
+    }
   } else {
     grammarEl.style.display = 'none';
     kanjiEl.style.display   = 'block';
@@ -595,6 +595,18 @@ function showTab(tab) {
   }
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+// Gramer dersinden geri dönüldüğünde doğru sekmeyi aç
+(function() {
+  if (window.location.search.indexOf('tab=grammar') !== -1) {
+    // DOM hazır olduğunda çalıştır
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { showTab('grammar'); });
+    } else {
+      showTab('grammar');
+    }
+  }
+})();
 
 </script>
 </body>
