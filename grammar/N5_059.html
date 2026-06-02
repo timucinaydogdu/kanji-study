@@ -1,246 +1,245 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>N5-059 どんな | N5 Gramer</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ffffff;--bg2:#f5f5f4;--bg3:#e8e8e7;--text:#1a1a1a;--text2:#6b6b6b;--text3:#9a9a9a;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--p50:#EEEDFE;--p200:#AFA9EC;--p600:#534AB7;--p800:#3C3489;--p900:#26215C;--t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;--a50:#FAEEDA;--a600:#BA7517;--a800:#633806;--a900:#412402;--r50:#FCEBEB;--r600:#A32D2D;--r800:#501313;--rm:8px;--rl:12px;}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a18;--bg2:#242422;--bg3:#2e2e2c;--text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.18);--p50:#26215C;--p200:#3C3489;--p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;--t50:#04342C;--t600:#9FE1CB;--t800:#9FE1CB;--a50:#412402;--a800:#FAC775;--a900:#FAC775;--r50:#501313;--r600:#F09595;--r800:#FCEBEB;}}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:2rem 1rem;}
-.app{width:100%;max-width:660px;margin:0 auto;}
-a.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:1.25rem;}
-a.back:hover{color:var(--text);}
-.lesson-wrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:1.5rem;}
-.lesson-header{background:var(--p50);border-bottom:0.5px solid var(--p200);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
-.lesson-header-title{font-size:15px;font-weight:500;color:var(--p900);}
-.lesson-toggle{font-size:13px;color:var(--p800);}
-.rule-hero{padding:2rem 1.5rem;text-align:center;}
-.rule-badge{display:inline-block;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.rule-jp{font-family:'Noto Serif JP',serif;font-size:46px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
-.rule-romaji{font-size:15px;color:rgba(255,255,255,0.75);margin-bottom:6px;}
-.rule-meaning{font-size:17px;font-weight:600;color:#fff;}
-.rule-sub{font-size:13px;color:rgba(255,255,255,0.65);margin-top:4px;}
-.lesson-body{padding:1.5rem;}
-.section{margin-bottom:1.75rem;}
-.section:last-child{margin-bottom:0;}
-.section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.section-title::after{content:'';flex:1;height:0.5px;background:var(--border);}
-.structure-box{background:var(--p50);border:0.5px solid var(--p200);border-radius:var(--rl);padding:1.25rem 1.5rem;}
-.structure-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.structure-row:last-child{margin-bottom:0;}
-.s-block{padding:5px 12px;border-radius:6px;font-size:13px;font-weight:600;font-family:'Noto Serif JP',serif;line-height:1.3;}
-.s-noun{background:var(--p200);color:var(--p900);}
-.s-adj{background:var(--t400);color:#fff;}
-.s-verb{background:#2A7D2A;color:#fff;}
-.s-particle{background:var(--p900);color:#fff;}
-.s-cop{background:var(--a600);color:#fff;}
-.s-neg{background:var(--r600);color:#fff;}
-.s-plus{font-size:16px;color:var(--text3);font-weight:300;}
-.s-arrow{font-size:14px;color:var(--text3);}
-.s-label{font-size:12px;color:var(--text2);}
-.conj-table{width:100%;border-collapse:collapse;border-radius:var(--rl);overflow:hidden;border:0.5px solid var(--border);}
-.conj-table th{background:var(--p600);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:8px 12px;text-align:left;}
-.conj-table td{padding:10px 12px;font-size:13px;border-bottom:0.5px solid var(--border);vertical-align:middle;}
-.conj-table tr:last-child td{border-bottom:none;}
-.conj-table tr:nth-child(even) td{background:var(--bg2);}
-.td-jp{font-family:'Noto Serif JP',serif;font-size:14px;color:var(--text);font-weight:700;}
-.td-rom{font-size:11px;color:var(--p600);font-style:italic;}
-.td-tr{font-size:12px;color:var(--text2);}
-.example-list{display:flex;flex-direction:column;gap:10px;}
-.example-card{background:var(--bg2);border-radius:var(--rm);padding:12px 14px;border-left:3px solid var(--p600);}
-.ex-jp{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--text);margin-bottom:4px;}
-.ex-rom{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:3px;}
-.ex-tr{font-size:13px;color:var(--text2);}
-.ex-highlight{color:var(--p600);font-weight:700;}
-.tip-box{background:var(--a50);border:0.5px solid var(--a600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--a800);line-height:1.6;margin-bottom:8px;}
-.warn-box{background:var(--r50);border:0.5px solid var(--r600);border-radius:var(--rm);padding:12px 14px;font-size:13px;color:var(--r800);line-height:1.6;margin-bottom:8px;}
-.twrap{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
-.thead{background:var(--a50);border-bottom:0.5px solid var(--a600);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
-.ttitle{font-size:15px;font-weight:500;color:var(--a900);}
-.tscore{font-size:13px;color:var(--a800);}
-.pstrip{height:4px;background:var(--bg2);}
-.pstrip-fill{height:100%;background:var(--a600);transition:width 0.4s;width:0%;}
-.tbody{padding:1.5rem;}
-.tqlabel{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
-.tlc{background:var(--p50);color:var(--p800);}
-.tlm{background:var(--t50);color:var(--t800);}
-.tlr{background:var(--a50);color:var(--a800);}
-.tq{font-size:15px;color:var(--text);line-height:1.6;}
-.tword{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--p900);text-align:center;margin:0.75rem 0 0.5rem;display:block;}
-.topts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1.25rem;}
-.topt{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--rm);padding:13px 16px;font-size:14px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:background 0.15s;line-height:1.4;}
-.topt:hover:not(:disabled){background:var(--p50);border-color:var(--p200);}
-.topt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500;}
-.topt.ng{background:var(--r50);border-color:var(--r600);color:var(--r800);}
-.topt.show{background:var(--t50);border-color:var(--t400);color:var(--t800);}
-.tfb{margin-top:1rem;padding:10px 14px;border-radius:var(--rm);font-size:13px;line-height:1.5;display:none;}
-.tfb.ok{display:block;background:var(--t50);color:var(--t800);border-left:2px solid var(--t400);}
-.tfb.ng{display:block;background:var(--r50);color:var(--r800);border-left:2px solid var(--r600);}
-.tnext{margin-top:1.25rem;width:100%;padding:12px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none;}
-.tnext:hover{background:var(--p800);}
-.rwrap{text-align:center;padding:2rem 1.5rem;}
-.remoji{font-size:52px;margin-bottom:1rem;}
-.rscore{font-size:38px;font-weight:500;color:var(--p800);margin-bottom:.4rem;}
-.rlabel{font-size:15px;color:var(--text2);margin-bottom:1.5rem;}
-.rbdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem;}
-.rbc{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;}
-.rbv{font-size:22px;font-weight:500;}
-.rbl{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
-.rg{color:var(--t600);}.rr{color:var(--r600);}.rgr{color:var(--text3);}
-.rbtn{padding:11px 28px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;}
-.rbtn:hover{background:var(--p800);}
-.tsrow{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12px;margin-bottom:4px;}
-.tslb{color:var(--text2);}
-.tspct{font-weight:600;color:var(--text);}
-.slabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px;}
-.krep{text-align:left;margin-top:1.5rem;border-top:.5px solid var(--border);padding-top:1.25rem;}
-.krow{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);font-size:13px;}
-.krow:last-child{border-bottom:none;}
-.knum{min-width:24px;font-size:12px;color:var(--text3);padding-top:1px;}
-.kinfo{flex:1;}
-.kqt{color:var(--text);margin-bottom:2px;white-space:pre-line;}
-.kans{font-size:12px;color:var(--text2);}
-.kcorrect{font-size:12px;color:var(--t600);}
-.rs{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;}
-.rs-ok{background:var(--t50);color:var(--t800);}
-.rs-bad{background:var(--r50);color:var(--r800);}
-</style>
-</head>
-<body>
-<div class="app">
-  <a class="back" href="../index.html">← Ana Sayfa</a>
-  <div style="display:flex;gap:10px;margin-bottom:1.5rem;"><a href="N5_058.html" style="color:var(--p600);text-decoration:none;font-size:13px;">← Önceki</a><span style="flex:1"></span><a href="N5_060.html" style="color:var(--p600);text-decoration:none;font-size:13px;">Sonraki →</a></div>
-
-  <div class="lesson-wrap" id="lessonWrap">
-    <div class="lesson-header" onclick="toggleLesson()">
-      <div class="lesson-header-title">📖 N5-059 — N5 Gramer Dersi</div>
-      <div class="lesson-toggle" id="ltoggle">Gizle ▲</div>
-    </div>
-    <div id="lbody">
-      <div class="rule-hero" style="background:linear-gradient(135deg,#085041,#1D9E75)">
-        <div class="rule-badge">N5 · 059 · Soru</div>
-        <div class="rule-jp">どんな</div>
-        <div class="rule-romaji">donna</div>
-        <div class="rule-meaning">nasıl bir; ne tür</div>
-        <div class="rule-sub">N5 temel gramer yapısı — Soru</div>
-      </div>
-      <div class="lesson-body">
-        
-        
-        <div class='section'><div class='section-title'>Örnek Cümleler</div><div class="example-list"></div></div>
-        <div class='section'><div class='section-title'>Dikkat Noktaları</div><div class="tip-box"><span style="font-size:16px;margin-right:6px">💡</span><strong>どんな</strong> (donna): nasıl bir; ne tür</div>
-<div class="tip-box"><span style="font-size:16px;margin-right:6px">📚</span>Kategori: Soru · Seviye: N5</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="twrap">
-    <div class="thead">
-      <div class="ttitle">📝 Test — N5-059 どんな</div>
-      <div class="tscore" id="scoreDisplay">0 / 30</div>
-    </div>
-    <div class="pstrip"><div class="pstrip-fill" id="prog"></div></div>
-    <div class="tbody" id="tv"></div>
-    <div class="tbody" id="rv" style="display:none"></div>
-  </div>
+:root{
+  --bg:#fff;--bg2:#f5f5f4;--bg3:#e8e8e7;
+  --text:#1a1a1a;--text2:#5a5a5a;--text3:#999;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);
+  --p50:#EEEDFE;--p100:#D5D2FA;--p200:#AFA9EC;
+  --p600:#534AB7;--p800:#3C3489;--p900:#26215C;
+  --t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;
+  --a50:#FFF3DC;--a400:#D4920A;--a600:#BA7517;--a800:#7A4A00;
+  --r50:#FEF0F0;--r400:#D94040;--r600:#A32D2D;
+  --g50:#F0F7FF;--g400:#2E7DB0;--g600:#1B5E8A;
+  --rm:10px;--rl:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1a;--bg2:#252523;--bg3:#2f2f2d;
+  --text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --p50:#1e1a48;--p100:#2a2466;--p200:#3C3489;
+  --p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;
+  --t50:#072e1e;--t400:#9FE1CB;--t600:#9FE1CB;--t800:#9FE1CB;
+  --a50:#2e1e00;--a400:#FAC775;--a600:#FAC775;--a800:#FAC775;
+  --r50:#2e0e0e;--r400:#F09595;--r600:#F09595;
+  --g50:#0d1f2e;--g400:#7ABEE0;--g600:#7ABEE0;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:1.5rem 1rem;color:var(--text);line-height:1.6}
+.app{width:100%;max-width:660px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+/* NAV */
+.top-nav{display:flex;align-items:center;gap:8px}
+.back-btn{font-size:13px;color:var(--text2);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.back-btn:hover{color:var(--text);background:var(--bg2)}
+.page-nav{display:flex;gap:8px;margin-left:auto}
+.nav-arrow{font-size:13px;color:var(--p600);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.nav-arrow:hover{background:var(--p50)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#26215C,#534AB7);border-radius:var(--rl);padding:2rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'は';position:absolute;font-family:'Noto Serif JP',serif;font-size:180px;font-weight:700;color:rgba(255,255,255,0.05);top:-20px;right:-10px;line-height:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
+.hero-jp{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem}
+.hero-romaji{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:.5rem}
+.hero-tr{font-size:20px;font-weight:600;color:#fff;margin-bottom:.25rem}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.6)}
+/* KART */
+.card{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:.875rem 1.25rem;background:var(--bg2);border-bottom:.5px solid var(--border);cursor:pointer;user-select:none}
+.card-header-title{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.card-toggle{font-size:12px;color:var(--text3)}
+.card-body{padding:1.25rem}
+/* AÇIKLAMA */
+.explain-text{font-size:14.5px;color:var(--text);line-height:1.75;margin-bottom:1rem}
+.explain-text strong{color:var(--p600)}
+.explain-text em{font-style:normal;color:var(--a600);font-weight:500}
+/* FORMULA */
+.formula-wrap{background:var(--p50);border:.5px solid var(--p100);border-radius:var(--rm);padding:1rem 1.25rem;margin-bottom:.875rem}
+.formula-row{display:flex;align-items:center;gap:8px;margin-bottom:.5rem;flex-wrap:wrap}
+.formula-row:last-child{margin-bottom:0}
+.f-box{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap}
+.f-topic{background:rgba(83,74,183,0.15);color:var(--p800);border:.5px solid var(--p200)}
+.f-verb{background:rgba(29,158,117,0.15);color:var(--t600);border:.5px solid var(--t400)}
+.f-particle{background:var(--p600);color:#fff;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;padding:4px 14px}
+.f-result{background:rgba(186,117,23,0.12);color:var(--a800);border:.5px solid var(--a400);font-size:12px;padding:4px 12px}
+.f-op{font-size:16px;color:var(--text3);font-weight:300}
+.formula-note{font-size:12px;color:var(--text2);margin-top:.5rem;padding-left:4px}
+/* ÖRNEKLER */
+.examples{display:flex;flex-direction:column;gap:.75rem}
+.ex-card{border-radius:var(--rm);overflow:hidden;border:.5px solid var(--border)}
+.ex-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--p600);color:#fff;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0}
+.ex-top{padding:.875rem 1rem .5rem;background:var(--bg);display:flex;gap:10px;align-items:flex-start}
+.ex-text{flex:1}
+.ex-jp{font-family:'Noto Serif JP',serif;font-size:17px;color:var(--text);margin-bottom:3px;line-height:1.5}
+.ex-jp .hl{color:var(--p600);font-weight:700;background:var(--p50);border-radius:3px;padding:0 2px}
+.ex-romaji{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:2px}
+.ex-turkish{font-size:14px;color:var(--text2)}
+.ex-bottom{padding:.5rem 1rem .75rem 1rem;background:var(--bg2);border-top:.5px solid var(--border);display:flex;flex-wrap:wrap;gap:6px}
+.vocab-chip{font-size:11.5px;background:var(--bg);border:.5px solid var(--border2);border-radius:20px;padding:2px 10px;color:var(--text2)}
+.vocab-chip strong{color:var(--text);font-weight:600}
+/* KARŞILAŞTIRMA */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.875rem}
+.compare-card{border-radius:var(--rm);padding:1rem;border:.5px solid var(--border)}
+.compare-card.c-a{background:var(--p50);border-color:var(--p200)}
+.compare-card.c-b{background:var(--t50);border-color:var(--t400)}
+.compare-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem}
+.compare-card.c-a .compare-label{color:var(--p800)}
+.compare-card.c-b .compare-label{color:var(--t800)}
+.compare-jp{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;margin-bottom:.25rem}
+.compare-card.c-a .compare-jp{color:var(--p900)}
+.compare-card.c-b .compare-jp{color:var(--t800)}
+.compare-desc{font-size:12px;color:var(--text2);line-height:1.5}
+/* İPUÇLARI */
+.tip{border-radius:var(--rm);padding:.875rem 1rem;font-size:13.5px;line-height:1.65;margin-bottom:.625rem;display:flex;gap:10px}
+.tip:last-child{margin-bottom:0}
+.tip-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.tip-text{flex:1}
+.tip.tip-info{background:var(--a50);border:.5px solid var(--a400);color:var(--a800)}
+.tip.tip-warn{background:var(--r50);border:.5px solid var(--r400);color:var(--r600)}
+.tip.tip-note{background:var(--g50);border:.5px solid var(--g400);color:var(--g600)}
+/* TEST */
+.test-wrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.test-header{background:var(--a50);border-bottom:.5px solid var(--a400);padding:.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.test-title{font-size:14px;font-weight:600;color:var(--a800);display:flex;align-items:center;gap:8px}
+.test-score{font-size:13px;font-weight:500;color:var(--a600)}
+.progress{height:3px;background:var(--bg2)}
+.progress-fill{height:100%;background:var(--a600);transition:width .35s;width:0}
+.test-body{padding:1.25rem}
+.q-label{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;margin-bottom:.875rem}
+.q-label.lm{background:var(--t50);color:var(--t800)}
+.q-label.lc{background:var(--p50);color:var(--p800)}
+.q-label.lr{background:var(--a50);color:var(--a800)}
+.q-text{font-size:15px;color:var(--text);line-height:1.65;white-space:pre-line}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:1rem}
+.q-opt{background:var(--bg2);border:.5px solid var(--border2);border-radius:var(--rm);padding:11px 14px;font-size:13.5px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:all .15s;line-height:1.4;width:100%}
+.q-opt:hover:not(:disabled){background:var(--p50);border-color:var(--p200)}
+.q-opt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500}
+.q-opt.ng{background:var(--r50);border-color:var(--r400);color:var(--r600)}
+.q-opt.show{background:var(--t50);border-color:var(--t400);color:var(--t800)}
+.q-feedback{margin-top:.875rem;padding:.75rem 1rem;border-radius:var(--rm);font-size:13.5px;line-height:1.5;display:none}
+.q-feedback.ok{display:block;background:var(--t50);color:var(--t800);border:.5px solid var(--t400)}
+.q-feedback.ng{display:block;background:var(--r50);color:var(--r600);border:.5px solid var(--r400)}
+.q-next{margin-top:1rem;width:100%;padding:11px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none}
+.q-next:hover{background:var(--p800)}
+/* SONUÇ */
+.result-wrap{padding:2rem 1.25rem;text-align:center}
+.result-emoji{font-size:54px;margin-bottom:1rem}
+.result-score{font-size:40px;font-weight:500;color:var(--p800);margin-bottom:.25rem}
+.result-label{font-size:15px;color:var(--text2);margin-bottom:1.5rem}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}
+.rs-box{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center}
+.rs-val{font-size:24px;font-weight:500}
+.rs-lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.rs-ok{color:var(--t600)}.rs-ng{color:var(--r600)}.rs-tot{color:var(--text3)}
+.type-summary{text-align:left;margin-bottom:1.25rem}
+.ts-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12.5px;margin-bottom:4px}
+.ts-lbl{color:var(--text2)}.ts-val{font-weight:600}
+.result-btns{display:flex;gap:8px;justify-content:center;margin-top:1.25rem}
+.r-btn{padding:10px 24px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit;text-decoration:none}
+.r-btn:hover{background:var(--p800)}
+.r-btn.outline{background:var(--bg);border:.5px solid var(--border2);color:var(--text)}
+.r-btn.outline:hover{background:var(--bg2)}
+.detail-section{text-align:left;border-top:.5px solid var(--border);padding-top:1.25rem;margin-top:1.25rem}
+.detail-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.875rem}
+.d-row{display:flex;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);align-items:flex-start}
+.d-row:last-child{border-bottom:none}
+.d-num{min-width:22px;font-size:11px;color:var(--text3);padding-top:2px}
+.d-content{flex:1}
+.d-q{font-size:12.5px;color:var(--text);white-space:pre-line;margin-bottom:2px}
+.d-ans{font-size:12px}
+.d-correct{color:var(--t600)}
+.d-wrong{color:var(--r600)}
+.d-badge{font-size:10.5px;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.d-badge.ok{background:var(--t50);color:var(--t800)}
+.d-badge.ng{background:var(--r50);color:var(--r600)}
+</style></head>
+<body><div class="app">
+<div class="top-nav"><a class="back-btn" href="../index.html">← Ana Sayfa</a><div class="page-nav"><a class="nav-arrow" href="N5_058.html">← Önceki</a><a class="nav-arrow" href="N5_060.html">Sonraki →</a></div></div>
+<div class="hero" style="background:linear-gradient(135deg,#085041,#1B6B4A)">
+<div class="hero-badge">N5 · 059 · Soru</div>
+<div class="hero-jp">どんな</div><div class="hero-romaji">donna</div>
+<div class="hero-tr">nasıl bir; ne tür</div><div class="hero-sub">Nasıl bir, ne tür — özellik sorusu</div></div>
+<div class="card"><div class="card-header" onclick="toggleCard('lbody','ltoggle')">
+<div class="card-header-title">📖 Ders — N5-059</div>
+<div class="card-toggle" id="ltoggle">Gizle ▲</div></div>
+<div class="card-body" id="lbody"><p class="explain-text"><strong>どんな</strong> "nasıl bir, ne tür" anlamında özellik sorar. + 名詞 ile kullanılır.</p><p class="explain-text"><strong>どんな</strong> (nasıl bir — özellik) vs <strong>どの</strong> (hangi — belirli seçim).</p><div style="margin-bottom:1.25rem"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Yapı</div><div class="formula-wrap"><div class="formula-row"><span class="f-box f-cop">どんな</span><span class="f-op">+</span><span class="f-box f-noun">+ 名詞</span><span class="f-op">→</span><span class="f-result">nasıl bir ...? (özellik sorusu)</span></div></div></div><div style="margin-bottom:1.25rem"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Karşılaştırma</div><div class="compare-wrap"><div class="compare-card c-a"><div class="compare-label">どんな (özellik sorar)</div><div class="compare-jp">どんなひとですか。</div><div class="compare-desc">Nasıl bir insan? (karakter)</div></div><div class="compare-card c-b"><div class="compare-label">どの (belirli seçer)</div><div class="compare-jp">どのひとですか。</div><div class="compare-desc">Hangi insan? (belirli kişi)</div></div></div></div><div style="margin-bottom:1.25rem"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Örnek Cümleler</div><div class="examples"><div class="ex-card"><div class="ex-top"><div class="ex-num">1</div><div class="ex-text"><div class="ex-jp"><span class="hl">どんな</span>おんがくがすきですか？</div><div class="ex-romaji">donna ongaku ga suki desu ka?</div><div class="ex-turkish">Nasıl bir müzik seversiniz?</div></div></div><div class="ex-bottom"><span class="vocab-chip"><strong>どんな</strong> = nasıl bir</span><span class="vocab-chip"><strong>おんがく</strong> = müzik</span></div></div><div class="ex-card"><div class="ex-top"><div class="ex-num">2</div><div class="ex-text"><div class="ex-jp"><span class="hl">どんな</span>しごとをしたいですか？</div><div class="ex-romaji">donna shigoto wo shitai desu ka?</div><div class="ex-turkish">Ne tür bir iş yapmak istersiniz?</div></div></div><div class="ex-bottom"><span class="vocab-chip"><strong>どんな</strong> = ne tür</span><span class="vocab-chip"><strong>しごと</strong> = iş</span></div></div><div class="ex-card"><div class="ex-top"><div class="ex-num">3</div><div class="ex-text"><div class="ex-jp">かれは<span class="hl">どんな</span>ひとですか？</div><div class="ex-romaji">kare wa donna hito desu ka?</div><div class="ex-turkish">O nasıl bir insan?</div></div></div><div class="ex-bottom"><span class="vocab-chip"><strong>どんな</strong> = nasıl bir</span><span class="vocab-chip"><strong>ひと</strong> = insan</span></div></div><div class="ex-card"><div class="ex-top"><div class="ex-num">4</div><div class="ex-text"><div class="ex-jp"><span class="hl">どんな</span>ときでもあきらめないでください。</div><div class="ex-romaji">donna toki demo akiramenaide kudasai.</div><div class="ex-turkish">Ne zaman olursa olsun vazgeçmeyin.</div></div></div><div class="ex-bottom"><span class="vocab-chip"><strong>どんなときでも</strong> = her koşulda</span></div></div></div></div><div style="margin-bottom:1.25rem"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Dikkat Noktaları</div><div class="tip tip-info"><div class="tip-icon">💡</div><div class="tip-text">どんな+名詞: どんな<em>おんがく</em>がすきですか。= Nasıl bir müzik seversiniz?</div></div><div class="tip tip-warn"><div class="tip-icon">⚠️</div><div class="tip-text">どんな(özellik/tür) vs どの(belirli seçim): どんなひと(nasıl biri) / どのひと(oradaki kişi)</div></div></div></div></div>
+<div class="test-wrap">
+<div class="test-header"><div class="test-title">📝 Test — どんな</div>
+<div class="test-score" id="scoreDisplay">0 / 13</div></div>
+<div class="progress"><div class="progress-fill" id="prog"></div></div>
+<div class="test-body" id="tv"></div>
+<div class="test-body" id="rv" style="display:none"></div></div>
 </div>
-<script>
-var POOL=[
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「どんな」gramer yapısının Türkçe anlamı nedir?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…dir, …dır (temel yüklem)", "soru eki; veya", "ve, ile (sıralama — tam liste değil)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「どんな」gramer yapısının Türkçe anlamı nedir?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "muhtemelen; …olsa gerek; …değil mi?", "yön belirteci (-e doğru)", "de, da (hem de, ayrıca)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「どんな」gramer yapısının Türkçe anlamı nedir?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "değil mi? (ne) / biliyorsun (yo)", "eylem konumu, araç, sebep (-de, ile, yüzünden)", "ve, ile (sıralama — tam liste değil)"]},
-  {tp:"mean",lb:"Anlamı Nedir?",lc:"tlc",q:"「どんな」gramer yapısının Türkçe anlamı nedir?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "geniş zaman / olumsuz geniş", "ve; ile; …diye (alıntı bağlacı)", "…di / …değildi (geçmiş)"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「nasıl bir; ne tür」Japonca gramer karşılığı nedir?",ans:"どんな",opts:["どんな", "も", "〜ほうがいい", "〜に行く・に来る"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「nasıl bir; ne tür」Japonca gramer karşılığı nedir?",ans:"どんな",opts:["どんな", "〜ること", "〜ないといけない", "〜てもいい"]},
-  {tp:"form",lb:"Tanıma",lc:"tlm",q:"「nasıl bir; ne tür」Japonca gramer karşılığı nedir?",ans:"どんな",opts:["どんな", "ね・よ", "〜とき", "一度も〜ない"]},
-  {tp:"kip",lb:"Kategori",lc:"tlm",q:"「どんな」(donna) hangi gramer kategorisine girer?",ans:"Soru",opts:["Soru", "Partikül", "Fiil Çekimi", "Sıfat"]},
-  {tp:"apply",lb:"Kullanım",lc:"tlm",q:"「どんな」yapısı ne zaman kullanılır?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…den daha (karşılaştırma)", "yön, konum, zaman belirteci (-e, -de, zamanı)", "değil mi? (ne) / biliyorsun (yo)"]},
-  {tp:"check",lb:"Doğru mu?",lc:"tlr",q:"「どんな」(donna) — Bu yapı N5 seviyesinde öğrenilir mi?",ans:"Evet, temel N5 yapılarından.",opts:["Evet, temel N5 yapılarından.", "Hayır, N4 seviyesi.", "Hayır, N3.", "Hayır, N1."]},
-  {tp:"form",lb:"Romaji",lc:"tlm",q:"「どんな」yapısının Romaji (harf çevrimi) nedir?",ans:"donna",opts:["donna", "toki", "V-ru koto", "mo"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 1)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "soru eki; veya", "ve, ile (sıralama — tam liste değil)", "…dir, …dır (temel yüklem)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 2)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "soru eki; veya", "eylem konumu, araç, sebep (-de, ile, yüzünden)", "…değil (olumsuz geniş)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 3)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…dir, …dır (temel yüklem)", "geniş zaman / olumsuz geniş", "yön, konum, zaman belirteci (-e, -de, zamanı)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 4)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…den daha (karşılaştırma)", "yön belirteci (-e doğru)", "…dir, …dır (temel yüklem)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 5)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "ve, ile (sıralama — tam liste değil)", "özne belirteci; ama, fakat", "yön belirteci (-e doğru)"]},
-  {tp:"mean",lb:"Türkçe Anlam",lc:"tlc",q:"「どんな」yapısı Türkçede neye karşılık gelir? (örnek: 6)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "muhtemelen; …olsa gerek; …değil mi?", "özne belirteci; ama, fakat", "…dir, …dır (temel yüklem)"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「どんな」öğrenilmesi neden önemlidir?",ans:"N5 temel yapılarından; günlük Japonca için zorunlu",opts:["N5 temel yapılarından; günlük Japonca için zorunlu", "N1 ileri yapılarından; nadiren kullanılır", "Sadece yazılı Japonca'da gerekli", "Sadece resmi konuşmada kullanılır"]},
-  {tp:"apply",lb:"Uygulama",lc:"tlm",q:"「どんな」ile「だ・です」farkı?",ans:"どんな = nasıl bir; ne tür; farklı işlev",opts:["どんな = nasıl bir; ne tür; farklı işlev", "Tamamen aynı anlam", "Sadece yazım farkı var", "Biri resmi diğeri sade"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 1)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "iyelik; sıfat yapısı (…'nın)", "konu belirteci (topic marker)", "eylem konumu, araç, sebep (-de, ile, yüzünden)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 2)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "konu belirteci (topic marker)", "…değil (olumsuz geniş)", "değil mi? (ne) / biliyorsun (yo)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 3)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "özne belirteci; ama, fakat", "konu belirteci (topic marker)", "…değil (olumsuz geniş)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 4)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "ve; ile; …diye (alıntı bağlacı)", "ve, ile (sıralama — tam liste değil)", "…di / …değildi (geçmiş)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 5)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…den daha (karşılaştırma)", "özne belirteci; ama, fakat", "değil mi? (ne) / biliyorsun (yo)"]},
-  {tp:"trans",lb:"Anlam Testi",lc:"tlc",q:"「どんな」(donna) — Bu yapının Türkçe karşılığı: (test 6)",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "…den itibaren; çünkü, …dığı için", "…e kadar, …e dek", "…dir, …dır (temel yüklem)"]},
-  {tp:"mean",lb:"Özet",lc:"tlc",q:"N5-059: 「どんな」 = ?",ans:"nasıl bir; ne tür",opts:["nasıl bir; ne tür", "yön, konum, zaman belirteci (-e, -de, zamanı)", "…dir, …dır (temel yüklem)", "soru eki; veya"]}
+<script>var POOL=[
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ おんがくがすきですか？\n💡 おんがく=müzik\n🇹🇷 Nasıl bir müzik seversiniz?",ans:"どんな",opts:["どんな", "どの", "どれ", "なに"],exp:"どんな+名詞=nasıl bir"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれは ___ ひとですか？\n💡 ひと=insan\n🇹🇷 O nasıl bir insan?",ans:"どんな",opts:["どんな", "どの", "どれ", "なに"],exp:"どんなひと=nasıl biri"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ しごとをしたいですか？\n💡 しごと=iş\n🇹🇷 Ne tür bir iş yapmak istersiniz?",ans:"どんな",opts:["どんな", "どの", "どれ", "なに"],exp:"どんなしごと=ne tür iş"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ ときでも、あきらめないでください。\n💡 あきらめる=vazgeçmek\n🇹🇷 Ne zaman olursa olsun, vazgeçmeyin.",ans:"どんな",opts:["どんな", "どの", "どれ", "なに"],exp:"どんなときでも=her koşulda"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「どんなりょうりがとくいですか。」\n💡 りょうり=yemek | とくい=mahir",ans:"Ne tür yemek yapmasında mahirsiniz?",opts:["Ne tür yemek yapmasında mahirsiniz?", "Hangi restoran?", "Yemek nereye?", "Ne zaman yemek?"],exp:"どんな+りょうり=ne tür yemek"},
+{tp:"kip",lb:"どんな vs どの",lc:"lm",q:"\"Nasıl bir insan?\" — özellik sorusu",ans:"どんなひとですか",opts:["どんなひとですか", "どのひとですか", "なにひとですか", "どれひとですか"],exp:"どんな=özellik sorusu"},
+{tp:"kip",lb:"どんな vs どの",lc:"lm",q:"\"Hangi insan?\" — belirli kişi gösteriyorsun",ans:"どのひとですか",opts:["どのひとですか", "どんなひとですか", "なにひとですか", "どれひとですか"],exp:"どの=belirli seçim"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「どんな」何と一緒に使われますか？",ans:"名詞と一緒に",opts:["名詞と一緒に", "動詞と一緒に", "形容詞だけ", "一人で使う"],exp:"どんな+名詞"},
+{tp:"check",lb:"Doğru cümle hangisi?",lc:"lr",q:"\"Hangi kitap? (masadaki belirli kitap)\"\n💡 ほん=kitap",ans:"どのほんですか。",opts:["どのほんですか。", "どんなほんですか。", "どれほんですか。", "なにほんですか。"],exp:"どの=belirli seçim"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"Ne tür film seversiniz?\" demek istiyorsun.\n💡 えいが=film",ans:"どんなえいががすきですか？",opts:["どんなえいががすきですか？", "どのえいががすきですか？", "どれえいががすきですか？", "なにえいががすきですか？"],exp:"どんな+名詞=ne tür"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「どんなところにすみたいですか。」\n💡 ところ=yer | すむ=yaşamak",ans:"Nasıl bir yerde yaşamak istersiniz?",opts:["Nasıl bir yerde yaşamak istersiniz?", "Nerede yaşıyorsunuz?", "Nereye taşınıyorsunuz?", "Ne zaman taşınıyorsunuz?"],exp:"どんなところ=nasıl bir yer"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ てんきのひがすきですか？\n💡 てんき=hava\n🇹🇷 Nasıl hava günlerini seversiniz?",ans:"どんな",opts:["どんな", "どの", "どれ", "なに"],exp:"どんな+名詞"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"Ne tür bir insan olmak istersiniz?\"\n💡 ひと=insan | なる=olmak",ans:"どんなひとになりたいですか？",opts:["どんなひとになりたいですか？", "どのひとになりたいですか？", "どれひとになりたいですか？", "なにひとになりたいですか？"],exp:"どんなひとに+なりたい"}
 ];
-
-function toggleLesson(){
-  var b=document.getElementById('lbody');
-  var t=document.getElementById('ltoggle');
+function toggleCard(bodyId,toggleId){
+  var b=document.getElementById(bodyId),t=document.getElementById(toggleId);
   var open=b.style.display!=='none';
   b.style.display=open?'none':'block';
   t.textContent=open?'Göster ▼':'Gizle ▲';
 }
-function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
 var tqs=[],ti=0,sc=0,log=[];
-function initTest(){
-  tqs=shuffle(POOL).slice(0,30);
-  ti=0;sc=0;log=[];
-  renderQ();
-}
+function initTest(){tqs=shuffle(POOL).slice(0,30);ti=0;sc=0;log=[];renderQ()}
 function renderQ(){
   var q=tqs[ti],tot=tqs.length;
   document.getElementById('prog').style.width=(ti/tot*100)+'%';
   document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
-  var opts=shuffle(q.opts);
+  var opts=shuffle(q.opts);window._opts=opts;
   document.getElementById('tv').innerHTML=
-    '<div class="tqlabel '+q.lc+'">'+q.lb+'</div>'+
-    '<div class="tq" style="white-space:pre-line">'+q.q+'</div>'+
-    '<div class="topts">'+
-    opts.map(function(o,i){return '<button class="topt" onclick="doAns('+i+')">'+o+'</button>';}).join('')+
-    '</div>'+
-    '<div class="tfb" id="fb"></div>'+
-    '<button class="tnext" id="nq" onclick="nextQ()">'+
-    (ti===tot-1?'Sonuçları Gör →':'Sonraki →')+
-    '</button>';
-  window._opts=opts;
+    '<div class="q-label '+q.lc+'">'+q.lb+' ('+(ti+1)+'/'+tot+')</div>'+
+    '<div class="q-text">'+q.q+'</div>'+
+    '<div class="q-opts">'+
+    opts.map(function(o,i){return'<button class="q-opt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+
+    '</div><div class="q-feedback" id="qfb"></div>'+
+    '<button class="q-next" id="qnext" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
 }
 function doAns(i){
-  var q=tqs[ti],sel=window._opts[i],ok=sel===q.ans;
+  var q=tqs[ti],sel=window._opts[i],ok=sel.trim()===q.ans.trim();
   if(ok)sc++;
   log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});
-  document.querySelectorAll('.topt').forEach(function(b,j){
+  document.querySelectorAll('.q-opt').forEach(function(b,j){
     b.disabled=true;
     if(j===i)b.classList.add(ok?'ok':'ng');
-    if(window._opts[j]===q.ans&&!ok)b.classList.add('show');
+    if(window._opts[j].trim()===q.ans.trim()&&!ok)b.classList.add('show');
   });
-  var fb=document.getElementById('fb');
-  fb.className='tfb '+(ok?'ok':'ng');
-  fb.textContent=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
-  document.getElementById('nq').style.display='block';
+  var fb=document.getElementById('qfb');
+  fb.className='q-feedback '+(ok?'ok':'ng');
+  var msg=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
+  if(q.exp)msg+='\n📌 '+q.exp;
+  fb.textContent=msg;
+  document.getElementById('qnext').style.display='block';
 }
-function nextQ(){ti++;if(ti>=tqs.length){showR();return;}renderQ();}
+function nextQ(){ti++;if(ti>=tqs.length){showR();return}renderQ()}
 function showR(){
   var tot=tqs.length,pct=Math.round(sc/tot*100);
   var emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
   var lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
   document.getElementById('tv').style.display='none';
   document.getElementById('prog').style.width='100%';
-  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
   var typeMap={};
-  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++;});
-  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return '<div class="tsrow"><span class="tslb">'+lb+'</span><span class="tspct">'+v.ok+'/'+v.tot+'</span></div>';}).join('');
-  var rep=log.map(function(l,i){return '<div class="krow"><div class="knum">'+(i+1)+'</div><div class="kinfo"><div class="kqt">'+l.q+'</div>'+(l.ok?'<div class="kcorrect">✓ '+l.ans+'</div>':'<div class="kans">Verilen: <strong>'+l.sel+'</strong> → Doğru: <strong>'+l.ans+'</strong></div>')+'</div><span class="rs '+(l.ok?'rs-ok':'rs-bad')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
-  var rv=document.getElementById('rv');
-  rv.style.display='block';
-  rv.innerHTML='<div class="rwrap"><div class="remoji">'+emoji+'</div><div class="rscore">'+sc+' / '+tot+'</div><div class="rlabel">'+lbl+' · %'+pct+'</div><div class="rbdown"><div class="rbc"><div class="rbv rg">'+sc+'</div><div class="rbl">Doğru</div></div><div class="rbc"><div class="rbv rr">'+(tot-sc)+'</div><div class="rbl">Yanlış</div></div><div class="rbc"><div class="rbv rgr">'+tot+'</div><div class="rbl">Toplam</div></div></div><div class="slabel" style="text-align:left;margin-bottom:8px">Soru Tipi Bazında</div>'+tsum+'<button class="rbtn" onclick="restartTest()" style="margin-top:1.25rem">Tekrar Dene</button> <a href="../index.html" class="rbtn" style="display:inline-block;margin-top:8px;text-decoration:none">← Anasayfa</a></div><div class="krep"><div class="slabel" style="margin-bottom:12px">Soru Detayı</div>'+rep+'</div>';
+  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++});
+  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return'<div class="ts-row"><span class="ts-lbl">'+lb+'</span><span class="ts-val">'+v.ok+'/'+v.tot+'</span></div>'}).join('');
+  var rep=log.map(function(l,i){return'<div class="d-row"><div class="d-num">'+(i+1)+'</div><div class="d-content"><div class="d-q">'+l.q+'</div>'+(l.ok?'<div class="d-ans d-correct">✓ '+l.ans+'</div>':'<div class="d-ans d-wrong">✗ '+l.sel+' → '+l.ans+'</div>')+'</div><span class="d-badge '+(l.ok?'ok':'ng')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML='<div class="result-wrap"><div class="result-emoji">'+emoji+'</div><div class="result-score">'+sc+' / '+tot+'</div><div class="result-label">'+lbl+' · %'+pct+'</div><div class="result-stats"><div class="rs-box"><div class="rs-val rs-ok">'+sc+'</div><div class="rs-lbl">Doğru</div></div><div class="rs-box"><div class="rs-val rs-ng">'+(tot-sc)+'</div><div class="rs-lbl">Yanlış</div></div><div class="rs-box"><div class="rs-val rs-tot">'+tot+'</div><div class="rs-lbl">Toplam</div></div></div><div class="type-summary">'+tsum+'</div><div class="result-btns"><button class="r-btn" onclick="restartTest()">Tekrar Dene</button><a class="r-btn outline" href="../index.html">← Anasayfa</a></div></div><div class="detail-section"><div class="detail-title">Soru Detayı</div>'+rep+'</div>';
 }
 function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest();}
+(function(){var errs=[];POOL.forEach(function(q,i){if(q.opts.indexOf(q.ans)===-1)errs.push('Q#'+(i+1)+': '+q.ans.substring(0,30)+' opts içinde yok');});if(errs.length){console.error('POOL HATALARI:\n'+errs.join('\n'));var el=document.getElementById('tv');if(el)el.innerHTML='<div style="background:#fee;border:1px solid #c00;border-radius:8px;padding:1rem;font-size:13px;color:#800;white-space:pre-wrap">❌ '+errs.join('\n')+'</div>';}})();
 initTest();
 
-</script>
-</body>
-</html>
+</script></body></html>
