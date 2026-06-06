@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>N3 Büyük Sınav — 300 Soru | N3 Gramer</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg2:#f5f5f4;--bg3:#e8e8e7;
+  --text:#1a1a1a;--text2:#5a5a5a;--text3:#999;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);
+  --p50:#EEEDFE;--p100:#D5D2FA;--p200:#AFA9EC;
+  --p600:#534AB7;--p800:#3C3489;--p900:#26215C;
+  --t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;
+  --a50:#FFF3DC;--a400:#D4920A;--a600:#BA7517;--a800:#7A4A00;
+  --r50:#FEF0F0;--r400:#D94040;--r600:#A32D2D;
+  --g50:#F0F7FF;--g400:#2E7DB0;--g600:#1B5E8A;
+  --rm:10px;--rl:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1a;--bg2:#252523;--bg3:#2f2f2d;
+  --text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --p50:#1e1a48;--p100:#2a2466;--p200:#3C3489;
+  --p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;
+  --t50:#072e1e;--t400:#9FE1CB;--t600:#9FE1CB;--t800:#9FE1CB;
+  --a50:#2e1e00;--a400:#FAC775;--a600:#FAC775;--a800:#FAC775;
+  --r50:#2e0e0e;--r400:#F09595;--r600:#F09595;
+  --g50:#0d1f2e;--g400:#7ABEE0;--g600:#7ABEE0;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:1.5rem 1rem;color:var(--text);line-height:1.6}
+.app{width:100%;max-width:660px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+/* NAV */
+.top-nav{display:flex;align-items:center;gap:8px}
+.back-btn{font-size:13px;color:var(--text2);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.back-btn:hover{color:var(--text);background:var(--bg2)}
+.page-nav{display:flex;gap:8px;margin-left:auto}
+.nav-arrow{font-size:13px;color:var(--p600);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.nav-arrow:hover{background:var(--p50)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#26215C,#534AB7);border-radius:var(--rl);padding:2rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'は';position:absolute;font-family:'Noto Serif JP',serif;font-size:180px;font-weight:700;color:rgba(255,255,255,0.05);top:-20px;right:-10px;line-height:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
+.hero-jp{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem}
+.hero-romaji{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:.5rem}
+.hero-tr{font-size:20px;font-weight:600;color:#fff;margin-bottom:.25rem}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.6)}
+/* KART */
+.card{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:.875rem 1.25rem;background:var(--bg2);border-bottom:.5px solid var(--border);cursor:pointer;user-select:none}
+.card-header-title{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.card-toggle{font-size:12px;color:var(--text3)}
+.card-body{padding:1.25rem}
+/* AÇIKLAMA */
+.explain-text{font-size:14.5px;color:var(--text);line-height:1.75;margin-bottom:1rem}
+.explain-text strong{color:var(--p600)}
+.explain-text em{font-style:normal;color:var(--a600);font-weight:500}
+/* FORMULA */
+.formula-wrap{background:var(--p50);border:.5px solid var(--p100);border-radius:var(--rm);padding:1rem 1.25rem;margin-bottom:.875rem}
+.formula-row{display:flex;align-items:center;gap:8px;margin-bottom:.5rem;flex-wrap:wrap}
+.formula-row:last-child{margin-bottom:0}
+.f-box{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap}
+.f-topic{background:rgba(83,74,183,0.15);color:var(--p800);border:.5px solid var(--p200)}
+.f-verb{background:rgba(29,158,117,0.15);color:var(--t600);border:.5px solid var(--t400)}
+.f-particle{background:var(--p600);color:#fff;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;padding:4px 14px}
+.f-result{background:rgba(186,117,23,0.12);color:var(--a800);border:.5px solid var(--a400);font-size:12px;padding:4px 12px}
+.f-op{font-size:16px;color:var(--text3);font-weight:300}
+.formula-note{font-size:12px;color:var(--text2);margin-top:.5rem;padding-left:4px}
+/* ÖRNEKLER */
+.examples{display:flex;flex-direction:column;gap:.75rem}
+.ex-card{border-radius:var(--rm);overflow:hidden;border:.5px solid var(--border)}
+.ex-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--p600);color:#fff;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0}
+.ex-top{padding:.875rem 1rem .5rem;background:var(--bg);display:flex;gap:10px;align-items:flex-start}
+.ex-text{flex:1}
+.ex-jp{font-family:'Noto Serif JP',serif;font-size:17px;color:var(--text);margin-bottom:3px;line-height:1.5}
+.ex-jp .hl{color:var(--p600);font-weight:700;background:var(--p50);border-radius:3px;padding:0 2px}
+.ex-romaji{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:2px}
+.ex-turkish{font-size:14px;color:var(--text2)}
+.ex-bottom{padding:.5rem 1rem .75rem 1rem;background:var(--bg2);border-top:.5px solid var(--border);display:flex;flex-wrap:wrap;gap:6px}
+.vocab-chip{font-size:11.5px;background:var(--bg);border:.5px solid var(--border2);border-radius:20px;padding:2px 10px;color:var(--text2)}
+.vocab-chip strong{color:var(--text);font-weight:600}
+/* KARŞILAŞTIRMA */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.875rem}
+.compare-card{border-radius:var(--rm);padding:1rem;border:.5px solid var(--border)}
+.compare-card.c-a{background:var(--p50);border-color:var(--p200)}
+.compare-card.c-b{background:var(--t50);border-color:var(--t400)}
+.compare-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem}
+.compare-card.c-a .compare-label{color:var(--p800)}
+.compare-card.c-b .compare-label{color:var(--t800)}
+.compare-jp{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;margin-bottom:.25rem}
+.compare-card.c-a .compare-jp{color:var(--p900)}
+.compare-card.c-b .compare-jp{color:var(--t800)}
+.compare-desc{font-size:12px;color:var(--text2);line-height:1.5}
+/* İPUÇLARI */
+.tip{border-radius:var(--rm);padding:.875rem 1rem;font-size:13.5px;line-height:1.65;margin-bottom:.625rem;display:flex;gap:10px}
+.tip:last-child{margin-bottom:0}
+.tip-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.tip-text{flex:1}
+.tip.tip-info{background:var(--a50);border:.5px solid var(--a400);color:var(--a800)}
+.tip.tip-warn{background:var(--r50);border:.5px solid var(--r400);color:var(--r600)}
+.tip.tip-note{background:var(--g50);border:.5px solid var(--g400);color:var(--g600)}
+/* TEST */
+.test-wrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.test-header{background:var(--a50);border-bottom:.5px solid var(--a400);padding:.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.test-title{font-size:14px;font-weight:600;color:var(--a800);display:flex;align-items:center;gap:8px}
+.test-score{font-size:13px;font-weight:500;color:var(--a600)}
+.progress{height:3px;background:var(--bg2)}
+.progress-fill{height:100%;background:var(--a600);transition:width .35s;width:0}
+.test-body{padding:1.25rem}
+.q-label{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;margin-bottom:.875rem}
+.q-label.lm{background:var(--t50);color:var(--t800)}
+.q-label.lc{background:var(--p50);color:var(--p800)}
+.q-label.lr{background:var(--a50);color:var(--a800)}
+.q-text{font-size:15px;color:var(--text);line-height:1.65;white-space:pre-line}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:1rem}
+.q-opt{background:var(--bg2);border:.5px solid var(--border2);border-radius:var(--rm);padding:11px 14px;font-size:13.5px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:all .15s;line-height:1.4;width:100%}
+.q-opt:hover:not(:disabled){background:var(--p50);border-color:var(--p200)}
+.q-opt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500}
+.q-opt.ng{background:var(--r50);border-color:var(--r400);color:var(--r600)}
+.q-opt.show{background:var(--t50);border-color:var(--t400);color:var(--t800)}
+.q-feedback{margin-top:.875rem;padding:.75rem 1rem;border-radius:var(--rm);font-size:13.5px;line-height:1.5;display:none}
+.q-feedback.ok{display:block;background:var(--t50);color:var(--t800);border:.5px solid var(--t400)}
+.q-feedback.ng{display:block;background:var(--r50);color:var(--r600);border:.5px solid var(--r400)}
+.q-next{margin-top:1rem;width:100%;padding:11px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none}
+.q-next:hover{background:var(--p800)}
+/* SONUÇ */
+.result-wrap{padding:2rem 1.25rem;text-align:center}
+.result-emoji{font-size:54px;margin-bottom:1rem}
+.result-score{font-size:40px;font-weight:500;color:var(--p800);margin-bottom:.25rem}
+.result-label{font-size:15px;color:var(--text2);margin-bottom:1.5rem}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}
+.rs-box{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center}
+.rs-val{font-size:24px;font-weight:500}
+.rs-lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.rs-ok{color:var(--t600)}.rs-ng{color:var(--r600)}.rs-tot{color:var(--text3)}
+.type-summary{text-align:left;margin-bottom:1.25rem}
+.ts-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12.5px;margin-bottom:4px}
+.ts-lbl{color:var(--text2)}.ts-val{font-weight:600}
+.result-btns{display:flex;gap:8px;justify-content:center;margin-top:1.25rem}
+.r-btn{padding:10px 24px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit;text-decoration:none}
+.r-btn:hover{background:var(--p800)}
+.r-btn.outline{background:var(--bg);border:.5px solid var(--border2);color:var(--text)}
+.r-btn.outline:hover{background:var(--bg2)}
+.detail-section{text-align:left;border-top:.5px solid var(--border);padding-top:1.25rem;margin-top:1.25rem}
+.detail-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.875rem}
+.d-row{display:flex;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);align-items:flex-start}
+.d-row:last-child{border-bottom:none}
+.d-num{min-width:22px;font-size:11px;color:var(--text3);padding-top:2px}
+.d-content{flex:1}
+.d-q{font-size:12.5px;color:var(--text);white-space:pre-line;margin-bottom:2px}
+.d-ans{font-size:12px}
+.d-correct{color:var(--t600)}
+.d-wrong{color:var(--r600)}
+.d-badge{font-size:10.5px;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.d-badge.ok{background:var(--t50);color:var(--t800)}
+.d-badge.ng{background:var(--r50);color:var(--r600)}
+</style></head>
+<body><div class="app">
+<div class="top-nav">
+  <a class="back-btn" href="../index.html?tab=grammar">← Ana Sayfa</a>
+</div>
+<div class="hero" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+  <div class="hero-badge">N3 · Büyük Sınav · 300 Soru</div>
+  <div class="hero-jp">N3文法大試験</div>
+  <div class="hero-romaji">N3 Bunpō Dai-Shiken</div>
+  <div class="hero-tr">N3 Gramer Büyük Sınavı</div>
+  <div class="hero-sub">163 dersten seçilmiş 300 soru — tam N3 kapsamı</div>
+</div>
+<div class="test-wrap">
+  <div class="test-header">
+    <div class="test-title">📝 N3 Büyük Sınav</div>
+    <div class="test-score" id="scoreDisplay">0 / 300</div>
+  </div>
+  <div class="progress"><div class="progress-fill" id="prog"></div></div>
+  <div class="test-body" id="tv"></div>
+  <div class="test-body" id="rv" style="display:none"></div>
+</div>
+</div>
+<script>var POOL=[
+{tp:"kip",lb:"良いことだけ？",lc:"lm",q:"「しかも」は良いことだけに使う？",ans:"いいえ、悪いことにも使える",opts:["いいえ、悪いことにも使える", "はい、良いことのみ", "はい、どちらでも", "文脈による"],exp:"しかも=良いことにも悪いことにも"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"___ そうとはいえない。ばあいによる。\n💡 必ずしも+とは言えない\n🇹🇷 Mutlaka öyle değil. Duruma göre değişir.",ans:"かならずしも",opts:["かならずしも", "もちろん", "かならず", "ぜったい"],exp:"必ずしも"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「このようなしだいで、ごきょうりょくをおねがいします。」",ans:"Bu gerekçeyle, işbirliğinizi rica ediyorum.",opts:["Bu gerekçeyle, işbirliğinizi rica ediyorum.", "協力しない。", "説明はない。", "なぜ?"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"いろいろなものをしゅみにしている。___ きって、えいが、りょこうなど。\n💡 趣味の例示\n🇹🇷 Çeşitli hobilerim var. Örneğin pul toplamak, film, seyahat vb.",ans:"例えば",opts:["例えば", "つまり", "なぜなら", "ところで"],exp:"例えば+など"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"どんなにつらかろう ___ さいごまでやりとげる。\n💡 形容詞意志形+とも\n🇹🇷 Ne kadar zor olursa olsun sonuna kadar başaracağım.",ans:"とも",opts:["とも", "ても", "のに", "くせに"],exp:"ようとも"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"こども ___ はつそうでほほえましい。\n🇹🇷 Çocuğa özgü fikir söyledi, sevimli.",ans:"らしい",opts:["らしい", "っぽい", "みたいな", "ような"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれには頑固な ___ 。でもやさしい。\n🇹🇷 Onun inatçı bir yanı var. Ama nazik.",ans:"ところがある",opts:["ところがある", "ことがある", "ものがある", "わけがある"],exp:""},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「かれのせいこうはうんにすぎない。」\n💡 うん=şans",ans:"Onun başarısı sadece şanstan ibaret.",opts:["Onun başarısı sadece şanstan ibaret.", "彼は努力した。", "運がない。", "なぜ?"],exp:"にすぎない=過小化"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「かれがどりょくかであることはいうまでもない。」",ans:"Söylemeye gerek yok, o çalışkan.",opts:["Söylemeye gerek yok, o çalışkan.", "かれは努力しない。", "不明。", "なぜ?"],exp:"いうまでもない=自明"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「とかいう」のニュアンスは？",ans:"不確かな情報・あいまいな引用",opts:["不確かな情報・あいまいな引用", "確かな情報", "定義", "強い確信"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ここでは禁煙する ___ います。\n💡 組織のルール\n🇹🇷 Burada sigara içilmemesi kararlaştırılmış.",ans:"ことになって",opts:["ことになって", "ことにして", "ことがあって", "ことで"],exp:"ことになっている"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ きのうのかいぎはどうでしたか。\n💡 話題転換\n🇹🇷 Bu arada, dünkü toplantı nasıldı?",ans:"ところで",opts:["ところで", "ところが", "それでも", "しかし"],exp:"ところで=話題転換"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"この料理は作りやすい.\"\n💡 つくる=yapmak",ans:"このりょうりはつくりやすい。",opts:["このりょうりはつくりやすい。", "このりょうりはつくりにくい。", "このりょうりはつくりがちだ。", "このりょうりはつくりすぎる。"],exp:"やすい"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"そんなことを ___ やるひつようがあるか？\n🇹🇷 O kadar gidip yapma gerekli mi?",ans:"までして",opts:["までして", "にして", "として", "からして"],exp:""},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「〜してもどうにもならない・意味がない」はどちら？",ans:"たところで",opts:["たところで", "たところ(just)", "どちらも同じ", "文脈による"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"たすける ___ じゃまをした。\n💡 期待と逆\n🇹🇷 Yardım bir yana, engel oldu.",ans:"どころか",opts:["どころか", "ばかりか", "のみならず", "どころでは"],exp:"どころか=逆転"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"やり直せるものなら、やり直したい.\"\n💡 やりなおす=yeniden yapmak",ans:"やりなおせるものなら、やりなおしたい。",opts:["やりなおせるものなら、やりなおしたい。", "やりなおすなら、やりなおしたい。", "やりなおせるとしても、やりなおしたい。", "やりなおせるならば、やりなおしたい。"],exp:"ものなら=実現困難な仮定"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"そのくにはとし ___ あつい。\n💡 ②一年中暑い\n🇹🇷 O ülke yıl boyunca sıcak.",ans:"をとおして",opts:["をとおして", "をめぐって", "をもとに", "をちゅうしんに"],exp:"を通して②"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれがこれほどどりょくしているのに、じぶんがあきらめる ___ にはいかない。\n💡 他者の努力を見て\n🇹🇷 O bu kadar çabalarken kendim vazgeçemem.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"わけにはいかない"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"むずかしいじょうきょう ___ かれはせいこうした。\n💡 困難な状況+にもかかわらず\n🇹🇷 Zor koşullara rağmen o başardı.",ans:"にもかかわらず",opts:["にもかかわらず", "のに", "ものの", "くせに"],exp:"にもかかわらず"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"みる ___ にわのさくらをながめていた。\n🇹🇷 Farkında olmadan kirazı seyrediyordu.",ans:"ともなく",opts:["ともなく", "かのように", "ながら", "ふりをして"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ たべられない。もういっぱいだ。\n🇹🇷 Bundan fazlasını yiyemem. Çoktan dolu.",ans:"これいじょう",opts:["これいじょう", "これいか", "それいじょう", "それいか"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"あたらしいくすりはきくとおもった。___ ぜんぜんきかなかった。\n💡 薬が効くと期待→逆\n🇹🇷 Yeni ilaç etki eder sandım. Oysa ki hiç etki etmedi.",ans:"ところが",opts:["ところが", "ところで", "それでも", "だから"],exp:"ところが=期待裏切り"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"こんなにすばらしいりょうりをつくれるひとは、しゅくじんりょうりにん ___ 。\n💡 料理の腕→料理人\n🇹🇷 Bu kadar harika yemek yapan kesinlikle aşçıdır.",ans:"にきまっている",opts:["にきまっている", "にちがいない", "はずだ", "かもしれない"],exp:"に決まっている"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"彼女は幸せそうに見えます.\"\n💡 しあわせ=mutlu",ans:"かのじょはしあわせそうにみえます。",opts:["かのじょはしあわせそうにみえます。", "かのじょはしあわせそうです。", "かのじょはしあわせなようです。", "かのじょはしあわせにみえます。"],exp:"ように見える"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"できないくせに、やると言う.\"\n💡 やるという=yapacağını söylemek",ans:"できないくせに、やるという。",opts:["できないくせに、やるという。", "できないのに、やるという。", "できないものの、やるという。", "できないけれど、やるという。"],exp:"くせに=批判"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「てならない」はどんな感情を示す？",ans:"自然に湧き上がる感情",opts:["自然に湧き上がる感情", "意図的な行動", "物理的状態", "論理的判断"],exp:"てならない=自然な感情"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"しけんちゅうにカンニングをする ___ にはいかない。\n💡 試験中のカンニング不可\n🇹🇷 Sınav sırasında kopya çekemem.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"わけにはいかない"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「次第に」の意味は？",ans:"少しずつ・徐々に変化",opts:["少しずつ・徐々に変化", "急速に変化", "完全に変化", "変化しない"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"いじょうが、じじょうをごせつめいした ___ です。\n🇹🇷 Aşağıda durumu açıkladım, işte bu.",ans:"しだい",opts:["しだい", "わけ", "こと", "はず"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"そのはなしをきいて、かれは ___ げんきになった。\n💡 ますます元気に\n🇹🇷 O haberi duyunca giderek daha enerjik oldu.",ans:"ますます",opts:["ますます", "どんどん", "だんだん", "すっかり"],exp:"ますます"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"子供たちは楽しげに走っていた.\"\n💡 たのしげ=eğlenceli görünüşlü",ans:"こどもたちはたのしげにはしっていた。",opts:["こどもたちはたのしげにはしっていた。", "こどもたちはたのしそうにはしっていた。", "こどもたちはたのしいようにはしっていた。", "こどもたちはたのしくはしっていた。"],exp:"げ"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"大雨のために、試合が中止になった.\"\n💡 おおあめ=yoğun yağmur | しあい=maç",ans:"おおあめのために、しあいがちゅうしになった。",opts:["おおあめのために、しあいがちゅうしになった。", "おおあめのせいで、しあいがちゅうしになった。", "おおあめのおかげで、しあいがちゅうしになった。", "おおあめから、しあいがちゅうしになった。"],exp:"ために=格式原因"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ いそいでいるの？\n🇹🇷 O kadar mı acele ediyorsun?",ans:"そんなに",opts:["そんなに", "どんなに", "こんなに", "あんなに"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「のみならず」は「のみ」の意味から来る。「のみ」とは？",ans:"だけ(yalnızca)の文語形",opts:["だけ(yalnızca)の文語形", "ばかり", "まだ", "しか"],exp:"のみ=だけ文語"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このほんはれきし ___ ものです。\n💡 歴史に関するもの\n🇹🇷 Bu kitap tarih ile ilgili.",ans:"にかんする",opts:["にかんする", "にかんして", "について", "にとって"],exp:"に関する"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはしんせつだ。___ ユーモアもある。\n💡 性格の長所追加\n🇹🇷 O nazik. Ayrıca espri anlayışı da var.",ans:"それに",opts:["それに", "それでも", "ところが", "ところで"],exp:"それに"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"プロ ___ しっぱいはゆるされない。\n🇹🇷 Profesyonel olduğu için özellikle hata affedilmez.",ans:"だけに",opts:["だけに", "だけあって", "だけど", "だけは"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"なるべく早く連絡してください.\"\n💡 れんらく=iletişim",ans:"なるべくはやくれんらくしてください。",opts:["なるべくはやくれんらくしてください。", "できるだけはやくれんらくしてください。", "いつもはやくれんらくしてください。", "ぜったいにはやくれんらくしてください。"],exp:"なるべく"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"もうおわったことをくやんで ___ 。\n🇹🇷 Geçmiş olanı pişman olsan da anlamsız.",ans:"もはじまらない",opts:["もはじまらない", "もしかたない", "もならない", "もたまらない"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"なき ___ わらい ___ たのしいコメディだった。\n💡 感情の混在\n🇹🇷 Ağlama ve kahkaha gibi şeyler, eğlenceli komedi.",ans:"やら〜やら",opts:["やら〜やら", "とか〜とか", "か〜か", "と〜と"],exp:"やら〜やら"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはどんなにつらくても、わらって ___ 。\n💡 笑ってみせる=gülererek göstermek\n🇹🇷 O ne kadar zor olsa da gülerek gösteriyor.",ans:"みせる",opts:["みせる", "みる", "みた", "みれる"],exp:"てみせる①"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"いろいろじじょうがあって、___ きょうはここまでにします。\n💡 前述→結論\n🇹🇷 Çeşitli durumlar oldu, bu yüzden bugün burada.",ans:"というわけで",opts:["というわけで", "というのに", "というから", "というのは"],exp:"というわけで"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「にすぎない」のニュアンスは？",ans:"それ以上でもない・過大評価訂正",opts:["それ以上でもない・過大評価訂正", "完全否定", "強調", "仮定"],exp:"にすぎない=過小化"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「かと思ったら」はどんな状況で使う？",ans:"予想外の素早い転換",opts:["予想外の素早い転換", "ゆっくりな変化", "期待通りの結果", "逆接なし"],exp:"かと思ったら=驚き転換"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"できることはできるが、時間がかかる. 🇹🇷 Türkçeyi Çevir",ans:"できることはできるが、じかんがかかる。",opts:["できることはできるが、じかんがかかる。", "できるが、じかんがかかる。", "できることはわかるが、じかんがかかる。", "できることはできたが、じかんがかかる。"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"さいきんさびしくて ___ 。\n💡 寂しさ+てたまらない\n🇹🇷 Son zamanlarda dayanılmaz derecede yalnız hissediyorum.",ans:"たまらない",opts:["たまらない", "しかたない", "ならない", "いられない"],exp:"てたまらない"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"そのまま続けてください. 🇹🇷 Türkçeyi Çevir",ans:"そのままつづけてください。",opts:["そのままつづけてください。", "このままつづけてください。", "あのままつづけてください。", "ずっとつづけてください。"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「何しろ」はどんな機能？",ans:"理由・根拠を強調する副詞",opts:["理由・根拠を強調する副詞", "逆接", "結論", "条件"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"いう ___ なく、けんこうはたいせつだ。\n💡 言うまでもなく\n🇹🇷 Söylemeye gerek bile yok, sağlık önemlidir.",ans:"までも",opts:["までも", "わけが", "しか", "ほか"],exp:"までもなく"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"値段はともかく、品質は素晴らしい. 🇹🇷 Türkçeyi Çevir",ans:"ねだんはともかく、ひんしつはすばらしい。",opts:["ねだんはともかく、ひんしつはすばらしい。", "ねだんはさておき、ひんしつはすばらしい。", "ねだんはもとより、ひんしつはすばらしい。", "ねだんはともかくとして、ひんしつはすばらしい。"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはおとな ___ こどもみたいなことをいう。\n💡 名詞+の+くせに\n🇹🇷 O yetişkin olduğu halde çocukça şeyler söylüyor.",ans:"のくせに",opts:["のくせに", "なのに", "のに", "ながら"],exp:"名詞+の+くせに"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれ ___ むずかしいとおもっているはずだ。\n💡 彼でさえ\n🇹🇷 O bile zor diye düşünüyor olmalı.",ans:"だって",opts:["だって", "さえ", "でも", "しか"],exp:"だって①"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"チームでプロジェクトをやり ___ た。\n💡 やり上げる=完成する\n🇹🇷 Ekip olarak projeyi tamamladı.",ans:"あげ",opts:["あげ", "あが", "きっ", "きれ"],exp:"やりあげる"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"お世話になったのだから、お礼を言わないわけにはいかない.\"\n💡 おれい=teşekkür",ans:"おせわになったのだから、おれいをいわないわけにはいかない。",opts:["おせわになったのだから、おれいをいわないわけにはいかない。", "おせわになったのだから、おれいをいうわけにはいかない。", "おせわになったのだから、おれいをいわないしかない。", "おせわになったのだから、おれいをいわないほかない。"],exp:"ないわけにはいかない"},
+{tp:"kip",lb:"ところで vs ところが",lc:"lm",q:"話題を転換する(konu değiştirme) のはどちら？",ans:"ところで",opts:["ところで", "ところが", "それでも", "しかし"],exp:"ところで=話題転換 | ところが=逆接"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"そのほんはむずかしそうに ___ 。\n💡 外見で難しそう\n🇹🇷 O kitap zor görünüyor.",ans:"みえる",opts:["みえる", "みる", "みた", "みます"],exp:"ように見える"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「どころか」のニュアンスは？",ans:"期待と正反対・逆転",opts:["期待と正反対・逆転", "追加情報", "強調", "話題転換"],exp:"どころか=逆転"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"わたし ___ がんばってみる。\n💡 私でさえ\n🇹🇷 Ben bile denerim.",ans:"だって",opts:["だって", "さえ", "でも", "しか"],exp:"だって①"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「を通して」の2用法は？",ans:"①手段(aracılığıyla) ②期間全体(boyunca)",opts:["①手段(aracılığıyla) ②期間全体(boyunca)", "①手段 ②原因", "①逆接 ②条件", "同じ意味"],exp:"を通して2用法"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"むずかしかった ___ できませんでした。すみません。\n💡 難しかった言い訳\n🇹🇷 Zor olduğundan yapamadım. Özür.",ans:"ものだから",opts:["ものだから", "から", "ので", "ために"],exp:"ものだから"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"なやんだ ___ きもちがかわるわけではない。\n🇹🇷 Üzülse de his değişmez.",ans:"ところで",opts:["ところで", "からで", "のでで", "ためで"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"これ ___ ほんものだ。\n🇹🇷 İşte bu gerçeği.",ans:"こそ",opts:["こそ", "さえ", "でも", "だけ"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このできごとはけいしょう ___ わすれてはならない。\n💡 教訓として\n🇹🇷 Bu olay ders olarak unutulmamalı.",ans:"として",opts:["として", "にとって", "においては", "によって"],exp:"として"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"あんなことをいわなけれ ___ よかった。\n💡 言ったことへの後悔\n🇹🇷 Öyle bir şey söylemeyeseydim keşke.",ans:"ば",opts:["ば", "たら", "て", "で"],exp:"なければよかった"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このかんかくはふつうではない ___ 。\n💡 一般的見解\n🇹🇷 Bu his normal olmadığı kabul ediliyor.",ans:"とされている",opts:["とされている", "といわれている", "ときいている", "となっている"],exp:"とされている"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"りょうどもんだい ___ にこくはたいりつしている。\n💡 領土が対立の中心\n🇹🇷 Toprak sorunu etrafında iki ülke karşı karşıya.",ans:"をめぐって",opts:["をめぐって", "をとおして", "をもとに", "をちゅうしんに"],exp:"をめぐって"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「よむともなくしんぶんをよんでいた。」",ans:"Farkında olmadan okuyordu.",opts:["Farkında olmadan okuyordu.", "ちゃんと読んだ。", "読まなかった。", "なぜ?"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「に基づいて」は何を根拠にする？",ans:"法律・データ・事実など客観的根拠",opts:["法律・データ・事実など客観的根拠", "感情", "主観", "推測"],exp:"に基づいて=客観的根拠"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはにほんごがうまい。___ えいごもはなせる。\n💡 さらなる長所\n🇹🇷 Japoncası iyi. Dahası İngilizce de konuşabiliyor.",ans:"その上",opts:["その上", "それでも", "ところが", "ところで"],exp:"その上"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ねん ___ このプロジェクトをかんせいさせる。\n💡 今年内に完成\n🇹🇷 Bu yıl içinde bu projeyi tamamlayacağız.",ans:"のうちに",opts:["のうちに", "のあいだに", "のたびに", "のまえに"],exp:"名詞+のうちに"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「しか」の後には何が来る？",ans:"必ず否定形の動詞",opts:["必ず否定形の動詞", "肯定形の動詞", "形容詞", "名詞"],exp:"しか+否定形"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはすぽーつ ___ べんきょうもとくいだ。\n💡 ばかりでなく〜も\n🇹🇷 O sadece sporla değil, çalışmada da iyi.",ans:"ばかりでなく",opts:["ばかりでなく", "ばかりに", "ばかりで", "だけに"],exp:"ばかりでなく〜も"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれにきく ___ こたえがもらえなかった。\n💡 聞いた+ものの+無回答\n🇹🇷 Sordum olmakla birlikte cevap alamadım.",ans:"ものの",opts:["ものの", "のに", "くせに", "けれど"],exp:"たものの"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「というより」はどんな機能？",ans:"前の表現を引用して訂正",opts:["前の表現を引用して訂正", "逆接", "話題転換", "原因"],exp:"というより=引用・訂正"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"べんり ___ つかいすぎはよくない。\n💡 便利+とはいえ\n🇹🇷 Pratik de denilse aşırı kullanmak iyi değil.",ans:"とはいえ",opts:["とはいえ", "のに", "ものの", "くせに"],exp:"とはいえ"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「というのも」はどんな機能？",ans:"前の文の理由を後から付け加える",opts:["前の文の理由を後から付け加える", "話題転換", "逆接", "条件"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはなにかいや ___ なかおをしていた。\n💡 いや+げな\n🇹🇷 O bir şey istemiyor gibi yüz yapıyordu.",ans:"げ",opts:["げ", "そう", "よう", "らし"],exp:"げ"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「あのひとはあいさつ ___ しない。」\n💡 挨拶+さえしない",ans:"O kişi selam bile vermiyor.",opts:["O kişi selam bile vermiyor.", "いつもあいさつする。", "あいさつする。", "なぜ?"],exp:"さえ①=bile"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"もし行ったとしても、会えなかっただろう.\"\n💡 あえなかった=görüşemezdik",ans:"もしいったとしても、あえなかっただろう。",opts:["もしいったとしても、あえなかっただろう。", "もしいくとしても、あえなかっただろう。", "もしいったのに、あえなかっただろう。", "もしいったくせに、あえなかっただろう。"],exp:"たとしても=過去仮定"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「何よりだ」はどういう意味？",ans:"最も良い・それが一番",opts:["最も良い・それが一番", "仕方ない", "驚き", "条件"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「といえば」の主な機能は？",ans:"連想・話題導入",opts:["連想・話題導入", "定義", "否定", "仮定"],exp:"といえば=連想"},
+{tp:"kip",lb:"ものの vs のに",lc:"lm",q:"より書き言葉的・フォーマルな逆接はどちら？",ans:"ものの",opts:["ものの", "のに", "けど", "くせに"],exp:"ものの=書き言葉"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"それにしても、なぜ連絡しないのだろう. 🇹🇷 Türkçeyi Çevir",ans:"それにしても、なぜれんらくしないのだろう。",opts:["それにしても、なぜれんらくしないのだろう。", "それとしても、なぜれんらくしないのだろう。", "それものの、なぜれんらくしないのだろう。", "それにもかかわらず、なぜれんらくしないのだろう。"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"友情とは何か、ずっと考えてきた.\"\n💡 ゆうじょう=dostluk",ans:"ゆうじょうとはなにか、ずっとかんがえてきた。",opts:["ゆうじょうとはなにか、ずっとかんがえてきた。", "ゆうじょうというのはなにか、ずっとかんがえてきた。", "ゆうじょうということはなにか、ずっとかんがえてきた。", "ゆうじょうはなにか、ずっとかんがえてきた。"],exp:"とは=定義的問い"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"よい ___ わるい ___ けっかをうけいれる。\n💡 どちらの結果でも\n🇹🇷 İyi de kötü de sonucu kabul edeceğim.",ans:"にしても〜にしても",opts:["にしても〜にしても", "としても〜としても", "ても〜ても", "のに〜のに"],exp:"にしても〜にしても"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"___ いそがしくて、ねむれなかった。\n💡 あまりにも+程度\n🇹🇷 Aşırı yoğunluktan uyuyamadı.",ans:"あまりにも",opts:["あまりにも", "いくらにも", "たとえにも", "どんなにも"],exp:"あまりにも"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「に決まっている」のニュアンスは？",ans:"当然・明らか・感情的確信",opts:["当然・明らか・感情的確信", "証拠からの論理的推測", "弱い可能性", "反問"],exp:"に決まっている=感情的・当然"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはほんとうにおとこ ___ ひとだ。\n🇹🇷 Gerçekten erkek gibi özgü bir kişi.",ans:"らしい",opts:["らしい", "っぽい", "みたいな", "ような"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ねても ___ つかれがとれない。\n💡 寝ても繰り返し\n🇹🇷 Ne kadar uyusam da yorgunluk gitmiyor.",ans:"ねても",opts:["ねても", "たべても", "やっても", "みても"],exp:"ても〜ても"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ちょうどいまごはんをたべようとしている ___ です。\n💡 するところ変形\n🇹🇷 Tam yemek yemek üzereyim.",ans:"ところ",opts:["ところ", "こと", "もの", "わけ"],exp:"しようとしているところ"},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「Aを手がかりにB」と「AをもとにB」の違いは？",ans:"手がかりに: 糸口 / をもとに: 素材",opts:["手がかりに: 糸口 / をもとに: 素材", "同じ意味", "どちらでも", "文脈による"],exp:""},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「みなさんがけんこうでいられますように。」\n💡 いられる=olabilmek",ans:"Herkesin sağlıklı olabilmesini dilerim.",opts:["Herkesin sağlıklı olabilmesini dilerim.", "健康でいる。", "病気になる。", "なぜ?"],exp:"ように③祈願"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このかわはごみ ___ になっている。\n💡 川がゴミだらけ\n🇹🇷 Bu nehir çöple kaplı.",ans:"だらけ",opts:["だらけ", "でいっぱい", "まみれ", "ずくめ"],exp:"だらけ"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"あんなにやすい ___ しんじられない。\n🇹🇷 O kadar ucuz olduğunu inanılmaz.",ans:"なんて",opts:["なんて", "なんか", "など", "とは"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かぜをひいていて、べんきょうする ___ 。\n🇹🇷 Çalışacak hal değil.",ans:"どころではない",opts:["どころではない", "どころか", "どころで", "どころ"],exp:""},
+{tp:"kip",lb:"にもかかわらず vs のに",lc:"lm",q:"より書き言葉的・フォーマルな逆接は？",ans:"にもかかわらず",opts:["にもかかわらず", "のに", "ものの", "くせに"],exp:"にもかかわらず=格式"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"けんこう ___ じょうほうをあつめた。\n💡 健康に関する情報\n🇹🇷 Sağlık ile ilgili bilgi topladım.",ans:"にかんする",opts:["にかんする", "にかんして", "について", "にとって"],exp:"に関する"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"さいきん ___ いそがしい。\n💡 ますます忙しい\n🇹🇷 Son zamanlarda giderek daha yoğun.",ans:"ますます",opts:["ますます", "どんどん", "だんだん", "すっかり"],exp:"ますます"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれの ___ かいぎにさんかした。\n💡 ①代替\n🇹🇷 Onun yerine toplantıya katıldım.",ans:"かわりに",opts:["かわりに", "ために", "かわりで", "かわって"],exp:"代わりに①"},
+{tp:"mean",lb:"Ne demek?",lc:"lc",q:"「これいじょうないしあわせ。」",ans:"Bu kadar daha mutlu olamazdım.",opts:["Bu kadar daha mutlu olamazdım.", "不幸だ。", "普通の幸せ。", "なぜ?"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"はる ___ さくらだ。さくら ___ にほんだ。\n💡 連想の連鎖\n🇹🇷 İlkbahar denince kiraz, kiraz denince Japonya.",ans:"といえば〜といえば",opts:["といえば〜といえば", "というと〜というと", "とは〜とは", "ということ〜ということ"],exp:"といえば連想"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このけんきゅう ___ あたらしいはっけんがあった。\n💡 研究の場で\n🇹🇷 Bu araştırmada yeni keşif oldu.",ans:"において",opts:["において", "について", "にとって", "によって"],exp:"において"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"このゲームはこども ___ につくられた。\n🇹🇷 Bu oyun çocuklara yönelik.",ans:"むけ",opts:["むけ", "むき", "にむけ", "にたいし"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このみせはやすい。___ まずくない。\n💡 良い点を追加\n🇹🇷 Bu dükkan ucuz. Bunun yanında kötü de değil.",ans:"それに",opts:["それに", "それでも", "ところが", "ところで"],exp:"それに"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"うそ ___ かれをかばった。\n🇹🇷 Yalan söylemeye kadar gidip onu korudu.",ans:"までして",opts:["までして", "にして", "として", "からして"],exp:""},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「なんどもたとうとしたが、たてなかった。」\n💡 たつ=kalkmak | なんども=defalarca",ans:"Defalarca kalkmaya çalıştı ama kalkamadı.",opts:["Defalarca kalkmaya çalıştı ama kalkamadı.", "すぐ立った。", "立とうとしない。", "なぜ?"],exp:"ようとした=試みたが失敗"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"やさい ___ くだもの ___ をかった。\n💡 食材の列挙\n🇹🇷 Sebze ve meyve gibi şeyler aldım.",ans:"とか〜とか",opts:["とか〜とか", "や〜など", "と〜と", "か〜か"],exp:"とか〜とか"},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「強い意志・どうあっても」はどちら？",ans:"どうしても",opts:["どうしても", "なんとなく", "いつでも", "ぜひ"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"勉強しないと成績が下がるのは当たり前だ.\"\n💡 せいせき=not | さがる=düşmek",ans:"べんきょうしないとせいせきがさがるのはあたりまえだ。",opts:["べんきょうしないとせいせきがさがるのはあたりまえだ。", "べんきょうしないとせいせきがさがるのはわけだ。", "べんきょうしないとせいせきがさがるのはものだ。", "べんきょうしないとせいせきがさがるのはいうまでもない。"],exp:"当たり前だ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはにほんごをはなそう ___ しているが、むずかしそうだ。\n💡 ようとしている=今試みている\n🇹🇷 Japonca konuşmaya çalışıyor ama zor görünüyor.",ans:"と",opts:["と", "て", "に", "が"],exp:"ようとしている"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"らいねんから「あたらしいせいど ___ 」があるらしい。\n🇹🇷 Yeni sistem denen bir şey varmış.",ans:"とかいう",opts:["とかいう", "という", "とは", "ということ"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはくつをはいた ___ はいってきた。\n🇹🇷 Ayakkabıyla olduğu gibi girdi.",ans:"まま",opts:["まま", "ので", "から", "のに"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"たとえそうだ ___ あきらめない。\n💡 仮定+譲歩\n🇹🇷 Farz etsek bile öyle olsa, vazgeçmeyeceğim.",ans:"としても",opts:["としても", "のに", "くせに", "ものの"],exp:"としても=仮定譲歩"},
+{tp:"kip",lb:"とされている vs と言われている",lc:"lm",q:"より公式・権威的な見解はどちら？",ans:"とされている",opts:["とされている", "といわれている", "どちらも同じ", "ときいている"],exp:"とされている=公式 | といわれている=一般"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「べんきょうがきらいなわけではない。ただねむいだけだ。」",ans:"Demek değil. Sadece uykuluyum.",opts:["Demek değil. Sadece uykuluyum.", "勉強が嫌い。", "勉強が好き。", "なぜ?"],exp:"わけではない=部分否定"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かのじょはうまくなった。___ じしんもついた。\n💡 さらに成長\n🇹🇷 O daha iyi oldu. Dahası özgüveni de geldi.",ans:"さらに",opts:["さらに", "それでも", "ところが", "ところで"],exp:"さらに"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"じゆう ___ その使い方を知らなければ意味がない。\n🇹🇷 Özgürlük olsa bile, kullanma bilmezsen anlamsız.",ans:"があってさえ",opts:["があってさえ", "があっても", "があってこそ", "があってから"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このまちははじめてでまわり ___ 。\n💡 回りにくい\n🇹🇷 Bu şehir ilk kez için dolaşması zor.",ans:"にくい",opts:["にくい", "やすい", "すぎる", "がちだ"],exp:"にくい"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"おかね ___ あれば、なんでもできる。\n💡 名詞+さえ+V-ば形\n🇹🇷 Para olsa yeter, her şeyi yapabilirim.",ans:"さえ",opts:["さえ", "でも", "なら", "しか"],exp:"さえ〜ば"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはびょうきだった。こられない ___ だ。\n💡 来られない理由が納得\n🇹🇷 Hastaymış. Gelmemesi mantıklı.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"わけだ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"もっとべんきょうすれ ___ よかった。\n💡 すれば+よかった\n🇹🇷 Daha fazla çalışsaydım keşke.",ans:"ば",opts:["ば", "たら", "て", "で"],exp:"すれば+よかった"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"はしっても ___ たどりつかない。\n💡 はしって+も+はしって+も\n🇹🇷 Ne kadar koşsam da varamıyorum.",ans:"はしっても",opts:["はしっても", "あるいても", "とんでも", "みても"],exp:"ても〜ても"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"若者を中心に人気がある.\"\n💡 わかもの=gençler",ans:"わかものをちゅうしんにじんきがある。",opts:["わかものをちゅうしんにじんきがある。", "わかものをとおしてじんきがある。", "わかものをもとにじんきがある。", "わかものをめぐってじんきがある。"],exp:"を中心に"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"___ このせいさくはじゅうようだ。\n💡 言うまでもなく重要\n🇹🇷 Söylemeye bile gerek yok, bu politika önemlidir.",ans:"いうまでもなく",opts:["いうまでもなく", "いうまでもない", "まさに", "もちろん"],exp:"いうまでもなく"},
+{tp:"kip",lb:"に応じて vs によって",lc:"lm",q:"「状況・条件に対応して変わる」はどちら？",ans:"に応じて",opts:["に応じて", "によって", "において", "にとって"],exp:"に応じて=対応 | によって=手段・受け身"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このおかしはぜんぶたべ ___ た。おいしかった。\n💡 食べきった=完全に食べた\n🇹🇷 Bu tatlıyı tamamen yedim. Lezzetliydi.",ans:"きっ",opts:["きっ", "きれ", "きり", "きる"],exp:"きった"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"これはゆめ ___ よりもげんじつだ。\n💡 夢というよりも現実\n🇹🇷 Bu rüya demekten çok, gerçek.",ans:"というより",opts:["というより", "というのに", "というのは", "ということで"],exp:"というより"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"びょうきのひとはたべる ___ 。\n💡 食べる状況でない\n🇹🇷 Hasta kişi yemek yiyecek halde değil.",ans:"どころではない",opts:["どころではない", "どころか", "どころで", "どころ"],exp:"どころではない"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かんきょうもんだい ___ こくさいかいぎがひらかれた。\n💡 環境問題が中心\n🇹🇷 Çevre sorunları konusunda uluslararası konferans.",ans:"をめぐって",opts:["をめぐって", "をとおして", "をもとに", "をちゅうしんに"],exp:"をめぐって"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"げんだいのしゃかい ___ AIはかかせない。\n💡 書き言葉\n🇹🇷 Günümüz toplumunda AI vazgeçilmez.",ans:"において",opts:["において", "について", "にとって", "によって"],exp:"において"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"つまり計画が変わるということだ.\"\n💡 けいかく=plan | かわる=değişmek",ans:"つまりけいかくがかわるということだ。",opts:["つまりけいかくがかわるということだ。", "つまりけいかくがかわるわけだ。", "つまりけいかくがかわるつまりだ。", "つまりけいかくがかわるからだ。"],exp:"ということだ①"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"もっと早く決めたらよかった.\"\n💡 きめる=karar vermek",ans:"もっとはやくきめたらよかった。",opts:["もっとはやくきめたらよかった。", "もっとはやくきめればよかった。", "もっとはやくきめなければよかった。", "もっとはやくきめたほうがよかった。"],exp:"たらよかった=口語"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"プロ ___ えんそうはすばらしかった。\n🇹🇷 Profesyonele değer, performans mükemmeldi.",ans:"だけあって",opts:["だけあって", "だけに", "だけど", "だけは"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"りょくちゃはけんこうによい ___ 。\n💡 一般的通説\n🇹🇷 Yeşil çayın sağlıklı olduğu söyleniyor.",ans:"といわれている",opts:["といわれている", "ときいている", "とされている", "となっている"],exp:"と言われている"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"じこの ___ でんしゃがおくれた。\n💡 事故が原因\n🇹🇷 Kaza nedeniyle tren geçti.",ans:"ために",opts:["ために", "おかげで", "せいで", "から"],exp:"ために=原因"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「マニュアルにしたがってそうさしてください。」\n💡 マニュアル=kılavuz",ans:"Kılavuza uyarak kullanın.",opts:["Kılavuza uyarak kullanın.", "マニュアルを無視。", "どうぞ自由に。", "なぜ?"],exp:"に従って①"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"おや ___ このけつろんはうけいれがたい。\n🇹🇷 Ebeveyn olarak da kabul etmek zor.",ans:"としても",opts:["としても", "としては", "としての", "としたら"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ベテラン ___ まだまだがんばれる。\n💡 ベテランとはいえ成長できる\n🇹🇷 Veteran da denilse hâlâ daha çok çabalayabilir.",ans:"とはいえ",opts:["とはいえ", "のに", "ものの", "くせに"],exp:"とはいえ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはあんしんさせるためにえがおを ___ た。\n💡 笑顔を見せた\n🇹🇷 O rahatlatmak için gülücük gösterdi.",ans:"みせ",opts:["みせ", "みた", "みな", "みれ"],exp:"てみせる①"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"せんもんか ___ このけっかはおどろきだ。\n🇹🇷 Uzman olarak da sürpriz.",ans:"としても",opts:["としても", "としては", "としての", "としたら"],exp:""},
+{tp:"kip",lb:"やすい vs がちだ",lc:"lm",q:"中立的・肯定的な「やりやすい」はどちら？",ans:"やすい",opts:["やすい", "がちだ", "にくい", "どちらも同じ"],exp:"やすい=中立/肯定"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"はじめてだった ___ まちがえてしまいました。\n💡 弁解\n🇹🇷 İlk kez olduğu için hata yaptım.",ans:"ものだから",opts:["ものだから", "から", "ので", "ために"],exp:"ものだから"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"確かに難しい。しかし、挑戦する価値がある.\"\n💡 ちょうせん=meydan okuma | かちがある=değer",ans:"たしかにむずかしい。しかし、ちょうせんするかちがある。",opts:["たしかにむずかしい。しかし、ちょうせんするかちがある。", "ほんとうにむずかしい。しかし、ちょうせんするかちがある。", "たしかにむずかしい。だから、ちょうせんするかちがある。", "たしかにむずかしい。それでも、ちょうせんするかちがある。"],exp:"確かに+しかし"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはしらない ___ をした。\n💡 普通形+ふりをする\n🇹🇷 O bilmez gibi davrandı.",ans:"ふり",opts:["ふり", "こと", "よう", "まま"],exp:"ふりをする"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「こうなっては、みとめざるをえない。」\n💡 みとめる=kabul etmek",ans:"Kabul etmek zorundayım.",opts:["Kabul etmek zorundayım.", "みとめない。", "これからみとめる。", "なぜ?"],exp:"ざるをえない=不本意・義務"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"そとにでた ___ あめがふりだした。\n💡 出た直後に雨\n🇹🇷 Dışarıya çıkar çıkmaz yağmur başladı.",ans:"とたんに",opts:["とたんに", "ところで", "ながら", "うちに"],exp:"とたんに"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"しずかにする ___ いってください。\n🇹🇷 Sessiz olmasını söyleyiniz.",ans:"ように",opts:["ように", "ための", "ことに", "はずに"],exp:""},
+{tp:"kip",lb:"ばかりでなく vs だけでなく",lc:"lm",q:"より書き言葉的なのはどちら？",ans:"ばかりでなく",opts:["ばかりでなく", "だけでなく", "どちらも同じ", "のみならず"],exp:"ばかりでなく=やや書き言葉"},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「外見・言葉と実際が逆」はどちら？",ans:"とは裏腹に",opts:["とは裏腹に", "にもかかわらず", "とはいえ", "ものの"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"ここにくる ___ でんしゃがべんりだ。\n🇹🇷 Buraya gelmek için tren kullanışlı.",ans:"には",opts:["には", "ためには", "からには", "だけには"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ わからない。せつめいしてほしい。\n🇹🇷 Hangi yolla olursa olsun anlaşılamıyor.",ans:"どうしても",opts:["どうしても", "なんとなく", "いつでも", "ぜひ"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「どんなに〜ても」はどういう意味？",ans:"ne kadar〜olsa da",opts:["ne kadar〜olsa da", "そこまで〜しない", "o kadar〜する", "この程度〜する"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"___ こんかいはここでおわりにします。\n💡 締めくくり\n🇹🇷 Öyleyse bu sefer burada bitiriyoruz.",ans:"というわけで",opts:["というわけで", "というのに", "というから", "というのは"],exp:"というわけで"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"きのうのことをぜんぶわすれられる ___ わすれたい。\n💡 忘れたい仮定\n🇹🇷 Dünün her şeyini unutabilseydi unutmak istiyorum.",ans:"ものなら",opts:["ものなら", "なら", "ならば", "としても"],exp:"ものなら"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"こんなしょうこ ___ けいさつがとらえた。\n🇹🇷 Bu kanıtı ipucu alarak polis yakaladı.",ans:"をてがかりに",opts:["をてがかりに", "をもとに", "をとおして", "をちゅうしんに"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"むずかしい ___ むずかしいが、ふかのうではない。\n🇹🇷 Zor doğru ama imkansız değil.",ans:"ことは",opts:["ことは", "のは", "だけは", "からは"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"わかいころはよくやまにのぼった ___ 。\n🇹🇷 Genç zamanında çok dağa tırmanırdık.",ans:"ものだ",opts:["ものだ", "わけだ", "ことだ", "はずだ"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"にゅうがく ___ かるいあいさつをします。\n💡 名詞+に際して\n🇹🇷 Okula başlama vesilesiyle selamlama yapıyorum.",ans:"にさいして",opts:["にさいして", "にあたって", "において", "にとって"],exp:"に際して"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ あいしているか、わかってほしい。\n🇹🇷 Ne kadar sevdiğimi anlamanı istiyorum.",ans:"どんなに",opts:["どんなに", "そんなに", "こんなに", "あんなに"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ドアをあけた ___ ねこがとびだした。\n💡 開けた直後\n🇹🇷 Kapıyı açar açmaz kedi fırladı.",ans:"とたんに",opts:["とたんに", "ところで", "ながら", "うちに"],exp:"とたんに"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「なかなか+否定形」の意味は？",ans:"一向に〜ない(bir türlü)",opts:["一向に〜ない(bir türlü)", "程度が高い", "肯定的評価", "条件"],exp:"なかなか②=bir türlü değil"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"きゃくのようきゅう ___ サービスをかえる。\n💡 要求に対応\n🇹🇷 Müşteri talebine göre hizmet değiştirilir.",ans:"におうじて",opts:["におうじて", "にとって", "において", "によって"],exp:"に応じて"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このねだんでは、しつがわるい ___ 。\n💡 値段→品質の推測\n🇹🇷 Bu fiyata kalitesi kötü olmalı kesinlikle.",ans:"にちがいない",opts:["にちがいない", "はずだ", "らしい", "かもしれない"],exp:"に違いない"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"あたらしいせいかつをはじめる ___ きもちをあらたにした。\n💡 V辞書形+にあたって\n🇹🇷 Yeni bir hayata başlarken zihniyetimi yeniledim.",ans:"にあたって",opts:["にあたって", "にさいして", "において", "にとって"],exp:"にあたって"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはかえってくる ___ ごはんをたべはじめた。\n💡 帰る+なり\n🇹🇷 Eve gelir gelmez yemek yemeye başladı.",ans:"なり",opts:["なり", "とたんに", "ながら", "うちに"],exp:"なり"},
+{tp:"kip",lb:"とは限らない vs に違いない",lc:"lm",q:"「例外がある・必ずしもそうでない」はどちら？",ans:"とは限らない",opts:["とは限らない", "に違いない", "に決まっている", "はずだ"],exp:"とは限らない=例外あり"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"遅刻した。というのも、目覚ましが鳴らなかったからだ. 🇹🇷 Türkçeyi Çevir",ans:"ちこくした。というのも、めざましがならなかったからだ。",opts:["ちこくした。というのも、めざましがならなかったからだ。", "ちこくした。というのに、めざましがならなかったからだ。", "ちこくした。というのは、めざましがならなかったからだ。", "ちこくした。ということで、めざましがならなかったからだ。"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはにほんご ___ ちゅうごくごもはなせる。\n💡 驚きの追加\n🇹🇷 O Japonca sadece değil Çince de konuşuyor.",ans:"ばかりか",opts:["ばかりか", "ばかりでなく", "だけでなく", "のみならず"],exp:"ばかりか=驚き追加"},
+{tp:"kip",lb:"わけだ vs つまり",lc:"lm",q:"「根拠があって当然」の納得感はどちら？",ans:"わけだ",opts:["わけだ", "つまり", "なぜなら", "例えば"],exp:"わけだ=納得"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"くらすぎて、よもうにも ___ 。\n🇹🇷 Çok karanlık, okuyamıyor.",ans:"よめない",opts:["よめない", "よむ", "よみたい", "よめるが"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"それどころではない。今は大変な時だ. 🇹🇷 Türkçeyi Çevir",ans:"それどころではない。いまはたいへんなときだ。",opts:["それどころではない。いまはたいへんなときだ。", "それどころか。いまはたいへんなときだ。", "それどころで。いまはたいへんなときだ。", "それどころ。いまはたいへんなときだ。"],exp:""},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「さんせいするにしても、はんたいするにしても、いけんをきかせて。」\n💡 さんせい=katılmak | はんたい=karşı",ans:"Katılsan da karşı olsan da görüşünü söyle.",opts:["Katılsan da karşı olsan da görüşünü söyle.", "賛成だ。", "反対だ。", "なぜ?"],exp:"にしても〜にしても"},
+{tp:"mean",lb:"Ne demek?",lc:"lc",q:"「ちしき ___ えんようがなければつかえない。」",ans:"Bilgi olsa bile uygulama olmadan kullanamaz.",opts:["Bilgi olsa bile uygulama olmadan kullanamaz.", "知識は不要。", "経験だけでいい。", "なぜ?"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ ふたつのことはできない。\n🇹🇷 Aynı anda iki şey yapılamaz.",ans:"いちどに",opts:["いちどに", "じゅうぶんに", "すこしずつ", "だんだん"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"わたしがかれをしっている ___ がない。あったこともない。\n💡 会ったことない→知らない\n🇹🇷 Onun beni bilmesi mümkün değil.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"わけがない"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"ことば ___ じっさいのこうどうはちがう。\n🇹🇷 Sözlerin aksine, gerçekteki davranış farklı.",ans:"とはうらはらに",opts:["とはうらはらに", "にもかかわらず", "とはいえ", "のに"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"このけん ___ まだけんとうちゅうだ。\n🇹🇷 Bu konu hakkında ise hâlâ inceleme aşamasında.",ans:"については",opts:["については", "といえば", "にしては", "によっては"],exp:""},
+{tp:"kip",lb:"合う vs 単純動詞",lc:"lm",q:"相互性(karşılıklı eylem)を示すのはどちら？",ans:"V-ます語幹+あう",opts:["V-ます語幹+あう", "単純動詞", "V-て形+あげる", "V-て形+もらう"],exp:"合う=相互動作"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"そとにでる ___ コートがひつようだ。\n🇹🇷 Dışarı çıkmak için palto gerekli.",ans:"には",opts:["には", "ためには", "からには", "だけには"],exp:""},
+{tp:"kip",lb:"ほかない vs しかない",lc:"lm",q:"どちらがより格式ある表現？",ans:"ほかない(やや格式)",opts:["ほかない(やや格式)", "しかない(より口語)", "どちらも同じ", "どちらでも"],exp:"ほかない≈しかない(ほかない=やや格式)"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"むねにひびく ___ すばらしいえんそうだ。\n🇹🇷 Yüreğe dokunduğu için özellikle mükemmel performans.",ans:"だけに",opts:["だけに", "だけあって", "だけど", "だけは"],exp:""},
+{tp:"kip",lb:"たとしても vs としても",lc:"lm",q:"過去の仮定はどちら？",ans:"たとしても",opts:["たとしても", "としても(辞書形)", "どちらも同じ", "文脈による"],exp:"たとしても=過去仮定"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「たりとも」の前に来るのは？",ans:"数量表現(一〜)",opts:["数量表現(一〜)", "名詞のみ", "動詞", "形容詞"],exp:"数量+たりとも"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"はるになると、きおんは ___ あがっていく。\n🇹🇷 Bahar gelince sıcaklık yavaş yavaş yükseliyor.",ans:"しだいに",opts:["しだいに", "ますます", "どんどん", "いつも"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"この書類 ___ あれば、しんせいできる。\n💡 書類さえあれば\n🇹🇷 Bu belge olsa yeter, başvurabilirsiniz.",ans:"さえ",opts:["さえ", "でも", "なら", "しか"],exp:"さえ〜ば"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かいぎにはかならずさんかする ___ いる。\n💡 会社のルール\n🇹🇷 Toplantıya mutlaka katılınması kararlaştırılmış.",ans:"ことになって",opts:["ことになって", "ことにして", "ことがあって", "ことで"],exp:"ことになっている"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"せいこうはじぶん ___ だ。\n🇹🇷 Başarı kendine bağlıdır.",ans:"しだいだ",opts:["しだいだ", "による", "によって", "に応じる"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"いく ___ こない ___ かならずれんらくしてください。\n🇹🇷 Gidecek de olmayacak da iletişime geç.",ans:"にしろ〜にしろ",opts:["にしろ〜にしろ", "にしても〜にしても", "としても〜としても", "なら〜なら"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「というのは」の使い方は？",ans:"言葉の意味・定義説明",opts:["言葉の意味・定義説明", "話題転換", "逆接", "追加"],exp:"というのは=定義説明"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"この本はむずかしいことば ___ だ。\n💡 難しい言葉だらけ\n🇹🇷 Bu kitap zor kelimelerle dolu.",ans:"だらけ",opts:["だらけ", "でいっぱい", "まみれ", "ずくめ"],exp:"だらけ"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「以外」の意味は？",ans:"除外・hariç",opts:["除外・hariç", "含む・dahil", "のみ・sadece", "全部・全て"],exp:"以外=除外"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「おなかがすいてしかたない。」\n💡 おなかがすく=acıkmak",ans:"Dayanılmaz derecede acıktım.",opts:["Dayanılmaz derecede acıktım.", "おなかがいっぱい。", "おなかがすかない。", "なぜ?"],exp:"てしかたない"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"しっぱいして ___ 、ほんとうのいみがわかった。\n💡 経験後の気づき\n🇹🇷 Başarısız olduktan sonra ancak gerçek anlamı anladım.",ans:"はじめて",opts:["はじめて", "から", "ところ", "あと"],exp:"てはじめて"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"子供のころよく走り回ったものだ. 🇹🇷 Türkçeyi Çevir",ans:"こどものころよくはしりまわったものだ。",opts:["こどものころよくはしりまわったものだ。", "こどものころよくはしりまわったわけだ。", "こどものころよくはしりまわったことだ。", "こどものころよくはしりまわったはずだ。"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"りょうりができ ___ った。さあたべましょう。\n💡 できあがる=完成する\n🇹🇷 Yemek tamamlandı. Haydi yiyelim.",ans:"あが",opts:["あが", "あげ", "きっ", "きれ"],exp:"できあがる"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「については」の機能は？",ans:"話題を明示して関連事項を示す",opts:["話題を明示して関連事項を示す", "逆接", "条件", "理由"],exp:""},
+{tp:"mean",lb:"Ne demek?",lc:"lc",q:"「ひとりをのぞいてぜんいんがさんせいした。」",ans:"Bir kişi hariç herkes katıldı.",opts:["Bir kişi hariç herkes katıldı.", "全員反対。", "誰も賛成しない。", "なぜ?"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"まちがいをしったのだから、なおさない ___ にはいかない。\n💡 間違い→直す義務\n🇹🇷 Hatayı bildiğim için düzeltmeden edemem.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"ないわけにはいかない"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「それでもあなたが好きです。」",ans:"Yine de seni seviyorum.",opts:["Yine de seni seviyorum.", "だから好きです。", "好きではない。", "なぜ好き?"],exp:"それでも=強い感情"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"ふんいき ___ このみせのりょうりはおいしい。\n🇹🇷 Atmosfer bir yana, yemek lezzetli.",ans:"はともかく",opts:["はともかく", "はもとより", "はさておき", "はともあれ"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"もうさいていラインをきった。うらんで ___ 。\n🇹🇷 Artık sınırı geçti. Kızgın olsan da anlamsız.",ans:"もはじまらない",opts:["もはじまらない", "もしかたない", "もならない", "もたまらない"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"彼女は美しい。その上、頭もいい.\"\n💡 うつくしい=güzel | あたまがいい=zeki",ans:"かのじょはうつくしい。その上、あたまもいい。",opts:["かのじょはうつくしい。その上、あたまもいい。", "かのじょはうつくしい。しかも、あたまもいい。", "かのじょはうつくしい。それでも、あたまもいい。", "かのじょはうつくしい。ところが、あたまもいい。"],exp:"その上=追加"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"おくれない ___ かのじょにつたえてください。\n🇹🇷 Gecikmemesini ona iletiniz.",ans:"ように",opts:["ように", "ための", "ことに", "はずに"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"消費税を含めて、合計1000円です.\"\n💡 しょうひぜい=tüketim vergisi | ごうけい=toplam",ans:"しょうひぜいをふくめて、ごうけいせんえんです。",opts:["しょうひぜいをふくめて、ごうけいせんえんです。", "しょうひぜいをのぞいて、ごうけいせんえんです。", "しょうひぜいだけで、ごうけいせんえんです。", "しょうひぜいを含む、ごうけいせんえんです。"],exp:"を含めて=dahil"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「必ずしも」の後に来るのは？",ans:"否定形(ない)",opts:["否定形(ない)", "肯定形", "疑問形", "命令形"],exp:"必ずしも+否定"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"にほんにいきたくない ___ ではない。おかねがないだけ。\n💡 部分否定+理由\n🇹🇷 Japonya'ya gitmek istemiyorum demek değil.",ans:"わけ",opts:["わけ", "こと", "もの", "はず"],exp:"わけではない"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"きた ___ のへやはすずしい。\n🇹🇷 Kuzeye bakan oda serin.",ans:"むきの",opts:["むきの", "むけの", "にむけた", "にたいした"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"___ おかねをつかわないようにする。\n💡 できるだけ節約\n🇹🇷 Mümkün olduğunca para harcamadan yaparım.",ans:"できるだけ",opts:["できるだけ", "なるべく", "いつも", "ぜったいに"],exp:"できるだけ"},
+{tp:"kip",lb:"あまりに vs すぎる",lc:"lm",q:"「程度超過が原因」と「単純な程度超過」の違いは？",ans:"あまりに: 原因強調 / すぎる: 単純",opts:["あまりに: 原因強調 / すぎる: 単純", "同じ意味", "あまりに: 弱い", "すぎる: 原因"],exp:"あまりに=原因 | すぎる=単純超過"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このじょうけんはひっしゅう ___ います。\n💡 条件が必須として規定\n🇹🇷 Bu koşul zorunlu olarak belirlenmiş.",ans:"となって",opts:["となって", "になって", "にして", "となり"],exp:"となっている"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"このひみつはふたり ___ だ。\n💡 ふたりきり=ikimize ait\n🇹🇷 Bu sır sadece ikimize ait.",ans:"きり",opts:["きり", "だけ", "ながら", "ものの"],exp:"きり①"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"けいかく ___ こうどうする。\n💡 計画を根拠に行動\n🇹🇷 Plana dayanarak hareket ediyoruz.",ans:"にもとづいて",opts:["にもとづいて", "にしたがって", "をもとに", "によって"],exp:"に基づいて"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「V-ばV-ほど」はどういう意味？",ans:"比例: ne kadar...o kadar",opts:["比例: ne kadar...o kadar", "程度の比較", "条件のみ", "逆接"],exp:""},
+{tp:"kip",lb:"がちだ vs やすい",lc:"lm",q:"否定的な傾向を示すのはどちら？",ans:"がちだ",opts:["がちだ", "やすい", "にくい", "すぎる"],exp:"がちだ=否定的"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"「さぼる」 ___ どういういみですか。\n💡 言葉の意味を聞く\n🇹🇷 「Saboru」ne demektir?",ans:"というのは",opts:["というのは", "といえば", "ということは", "とはいえ"],exp:"というのは"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"りんごやバナナ ___ くだものがすきだ。\n💡 果物の例示修飾\n🇹🇷 Elma ve muz gibi meyveler severim.",ans:"といった",opts:["といった", "などの", "というような", "のような"],exp:"といった"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「あやまりながら、またおなじことをする。」\n💡 あやまる=özür dilemek",ans:"Özür dileyerek yine aynı şeyi yapıyor.",opts:["Özür dileyerek yine aynı şeyi yapıyor.", "謝らない。", "同じことをしない。", "なぜ?"],exp:"ながら②逆接"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このへやはひろい。___ やすい。___ べんりなばしょにある。\n💡 良い点を次々と強調\n🇹🇷 Bu oda geniş. Üstelik ucuz. Üstelik uygun yerde.",ans:"しかも〜しかも",opts:["しかも〜しかも", "それに〜それに", "また〜また", "さらに〜さらに"],exp:"しかも重ね"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ストレスがたまって、ねられない ___ なってしまった。\n💡 ない+ようになる=否定変化\n🇹🇷 Stres birikerek uyuyamaz hale geldim.",ans:"ように",opts:["ように", "こと", "はず", "かも"],exp:"ないようになる"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「と言われている」は何を示す？",ans:"世間一般の通説・評判",opts:["世間一般の通説・評判", "直接聞いた情報", "論理的推測", "強い確信"],exp:"と言われている=通説"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かのじょはうた ___ おどりもうまい。\n💡 強調の追加\n🇹🇷 O şarkı sadece değil, dans da iyi.",ans:"ばかりか",opts:["ばかりか", "ばかりでなく", "だけでなく", "のみならず"],exp:"ばかりか"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれがのんだ ___ みずだけだ。\n🇹🇷 Onun içtiği tek şey su.",ans:"のは",opts:["のは", "のが", "のを", "のに"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"たとえしっぱいする ___ やってみるべきだ。\n💡 仮定+逆接\n🇹🇷 Başarısız olsa bile denemek gerekir.",ans:"としても",opts:["としても", "のに", "くせに", "ものの"],exp:"としても"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"なつより ___ ふゆのほうがすきです。\n💡 Aより B が好き\n🇹🇷 Yazdan ziyade kışı daha çok seviyorum.",ans:"むしろ",opts:["むしろ", "ところが", "それでも", "かえって"],exp:"むしろ=より好ましい"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「だの〜だの」の特徴は？",ans:"批判・不満を強調した列挙",opts:["批判・不満を強調した列挙", "中立的な列挙", "肯定的な列挙", "単独例示"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"むこうのいけんをき ___ けつろんをだした。\n💡 聞かずに決めた\n🇹🇷 Karşı tarafın görüşünü duymadan karar verdi.",ans:"かずに",opts:["かずに", "かないで", "いかずに", "かずにいた"],exp:"聞く→聞かずに"},
+{tp:"kip",lb:"を中心に vs において",lc:"lm",q:"「Xを核心・中心にして」はどちら？",ans:"を中心に",opts:["を中心に", "において", "について", "による"],exp:"を中心に=核心・中心"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"彼女のことが心配でならない.\"\n💡 しんぱい=endişe",ans:"かのじょのことがしんぱいでならない。",opts:["かのじょのことがしんぱいでならない。", "かのじょのことがしんぱいでしかたない。", "かのじょのことがしんぱいでたまらない。", "かのじょのことがしんぱいなのだ。"],exp:"てならない"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"つかれた ___ ねむい ___ といつもぐちをこぼす。\n🇹🇷 Yorgunum uykuluyum gibi şikayet.",ans:"だの〜だの",opts:["だの〜だの", "やら〜やら", "とか〜とか", "か〜か"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ねだんがあがったのでしょうひをへらさ ___ をえない。\n💡 減らす+ざるをえない\n🇹🇷 Fiyat arttığından tüketimi azaltmak zorundayım.",ans:"ざる",opts:["ざる", "なけれ", "なく", "ない"],exp:"ざるをえない"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このもんだいは ___ むずかしい。\n💡 なかなか①=epey\n🇹🇷 Bu problem epey zor.",ans:"なかなか",opts:["なかなか", "かなり", "まあまあ", "すこし"],exp:"なかなか①"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"そんなことで怒る ___ おとなげない。\n🇹🇷 Böyle bir şey için kızmak çocukça.",ans:"なんて",opts:["なんて", "なんか", "など", "とは"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"せんたく ___ そうじ ___ で、きゅうじつもいそがしい。\n💡 家事の大変さを列挙\n🇹🇷 Çamaşır ve temizlik gibi şeylerle tatil de yoğun.",ans:"やら〜やら",opts:["やら〜やら", "とか〜とか", "か〜か", "と〜と"],exp:"やら〜やら"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"にゅうがく ___ じゅんびをした。\n💡 名詞+にあたって\n🇹🇷 Okula başlarken hazırlık yaptım.",ans:"にあたって",opts:["にあたって", "にさいして", "において", "にとって"],exp:"にあたって"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「例えば」の役割は？",ans:"前の内容に具体例を示す",opts:["前の内容に具体例を示す", "逆接を示す", "理由を示す", "まとめる"],exp:"例えば=具体例"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"にんげんはかならずしぬ ___ だ。\n💡 ①一般論・当然\n🇹🇷 İnsanlar kesinlikle ölür.",ans:"もの",opts:["もの", "わけ", "こと", "はず"],exp:"ものだ①一般論"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「ちょうどいまシャワーをあびたところです。」",ans:"Tam şimdi duş aldım.",opts:["Tam şimdi duş aldım.", "今から浴びる。", "浴びている最中。", "なぜ?"],exp:"したところ=たった今"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「かれはわかっているくせに、しらないふりをする。」",ans:"Anladığı halde bilmez gibi yapıyor.",opts:["Anladığı halde bilmez gibi yapıyor.", "本当に知らない。", "ふりをしない。", "なぜ?"],exp:"ふりをする=見せかけ"},
+{tp:"kip",lb:"わけがない vs はずがない",lc:"lm",q:"より主観的・感情的な否定はどちら？",ans:"わけがない",opts:["わけがない", "はずがない", "どちらも同じ", "わけではない"],exp:"わけがない=主観的"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"じぶん ___ じゅうにんのグループです。\n💡 自分を含めた人数\n🇹🇷 Kendim dahil on kişilik grup.",ans:"をふくめて",opts:["をふくめて", "をのぞいて", "だけ", "はじめ"],exp:"を含めて"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このひみつはいちにん ___ しらせてはならない。\n💡 一人たりとも知らせてはならない\n🇹🇷 Bu sırı tek bir kişiye bile söylemek yasak.",ans:"たりとも",opts:["たりとも", "だって", "さえ", "でも"],exp:"たりとも"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはわかいどころか、___ けいけんがある。\n💡 もしろ: 訂正・補足\n🇹🇷 O genç bir yana, aksine deneyimi var.",ans:"むしろ",opts:["むしろ", "ところが", "それでも", "かえって"],exp:"むしろ=訂正"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれ ___ この仕事ができる。\n🇹🇷 O asıl bu işi yapabilir.",ans:"こそ",opts:["こそ", "さえ", "でも", "だけ"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"しっかりけいかくする ___ じかんをせつやくできる。\n💡 計画→節約\n🇹🇷 Düzgün plan yaparak zaman tasarrufu edilebilir.",ans:"ことで",opts:["ことで", "おかげで", "せいで", "ために"],exp:"ことで"},
+{tp:"kip",lb:"当たり前だ vs 言うまでもない",lc:"lm",q:"より口語的・日常的な「当然」はどちら？",ans:"当たり前だ",opts:["当たり前だ", "言うまでもない", "に違いない", "に決まっている"],exp:"当たり前だ=口語的当然"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ふゆになる ___ きたかぜがつよくなる。\n💡 ②冬になるに従って\n🇹🇷 Kış geldikçe kuzey rüzgarı güçleniyor.",ans:"にしたがって",opts:["にしたがって", "にもとづいて", "をもとに", "によって"],exp:"に従って②"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"けんこうはせいかつしゅうかん ___ だ。\n🇹🇷 Sağlık yaşam alışkanlıklarına bağlıdır.",ans:"しだいだ",opts:["しだいだ", "による", "によって", "に応じる"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"このドラマを見始めたが最後、夜更かしする.\"\n💡 よふかしする=geç saate kadar kalkmak",ans:"このドラマをみはじめたがさいご、よふかしする。",opts:["このドラマをみはじめたがさいご、よふかしする。", "このドラマをみはじめたとたんに、よふかしする。", "このドラマをみはじめたながら、よふかしする。", "このドラマをみはじめたら、よふかしする。"],exp:"が最後=不可逆"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ひとはつごうのわるいことをわすれ ___ だ。\n💡 忘れる傾向\n🇹🇷 İnsanlar elverişsiz şeyleri unutma eğiliminde.",ans:"がち",opts:["がち", "やすい", "にくい", "すぎる"],exp:"がちだ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれにそのことをいった ___ よかったのに。\n💡 たらよかったのに\n🇹🇷 Ona söyleseydim keşke.",ans:"ら",opts:["ら", "の", "が", "は"],exp:"たらよかったのに"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"しごとで、かいぎ ___ しりょうさくせい ___ でいそがしい。\n💡 仕事の列挙\n🇹🇷 İşte toplantı ve materyal hazırlama gibi şeylerle yoğunum.",ans:"とか〜とか",opts:["とか〜とか", "や〜など", "と〜と", "か〜か"],exp:"とか〜とか"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このゲームはれきし ___ デザインした。\n💡 歴史が素材\n🇹🇷 Bu oyunu tarihi esas alarak tasarladılar.",ans:"をもとに",opts:["をもとに", "をめぐって", "をとおして", "にもとづいて"],exp:"をもとに"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「かれいがいのひとはみんなしっています。」\n💡 以外の+名詞",ans:"O dışındaki herkes biliyor.",opts:["O dışındaki herkes biliyor.", "彼だけが知っている。", "誰も知らない。", "なぜ?"],exp:"以外の+名詞"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"ねすごした ___ ちこくした。\n💡 寝坊→遅刻\n🇹🇷 Uyuya kaldığım için geç kaldım.",ans:"せいで",opts:["せいで", "おかげで", "ために", "から"],exp:"V-た+せいで"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ いそがしくて、ねるじかんもない。\n🇹🇷 Her şeyden önce çok yoğun.",ans:"なにしろ",opts:["なにしろ", "とにかく", "なんでも", "どうしても"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"あしたはやすみで、でかけられる。___ じゆうだ。\n💡 言い換え・まとめ\n🇹🇷 Yarın izin, çıkabilirim. Yani özgürüm.",ans:"つまり",opts:["つまり", "例えば", "なぜなら", "ところで"],exp:"つまり=言い換え"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"しんこうにかんする ___ ごしつもんは？\n💡 に際しての+名詞\n🇹🇷 Bu münasebetle sorularınız var mı?",ans:"にさいして",opts:["にさいして", "にあたって", "において", "にとって"],exp:"に際して"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このくすりの ___ すぐによくなった。\n💡 薬の効果\n🇹🇷 Bu ilaç sayesinde hemen iyileştim.",ans:"おかげで",opts:["おかげで", "せいで", "ために", "から"],exp:"おかげで"},
+{tp:"kip",lb:"きり①vs②",lc:"lm",q:"「行ったきり戻らない」のきりはどちら？",ans:"②以来",opts:["②以来", "①限定", "どちらでも", "違う意味"],exp:"きり②以来"},
+{tp:"mean",lb:"Bu cümle ne demek?",lc:"lc",q:"「かれはねむら ___ でちゃくちした。」\n💡 ねむらずに=uyumadan",ans:"O uyumadan vardı.",opts:["O uyumadan vardı.", "よく眠った。", "到着しなかった。", "なぜ?"],exp:"ずに=yapmadan"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「ようにも〜ない」の構造は？",ans:"V-意志形+にも+V可能形+ない",opts:["V-意志形+にも+V可能形+ない", "V-て形+ない", "V-ない形+ない", "V-辞書形+ない"],exp:""},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"三年にわたって研究した.\"\n💡 さんねん=3 yıl",ans:"さんねんにわたってけんきゅうした。",opts:["さんねんにわたってけんきゅうした。", "さんねんをとおしてけんきゅうした。", "さんねんにしたがってけんきゅうした。", "さんねんをもとにけんきゅうした。"],exp:"にわたって"},
+{tp:"mean",lb:"Ne demek?",lc:"lc",q:"「わたしにできるのはまつだけだ。」",ans:"Benim yapabileceğim tek şey beklemek.",opts:["Benim yapabileceğim tek şey beklemek.", "他にもできる。", "何もできない。", "なぜ?"],exp:""},
+{tp:"kip",lb:"っぽい vs らしい②",lc:"lm",q:"否定的・批判的ニュアンスはどちら？",ans:"っぽい",opts:["っぽい", "らしい②", "みたいだ", "ようだ"],exp:"っぽい=やや否定"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"もっとべんきょうした。___ れんしゅうもした。\n💡 追加\n🇹🇷 Daha fazla çalıştım. Dahası pratik de yaptım.",ans:"さらに",opts:["さらに", "それでも", "ところが", "ところで"],exp:"さらに=追加"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このかいぎはいちにち ___ つづいた。\n💡 一日中\n🇹🇷 Bu toplantı bir gün boyunca sürdü.",ans:"にわたって",opts:["にわたって", "をとおして", "にしたがって", "にもとづいて"],exp:"にわたって"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはすぐおこり ___ 。\n💡 怒り+っぽい=sinirli\n🇹🇷 O çabuk öfkeleniyor.",ans:"っぽい",opts:["っぽい", "らしい", "みたい", "そう"],exp:"おこりっぽい"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"めをつけた ___ ねてしまった。\n💡 V-た+まま\n🇹🇷 Işıkları açık bırakarak uyudu.",ans:"まま",opts:["まま", "ながら", "ものの", "ところが"],exp:"V-た+まま"},
+{tp:"check",lb:"Doğru cümle hangisi?",lc:"lr",q:"\"彼女しかいない\" — しか の後は？",ans:"否定(いない)",opts:["否定(いない)", "肯定(いる)", "どちらでも", "文脈による"],exp:"しか+否定"},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「同時に・一回で」の意味の副詞はどちら？",ans:"一度に",opts:["一度に", "少しずつ", "だんだん", "次第に"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このしょうせつはじぶんのけいけん ___ かいた。\n💡 経験を素材に\n🇹🇷 Bu romanı kendi deneyimlerini esas alarak yazdı.",ans:"をもとに",opts:["をもとに", "をめぐって", "をとおして", "にもとづいて"],exp:"をもとに"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「にくい」の前に来るのは？",ans:"V-ます形語幹",opts:["V-ます形語幹", "V-辞書形", "V-て形", "V-た形"],exp:"V-ます形語幹+にくい"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このにゅうじょうけんはぽんにちたいゆうこう ___ です。\n💡 1日限り\n🇹🇷 Bu giriş bileti yalnızca bir gün geçerlidir.",ans:"のみ",opts:["のみ", "だけ", "ばかり", "しか"],exp:"のみ"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「どころではない」の意味は？",ans:"状況が許さない・場合でない",opts:["状況が許さない・場合でない", "逆転した事実", "追加情報", "強調のみ"],exp:"どころではない=状況不可"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"___ がんばってくれたことが、ありがたい。\n🇹🇷 Her şeyden önce çabaladığı için minnettarım.",ans:"なにより",opts:["なにより", "どうしても", "なにしろ", "とにかく"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"むずかしかったが、さいごまでよみ ___ た。\n💡 きる+た=完全に読んだ\n🇹🇷 Zor olmasına rağmen tamamen okudum.",ans:"きっ",opts:["きっ", "きれ", "きり", "きる"],exp:"きる→きった"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「なぜなら」の後に来る定型表現は？",ans:"〜からだ / 〜ためだ",opts:["〜からだ / 〜ためだ", "〜のに", "〜けど", "〜が"],exp:"なぜなら〜からだ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このもんだいについてはなし ___ ましょう。\n💡 話し合う=birlikte konuşmak\n🇹🇷 Bu sorun hakkında birlikte konuşalım.",ans:"あい",opts:["あい", "あげ", "あが", "きっ"],exp:"はなしあう"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"いそがしくて、ごはんをたべるじかん ___ ない。\n💡 ご飯の時間さえない\n🇹🇷 Yoğunluktan yemek yiyecek zaman bile yok.",ans:"さえ",opts:["さえ", "でも", "なら", "しか"],exp:"さえ①"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれをおすすめする。___ しごとがていねいだ ___ だ。\n💡 なぜなら〜からだ\n🇹🇷 Onu tavsiye ederim. Çünkü işi özenli.",ans:"なぜなら〜から",opts:["なぜなら〜から", "つまり〜から", "例えば〜から", "その上〜から"],exp:"なぜなら〜からだ"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かちょうにきょうのかいぎにさんかする ___ つたえてください。\n💡 ②伝達\n🇹🇷 Müdüre bugünkü toplantıya katılmasını söyleyin.",ans:"ように",opts:["ように", "ために", "ことで", "おかげで"],exp:"ように②"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"こどものころよくあそんだ ___ だ。\n💡 ②回想\n🇹🇷 Çocukken çok oynardık.",ans:"もの",opts:["もの", "わけ", "こと", "はず"],exp:"ものだ②回想"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"やっとなついた ___ またきらわれた。\n💡 懐いたと思ったら\n🇹🇷 Nihayet ısındı sanırdım yine nefret etti.",ans:"かとおもったら",opts:["かとおもったら", "とたんに", "ながら", "ところが"],exp:"かと思ったら"},
+{tp:"kip",lb:"Karşılaştır",lc:"lm",q:"「を含めて(dahil)」の反対はどちら？",ans:"を除いて(hariç)",opts:["を除いて(hariç)", "を通して", "をもとに", "を中心に"],exp:""},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「てはじめて」の意味は？",ans:"経験して初めて気づく",opts:["経験して初めて気づく", "単純な時間順序", "条件", "逆接"],exp:"てはじめて=経験後気づき"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このしごとはかれにできない。___ だれかほかのひとがやる必要がある。\n💡 できない→別の人 の結論\n🇹🇷 Bu iş ona olmaz. Yani başka birinin yapması gerekiyor.",ans:"つまり",opts:["つまり", "例えば", "なぜなら", "ところで"],exp:"つまり=結論"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"べんきょうすれば ___ にほんごがうまくなる。\n🇹🇷 Ne kadar çalışırsa o kadar iyileşiyor.",ans:"するほど",opts:["するほど", "してほど", "したほど", "するくらい"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれはそれをよむ ___ おこりだした。\n💡 読む+なり\n🇹🇷 Bunu okur okumaz öfkelendi.",ans:"なり",opts:["なり", "とたんに", "ながら", "うちに"],exp:"なり"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"たとえ失敗しようとも、挑戦し続ける.\"\n💡 ちょうせんしつづける=meydan okumaya devam etmek",ans:"たとえしっぱいしようとも、ちょうせんしつづける。",opts:["たとえしっぱいしようとも、ちょうせんしつづける。", "たとえしっぱいしても、ちょうせんしつづける。", "たとえしっぱいするとも、ちょうせんしつづける。", "たとえしっぱいのに、ちょうせんしつづける。"],exp:"ようとも=文語"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かれの ___ しごとがうまくいかなかった。\n💡 悪い結果の原因\n🇹🇷 Onun yüzünden iş iyi gitmedi.",ans:"せいで",opts:["せいで", "おかげで", "ために", "から"],exp:"名詞の+せいで"},
+{tp:"rule",lb:"Kural",lc:"lm",q:"「なかなか〜ない」の意味は？",ans:"期待していたが一向に〜しない",opts:["期待していたが一向に〜しない", "すぐに〜する", "当然〜する", "たくさん〜する"],exp:""},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"ゆうめいなシェフがつくった ___ おいしい。\n🇹🇷 Ünlü şef yaptığına değer, lezzetli.",ans:"だけあって",opts:["だけあって", "だけに", "だけど", "だけは"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"おかあさんの ___ にわそうじをした。\n💡 お母さんの代替\n🇹🇷 Annem yerine bahçe temizliği yaptım.",ans:"かわりに",opts:["かわりに", "ために", "かわりで", "かわって"],exp:"代わりに①"},
+{tp:"fill",lb:"Boşluğu Doldur",lc:"lr",q:"かれはしんけんになる ___ 。\n🇹🇷 O zaman zaman ciddi olur.",ans:"ことがある",opts:["ことがある", "ことがない", "ことにする", "ことになる"],exp:""},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"このひんもつのねだんはせんえん ___ います。\n💡 価格が規定\n🇹🇷 Bu ürünün fiyatı 1000 yen olarak belirlenmiş.",ans:"となって",opts:["となって", "になって", "にして", "となり"],exp:"となっている"},
+{tp:"trans",lb:"Türkçeyi Çevir",lc:"lc",q:"\"そのままにしておいてください.\"\n💡 そのまま=olduğu gibi",ans:"そのままにしておいてください。",opts:["そのままにしておいてください。", "このままにしておいてください。", "そのままでいいです。", "そのままでいてください。"],exp:"そのまま"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"かのじょはなみだをながす ___ わらいつづけた。\n💡 涙を流すことなく\n🇹🇷 Gözyaşı dökmeksizin gülmeye devam etti.",ans:"ことなく",opts:["ことなく", "ことで", "ことに", "ことから"],exp:"ことなく"},
+{tp:"kip",lb:"ようになる vs になる",lc:"lm",q:"能力・習慣の徐々の変化はどちら？",ans:"ようになる",opts:["ようになる", "になる", "ことになる", "ようにする"],exp:"ようになる=徐々変化"},
+{tp:"fill",lb:"Boしluğu Doldur",lc:"lr",q:"うれしくて ___ 。\n💡 形容詞て+しかたない\n🇹🇷 Çok mutluyum, dayanılmaz derecede.",ans:"しかたない",opts:["しかたない", "たまらない", "ならない", "ほしい"],exp:"てしかたない"}
+];
+function toggleCard(bodyId,toggleId){
+  var b=document.getElementById(bodyId),t=document.getElementById(toggleId);
+  var open=b.style.display!=='none';
+  b.style.display=open?'none':'block';
+  t.textContent=open?'Göster ▼':'Gizle ▲';
+}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
+var tqs=[],ti=0,sc=0,log=[];
+function initTest(){tqs=shuffle(POOL).slice(0,30);ti=0;sc=0;log=[];renderQ()}
+function renderQ(){
+  var q=tqs[ti],tot=tqs.length;
+  document.getElementById('prog').style.width=(ti/tot*100)+'%';
+  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
+  var opts=shuffle(q.opts);window._opts=opts;
+  document.getElementById('tv').innerHTML=
+    '<div class="q-label '+q.lc+'">'+q.lb+' ('+(ti+1)+'/'+tot+')</div>'+
+    '<div class="q-text">'+q.q+'</div>'+
+    '<div class="q-opts">'+
+    opts.map(function(o,i){return'<button class="q-opt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+
+    '</div><div class="q-feedback" id="qfb"></div>'+
+    '<button class="q-next" id="qnext" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
+}
+function doAns(i){
+  var q=tqs[ti],sel=window._opts[i],ok=sel.trim()===q.ans.trim();
+  if(ok)sc++;
+  log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});
+  document.querySelectorAll('.q-opt').forEach(function(b,j){
+    b.disabled=true;
+    if(j===i)b.classList.add(ok?'ok':'ng');
+    if(window._opts[j].trim()===q.ans.trim()&&!ok)b.classList.add('show');
+  });
+  var fb=document.getElementById('qfb');
+  fb.className='q-feedback '+(ok?'ok':'ng');
+  var msg=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
+  if(q.exp)msg+='\n📌 '+q.exp;
+  fb.textContent=msg;
+  document.getElementById('qnext').style.display='block';
+}
+function nextQ(){ti++;if(ti>=tqs.length){showR();return}renderQ()}
+function showR(){
+  var tot=tqs.length,pct=Math.round(sc/tot*100);
+  var emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
+  var lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
+  document.getElementById('tv').style.display='none';
+  document.getElementById('prog').style.width='100%';
+  var typeMap={};
+  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++});
+  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return'<div class="ts-row"><span class="ts-lbl">'+lb+'</span><span class="ts-val">'+v.ok+'/'+v.tot+'</span></div>'}).join('');
+  var rep=log.map(function(l,i){return'<div class="d-row"><div class="d-num">'+(i+1)+'</div><div class="d-content"><div class="d-q">'+l.q+'</div>'+(l.ok?'<div class="d-ans d-correct">✓ '+l.ans+'</div>':'<div class="d-ans d-wrong">✗ '+l.sel+' → '+l.ans+'</div>')+'</div><span class="d-badge '+(l.ok?'ok':'ng')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML='<div class="result-wrap"><div class="result-emoji">'+emoji+'</div><div class="result-score">'+sc+' / '+tot+'</div><div class="result-label">'+lbl+' · %'+pct+'</div><div class="result-stats"><div class="rs-box"><div class="rs-val rs-ok">'+sc+'</div><div class="rs-lbl">Doğru</div></div><div class="rs-box"><div class="rs-val rs-ng">'+(tot-sc)+'</div><div class="rs-lbl">Yanlış</div></div><div class="rs-box"><div class="rs-val rs-tot">'+tot+'</div><div class="rs-lbl">Toplam</div></div></div><div class="type-summary">'+tsum+'</div><div class="result-btns"><button class="r-btn" onclick="restartTest()">Tekrar Dene</button><a class="r-btn outline" href="../index.html">← Anasayfa</a></div></div><div class="detail-section"><div class="detail-title">Soru Detayı</div>'+rep+'</div>';
+}
+function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest();}
+(function(){var errs=[];POOL.forEach(function(q,i){if(q.opts.indexOf(q.ans)===-1)errs.push('Q#'+(i+1)+': '+q.ans.substring(0,30)+' opts içinde yok');});if(errs.length){console.error('POOL HATALARI:\n'+errs.join('\n'));var el=document.getElementById('tv');if(el)el.innerHTML='<div style="background:#fee;border:1px solid #c00;border-radius:8px;padding:1rem;font-size:13px;color:#800;white-space:pre-wrap">❌ '+errs.join('\n')+'</div>';}})();
+initTest();
+
+</script></body></html>
