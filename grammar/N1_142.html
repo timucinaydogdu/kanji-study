@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>N1-142 〜こそあれ | N1 Gramer</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg2:#f5f5f4;--bg3:#e8e8e7;
+  --text:#1a1a1a;--text2:#5a5a5a;--text3:#999;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);
+  --p50:#EEEDFE;--p100:#D5D2FA;--p200:#AFA9EC;
+  --p600:#534AB7;--p800:#3C3489;--p900:#26215C;
+  --t50:#E1F5EE;--t400:#1D9E75;--t600:#0F6E56;--t800:#085041;
+  --a50:#FFF3DC;--a400:#D4920A;--a600:#BA7517;--a800:#7A4A00;
+  --r50:#FEF0F0;--r400:#D94040;--r600:#A32D2D;
+  --g50:#F0F7FF;--g400:#2E7DB0;--g600:#1B5E8A;
+  --rm:10px;--rl:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1a;--bg2:#252523;--bg3:#2f2f2d;
+  --text:#f0f0ee;--text2:#b0b0ae;--text3:#707070;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --p50:#1e1a48;--p100:#2a2466;--p200:#3C3489;
+  --p600:#AFA9EC;--p800:#CECBF6;--p900:#EEEDFE;
+  --t50:#072e1e;--t400:#9FE1CB;--t600:#9FE1CB;--t800:#9FE1CB;
+  --a50:#2e1e00;--a400:#FAC775;--a600:#FAC775;--a800:#FAC775;
+  --r50:#2e0e0e;--r400:#F09595;--r600:#F09595;
+  --g50:#0d1f2e;--g400:#7ABEE0;--g600:#7ABEE0;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg3);min-height:100vh;padding:1.5rem 1rem;color:var(--text);line-height:1.6}
+.app{width:100%;max-width:660px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+/* NAV */
+.top-nav{display:flex;align-items:center;gap:8px}
+.back-btn{font-size:13px;color:var(--text2);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.back-btn:hover{color:var(--text);background:var(--bg2)}
+.page-nav{display:flex;gap:8px;margin-left:auto}
+.nav-arrow{font-size:13px;color:var(--p600);text-decoration:none;padding:6px 12px;background:var(--bg);border:.5px solid var(--border);border-radius:20px}
+.nav-arrow:hover{background:var(--p50)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#26215C,#534AB7);border-radius:var(--rl);padding:2rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'は';position:absolute;font-family:'Noto Serif JP',serif;font-size:180px;font-weight:700;color:rgba(255,255,255,0.05);top:-20px;right:-10px;line-height:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
+.hero-jp{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem}
+.hero-romaji{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:.5rem}
+.hero-tr{font-size:20px;font-weight:600;color:#fff;margin-bottom:.25rem}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.6)}
+/* KART */
+.card{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:.875rem 1.25rem;background:var(--bg2);border-bottom:.5px solid var(--border);cursor:pointer;user-select:none}
+.card-header-title{font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.card-toggle{font-size:12px;color:var(--text3)}
+.card-body{padding:1.25rem}
+/* AÇIKLAMA */
+.explain-text{font-size:14.5px;color:var(--text);line-height:1.75;margin-bottom:1rem}
+.explain-text strong{color:var(--p600)}
+.explain-text em{font-style:normal;color:var(--a600);font-weight:500}
+/* FORMULA */
+.formula-wrap{background:var(--p50);border:.5px solid var(--p100);border-radius:var(--rm);padding:1rem 1.25rem;margin-bottom:.875rem}
+.formula-row{display:flex;align-items:center;gap:8px;margin-bottom:.5rem;flex-wrap:wrap}
+.formula-row:last-child{margin-bottom:0}
+.f-box{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap}
+.f-topic{background:rgba(83,74,183,0.15);color:var(--p800);border:.5px solid var(--p200)}
+.f-verb{background:rgba(29,158,117,0.15);color:var(--t600);border:.5px solid var(--t400)}
+.f-particle{background:var(--p600);color:#fff;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;padding:4px 14px}
+.f-result{background:rgba(186,117,23,0.12);color:var(--a800);border:.5px solid var(--a400);font-size:12px;padding:4px 12px}
+.f-op{font-size:16px;color:var(--text3);font-weight:300}
+.formula-note{font-size:12px;color:var(--text2);margin-top:.5rem;padding-left:4px}
+/* ÖRNEKLER */
+.examples{display:flex;flex-direction:column;gap:.75rem}
+.ex-card{border-radius:var(--rm);overflow:hidden;border:.5px solid var(--border)}
+.ex-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--p600);color:#fff;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0}
+.ex-top{padding:.875rem 1rem .5rem;background:var(--bg);display:flex;gap:10px;align-items:flex-start}
+.ex-text{flex:1}
+.ex-jp{font-family:'Noto Serif JP',serif;font-size:17px;color:var(--text);margin-bottom:3px;line-height:1.5}
+.ex-jp .hl{color:var(--p600);font-weight:700;background:var(--p50);border-radius:3px;padding:0 2px}
+.ex-romaji{font-size:12px;color:var(--p600);font-style:italic;margin-bottom:2px}
+.ex-turkish{font-size:14px;color:var(--text2)}
+.ex-bottom{padding:.5rem 1rem .75rem 1rem;background:var(--bg2);border-top:.5px solid var(--border);display:flex;flex-wrap:wrap;gap:6px}
+.vocab-chip{font-size:11.5px;background:var(--bg);border:.5px solid var(--border2);border-radius:20px;padding:2px 10px;color:var(--text2)}
+.vocab-chip strong{color:var(--text);font-weight:600}
+/* KARŞILAŞTIRMA */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.875rem}
+.compare-card{border-radius:var(--rm);padding:1rem;border:.5px solid var(--border)}
+.compare-card.c-a{background:var(--p50);border-color:var(--p200)}
+.compare-card.c-b{background:var(--t50);border-color:var(--t400)}
+.compare-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem}
+.compare-card.c-a .compare-label{color:var(--p800)}
+.compare-card.c-b .compare-label{color:var(--t800)}
+.compare-jp{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;margin-bottom:.25rem}
+.compare-card.c-a .compare-jp{color:var(--p900)}
+.compare-card.c-b .compare-jp{color:var(--t800)}
+.compare-desc{font-size:12px;color:var(--text2);line-height:1.5}
+/* İPUÇLARI */
+.tip{border-radius:var(--rm);padding:.875rem 1rem;font-size:13.5px;line-height:1.65;margin-bottom:.625rem;display:flex;gap:10px}
+.tip:last-child{margin-bottom:0}
+.tip-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.tip-text{flex:1}
+.tip.tip-info{background:var(--a50);border:.5px solid var(--a400);color:var(--a800)}
+.tip.tip-warn{background:var(--r50);border:.5px solid var(--r400);color:var(--r600)}
+.tip.tip-note{background:var(--g50);border:.5px solid var(--g400);color:var(--g600)}
+/* TEST */
+.test-wrap{background:var(--bg);border:.5px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.test-header{background:var(--a50);border-bottom:.5px solid var(--a400);padding:.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.test-title{font-size:14px;font-weight:600;color:var(--a800);display:flex;align-items:center;gap:8px}
+.test-score{font-size:13px;font-weight:500;color:var(--a600)}
+.progress{height:3px;background:var(--bg2)}
+.progress-fill{height:100%;background:var(--a600);transition:width .35s;width:0}
+.test-body{padding:1.25rem}
+.q-label{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;margin-bottom:.875rem}
+.q-label.lm{background:var(--t50);color:var(--t800)}
+.q-label.lc{background:var(--p50);color:var(--p800)}
+.q-label.lr{background:var(--a50);color:var(--a800)}
+.q-text{font-size:15px;color:var(--text);line-height:1.65;white-space:pre-line}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:1rem}
+.q-opt{background:var(--bg2);border:.5px solid var(--border2);border-radius:var(--rm);padding:11px 14px;font-size:13.5px;cursor:pointer;color:var(--text);text-align:left;font-family:inherit;transition:all .15s;line-height:1.4;width:100%}
+.q-opt:hover:not(:disabled){background:var(--p50);border-color:var(--p200)}
+.q-opt.ok{background:var(--t50);border-color:var(--t400);color:var(--t800);font-weight:500}
+.q-opt.ng{background:var(--r50);border-color:var(--r400);color:var(--r600)}
+.q-opt.show{background:var(--t50);border-color:var(--t400);color:var(--t800)}
+.q-feedback{margin-top:.875rem;padding:.75rem 1rem;border-radius:var(--rm);font-size:13.5px;line-height:1.5;display:none}
+.q-feedback.ok{display:block;background:var(--t50);color:var(--t800);border:.5px solid var(--t400)}
+.q-feedback.ng{display:block;background:var(--r50);color:var(--r600);border:.5px solid var(--r400)}
+.q-next{margin-top:1rem;width:100%;padding:11px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:none}
+.q-next:hover{background:var(--p800)}
+/* SONUÇ */
+.result-wrap{padding:2rem 1.25rem;text-align:center}
+.result-emoji{font-size:54px;margin-bottom:1rem}
+.result-score{font-size:40px;font-weight:500;color:var(--p800);margin-bottom:.25rem}
+.result-label{font-size:15px;color:var(--text2);margin-bottom:1.5rem}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}
+.rs-box{background:var(--bg2);border-radius:var(--rm);padding:12px 8px;text-align:center}
+.rs-val{font-size:24px;font-weight:500}
+.rs-lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.rs-ok{color:var(--t600)}.rs-ng{color:var(--r600)}.rs-tot{color:var(--text3)}
+.type-summary{text-align:left;margin-bottom:1.25rem}
+.ts-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg2);border-radius:6px;font-size:12.5px;margin-bottom:4px}
+.ts-lbl{color:var(--text2)}.ts-val{font-weight:600}
+.result-btns{display:flex;gap:8px;justify-content:center;margin-top:1.25rem}
+.r-btn{padding:10px 24px;background:var(--p600);color:#fff;border:none;border-radius:var(--rm);font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit;text-decoration:none}
+.r-btn:hover{background:var(--p800)}
+.r-btn.outline{background:var(--bg);border:.5px solid var(--border2);color:var(--text)}
+.r-btn.outline:hover{background:var(--bg2)}
+.detail-section{text-align:left;border-top:.5px solid var(--border);padding-top:1.25rem;margin-top:1.25rem}
+.detail-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.875rem}
+.d-row{display:flex;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border);align-items:flex-start}
+.d-row:last-child{border-bottom:none}
+.d-num{min-width:22px;font-size:11px;color:var(--text3);padding-top:2px}
+.d-content{flex:1}
+.d-q{font-size:12.5px;color:var(--text);white-space:pre-line;margin-bottom:2px}
+.d-ans{font-size:12px}
+.d-correct{color:var(--t600)}
+.d-wrong{color:var(--r600)}
+.d-badge{font-size:10.5px;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.d-badge.ok{background:var(--t50);color:var(--t800)}
+.d-badge.ng{background:var(--r50);color:var(--r600)}
+</style></head><body><div class="app">
+<div class="top-nav"><a class="back-btn" href="../index.html?tab=grammar">← Ana Sayfa</a><div class="page-nav"><a class="nav-arrow" href="N1_141.html">← Önceki</a><a class="nav-arrow" href="N1_143.html">Sonraki →</a></div></div>
+<div class="hero" style="background:linear-gradient(135deg,#791F1F,#A32D2D)">
+<div class="hero-badge">N1 · 142 · Zıtlık</div>
+<div class="hero-jp">〜こそあれ</div><div class="hero-romaji">koso are</div>
+<div class="hero-tr">…olsa da; …var olsa bile</div><div class="hero-sub">…olsa da; …var olsa bile — 〜こそあれ</div></div>
+<div class="card"><div class="card-header" onclick="toggleCard('lbody','ltoggle')">
+<div class="card-header-title">📖 Ders — N1-142</div>
+<div class="card-toggle" id="ltoggle">Gizle ▲</div></div>
+<div class="card-body" id="lbody"><p class="explain-text"><strong>〜こそあれ</strong> …olsa da・…var olsa bile</p><div style="margin-bottom:1.25rem"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:.625rem">Örnek Cümle</div><div class="examples"><div class="ex-card"><div class="ex-top"><div class="ex-num">1</div><div class="ex-text"><div class="ex-jp">やさしい<span class="hl">こそあれ</span>、このしごとはぎじゅつがいる。</div><div class="ex-romaji">Yasashii koso are, kono shigoto wa gijutsu ga iru.</div><div class="ex-turkish">Kolay olsa da, bu iş beceri ister.</div></div></div><div class="ex-bottom"><span class="vocab-chip"><strong>こそあれ</strong> = …olsa da; …var olsa bile</span></div></div></div></div><div class="tip tip-info"><div class="tip-icon">💡</div><div class="tip-text">こそあれ: 「〜は確かにあるが」逆接.</div></div></div></div>
+<div class="test-wrap">
+<div class="test-header"><div class="test-title">📝 Test — 〜こそあれ</div>
+<div class="test-score" id="scoreDisplay">0 / 10</div></div>
+<div class="progress"><div class="progress-fill" id="prog"></div></div>
+<div class="test-body" id="tv"></div>
+<div class="test-body" id="rv" style="display:none"></div></div>
+</div>
+<script>var POOL=[
+{"tp":"fill","lb":"Boşluğu Doldur","lc":"lr","q":"やさしい___、このしごとはぎじゅつがいる。\n🇹🇷 Kolay olsa da, bu iş beceri ister.","ans":"こそあれ","opts":["こそあれ", "にしても", "ながらも", "といえども"],"exp":""},
+{"tp":"fill","lb":"Boşluğu Doldur","lc":"lr","q":"やさしい___、このしごとはぎじゅつがいる。\n🇹🇷 もう一度: …olsa da; …var olsa bile","ans":"こそあれ","opts":["こそあれ", "にしても", "ながらも", "といえども"],"exp":""},
+{"tp":"mean","lb":"Boşluğu Doldur","lc":"lr","q":"「やさしいこそあれ、このしごとはぎじゅつがいる。」\n💡 〜こそあれ\n🇹🇷 ne demek?","ans":"Kolay olsa da, bu iş beceri ister.","opts":["Kolay olsa da, bu iş beceri ister.", "違う意味。", "わからない。", "なぜ?"],"exp":""},
+{"tp":"kip","lb":"Boşluğu Doldur","lc":"lr","q":"「〜こそあれ」の特徴は？","ans":"Zıtlık表現","opts":["Zıtlık表現", "にしてもの意味", "どちらでも", "文脈による"],"exp":""},
+{"tp":"trans","lb":"Boşluğu Doldur","lc":"lr","q":"Kolay olsa da, bu iş beceri ister.. 🇹🇷 Türkçeyi Çevir","ans":"やさしいこそあれ、このしごとはぎじゅつがいる。","opts":["やさしいこそあれ、このしごとはぎじゅつがいる。", "やさしいにしても、このしごとはぎじゅつがいる。", "やさしいながらも、このしごとはぎじゅつがいる。", "やさしいといえども、このしごとはぎじゅつがいる。"],"exp":""},
+{"tp":"fill","lb":"Boşluğu Doldur","lc":"lr","q":"やさしい___、このしごとはぎじゅつがいる。\n🇹🇷 Zıtlık","ans":"こそあれ","opts":["こそあれ", "にしても", "ながらも", "といえども"],"exp":""},
+{"tp":"fill","lb":"Boşluğu Doldur","lc":"lr","q":"やさしい___、このしごとはぎじゅつがいる。\n🇹🇷 …olsa da・…var olsa bile","ans":"こそあれ","opts":["こそあれ", "にしても", "ながらも", "といえども"],"exp":""},
+{"tp":"rule","lb":"Boşluğu Doldur","lc":"lr","q":"「〜こそあれ」はどんな表現？","ans":"Zıtlık表現","opts":["Zıtlık表現", "逆接のみ", "強調のみ", "疑問のみ"],"exp":""},
+{"tp":"fill","lb":"Boşluğu Doldur","lc":"lr","q":"やさしい___、このしごとはぎじゅつがいる。\n🇹🇷 Kolay olsa da, bu iş beceri is","ans":"こそあれ","opts":["こそあれ", "にしても", "ながらも", "といえども"],"exp":""},
+{"tp":"mean","lb":"Boşluğu Doldur","lc":"lr","q":"「〜こそあれ」の意味→ どれ？","ans":"Kolay olsa da, bu iş beceri ister.","opts":["Kolay olsa da, bu iş beceri ister.", "逆の意味", "違う表現", "わからない"],"exp":""}
+];
+function toggleCard(bodyId,toggleId){
+  var b=document.getElementById(bodyId),t=document.getElementById(toggleId);
+  var open=b.style.display!=='none';
+  b.style.display=open?'none':'block';
+  t.textContent=open?'Göster ▼':'Gizle ▲';
+}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
+var tqs=[],ti=0,sc=0,log=[];
+function initTest(){tqs=shuffle(POOL).slice(0,30);ti=0;sc=0;log=[];renderQ()}
+function renderQ(){
+  var q=tqs[ti],tot=tqs.length;
+  document.getElementById('prog').style.width=(ti/tot*100)+'%';
+  document.getElementById('scoreDisplay').textContent=sc+' / '+tot;
+  var opts=shuffle(q.opts);window._opts=opts;
+  document.getElementById('tv').innerHTML=
+    '<div class="q-label '+q.lc+'">'+q.lb+' ('+(ti+1)+'/'+tot+')</div>'+
+    '<div class="q-text">'+q.q+'</div>'+
+    '<div class="q-opts">'+
+    opts.map(function(o,i){return'<button class="q-opt" onclick="doAns('+i+')">'+o+'</button>'}).join('')+
+    '</div><div class="q-feedback" id="qfb"></div>'+
+    '<button class="q-next" id="qnext" onclick="nextQ()">'+(ti===tot-1?'Sonuçları Gör →':'Sonraki →')+'</button>';
+}
+function doAns(i){
+  var q=tqs[ti],sel=window._opts[i],ok=sel.trim()===q.ans.trim();
+  if(ok)sc++;
+  log.push({q:q.q,ans:q.ans,sel:sel,ok:ok,lb:q.lb});
+  document.querySelectorAll('.q-opt').forEach(function(b,j){
+    b.disabled=true;
+    if(j===i)b.classList.add(ok?'ok':'ng');
+    if(window._opts[j].trim()===q.ans.trim()&&!ok)b.classList.add('show');
+  });
+  var fb=document.getElementById('qfb');
+  fb.className='q-feedback '+(ok?'ok':'ng');
+  var msg=ok?'✅ Doğru!':'❌ Yanlış — Doğru: '+q.ans;
+  if(q.exp)msg+='\n📌 '+q.exp;
+  fb.textContent=msg;
+  document.getElementById('qnext').style.display='block';
+}
+function nextQ(){ti++;if(ti>=tqs.length){showR();return}renderQ()}
+function showR(){
+  var tot=tqs.length,pct=Math.round(sc/tot*100);
+  var emoji=pct>=90?'🏆':pct>=70?'🎯':pct>=50?'📚':'💪';
+  var lbl=pct>=90?'Mükemmel':pct>=70?'İyi':pct>=50?'Gelişiyor':'Devam Et';
+  document.getElementById('tv').style.display='none';
+  document.getElementById('prog').style.width='100%';
+  var typeMap={};
+  log.forEach(function(l){if(!typeMap[l.lb])typeMap[l.lb]={ok:0,tot:0};typeMap[l.lb].tot++;if(l.ok)typeMap[l.lb].ok++});
+  var tsum=Object.keys(typeMap).map(function(lb){var v=typeMap[lb];return'<div class="ts-row"><span class="ts-lbl">'+lb+'</span><span class="ts-val">'+v.ok+'/'+v.tot+'</span></div>'}).join('');
+  var rep=log.map(function(l,i){return'<div class="d-row"><div class="d-num">'+(i+1)+'</div><div class="d-content"><div class="d-q">'+l.q+'</div>'+(l.ok?'<div class="d-ans d-correct">✓ '+l.ans+'</div>':'<div class="d-ans d-wrong">✗ '+l.sel+' → '+l.ans+'</div>')+'</div><span class="d-badge '+(l.ok?'ok':'ng')+'">'+(l.ok?'✓':'✗')+'</span></div>';}).join('');
+  document.getElementById('rv').style.display='block';
+  document.getElementById('rv').innerHTML='<div class="result-wrap"><div class="result-emoji">'+emoji+'</div><div class="result-score">'+sc+' / '+tot+'</div><div class="result-label">'+lbl+' · %'+pct+'</div><div class="result-stats"><div class="rs-box"><div class="rs-val rs-ok">'+sc+'</div><div class="rs-lbl">Doğru</div></div><div class="rs-box"><div class="rs-val rs-ng">'+(tot-sc)+'</div><div class="rs-lbl">Yanlış</div></div><div class="rs-box"><div class="rs-val rs-tot">'+tot+'</div><div class="rs-lbl">Toplam</div></div></div><div class="type-summary">'+tsum+'</div><div class="result-btns"><button class="r-btn" onclick="restartTest()">Tekrar Dene</button><a class="r-btn outline" href="../index.html">← Anasayfa</a></div></div><div class="detail-section"><div class="detail-title">Soru Detayı</div>'+rep+'</div>';
+}
+function restartTest(){document.getElementById('tv').style.display='block';document.getElementById('rv').style.display='none';initTest();}
+(function(){var errs=[];POOL.forEach(function(q,i){if(q.opts.indexOf(q.ans)===-1)errs.push('Q#'+(i+1)+': '+q.ans.substring(0,30)+' opts içinde yok');});if(errs.length){console.error('POOL HATALARI:\n'+errs.join('\n'));var el=document.getElementById('tv');if(el)el.innerHTML='<div style="background:#fee;border:1px solid #c00;border-radius:8px;padding:1rem;font-size:13px;color:#800;white-space:pre-wrap">❌ '+errs.join('\n')+'</div>';}})();
+initTest();
+
+</script></body></html>
